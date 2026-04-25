@@ -62,11 +62,11 @@ function saveDefaultDataPlugin() {
   };
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react(), saveDefaultDataPlugin()],
-  base: '/portfolio-performance/',
+  base: command === 'serve' ? '/' : '/portfolio-performance/',
   server: {
     port: 5173,
     open: true,
   },
-});
+}));

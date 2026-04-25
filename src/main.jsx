@@ -18,7 +18,7 @@ async function bootstrapDefaultData() {
   if (existing?.value) return; // already have data, don't overwrite
 
   try {
-    const res = await fetch('/default-data.json');
+    const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
     if (!res.ok) return; // no file present — normal, app will start empty
 
     const raw = await res.json();

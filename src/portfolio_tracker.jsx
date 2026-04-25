@@ -1485,7 +1485,7 @@ export default function PortfolioTracker() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('/default-data.json');
+        const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
         if (!res.ok) { setDefaultDataHash(null); return; }
         const raw = await res.json();
         const p = Array.isArray(raw.portfolios) ? raw.portfolios : [];
