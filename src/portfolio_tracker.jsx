@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, ReferenceArea } from 'recharts';
-import { Pencil, Trash2, Plus, AlertCircle, X, Upload, Download, Check, Database, ExternalLink, Save, RotateCcw, Wand2, GripVertical, Loader2, Sparkles, Link2, Pipette, LayoutGrid } from 'lucide-react';
+import { Pencil, Trash2, Plus, AlertCircle, X, Upload, Download, Check, Database, ExternalLink, Save, RotateCcw, Wand2, GripVertical, Loader2, Sparkles, Link2, Pipette, LayoutGrid, HardDriveDownload } from 'lucide-react';
 
 // ============================================================================
 // DEFAULTS
@@ -1458,6 +1458,18 @@ export default function PortfolioTracker() {
   const [chartPeriod, setChartPeriod] = useState('ALL');
   const [draggedId, setDraggedId] = useState(null);
   const [dragOverId, setDragOverId] = useState(null);
+  const [defaultDataHash, setDefaultDataHash] = useState(null);
+  const [saving, setSaving] = useState(false);
+
+  // Simple hash for comparing data snapshots
+  const computeHash = (portfolios, prices) => {
+    const p = JSON.stringify(portfolios.map(p => ({ id: p.id, name: p.name, holdings: p.holdings, kind: p.kind })));
+    const pr = JSON.stringify(Object.keys(prices).sort().map(t => [t, Object.keys(prices[t]).length]));
+    let h = 0;
+    const s = p + pr;
+    for (let i = 0; i < s.length; i++) { h = ((h << 5) - h + s.charCodeAt(i)) | 0; }
+    return h;
+  };
 
   useEffect(() => {
     (async () => {
@@ -1468,6 +1480,48 @@ export default function PortfolioTracker() {
       setLoaded(true);
     })();
   }, []);
+
+  // Fetch default-data.json hash on mount to detect changes
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch('/default-data.json');
+        if (!res.ok) { setDefaultDataHash(null); return; }
+        const raw = await res.json();
+        const p = Array.isArray(raw.portfolios) ? raw.portfolios : [];
+        const pr = (raw.prices && typeof raw.prices === 'object') ? raw.prices : {};
+        setDefaultDataHash(computeHash(p, pr));
+      } catch { setDefaultDataHash(null); }
+    })();
+  }, []);
+
+  const currentDataHash = useMemo(() => {
+    if (!loaded) return null;
+    return computeHash(portfolios, prices);
+  }, [portfolios, prices, loaded]);
+
+  const hasUnsavedChanges = loaded && defaultDataHash !== null && currentDataHash !== defaultDataHash;
+
+  const handleSaveDefault = async () => {
+    if (saving) return;
+    setSaving(true);
+    try {
+      const data = { version: STORAGE_VERSION, exportedAt: new Date().toISOString(), portfolios, prices };
+      const res = await fetch('/api/save-default', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error('Save failed');
+      // Update the hash to match what we just saved
+      setDefaultDataHash(currentDataHash);
+    } catch (err) {
+      console.error('[save] Failed to save default data:', err);
+      alert('Failed to save: ' + err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   useEffect(() => { if (loaded) savePortfolios(portfolios); }, [portfolios, loaded]);
 
@@ -1753,6 +1807,12 @@ export default function PortfolioTracker() {
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
+                <button onClick={handleSaveDefault} disabled={!hasUnsavedChanges || saving}
+                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded disabled:text-stone-400 disabled:border-stone-300 disabled:bg-white/40 disabled:cursor-not-allowed disabled:hover:text-stone-400 disabled:hover:border-stone-300"
+                  title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
+                  {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
+                  {saving ? 'Saving…' : 'Save'}
+                </button>
                 <button onClick={() => setShowBackup(true)}
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
                   <Save size={11} /> Backup
