@@ -1530,27 +1530,50 @@ export default function PortfolioTracker() {
     return h;
   };
 
+  // Single source for the bundled default state. Used both for the "Save" hash comparison
+  // and for bootstrapping when localStorage is empty / on Reset.
+  const fetchDefaultData = async () => {
+    try {
+      const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
+      if (!res.ok) return null;
+      const raw = await res.json();
+      return {
+        portfolios: Array.isArray(raw.portfolios) ? raw.portfolios : null,
+        prices: (raw.prices && typeof raw.prices === 'object') ? raw.prices : {}
+      };
+    } catch { return null; }
+  };
+
   useEffect(() => {
     (async () => {
       await migrateToV8();
       const { portfolios: stored, prices: storedPrices } = await loadAllStorage();
-      setPortfolios(stored || DEFAULT_PORTFOLIOS);
-      setPrices(storedPrices);
+      if (stored) {
+        // Existing local state — keep it untouched.
+        setPortfolios(stored);
+        setPrices(storedPrices);
+        // Still grab the default hash so the Save button reflects unsaved changes.
+        const def = await fetchDefaultData();
+        if (def?.portfolios) setDefaultDataHash(computeHash(def.portfolios, def.prices));
+      } else {
+        // First-time visit / cleared storage — bootstrap from default-data.json so the user's
+        // Save target is what gets read back. DEFAULT_PORTFOLIOS stays as a hardcoded fallback
+        // for the case where the JSON is unreachable.
+        const def = await fetchDefaultData();
+        if (def?.portfolios) {
+          setPortfolios(def.portfolios);
+          setPrices(def.prices || {});
+          await savePortfolios(def.portfolios);
+          if (def.prices && Object.keys(def.prices).length > 0) {
+            await savePricesAll(def.prices);
+          }
+          setDefaultDataHash(computeHash(def.portfolios, def.prices));
+        } else {
+          setPortfolios(DEFAULT_PORTFOLIOS);
+          setPrices({});
+        }
+      }
       setLoaded(true);
-    })();
-  }, []);
-
-  // Fetch default-data.json hash on mount to detect changes
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
-        if (!res.ok) { setDefaultDataHash(null); return; }
-        const raw = await res.json();
-        const p = Array.isArray(raw.portfolios) ? raw.portfolios : [];
-        const pr = (raw.prices && typeof raw.prices === 'object') ? raw.prices : {};
-        setDefaultDataHash(computeHash(p, pr));
-      } catch { setDefaultDataHash(null); }
     })();
   }, []);
 
@@ -1796,9 +1819,10 @@ export default function PortfolioTracker() {
     onProgress?.(2, 2, 'Done');
   };
 
-  const resetToDefaults = () => {
-    if (!confirm('Reset portfolios to defaults? Imported price data will be kept.')) return;
-    setPortfolios(DEFAULT_PORTFOLIOS);
+  const resetToDefaults = async () => {
+    if (!confirm('Reset portfolios to defaults from default-data.json? Imported price data will be kept.')) return;
+    const def = await fetchDefaultData();
+    setPortfolios(def?.portfolios || DEFAULT_PORTFOLIOS);
   };
 
   const handleDragStart = (id) => setDraggedId(id);
