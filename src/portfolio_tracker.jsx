@@ -30,10 +30,11 @@ const DEFAULT_PORTFOLIOS = [
   }
 ];
 
+// 9 distinct hues that fit on one row alongside the custom color picker.
+// Anything outside this set still works (Color picker → exact hex), it's just not preset.
 const PALETTE = [
-  '#1a1815', '#dc2626', '#ea580c', '#d97706', '#ca8a04',
-  '#65a30d', '#16a34a', '#0d9488', '#0891b2', '#2563eb',
-  '#4f46e5', '#7c3aed', '#9333ea', '#c026d3', '#db2777', '#475569',
+  '#1a1815', '#dc2626', '#ea580c', '#d97706', '#16a34a',
+  '#0d9488', '#2563eb', '#7c3aed', '#db2777',
 ];
 
 const TICKER_BLACKLIST = new Set([
@@ -330,9 +331,10 @@ const getActiveHoldings = (portfolio, disabledHoldings) => {
   return portfolio.holdings.filter(h => !disabled.has(h.ticker.trim().toUpperCase()));
 };
 
-const computeSeries = (portfolio, allPrices) => {
-  if (!portfolio.holdings?.length) return null;
-  const valid = portfolio.holdings.filter(h => allPrices[h.ticker.toUpperCase()]);
+// Static (single-snapshot) computation: original behaviour, used when a portfolio has no history.
+const computeStaticSeries = (holdings, allPrices) => {
+  if (!holdings?.length) return null;
+  const valid = holdings.filter(h => allPrices[h.ticker.toUpperCase()]);
   if (!valid.length) return null;
   const dateSets = valid.map(h => new Set(Object.keys(allPrices[h.ticker.toUpperCase()])));
   const commonDates = [...dateSets[0]].filter(d => dateSets.every(s => s.has(d))).sort();
@@ -349,6 +351,108 @@ const computeSeries = (portfolio, allPrices) => {
     }
     return { date, value: val * 100 };
   });
+};
+
+// Chain-linked computation: each snapshot defines a buy-and-hold segment from its asOf to the next
+// snapshot's asOf. On each boundary the running portfolio value carries over into the next snapshot
+// (rebalance with no leakage). `portfolio.holdings` is treated as the most recent snapshot, with an
+// implicit asOf one quarter after the latest history entry.
+const computeSeries = (portfolio, allPrices) => {
+  if (!portfolio.holdings?.length) return null;
+  if (!portfolio.history?.length) return computeStaticSeries(portfolio.holdings, allPrices);
+
+  // Sort history ascending and append current holdings as the last snapshot.
+  const sortedHistory = [...portfolio.history].sort((a, b) => a.asOf.localeCompare(b.asOf));
+  const lastAsOf = sortedHistory[sortedHistory.length - 1].asOf;
+  const [y, m] = lastAsOf.split('-').map(Number);
+  const nm = m + 3;
+  const ny = y + Math.floor((nm - 1) / 12);
+  const nmm = ((nm - 1) % 12) + 1;
+  const lastDay = new Date(ny, nmm, 0).getDate();
+  const currentAsOf = `${ny}-${String(nmm).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+  const snapshots = [...sortedHistory, { asOf: currentAsOf, holdings: portfolio.holdings }];
+
+  // Union of all dates across every ticker referenced in any snapshot.
+  const dateSet = new Set();
+  snapshots.forEach(s => s.holdings.forEach(h => {
+    const px = allPrices[h.ticker.toUpperCase()];
+    if (px) Object.keys(px).forEach(d => dateSet.add(d));
+  }));
+  const allDates = [...dateSet].sort();
+  if (allDates.length < 2) return null;
+
+  // Closest available date ≤ target — quarter-end boundaries land on the nearest monthly point.
+  const closestLE = (target) => {
+    let lo = 0, hi = allDates.length - 1, ans = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (allDates[mid] <= target) { ans = mid; lo = mid + 1; } else hi = mid - 1;
+    }
+    return ans >= 0 ? allDates[ans] : null;
+  };
+
+  // Build segments. Each segment owns dates [fromDate, nextFromDate) — the boundary belongs to the
+  // next segment so chain-linked rebalance happens cleanly.
+  const segs = [];
+  for (let i = 0; i < snapshots.length; i++) {
+    const fromDate = closestLE(snapshots[i].asOf);
+    if (!fromDate) continue;
+    let toDate;
+    if (i + 1 < snapshots.length) {
+      toDate = closestLE(snapshots[i + 1].asOf);
+      if (!toDate || toDate <= fromDate) continue;
+    } else {
+      toDate = allDates[allDates.length - 1];
+    }
+    segs.push({ holdings: snapshots[i].holdings, fromDate, toDate, isLast: i === snapshots.length - 1 });
+  }
+  if (!segs.length) return null;
+
+  const result = [];
+  let cumulative = 1.0;
+
+  for (const seg of segs) {
+    // Renormalize over holdings that have a price at fromDate — missing tickers contribute 0.
+    const valid = seg.holdings.filter(h => {
+      const px = allPrices[h.ticker.toUpperCase()];
+      return px && px[seg.fromDate] !== undefined;
+    });
+    if (!valid.length) continue;
+    const totalWeight = valid.reduce((s, h) => s + h.weight, 0);
+    if (totalWeight === 0) continue;
+
+    const startPx = {};
+    valid.forEach(h => { startPx[h.ticker.toUpperCase()] = allPrices[h.ticker.toUpperCase()][seg.fromDate]; });
+
+    const segDates = allDates.filter(d => d >= seg.fromDate && (seg.isLast ? d <= seg.toDate : d < seg.toDate));
+    for (const date of segDates) {
+      let factor = 0;
+      for (const h of valid) {
+        const T = h.ticker.toUpperCase();
+        const currPx = allPrices[T][date];
+        if (currPx === undefined) continue;
+        factor += (h.weight / totalWeight) * (currPx / startPx[T]);
+      }
+      result.push({ date, value: cumulative * factor });
+    }
+
+    // Carry value across the boundary using THIS segment's holdings — that's the actual final
+    // value just before rebalancing into the next snapshot's weights.
+    if (!seg.isLast) {
+      let boundaryFactor = 0;
+      for (const h of valid) {
+        const T = h.ticker.toUpperCase();
+        const endPx = allPrices[T][seg.toDate];
+        if (endPx === undefined) continue;
+        boundaryFactor += (h.weight / totalWeight) * (endPx / startPx[T]);
+      }
+      cumulative = cumulative * boundaryFactor;
+    }
+  }
+
+  if (!result.length) return null;
+  const first = result[0].value;
+  return result.map(r => ({ date: r.date, value: r.value / first * 100 }));
 };
 
 const formatDateNice = (s) => {
@@ -458,7 +562,13 @@ const PortfolioRow = ({
 // PORTFOLIO EDITOR
 // ============================================================================
 
-const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled }) => {
+const asOfLabel = (iso) => {
+  const [y, m] = iso.split('-').map(Number);
+  const q = Math.floor((m - 1) / 3) + 1;
+  return `Q${q} '${String(y).slice(2)}`;
+};
+
+const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio }) => {
   const isNew = !portfolio?.holdings;
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
@@ -469,9 +579,60 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   const [showPaste, setShowPaste] = useState(isNew);
   const [pasteText, setPasteText] = useState('');
   const [pastePreview, setPastePreview] = useState(null);
-  const totalWeight = holdings.reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
-  const enabledWeight = holdings.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
-  const disabledCount = holdings.filter(h => h.ticker.trim() && disabledSet?.has(h.ticker.trim().toUpperCase())).length;
+  // Quarter switcher: 'current' edits portfolio.holdings; numeric idx shows portfolio.history[idx] read-only.
+  const historySnapshots = portfolio?.history || [];
+  const [viewIdx, setViewIdx] = useState('current');
+  const isReadonly = viewIdx !== 'current';
+  const displayedHoldings = isReadonly ? (historySnapshots[viewIdx]?.holdings || []) : holdings;
+  const totalWeight = displayedHoldings.reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
+  const enabledWeight = displayedHoldings.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
+  const disabledCount = displayedHoldings.filter(h => h.ticker.trim() && disabledSet?.has(h.ticker.trim().toUpperCase())).length;
+
+  // Diff vs previous quarter — for each visible holding, compute Δ weight; also collect tickers that
+  // existed last quarter but disappeared (sold). For the earliest snapshot (Q1) there is no prev.
+  const allSnapshotsForDiff = [...historySnapshots, { asOf: 'current', holdings }];
+  const currentSnapIdx = isReadonly ? viewIdx : historySnapshots.length;
+  const prevSnap = currentSnapIdx > 0 ? allSnapshotsForDiff[currentSnapIdx - 1] : null;
+  const prevByTicker = {};
+  prevSnap?.holdings.forEach(h => {
+    const t = h.ticker.trim().toUpperCase();
+    if (t) prevByTicker[t] = parseFloat(h.weight) || 0;
+  });
+  const soldThisQuarter = prevSnap
+    ? prevSnap.holdings
+        .map(h => ({ ticker: h.ticker.trim().toUpperCase(), weight: parseFloat(h.weight) || 0 }))
+        .filter(p => p.ticker && !displayedHoldings.some(d => d.ticker.trim().toUpperCase() === p.ticker))
+    : [];
+
+  // Mini-chart: edited current holdings (with eye toggle applied) vs VOO over the available history.
+  // Recomputes live as the user edits weights or toggles eyes — it's the "what does this change do?"
+  // companion to the big chart on the page.
+  const miniChartData = useMemo(() => {
+    if (!prices || !vooPortfolio) return null;
+    const liveHoldings = holdings
+      .filter(h => h.ticker.trim() && parseFloat(h.weight) > 0)
+      .map(h => ({ ticker: h.ticker.trim().toUpperCase(), weight: parseFloat(h.weight) }));
+    if (!liveHoldings.length) return null;
+    const filterDisabled = (hs) => disabledSet?.size
+      ? (hs || []).filter(h => !disabledSet.has(h.ticker.trim().toUpperCase()))
+      : hs;
+    const probe = {
+      ...portfolio,
+      holdings: filterDisabled(liveHoldings),
+      history: portfolio?.history ? portfolio.history.map(s => ({ ...s, holdings: filterDisabled(s.holdings) })) : undefined,
+    };
+    const series = computeSeries(probe, prices);
+    const vooSeries = computeSeries(vooPortfolio, prices);
+    if (!series || !vooSeries) return null;
+    const vooByDate = new Map(vooSeries.map(d => [d.date, d.value]));
+    const merged = series.filter(d => vooByDate.has(d.date))
+      .map(d => ({ date: d.date, ratio: d.value / vooByDate.get(d.date) }));
+    if (merged.length < 2) return null;
+    const first = merged[0].ratio;
+    return merged.map(d => ({ date: d.date, value: d.ratio / first * 100 }));
+  }, [holdings, disabledSet, portfolio, prices, vooPortfolio]);
+  const miniLast = miniChartData?.[miniChartData.length - 1]?.value;
+  const miniDelta = miniLast != null ? miniLast - 100 : null;
 
   const updateHolding = (i, field, value) => {
     const next = [...holdings];
@@ -505,8 +666,10 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   };
 
   return (
-    <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-2xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl">
+    // Pin near the top so the modal does not jump vertically when content height changes
+    // (e.g. switching quarters with different holdings counts).
+    <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-12 overflow-y-auto">
+      <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
           <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>{isNew ? 'New Portfolio' : 'Edit Portfolio'}</h2>
           <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
@@ -542,6 +705,27 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
               className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-xs text-stone-700 font-mono focus:border-stone-700 focus:outline-none" />
           </div>
+          {miniChartData && (
+            <div className="flex items-center gap-3">
+              <div className="flex flex-col text-[10px] font-mono leading-tight">
+                <span className="text-stone-500 tracking-[0.1em] uppercase">vs VOO</span>
+                <span className="tabular-nums font-medium"
+                  style={{ color: miniDelta >= 0 ? 'var(--success)' : 'var(--danger)' }}>
+                  {miniDelta >= 0 ? '+' : ''}{miniDelta.toFixed(2)}%
+                </span>
+              </div>
+              <div className="flex-1 h-12">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={miniChartData} margin={{ top: 4, right: 4, bottom: 4, left: 4 }}>
+                    <YAxis hide domain={['auto', 'auto']} />
+                    <XAxis hide dataKey="date" />
+                    <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={0.3} />
+                    <Line type="monotone" dataKey="value" stroke={color || '#1a1815'} strokeWidth={1.5} dot={false} isAnimationActive={false} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          )}
           <div className="border border-amber-700/30 bg-amber-50/40 rounded-lg overflow-hidden">
             <button onClick={() => setShowPaste(!showPaste)} className="w-full px-4 py-2.5 flex items-center justify-between hover:bg-amber-50/60 transition-colors">
               <div className="flex items-center gap-2">
@@ -596,8 +780,34 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             )}
           </div>
           <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono">Holdings</label>
+            <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
+                <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono">Holdings</label>
+                {historySnapshots.length > 0 && (
+                  <div className="flex items-center gap-1">
+                    {historySnapshots.map((s, idx) => (
+                      <button key={s.asOf} onClick={() => setViewIdx(idx)}
+                        className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                          viewIdx === idx
+                            ? 'bg-stone-900 text-stone-50 border-stone-900'
+                            : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
+                        }`}
+                        title={`13F snapshot · ${s.asOf} · read-only`}>
+                        {asOfLabel(s.asOf)}
+                      </button>
+                    ))}
+                    <button onClick={() => setViewIdx('current')}
+                      className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                        viewIdx === 'current'
+                          ? 'bg-stone-900 text-stone-50 border-stone-900'
+                          : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
+                      }`}
+                      title="Current — editable">
+                      Now
+                    </button>
+                  </div>
+                )}
+              </div>
               <div className="flex items-center gap-3">
                 <span className={`text-[11px] font-mono tabular-nums ${
                   totalWeight >= 99.5 && totalWeight <= 100.5 ? 'text-emerald-700' : totalWeight > 100.5 ? 'text-red-700' : 'text-amber-700'
@@ -607,43 +817,98 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                     active {enabledWeight >= 99.5 && enabledWeight <= 100.5 ? '100.00' : enabledWeight.toFixed(2)}%
                   </span>
                 )}
-                <button onClick={normalize} className="text-[10px] tracking-[0.1em] uppercase text-stone-700 hover:text-stone-900 font-mono underline-offset-4 hover:underline">
-                  Normalize → 100%
-                </button>
+                {!isReadonly && (
+                  <button onClick={normalize} className="text-[10px] tracking-[0.1em] uppercase text-stone-700 hover:text-stone-900 font-mono underline-offset-4 hover:underline">
+                    Normalize → 100%
+                  </button>
+                )}
               </div>
             </div>
             <div className="space-y-1.5">
-              {holdings.map((h, i) => {
+              {[
+                ...displayedHoldings.map((h, i) => ({ kind: 'live', h, i })),
+                ...soldThisQuarter.map(s => ({ kind: 'sold', h: { ticker: s.ticker, weight: 0 }, prevWeight: s.weight }))
+              ].map((row, rowKey) => {
+                const isSold = row.kind === 'sold';
+                const h = row.h;
                 const w = parseFloat(h.weight) || 0;
-                const pct = totalWeight > 0 ? Math.min(100, (w / totalWeight) * 100) : 0;
                 const ticker = h.ticker.trim().toUpperCase();
+                // Eye toggle is global across all snapshots (transient, never saved). A ticker may
+                // only appear in earlier quarters — let the user disable/enable it from any view,
+                // including the sold/read-only states.
                 const isDisabled = ticker && disabledSet?.has(ticker);
+                // For visual diff bar, normalize against the larger of the two snapshots' totals so
+                // Δ segments stay consistent across rows.
+                const prevW = isSold ? row.prevWeight : (ticker ? prevByTicker[ticker] : undefined);
+                const refTotal = totalWeight > 0 ? totalWeight : 100;
+                const pct = Math.min(100, (w / refTotal) * 100);
+                const prevPct = prevW !== undefined ? Math.min(100, (prevW / refTotal) * 100) : null;
+                const isIncrease = !isSold && prevPct !== null && pct > prevPct + 0.01;
+                const isDecrease = !isSold && prevPct !== null && pct < prevPct - 0.01;
+                const isNewPosition = !isSold && prevSnap && prevW === undefined && pct > 0;
+                // base = the "kept" / unchanged portion of the bar (gray)
+                const baseWidth = isSold
+                  ? 0
+                  : isNewPosition
+                    ? 0
+                    : prevPct !== null
+                      ? Math.min(pct, prevPct)
+                      : pct;
                 return (
-                  <div key={i} className={`flex items-center gap-2 ${isDisabled ? 'opacity-40' : ''}`}>
-                    {onToggleDisabled && ticker && (
+                  <div key={rowKey} className={`flex items-center gap-2 ${isDisabled ? 'opacity-40' : ''} ${isSold ? 'opacity-60' : ''}`}>
+                    {onToggleDisabled && (ticker ? (
                       <button onClick={() => onToggleDisabled(portfolio.id, ticker)}
-                        className="p-1 text-stone-400 hover:text-stone-700 flex-shrink-0" title={isDisabled ? 'Enable holding' : 'Disable holding (excluded from chart)'}>
+                        className="w-[29px] h-[29px] flex-shrink-0 flex items-center justify-center text-stone-400 hover:text-stone-700"
+                        title={isDisabled ? 'Enable holding' : 'Disable holding (excluded from chart)'}>
                         {isDisabled ? <EyeOff size={13} /> : <Eye size={13} />}
                       </button>
-                    )}
-                    {onToggleDisabled && !ticker && <div className="w-[29px] flex-shrink-0" />}
+                    ) : <div className="w-[29px] h-[29px] flex-shrink-0" />)}
                     <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden focus-within:border-stone-700 transition-colors">
-                      <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
-                        style={{ width: `${pct}%`, background: 'var(--weight-bar)' }} />
-                      <input value={h.ticker} onChange={(e) => updateHolding(i, 'ticker', e.target.value)} placeholder="TICKER"
-                        className={`relative w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'}`} />
+                      {/* base/kept bar — gray */}
+                      {baseWidth > 0 && (
+                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                          style={{ width: `${baseWidth}%`, background: 'var(--weight-bar)' }} />
+                      )}
+                      {/* increase: green sliver from prev to current */}
+                      {isIncrease && (
+                        <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
+                          style={{ left: `${prevPct}%`, width: `${pct - prevPct}%`, background: 'var(--success)', opacity: 0.22 }} />
+                      )}
+                      {/* decrease: red ghost from current to prev (where the position used to extend) */}
+                      {isDecrease && (
+                        <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
+                          style={{ left: `${pct}%`, width: `${prevPct - pct}%`, background: 'var(--danger)', opacity: 0.25 }} />
+                      )}
+                      {/* fully new position: green from 0 to current */}
+                      {isNewPosition && (
+                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                          style={{ width: `${pct}%`, background: 'var(--success)', opacity: 0.22 }} />
+                      )}
+                      {/* sold: red ghost spanning what the position used to be */}
+                      {isSold && prevPct !== null && (
+                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                          style={{ width: `${prevPct}%`, background: 'var(--danger)', opacity: 0.25 }} />
+                      )}
+                      <input value={h.ticker} readOnly={isReadonly || isSold}
+                        onChange={(e) => !isReadonly && !isSold && updateHolding(row.i, 'ticker', e.target.value)} placeholder="TICKER"
+                        className={`relative w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'} ${(isReadonly || isSold) ? 'cursor-default' : ''}`} />
                     </div>
-                    <input type="number" step="0.01" value={h.weight} onChange={(e) => updateHolding(i, 'weight', e.target.value)} placeholder="0.00"
-                      className="w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm text-stone-900 font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none" />
+                    <input type="number" step="0.01" value={h.weight} readOnly={isReadonly || isSold}
+                      onChange={(e) => !isReadonly && !isSold && updateHolding(row.i, 'weight', e.target.value)} placeholder="0.00"
+                      className={`w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none ${isSold ? 'text-stone-500' : 'text-stone-900'} ${(isReadonly || isSold) ? 'cursor-default' : ''}`} />
                     <span className="text-stone-500 text-xs font-mono">%</span>
-                    <button onClick={() => removeHolding(i)} className="p-1.5 text-stone-400 hover:text-red-600"><X size={14} /></button>
+                    {(!isReadonly && !isSold)
+                      ? <button onClick={() => removeHolding(row.i)} className="p-1.5 text-stone-400 hover:text-red-600"><X size={14} /></button>
+                      : <div className="w-[26px] flex-shrink-0" />}
                   </div>
                 );
               })}
             </div>
-            <button onClick={addHolding} className="mt-3 flex items-center gap-2 text-[11px] tracking-[0.1em] uppercase text-stone-600 hover:text-stone-900 font-mono">
-              <Plus size={12} /> Add holding
-            </button>
+            {!isReadonly && (
+              <button onClick={addHolding} className="mt-3 flex items-center gap-2 text-[11px] tracking-[0.1em] uppercase text-stone-600 hover:text-stone-900 font-mono">
+                <Plus size={12} /> Add holding
+              </button>
+            )}
           </div>
         </div>
         <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-between gap-3 bg-stone-100/50">
@@ -1505,21 +1770,6 @@ export default function PortfolioTracker() {
     });
   };
 
-  // In dark mode, near-black portfolio colors (e.g. `#1a1815` of "My Portfolio") vanish on a dark
-  // canvas. Lighten dark hexes via a perceptual brightness mix; bright colors pass through unchanged.
-  const getDisplayColor = (color) => {
-    if (!darkMode || typeof color !== 'string' || !color.startsWith('#') || color.length !== 7) return color;
-    const r = parseInt(color.slice(1, 3), 16);
-    const g = parseInt(color.slice(3, 5), 16);
-    const b = parseInt(color.slice(5, 7), 16);
-    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-    if (brightness > 170) return color;
-    const mix = brightness < 90 ? 0.7 : 0.35;
-    const lighten = (c) => Math.round(c + (255 - c) * mix);
-    return '#' + [lighten(r), lighten(g), lighten(b)]
-      .map(v => v.toString(16).padStart(2, '0')).join('');
-  };
-
   // Simple hash for comparing data snapshots
   const computeHash = (portfolios, prices) => {
     const p = JSON.stringify(portfolios.map(p => ({ id: p.id, name: p.name, holdings: p.holdings, kind: p.kind })));
@@ -1608,13 +1858,17 @@ export default function PortfolioTracker() {
   useEffect(() => { if (loaded) savePortfolios(portfolios); }, [portfolios, loaded]);
 
   // A ticker is "needed" only if it's enabled (not eye-toggled-off) in at least one portfolio.
-  // If every portfolio that holds it has it disabled, it stops contributing to the chart and
-  // there's no point counting it as a needed price.
+  // Considers BOTH current holdings and historical snapshots — a ticker that only ever appears in
+  // an old quarter still drives the chain-linked chart and so must be in the price coverage list.
   const neededTickers = useMemo(() => {
     const set = new Set();
     portfolios.forEach(p => {
       const disabled = disabledHoldings[p.id];
-      p.holdings.forEach(h => {
+      const allHoldings = [
+        ...(p.holdings || []),
+        ...(p.history || []).flatMap(s => s.holdings || [])
+      ];
+      allHoldings.forEach(h => {
         const t = h.ticker.toUpperCase();
         if (!disabled?.has(t)) set.add(t);
       });
@@ -1625,8 +1879,20 @@ export default function PortfolioTracker() {
   const portfolioSeries = useMemo(() => {
     const result = {};
     portfolios.forEach(p => {
-      const active = getActiveHoldings(p, disabledHoldings);
-      result[p.id] = computeSeries({ ...p, holdings: active }, prices);
+      const disabled = disabledHoldings[p.id];
+      // Filter the eye-toggled tickers out of CURRENT and EVERY history snapshot — the user wants
+      // the portfolio to behave as if the disabled position never existed at any point in time.
+      // computeSeries renormalizes weights per snapshot, so the freed weight redistributes onto
+      // the remaining positions (the Amazon/Google example).
+      const filterHoldings = (hs) => disabled?.size
+        ? (hs || []).filter(h => !disabled.has(h.ticker.trim().toUpperCase()))
+        : hs;
+      const filtered = {
+        ...p,
+        holdings: filterHoldings(p.holdings),
+        history: p.history ? p.history.map(s => ({ ...s, holdings: filterHoldings(s.holdings) })) : undefined,
+      };
+      result[p.id] = computeSeries(filtered, prices);
     });
     return result;
   }, [portfolios, prices, disabledHoldings]);
@@ -1690,16 +1956,25 @@ export default function PortfolioTracker() {
 
   // Step 2: filter by period and re-normalize so first row = 100
   const chartData = useMemo(() => {
-    if (!fullChartData.length || chartPeriod === 'ALL') return fullChartData;
-    const lastDate = new Date(fullChartData[fullChartData.length - 1].date);
-    let cutoff;
-    if (chartPeriod === '3M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 3); }
-    else if (chartPeriod === '6M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 6); }
-    else if (chartPeriod === 'YTD') { cutoff = new Date(lastDate.getFullYear(), 0, 1); }
-    else if (chartPeriod === '1Y') { cutoff = new Date(lastDate); cutoff.setFullYear(cutoff.getFullYear() - 1); }
-    else return fullChartData;
-    const filtered = fullChartData.filter(d => new Date(d.date) >= cutoff);
-    if (filtered.length < 2) return fullChartData;
+    if (!fullChartData.length) return fullChartData;
+    // Slice by period (ALL keeps everything).
+    let filtered = fullChartData;
+    if (chartPeriod !== 'ALL') {
+      const lastDate = new Date(fullChartData[fullChartData.length - 1].date);
+      let cutoff;
+      if (chartPeriod === '3M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 3); }
+      else if (chartPeriod === '6M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 6); }
+      else if (chartPeriod === 'YTD') { cutoff = new Date(lastDate.getFullYear(), 0, 1); }
+      else if (chartPeriod === '1Y') { cutoff = new Date(lastDate); cutoff.setFullYear(cutoff.getFullYear() - 1); }
+      if (cutoff) {
+        const sliced = fullChartData.filter(d => new Date(d.date) >= cutoff);
+        if (sliced.length >= 2) filtered = sliced;
+      }
+    }
+    // Always rebase to firstRow = 100. Portfolios without history (e.g. Taras Guk) start their
+    // series earlier than chain-linked gurus (whose Q1 snapshot is dropped when prices begin
+    // mid-quarter). Without rebasing, those portfolios show ≠100 on the chart's first column on
+    // ALL — looks like a bug. Same rebasing on every period keeps behaviour consistent.
     const firstRow = filtered[0];
     return filtered.map(row => {
       const newRow = { date: row.date };
@@ -1991,8 +2266,8 @@ export default function PortfolioTracker() {
                       }`}
                       title={p.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}>
                       <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{
-                        backgroundColor: p.visible ? getDisplayColor(p.color) : 'transparent',
-                        border: `1.5px solid ${getDisplayColor(p.color)}`,
+                        backgroundColor: p.visible ? p.color : 'transparent',
+                        border: `1.5px solid ${p.color}`,
                         opacity: p.visible ? 1 : 0.4
                       }} />
                       <span>{p.name}</span>
@@ -2052,7 +2327,7 @@ export default function PortfolioTracker() {
                           return pri(a) - pri(b);
                         })
                         .map(p => (
-                        <Line key={p.id} type="monotone" dataKey={p.id} stroke={getDisplayColor(p.color)}
+                        <Line key={p.id} type="monotone" dataKey={p.id} stroke={p.color}
                           strokeWidth={p.kind === 'mine' ? 2.5 : 1.75} dot={false}
                           strokeDasharray={p.kind === 'benchmark' ? '8 3 1 3' : undefined}
                           activeDot={{ r: 4, strokeWidth: 0 }} isAnimationActive={false} />
@@ -2108,7 +2383,8 @@ export default function PortfolioTracker() {
 
       {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}
         onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
-        disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled} />}
+        disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled}
+        prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} />}
       {importing !== null && <ImportModal tickerHint={importing} onSave={handleImportPrice} onClose={() => setImporting(null)} />}
       {showBackup && <BackupModal portfolios={portfolios} prices={prices} onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>

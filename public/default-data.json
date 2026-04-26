@@ -1,6 +1,6 @@
 {
   "version": "v8",
-  "exportedAt": "2026-04-26T18:35:01.214Z",
+  "exportedAt": "2026-04-26T21:10:06.184Z",
   "portfolios": [
     {
       "id": "voo",
@@ -38,7 +38,7 @@
       "subtitle": "",
       "kind": "mine",
       "color": "#475569",
-      "visible": false,
+      "visible": true,
       "locked": false,
       "holdings": [
         {
@@ -86,9 +86,9 @@
     {
       "id": "lilu",
       "name": "Li Lu",
-      "subtitle": "Q4 2025",
+      "subtitle": "Li Lu · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "guru",
-      "color": "#a14535",
+      "color": "#ae1919",
       "visible": true,
       "locked": false,
       "holdings": [
@@ -127,6 +127,127 @@
         {
           "ticker": "AAPL",
           "weight": 0.84
+        }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "BAC",
+              "weight": 26.12
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 21.61
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 17.78
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 17.31
+            },
+            {
+              "ticker": "EWBC",
+              "weight": 11.26
+            },
+            {
+              "ticker": "OXY",
+              "weight": 3.27
+            },
+            {
+              "ticker": "SOC",
+              "weight": 1.54
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 1.11
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "BAC",
+              "weight": 18.35
+            },
+            {
+              "ticker": "PDD",
+              "weight": 17.93
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 16.67
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 16.22
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 16.17
+            },
+            {
+              "ticker": "EWBC",
+              "weight": 10.43
+            },
+            {
+              "ticker": "OXY",
+              "weight": 2.29
+            },
+            {
+              "ticker": "SOC",
+              "weight": 1.1
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 0.84
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "GOOGL",
+              "weight": 19.14
+            },
+            {
+              "ticker": "PDD",
+              "weight": 18.85
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 18.48
+            },
+            {
+              "ticker": "BAC",
+              "weight": 16.66
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 13.97
+            },
+            {
+              "ticker": "EWBC",
+              "weight": 9.15
+            },
+            {
+              "ticker": "OXY",
+              "weight": 2.15
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 0.87
+            },
+            {
+              "ticker": "SOC",
+              "weight": 0.73
+            }
+          ]
         }
       ]
     },
@@ -204,7 +325,7 @@
     {
       "id": "custom-1777150247501",
       "name": "Greenhaven",
-      "subtitle": "Q1 2026",
+      "subtitle": "Greenhaven · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#ff6d1f",
       "visible": true,
@@ -212,145 +333,703 @@
       "holdings": [
         {
           "ticker": "GM",
-          "weight": 15.44
+          "weight": 20.05
         },
         {
           "ticker": "LEN",
-          "weight": 15.28
+          "weight": 16.86
         },
         {
           "ticker": "TOL",
-          "weight": 12.76
+          "weight": 12.31
         },
         {
           "ticker": "PHM",
-          "weight": 10.72
+          "weight": 10.55
         },
         {
           "ticker": "DHI",
-          "weight": 7.91
+          "weight": 8.15
         },
         {
           "ticker": "OSK",
-          "weight": 6.2
-        },
-        {
-          "ticker": "ARW",
-          "weight": 4.54
-        },
-        {
-          "ticker": "AVT",
-          "weight": 4.04
-        },
-        {
-          "ticker": "BAX",
-          "weight": 4.02
-        },
-        {
-          "ticker": "SLB",
-          "weight": 4.01
-        },
-        {
-          "ticker": "ICLR",
-          "weight": 3.71
-        },
-        {
-          "ticker": "LEA",
-          "weight": 3.44
+          "weight": 5.14
         },
         {
           "ticker": "AVTR",
-          "weight": 2.98
+          "weight": 3.82
         },
         {
-          "ticker": "NOV",
-          "weight": 1.84
+          "ticker": "ARW",
+          "weight": 3.4
         },
         {
-          "ticker": "VBIL",
-          "weight": 1.55
+          "ticker": "BAX",
+          "weight": 3.32
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.31
+        },
+        {
+          "ticker": "AVT",
+          "weight": 3.07
+        },
+        {
+          "ticker": "SLB",
+          "weight": 2.91
+        },
+        {
+          "ticker": "MRP",
+          "weight": 2.24
         },
         {
           "ticker": "MTH",
-          "weight": 1.54
+          "weight": 1.56
+        },
+        {
+          "ticker": "NOV",
+          "weight": 1.46
+        },
+        {
+          "ticker": "VBIL",
+          "weight": 0.94
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 0.56
+        },
+        {
+          "ticker": "TFX",
+          "weight": 0.24
+        },
+        {
+          "ticker": "C",
+          "weight": 0.06
+        },
+        {
+          "ticker": "RHI",
+          "weight": 0.05
+        }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "C",
+              "weight": 18.82
+            },
+            {
+              "ticker": "GM",
+              "weight": 17.78
+            },
+            {
+              "ticker": "LEN",
+              "weight": 17.23
+            },
+            {
+              "ticker": "TOL",
+              "weight": 9.34
+            },
+            {
+              "ticker": "PHM",
+              "weight": 9.14
+            },
+            {
+              "ticker": "DHI",
+              "weight": 7.42
+            },
+            {
+              "ticker": "OSK",
+              "weight": 3.82
+            },
+            {
+              "ticker": "MRP",
+              "weight": 3.32
+            },
+            {
+              "ticker": "ARW",
+              "weight": 3.16
+            },
+            {
+              "ticker": "AVT",
+              "weight": 3.03
+            },
+            {
+              "ticker": "LEA",
+              "weight": 2.58
+            },
+            {
+              "ticker": "MTH",
+              "weight": 1.62
+            },
+            {
+              "ticker": "NOV",
+              "weight": 0.99
+            },
+            {
+              "ticker": "TEX",
+              "weight": 0.9
+            },
+            {
+              "ticker": "LEN.B",
+              "weight": 0.63
+            },
+            {
+              "ticker": "G",
+              "weight": 0.12
+            },
+            {
+              "ticker": "CRH",
+              "weight": 0.04
+            },
+            {
+              "ticker": "GS",
+              "weight": 0.02
+            },
+            {
+              "ticker": "A",
+              "weight": 0.02
+            },
+            {
+              "ticker": "MS",
+              "weight": 0.02
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "C",
+              "weight": 20.51
+            },
+            {
+              "ticker": "GM",
+              "weight": 17.33
+            },
+            {
+              "ticker": "LEN",
+              "weight": 15.63
+            },
+            {
+              "ticker": "TOL",
+              "weight": 9.51
+            },
+            {
+              "ticker": "PHM",
+              "weight": 8.76
+            },
+            {
+              "ticker": "DHI",
+              "weight": 7.06
+            },
+            {
+              "ticker": "OSK",
+              "weight": 4.31
+            },
+            {
+              "ticker": "ARW",
+              "weight": 3.63
+            },
+            {
+              "ticker": "MRP",
+              "weight": 3.35
+            },
+            {
+              "ticker": "AVT",
+              "weight": 3.13
+            },
+            {
+              "ticker": "LEA",
+              "weight": 2.6
+            },
+            {
+              "ticker": "MTH",
+              "weight": 1.49
+            },
+            {
+              "ticker": "TEX",
+              "weight": 1.04
+            },
+            {
+              "ticker": "NOV",
+              "weight": 0.92
+            },
+            {
+              "ticker": "LEN.B",
+              "weight": 0.57
+            },
+            {
+              "ticker": "ICLR",
+              "weight": 0.04
+            },
+            {
+              "ticker": "CRH",
+              "weight": 0.04
+            },
+            {
+              "ticker": "GS",
+              "weight": 0.03
+            },
+            {
+              "ticker": "SCHW",
+              "weight": 0.03
+            },
+            {
+              "ticker": "A",
+              "weight": 0.02
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "GM",
+              "weight": 21.44
+            },
+            {
+              "ticker": "LEN",
+              "weight": 18.52
+            },
+            {
+              "ticker": "TOL",
+              "weight": 11.73
+            },
+            {
+              "ticker": "PHM",
+              "weight": 11.2
+            },
+            {
+              "ticker": "DHI",
+              "weight": 9.39
+            },
+            {
+              "ticker": "OSK",
+              "weight": 4.98
+            },
+            {
+              "ticker": "ARW",
+              "weight": 3.49
+            },
+            {
+              "ticker": "AVTR",
+              "weight": 3.48
+            },
+            {
+              "ticker": "AVT",
+              "weight": 3.12
+            },
+            {
+              "ticker": "LEA",
+              "weight": 2.75
+            },
+            {
+              "ticker": "MRP",
+              "weight": 2.35
+            },
+            {
+              "ticker": "BAX",
+              "weight": 2.18
+            },
+            {
+              "ticker": "MTH",
+              "weight": 1.6
+            },
+            {
+              "ticker": "NOV",
+              "weight": 1.16
+            },
+            {
+              "ticker": "TEX",
+              "weight": 1.15
+            },
+            {
+              "ticker": "LEN.B",
+              "weight": 0.66
+            },
+            {
+              "ticker": "VBIL",
+              "weight": 0.57
+            },
+            {
+              "ticker": "C",
+              "weight": 0.13
+            },
+            {
+              "ticker": "CRH",
+              "weight": 0.05
+            },
+            {
+              "ticker": "ICLR",
+              "weight": 0.05
+            }
+          ]
         }
       ]
     },
     {
       "id": "buffett",
       "name": "Buffett",
-      "subtitle": "Q4 2025",
+      "subtitle": "Buffett · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "guru",
-      "color": "#dd9831",
+      "color": "#dd8d31",
       "visible": true,
       "locked": false,
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 23.23
+          "weight": 23.37
         },
         {
           "ticker": "AXP",
-          "weight": 21.09
+          "weight": 21.15
         },
         {
           "ticker": "BAC",
-          "weight": 11.01
+          "weight": 10.73
         },
         {
           "ticker": "KO",
-          "weight": 10.83
+          "weight": 10.54
         },
         {
           "ticker": "CVX",
-          "weight": 7.87
+          "weight": 7.48
         },
         {
           "ticker": "MCO",
-          "weight": 5.23
+          "weight": 4.76
         },
         {
           "ticker": "OXY",
-          "weight": 4.6
+          "weight": 4.1
         },
         {
           "ticker": "CB",
-          "weight": 4.53
+          "weight": 4.03
         },
         {
           "ticker": "KHC",
-          "weight": 3.51
+          "weight": 2.98
         },
         {
           "ticker": "GOOGL",
-          "weight": 2.67
+          "weight": 2.11
         },
         {
           "ticker": "DVA",
-          "weight": 1.95
+          "weight": 1.36
         },
         {
           "ticker": "KR",
-          "weight": 1.77
+          "weight": 1.18
         },
         {
           "ticker": "V",
-          "weight": 1.69
+          "weight": 1.1
+        },
+        {
+          "ticker": "SIRI",
+          "weight": 0.94
+        },
+        {
+          "ticker": "MA",
+          "weight": 0.86
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 0.83
+        },
+        {
+          "ticker": "STZ",
+          "weight": 0.67
+        },
+        {
+          "ticker": "COF",
+          "weight": 0.65
+        },
+        {
+          "ticker": "UNH",
+          "weight": 0.63
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 0.53
+        }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "AAPL",
+              "weight": 26.36
+            },
+            {
+              "ticker": "AXP",
+              "weight": 16.12
+            },
+            {
+              "ticker": "KO",
+              "weight": 11.33
+            },
+            {
+              "ticker": "BAC",
+              "weight": 10.41
+            },
+            {
+              "ticker": "CVX",
+              "weight": 7.84
+            },
+            {
+              "ticker": "OXY",
+              "weight": 5.16
+            },
+            {
+              "ticker": "MCO",
+              "weight": 4.54
+            },
+            {
+              "ticker": "KHC",
+              "weight": 3.91
+            },
+            {
+              "ticker": "CB",
+              "weight": 3.22
+            },
+            {
+              "ticker": "DVA",
+              "weight": 2.13
+            },
+            {
+              "ticker": "VRSN",
+              "weight": 1.33
+            },
+            {
+              "ticker": "KR",
+              "weight": 1.33
+            },
+            {
+              "ticker": "V",
+              "weight": 1.15
+            },
+            {
+              "ticker": "SIRI",
+              "weight": 1.07
+            },
+            {
+              "ticker": "STZ",
+              "weight": 0.87
+            },
+            {
+              "ticker": "MA",
+              "weight": 0.86
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 0.75
+            },
+            {
+              "ticker": "AON",
+              "weight": 0.65
+            },
+            {
+              "ticker": "COF",
+              "weight": 0.5
+            },
+            {
+              "ticker": "DPZ",
+              "weight": 0.47
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "AAPL",
+              "weight": 23.06
+            },
+            {
+              "ticker": "AXP",
+              "weight": 19.42
+            },
+            {
+              "ticker": "BAC",
+              "weight": 11.5
+            },
+            {
+              "ticker": "KO",
+              "weight": 11.36
+            },
+            {
+              "ticker": "CVX",
+              "weight": 7.02
+            },
+            {
+              "ticker": "MCO",
+              "weight": 4.97
+            },
+            {
+              "ticker": "OXY",
+              "weight": 4.47
+            },
+            {
+              "ticker": "KHC",
+              "weight": 3.37
+            },
+            {
+              "ticker": "CB",
+              "weight": 3.14
+            },
+            {
+              "ticker": "DVA",
+              "weight": 1.93
+            },
+            {
+              "ticker": "VRSN",
+              "weight": 1.54
+            },
+            {
+              "ticker": "KR",
+              "weight": 1.44
+            },
+            {
+              "ticker": "V",
+              "weight": 1.18
+            },
+            {
+              "ticker": "SIRI",
+              "weight": 1.11
+            },
+            {
+              "ticker": "MA",
+              "weight": 0.9
+            },
+            {
+              "ticker": "STZ",
+              "weight": 0.88
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 0.88
+            },
+            {
+              "ticker": "UNH",
+              "weight": 0.63
+            },
+            {
+              "ticker": "COF",
+              "weight": 0.61
+            },
+            {
+              "ticker": "AON",
+              "weight": 0.59
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "AAPL",
+              "weight": 23.61
+            },
+            {
+              "ticker": "AXP",
+              "weight": 19.58
+            },
+            {
+              "ticker": "BAC",
+              "weight": 11.39
+            },
+            {
+              "ticker": "KO",
+              "weight": 10.31
+            },
+            {
+              "ticker": "CVX",
+              "weight": 7.37
+            },
+            {
+              "ticker": "OXY",
+              "weight": 4.86
+            },
+            {
+              "ticker": "MCO",
+              "weight": 4.57
+            },
+            {
+              "ticker": "CB",
+              "weight": 3.44
+            },
+            {
+              "ticker": "KHC",
+              "weight": 3.3
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.68
+            },
+            {
+              "ticker": "DVA",
+              "weight": 1.66
+            },
+            {
+              "ticker": "KR",
+              "weight": 1.31
+            },
+            {
+              "ticker": "SIRI",
+              "weight": 1.13
+            },
+            {
+              "ticker": "V",
+              "weight": 1.1
+            },
+            {
+              "ticker": "VRSN",
+              "weight": 0.98
+            },
+            {
+              "ticker": "MA",
+              "weight": 0.88
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 0.85
+            },
+            {
+              "ticker": "STZ",
+              "weight": 0.71
+            },
+            {
+              "ticker": "UNH",
+              "weight": 0.68
+            },
+            {
+              "ticker": "COF",
+              "weight": 0.59
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777225955634",
       "name": "Robert Vinall",
-      "subtitle": "Q4 2025",
+      "subtitle": "Robert Vinall · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#01b759",
-      "visible": true,
+      "visible": false,
       "locked": false,
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 29.81
+          "weight": 29.8
         },
         {
           "ticker": "META",
@@ -396,20 +1075,181 @@
           "ticker": "PAYC",
           "weight": 0.46
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "CVNA",
+              "weight": 25.26
+            },
+            {
+              "ticker": "META",
+              "weight": 18.19
+            },
+            {
+              "ticker": "CACC",
+              "weight": 14.7
+            },
+            {
+              "ticker": "WIX",
+              "weight": 12.19
+            },
+            {
+              "ticker": "PDD",
+              "weight": 8.77
+            },
+            {
+              "ticker": "IBKR",
+              "weight": 7.77
+            },
+            {
+              "ticker": "YUMC",
+              "weight": 5.66
+            },
+            {
+              "ticker": "HTHT",
+              "weight": 5.39
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 0.95
+            },
+            {
+              "ticker": "PAYC",
+              "weight": 0.6
+            },
+            {
+              "ticker": "DE",
+              "weight": 0.52
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "CVNA",
+              "weight": 31.84
+            },
+            {
+              "ticker": "META",
+              "weight": 19.54
+            },
+            {
+              "ticker": "CACC",
+              "weight": 12.16
+            },
+            {
+              "ticker": "WIX",
+              "weight": 9.91
+            },
+            {
+              "ticker": "IBKR",
+              "weight": 8.72
+            },
+            {
+              "ticker": "PDD",
+              "weight": 6.5
+            },
+            {
+              "ticker": "HTHT",
+              "weight": 4.14
+            },
+            {
+              "ticker": "YUMC",
+              "weight": 4.07
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 1.06
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.06
+            },
+            {
+              "ticker": "PAYC",
+              "weight": 0.53
+            },
+            {
+              "ticker": "DE",
+              "weight": 0.47
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "CVNA",
+              "weight": 30.75
+            },
+            {
+              "ticker": "META",
+              "weight": 18.78
+            },
+            {
+              "ticker": "CACC",
+              "weight": 11.15
+            },
+            {
+              "ticker": "WIX",
+              "weight": 10.24
+            },
+            {
+              "ticker": "IBKR",
+              "weight": 10.07
+            },
+            {
+              "ticker": "PDD",
+              "weight": 7.29
+            },
+            {
+              "ticker": "HTHT",
+              "weight": 4.32
+            },
+            {
+              "ticker": "YUMC",
+              "weight": 3.49
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.45
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 1.09
+            },
+            {
+              "ticker": "CRM",
+              "weight": 0.48
+            },
+            {
+              "ticker": "PAYC",
+              "weight": 0.47
+            },
+            {
+              "ticker": "DE",
+              "weight": 0.42
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777150124526",
       "name": "Chris Hohn",
-      "subtitle": "Q4 2025",
+      "subtitle": "Chris Hohn · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#085faf",
-      "visible": true,
+      "visible": false,
       "locked": false,
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 27.28
+          "weight": 27.29
         },
         {
           "ticker": "V",
@@ -443,12 +1283,145 @@
           "ticker": "CNI",
           "weight": 1.82
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "GE",
+              "weight": 21.95
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 14.97
+            },
+            {
+              "ticker": "MCO",
+              "weight": 14.13
+            },
+            {
+              "ticker": "V",
+              "weight": 13.44
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 12.14
+            },
+            {
+              "ticker": "CP",
+              "weight": 8.89
+            },
+            {
+              "ticker": "CNI",
+              "weight": 6.04
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 4.99
+            },
+            {
+              "ticker": "FER",
+              "weight": 1.99
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.46
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "GE",
+              "weight": 24.12
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 17.23
+            },
+            {
+              "ticker": "V",
+              "weight": 13.35
+            },
+            {
+              "ticker": "MCO",
+              "weight": 13.1
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 11.53
+            },
+            {
+              "ticker": "CP",
+              "weight": 8.26
+            },
+            {
+              "ticker": "CNI",
+              "weight": 4.72
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 4.54
+            },
+            {
+              "ticker": "FER",
+              "weight": 2.05
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.1
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "GE",
+              "weight": 27.12
+            },
+            {
+              "ticker": "V",
+              "weight": 18.18
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 16.31
+            },
+            {
+              "ticker": "MCO",
+              "weight": 12.03
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 10.33
+            },
+            {
+              "ticker": "CP",
+              "weight": 7.05
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 3.51
+            },
+            {
+              "ticker": "CNI",
+              "weight": 3.36
+            },
+            {
+              "ticker": "FER",
+              "weight": 2.11
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777150376264",
       "name": "Josh Tarasoff",
-      "subtitle": "Q4 2025",
+      "subtitle": "Josh Tarasoff · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#24c2a2",
       "visible": true,
@@ -456,7 +1429,7 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 21.31
+          "weight": 21.3
         },
         {
           "ticker": "BN",
@@ -486,12 +1459,125 @@
           "ticker": "BUR",
           "weight": 4.78
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 21.34
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 18.48
+            },
+            {
+              "ticker": "BN",
+              "weight": 17.52
+            },
+            {
+              "ticker": "MKL",
+              "weight": 14.5
+            },
+            {
+              "ticker": "TRUP",
+              "weight": 11.69
+            },
+            {
+              "ticker": "TSLA",
+              "weight": 7.26
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 5.6
+            },
+            {
+              "ticker": "BUR",
+              "weight": 3.61
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 20.03
+            },
+            {
+              "ticker": "BAM",
+              "weight": 16.57
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 13.74
+            },
+            {
+              "ticker": "BUR",
+              "weight": 12.86
+            },
+            {
+              "ticker": "MKL",
+              "weight": 12.62
+            },
+            {
+              "ticker": "TRUP",
+              "weight": 11.9
+            },
+            {
+              "ticker": "TSLA",
+              "weight": 7.09
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 5.19
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 20.61
+            },
+            {
+              "ticker": "BN",
+              "weight": 19.04
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 14.73
+            },
+            {
+              "ticker": "MKL",
+              "weight": 12.51
+            },
+            {
+              "ticker": "TSLA",
+              "weight": 10.29
+            },
+            {
+              "ticker": "TRUP",
+              "weight": 9.64
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 7.43
+            },
+            {
+              "ticker": "BUR",
+              "weight": 5.75
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777227848490",
       "name": "AltaRock",
-      "subtitle": "Q4 2025",
+      "subtitle": "AltaRock · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#2563eb",
       "visible": false,
@@ -499,7 +1585,7 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 33.1
+          "weight": 33.09
         },
         {
           "ticker": "TDG",
@@ -529,12 +1615,137 @@
           "ticker": "GOOGL",
           "weight": 1.04
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "TDG",
+              "weight": 27.28
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 19.9
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 19.46
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 10.74
+            },
+            {
+              "ticker": "MCO",
+              "weight": 8.9
+            },
+            {
+              "ticker": "MA",
+              "weight": 6.46
+            },
+            {
+              "ticker": "V",
+              "weight": 5.99
+            },
+            {
+              "ticker": "HLT",
+              "weight": 1.25
+            },
+            {
+              "ticker": "FICO",
+              "weight": 0.02
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "TDG",
+              "weight": 27.21
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 25.14
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 23.42
+            },
+            {
+              "ticker": "MCO",
+              "weight": 8.72
+            },
+            {
+              "ticker": "MA",
+              "weight": 6.01
+            },
+            {
+              "ticker": "V",
+              "weight": 3.47
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 3.36
+            },
+            {
+              "ticker": "HLT",
+              "weight": 2.65
+            },
+            {
+              "ticker": "FICO",
+              "weight": 0.02
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 30.35
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 24.33
+            },
+            {
+              "ticker": "TDG",
+              "weight": 23.53
+            },
+            {
+              "ticker": "MCO",
+              "weight": 8.27
+            },
+            {
+              "ticker": "MA",
+              "weight": 6.07
+            },
+            {
+              "ticker": "V",
+              "weight": 3.33
+            },
+            {
+              "ticker": "HLT",
+              "weight": 2.57
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.53
+            },
+            {
+              "ticker": "FICO",
+              "weight": 0.02
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777228154883",
       "name": "David Abrams",
-      "subtitle": "Q4 2025",
+      "subtitle": "David Abrams · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#121eca",
       "visible": false,
@@ -542,7 +1753,7 @@
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 38.41
+          "weight": 38.43
         },
         {
           "ticker": "LAD",
@@ -588,12 +1799,185 @@
           "ticker": "UHAL",
           "weight": 0.03
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "LOAR",
+              "weight": 46.92
+            },
+            {
+              "ticker": "LAD",
+              "weight": 12.73
+            },
+            {
+              "ticker": "ABG",
+              "weight": 8.26
+            },
+            {
+              "ticker": "SGI",
+              "weight": 6.21
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 5.83
+            },
+            {
+              "ticker": "CPNG",
+              "weight": 5.07
+            },
+            {
+              "ticker": "WTW",
+              "weight": 4.32
+            },
+            {
+              "ticker": "META",
+              "weight": 4.04
+            },
+            {
+              "ticker": "UHAL.B",
+              "weight": 3.41
+            },
+            {
+              "ticker": "ET",
+              "weight": 2.05
+            },
+            {
+              "ticker": "CTLP",
+              "weight": 1
+            },
+            {
+              "ticker": "NUVB",
+              "weight": 0.12
+            },
+            {
+              "ticker": "UHAL",
+              "weight": 0.04
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "LOAR",
+              "weight": 45.16
+            },
+            {
+              "ticker": "LAD",
+              "weight": 13.51
+            },
+            {
+              "ticker": "ABG",
+              "weight": 8.23
+            },
+            {
+              "ticker": "SGI",
+              "weight": 6.51
+            },
+            {
+              "ticker": "CPNG",
+              "weight": 6.38
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 6.12
+            },
+            {
+              "ticker": "META",
+              "weight": 4.77
+            },
+            {
+              "ticker": "WTW",
+              "weight": 3.61
+            },
+            {
+              "ticker": "UHAL.B",
+              "weight": 2.89
+            },
+            {
+              "ticker": "ET",
+              "weight": 1.84
+            },
+            {
+              "ticker": "CRCL",
+              "weight": 0.82
+            },
+            {
+              "ticker": "NUVB",
+              "weight": 0.12
+            },
+            {
+              "ticker": "UHAL",
+              "weight": 0.04
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "LOAR",
+              "weight": 41.55
+            },
+            {
+              "ticker": "LAD",
+              "weight": 12.76
+            },
+            {
+              "ticker": "ABG",
+              "weight": 8.54
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 8.37
+            },
+            {
+              "ticker": "SGI",
+              "weight": 7.99
+            },
+            {
+              "ticker": "CPNG",
+              "weight": 6.79
+            },
+            {
+              "ticker": "META",
+              "weight": 4.7
+            },
+            {
+              "ticker": "WTW",
+              "weight": 4.04
+            },
+            {
+              "ticker": "UHAL.B",
+              "weight": 2.68
+            },
+            {
+              "ticker": "ET",
+              "weight": 1.73
+            },
+            {
+              "ticker": "CRCL",
+              "weight": 0.59
+            },
+            {
+              "ticker": "NUVB",
+              "weight": 0.23
+            },
+            {
+              "ticker": "UHAL",
+              "weight": 0.03
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777225852884",
       "name": "Valley Forge Capital Management",
-      "subtitle": "Q4 2025",
+      "subtitle": "Valley Forge Capital Management · DataRoma · Q4 2025 (4q chain-linked)",
       "kind": "custom",
       "color": "#db2777",
       "visible": false,
@@ -635,6 +2019,131 @@
           "ticker": "EFX",
           "weight": 0.72
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "FICO",
+              "weight": 32.29
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 20.32
+            },
+            {
+              "ticker": "MA",
+              "weight": 18.54
+            },
+            {
+              "ticker": "MCO",
+              "weight": 13.94
+            },
+            {
+              "ticker": "V",
+              "weight": 7.28
+            },
+            {
+              "ticker": "INTU",
+              "weight": 4.16
+            },
+            {
+              "ticker": "ASML",
+              "weight": 1.9
+            },
+            {
+              "ticker": "EFX",
+              "weight": 0.8
+            },
+            {
+              "ticker": "MSCI",
+              "weight": 0.77
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "FICO",
+              "weight": 31.04
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 20.44
+            },
+            {
+              "ticker": "MA",
+              "weight": 18.43
+            },
+            {
+              "ticker": "MCO",
+              "weight": 14.56
+            },
+            {
+              "ticker": "V",
+              "weight": 7.15
+            },
+            {
+              "ticker": "INTU",
+              "weight": 4.58
+            },
+            {
+              "ticker": "ASML",
+              "weight": 2.22
+            },
+            {
+              "ticker": "EFX",
+              "weight": 0.82
+            },
+            {
+              "ticker": "MSCI",
+              "weight": 0.76
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "FICO",
+              "weight": 27.66
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 20.55
+            },
+            {
+              "ticker": "MA",
+              "weight": 20.32
+            },
+            {
+              "ticker": "MCO",
+              "weight": 15.06
+            },
+            {
+              "ticker": "V",
+              "weight": 7.49
+            },
+            {
+              "ticker": "INTU",
+              "weight": 4.29
+            },
+            {
+              "ticker": "ASML",
+              "weight": 2.93
+            },
+            {
+              "ticker": "EFX",
+              "weight": 0.89
+            },
+            {
+              "ticker": "MSCI",
+              "weight": 0.81
+            }
+          ]
+        }
       ]
     },
     {
@@ -643,7 +2152,7 @@
       "subtitle": "Guru consensus",
       "kind": "custom",
       "color": "#c1cccd",
-      "visible": true,
+      "visible": false,
       "locked": false,
       "holdings": [
         {
@@ -2095,6 +3604,522 @@
       "2025-07-01": 84.83,
       "2025-06-01": 87.88,
       "2025-05-01": 96.27
+    },
+    "ALLE": {
+      "2026-04-01": 145.77,
+      "2026-03-01": 160.87,
+      "2026-02-01": 165.02,
+      "2026-01-01": 159.23,
+      "2025-12-01": 164.13,
+      "2025-11-01": 165.4,
+      "2025-10-01": 176.83,
+      "2025-09-01": 167.25,
+      "2025-08-01": 165.11,
+      "2025-07-01": 143.62,
+      "2025-06-01": 141.77,
+      "2025-05-01": 139.37
+    },
+    "ALLY": {
+      "2026-04-01": 39.75,
+      "2026-03-01": 38.31,
+      "2026-02-01": 41.94,
+      "2026-01-01": 45.46,
+      "2025-12-01": 41.07,
+      "2025-11-01": 38.68,
+      "2025-10-01": 38.88,
+      "2025-09-01": 40.97,
+      "2025-08-01": 37.01,
+      "2025-07-01": 38.91,
+      "2025-06-01": 34.9,
+      "2025-05-01": 32.46
+    },
+    "AON": {
+      "2026-04-01": 321.88,
+      "2026-03-01": 332.02,
+      "2026-02-01": 353.14,
+      "2026-01-01": 351.12,
+      "2025-12-01": 352.69,
+      "2025-11-01": 339.42,
+      "2025-10-01": 355.15,
+      "2025-09-01": 367.63,
+      "2025-08-01": 356.68,
+      "2025-07-01": 357.13,
+      "2025-06-01": 368.06,
+      "2025-05-01": 351.18
+    },
+    "CHTR": {
+      "2026-04-01": 213.17,
+      "2026-03-01": 231.46,
+      "2026-02-01": 208.84,
+      "2026-01-01": 209.45,
+      "2025-12-01": 199.5,
+      "2025-11-01": 231.31,
+      "2025-10-01": 275.32,
+      "2025-09-01": 262.5,
+      "2025-08-01": 270.53,
+      "2025-07-01": 407.82,
+      "2025-06-01": 391.03,
+      "2025-05-01": 388.3
+    },
+    "DEO": {
+      "2026-04-01": 74.31,
+      "2026-03-01": 86.54,
+      "2026-02-01": 91.8,
+      "2026-01-01": 86.12,
+      "2025-12-01": 92.11,
+      "2025-11-01": 92.94,
+      "2025-10-01": 97.79,
+      "2025-09-01": 110.11,
+      "2025-08-01": 98.26,
+      "2025-07-01": 101.54,
+      "2025-06-01": 108.28,
+      "2025-05-01": 111.78
+    },
+    "DPZ": {
+      "2026-04-01": 359.04,
+      "2026-03-01": 397.53,
+      "2026-02-01": 411.6,
+      "2026-01-01": 416.7,
+      "2025-12-01": 419.81,
+      "2025-11-01": 398.66,
+      "2025-10-01": 431.95,
+      "2025-09-01": 459.21,
+      "2025-08-01": 464.89,
+      "2025-07-01": 451.19,
+      "2025-06-01": 471.69,
+      "2025-05-01": 488.39
+    },
+    "FWONK": {
+      "2026-04-01": 87.01,
+      "2026-03-01": 91.52,
+      "2026-02-01": 86.4,
+      "2026-01-01": 97.98,
+      "2025-12-01": 95.38,
+      "2025-11-01": 99.47,
+      "2025-10-01": 103.68,
+      "2025-09-01": 98.93,
+      "2025-08-01": 99.9,
+      "2025-07-01": 104.26,
+      "2025-06-01": 96.33,
+      "2025-05-01": 89.47
+    },
+    "HEI.A": {
+      "2026-04-01": 216.46,
+      "2026-03-01": 242.06,
+      "2026-02-01": 252.84,
+      "2026-01-01": 252.33,
+      "2025-12-01": 246.26,
+      "2025-11-01": 248.18,
+      "2025-10-01": 252.88,
+      "2025-09-01": 240.83,
+      "2025-08-01": 255.48,
+      "2025-07-01": 257.03,
+      "2025-06-01": 235.09,
+      "2025-05-01": 202.89
+    },
+    "JEF": {
+      "2026-04-01": 41.95,
+      "2026-03-01": 43.46,
+      "2026-02-01": 60.42,
+      "2026-01-01": 62.18,
+      "2025-12-01": 56.95,
+      "2025-11-01": 52.56,
+      "2025-10-01": 64.84,
+      "2025-09-01": 63.72,
+      "2025-08-01": 55.99,
+      "2025-07-01": 54.4,
+      "2025-06-01": 48.34,
+      "2025-05-01": 47.19
+    },
+    "LAMR": {
+      "2026-04-01": 126.55,
+      "2026-03-01": 136.52,
+      "2026-02-01": 128.62,
+      "2026-01-01": 126.16,
+      "2025-12-01": 130.98,
+      "2025-11-01": 118.52,
+      "2025-10-01": 121.9,
+      "2025-09-01": 126.89,
+      "2025-08-01": 122.35,
+      "2025-07-01": 121.02,
+      "2025-06-01": 119.64,
+      "2025-05-01": 115
+    },
+    "LEN.B": {
+      "2026-04-01": 83.83,
+      "2026-03-01": 103.63,
+      "2026-02-01": 101.26,
+      "2026-01-01": 95.29,
+      "2025-12-01": 122.29,
+      "2025-11-01": 117.92,
+      "2025-10-01": 119.62,
+      "2025-09-01": 125.5,
+      "2025-08-01": 106.97,
+      "2025-07-01": 105.31,
+      "2025-06-01": 100.78,
+      "2025-05-01": 103.48
+    },
+    "LILA": {
+      "2026-04-01": 8.59,
+      "2026-03-01": 7.71,
+      "2026-02-01": 7.7,
+      "2026-01-01": 7.39,
+      "2025-12-01": 8.61,
+      "2025-11-01": 7.77,
+      "2025-10-01": 8.25,
+      "2025-09-01": 7.92,
+      "2025-08-01": 6.96,
+      "2025-07-01": 6.1,
+      "2025-06-01": 4.9,
+      "2025-05-01": 5.45
+    },
+    "LLYVA": {
+      "2026-04-01": 92.7,
+      "2026-03-01": 97.1,
+      "2026-02-01": 80.56,
+      "2026-01-01": 81.87,
+      "2025-12-01": 75.98,
+      "2025-11-01": 87.96,
+      "2025-10-01": 92.49,
+      "2025-09-01": 93.09,
+      "2025-08-01": 80.62,
+      "2025-07-01": 79.25,
+      "2025-06-01": 71.97,
+      "2025-05-01": 70.36
+    },
+    "LLYVK": {
+      "2026-04-01": 96.16,
+      "2026-03-01": 98.29,
+      "2026-02-01": 82.58,
+      "2026-01-01": 82.57,
+      "2025-12-01": 78.2,
+      "2025-11-01": 89.8,
+      "2025-10-01": 96.03,
+      "2025-09-01": 96.06,
+      "2025-08-01": 82.85,
+      "2025-07-01": 81.24,
+      "2025-06-01": 72.95,
+      "2025-05-01": 72.27
+    },
+    "LPX": {
+      "2026-04-01": 72.61,
+      "2026-03-01": 82.52,
+      "2026-02-01": 83.74,
+      "2026-01-01": 80.88,
+      "2025-12-01": 81.02,
+      "2025-11-01": 86.42,
+      "2025-10-01": 88.94,
+      "2025-09-01": 93.56,
+      "2025-08-01": 90,
+      "2025-07-01": 85.83,
+      "2025-06-01": 89.8,
+      "2025-05-01": 86.19
+    },
+    "NUE": {
+      "2026-04-01": 171.25,
+      "2026-03-01": 176.67,
+      "2026-02-01": 176,
+      "2026-01-01": 165.18,
+      "2025-12-01": 158.73,
+      "2025-11-01": 149.51,
+      "2025-10-01": 135.23,
+      "2025-09-01": 145.96,
+      "2025-08-01": 139.38,
+      "2025-07-01": 129.23,
+      "2025-06-01": 122.91,
+      "2025-05-01": 120
+    },
+    "NVR": {
+      "2026-04-01": 6584.95,
+      "2026-03-01": 7371.05,
+      "2026-02-01": 7576.01,
+      "2026-01-01": 7287.27,
+      "2025-12-01": 7450,
+      "2025-11-01": 7146.42,
+      "2025-10-01": 8066.56,
+      "2025-09-01": 8027.53,
+      "2025-08-01": 7619.21,
+      "2025-07-01": 7369.91,
+      "2025-06-01": 7058.68,
+      "2025-05-01": 7102
+    },
+    "NYT": {
+      "2026-04-01": 83.55,
+      "2026-03-01": 79.38,
+      "2026-02-01": 73.35,
+      "2026-01-01": 69.09,
+      "2025-12-01": 64.2,
+      "2025-11-01": 56.76,
+      "2025-10-01": 57.21,
+      "2025-09-01": 59.38,
+      "2025-08-01": 51.88,
+      "2025-07-01": 56.16,
+      "2025-06-01": 56.88,
+      "2025-05-01": 52.03
+    },
+    "POOL": {
+      "2026-04-01": 202.48,
+      "2026-03-01": 222.4,
+      "2026-02-01": 252.4,
+      "2026-01-01": 228.12,
+      "2025-12-01": 240.51,
+      "2025-11-01": 267.1,
+      "2025-10-01": 309.47,
+      "2025-09-01": 306.45,
+      "2025-08-01": 307.36,
+      "2025-07-01": 291.29,
+      "2025-06-01": 299.28,
+      "2025-05-01": 292.98
+    },
+    "SIRI": {
+      "2026-04-01": 23.08,
+      "2026-03-01": 21.59,
+      "2026-02-01": 20.4,
+      "2026-01-01": 20.09,
+      "2025-12-01": 21,
+      "2025-11-01": 21.64,
+      "2025-10-01": 23.22,
+      "2025-09-01": 23.15,
+      "2025-08-01": 20.9,
+      "2025-07-01": 22.85,
+      "2025-06-01": 21.56,
+      "2025-05-01": 21.61
+    },
+    "STZ": {
+      "2026-04-01": 152.25,
+      "2026-03-01": 156.43,
+      "2026-02-01": 156.35,
+      "2026-01-01": 138.4,
+      "2025-12-01": 135.84,
+      "2025-11-01": 131,
+      "2025-10-01": 136.27,
+      "2025-09-01": 150.13,
+      "2025-08-01": 168,
+      "2025-07-01": 162.7,
+      "2025-06-01": 177.28,
+      "2025-05-01": 187.56
+    },
+    "UNH": {
+      "2026-04-01": 274.21,
+      "2026-03-01": 288.16,
+      "2026-02-01": 286.02,
+      "2026-01-01": 330.9,
+      "2025-12-01": 327.16,
+      "2025-11-01": 339.13,
+      "2025-10-01": 343.9,
+      "2025-09-01": 308.31,
+      "2025-08-01": 250.61,
+      "2025-07-01": 311.97,
+      "2025-06-01": 303.12,
+      "2025-05-01": 411.32
+    },
+    "VRSN": {
+      "2026-04-01": 248.19,
+      "2026-03-01": 226.2,
+      "2026-02-01": 244.01,
+      "2026-01-01": 243.08,
+      "2025-12-01": 251.07,
+      "2025-11-01": 240.85,
+      "2025-10-01": 278.43,
+      "2025-09-01": 270.46,
+      "2025-08-01": 268.17,
+      "2025-07-01": 290.17,
+      "2025-06-01": 271,
+      "2025-05-01": 282.72
+    },
+    "C": {
+      "2026-04-01": 115.47,
+      "2026-03-01": 106.26,
+      "2026-02-01": 114.96,
+      "2026-01-01": 117.21,
+      "2025-12-01": 103.1,
+      "2025-11-01": 100.72,
+      "2025-10-01": 100.94,
+      "2025-09-01": 95.02,
+      "2025-08-01": 91.85,
+      "2025-07-01": 85,
+      "2025-06-01": 75.16,
+      "2025-05-01": 68.21
+    },
+    "MRP": {
+      "2026-04-01": 28.12,
+      "2026-03-01": 31,
+      "2026-02-01": 29.8,
+      "2026-01-01": 29.78,
+      "2025-12-01": 29.79,
+      "2025-11-01": 31.98,
+      "2025-10-01": 33.5,
+      "2025-09-01": 35.09,
+      "2025-08-01": 30.54,
+      "2025-07-01": 28.4,
+      "2025-06-01": 27.73,
+      "2025-05-01": 25.22
+    },
+    "RHI": {
+      "2026-04-01": 25.77,
+      "2026-03-01": 23.75,
+      "2026-02-01": 34.05,
+      "2026-01-01": 27.19,
+      "2025-12-01": 26.88,
+      "2025-11-01": 26.13,
+      "2025-10-01": 33.98,
+      "2025-09-01": 36.89,
+      "2025-08-01": 36.41,
+      "2025-07-01": 40.82,
+      "2025-06-01": 45.66,
+      "2025-05-01": 44.47
+    },
+    "TFX": {
+      "2026-04-01": 119.38,
+      "2026-03-01": 119.77,
+      "2026-02-01": 103.69,
+      "2026-01-01": 122.4,
+      "2025-12-01": 113.97,
+      "2025-11-01": 123.75,
+      "2025-10-01": 122.73,
+      "2025-09-01": 125.44,
+      "2025-08-01": 119.35,
+      "2025-07-01": 118.77,
+      "2025-06-01": 121.71,
+      "2025-05-01": 132.93
+    },
+    "A": {
+      "2026-04-01": 114.01,
+      "2026-03-01": 118.85,
+      "2026-02-01": 132.63,
+      "2026-01-01": 136.24,
+      "2025-12-01": 152.54,
+      "2025-11-01": 145.07,
+      "2025-10-01": 128.34,
+      "2025-09-01": 124.88,
+      "2025-08-01": 113.45,
+      "2025-07-01": 117.44,
+      "2025-06-01": 111.14,
+      "2025-05-01": 107.25
+    },
+    "BAM": {
+      "2026-04-01": 45.03,
+      "2026-03-01": 45.45,
+      "2026-02-01": 49.25,
+      "2026-01-01": 52.39,
+      "2025-12-01": 52.08,
+      "2025-11-01": 54.17,
+      "2025-10-01": 56.6,
+      "2025-09-01": 59.44,
+      "2025-08-01": 60.27,
+      "2025-07-01": 54.92,
+      "2025-06-01": 55.79,
+      "2025-05-01": 53.36
+    },
+    "CRCL": {
+      "2026-04-01": 98.42,
+      "2026-03-01": 80.8,
+      "2026-02-01": 61.5,
+      "2026-01-01": 80.84,
+      "2025-12-01": 77.49,
+      "2025-11-01": 125.75,
+      "2025-10-01": 133.62,
+      "2025-09-01": 128.56,
+      "2025-08-01": 176.93,
+      "2025-07-01": 184.67
+    },
+    "CRH": {
+      "2026-04-01": 106.21,
+      "2026-03-01": 116.83,
+      "2026-02-01": 122.75,
+      "2026-01-01": 125.5,
+      "2025-12-01": 118.99,
+      "2025-11-01": 119.24,
+      "2025-10-01": 119.36,
+      "2025-09-01": 109.19,
+      "2025-08-01": 94.29,
+      "2025-07-01": 91.86,
+      "2025-06-01": 90.64,
+      "2025-05-01": 96.79
+    },
+    "CTLP": {
+      "2026-04-01": 10.85,
+      "2026-03-01": 10.4,
+      "2026-02-01": 10.74,
+      "2026-01-01": 10.63,
+      "2025-12-01": 10.65,
+      "2025-11-01": 10.56,
+      "2025-10-01": 10.57,
+      "2025-09-01": 10.85,
+      "2025-08-01": 11.08,
+      "2025-07-01": 10.99,
+      "2025-06-01": 8.35,
+      "2025-05-01": 8.01
+    },
+    "G": {
+      "2026-04-01": 37.25,
+      "2026-03-01": 38.86,
+      "2026-02-01": 44.16,
+      "2026-01-01": 46.77,
+      "2025-12-01": 44.03,
+      "2025-11-01": 38.17,
+      "2025-10-01": 41.72,
+      "2025-09-01": 45.02,
+      "2025-08-01": 43.09,
+      "2025-07-01": 44.06,
+      "2025-06-01": 42.88,
+      "2025-05-01": 50
+    },
+    "GS": {
+      "2026-04-01": 859.95,
+      "2026-03-01": 840,
+      "2026-02-01": 932.13,
+      "2026-01-01": 884,
+      "2025-12-01": 818.59,
+      "2025-11-01": 789.57,
+      "2025-10-01": 793.62,
+      "2025-09-01": 736.39,
+      "2025-08-01": 710.51,
+      "2025-07-01": 708,
+      "2025-06-01": 598.6,
+      "2025-05-01": 548.1
+    },
+    "MS": {
+      "2026-04-01": 168.91,
+      "2026-03-01": 162.64,
+      "2026-02-01": 182.61,
+      "2026-01-01": 178.52,
+      "2025-12-01": 169.01,
+      "2025-11-01": 164.3,
+      "2025-10-01": 157.88,
+      "2025-09-01": 148.56,
+      "2025-08-01": 139.27,
+      "2025-07-01": 140.55,
+      "2025-06-01": 127.48,
+      "2025-05-01": 115.54
+    },
+    "SCHW": {
+      "2026-04-01": 95.01,
+      "2026-03-01": 94.23,
+      "2026-02-01": 103.73,
+      "2026-01-01": 99.77,
+      "2025-12-01": 92.03,
+      "2025-11-01": 94.89,
+      "2025-10-01": 94.6,
+      "2025-09-01": 95.35,
+      "2025-08-01": 96.23,
+      "2025-07-01": 90.92,
+      "2025-06-01": 87.76,
+      "2025-05-01": 81.13
+    },
+    "TEX": {
+      "2026-04-01": 60.39,
+      "2026-03-01": 67.28,
+      "2026-02-01": 56.47,
+      "2026-01-01": 53.56,
+      "2025-12-01": 45.5,
+      "2025-11-01": 45.56,
+      "2025-10-01": 50.84,
+      "2025-09-01": 48.98,
+      "2025-08-01": 50.02,
+      "2025-07-01": 46.59,
+      "2025-06-01": 44.78,
+      "2025-05-01": 35.49
     }
   }
 }
