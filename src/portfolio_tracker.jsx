@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, ReferenceArea } from 'recharts';
-import { Pencil, Trash2, Plus, AlertCircle, X, Upload, Download, Check, Database, ExternalLink, Save, RotateCcw, Wand2, GripVertical, Loader2, Sparkles, Link2, Pipette, LayoutGrid, HardDriveDownload } from 'lucide-react';
+import { Pencil, Trash2, Plus, AlertCircle, X, Upload, Download, Check, Database, ExternalLink, Save, RotateCcw, Wand2, GripVertical, Loader2, Sparkles, Link2, Pipette, LayoutGrid, HardDriveDownload, Eye, EyeOff, Moon, Sun } from 'lucide-react';
 
 // ============================================================================
 // DEFAULTS
@@ -322,6 +322,14 @@ const migrateToV8 = async () => {
 // Computation
 // ============================================================================
 
+// Filter out holdings the user has hidden via the eye toggle.
+// `disabledHoldings` is { portfolioId: Set<TICKER_UPPER> } and lives only in memory.
+const getActiveHoldings = (portfolio, disabledHoldings) => {
+  const disabled = disabledHoldings?.[portfolio.id];
+  if (!disabled?.size) return portfolio.holdings;
+  return portfolio.holdings.filter(h => !disabled.has(h.ticker.trim().toUpperCase()));
+};
+
 const computeSeries = (portfolio, allPrices) => {
   if (!portfolio.holdings?.length) return null;
   const valid = portfolio.holdings.filter(h => allPrices[h.ticker.toUpperCase()]);
@@ -369,13 +377,13 @@ const buildLinks = (ticker) => {
 // ============================================================================
 
 const PortfolioRow = ({
-  portfolio, onToggle, onEdit, onDelete, performance, missingTickers, coveragePct,
+  portfolio, onToggle, onEdit, performance, missingTickers, coveragePct, disabledSet,
   onDragStart, onDragOver, onDragLeave, onDrop, onDragEnd, isDragging, isDropTarget
 }) => {
   const lastValue = performance?.[performance.length - 1]?.value;
   const pctReturn = lastValue ? lastValue - 100 : null;
   const positive = pctReturn !== null && pctReturn >= 0;
-  const stockCount = portfolio.holdings?.length || 0;
+  const stockCount = portfolio.holdings?.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).length || 0;
   return (
     <div
       draggable
@@ -404,10 +412,15 @@ const PortfolioRow = ({
             opacity: portfolio.visible ? 1 : 0.4
           }} />
         </button>
-        <div className="flex-1 min-w-0">
+        <div
+          className="flex-1 min-w-0 select-none"
+          onClick={(e) => { e.stopPropagation(); onToggle(portfolio.id, e); }}
+          title={portfolio.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}
+          style={{ cursor: isDragging ? 'grabbing' : 'pointer' }}
+        >
           <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="text-[15px] tracking-tight font-serif" style={{
-              fontWeight: 500, color: portfolio.visible ? '#1a1815' : '#a8a39a'
+            <span className={`text-[15px] tracking-tight font-serif ${!portfolio.visible ? 'line-through' : ''}`} style={{
+              fontWeight: 500, color: portfolio.visible ? 'var(--text-primary)' : 'var(--text-muted)'
             }}>{portfolio.name}</span>
             <span className="text-[10px] font-mono text-stone-400 tabular-nums">·{stockCount}</span>
             {portfolio.kind === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-stone-900 text-stone-50 rounded-sm">YOU</span>}
@@ -423,7 +436,7 @@ const PortfolioRow = ({
         <div className="flex items-center gap-3">
           {pctReturn !== null && (
             <div className="text-right font-mono">
-              <div className="text-[13px] tabular-nums font-medium" style={{ color: positive ? '#1a6b3e' : '#a14535' }}>
+              <div className="text-[13px] tabular-nums font-medium" style={{ color: positive ? 'var(--success)' : 'var(--danger)' }}>
                 {positive ? '+' : ''}{pctReturn.toFixed(2)}%
               </div>
             </div>
@@ -431,14 +444,9 @@ const PortfolioRow = ({
           {!performance && stockCount === 0 && <div className="text-[10px] text-stone-400 italic font-mono">empty</div>}
           {!performance && stockCount > 0 && <div className="text-[10px] text-stone-400 italic font-mono">no data</div>}
           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800">
+            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800" title="Edit portfolio">
               <Pencil size={12} />
             </button>
-            {!portfolio.locked && (
-              <button onClick={(e) => { e.stopPropagation(); onDelete(portfolio.id); }} className="p-1.5 hover:bg-stone-200 rounded text-stone-500 hover:text-red-600">
-                <Trash2 size={12} />
-              </button>
-            )}
           </div>
         </div>
       </div>
@@ -450,7 +458,7 @@ const PortfolioRow = ({
 // PORTFOLIO EDITOR
 // ============================================================================
 
-const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
+const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled }) => {
   const isNew = !portfolio?.holdings;
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
@@ -462,6 +470,8 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
   const [pasteText, setPasteText] = useState('');
   const [pastePreview, setPastePreview] = useState(null);
   const totalWeight = holdings.reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
+  const enabledWeight = holdings.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
+  const disabledCount = holdings.filter(h => h.ticker.trim() && disabledSet?.has(h.ticker.trim().toUpperCase())).length;
 
   const updateHolding = (i, field, value) => {
     const next = [...holdings];
@@ -498,7 +508,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
     <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-2xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
-          <h2 className="text-xl tracking-tight font-serif" style={{ color: '#1a1815' }}>{isNew ? 'New Portfolio' : 'Edit Portfolio'}</h2>
+          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>{isNew ? 'New Portfolio' : 'Edit Portfolio'}</h2>
           <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
@@ -513,14 +523,14 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
               <div className="flex flex-wrap gap-1.5 pt-1.5 items-center">
                 {PALETTE.map(c => (
                   <button key={c} onClick={() => setColor(c)} className="w-6 h-6 rounded-full hover:scale-110 transition-transform"
-                    style={{ backgroundColor: c, border: color === c ? '2px solid #1a1815' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
+                    style={{ backgroundColor: c, border: color === c ? '2px solid var(--border-selected)' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
                 ))}
                 <span className="w-px h-5 bg-stone-300 mx-0.5" />
                 <label className="relative w-6 h-6 cursor-pointer group" title="Pick any color">
                   <input type="color" value={color} onChange={(e) => setColor(e.target.value)}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
                   <div className="w-6 h-6 rounded-full border-2 border-dashed border-stone-400 group-hover:border-stone-700 flex items-center justify-center bg-white transition-colors"
-                    style={!PALETTE.includes(color) ? { backgroundColor: color, borderStyle: 'solid', borderColor: '#1a1815', boxShadow: '0 0 0 1px white inset' } : undefined}>
+                    style={!PALETTE.includes(color) ? { backgroundColor: color, borderStyle: 'solid', borderColor: 'var(--border-selected)', boxShadow: '0 0 0 1px white inset' } : undefined}>
                     {PALETTE.includes(color) && <Pipette size={11} className="text-stone-500 group-hover:text-stone-800" />}
                   </div>
                 </label>
@@ -590,8 +600,13 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
               <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono">Holdings</label>
               <div className="flex items-center gap-3">
                 <span className={`text-[11px] font-mono tabular-nums ${
-                  Math.abs(totalWeight - 100) < 0.01 ? 'text-emerald-700' : totalWeight > 100 ? 'text-red-700' : 'text-amber-700'
-                }`}>Σ {totalWeight.toFixed(2)}%</span>
+                  totalWeight >= 99.5 && totalWeight <= 100.5 ? 'text-emerald-700' : totalWeight > 100.5 ? 'text-red-700' : 'text-amber-700'
+                }`}>Σ {totalWeight >= 99.5 && totalWeight <= 100.5 ? '100.00' : totalWeight.toFixed(2)}%</span>
+                {disabledCount > 0 && (
+                  <span className="text-[10px] font-mono text-stone-400" title="Weight of enabled holdings (disabled excluded)">
+                    active {enabledWeight >= 99.5 && enabledWeight <= 100.5 ? '100.00' : enabledWeight.toFixed(2)}%
+                  </span>
+                )}
                 <button onClick={normalize} className="text-[10px] tracking-[0.1em] uppercase text-stone-700 hover:text-stone-900 font-mono underline-offset-4 hover:underline">
                   Normalize → 100%
                 </button>
@@ -601,13 +616,22 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
               {holdings.map((h, i) => {
                 const w = parseFloat(h.weight) || 0;
                 const pct = totalWeight > 0 ? Math.min(100, (w / totalWeight) * 100) : 0;
+                const ticker = h.ticker.trim().toUpperCase();
+                const isDisabled = ticker && disabledSet?.has(ticker);
                 return (
-                  <div key={i} className="flex items-center gap-2">
+                  <div key={i} className={`flex items-center gap-2 ${isDisabled ? 'opacity-40' : ''}`}>
+                    {onToggleDisabled && ticker && (
+                      <button onClick={() => onToggleDisabled(portfolio.id, ticker)}
+                        className="p-1 text-stone-400 hover:text-stone-700 flex-shrink-0" title={isDisabled ? 'Enable holding' : 'Disable holding (excluded from chart)'}>
+                        {isDisabled ? <EyeOff size={13} /> : <Eye size={13} />}
+                      </button>
+                    )}
+                    {onToggleDisabled && !ticker && <div className="w-[29px] flex-shrink-0" />}
                     <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden focus-within:border-stone-700 transition-colors">
-                      <div className="absolute inset-y-0 left-0 bg-stone-200/70 transition-all duration-200 pointer-events-none"
-                        style={{ width: `${pct}%` }} />
+                      <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                        style={{ width: `${pct}%`, background: 'var(--weight-bar)' }} />
                       <input value={h.ticker} onChange={(e) => updateHolding(i, 'ticker', e.target.value)} placeholder="TICKER"
-                        className="relative w-full bg-transparent px-3 py-2 text-sm text-stone-900 font-mono uppercase focus:outline-none" />
+                        className={`relative w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'}`} />
                     </div>
                     <input type="number" step="0.01" value={h.weight} onChange={(e) => updateHolding(i, 'weight', e.target.value)} placeholder="0.00"
                       className="w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm text-stone-900 font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none" />
@@ -622,9 +646,19 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose }) => {
             </button>
           </div>
         </div>
-        <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-end gap-3 bg-stone-100/50">
-          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Cancel</button>
-          <button onClick={handleSave} className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800">Save</button>
+        <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-between gap-3 bg-stone-100/50">
+          <div>
+            {!isNew && !portfolio.locked && onDelete && (
+              <button onClick={() => onDelete(portfolio.id)}
+                className="flex items-center gap-1.5 px-3 py-2 text-[11px] tracking-[0.15em] uppercase font-mono text-red-700 hover:text-red-900 hover:bg-red-50 rounded transition-colors">
+                <Trash2 size={12} /> Delete
+              </button>
+            )}
+          </div>
+          <div className="flex items-center gap-3">
+            <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Cancel</button>
+            <button onClick={handleSave} className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800">Save</button>
+          </div>
         </div>
       </div>
     </div>
@@ -658,7 +692,7 @@ const ImportModal = ({ tickerHint, onSave, onClose }) => {
       <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
           <div>
-            <h2 className="text-xl tracking-tight font-serif" style={{ color: '#1a1815' }}>Import prices</h2>
+            <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Import prices</h2>
             <p className="text-[11px] text-stone-500 font-mono mt-1">Paste any text containing dates and prices</p>
           </div>
           <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
@@ -853,7 +887,7 @@ const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
     <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-md w-full overflow-hidden shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
-          <h2 className="text-xl tracking-tight font-serif" style={{ color: '#1a1815' }}>Backup & Restore</h2>
+          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Backup & Restore</h2>
           <button onClick={onClose} disabled={restoring} className="text-stone-500 hover:text-stone-800 disabled:opacity-30"><X size={20} /></button>
         </div>
         <div className="px-6 py-5 space-y-5">
@@ -1178,8 +1212,7 @@ const DataManager = ({ neededTickers, prices, onImport, onDelete }) => {
 // CONSENSUS PANEL — toggleable portfolios + merge dual-class + insights
 // ============================================================================
 
-const ConsensusPanel = ({ portfolios, onSetVisibility, onIsolate }) => {
-  const [includedOverride, setIncludedOverride] = useState({});
+const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate }) => {
   const [mergeMode, setMergeMode] = useState(true);
   const [showMergedDetails, setShowMergedDetails] = useState(false);
 
@@ -1188,44 +1221,38 @@ const ConsensusPanel = ({ portfolios, onSetVisibility, onIsolate }) => {
   const allWithHoldings = portfolios.filter(p => p.kind !== 'benchmark' && p.holdings.length > 0);
   // Only visible+with-holdings — used for consensus computation
   const visibleNonEmpty = allWithHoldings.filter(p => p.visible);
+  // A portfolio with every holding disabled by the eye toggle has no signal to contribute.
+  const hasActiveHoldings = (p) => getActiveHoldings(p, disabledHoldings).length > 0;
 
-  // Default: include non-benchmarks; user can override per portfolio
-  const isIncluded = (p) => {
-    if (p.id in includedOverride) return includedOverride[p.id];
-    return p.kind !== 'benchmark';
-  };
-  const toggleIncluded = (p) => {
-    setIncludedOverride(prev => ({ ...prev, [p.id]: !isIncluded(p) }));
-  };
-  // Pool chip click:
-  //   - Modifier (Ctrl/Cmd/Shift) → isolate visibility (delegated to parent so all panels stay in sync)
-  //   - Plain click on hidden chip → re-enable visibility (and ensure included)
-  //   - Plain click on visible chip → toggle inclusion in consensus
+  // Pool chip click is the same gesture as Portfolios list / chart legend: toggle p.visible.
+  // Modifier (Ctrl/Cmd/Shift) isolates. One source of truth — no per-panel "include" state.
   const handlePoolChipClick = (p, e) => {
     if (e && (e.ctrlKey || e.metaKey || e.shiftKey)) {
       onIsolate?.(p.id);
       return;
     }
-    if (!p.visible) {
-      onSetVisibility?.(p.id, true);
-      setIncludedOverride(prev => ({ ...prev, [p.id]: true }));
-    } else {
-      toggleIncluded(p);
-    }
+    onSetVisibility?.(p.id, !p.visible);
   };
-  const includedPortfolios = visibleNonEmpty.filter(isIncluded);
+  // Drop portfolios whose every holding is eye-toggled-off — they shouldn't count toward N.
+  const includedPortfolios = visibleNonEmpty.filter(hasActiveHoldings);
   const N = includedPortfolios.length;
 
   // Aggregate
   const stats = useMemo(() => {
     const result = {};
     includedPortfolios.forEach(p => {
-      const portfolioContrib = {}; // normalized ticker → weight in this portfolio
+      // Use only enabled holdings, then renormalize each portfolio's weights to 100%.
+      // This mirrors computeSeries: hiding a holding makes the portfolio behave as if it never had it.
+      const active = getActiveHoldings(p, disabledHoldings);
+      const sumActive = active.reduce((s, h) => s + h.weight, 0);
+      if (sumActive === 0) return;
+      const portfolioContrib = {}; // normalized ticker → weight in this portfolio (renormalized)
       const portfolioOriginals = {}; // normalized ticker → Set of original tickers
-      p.holdings.forEach(h => {
+      active.forEach(h => {
         const orig = h.ticker.toUpperCase();
         const norm = normalizeTicker(orig, mergeMode);
-        portfolioContrib[norm] = (portfolioContrib[norm] || 0) + h.weight;
+        const w = (h.weight / sumActive) * 100;
+        portfolioContrib[norm] = (portfolioContrib[norm] || 0) + w;
         if (!portfolioOriginals[norm]) portfolioOriginals[norm] = new Set();
         portfolioOriginals[norm].add(orig);
       });
@@ -1366,26 +1393,23 @@ const ConsensusPanel = ({ portfolios, onSetVisibility, onIsolate }) => {
         )}
 
         <div className="px-5 py-3 bg-stone-100/40">
-          <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool from <span className="normal-case tracking-normal text-stone-400">· click hidden to bring back</span>:</div>
+          <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
           <div className="flex items-center gap-1.5 flex-wrap">
             {allWithHoldings.map(p => {
-              const inc = isIncluded(p);
               const hidden = !p.visible;
               const cls = hidden
-                ? 'bg-transparent border-stone-200 border-dashed text-stone-300 hover:text-stone-700 hover:border-stone-400 hover:border-solid'
-                : inc
-                  ? 'bg-white border-stone-300 text-stone-800 hover:border-stone-500'
-                  : 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-600';
+                ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
+                : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
               const tip = hidden
-                ? 'Hidden from chart — click to bring back · Ctrl/⌘/Shift+click to isolate'
-                : (inc ? 'Click to exclude from consensus' : 'Click to include in consensus') + ' · Ctrl/⌘/Shift+click to isolate';
+                ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
+                : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
               return (
                 <button key={p.id} onClick={(e) => handlePoolChipClick(p, e)}
                   className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
                   title={tip}>
                   <div className="w-2 h-2 rounded-full" style={{
                     backgroundColor: p.color,
-                    opacity: hidden ? 0.2 : inc ? 1 : 0.3
+                    opacity: hidden ? 0.3 : 1
                   }} />
                   <span>{p.name}</span>
                 </button>
@@ -1460,6 +1484,41 @@ export default function PortfolioTracker() {
   const [dragOverId, setDragOverId] = useState(null);
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
+  const [darkMode, setDarkMode] = useState(() => {
+    try { return localStorage.getItem('theme') === 'dark'; } catch { return false; }
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+    try { localStorage.setItem('theme', darkMode ? 'dark' : 'light'); } catch {}
+  }, [darkMode]);
+
+  const toggleHoldingDisabled = (portfolioId, ticker) => {
+    setDisabledHoldings(prev => {
+      const next = { ...prev };
+      const set = new Set(prev[portfolioId] || []);
+      if (set.has(ticker)) set.delete(ticker);
+      else set.add(ticker);
+      next[portfolioId] = set;
+      return next;
+    });
+  };
+
+  // In dark mode, near-black portfolio colors (e.g. `#1a1815` of "My Portfolio") vanish on a dark
+  // canvas. Lighten dark hexes via a perceptual brightness mix; bright colors pass through unchanged.
+  const getDisplayColor = (color) => {
+    if (!darkMode || typeof color !== 'string' || !color.startsWith('#') || color.length !== 7) return color;
+    const r = parseInt(color.slice(1, 3), 16);
+    const g = parseInt(color.slice(3, 5), 16);
+    const b = parseInt(color.slice(5, 7), 16);
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    if (brightness > 170) return color;
+    const mix = brightness < 90 ? 0.7 : 0.35;
+    const lighten = (c) => Math.round(c + (255 - c) * mix);
+    return '#' + [lighten(r), lighten(g), lighten(b)]
+      .map(v => v.toString(16).padStart(2, '0')).join('');
+  };
 
   // Simple hash for comparing data snapshots
   const computeHash = (portfolios, prices) => {
@@ -1525,17 +1584,29 @@ export default function PortfolioTracker() {
 
   useEffect(() => { if (loaded) savePortfolios(portfolios); }, [portfolios, loaded]);
 
+  // A ticker is "needed" only if it's enabled (not eye-toggled-off) in at least one portfolio.
+  // If every portfolio that holds it has it disabled, it stops contributing to the chart and
+  // there's no point counting it as a needed price.
   const neededTickers = useMemo(() => {
     const set = new Set();
-    portfolios.forEach(p => p.holdings.forEach(h => set.add(h.ticker.toUpperCase())));
+    portfolios.forEach(p => {
+      const disabled = disabledHoldings[p.id];
+      p.holdings.forEach(h => {
+        const t = h.ticker.toUpperCase();
+        if (!disabled?.has(t)) set.add(t);
+      });
+    });
     return [...set].sort();
-  }, [portfolios]);
+  }, [portfolios, disabledHoldings]);
 
   const portfolioSeries = useMemo(() => {
     const result = {};
-    portfolios.forEach(p => { result[p.id] = computeSeries(p, prices); });
+    portfolios.forEach(p => {
+      const active = getActiveHoldings(p, disabledHoldings);
+      result[p.id] = computeSeries({ ...p, holdings: active }, prices);
+    });
     return result;
-  }, [portfolios, prices]);
+  }, [portfolios, prices, disabledHoldings]);
 
   const availableBenchmarks = useMemo(
     () => portfolios.filter(p => p.kind === 'benchmark' && portfolioSeries[p.id]),
@@ -1619,25 +1690,27 @@ export default function PortfolioTracker() {
     });
   }, [fullChartData, chartPeriod]);
 
-  const getMissingTickers = (p) => p.holdings.filter(h => !prices[h.ticker.toUpperCase()]).map(h => h.ticker);
+  const getMissingTickers = (p) => getActiveHoldings(p, disabledHoldings)
+    .filter(h => !prices[h.ticker.toUpperCase()]).map(h => h.ticker);
   const getCoveragePct = (p) => {
-    const total = p.holdings.reduce((s, h) => s + h.weight, 0);
-    const covered = p.holdings.filter(h => prices[h.ticker.toUpperCase()]).reduce((s, h) => s + h.weight, 0);
+    const active = getActiveHoldings(p, disabledHoldings);
+    const total = active.reduce((s, h) => s + h.weight, 0);
+    const covered = active.filter(h => prices[h.ticker.toUpperCase()]).reduce((s, h) => s + h.weight, 0);
     return total > 0 ? Math.round(covered / total * 100) : 0;
   };
 
-  const togglePortfolio = (id) => setPortfolios(portfolios.map(p => p.id === id ? { ...p, visible: !p.visible } : p));
-  const setPortfolioVisibility = (id, visible) => setPortfolios(portfolios.map(p => p.id === id ? { ...p, visible } : p));
+  const togglePortfolio = (id) => setPortfolios(prev => prev.map(p => p.id === id ? { ...p, visible: !p.visible } : p));
+  const setPortfolioVisibility = (id, visible) => setPortfolios(prev => prev.map(p => p.id === id ? { ...p, visible } : p));
 
   // All/None/isolate operate only on what's shown in the legend.
   // In vs mode, that excludes benchmarks (their visibility is irrelevant since they're not drawn anyway).
   const selectAllPortfolios = () => {
     const ids = new Set(legendPortfolios.map(p => p.id));
-    setPortfolios(portfolios.map(p => ids.has(p.id) ? { ...p, visible: true } : p));
+    setPortfolios(prev => prev.map(p => ids.has(p.id) ? { ...p, visible: true } : p));
   };
   const deselectAllPortfolios = () => {
     const ids = new Set(legendPortfolios.map(p => p.id));
-    setPortfolios(portfolios.map(p => ids.has(p.id) ? { ...p, visible: false } : p));
+    setPortfolios(prev => prev.map(p => ids.has(p.id) ? { ...p, visible: false } : p));
   };
 
   // Shared isolate logic: when modifier-clicking, toggle "isolated to this one" ↔ "all visible".
@@ -1647,10 +1720,10 @@ export default function PortfolioTracker() {
     const onlyThisVisible = scopePortfolios.every(p => p.id === id ? p.visible : !p.visible);
     if (onlyThisVisible) {
       // Already isolated → restore all in scope
-      setPortfolios(portfolios.map(p => ids.has(p.id) ? { ...p, visible: true } : p));
+      setPortfolios(prev => prev.map(p => ids.has(p.id) ? { ...p, visible: true } : p));
     } else {
       // Isolate this one within scope
-      setPortfolios(portfolios.map(p => ids.has(p.id) ? { ...p, visible: p.id === id } : p));
+      setPortfolios(prev => prev.map(p => ids.has(p.id) ? { ...p, visible: p.id === id } : p));
     }
   };
 
@@ -1689,8 +1762,9 @@ export default function PortfolioTracker() {
     setEditing(null);
   };
   const deletePortfolio = (id) => {
-    if (!confirm('Delete this portfolio?')) return;
+    if (!confirm('Delete this portfolio?')) return false;
     setPortfolios(portfolios.filter(p => p.id !== id));
+    return true;
   };
 
   const handleImportPrice = async (ticker, data) => {
@@ -1771,8 +1845,10 @@ export default function PortfolioTracker() {
 
   return (
     <div className="min-h-screen w-full" style={{
-      background: 'linear-gradient(180deg, #faf7ee 0%, #f5f0e1 100%)',
-      color: '#1a1815',
+      background: darkMode
+        ? 'linear-gradient(180deg, #0c0a09 0%, #1c1917 100%)'
+        : 'linear-gradient(180deg, #faf7ee 0%, #f5f0e1 100%)',
+      color: darkMode ? '#e7e5e4' : '#1a1815',
       fontFamily: "'Geist', -apple-system, sans-serif"
     }}>
       <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -1780,8 +1856,8 @@ export default function PortfolioTracker() {
         * { font-family: inherit; }
         .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace !important; }
         .font-serif { font-family: 'Fraunces', ui-serif, Georgia, serif !important; font-optical-sizing: auto; }
-        .recharts-cartesian-axis-tick-value { fill: #6b6660; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
-        input::placeholder, textarea::placeholder { color: #b8b3aa; }
+        .recharts-cartesian-axis-tick-value { fill: ${darkMode ? '#78716c' : '#6b6660'}; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+        input::placeholder, textarea::placeholder { color: ${darkMode ? '#57534e' : '#b8b3aa'}; }
       `}</style>
 
       <div className="max-w-[1600px] mx-auto px-6 py-8">
@@ -1797,10 +1873,10 @@ export default function PortfolioTracker() {
           <div className="border-b-2 border-stone-900 pb-3">
             <div className="flex items-end justify-between flex-wrap gap-4">
               <div>
-                <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400, color: '#1a1815' }}>
+                <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
                   Performance,
                   <br />
-                  <em style={{ color: '#a06b1c', fontWeight: 500 }}>side by side.</em>
+                  <em style={{ color: darkMode ? '#d4a843' : '#a06b1c', fontWeight: 500 }}>side by side.</em>
                 </h1>
                 <div className="text-xs text-stone-600 mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
@@ -1822,8 +1898,19 @@ export default function PortfolioTracker() {
                   <Upload size={11} /> Import prices
                 </button>
                 <button onClick={startNew}
-                  className="flex items-center gap-2 px-4 py-2 text-[10px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800">
+                  className="flex items-center gap-2 px-4 py-2 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-colors"
+                  style={{
+                    backgroundColor: darkMode ? '#fafaf9' : '#1c1917',
+                    color: darkMode ? '#1c1917' : '#fafaf9'
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = darkMode ? '#e7e5e4' : '#292524'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = darkMode ? '#fafaf9' : '#1c1917'; }}>
                   <Plus size={12} /> New portfolio
+                </button>
+                <button onClick={() => setDarkMode(!darkMode)}
+                  className="p-2 text-stone-500 hover:text-stone-900 rounded border border-stone-300 hover:border-stone-700 bg-white/60 transition-colors"
+                  title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+                  {darkMode ? <Sun size={13} /> : <Moon size={13} />}
                 </button>
               </div>
             </div>
@@ -1880,8 +1967,8 @@ export default function PortfolioTracker() {
                       }`}
                       title={p.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}>
                       <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{
-                        backgroundColor: p.visible ? p.color : 'transparent',
-                        border: `1.5px solid ${p.color}`,
+                        backgroundColor: p.visible ? getDisplayColor(p.color) : 'transparent',
+                        border: `1.5px solid ${getDisplayColor(p.color)}`,
                         opacity: p.visible ? 1 : 0.4
                       }} />
                       <span>{p.name}</span>
@@ -1905,8 +1992,8 @@ export default function PortfolioTracker() {
                 ) : (
                   <ResponsiveContainer width="100%" height={460}>
                     <LineChart data={chartData} margin={{ top: 20, right: 30, left: 10, bottom: 10 }}>
-                      <CartesianGrid strokeDasharray="2 4" stroke="#e6e0d3" vertical={false} />
-                      <XAxis dataKey="date" tickFormatter={formatDateShort} stroke="#a8a39a" tick={{ fontSize: 10 }} minTickGap={50} />
+                      <CartesianGrid strokeDasharray="2 4" stroke={darkMode ? '#292524' : '#e6e0d3'} vertical={false} />
+                      <XAxis dataKey="date" tickFormatter={formatDateShort} stroke={darkMode ? '#57534e' : '#a8a39a'} tick={{ fontSize: 10 }} minTickGap={50} />
                       <YAxis domain={effectiveMode === 'vs' ? vsVooDomain : ['auto', 'auto']} hide={true} />
                       {effectiveMode === 'vs' && (
                         <>
@@ -1914,16 +2001,16 @@ export default function PortfolioTracker() {
                           <ReferenceArea y1={vsVooDomain[0]} y2={100} fill="#dc2626" fillOpacity={0.06} />
                         </>
                       )}
-                      <ReferenceLine y={100} stroke="#1a1815" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />
+                      <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />
                       <Tooltip
-                        contentStyle={{ backgroundColor: '#fdfbf6', border: '1px solid #d6cfc0', borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', padding: '10px 12px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
-                        labelStyle={{ color: '#6b6660', marginBottom: '6px', fontSize: '10px' }}
+                        contentStyle={{ backgroundColor: darkMode ? '#292524' : '#fdfbf6', border: `1px solid ${darkMode ? '#44403c' : '#d6cfc0'}`, borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', padding: '10px 12px', boxShadow: darkMode ? '0 4px 12px rgba(0,0,0,0.3)' : '0 4px 12px rgba(0,0,0,0.08)' }}
+                        labelStyle={{ color: darkMode ? '#a8a29e' : '#6b6660', marginBottom: '6px', fontSize: '10px' }}
                         labelFormatter={formatDateNice}
                         formatter={(value, name) => {
                           const p = portfolios.find(p => p.id === name);
                           const pct = value - 100;
                           return [
-                            <span key="v" style={{ color: pct >= 0 ? '#1a6b3e' : '#a14535', fontWeight: 500 }}>
+                            <span key="v" style={{ color: pct >= 0 ? 'var(--success)' : 'var(--danger)', fontWeight: 500 }}>
                               {value.toFixed(2)} ({pct >= 0 ? '+' : ''}{pct.toFixed(2)}%)
                             </span>,
                             p?.name || name
@@ -1933,9 +2020,17 @@ export default function PortfolioTracker() {
                       {portfolios
                         .filter(p => p.visible && portfolioSeries[p.id])
                         .filter(p => effectiveMode !== 'vs' || p.kind !== 'benchmark')
+                        // Recharts draws Lines in array order — later ones render on top.
+                        // Benchmarks last so they sit above investor lines; VT above VOO.
+                        .slice()
+                        .sort((a, b) => {
+                          const pri = (p) => p.id === 'vt' ? 3 : p.id === 'voo' ? 2 : p.kind === 'benchmark' ? 1 : 0;
+                          return pri(a) - pri(b);
+                        })
                         .map(p => (
-                        <Line key={p.id} type="monotone" dataKey={p.id} stroke={p.color}
+                        <Line key={p.id} type="monotone" dataKey={p.id} stroke={getDisplayColor(p.color)}
                           strokeWidth={p.kind === 'mine' ? 2.5 : 1.75} dot={false}
+                          strokeDasharray={p.kind === 'benchmark' ? '8 3 1 3' : undefined}
                           activeDot={{ r: 4, strokeWidth: 0 }} isAnimationActive={false} />
                       ))}
                     </LineChart>
@@ -1955,7 +2050,8 @@ export default function PortfolioTracker() {
                 {investorPortfolios.map(p => (
                   <PortfolioRow key={p.id} portfolio={p} performance={portfolioSeries[p.id]}
                     missingTickers={getMissingTickers(p)} coveragePct={getCoveragePct(p)}
-                    onToggle={handleListToggle} onEdit={setEditing} onDelete={deletePortfolio}
+                    disabledSet={disabledHoldings[p.id]}
+                    onToggle={handleListToggle} onEdit={setEditing}
                     onDragStart={handleDragStart} onDragOver={handleDragOver}
                     onDragLeave={handleDragLeave} onDrop={handleDrop} onDragEnd={handleDragEnd}
                     isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id} />
@@ -1974,7 +2070,7 @@ export default function PortfolioTracker() {
               </div>
             </div>
 
-            <ConsensusPanel portfolios={portfolios} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} />
+            <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} />
           </div>
 
           <DataManager neededTickers={neededTickers} prices={prices}
@@ -1986,7 +2082,9 @@ export default function PortfolioTracker() {
         </div>
       </div>
 
-      {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)} />}
+      {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}
+        onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
+        disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled} />}
       {importing !== null && <ImportModal tickerHint={importing} onSave={handleImportPrice} onClose={() => setImporting(null)} />}
       {showBackup && <BackupModal portfolios={portfolios} prices={prices} onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>

@@ -15,3 +15,211 @@ summary::-webkit-details-marker {
 summary {
   list-style: none;
 }
+
+/* ============================================================================
+   DARK MODE
+   Comprehensive overrides that remap the stone palette for dark backgrounds.
+   Uses higher-specificity selectors (html.dark .class) to override Tailwind
+   without !important, keeping JSX untouched.
+
+   NOTE: bg-stone-900, bg-stone-800, text-stone-50, text-white are intentionally
+   NOT overridden — they are used for "primary action" buttons and badges that
+   should keep their dark-bg/light-text style in both themes.
+   ============================================================================ */
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* --- Page & body backgrounds --- */
+html.dark body {
+  background-color: #0c0a09;
+}
+html.dark .bg-stone-50 { background-color: #1c1917; }
+
+/* --- Card / surface backgrounds --- */
+html.dark .bg-white { background-color: #292524; }
+html.dark .bg-white\/40 { background-color: rgba(41, 37, 36, 0.4); }
+html.dark .bg-white\/60 { background-color: rgba(41, 37, 36, 0.6); }
+html.dark .bg-white\/70 { background-color: rgba(41, 37, 36, 0.7); }
+html.dark .bg-stone-100 { background-color: #1c1917; }
+html.dark .bg-stone-100\/40 { background-color: rgba(28, 25, 23, 0.4); }
+html.dark .bg-stone-100\/50 { background-color: rgba(28, 25, 23, 0.5); }
+html.dark .bg-stone-100\/60 { background-color: rgba(28, 25, 23, 0.6); }
+html.dark .bg-stone-200 { background-color: #1c1917; }
+html.dark .bg-stone-200\/60 { background-color: rgba(68, 64, 60, 0.6); }
+html.dark .bg-stone-200\/70 { background-color: rgba(68, 64, 60, 0.7); }
+html.dark .bg-stone-300 { background-color: #44403c; }
+html.dark .bg-stone-400 { background-color: #57534e; }
+html.dark .bg-stone-50\/40 { background-color: rgba(12, 10, 9, 0.4); }
+html.dark .bg-stone-50\/60 { background-color: rgba(12, 10, 9, 0.6); }
+/* Custom warm-paper tint used by DataAuditModal — keep #fdfbf6 in light, swap to dark surface in dark. */
+html.dark .bg-\[\#fdfbf6\] { background-color: #1c1917; }
+
+/* Semi-transparent overlays */
+html.dark .bg-stone-900\/40 { background-color: rgba(0, 0, 0, 0.6); }
+html.dark .bg-black\/40 { background-color: rgba(0, 0, 0, 0.6); }
+
+/* --- Text colors --- */
+html.dark .text-stone-900 { color: #e7e5e4; }
+html.dark .text-stone-800 { color: #d6d3d1; }
+html.dark .text-stone-700 { color: #a8a29e; }
+html.dark .text-stone-600 { color: #a8a29e; }
+html.dark .text-stone-500 { color: #78716c; }
+html.dark .text-stone-400 { color: #57534e; }
+html.dark .text-stone-300 { color: #44403c; }
+
+/* --- Border colors --- */
+html.dark .border-stone-200 { border-color: #292524; }
+html.dark .border-stone-200\/60 { border-color: rgba(41, 37, 36, 0.6); }
+html.dark .border-stone-200\/80 { border-color: rgba(41, 37, 36, 0.8); }
+html.dark .border-stone-300 { border-color: #44403c; }
+html.dark .border-stone-400 { border-color: #57534e; }
+html.dark .border-stone-500 { border-color: #78716c; }
+html.dark .border-stone-700 { border-color: #78716c; }
+html.dark .border-stone-900 { border-color: #44403c; }
+
+/* --- Divide (Tailwind divide-y utilities) --- */
+/* Match Tailwind's exact selector (`> :not([hidden]) ~ :not([hidden])`) — using `> * + *`
+   loses the specificity contest and Tailwind's original light-stone color wins in dark.
+   Consensus / High-conviction separators should match the muted feel of PortfolioRow / DataManager. */
+html.dark .divide-stone-200\/60 > :not([hidden]) ~ :not([hidden]) { border-color: rgba(41, 37, 36, 0.6); }
+html.dark .divide-stone-200 > :not([hidden]) ~ :not([hidden]) { border-color: #292524; }
+html.dark .divide-stone-300 > :not([hidden]) ~ :not([hidden]) { border-color: #44403c; }
+
+/* --- Hover states --- */
+html.dark .hover\:text-stone-900:hover { color: #fafaf9; }
+html.dark .hover\:text-stone-800:hover { color: #e7e5e4; }
+html.dark .hover\:text-stone-700:hover { color: #d6d3d1; }
+html.dark .hover\:bg-stone-100:hover { background-color: #1c1917; }
+html.dark .hover\:bg-stone-100\/40:hover { background-color: rgba(28, 25, 23, 0.4); }
+html.dark .hover\:bg-stone-100\/60:hover { background-color: rgba(28, 25, 23, 0.6); }
+html.dark .hover\:bg-stone-200:hover { background-color: #292524; }
+html.dark .hover\:bg-amber-50\/60:hover { background-color: rgba(120, 53, 15, 0.2); }
+html.dark .hover\:border-stone-700:hover { border-color: #78716c; }
+html.dark .hover\:border-stone-600:hover { border-color: #78716c; }
+html.dark .hover\:opacity-70:hover { opacity: 0.7; }
+
+/* --- Group hover states (e.g. action buttons revealed on row hover) --- */
+html.dark .group:hover .group-hover\:opacity-100 { opacity: 1; }
+
+/* --- Disabled states --- */
+html.dark .disabled\:text-stone-400:disabled { color: #57534e; }
+html.dark .disabled\:border-stone-300:disabled { border-color: #44403c; }
+html.dark .disabled\:bg-stone-400:disabled { background-color: #44403c; }
+html.dark .disabled\:bg-white\/40:disabled { background-color: rgba(41, 37, 36, 0.4); }
+html.dark .disabled\:hover\:text-stone-400:hover:disabled { color: #57534e; }
+html.dark .disabled\:hover\:border-stone-300:hover:disabled { border-color: #44403c; }
+
+/* --- Focus states --- */
+html.dark .focus\:border-stone-700:focus { border-color: #a8a29e; }
+
+/* --- Accent colors: emerald (success) --- */
+html.dark .bg-emerald-50 { background-color: rgba(6, 78, 59, 0.2); }
+html.dark .border-emerald-300 { border-color: #065f46; }
+html.dark .border-emerald-200 { border-color: #064e3b; }
+html.dark .border-emerald-500 { border-color: #065f46; }
+html.dark .text-emerald-900 { color: #6ee7b7; }
+html.dark .text-emerald-800 { color: #6ee7b7; }
+html.dark .text-emerald-700 { color: #34d399; }
+html.dark .bg-emerald-600 { background-color: #10b981; }
+
+/* --- Accent colors: amber (warning) --- */
+html.dark .bg-amber-50 { background-color: rgba(120, 53, 15, 0.2); }
+html.dark .bg-amber-50\/40 { background-color: rgba(120, 53, 15, 0.15); }
+html.dark .bg-amber-50\/60 { background-color: rgba(120, 53, 15, 0.2); }
+html.dark .bg-amber-50\/80 { background-color: rgba(120, 53, 15, 0.25); }
+html.dark .border-amber-200 { border-color: #92400e; }
+html.dark .border-amber-300 { border-color: #b45309; }
+html.dark .border-amber-700\/30 { border-color: rgba(180, 83, 9, 0.3); }
+html.dark .text-amber-900 { color: #fbbf24; }
+html.dark .text-amber-800 { color: #fbbf24; }
+html.dark .text-amber-700 { color: #f59e0b; }
+html.dark .text-amber-600 { color: #fbbf24; }
+html.dark .bg-amber-500 { background-color: #f59e0b; }
+html.dark .bg-amber-700 { background-color: #d97706; }
+html.dark .bg-amber-800 { background-color: #b45309; }
+html.dark .hover\:bg-amber-800:hover { background-color: #92400e; }
+html.dark .hover\:text-amber-800:hover { color: #fbbf24; }
+html.dark .focus\:border-amber-700\/60:focus { border-color: rgba(180, 83, 9, 0.6); }
+
+/* --- Accent colors: red (error/delete) --- */
+html.dark .bg-red-50 { background-color: rgba(127, 29, 29, 0.2); }
+html.dark .border-red-300 { border-color: #991b1b; }
+html.dark .border-red-200 { border-color: #7f1d1d; }
+html.dark .text-red-900 { color: #fca5a5; }
+html.dark .text-red-800 { color: #fca5a5; }
+html.dark .text-red-700 { color: #f87171; }
+html.dark .text-red-600 { color: #f87171; }
+html.dark .hover\:text-red-600:hover { color: #ef4444; }
+html.dark .bg-red-200\/60 { background-color: rgba(127, 29, 29, 0.3); }
+
+/* --- Accent colors: blue --- */
+html.dark .text-blue-600 { color: #60a5fa; }
+
+/* --- Charts: recharts --- */
+html.dark .recharts-cartesian-grid line { stroke: #292524; }
+html.dark .recharts-cartesian-axis-tick text { fill: #78716c; }
+html.dark .recharts-cartesian-axis line { stroke: #44403c; }
+html.dark .recharts-reference-line line { stroke: #44403c; }
+
+/* --- Inputs --- */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #292524;
+  color: #e7e5e4;
+  border-color: #44403c;
+}
+/* Inputs explicitly marked bg-transparent (e.g. weight input layered over a progress fill) must
+   stay transparent so the overlay underneath remains visible. The general rule above otherwise
+   wins by selector specificity over Tailwind's .bg-transparent. */
+html.dark input.bg-transparent,
+html.dark textarea.bg-transparent {
+  background-color: transparent;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #57534e;
+}
+html.dark input:focus,
+html.dark textarea:focus {
+  border-color: #78716c;
+}
+
+/* --- Scrollbar --- */
+html.dark ::-webkit-scrollbar { width: 6px; height: 6px; }
+html.dark ::-webkit-scrollbar-track { background: #1c1917; }
+html.dark ::-webkit-scrollbar-thumb { background: #44403c; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #57534e; }
+
+/* --- Tooltip (recharts) --- */
+html.dark .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #292524 !important;
+  border-color: #44403c !important;
+}
+html.dark .recharts-tooltip-item { color: #d6d3d1 !important; }
+html.dark .recharts-tooltip-label { color: #a8a29e !important; }
+
+/* --- Inline style overrides via CSS variables --- */
+:root {
+  --text-primary: #1a1815;
+  --text-muted: #a8a39a;
+  --text-muted-alt: #6b6660;
+  --ref-line: #1a1815;
+  --border-selected: #1a1815;
+  --success: #1a6b3e;
+  --danger: #a14535;
+  /* Background fill for the weight progress bar inside the holdings input. */
+  --weight-bar: rgba(214, 207, 192, 0.7);
+}
+html.dark {
+  --text-primary: #e7e5e4;
+  --text-muted: #78716c;
+  --text-muted-alt: #a8a29e;
+  --ref-line: #57534e;
+  --border-selected: #e7e5e4;
+  --success: #34d399;
+  --danger: #f87171;
+  --weight-bar: rgba(120, 113, 108, 0.55);
+}
