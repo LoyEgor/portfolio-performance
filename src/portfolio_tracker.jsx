@@ -539,11 +539,14 @@ const PortfolioRow = ({
         </div>
         <div className="flex items-center gap-3">
           {pctReturn !== null && (
-            <div className="text-right font-mono">
+            <button
+              onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }}
+              title="Edit portfolio"
+              className="text-right font-mono cursor-pointer hover:opacity-70 transition-opacity">
               <div className="text-[13px] tabular-nums font-medium" style={{ color: positive ? 'var(--success)' : 'var(--danger)' }}>
                 {positive ? '+' : ''}{pctReturn.toFixed(2)}%
               </div>
-            </div>
+            </button>
           )}
           {!performance && stockCount === 0 && <div className="text-[10px] text-stone-400 italic font-mono">empty</div>}
           {!performance && stockCount > 0 && <div className="text-[10px] text-stone-400 italic font-mono">no data</div>}
@@ -2094,10 +2097,18 @@ export default function PortfolioTracker() {
     onProgress?.(2, 2, 'Done');
   };
 
+  // Reload everything (portfolios + prices) from the bundled default-data.json — the same source
+  // that "Save" writes to. Discards any local edits, including any prices the user imported since.
   const resetToDefaults = async () => {
-    if (!confirm('Reset portfolios to defaults from default-data.json? Imported price data will be kept.')) return;
+    if (saving) return;
+    if (!confirm('Discard local changes and reload portfolios + prices from default-data.json?')) return;
     const def = await fetchDefaultData();
-    setPortfolios(def?.portfolios || DEFAULT_PORTFOLIOS);
+    if (!def?.portfolios) {
+      alert('Could not reach default-data.json. Nothing changed.');
+      return;
+    }
+    setPortfolios(def.portfolios);
+    setPrices(def.prices || {});
   };
 
   const handleDragStart = (id) => setDraggedId(id);
@@ -2187,6 +2198,11 @@ export default function PortfolioTracker() {
                   title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
                   {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
                   {saving ? 'Saving…' : 'Save'}
+                </button>
+                <button onClick={resetToDefaults} disabled={!hasUnsavedChanges || saving}
+                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded disabled:text-stone-400 disabled:border-stone-300 disabled:bg-white/40 disabled:cursor-not-allowed disabled:hover:text-stone-400 disabled:hover:border-stone-300"
+                  title={hasUnsavedChanges ? 'Discard local changes and reload from default-data.json' : 'No changes to discard'}>
+                  <RotateCcw size={11} /> Reset
                 </button>
                 <button onClick={() => setShowBackup(true)}
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
@@ -2360,12 +2376,6 @@ export default function PortfolioTracker() {
                     No investor portfolios yet — click "+ New portfolio" above
                   </div>
                 )}
-              </div>
-              <div className="px-4 py-3 bg-stone-100/60 flex items-center justify-between">
-                <button onClick={resetToDefaults} className="text-[9px] tracking-[0.15em] uppercase text-stone-500 hover:text-stone-800 font-mono flex items-center gap-1.5">
-                  <RotateCcw size={10} /> Reset portfolios
-                </button>
-                <div className="text-[9px] text-stone-400 font-mono">Auto-saved</div>
               </div>
             </div>
 
