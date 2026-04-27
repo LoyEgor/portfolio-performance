@@ -2193,16 +2193,18 @@ export default function PortfolioTracker() {
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
+                {hasUnsavedChanges && !saving && (
+                  <button onClick={resetToDefaults}
+                    className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded"
+                    title="Discard local changes and reload from default-data.json">
+                    <RotateCcw size={11} /> Reset
+                  </button>
+                )}
                 <button onClick={handleSaveDefault} disabled={!hasUnsavedChanges || saving}
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded disabled:text-stone-400 disabled:border-stone-300 disabled:bg-white/40 disabled:cursor-not-allowed disabled:hover:text-stone-400 disabled:hover:border-stone-300"
                   title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
                   {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
                   {saving ? 'Saving…' : 'Save'}
-                </button>
-                <button onClick={resetToDefaults} disabled={!hasUnsavedChanges || saving}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded disabled:text-stone-400 disabled:border-stone-300 disabled:bg-white/40 disabled:cursor-not-allowed disabled:hover:text-stone-400 disabled:hover:border-stone-300"
-                  title={hasUnsavedChanges ? 'Discard local changes and reload from default-data.json' : 'No changes to discard'}>
-                  <RotateCcw size={11} /> Reset
                 </button>
                 <button onClick={() => setShowBackup(true)}
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
