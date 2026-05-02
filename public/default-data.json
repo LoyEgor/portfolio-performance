@@ -320,6 +320,61 @@
           "ticker": "SPOT",
           "weight": 1.2
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 26.69
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 23.97
+            },
+            {
+              "ticker": "UBER",
+              "weight": 7.71
+            },
+            {
+              "ticker": "NVDA",
+              "weight": 8.05
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 7.9
+            },
+            {
+              "ticker": "DUOL",
+              "weight": 5.82
+            },
+            {
+              "ticker": "ASML",
+              "weight": 5.28
+            },
+            {
+              "ticker": "V",
+              "weight": 5.15
+            },
+            {
+              "ticker": "TSM",
+              "weight": 3.33
+            },
+            {
+              "ticker": "FICO",
+              "weight": 3.17
+            },
+            {
+              "ticker": "MELI",
+              "weight": 2.55
+            },
+            {
+              "ticker": "NFLX",
+              "weight": 0.38
+            }
+          ]
+        }
       ]
     },
     {

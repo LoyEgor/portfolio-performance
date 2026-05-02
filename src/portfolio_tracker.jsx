@@ -393,9 +393,13 @@ const computeSeries = (portfolio, allPrices) => {
 
   // Build segments. Each segment owns dates [fromDate, nextFromDate) — the boundary belongs to the
   // next segment so chain-linked rebalance happens cleanly.
+  // The first segment ALWAYS starts at the earliest available price, regardless of where its
+  // snapshot's asOf falls. The first snapshot's holdings apply retrospectively to anything before
+  // their asOf — a fair buy-and-hold approximation, and it keeps history portfolios visually
+  // aligned with non-history ones (which always start at allDates[0]).
   const segs = [];
   for (let i = 0; i < snapshots.length; i++) {
-    const fromDate = closestLE(snapshots[i].asOf);
+    const fromDate = i === 0 ? allDates[0] : closestLE(snapshots[i].asOf);
     if (!fromDate) continue;
     let toDate;
     if (i + 1 < snapshots.length) {
@@ -1440,7 +1444,7 @@ const DataManager = ({ neededTickers, prices, onImport, onDelete }) => {
     <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden flex flex-col shadow-sm sticky top-6 max-h-[calc(100vh-3rem)]">
       <div className="px-4 py-3 border-b border-stone-300 bg-stone-100/60">
         <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono flex items-center gap-2">
-          <Database size={11} /> Price data · {haveCount}/{neededTickers.length}
+          Price data · {haveCount}/{neededTickers.length}
           <button onClick={() => setShowAudit(true)} className="ml-auto p-1 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800 transition-colors" title="Audit price data">
             <LayoutGrid size={12} />
           </button>
@@ -1483,6 +1487,9 @@ const DataManager = ({ neededTickers, prices, onImport, onDelete }) => {
 const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate }) => {
   const [mergeMode, setMergeMode] = useState(true);
   const [showMergedDetails, setShowMergedDetails] = useState(false);
+  // 'held' = aggregate current weights (consensus by holdings).
+  // 'bought' = aggregate positive Δ vs the last history snapshot (consensus by recent buying).
+  const [viewMode, setViewMode] = useState('held');
 
   // Investor portfolios only — benchmarks are comparison instruments, not investment choices.
   // (A non-benchmark portfolio holding VOO as a stock still contributes that ticker normally.)
@@ -1491,6 +1498,8 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
   const visibleNonEmpty = allWithHoldings.filter(p => p.visible);
   // A portfolio with every holding disabled by the eye toggle has no signal to contribute.
   const hasActiveHoldings = (p) => getActiveHoldings(p, disabledHoldings).length > 0;
+  // For 'bought' mode we additionally need a prior snapshot to diff against.
+  const hasPrevSnapshot = (p) => Array.isArray(p.history) && p.history.length > 0;
 
   // Pool chip click is the same gesture as Portfolios list / chart legend: toggle p.visible.
   // Modifier (Ctrl/Cmd/Shift) isolates. One source of truth — no per-panel "include" state.
@@ -1502,47 +1511,73 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     onSetVisibility?.(p.id, !p.visible);
   };
   // Drop portfolios whose every holding is eye-toggled-off — they shouldn't count toward N.
-  const includedPortfolios = visibleNonEmpty.filter(hasActiveHoldings);
+  // In 'bought' mode also drop portfolios without history (no prior snapshot to diff against).
+  const includedPortfolios = visibleNonEmpty
+    .filter(hasActiveHoldings)
+    .filter(p => viewMode === 'bought' ? hasPrevSnapshot(p) : true);
   const N = includedPortfolios.length;
 
-  // Aggregate
+  // Build a {normalizedTicker → renormalized 100%-sum weight} map for an arbitrary holdings array,
+  // applying eye-toggle filter and dual-class merging in one place.
+  const contribFor = (holdings, p, originalsAcc) => {
+    const disabled = disabledHoldings[p.id];
+    const active = disabled?.size
+      ? (holdings || []).filter(h => !disabled.has(h.ticker.trim().toUpperCase()))
+      : (holdings || []);
+    const sum = active.reduce((s, h) => s + h.weight, 0);
+    const out = {};
+    if (sum === 0) return out;
+    active.forEach(h => {
+      const orig = h.ticker.toUpperCase();
+      const norm = normalizeTicker(orig, mergeMode);
+      const w = (h.weight / sum) * 100;
+      out[norm] = (out[norm] || 0) + w;
+      if (originalsAcc) {
+        if (!originalsAcc[norm]) originalsAcc[norm] = new Set();
+        originalsAcc[norm].add(orig);
+      }
+    });
+    return out;
+  };
+
   const stats = useMemo(() => {
     const result = {};
     includedPortfolios.forEach(p => {
-      // Use only enabled holdings, then renormalize each portfolio's weights to 100%.
-      // This mirrors computeSeries: hiding a holding makes the portfolio behave as if it never had it.
-      const active = getActiveHoldings(p, disabledHoldings);
-      const sumActive = active.reduce((s, h) => s + h.weight, 0);
-      if (sumActive === 0) return;
-      const portfolioContrib = {}; // normalized ticker → weight in this portfolio (renormalized)
-      const portfolioOriginals = {}; // normalized ticker → Set of original tickers
-      active.forEach(h => {
-        const orig = h.ticker.toUpperCase();
-        const norm = normalizeTicker(orig, mergeMode);
-        const w = (h.weight / sumActive) * 100;
-        portfolioContrib[norm] = (portfolioContrib[norm] || 0) + w;
-        if (!portfolioOriginals[norm]) portfolioOriginals[norm] = new Set();
-        portfolioOriginals[norm].add(orig);
-      });
-      Object.entries(portfolioContrib).forEach(([t, weight]) => {
+      const portfolioOriginals = {};
+      const currContrib = contribFor(getActiveHoldings(p, disabledHoldings), p, portfolioOriginals);
+
+      // Each portfolio's per-ticker contribution depends on the mode.
+      let contrib;
+      if (viewMode === 'bought' && p.history?.length) {
+        // Latest history entry by asOf is the previous quarter.
+        const prev = [...p.history].sort((a, b) => a.asOf.localeCompare(b.asOf))[p.history.length - 1];
+        const prevContrib = contribFor(prev.holdings, p, null);
+        contrib = {};
+        Object.keys(currContrib).forEach(t => {
+          const delta = currContrib[t] - (prevContrib[t] || 0);
+          if (delta > 0) contrib[t] = delta;  // positive delta = added weight to this position
+        });
+      } else {
+        contrib = currContrib;
+      }
+
+      Object.entries(contrib).forEach(([t, weight]) => {
         if (!result[t]) result[t] = { ticker: t, total: 0, count: 0, holders: [], originals: new Set(), maxSingle: 0 };
         result[t].total += weight;
         result[t].count += 1;
         result[t].holders.push({ portfolio: p, weight });
         result[t].maxSingle = Math.max(result[t].maxSingle, weight);
-        portfolioOriginals[t].forEach(o => result[t].originals.add(o));
+        portfolioOriginals[t]?.forEach(o => result[t].originals.add(o));
       });
     });
     Object.values(result).forEach(s => {
       s.combined = N > 0 ? s.total / N : 0;
       const originalsList = [...s.originals].sort();
-      // "Transformed" covers BOTH cases: single rename (BRK.B → BRK) and multi-merge (GOOG+GOOGL → GOOGL).
-      // Without this, single-rename cases were silently hidden — user couldn't tell BRK came from BRK.B.
       s.merged = originalsList.length > 1 || (originalsList.length === 1 && originalsList[0] !== s.ticker);
       s.originalsList = originalsList;
     });
     return result;
-  }, [includedPortfolios, mergeMode, N]);
+  }, [includedPortfolios, mergeMode, N, viewMode, disabledHoldings]);
 
   if (visibleNonEmpty.length < 1) {
     return (
@@ -1555,6 +1590,9 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
   const sorted = Object.values(stats).sort((a, b) => b.combined - a.combined);
   const consensusTop = sorted.slice(0, 15);
   const consensusMax = consensusTop[0]?.combined || 1;
+  // Ticker column width fits the longest ticker among shown rows — saves space on mobile.
+  // Min 4ch keeps short-ticker portfolios from collapsing the column too tight.
+  const tickerColWidth = `${Math.max(4, ...consensusTop.map(s => s.ticker.length)) + 0.5}ch`;
 
   // High-conviction insights: held by 1-2 portfolios but with weight ≥ 10%
   // Only meaningful when N >= 2 (otherwise everything is "high conviction")
@@ -1573,18 +1611,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     <div className="space-y-4">
       <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
         <div className="px-5 py-4 border-b border-stone-300 bg-stone-100/60">
-          <div className="flex items-baseline justify-between flex-wrap gap-3">
-            <div>
-              <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
-                {N === 1 ? `Holdings of ${singlePortfolio.name}` : 'Consensus picks'}
-              </div>
-              <div className="text-[11px] text-stone-600 font-mono mt-0.5">
-                {N === 0 ? 'No portfolios included — toggle below' :
-                 N === 1 ? `Sorted by weight · pool more portfolios below to compute consensus` :
-                 `Combined weight from ${N} portfolios — what they collectively believe in`}
-              </div>
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
+              {viewMode === 'bought'
+                ? (N === 1 ? `Recent buys · ${singlePortfolio.name}` : 'Recent buys')
+                : (N === 1 ? `Holdings of ${singlePortfolio.name}` : 'Consensus picks')}
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none">
                 <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
                   className="accent-amber-700" />
@@ -1623,7 +1656,29 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                 {N >= 2 && <div><span className="tabular-nums text-stone-900 font-medium">{heldByMultiple}</span> shared</div>}
                 {N >= 2 && <div><span className="tabular-nums text-amber-700 font-medium">{heldByAll}</span> ★ all</div>}
               </div>
+              <div className="flex items-center gap-0.5 bg-stone-200/60 rounded p-0.5">
+                {[{ id: 'held', label: 'Held' }, { id: 'bought', label: 'Bought' }].map(opt => (
+                  <button key={opt.id} onClick={() => setViewMode(opt.id)}
+                    className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                      viewMode === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                    }`}
+                    title={opt.id === 'bought' ? 'Aggregate positive Δ vs last quarter' : 'Aggregate current weights'}>
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
             </div>
+          </div>
+          <div className="text-[11px] text-stone-600 font-mono mt-1.5">
+            {N === 0
+              ? (viewMode === 'bought'
+                  ? 'No portfolios with quarterly history are included — toggle below'
+                  : 'No portfolios included — toggle below')
+              : viewMode === 'bought'
+                ? `Sum of positive Δ since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
+                : (N === 1
+                    ? `Sorted by weight · pool more portfolios below to compute consensus`
+                    : `Combined weight from ${N} portfolios — what they collectively believe in`)}
           </div>
         </div>
 
@@ -1632,7 +1687,8 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
             {consensusTop.map(s => (
               <div key={s.ticker} className="px-5 py-2.5 hover:bg-stone-100/40 transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="w-20 text-[12px] font-mono text-stone-800 font-medium flex items-center gap-1.5 flex-shrink-0">
+                  <div style={{ '--mobile-tw': tickerColWidth }}
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-stone-800 font-medium flex items-center gap-1.5 flex-shrink-0">
                     <span>{s.ticker}</span>
                     {N >= 2 && s.count === N && <span className="text-amber-600 text-[11px]">★</span>}
                   </div>
@@ -1691,18 +1747,21 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
       {highConviction.length > 0 && (
         <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
           <div className="px-5 py-4 border-b border-stone-300 bg-stone-100/60">
-            <div className="text-[15px] font-serif tracking-tight text-stone-900 flex items-center gap-2" style={{ fontWeight: 500 }}>
-              <Sparkles size={14} className="text-amber-700" /> High-conviction bets
+            <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
+              {viewMode === 'bought' ? 'Concentrated buys' : 'High-conviction bets'}
             </div>
             <div className="text-[11px] text-stone-600 font-mono mt-0.5">
-              Held by few investors but with significant weight — non-consensus, high-conviction picks
+              {viewMode === 'bought'
+                ? 'Big add by 1–2 investors — non-consensus, concentrated buying signal'
+                : 'Held by few investors but with significant weight — non-consensus, high-conviction picks'}
             </div>
           </div>
           <div className="divide-y divide-stone-200/60">
             {highConviction.map(s => (
               <div key={s.ticker} className="px-5 py-2.5 hover:bg-stone-100/40 transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="w-20 text-[12px] font-mono text-stone-800 font-medium flex-shrink-0">
+                  <div style={{ '--mobile-tw': tickerColWidth }}
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-stone-800 font-medium flex-shrink-0">
                     {s.ticker}
                   </div>
                   <div className="flex-1 flex items-center gap-1.5 flex-wrap">
@@ -1928,26 +1987,32 @@ export default function PortfolioTracker() {
   const fullChartData = useMemo(() => {
     const visible = portfolios.filter(p => p.visible && portfolioSeries[p.id]);
     if (!visible.length) return [];
-    const dateSets = visible.map(p => new Set(portfolioSeries[p.id].map(d => d.date)));
-    const commonDates = [...dateSets[0]].filter(d => dateSets.every(s => s.has(d))).sort();
 
+    // vs-mode: a date is plottable only when the benchmark itself has a point for it. Each
+    // portfolio still appears only on dates where IT has a point — Recharts handles the gaps.
     if (effectiveMode === 'vs' && benchmarkPortfolio) {
       const benchSeries = portfolioSeries[benchmarkPortfolio.id];
-      const benchDateSet = new Set(benchSeries.map(d => d.date));
-      const dates = commonDates.filter(d => benchDateSet.has(d));
-      return dates.map(date => {
-        const benchPoint = benchSeries.find(d => d.date === date);
-        const benchValue = benchPoint?.value || 100;
+      const benchByDate = new Map(benchSeries.map(d => [d.date, d.value]));
+      const allDates = new Set();
+      visible.forEach(p => portfolioSeries[p.id].forEach(d => { if (benchByDate.has(d.date)) allDates.add(d.date); }));
+      return [...allDates].sort().map(date => {
+        const benchValue = benchByDate.get(date);
         const row = { date };
         visible.forEach(p => {
           const point = portfolioSeries[p.id].find(d => d.date === date);
-          if (point) row[p.id] = (point.value / benchValue) * 100;
+          if (point && benchValue) row[p.id] = (point.value / benchValue) * 100;
         });
         return row;
       });
     }
 
-    return commonDates.map(date => {
+    // Absolute mode: union of all dates across visible portfolios. Each portfolio appears only
+    // on dates where it has data — earlier portfolios start earlier on the chart. Without union,
+    // adding a single chain-linked portfolio (Taras Guk with Q3 history) used to compress the
+    // common date range and silently truncate the others' history.
+    const allDates = new Set();
+    visible.forEach(p => portfolioSeries[p.id].forEach(d => allDates.add(d.date)));
+    return [...allDates].sort().map(date => {
       const row = { date };
       visible.forEach(p => {
         const point = portfolioSeries[p.id].find(d => d.date === date);
@@ -1974,17 +2039,24 @@ export default function PortfolioTracker() {
         if (sliced.length >= 2) filtered = sliced;
       }
     }
-    // Always rebase to firstRow = 100. Portfolios without history (e.g. Taras Guk) start their
-    // series earlier than chain-linked gurus (whose Q1 snapshot is dropped when prices begin
-    // mid-quarter). Without rebasing, those portfolios show ≠100 on the chart's first column on
-    // ALL — looks like a bug. Same rebasing on every period keeps behaviour consistent.
-    const firstRow = filtered[0];
+    // Each portfolio is rebased to 100 at ITS OWN first available data point inside the slice,
+    // not at the first row of the slice. This keeps every line starting at 100 even when
+    // portfolios have different start dates (e.g. Taras Guk's chain-link begins later than VT).
+    const firstByKey = {};
+    for (const row of filtered) {
+      for (const k of Object.keys(row)) {
+        if (k === 'date') continue;
+        if (firstByKey[k] === undefined && typeof row[k] === 'number') {
+          firstByKey[k] = row[k];
+        }
+      }
+    }
     return filtered.map(row => {
       const newRow = { date: row.date };
       Object.keys(row).forEach(k => {
         if (k === 'date') return;
-        if (typeof row[k] === 'number' && firstRow[k]) {
-          newRow[k] = (row[k] / firstRow[k]) * 100;
+        if (typeof row[k] === 'number' && firstByKey[k]) {
+          newRow[k] = (row[k] / firstByKey[k]) * 100;
         }
       });
       return newRow;
@@ -2293,7 +2365,7 @@ export default function PortfolioTracker() {
                   ))}
                 </div>
               )}
-              <div className="p-5 min-h-[480px]">
+              <div className="p-5 min-h-[280px] min-[500px]:min-h-[480px]">
                 {chartMode !== 'absolute' && !benchmarkPortfolio && (
                   <div className="mb-3 px-3 py-2 bg-amber-50 border border-amber-300 rounded text-[10px] font-mono text-amber-800 flex items-center gap-2">
                     <AlertCircle size={11} /> Selected benchmark has no price data — showing absolute mode.
@@ -2307,7 +2379,8 @@ export default function PortfolioTracker() {
                     </div>
                   </div>
                 ) : (
-                  <ResponsiveContainer width="100%" height={460}>
+                  <div className="h-[260px] min-[500px]:h-[460px]">
+                  <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={chartData} margin={{ top: 20, right: 30, left: 10, bottom: 10 }}>
                       <CartesianGrid strokeDasharray="2 4" stroke={darkMode ? '#292524' : '#e6e0d3'} vertical={false} />
                       <XAxis dataKey="date" tickFormatter={formatDateShort} stroke={darkMode ? '#57534e' : '#a8a39a'} tick={{ fontSize: 10 }} minTickGap={50} />
@@ -2352,6 +2425,7 @@ export default function PortfolioTracker() {
                       ))}
                     </LineChart>
                   </ResponsiveContainer>
+                  </div>
                 )}
               </div>
             </div>
