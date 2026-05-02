@@ -1514,7 +1514,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
   // In 'bought' mode also drop portfolios without history (no prior snapshot to diff against).
   const includedPortfolios = visibleNonEmpty
     .filter(hasActiveHoldings)
-    .filter(p => viewMode === 'bought' ? hasPrevSnapshot(p) : true);
+    .filter(p => viewMode !== 'held' ? hasPrevSnapshot(p) : true);
   const N = includedPortfolios.length;
 
   // Build a {normalizedTicker → renormalized 100%-sum weight} map for an arbitrary holdings array,
@@ -1548,15 +1548,26 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
       // Each portfolio's per-ticker contribution depends on the mode.
       let contrib;
-      if (viewMode === 'bought' && p.history?.length) {
+      if ((viewMode === 'bought' || viewMode === 'sold') && p.history?.length) {
         // Latest history entry by asOf is the previous quarter.
         const prev = [...p.history].sort((a, b) => a.asOf.localeCompare(b.asOf))[p.history.length - 1];
-        const prevContrib = contribFor(prev.holdings, p, null);
+        // For 'sold' the originals tracker is also fed from prev so fully-exited tickers keep names.
+        const prevContrib = contribFor(prev.holdings, p, viewMode === 'sold' ? portfolioOriginals : null);
         contrib = {};
-        Object.keys(currContrib).forEach(t => {
-          const delta = currContrib[t] - (prevContrib[t] || 0);
-          if (delta > 0) contrib[t] = delta;  // positive delta = added weight to this position
-        });
+        if (viewMode === 'bought') {
+          Object.keys(currContrib).forEach(t => {
+            const delta = currContrib[t] - (prevContrib[t] || 0);
+            if (delta > 0) contrib[t] = delta;
+          });
+        } else {
+          // 'sold': aggregate magnitudes of weight reductions and full exits (positions in prev,
+          // not in current). The score for a fully-sold ticker is its previous weight.
+          const allTickers = new Set([...Object.keys(prevContrib), ...Object.keys(currContrib)]);
+          allTickers.forEach(t => {
+            const delta = (prevContrib[t] || 0) - (currContrib[t] || 0);
+            if (delta > 0) contrib[t] = delta;
+          });
+        }
       } else {
         contrib = currContrib;
       }
@@ -1615,7 +1626,9 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
             <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
               {viewMode === 'bought'
                 ? (N === 1 ? `Recent buys · ${singlePortfolio.name}` : 'Recent buys')
-                : (N === 1 ? `Holdings of ${singlePortfolio.name}` : 'Consensus picks')}
+                : viewMode === 'sold'
+                  ? (N === 1 ? `Recent sells · ${singlePortfolio.name}` : 'Recent sells')
+                  : (N === 1 ? `Holdings of ${singlePortfolio.name}` : 'Consensus picks')}
             </div>
             <div className="flex items-center gap-4 flex-wrap">
               <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none">
@@ -1657,12 +1670,16 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                 {N >= 2 && <div><span className="tabular-nums text-amber-700 font-medium">{heldByAll}</span> ★ all</div>}
               </div>
               <div className="flex items-center gap-0.5 bg-stone-200/60 rounded p-0.5">
-                {[{ id: 'held', label: 'Held' }, { id: 'bought', label: 'Bought' }].map(opt => (
+                {[
+                  { id: 'held',   label: 'Held',   tip: 'Aggregate current weights' },
+                  { id: 'bought', label: 'Bought', tip: 'Aggregate positive Δ vs last quarter' },
+                  { id: 'sold',   label: 'Sold',   tip: 'Aggregate weight cuts and full exits vs last quarter' },
+                ].map(opt => (
                   <button key={opt.id} onClick={() => setViewMode(opt.id)}
                     className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
                       viewMode === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
                     }`}
-                    title={opt.id === 'bought' ? 'Aggregate positive Δ vs last quarter' : 'Aggregate current weights'}>
+                    title={opt.tip}>
                     {opt.label}
                   </button>
                 ))}
@@ -1671,14 +1688,16 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
           </div>
           <div className="text-[11px] text-stone-600 font-mono mt-1.5">
             {N === 0
-              ? (viewMode === 'bought'
-                  ? 'No portfolios with quarterly history are included — toggle below'
-                  : 'No portfolios included — toggle below')
+              ? (viewMode === 'held'
+                  ? 'No portfolios included — toggle below'
+                  : 'No portfolios with quarterly history are included — toggle below')
               : viewMode === 'bought'
                 ? `Sum of positive Δ since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
-                : (N === 1
-                    ? `Sorted by weight · pool more portfolios below to compute consensus`
-                    : `Combined weight from ${N} portfolios — what they collectively believe in`)}
+                : viewMode === 'sold'
+                  ? `Sum of weight cuts and full exits since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
+                  : (N === 1
+                      ? `Sorted by weight · pool more portfolios below to compute consensus`
+                      : `Combined weight from ${N} portfolios — what they collectively believe in`)}
           </div>
         </div>
 
@@ -1748,12 +1767,16 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
         <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
           <div className="px-5 py-4 border-b border-stone-300 bg-stone-100/60">
             <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
-              {viewMode === 'bought' ? 'Concentrated buys' : 'High-conviction bets'}
+              {viewMode === 'bought' ? 'Concentrated buys'
+                : viewMode === 'sold' ? 'Concentrated sells'
+                : 'High-conviction bets'}
             </div>
             <div className="text-[11px] text-stone-600 font-mono mt-0.5">
               {viewMode === 'bought'
                 ? 'Big add by 1–2 investors — non-consensus, concentrated buying signal'
-                : 'Held by few investors but with significant weight — non-consensus, high-conviction picks'}
+                : viewMode === 'sold'
+                  ? 'Big trim or full exit by 1–2 investors — non-consensus, concentrated selling signal'
+                  : 'Held by few investors but with significant weight — non-consensus, high-conviction picks'}
             </div>
           </div>
           <div className="divide-y divide-stone-200/60">
