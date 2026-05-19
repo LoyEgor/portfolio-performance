@@ -231,6 +231,24 @@ const formatDateShort = (s) => {
     .toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
 };
 
+// Live viewport-media-query subscription. Returns boolean that updates whenever the match state
+// changes, so the component re-renders on breakpoint crossings (e.g. resizing past 1200px).
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(() =>
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      ? window.matchMedia(query).matches : false
+  );
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return;
+    const mql = window.matchMedia(query);
+    const handler = (e) => setMatches(e.matches);
+    mql.addEventListener('change', handler);
+    setMatches(mql.matches); // sync initial value (SSR / first paint)
+    return () => mql.removeEventListener('change', handler);
+  }, [query]);
+  return matches;
+};
+
 // Period cutoff as an ISO date string ("YYYY-MM-DD") — relies on the fact that all
 // price keys in this app are YYYY-MM-DD, which sort lexicographically the same as
 // chronologically. Returns null for 'ALL' or unrecognized periods.
@@ -250,7 +268,7 @@ const periodCutoffIso = (period, lastIso) => {
 
 const PortfolioRow = ({
   portfolio, onToggle, onEdit, pctReturn, missingTickers, coveragePct, disabledSet,
-  onDragStart, onDragOver, onDrop, onDragEnd, isDragging, isDropTarget,
+  onDragStart, onDragOver, onDrop, onDragEnd, isDragging, isDropTarget, dropPosition,
   mergeMode
 }) => {
   // `pctReturn` is passed in from the parent (computed for the current chart period + mode).
@@ -278,7 +296,7 @@ const PortfolioRow = ({
       onDragEnd={onDragEnd}
       className={`group relative px-4 py-3 border-b border-stone-200/80 hover:bg-stone-100/60 transition-colors ${
         isDragging ? 'opacity-30' : ''
-      } ${isDropTarget ? 'bg-amber-50 border-t-2 border-t-amber-600' : ''}`}
+      } ${isDropTarget ? (dropPosition === 'after' ? 'bg-amber-50 border-b-2 border-b-amber-600' : 'bg-amber-50 border-t-2 border-t-amber-600') : ''}`}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
     >
       <div className="flex items-center gap-3">
@@ -832,11 +850,54 @@ const BackupModal = ({ onRestore, onClose }) => {
 // CONSENSUS PANEL — toggleable portfolios + merge dual-class + insights
 // ============================================================================
 
-const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate, mergeMode, setMergeMode }) => {
+// Pool strip — the row of clickable portfolio chips that toggles visibility for the consensus
+// computation. Same chip gesture as the chart legend (click toggles, Ctrl/Cmd/Shift isolates).
+// Lives outside ConsensusPanel so the wide 3-column layout can render it once below the grid
+// instead of duplicating it under every column.
+const ConsensusPool = ({ portfolios, onSetVisibility, onIsolate }) => {
+  const allWithHoldings = portfolios.filter(p => p.kind !== 'benchmark' && p.holdings.length > 0);
+  const handleClick = (p, e) => {
+    if (e && (e.ctrlKey || e.metaKey || e.shiftKey)) {
+      onIsolate?.(p.id);
+      return;
+    }
+    onSetVisibility?.(p.id, !p.visible);
+  };
+  return (
+    <div className="bg-white/70 border border-stone-300 rounded-lg px-5 py-3 shadow-sm">
+      <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+      <div className="flex items-center gap-1.5 flex-wrap">
+        {allWithHoldings.map(p => {
+          const hidden = !p.visible;
+          const cls = hidden
+            ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
+            : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
+          const tip = hidden
+            ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
+            : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
+          return (
+            <button key={p.id} onClick={(e) => handleClick(p, e)}
+              className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
+              title={tip}>
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color, opacity: hidden ? 0.3 : 1 }} />
+              <span>{p.name}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate, onEdit, mergeMode, setMergeMode, forcedViewMode, hideMergeToggle, hidePool }) => {
   const [showMergedDetails, setShowMergedDetails] = useState(false);
   // 'held' = aggregate current weights (consensus by holdings).
   // 'bought' = aggregate positive Δ vs the last history snapshot (consensus by recent buying).
-  const [viewMode, setViewMode] = useState('held');
+  const [localViewMode, setLocalViewMode] = useState('held');
+  // When `forcedViewMode` is passed (e.g. from the 3-column grid on wide screens), it overrides
+  // local state and the mode-tabs are hidden — each instance shows a single fixed mode.
+  const viewMode = forcedViewMode ?? localViewMode;
+  const setViewMode = forcedViewMode ? () => {} : setLocalViewMode;
 
   // Investor portfolios only — benchmarks are comparison instruments, not investment choices.
   // (A non-benchmark portfolio holding VOO as a stock still contributes that ticker normally.)
@@ -978,11 +1039,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   : (N === 1 ? `Holdings of ${singlePortfolio.name}` : 'Consensus picks')}
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none">
-                <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
-                  className="accent-amber-700" />
-                <span>Merge dual-class</span>
-              </label>
+              {!hideMergeToggle && (
+                <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none">
+                  <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
+                    className="accent-amber-700" />
+                  <span>Merge dual-class</span>
+                </label>
+              )}
               <div className="flex items-center gap-3 text-[10px] font-mono text-stone-700">
                 <div><span className="tabular-nums text-stone-900 font-medium">{totalUnique}</span> unique</div>
                 {mergeMode && mergedCount > 0 && (
@@ -1016,21 +1079,23 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                 {N >= 2 && <div><span className="tabular-nums text-stone-900 font-medium">{heldByMultiple}</span> shared</div>}
                 {N >= 2 && <div><span className="tabular-nums text-amber-700 font-medium">{heldByAll}</span> ★ all</div>}
               </div>
-              <div className="flex items-center gap-0.5 bg-stone-200/60 rounded p-0.5">
-                {[
-                  { id: 'held',   label: 'Held',   tip: 'Aggregate current weights' },
-                  { id: 'bought', label: 'Bought', tip: 'Aggregate positive Δ vs last quarter' },
-                  { id: 'sold',   label: 'Sold',   tip: 'Aggregate weight cuts and full exits vs last quarter' },
-                ].map(opt => (
-                  <button key={opt.id} onClick={() => setViewMode(opt.id)}
-                    className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
-                      viewMode === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
-                    }`}
-                    title={opt.tip}>
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
+              {!forcedViewMode && (
+                <div className="flex items-center gap-0.5 bg-stone-200/60 rounded p-0.5">
+                  {[
+                    { id: 'held',   label: 'Held',   tip: 'Aggregate current weights' },
+                    { id: 'bought', label: 'Bought', tip: 'Aggregate positive Δ vs last quarter' },
+                    { id: 'sold',   label: 'Sold',   tip: 'Aggregate weight cuts and full exits vs last quarter' },
+                  ].map(opt => (
+                    <button key={opt.id} onClick={() => setViewMode(opt.id)}
+                      className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                        viewMode === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                      }`}
+                      title={opt.tip}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           <div className="text-[11px] text-stone-600 font-mono mt-1.5">
@@ -1061,10 +1126,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   <div className="flex-1 relative h-5 bg-stone-100 rounded overflow-hidden flex">
                     {s.holders.map((h, i) => {
                       const segWidth = (h.weight / N) / consensusMax * 100;
+                      const interactive = !!onEdit;
                       return (
-                        <div key={i} className="h-full transition-all"
+                        <div key={i}
+                          onClick={interactive ? () => onEdit(h.portfolio) : undefined}
+                          className={`h-full transition-all ${interactive ? 'cursor-pointer hover:opacity-100' : ''}`}
                           style={{ width: `${segWidth}%`, backgroundColor: h.portfolio.color, opacity: 0.85 }}
-                          title={`${h.portfolio.name}: ${h.weight.toFixed(2)}%`} />
+                          title={interactive ? `${h.portfolio.name}: ${h.weight.toFixed(2)}% — click to edit` : `${h.portfolio.name}: ${h.weight.toFixed(2)}%`} />
                       );
                     })}
                   </div>
@@ -1082,31 +1150,33 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
           </div>
         )}
 
-        <div className="px-5 py-3 bg-stone-100/40">
-          <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
-          <div className="flex items-center gap-1.5 flex-wrap">
-            {allWithHoldings.map(p => {
-              const hidden = !p.visible;
-              const cls = hidden
-                ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
-                : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
-              const tip = hidden
-                ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
-                : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
-              return (
-                <button key={p.id} onClick={(e) => handlePoolChipClick(p, e)}
-                  className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
-                  title={tip}>
-                  <div className="w-2 h-2 rounded-full" style={{
-                    backgroundColor: p.color,
-                    opacity: hidden ? 0.3 : 1
-                  }} />
-                  <span>{p.name}</span>
-                </button>
-              );
-            })}
+        {!hidePool && (
+          <div className="px-5 py-3 bg-stone-100/40">
+            <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {allWithHoldings.map(p => {
+                const hidden = !p.visible;
+                const cls = hidden
+                  ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
+                  : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
+                const tip = hidden
+                  ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
+                  : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
+                return (
+                  <button key={p.id} onClick={(e) => handlePoolChipClick(p, e)}
+                    className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
+                    title={tip}>
+                    <div className="w-2 h-2 rounded-full" style={{
+                      backgroundColor: p.color,
+                      opacity: hidden ? 0.3 : 1
+                    }} />
+                    <span>{p.name}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* High-conviction picks (orthogonal to consensus) */}
@@ -1135,13 +1205,20 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                     {s.ticker}
                   </div>
                   <div className="flex-1 flex items-center gap-1.5 flex-wrap">
-                    {s.holders.map((h, i) => (
-                      <div key={i} className="flex items-center gap-1 text-[11px] font-mono px-1.5 py-0.5 rounded bg-stone-100"
-                        style={{ borderLeft: `2px solid ${h.portfolio.color}` }}>
-                        <span className="text-stone-700">{h.portfolio.name}</span>
-                        <span className="text-stone-900 tabular-nums font-medium">{h.weight.toFixed(1)}%</span>
-                      </div>
-                    ))}
+                    {s.holders.map((h, i) => {
+                      const interactive = !!onEdit;
+                      const Tag = interactive ? 'button' : 'div';
+                      return (
+                        <Tag key={i}
+                          onClick={interactive ? () => onEdit(h.portfolio) : undefined}
+                          className={`flex items-center gap-1 text-[11px] font-mono px-1.5 py-0.5 rounded bg-stone-100 ${interactive ? 'hover:bg-stone-200 transition-colors cursor-pointer' : ''}`}
+                          style={{ borderLeft: `2px solid ${h.portfolio.color}` }}
+                          title={interactive ? `Edit ${h.portfolio.name}` : undefined}>
+                          <span className="text-stone-700">{h.portfolio.name}</span>
+                          <span className="text-stone-900 tabular-nums font-medium">{h.weight.toFixed(1)}%</span>
+                        </Tag>
+                      );
+                    })}
                   </div>
                   <div className="text-[10px] font-mono text-stone-500 flex-shrink-0">
                     max <span className="text-stone-900 font-medium tabular-nums">{s.maxSingle.toFixed(1)}%</span>
@@ -1178,6 +1255,7 @@ export default function PortfolioTracker() {
   const [chartPeriod, setChartPeriod] = useState('ALL');
   const [draggedId, setDraggedId] = useState(null);
   const [dragOverId, setDragOverId] = useState(null);
+  const [dragOverPos, setDragOverPos] = useState(null); // 'before' | 'after'
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
@@ -1205,7 +1283,12 @@ export default function PortfolioTracker() {
 
   // Simple hash for comparing data snapshots
   const computeHash = (portfolios, prices) => {
-    const p = JSON.stringify(portfolios.map(p => ({ id: p.id, name: p.name, holdings: p.holdings, kind: p.kind })));
+    // Include every persisted field so reorder / color / visibility / subtitle changes all dirty the
+    // Save button. Array order is preserved by JSON.stringify, so drag-and-drop reordering shows up.
+    const p = JSON.stringify(portfolios.map(p => ({
+      id: p.id, name: p.name, subtitle: p.subtitle, kind: p.kind, color: p.color,
+      visible: p.visible, locked: p.locked, holdings: p.holdings, history: p.history,
+    })));
     const pr = JSON.stringify(Object.keys(prices).sort().map(t => [t, Object.keys(prices[t]).length]));
     let h = 0;
     const s = p + pr;
@@ -1550,23 +1633,32 @@ export default function PortfolioTracker() {
   const handleDragOver = (e, id) => {
     e.preventDefault();
     e.dataTransfer.dropEffect = 'move';
-    if (id !== draggedId) setDragOverId(id);
+    if (id === draggedId) return;
+    // Cursor in the top half → drop BEFORE this row; bottom half → AFTER.
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pos = (e.clientY - rect.top) > rect.height / 2 ? 'after' : 'before';
+    if (id !== dragOverId) setDragOverId(id);
+    if (pos !== dragOverPos) setDragOverPos(pos);
   };
   const handleDrop = (e, targetId) => {
     e.preventDefault();
+    const pos = dragOverPos;
     if (!draggedId || draggedId === targetId) {
-      setDraggedId(null); setDragOverId(null); return;
+      setDraggedId(null); setDragOverId(null); setDragOverPos(null); return;
     }
-    const next = [...portfolios];
-    const fromIdx = next.findIndex(p => p.id === draggedId);
-    const toIdx = next.findIndex(p => p.id === targetId);
+    const fromIdx = portfolios.findIndex(p => p.id === draggedId);
+    const toIdx = portfolios.findIndex(p => p.id === targetId);
     if (fromIdx < 0 || toIdx < 0) return;
+    const next = [...portfolios];
     const [moved] = next.splice(fromIdx, 1);
-    next.splice(toIdx, 0, moved);
+    // After splice, target shifts down by one if it was to the right of source.
+    const adjustedTarget = fromIdx < toIdx ? toIdx - 1 : toIdx;
+    const insertAt = pos === 'after' ? adjustedTarget + 1 : adjustedTarget;
+    next.splice(insertAt, 0, moved);
     setPortfolios(next);
-    setDraggedId(null); setDragOverId(null);
+    setDraggedId(null); setDragOverId(null); setDragOverPos(null);
   };
-  const handleDragEnd = () => { setDraggedId(null); setDragOverId(null); };
+  const handleDragEnd = () => { setDraggedId(null); setDragOverId(null); setDragOverPos(null); };
 
   const dateRangeText = chartData.length > 0
     ? `${formatDateNice(chartData[0].date)} → ${formatDateNice(chartData[chartData.length - 1].date)}`
@@ -1586,6 +1678,36 @@ export default function PortfolioTracker() {
     const pad = Math.max(2, (max - min) * 0.1);
     return [Math.floor(min - pad), Math.ceil(max + pad)];
   }, [chartData, effectiveMode]);
+
+  // On wide screens the chart card is tall (h=560px), which makes the line spread look exaggerated.
+  // We expand the Y-axis domain ~2× around the data midpoint so the lines occupy roughly the middle
+  // half of the canvas vertically — calmer to read, while the vs-mode reference areas (green above,
+  // red below the 100 baseline) now stretch to the canvas edges.
+  // On <1200px screens we fall back to the original behaviour (auto-fit for absolute, computed for vs).
+  const isWideViewport = useMediaQuery('(min-width: 1200px)');
+  const chartYDomain = useMemo(() => {
+    const baseDomain = effectiveMode === 'vs' ? vsVooDomain : ['auto', 'auto'];
+    if (!isWideViewport) return baseDomain;
+    if (!chartData.length) return baseDomain;
+    let lo = Infinity, hi = -Infinity;
+    if (typeof baseDomain[0] === 'number' && typeof baseDomain[1] === 'number') {
+      [lo, hi] = baseDomain;
+    } else {
+      for (const row of chartData) {
+        for (const k of Object.keys(row)) {
+          if (k === 'date') continue;
+          if (typeof row[k] === 'number') {
+            if (row[k] < lo) lo = row[k];
+            if (row[k] > hi) hi = row[k];
+          }
+        }
+      }
+      if (!isFinite(lo) || !isFinite(hi) || lo === hi) return baseDomain;
+    }
+    const mid = (lo + hi) / 2;
+    const spread = (hi - lo) / 2;
+    return [mid - spread * 2, mid + spread * 2];
+  }, [isWideViewport, effectiveMode, vsVooDomain, chartData]);
 
   return (
     <div className="min-h-screen w-full" style={{
@@ -1654,9 +1776,10 @@ export default function PortfolioTracker() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 items-start">
-          <div className="space-y-6">
-            <div className="bg-white/70 border border-stone-300 rounded-lg shadow-sm overflow-hidden">
+        <div className="grid grid-cols-1 min-[1200px]:grid-cols-[360px_1fr] min-[1200px]:items-stretch gap-6 items-start">
+          {/* Chart — column 2 on wide screens, first on mobile (above the portfolios list). */}
+          <div className="min-[1200px]:col-start-2 min-[1200px]:row-start-1 min-w-0">
+            <div className="bg-white/70 border border-stone-300 rounded-lg shadow-sm overflow-hidden h-full flex flex-col">
               <div className="px-5 py-3 border-b border-stone-200 flex items-center justify-between flex-wrap gap-3">
                 <div className="flex items-center gap-3">
                   <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono">
@@ -1713,7 +1836,7 @@ export default function PortfolioTracker() {
                   ))}
                 </div>
               )}
-              <div className="p-5 min-h-[280px] min-[500px]:min-h-[480px]">
+              <div className="p-5 min-h-[280px] min-[500px]:min-h-[480px] min-[1200px]:min-h-[580px] flex-1 flex flex-col">
                 {chartMode !== 'absolute' && !benchmarkPortfolio && (
                   <div className="mb-3 px-3 py-2 bg-amber-50 border border-amber-300 rounded text-[10px] font-mono text-amber-800 flex items-center gap-2">
                     <AlertCircle size={11} /> Selected benchmark has no price data — showing absolute mode.
@@ -1727,16 +1850,16 @@ export default function PortfolioTracker() {
                     </div>
                   </div>
                 ) : (
-                  <div className="h-[260px] min-[500px]:h-[460px]">
+                  <div className="h-[260px] min-[500px]:h-[460px] min-[1200px]:h-[560px] min-[1200px]:flex-1">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={chartData} margin={{ top: 20, right: 30, left: 10, bottom: 10 }}>
                       <CartesianGrid strokeDasharray="2 4" stroke={darkMode ? '#292524' : '#e6e0d3'} vertical={false} />
                       <XAxis dataKey="date" tickFormatter={formatDateShort} stroke={darkMode ? '#57534e' : '#a8a39a'} tick={{ fontSize: 10 }} minTickGap={50} />
-                      <YAxis domain={effectiveMode === 'vs' ? vsVooDomain : ['auto', 'auto']} hide={true} />
+                      <YAxis domain={chartYDomain} hide={true} />
                       {effectiveMode === 'vs' && (
                         <>
-                          <ReferenceArea y1={100} y2={vsVooDomain[1]} fill="#16a34a" fillOpacity={0.06} />
-                          <ReferenceArea y1={vsVooDomain[0]} y2={100} fill="#dc2626" fillOpacity={0.06} />
+                          <ReferenceArea y1={100} y2={typeof chartYDomain[1] === 'number' ? chartYDomain[1] : vsVooDomain[1]} fill="#16a34a" fillOpacity={0.06} />
+                          <ReferenceArea y1={typeof chartYDomain[0] === 'number' ? chartYDomain[0] : vsVooDomain[0]} y2={100} fill="#dc2626" fillOpacity={0.06} />
                         </>
                       )}
                       <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />
@@ -1778,14 +1901,18 @@ export default function PortfolioTracker() {
               </div>
             </div>
 
-            <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
-              <div className="px-4 py-3 border-b border-stone-300 bg-stone-100/60 flex items-center justify-between">
+          </div>
+
+          {/* Portfolios — column 1 on wide screens, second on mobile. Scrollable to chart's height. */}
+          <div className="min-[1200px]:col-start-1 min-[1200px]:row-start-1 min-[1200px]:min-h-0">
+            <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm h-full flex flex-col">
+              <div className="px-4 py-3 border-b border-stone-300 bg-stone-100/60 flex items-center justify-between flex-shrink-0">
                 <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono">
                   Portfolios · {investorPortfolios.length} <span className="text-stone-400 normal-case tracking-normal">· drag to reorder</span>
                 </div>
                 <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono tabular-nums">return</div>
               </div>
-              <div>
+              <div className="min-[1200px]:overflow-y-auto min-[1200px]:flex-1">
                 {investorPortfolios.map(p => (
                   <PortfolioRow key={p.id} portfolio={p}
                     pctReturn={displayPctByPortfolio[p.id]}
@@ -1795,6 +1922,7 @@ export default function PortfolioTracker() {
                     onDragStart={handleDragStart} onDragOver={handleDragOver}
                     onDrop={handleDrop} onDragEnd={handleDragEnd}
                     isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id}
+                    dropPosition={dragOverPos}
                     mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
@@ -1804,8 +1932,29 @@ export default function PortfolioTracker() {
                 )}
               </div>
             </div>
+          </div>
 
-            <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} mergeMode={mergeMode} setMergeMode={setMergeMode} />
+          {/* Consensus — spans both columns on wide screens, normal flow on mobile. */}
+          <div className="min-[1200px]:col-span-2 min-[1200px]:row-start-2 min-w-0 space-y-4">
+            {/* Narrow / mobile layout — single panel with mode tabs (Held / Bought / Sold). */}
+            <div className="min-[1200px]:hidden">
+              <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings}
+                onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} onEdit={setEditing}
+                mergeMode={mergeMode} setMergeMode={setMergeMode} />
+            </div>
+            {/* Wide layout — three panels side-by-side, one per mode. Pool lives once below. */}
+            <div className="hidden min-[1200px]:grid grid-cols-3 gap-4 items-start">
+              {['held', 'bought', 'sold'].map(mode => (
+                <ConsensusPanel key={mode}
+                  portfolios={portfolios} disabledHoldings={disabledHoldings}
+                  onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} onEdit={setEditing}
+                  mergeMode={mergeMode} setMergeMode={setMergeMode}
+                  forcedViewMode={mode} hideMergeToggle hidePool />
+              ))}
+            </div>
+            <div className="hidden min-[1200px]:block">
+              <ConsensusPool portfolios={portfolios} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} />
+            </div>
           </div>
 
         </div>
