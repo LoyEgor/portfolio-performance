@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, ReferenceArea } from 'recharts';
-import { Pencil, Trash2, Plus, AlertCircle, X, Upload, Download, Check, Database, ExternalLink, Save, RotateCcw, Wand2, GripVertical, Loader2, Sparkles, Link2, Pipette, LayoutGrid, HardDriveDownload, Eye, EyeOff, Moon, Sun } from 'lucide-react';
+import { Pencil, Trash2, AlertCircle, X, Upload, Check, Save, RotateCcw, GripVertical, Loader2, Link2, Pipette, HardDriveDownload, Eye, EyeOff, Moon, Sun } from 'lucide-react';
 
 // ============================================================================
 // DEFAULTS
@@ -37,12 +37,6 @@ const PALETTE = [
   '#0d9488', '#2563eb', '#7c3aed', '#db2777',
 ];
 
-const TICKER_BLACKLIST = new Set([
-  'INC','CORP','LTD','PLC','CO','LLC','SA','AG','GMBH','NV','BV','AB','OY','ASA',
-  'CLASS','CLA','CLB','CL','ETF','FUND','TRUST','GROUP','HOLDINGS','HOLDING','COM',
-  'CO.','THE','AND','OF','NEW','OLD','USD','EUR','GBP','CHF','JPY'
-]);
-
 // Same-company different-class tickers — used when "merge dual-class" is enabled
 const TICKER_ALIASES = {
   'GOOG': 'GOOGL', // Alphabet C → A
@@ -63,289 +57,27 @@ const normalizeTicker = (t, mergeMode) => {
 const mergeHoldingsDisplay = (holdings, mergeMode) => {
   if (!mergeMode || !holdings?.length) return (holdings || []).map(h => ({ ...h }));
   const groups = new Map();
-  const order = [];
   for (const h of holdings) {
     const orig = String(h.ticker || '').trim().toUpperCase();
     if (!orig) continue;
     const canon = normalizeTicker(orig, true);
     if (!groups.has(canon)) {
-      groups.set(canon, { ticker: canon, weight: 0, mergedFrom: [], firstIdx: order.length });
-      order.push(canon);
+      groups.set(canon, { ticker: canon, weight: 0, mergedFrom: [] });
     }
     const g = groups.get(canon);
     g.weight += parseFloat(h.weight) || 0;
     if (!g.mergedFrom.includes(orig)) g.mergedFrom.push(orig);
   }
-  return order.map(c => {
-    const g = groups.get(c);
-    return {
+  // After merging dual-class pairs, re-sort by combined weight descending —
+  // a merged position (BRK.A 7% + BRK.B 6% → BRK 13%) belongs at its NEW rank,
+  // not at the rank of whichever class came first in the source array.
+  return [...groups.values()]
+    .sort((a, b) => b.weight - a.weight)
+    .map(g => ({
       ticker: g.ticker,
       weight: Math.round(g.weight * 1e6) / 1e6,
       mergedFrom: g.mergedFrom.length > 1 ? [...g.mergedFrom].sort() : null,
-    };
-  });
-};
-
-// ============================================================================
-// PRICE PARSER
-// ============================================================================
-
-const MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
-
-const extractDates = (text) => {
-  const found = [];
-  const reA = /\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?(?:\s+(\d{1,2})\s*,?)?\s+(\d{4})\b/gi;
-  let m;
-  while ((m = reA.exec(text)) !== null) {
-    const month = MONTHS[m[1].toLowerCase().slice(0, 3)];
-    const day = m[2] ? parseInt(m[2]) : 1;
-    const year = parseInt(m[3]);
-    if (year >= 1900 && year <= 2100 && day >= 1 && day <= 31) {
-      const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      found.push({ date, start: m.index, end: m.index + m[0].length });
-    }
-  }
-  const reB = /\b(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{4})\b/gi;
-  while ((m = reB.exec(text)) !== null) {
-    const day = parseInt(m[1]);
-    const month = MONTHS[m[2].toLowerCase().slice(0, 3)];
-    const year = parseInt(m[3]);
-    if (year >= 1900 && year <= 2100 && day >= 1 && day <= 31) {
-      const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      if (!found.some(f => m.index >= f.start && m.index < f.end)) {
-        found.push({ date, start: m.index, end: m.index + m[0].length });
-      }
-    }
-  }
-  const reC = /\b(\d{4})-(\d{1,2})-(\d{1,2})\b/g;
-  while ((m = reC.exec(text)) !== null) {
-    const year = parseInt(m[1]), month = parseInt(m[2]), day = parseInt(m[3]);
-    if (year >= 1900 && year <= 2100 && month >= 1 && month <= 12 && day >= 1 && day <= 31) {
-      const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      found.push({ date, start: m.index, end: m.index + m[0].length });
-    }
-  }
-  const reD = /\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g;
-  while ((m = reD.exec(text)) !== null) {
-    const month = parseInt(m[1]), day = parseInt(m[2]), year = parseInt(m[3]);
-    if (year >= 1900 && year <= 2100 && month >= 1 && month <= 12 && day >= 1 && day <= 31) {
-      const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      found.push({ date, start: m.index, end: m.index + m[0].length });
-    }
-  }
-  found.sort((a, b) => a.start - b.start);
-  return found;
-};
-
-const extractNumbers = (text, excludeRanges, opts = {}) => {
-  const min = opts.min ?? 0;
-  const max = opts.max ?? 1e9;
-  const allowPercent = opts.allowPercent ?? false;
-  const found = [];
-  const lookahead = allowPercent ? '(?![\\d.A-Za-z])' : '(?![\\d%A-Za-z.])';
-  const re = new RegExp(`(?<![A-Za-z\\d.\\-])(\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|\\d+\\.\\d+|\\d+)${lookahead}`, 'g');
-  let m;
-  while ((m = re.exec(text)) !== null) {
-    const start = m.index, end = m.index + m[0].length;
-    if (excludeRanges.some(r => start < r.end && end > r.start)) continue;
-    const val = parseFloat(m[0].replace(/,/g, ''));
-    if (isNaN(val) || val <= min || val > max) continue;
-    found.push({ value: val, start, end });
-  }
-  return found;
-};
-
-const parsePriceInput = (text) => {
-  if (!text || !text.trim()) return { error: 'Empty input' };
-  const lines = text.trim().split(/\r?\n/).filter(l => l.trim());
-  if (lines.length >= 3 && /,/.test(lines[0]) && /,/.test(lines[1])) {
-    const csv = tryParseCSV(text);
-    if (csv.data && Object.keys(csv.data).length >= 2) return csv;
-  }
-  const dates = extractDates(text);
-  if (dates.length === 0) return { error: 'No dates found. Examples: "Apr 2026", "Apr 1, 2026", "2026-04-01"' };
-  const numbers = extractNumbers(text, dates);
-  if (numbers.length === 0) return { error: 'Found dates but no prices' };
-  const seenDates = new Set();
-  const uniqueDates = [];
-  for (const d of dates) {
-    if (!seenDates.has(d.date)) { seenDates.add(d.date); uniqueDates.push(d); }
-  }
-  const pairCount = Math.min(uniqueDates.length, numbers.length);
-  const data = {};
-  for (let i = 0; i < pairCount; i++) data[uniqueDates[i].date] = numbers[i].value;
-  if (pairCount < 2) return { error: `Only ${pairCount} valid pair(s) — need at least 2` };
-  const sortedDates = Object.keys(data).sort();
-  const result = {
-    data, parsed: pairCount,
-    skipped: Math.max(0, uniqueDates.length - pairCount) + Math.max(0, numbers.length - pairCount),
-    dateRange: { from: sortedDates[0], to: sortedDates[sortedDates.length - 1] },
-    columnUsed: 'auto-detected', mode: 'flexible'
-  };
-  if (uniqueDates.length !== numbers.length) {
-    result.warning = `Found ${uniqueDates.length} dates and ${numbers.length} numbers — paired first ${pairCount}`;
-  }
-  return result;
-};
-
-const tryParseCSV = (text) => {
-  const lines = text.trim().split(/\r?\n/).filter(l => l.trim());
-  if (lines.length < 2) return { error: 'Not enough rows' };
-  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase());
-  const dateIdx = headers.findIndex(h => h === 'date');
-  if (dateIdx === -1) return { error: 'No Date column' };
-  let priceIdx = headers.findIndex(h => h.includes('adj') && h.includes('close'));
-  let columnUsed = 'Adj Close';
-  if (priceIdx === -1) { priceIdx = headers.findIndex(h => h === 'close'); columnUsed = 'Close'; }
-  if (priceIdx === -1) { priceIdx = headers.findIndex(h => h.includes('close')); columnUsed = headers[priceIdx] || 'Close'; }
-  if (priceIdx === -1) { priceIdx = headers.findIndex(h => h === 'open'); columnUsed = 'Open'; }
-  if (priceIdx === -1) return { error: 'No price column' };
-  const data = {};
-  let parsed = 0;
-  for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(',');
-    if (cols.length <= Math.max(dateIdx, priceIdx)) continue;
-    const dt = extractDates(cols[dateIdx])[0]?.date;
-    const price = parseFloat(cols[priceIdx].trim().replace(/^"|"$/g, '').replace(/,/g, ''));
-    if (dt && !isNaN(price) && price > 0) { data[dt] = price; parsed++; }
-  }
-  if (parsed < 2) return { error: `Parsed only ${parsed} rows` };
-  const sortedDates = Object.keys(data).sort();
-  return { data, parsed, dateRange: { from: sortedDates[0], to: sortedDates[sortedDates.length - 1] }, columnUsed, mode: 'csv' };
-};
-
-// ============================================================================
-// PORTFOLIO PASTE PARSER
-// ============================================================================
-
-const parsePortfolioInput = (text) => {
-  if (!text || !text.trim()) return { error: 'Empty input' };
-  const tickerSet = [];
-  const tickerRanges = [];
-  const reA = /\b([A-Z]{1,6}(?:[.\-][A-Z]{1,3})?)\s*[-–—]\s+(?=[A-Za-z])/g;
-  let m;
-  while ((m = reA.exec(text)) !== null) {
-    const t = m[1];
-    if (TICKER_BLACKLIST.has(t)) continue;
-    tickerSet.push({ ticker: t, start: m.index, end: m.index + m[0].length });
-    tickerRanges.push({ start: m.index, end: m.index + m[0].length });
-  }
-  if (tickerSet.length === 0) {
-    const reB = /\b([A-Z]{2,6}(?:[.\-][A-Z]{1,3})?)\b/g;
-    while ((m = reB.exec(text)) !== null) {
-      const t = m[1];
-      if (TICKER_BLACKLIST.has(t)) continue;
-      tickerSet.push({ ticker: t, start: m.index, end: m.index + m[0].length });
-      tickerRanges.push({ start: m.index, end: m.index + m[0].length });
-    }
-  }
-  const seen = new Set();
-  const tickers = tickerSet.filter(t => {
-    if (seen.has(t.ticker)) return false;
-    seen.add(t.ticker);
-    return true;
-  });
-  if (tickers.length === 0) return { error: 'No tickers found. Use "TICKER - Description" format.' };
-  const weights = extractNumbers(text, tickerRanges, { min: 0, max: 100, allowPercent: true });
-  let holdings;
-  if (weights.length === 0) {
-    const equal = parseFloat((100 / tickers.length).toFixed(2));
-    holdings = tickers.map(t => ({ ticker: t.ticker, weight: equal }));
-  } else {
-    const pairCount = Math.min(tickers.length, weights.length);
-    holdings = [];
-    for (let i = 0; i < pairCount; i++) holdings.push({ ticker: tickers[i].ticker, weight: weights[i].value });
-    for (let i = pairCount; i < tickers.length; i++) holdings.push({ ticker: tickers[i].ticker, weight: 0 });
-  }
-  const initialSum = holdings.reduce((s, h) => s + h.weight, 0);
-  let redistributed = false;
-  let finalSum = initialSum;
-  if (initialSum < 99 && holdings.length > 0) {
-    const remainder = 100 - initialSum;
-    const addPer = remainder / holdings.length;
-    holdings = holdings.map(h => ({ ...h, weight: parseFloat((h.weight + addPer).toFixed(4)) }));
-    finalSum = holdings.reduce((s, h) => s + h.weight, 0);
-    redistributed = true;
-  }
-  return {
-    holdings, initialSum, finalSum,
-    tickerCount: tickers.length, weightCount: weights.length,
-    redistributed, redistributedAmount: redistributed ? (100 - initialSum) : 0
-  };
-};
-
-// ============================================================================
-// Storage with cross-version migration
-// ============================================================================
-
-const STORAGE_VERSION = 'v8';
-// V8: single key for all prices instead of N keys per ticker.
-// Restore: 2 writes total instead of N+1 (massive speedup over V5-V7).
-
-const loadAllStorage = async () => {
-  let portfolios = null;
-  let prices = {};
-  try {
-    const r = await window.storage.get(`portfolios:v8`);
-    if (r?.value) portfolios = JSON.parse(r.value);
-  } catch (e) {}
-  try {
-    const r = await window.storage.get(`prices:v8`);
-    if (r?.value) prices = JSON.parse(r.value);
-  } catch (e) {}
-  return { portfolios, prices };
-};
-const savePortfolios = async (p) => {
-  try { await window.storage.set(`portfolios:v8`, JSON.stringify(p)); }
-  catch (e) {}
-};
-const savePricesAll = async (prices) => {
-  try { await window.storage.set(`prices:v8`, JSON.stringify(prices)); }
-  catch (e) {}
-};
-
-// One-time migration from older versions (v5/v6/v7 used per-ticker keys)
-// Reads old keys in parallel, then writes a single combined key
-const migrateToV8 = async () => {
-  try {
-    const v8Pf = await window.storage.get(`portfolios:v8`);
-    const v8Pr = await window.storage.get(`prices:v8`);
-    if (v8Pf?.value && v8Pr?.value) return { migrated: false };
-
-    for (const oldVer of ['v7', 'v6', 'v5']) {
-      const oldPf = await window.storage.get(`portfolios:${oldVer}`);
-      if (!oldPf?.value) continue;
-
-      if (!v8Pf?.value) {
-        await window.storage.set(`portfolios:v8`, oldPf.value);
-      }
-
-      if (!v8Pr?.value) {
-        const oldKeys = await window.storage.list(`price:${oldVer}:`);
-        const allPrices = {};
-        if (oldKeys?.keys && oldKeys.keys.length > 0) {
-          // Parallel reads — much faster than sequential
-          const fetches = oldKeys.keys.map(async (oldKey) => {
-            const ticker = oldKey.replace(`price:${oldVer}:`, '');
-            try {
-              const val = await window.storage.get(oldKey);
-              if (val?.value) {
-                const parsed = JSON.parse(val.value);
-                const priceMap = parsed?.data || parsed;
-                if (priceMap && typeof priceMap === 'object') {
-                  allPrices[ticker] = priceMap;
-                }
-              }
-            } catch (e) {}
-          });
-          await Promise.all(fetches);
-        }
-        await window.storage.set(`prices:v8`, JSON.stringify(allPrices));
-      }
-      return { migrated: true, fromVersion: oldVer };
-    }
-    return { migrated: false };
-  } catch (e) { return { migrated: false }; }
+    }));
 };
 
 // ============================================================================
@@ -498,24 +230,27 @@ const formatDateShort = (s) => {
   return new Date(parseInt(y), parseInt(m) - 1, 1)
     .toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
 };
-const buildLinks = (ticker) => {
-  const t = ticker.trim();
-  if (!t) return null;
-  const tLower = t.toLowerCase();
-  const isLikelyEtf = /^(VOO|VT|VTI|SPY|QQQ|VXUS|VEA|VWO|BND|TLT|IVV|VGT|SCHD|VUG|VYM)$/i.test(t);
-  return {
-    stockanalysis: `https://stockanalysis.com/${isLikelyEtf ? 'etf' : 'stocks'}/${tLower}/history/`,
-    yahoo: `https://finance.yahoo.com/quote/${t}/history/`
-  };
-};
 
+// Period cutoff as an ISO date string ("YYYY-MM-DD") — relies on the fact that all
+// price keys in this app are YYYY-MM-DD, which sort lexicographically the same as
+// chronologically. Returns null for 'ALL' or unrecognized periods.
+const periodCutoffIso = (period, lastIso) => {
+  if (!period || period === 'ALL' || !lastIso) return null;
+  const d = new Date(lastIso);
+  if (period === '3M') d.setMonth(d.getMonth() - 3);
+  else if (period === '6M') d.setMonth(d.getMonth() - 6);
+  else if (period === 'YTD') return `${d.getFullYear()}-01-01`;
+  else if (period === '1Y') d.setFullYear(d.getFullYear() - 1);
+  else return null;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
 // ============================================================================
 // PORTFOLIO ROW
 // ============================================================================
 
 const PortfolioRow = ({
-  portfolio, onToggle, onEdit, performance, pctReturn, missingTickers, coveragePct, disabledSet,
-  onDragStart, onDragOver, onDragLeave, onDrop, onDragEnd, isDragging, isDropTarget,
+  portfolio, onToggle, onEdit, pctReturn, missingTickers, coveragePct, disabledSet,
+  onDragStart, onDragOver, onDrop, onDragEnd, isDragging, isDropTarget,
   mergeMode
 }) => {
   // `pctReturn` is passed in from the parent (computed for the current chart period + mode).
@@ -539,7 +274,6 @@ const PortfolioRow = ({
         onDragStart?.(portfolio.id);
       }}
       onDragOver={(e) => onDragOver?.(e, portfolio.id)}
-      onDragLeave={onDragLeave}
       onDrop={(e) => onDrop?.(e, portfolio.id)}
       onDragEnd={onDragEnd}
       className={`group relative px-4 py-3 border-b border-stone-200/80 hover:bg-stone-100/60 transition-colors ${
@@ -614,17 +348,13 @@ const asOfLabel = (iso) => {
 };
 
 const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode }) => {
-  const isNew = !portfolio?.holdings;
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
-  const [holdings, setHoldings] = useState(
-    portfolio?.holdings?.length > 0 ? portfolio.holdings.map(h => ({ ...h })) : [{ ticker: '', weight: 0 }]
+  const [holdings] = useState(
+    portfolio?.holdings?.length > 0 ? portfolio.holdings.map(h => ({ ...h })) : []
   );
   const [color, setColor] = useState(portfolio?.color || PALETTE[0]);
-  const [showPaste, setShowPaste] = useState(isNew);
-  const [pasteText, setPasteText] = useState('');
-  const [pastePreview, setPastePreview] = useState(null);
-  // Quarter switcher: 'current' edits portfolio.holdings; numeric idx shows portfolio.history[idx] read-only.
+  // Quarter switcher: 'current' shows portfolio.holdings; numeric idx shows portfolio.history[idx]. Both read-only.
   const historySnapshots = portfolio?.history || [];
   const [viewIdx, setViewIdx] = useState('current');
   const isReadonly = viewIdx !== 'current';
@@ -687,35 +417,8 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   const miniLast = miniChartData?.[miniChartData.length - 1]?.value;
   const miniDelta = miniLast != null ? miniLast - 100 : null;
 
-  const updateHolding = (i, field, value) => {
-    const next = [...holdings];
-    next[i] = { ...next[i], [field]: field === 'ticker' ? value.toUpperCase() : value };
-    setHoldings(next);
-  };
-  const addHolding = () => setHoldings([...holdings, { ticker: '', weight: 0 }]);
-  const removeHolding = (i) => setHoldings(holdings.filter((_, idx) => idx !== i));
-  const normalize = () => {
-    const total = holdings.reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
-    if (total === 0) return;
-    setHoldings(holdings.map(h => ({ ...h, weight: parseFloat(((parseFloat(h.weight) || 0) / total * 100).toFixed(2)) })));
-  };
   const handleSave = () => {
-    const clean = holdings.filter(h => h.ticker.trim() && parseFloat(h.weight) > 0)
-      .map(h => ({ ticker: h.ticker.trim().toUpperCase(), weight: parseFloat(h.weight) }));
-    onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color, holdings: clean });
-  };
-  const tryPasteParse = (text) => {
-    setPasteText(text);
-    if (!text.trim()) { setPastePreview(null); return; }
-    setPastePreview(parsePortfolioInput(text));
-  };
-  const applyPaste = () => {
-    if (!pastePreview?.holdings) return;
-    setHoldings(pastePreview.holdings.map(h => ({ ...h, weight: parseFloat(h.weight.toFixed(2)) })));
-    setShowPaste(false);
-    setPasteText('');
-    setPastePreview(null);
-    if (!name && pastePreview.holdings.length > 0) setName(`Portfolio (${pastePreview.holdings.length} stocks)`);
+    onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color });
   };
 
   return (
@@ -724,7 +427,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
     <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-12 overflow-y-auto">
       <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
-          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>{isNew ? 'New Portfolio' : 'Edit Portfolio'}</h2>
+          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Edit Portfolio</h2>
           <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
@@ -779,59 +482,6 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
               </div>
             </div>
           )}
-          <div className="border border-amber-700/30 bg-amber-50/40 rounded-lg overflow-hidden">
-            <button onClick={() => setShowPaste(!showPaste)} className="w-full px-4 py-2.5 flex items-center justify-between hover:bg-amber-50/60 transition-colors">
-              <div className="flex items-center gap-2">
-                <Wand2 size={13} className="text-amber-800" />
-                <span className="text-[11px] tracking-[0.1em] uppercase font-mono text-amber-900">Smart paste</span>
-              </div>
-              <span className="text-stone-500 text-xs">{showPaste ? '−' : '+'}</span>
-            </button>
-            {showPaste && (
-              <div className="px-4 pb-4 pt-1 space-y-2">
-                <textarea value={pasteText} onChange={(e) => tryPasteParse(e.target.value)}
-                  placeholder={"TKO - TKO Group Holdings Inc. GOOGL - Alphabet Inc. ...  15.75 15.63 ..."}
-                  rows={4}
-                  className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-[11px] text-stone-800 font-mono focus:border-amber-700/60 focus:outline-none resize-none" />
-                {pastePreview?.error && (
-                  <div className="text-[11px] font-mono text-red-800 flex items-center gap-1.5">
-                    <AlertCircle size={11} /> {pastePreview.error}
-                  </div>
-                )}
-                {pastePreview?.holdings && (
-                  <div className="space-y-1.5">
-                    <div className="text-[11px] font-mono text-emerald-900 flex items-center gap-1.5">
-                      <Check size={11} /> Detected {pastePreview.tickerCount} tickers, {pastePreview.weightCount} weights
-                    </div>
-                    {pastePreview.redistributed && (
-                      <div className="text-[10px] font-mono text-amber-800">
-                        Sum was {pastePreview.initialSum.toFixed(2)}% — distributed remaining {pastePreview.redistributedAmount.toFixed(2)}% evenly
-                      </div>
-                    )}
-                    <div className="bg-white border border-stone-200 rounded p-2 max-h-32 overflow-y-auto">
-                      <table className="w-full text-[10px] font-mono">
-                        <tbody>
-                          {pastePreview.holdings.slice(0, 20).map((h, i) => (
-                            <tr key={i}>
-                              <td className="py-0.5 text-stone-800">{h.ticker}</td>
-                              <td className="py-0.5 text-right tabular-nums text-stone-600">{h.weight.toFixed(2)}%</td>
-                            </tr>
-                          ))}
-                          {pastePreview.holdings.length > 20 && (
-                            <tr><td colSpan={2} className="text-stone-500 italic">… +{pastePreview.holdings.length - 20} more</td></tr>
-                          )}
-                        </tbody>
-                      </table>
-                    </div>
-                    <button onClick={applyPaste}
-                      className="w-full text-[11px] tracking-[0.15em] uppercase font-mono bg-amber-700 text-white rounded py-2 hover:bg-amber-800">
-                      Apply ({pastePreview.holdings.length} holdings)
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
           <div>
             <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
               <div className="flex items-center gap-2 flex-wrap">
@@ -861,7 +511,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           ? 'bg-stone-900 text-stone-50 border-stone-900'
                           : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
                       }`}
-                      title="Current — editable">
+                      title="Current quarter">
                       Now
                     </button>
                   </div>
@@ -875,11 +525,6 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                   <span className="text-[10px] font-mono text-stone-400" title="Weight of enabled holdings (disabled excluded)">
                     active {enabledWeight >= 99.5 && enabledWeight <= 100.5 ? '100.00' : enabledWeight.toFixed(2)}%
                   </span>
-                )}
-                {!isReadonly && (
-                  <button onClick={normalize} className="text-[10px] tracking-[0.1em] uppercase text-stone-700 hover:text-stone-900 font-mono underline-offset-4 hover:underline">
-                    Normalize → 100%
-                  </button>
                 )}
               </div>
             </div>
@@ -942,7 +587,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                         {isDisabled ? <EyeOff size={13} /> : <Eye size={13} />}
                       </button>
                     ) : <div className="w-[29px] h-[29px] flex-shrink-0" />)}
-                    <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden focus-within:border-stone-700 transition-colors">
+                    <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden">
                       {/* base/kept bar — gray */}
                       {baseWidth > 0 && (
                         <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
@@ -969,40 +614,29 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           style={{ width: `${prevPct}%`, background: 'var(--danger)', opacity: 0.25 }} />
                       )}
                       <div className="relative flex items-center">
-                        <input value={h.ticker} readOnly={isReadonly || isSold || lockedByMerge}
-                          onChange={(e) => !isReadonly && !isSold && !lockedByMerge && updateHolding(row.i, 'ticker', e.target.value)} placeholder="TICKER"
-                          title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined}
-                          className={`relative flex-1 w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'} ${(isReadonly || isSold || lockedByMerge) ? 'cursor-default' : ''}`} />
+                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'}`}>
+                          {h.ticker}
+                        </div>
                         {isMerged && (
                           <span className="relative mr-2 text-[9px] tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm bg-amber-100 text-amber-800 border border-amber-300 whitespace-nowrap"
-                            title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : 'Merged display row'}>
+                            title="Merged display row">
                             {h.mergedFrom.join(' + ')}
                           </span>
                         )}
                       </div>
                     </div>
-                    <input type="number" step="0.01" value={h.weight} readOnly={isReadonly || isSold || lockedByMerge}
-                      onChange={(e) => !isReadonly && !isSold && !lockedByMerge && updateHolding(row.i, 'weight', e.target.value)} placeholder="0.00"
-                      title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined}
-                      className={`w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none ${isSold ? 'text-stone-500' : 'text-stone-900'} ${(isReadonly || isSold || lockedByMerge) ? 'cursor-default' : ''}`} />
-                    <span className="text-stone-500 text-xs font-mono">%</span>
-                    {(!isReadonly && !isSold && !lockedByMerge)
-                      ? <button onClick={() => removeHolding(row.i)} className="p-1.5 text-stone-400 hover:text-red-600"><X size={14} /></button>
-                      : <div className="w-[26px] flex-shrink-0" title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined} />}
+                    <div className={`w-24 px-3 py-2 text-sm font-mono text-right tabular-nums ${isSold ? 'text-stone-500' : 'text-stone-900'}`}>
+                      {(parseFloat(h.weight) || 0).toFixed(2)}%
+                    </div>
                   </div>
                 );
               })}
             </div>
-            {!isReadonly && (
-              <button onClick={addHolding} className="mt-3 flex items-center gap-2 text-[11px] tracking-[0.1em] uppercase text-stone-600 hover:text-stone-900 font-mono">
-                <Plus size={12} /> Add holding
-              </button>
-            )}
           </div>
         </div>
         <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-between gap-3 bg-stone-100/50">
           <div>
-            {!isNew && !portfolio.locked && onDelete && (
+            {!portfolio.locked && onDelete && (
               <button onClick={() => onDelete(portfolio.id)}
                 className="flex items-center gap-1.5 px-3 py-2 text-[11px] tracking-[0.15em] uppercase font-mono text-red-700 hover:text-red-900 hover:bg-red-50 rounded transition-colors">
                 <Trash2 size={12} /> Delete
@@ -1020,116 +654,13 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
 };
 
 // ============================================================================
-// PRICE IMPORT MODAL
+// BACKUP MODAL — upload a JSON snapshot to restore an older state for comparison
 // ============================================================================
 
-const ImportModal = ({ tickerHint, onSave, onClose }) => {
-  const [ticker, setTicker] = useState(tickerHint || '');
-  const [text, setText] = useState('');
-  const [preview, setPreview] = useState(null);
-  const [error, setError] = useState(null);
-  const [warning, setWarning] = useState(null);
-  const tryParse = (input) => {
-    setText(input);
-    if (!input.trim()) { setPreview(null); setError(null); setWarning(null); return; }
-    const result = parsePriceInput(input);
-    if (result.error) { setPreview(null); setError(result.error); setWarning(null); }
-    else { setPreview(result); setError(null); setWarning(result.warning || null); }
-  };
-  const handleImport = () => {
-    if (!ticker.trim() || !preview) return;
-    onSave(ticker.trim().toUpperCase(), preview.data);
-  };
-  const links = buildLinks(ticker);
-  return (
-    <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
-        <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
-          <div>
-            <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Import prices</h2>
-            <p className="text-[11px] text-stone-500 font-mono mt-1">Paste any text containing dates and prices</p>
-          </div>
-          <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
-        </div>
-        <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
-          <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Ticker</label>
-            <input value={ticker} onChange={(e) => setTicker(e.target.value.toUpperCase())} placeholder="e.g. AAPL, BRK.B, REMEDY.HE"
-              className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-sm font-mono uppercase focus:border-stone-700 focus:outline-none" autoFocus />
-            {links && (
-              <div className="mt-2 flex items-center gap-3 text-[11px] font-mono">
-                <a href={links.stockanalysis} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-stone-700 hover:text-amber-700 underline-offset-4 hover:underline">
-                  <ExternalLink size={11} /> stockanalysis.com
-                </a>
-                <a href={links.yahoo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-stone-700 hover:text-amber-700 underline-offset-4 hover:underline">
-                  <ExternalLink size={11} /> finance.yahoo.com
-                </a>
-              </div>
-            )}
-          </div>
-          <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Pasted data</label>
-            <textarea value={text} onChange={(e) => tryParse(e.target.value)} placeholder={"Apr 2026 Mar 2026 Feb 2026 ...\n254.08 262.41 260.03 ..."}
-              rows={12}
-              className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-[11px] text-stone-800 font-mono focus:border-stone-700 focus:outline-none resize-none" />
-          </div>
-          {error && (
-            <div className="p-3 bg-red-50 border border-red-300 rounded text-[11px] font-mono text-red-900 flex items-start gap-2">
-              <AlertCircle size={13} className="flex-shrink-0 mt-0.5" /><div>{error}</div>
-            </div>
-          )}
-          {preview && (
-            <div className={`p-3 rounded text-[11px] font-mono border ${warning ? 'bg-red-50 border-red-300' : 'bg-emerald-50 border-emerald-300'}`}>
-              <div className={`flex items-center gap-2 mb-1.5 ${warning ? 'text-red-900' : 'text-emerald-900'}`}>
-                {warning ? <AlertCircle size={13} /> : <Check size={13} />}
-                <span className="font-medium">Parsed {preview.parsed} points</span>
-                <span className="text-stone-500 text-[10px]">({preview.mode})</span>
-              </div>
-              <div className="text-stone-700 mb-1">
-                Range: <span className="text-stone-900">{formatDateNice(preview.dateRange.from)} → {formatDateNice(preview.dateRange.to)}</span>
-              </div>
-              <div className="text-stone-600 text-[10px]">Column: {preview.columnUsed}</div>
-              {warning && <div className="mt-2 pt-2 border-t border-red-200 text-red-800 text-[10px]">⚠ {warning}</div>}
-            </div>
-          )}
-        </div>
-        <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-end gap-3 bg-stone-100/50">
-          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Cancel</button>
-          <button onClick={handleImport} disabled={!ticker.trim() || !preview}
-            className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800 disabled:bg-stone-400 disabled:cursor-not-allowed">
-            Import
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ============================================================================
-// BACKUP MODAL — lenient parsing + preview + progress
-// ============================================================================
-
-const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
+const BackupModal = ({ onRestore, onClose }) => {
   const fileInputRef = useRef(null);
   const [restorePreview, setRestorePreview] = useState(null);
-  const [restoring, setRestoring] = useState(false);
-  const [restoreProgress, setRestoreProgress] = useState({ current: 0, total: 0, label: '' });
   const [restoreError, setRestoreError] = useState(null);
-
-  const handleExport = () => {
-    const data = { version: STORAGE_VERSION, exportedAt: new Date().toISOString(), portfolios, prices };
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    const stamp = new Date().toISOString().slice(0, 10);
-    a.href = url;
-    a.download = `portfolio-comparator-${stamp}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(url), 100);
-  };
 
   // LENIENT PARSER — accept any data that looks vaguely correct, skip the rest
   const parseBackupFile = (raw) => {
@@ -1216,61 +747,39 @@ const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
     e.target.value = '';
   };
 
-  const performRestore = async () => {
+  const performRestore = () => {
     if (!restorePreview) return;
-    setRestoring(true);
-    setRestoreError(null);
-    setRestoreProgress({ current: 0, total: Object.keys(restorePreview.prices).length, label: 'Saving portfolios...' });
     try {
-      await onRestore(restorePreview, (current, total, label) => {
-        setRestoreProgress({ current, total, label });
-      });
-      setRestoring(false);
+      onRestore(restorePreview);
       onClose();
     } catch (err) {
       setRestoreError(`Restore failed: ${err.message || err}`);
-      setRestoring(false);
     }
   };
-
-  const portfolioCount = portfolios.length;
-  const tickerCount = Object.keys(prices).length;
-  const totalPointsCurrent = Object.values(prices).reduce((s, p) => s + Object.keys(p).length, 0);
 
   return (
     <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-md w-full overflow-hidden shadow-2xl">
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
-          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Backup & Restore</h2>
-          <button onClick={onClose} disabled={restoring} className="text-stone-500 hover:text-stone-800 disabled:opacity-30"><X size={20} /></button>
+          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Restore from file</h2>
+          <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
         </div>
         <div className="px-6 py-5 space-y-5">
-          <div className="bg-white border border-stone-200 rounded p-3 text-[11px] font-mono text-stone-700">
-            <div>Current state:</div>
-            <div className="mt-1 text-stone-500">
-              · {portfolioCount} portfolios<br />
-              · {tickerCount} tickers · {totalPointsCurrent.toLocaleString()} price points
-            </div>
+          <div className="text-[11px] font-mono text-stone-600">
+            Upload a JSON snapshot to view an older state. The restored data is held in memory only — reloading the page returns to the bundled default.
           </div>
 
-          <div>
-            <button onClick={handleExport} disabled={restoring}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800 disabled:bg-stone-400">
-              <Download size={13} /> Download backup file
-            </button>
-          </div>
-
-          <div className="border-t border-stone-200 pt-5 space-y-3">
+          <div className="space-y-3">
             <input type="file" accept=".json,application/json" ref={fileInputRef} onChange={handleFileSelect} className="hidden" />
 
-            {!restorePreview && !restoring && (
+            {!restorePreview && (
               <button onClick={() => fileInputRef.current?.click()}
                 className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] tracking-[0.15em] uppercase font-mono bg-white border border-stone-400 text-stone-800 rounded hover:bg-stone-100">
                 <Upload size={13} /> Restore from backup file
               </button>
             )}
 
-            {restorePreview && !restoring && (
+            {restorePreview && (
               <div className="space-y-3">
                 <div className="bg-emerald-50 border border-emerald-300 rounded p-3">
                   <div className="flex items-center gap-2 text-[12px] font-mono text-emerald-900 font-medium mb-2">
@@ -1289,7 +798,7 @@ const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
                   </div>
                 </div>
                 <div className="text-[11px] font-mono text-amber-800 bg-amber-50 border border-amber-200 rounded p-2.5">
-                  ⚠ This replaces all current data. Download a backup of current state first if you want to preserve it.
+                  ⚠ This replaces all current data in memory. Reload the page to return to the bundled default.
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <button onClick={() => { setRestorePreview(null); setRestoreError(null); }}
@@ -1304,25 +813,6 @@ const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
               </div>
             )}
 
-            {restoring && (
-              <div className="space-y-3">
-                <div className="text-[12px] font-mono text-stone-800 flex items-center gap-2">
-                  <Loader2 size={14} className="animate-spin" /> {restoreProgress.label}
-                </div>
-                {restoreProgress.total > 0 && (
-                  <div>
-                    <div className="h-2 bg-stone-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-amber-700 transition-all duration-150"
-                        style={{ width: `${(restoreProgress.current / restoreProgress.total) * 100}%` }} />
-                    </div>
-                    <div className="text-[10px] font-mono text-stone-500 mt-1 tabular-nums">
-                      {restoreProgress.current} / {restoreProgress.total}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
             {restoreError && (
               <div className="text-[11px] font-mono text-red-800 bg-red-50 border border-red-300 rounded p-2.5 flex items-start gap-1.5">
                 <AlertCircle size={11} className="mt-0.5 flex-shrink-0" /> <div>{restoreError}</div>
@@ -1331,232 +821,8 @@ const BackupModal = ({ portfolios, prices, onRestore, onClose }) => {
           </div>
         </div>
         <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-end bg-stone-100/50">
-          <button onClick={onClose} disabled={restoring} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono disabled:opacity-30">Close</button>
+          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Close</button>
         </div>
-      </div>
-    </div>
-  );
-};
-
-// ============================================================================
-// DATA AUDIT MODAL — heatmap of tickers × months for data validation
-// ============================================================================
-
-const DataAuditModal = ({ prices, onClose }) => {
-  // Collect all tickers that have data
-  const tickers = Object.keys(prices).filter(t => Object.keys(prices[t]).length > 0).sort();
-
-  // Collect all unique months across all tickers
-  const allMonthsSet = new Set();
-  const tickerMonths = {};  // ticker -> Set<YYYY-MM>
-  const tickerDates = {};   // ticker -> sorted array of YYYY-MM-DD
-  tickers.forEach(t => {
-    const dates = Object.keys(prices[t]).sort();
-    tickerDates[t] = dates;
-    const months = new Set(dates.map(d => d.slice(0, 7)));
-    tickerMonths[t] = months;
-    months.forEach(m => allMonthsSet.add(m));
-  });
-  const allMonths = [...allMonthsSet].sort();
-
-  // Majority range — what most tickers cover
-  const rangeCounts = {};  // "startMonth|endMonth" -> count
-  tickers.forEach(t => {
-    const months = [...tickerMonths[t]].sort();
-    if (months.length === 0) return;
-    const key = `${months[0]}|${months[months.length - 1]}`;
-    rangeCounts[key] = (rangeCounts[key] || 0) + 1;
-  });
-  const majorityRange = Object.entries(rangeCounts).sort((a, b) => b[1] - a[1])[0];
-  const [majorityStart, majorityEnd] = majorityRange ? majorityRange[0].split('|') : ['', ''];
-  const majorityMonths = allMonths.filter(m => m >= majorityStart && m <= majorityEnd);
-  const majorityPointCount = majorityMonths.length;
-
-  // Classify tickers
-  const issues = [];  // { ticker, type, detail }
-  tickers.forEach(t => {
-    const months = [...tickerMonths[t]].sort();
-    if (months.length === 0) return;
-    const start = months[0];
-    const end = months[months.length - 1];
-    // Different range than majority
-    if (start !== majorityStart || end !== majorityEnd) {
-      issues.push({ ticker: t, type: 'range', detail: `${formatMonthLabel(start)} → ${formatMonthLabel(end)} (expected ${formatMonthLabel(majorityStart)} → ${formatMonthLabel(majorityEnd)})` });
-    }
-    // Gaps — missing months within range
-    const expectedInRange = allMonths.filter(m => m >= start && m <= end);
-    const gaps = expectedInRange.filter(m => !tickerMonths[t].has(m));
-    if (gaps.length > 0) {
-      issues.push({ ticker: t, type: 'gap', detail: `missing ${gaps.map(formatMonthLabel).join(', ')}` });
-    }
-    // Different point count than majority
-    if (months.length !== majorityPointCount && start === majorityStart && end === majorityEnd) {
-      issues.push({ ticker: t, type: 'count', detail: `${months.length} pts vs expected ${majorityPointCount}` });
-    }
-  });
-
-  const issueTickerSet = new Set(issues.map(i => i.ticker));
-
-  return (
-    <div className="fixed inset-0 bg-black/40 flex items-start justify-center z-50 p-4 overflow-y-auto" onClick={onClose}>
-      <div className="bg-[#fdfbf6] rounded-lg shadow-xl border border-stone-300 w-full max-w-[95vw] my-8" onClick={e => e.stopPropagation()}>
-        {/* Header */}
-        <div className="px-6 py-4 border-b border-stone-300 flex items-center justify-between">
-          <div>
-            <div className="text-[10px] tracking-[0.2em] uppercase text-stone-500 font-mono">Data audit</div>
-            <div className="text-[15px] font-serif text-stone-900 mt-0.5">
-              {tickers.length} tickers · {allMonths.length} months · {issues.length === 0 ? 'all clear' : `${issues.length} issue${issues.length > 1 ? 's' : ''}`}
-            </div>
-          </div>
-          <button onClick={onClose} className="p-2 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800"><X size={16} /></button>
-        </div>
-
-        {/* Issues summary */}
-        {issues.length > 0 && (
-          <div className="px-6 py-3 bg-amber-50/80 border-b border-stone-300">
-            <div className="text-[10px] tracking-[0.15em] uppercase text-amber-800 font-mono font-medium mb-2">Issues found</div>
-            <div className="space-y-1">
-              {issues.map((iss, i) => (
-                <div key={i} className="text-[11px] font-mono text-amber-900 flex items-start gap-2">
-                  <AlertCircle size={11} className="flex-shrink-0 mt-0.5 text-amber-600" />
-                  <span><span className="font-medium">{iss.ticker}</span> — {iss.type}: {iss.detail}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Heatmap grid */}
-        <div className="overflow-auto max-h-[70vh]">
-          <table className="w-full border-collapse" style={{ minWidth: allMonths.length * 44 + 90 }}>
-            <thead className="sticky top-0 z-10">
-              <tr className="bg-stone-100">
-                <th className="text-left text-[10px] font-mono text-stone-600 uppercase tracking-wider px-3 py-2 border-b border-r border-stone-300 sticky left-0 bg-stone-100 z-20 min-w-[80px]">Ticker</th>
-                {allMonths.map(m => (
-                  <th key={m} className="text-center text-[9px] font-mono text-stone-500 px-1 py-2 border-b border-stone-300 whitespace-nowrap min-w-[40px]">{formatMonthLabel(m)}</th>
-                ))}
-                <th className="text-center text-[10px] font-mono text-stone-600 px-2 py-2 border-b border-l border-stone-300 min-w-[36px]">Pts</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tickers.map(t => {
-                const months = tickerMonths[t];
-                const hasIssue = issueTickerSet.has(t);
-                return (
-                  <tr key={t} className={`${hasIssue ? 'bg-amber-50/50' : 'hover:bg-stone-50'} transition-colors`}>
-                    <td className={`text-[11px] font-mono px-3 py-1.5 border-b border-r border-stone-200 sticky left-0 z-10 ${hasIssue ? 'bg-amber-50/80 text-amber-900 font-medium' : 'bg-[#fdfbf6] text-stone-800'}`}>{t}</td>
-                    {allMonths.map(m => {
-                      const has = months.has(m);
-                      const inMajority = m >= majorityStart && m <= majorityEnd;
-                      // Cell color logic
-                      let cellClass = '';
-                      if (has) {
-                        cellClass = 'bg-emerald-200/70';  // has data
-                      } else if (inMajority) {
-                        cellClass = 'bg-red-200/60';  // expected but missing
-                      } else {
-                        cellClass = '';  // outside range, no data expected
-                      }
-                      return (
-                        <td key={m} className={`border-b border-stone-200 p-0`}>
-                          <div className={`w-full h-6 ${cellClass}`} title={`${t} · ${m} · ${has ? 'has data' : 'no data'}`} />
-                        </td>
-                      );
-                    })}
-                    <td className={`text-[10px] font-mono text-center px-2 py-1.5 border-b border-l border-stone-200 tabular-nums ${[...months].length !== majorityPointCount ? 'text-amber-700 font-medium' : 'text-stone-500'}`}>
-                      {[...months].length}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Legend */}
-        <div className="px-6 py-3 border-t border-stone-300 bg-stone-50/60 flex items-center gap-5 flex-wrap">
-          <div className="flex items-center gap-1.5 text-[10px] font-mono text-stone-600">
-            <div className="w-3 h-3 rounded-sm bg-emerald-200/70 border border-emerald-300" /> has data
-          </div>
-          <div className="flex items-center gap-1.5 text-[10px] font-mono text-stone-600">
-            <div className="w-3 h-3 rounded-sm bg-red-200/60 border border-red-300" /> expected, missing
-          </div>
-          <div className="flex items-center gap-1.5 text-[10px] font-mono text-stone-600">
-            <div className="w-3 h-3 rounded-sm bg-white border border-stone-300" /> outside range
-          </div>
-          <div className="ml-auto text-[10px] font-mono text-stone-500">
-            majority range: {formatMonthLabel(majorityStart)} → {formatMonthLabel(majorityEnd)} · {majorityPointCount} pts
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const formatMonthLabel = (ym) => {
-  if (!ym) return '?';
-  const [y, m] = ym.split('-');
-  const names = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  return `${names[parseInt(m) - 1]} ${y.slice(2)}`;
-};
-
-// ============================================================================
-// DATA MANAGER
-// ============================================================================
-
-const DataManager = ({ neededTickers, prices, onImport, onDelete }) => {
-  const [showAudit, setShowAudit] = useState(false);
-  const status = neededTickers.map(t => ({
-    ticker: t,
-    hasData: !!prices[t],
-    pointCount: prices[t] ? Object.keys(prices[t]).length : 0,
-    range: prices[t] ? (() => {
-      const dates = Object.keys(prices[t]).sort();
-      return `${formatDateNice(dates[0])} → ${formatDateNice(dates[dates.length - 1])}`;
-    })() : null
-  }));
-  status.sort((a, b) => {
-    if (a.hasData !== b.hasData) return a.hasData ? 1 : -1;
-    return a.ticker.localeCompare(b.ticker);
-  });
-  const haveCount = status.filter(s => s.hasData).length;
-  const missingCount = status.length - haveCount;
-
-  return (
-    <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden flex flex-col shadow-sm sticky top-6 max-h-[calc(100vh-3rem)]">
-      <div className="px-4 py-3 border-b border-stone-300 bg-stone-100/60">
-        <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono flex items-center gap-2">
-          Price data · {haveCount}/{neededTickers.length}
-          <button onClick={() => setShowAudit(true)} className="ml-auto p-1 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800 transition-colors" title="Audit price data">
-            <LayoutGrid size={12} />
-          </button>
-        </div>
-        {missingCount > 0 && <div className="text-[10px] font-mono text-amber-700 mt-1">{missingCount} missing — shown at top</div>}
-      </div>
-      {showAudit && <DataAuditModal prices={prices} onClose={() => setShowAudit(false)} />}
-      <div className="flex-1 overflow-y-auto min-h-0">
-        {status.map(s => (
-          <div key={s.ticker} className="group px-4 py-2 border-b border-stone-200/60 hover:bg-stone-100/40 flex items-center gap-3">
-            <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${s.hasData ? 'bg-emerald-600' : 'bg-amber-500'}`} />
-            <div className="flex-1 min-w-0">
-              <div className={`text-[12px] font-mono ${s.hasData ? 'text-stone-800' : 'text-stone-900 font-medium'}`}>{s.ticker}</div>
-              <div className="text-[10px] font-mono text-stone-500 truncate">
-                {s.hasData ? `${s.pointCount} pts · ${s.range}` : 'no data — needs import'}
-              </div>
-            </div>
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 flex-shrink-0">
-              {s.hasData && (
-                <button onClick={() => onDelete(s.ticker)} className="p-1 hover:bg-stone-200 rounded text-stone-400 hover:text-red-600">
-                  <Trash2 size={10} />
-                </button>
-              )}
-              <button onClick={() => onImport(s.ticker)}
-                className="text-[9px] tracking-[0.1em] uppercase font-mono text-stone-700 hover:text-amber-800 px-2 py-1 hover:bg-stone-200 rounded">
-                {s.hasData ? 'Replace' : 'Import'}
-              </button>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
@@ -1906,7 +1172,6 @@ export default function PortfolioTracker() {
   const [portfolios, setPortfolios] = useState([]);
   const [prices, setPrices] = useState({});
   const [editing, setEditing] = useState(null);
-  const [importing, setImporting] = useState(null);
   const [showBackup, setShowBackup] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [chartMode, setChartMode] = useState('absolute');
@@ -1916,29 +1181,16 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
-  const [darkMode, setDarkMode] = useState(() => {
-    try { return localStorage.getItem('theme') === 'dark'; } catch { return false; }
-  });
-  // Global "Merge dual-class" toggle. Defaults to ON. Persists across reloads.
+  const [darkMode, setDarkMode] = useState(false);
+  // Global "Merge dual-class" toggle. Defaults to ON.
   // When ON, the app displays each share-class pair (BRK.A/BRK.B, GOOG/GOOGL) as a single
   // canonical row; price-series math (computeSeries) is unaffected because dual-class shares
   // move proportionally so chain-link returns are identical either way.
-  const [mergeMode, setMergeMode] = useState(() => {
-    try {
-      const v = localStorage.getItem('mergeMode:v1');
-      if (v === null) return true;
-      return v === 'true';
-    } catch { return true; }
-  });
+  const [mergeMode, setMergeMode] = useState(true);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
-    try { localStorage.setItem('theme', darkMode ? 'dark' : 'light'); } catch {}
   }, [darkMode]);
-
-  useEffect(() => {
-    try { localStorage.setItem('mergeMode:v1', mergeMode ? 'true' : 'false'); } catch {}
-  }, [mergeMode]);
 
   const toggleHoldingDisabled = (portfolioId, ticker) => {
     setDisabledHoldings(prev => {
@@ -1961,8 +1213,8 @@ export default function PortfolioTracker() {
     return h;
   };
 
-  // Single source for the bundled default state. Used both for the "Save" hash comparison
-  // and for bootstrapping when localStorage is empty / on Reset.
+  // Single source for the bundled default state. Used on mount, for the "Save" hash comparison,
+  // and on Reset.
   const fetchDefaultData = async () => {
     try {
       const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
@@ -1977,32 +1229,14 @@ export default function PortfolioTracker() {
 
   useEffect(() => {
     (async () => {
-      await migrateToV8();
-      const { portfolios: stored, prices: storedPrices } = await loadAllStorage();
-      if (stored) {
-        // Existing local state — keep it untouched.
-        setPortfolios(stored);
-        setPrices(storedPrices);
-        // Still grab the default hash so the Save button reflects unsaved changes.
-        const def = await fetchDefaultData();
-        if (def?.portfolios) setDefaultDataHash(computeHash(def.portfolios, def.prices));
+      const def = await fetchDefaultData();
+      if (def?.portfolios) {
+        setPortfolios(def.portfolios);
+        setPrices(def.prices || {});
+        setDefaultDataHash(computeHash(def.portfolios, def.prices));
       } else {
-        // First-time visit / cleared storage — bootstrap from default-data.json so the user's
-        // Save target is what gets read back. DEFAULT_PORTFOLIOS stays as a hardcoded fallback
-        // for the case where the JSON is unreachable.
-        const def = await fetchDefaultData();
-        if (def?.portfolios) {
-          setPortfolios(def.portfolios);
-          setPrices(def.prices || {});
-          await savePortfolios(def.portfolios);
-          if (def.prices && Object.keys(def.prices).length > 0) {
-            await savePricesAll(def.prices);
-          }
-          setDefaultDataHash(computeHash(def.portfolios, def.prices));
-        } else {
-          setPortfolios(DEFAULT_PORTFOLIOS);
-          setPrices({});
-        }
+        setPortfolios(DEFAULT_PORTFOLIOS);
+        setPrices({});
       }
       setLoaded(true);
     })();
@@ -2019,7 +1253,7 @@ export default function PortfolioTracker() {
     if (saving) return;
     setSaving(true);
     try {
-      const data = { version: STORAGE_VERSION, exportedAt: new Date().toISOString(), portfolios, prices };
+      const data = { version: 'v8', exportedAt: new Date().toISOString(), portfolios, prices };
       const res = await fetch('/api/save-default', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -2035,8 +1269,6 @@ export default function PortfolioTracker() {
       setSaving(false);
     }
   };
-
-  useEffect(() => { if (loaded) savePortfolios(portfolios); }, [portfolios, loaded]);
 
   // A ticker is "needed" only if it's enabled (not eye-toggled-off) in at least one portfolio.
   // Considers BOTH current holdings and historical snapshots — a ticker that only ever appears in
@@ -2107,19 +1339,25 @@ export default function PortfolioTracker() {
     const visible = portfolios.filter(p => p.visible && portfolioSeries[p.id]);
     if (!visible.length) return [];
 
-    // vs-mode: a date is plottable only when the benchmark itself has a point for it. Each
-    // portfolio still appears only on dates where IT has a point — Recharts handles the gaps.
+    // Precompute date→value Map per visible portfolio once, so the per-row lookup is O(1).
+    // (Without this, `.find` in the row loop made building the table O(P·D²) — slow with many
+    // portfolios + dates.)
+    const byPortfolio = new Map(
+      visible.map(p => [p.id, new Map(portfolioSeries[p.id].map(d => [d.date, d.value]))])
+    );
+
+    // vs-mode: a date is plottable only when the benchmark itself has a point for it.
     if (effectiveMode === 'vs' && benchmarkPortfolio) {
-      const benchSeries = portfolioSeries[benchmarkPortfolio.id];
-      const benchByDate = new Map(benchSeries.map(d => [d.date, d.value]));
+      const benchByDate = byPortfolio.get(benchmarkPortfolio.id) ||
+        new Map(portfolioSeries[benchmarkPortfolio.id].map(d => [d.date, d.value]));
       const allDates = new Set();
-      visible.forEach(p => portfolioSeries[p.id].forEach(d => { if (benchByDate.has(d.date)) allDates.add(d.date); }));
+      visible.forEach(p => byPortfolio.get(p.id).forEach((_, date) => { if (benchByDate.has(date)) allDates.add(date); }));
       return [...allDates].sort().map(date => {
         const benchValue = benchByDate.get(date);
         const row = { date };
         visible.forEach(p => {
-          const point = portfolioSeries[p.id].find(d => d.date === date);
-          if (point && benchValue) row[p.id] = (point.value / benchValue) * 100;
+          const value = byPortfolio.get(p.id).get(date);
+          if (value !== undefined && benchValue) row[p.id] = (value / benchValue) * 100;
         });
         return row;
       });
@@ -2130,12 +1368,12 @@ export default function PortfolioTracker() {
     // adding a single chain-linked portfolio (Taras Guk with Q3 history) used to compress the
     // common date range and silently truncate the others' history.
     const allDates = new Set();
-    visible.forEach(p => portfolioSeries[p.id].forEach(d => allDates.add(d.date)));
+    visible.forEach(p => byPortfolio.get(p.id).forEach((_, date) => allDates.add(date)));
     return [...allDates].sort().map(date => {
       const row = { date };
       visible.forEach(p => {
-        const point = portfolioSeries[p.id].find(d => d.date === date);
-        if (point) row[p.id] = point.value;
+        const value = byPortfolio.get(p.id).get(date);
+        if (value !== undefined) row[p.id] = value;
       });
       return row;
     });
@@ -2146,17 +1384,10 @@ export default function PortfolioTracker() {
     if (!fullChartData.length) return fullChartData;
     // Slice by period (ALL keeps everything).
     let filtered = fullChartData;
-    if (chartPeriod !== 'ALL') {
-      const lastDate = new Date(fullChartData[fullChartData.length - 1].date);
-      let cutoff;
-      if (chartPeriod === '3M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 3); }
-      else if (chartPeriod === '6M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 6); }
-      else if (chartPeriod === 'YTD') { cutoff = new Date(lastDate.getFullYear(), 0, 1); }
-      else if (chartPeriod === '1Y') { cutoff = new Date(lastDate); cutoff.setFullYear(cutoff.getFullYear() - 1); }
-      if (cutoff) {
-        const sliced = fullChartData.filter(d => new Date(d.date) >= cutoff);
-        if (sliced.length >= 2) filtered = sliced;
-      }
+    const cutoff = periodCutoffIso(chartPeriod, fullChartData[fullChartData.length - 1].date);
+    if (cutoff) {
+      const sliced = fullChartData.filter(d => d.date >= cutoff);
+      if (sliced.length >= 2) filtered = sliced;
     }
     // Each portfolio is rebased to 100 at ITS OWN first available data point inside the slice,
     // not at the first row of the slice. This keeps every line starting at 100 even when
@@ -2198,16 +1429,11 @@ export default function PortfolioTracker() {
       }
     }
     if (!globalLast) return result;
-    let cutoff = null;
-    const lastDate = new Date(globalLast);
-    if (chartPeriod === '3M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 3); }
-    else if (chartPeriod === '6M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 6); }
-    else if (chartPeriod === 'YTD') { cutoff = new Date(lastDate.getFullYear(), 0, 1); }
-    else if (chartPeriod === '1Y') { cutoff = new Date(lastDate); cutoff.setFullYear(cutoff.getFullYear() - 1); }
+    const cutoff = periodCutoffIso(chartPeriod, globalLast);
 
     const slice = (series) => {
       if (!cutoff || !series?.length) return series || [];
-      const s = series.filter(d => new Date(d.date) >= cutoff);
+      const s = series.filter(d => d.date >= cutoff);
       return s.length >= 2 ? s : series; // fall back to full series if the slice is too thin
     };
 
@@ -2291,16 +1517,8 @@ export default function PortfolioTracker() {
     const scope = investorPortfolios.filter(p => p.holdings.length > 0);
     isolatePortfolio(id, scope);
   };
-  const startNew = () => setEditing({
-    id: `custom-${Date.now()}`, name: '', subtitle: '', kind: 'custom',
-    color: PALETTE[(portfolios.length + 1) % PALETTE.length], visible: true, locked: false, holdings: null
-  });
   const saveEdit = (updated) => {
-    if (portfolios.find(p => p.id === updated.id)) {
-      setPortfolios(portfolios.map(p => p.id === updated.id ? updated : p));
-    } else {
-      setPortfolios([...portfolios, updated]);
-    }
+    setPortfolios(portfolios.map(p => p.id === updated.id ? updated : p));
     setEditing(null);
   };
   const deletePortfolio = (id) => {
@@ -2309,33 +1527,9 @@ export default function PortfolioTracker() {
     return true;
   };
 
-  const handleImportPrice = async (ticker, data) => {
-    const upper = ticker.toUpperCase();
-    const newPrices = { ...prices, [upper]: data };
-    setPrices(newPrices);
-    await savePricesAll(newPrices);
-    setImporting(null);
-  };
-
-  const handleDeletePrice = async (ticker) => {
-    if (!confirm(`Delete stored prices for ${ticker}?`)) return;
-    const upper = ticker.toUpperCase();
-    const newPrices = { ...prices };
-    delete newPrices[upper];
-    setPrices(newPrices);
-    await savePricesAll(newPrices);
-  };
-
-  const handleRestore = async (data, onProgress) => {
-    onProgress?.(0, 2, 'Saving portfolios...');
+  const handleRestore = (data) => {
     setPortfolios(data.portfolios);
-    await savePortfolios(data.portfolios);
-
-    onProgress?.(1, 2, `Saving ${Object.keys(data.prices).length} tickers...`);
     setPrices(data.prices);
-    await savePricesAll(data.prices);
-
-    onProgress?.(2, 2, 'Done');
   };
 
   // Reload everything (portfolios + prices) from the bundled default-data.json — the same source
@@ -2358,7 +1552,6 @@ export default function PortfolioTracker() {
     e.dataTransfer.dropEffect = 'move';
     if (id !== draggedId) setDragOverId(id);
   };
-  const handleDragLeave = () => {};
   const handleDrop = (e, targetId) => {
     e.preventDefault();
     if (!draggedId || draggedId === targetId) {
@@ -2451,20 +1644,6 @@ export default function PortfolioTracker() {
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
                   <Save size={11} /> Backup
                 </button>
-                <button onClick={() => setImporting('')}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
-                  <Upload size={11} /> Import prices
-                </button>
-                <button onClick={startNew}
-                  className="flex items-center gap-2 px-4 py-2 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-colors"
-                  style={{
-                    backgroundColor: darkMode ? '#fafaf9' : '#1c1917',
-                    color: darkMode ? '#1c1917' : '#fafaf9'
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = darkMode ? '#e7e5e4' : '#292524'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = darkMode ? '#fafaf9' : '#1c1917'; }}>
-                  <Plus size={12} /> New portfolio
-                </button>
                 <button onClick={() => setDarkMode(!darkMode)}
                   className="p-2 text-stone-500 hover:text-stone-900 rounded border border-stone-300 hover:border-stone-700 bg-white/60 transition-colors"
                   title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
@@ -2475,7 +1654,7 @@ export default function PortfolioTracker() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-6 items-start">
+        <div className="grid grid-cols-1 gap-6 items-start">
           <div className="space-y-6">
             <div className="bg-white/70 border border-stone-300 rounded-lg shadow-sm overflow-hidden">
               <div className="px-5 py-3 border-b border-stone-200 flex items-center justify-between flex-wrap gap-3">
@@ -2544,7 +1723,7 @@ export default function PortfolioTracker() {
                   <div className="h-full flex items-center justify-center text-stone-500 text-sm font-mono py-32 text-center">
                     <div>
                       <div className="mb-2">No data to chart yet.</div>
-                      <div className="text-[10px] text-stone-400">Import prices for at least one ticker →</div>
+                      <div className="text-[10px] text-stone-400">Bundled price data is empty or failed to load.</div>
                     </div>
                   </div>
                 ) : (
@@ -2608,19 +1787,19 @@ export default function PortfolioTracker() {
               </div>
               <div>
                 {investorPortfolios.map(p => (
-                  <PortfolioRow key={p.id} portfolio={p} performance={portfolioSeries[p.id]}
+                  <PortfolioRow key={p.id} portfolio={p}
                     pctReturn={displayPctByPortfolio[p.id]}
                     missingTickers={getMissingTickers(p)} coveragePct={getCoveragePct(p)}
                     disabledSet={disabledHoldings[p.id]}
                     onToggle={handleListToggle} onEdit={setEditing}
                     onDragStart={handleDragStart} onDragOver={handleDragOver}
-                    onDragLeave={handleDragLeave} onDrop={handleDrop} onDragEnd={handleDragEnd}
+                    onDrop={handleDrop} onDragEnd={handleDragEnd}
                     isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id}
                     mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
                   <div className="px-4 py-6 text-center text-[11px] font-mono text-stone-500">
-                    No investor portfolios yet — click "+ New portfolio" above
+                    No investor portfolios in the bundled data
                   </div>
                 )}
               </div>
@@ -2629,12 +1808,10 @@ export default function PortfolioTracker() {
             <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} mergeMode={mergeMode} setMergeMode={setMergeMode} />
           </div>
 
-          <DataManager neededTickers={neededTickers} prices={prices}
-            onImport={(ticker) => setImporting(ticker || '')} onDelete={handleDeletePrice} />
         </div>
 
         <div className="mt-6 text-[10px] text-stone-500 font-mono leading-relaxed max-w-3xl">
-          Bring-your-own data · stored locally · partial coverage OK · use Backup regularly · drag portfolios to reorder · not investment advice
+          Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
         </div>
       </div>
 
@@ -2642,8 +1819,7 @@ export default function PortfolioTracker() {
         onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
         disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled}
         prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} mergeMode={mergeMode} setMergeMode={setMergeMode} />}
-      {importing !== null && <ImportModal tickerHint={importing} onSave={handleImportPrice} onClose={() => setImporting(null)} />}
-      {showBackup && <BackupModal portfolios={portfolios} prices={prices} onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
+      {showBackup && <BackupModal onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>
   );
 }
