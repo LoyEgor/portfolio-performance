@@ -57,6 +57,35 @@ const normalizeTicker = (t, mergeMode) => {
   return t;
 };
 
+// Display-layer dual-class grouping. Returns same shape as input + per-row meta:
+//   { ticker, weight, mergedFrom: ['BRK.A','BRK.B'] }  // mergedFrom set only when > 1 origin
+// When mergeMode === false, returns the original list as-is with no meta.
+const mergeHoldingsDisplay = (holdings, mergeMode) => {
+  if (!mergeMode || !holdings?.length) return (holdings || []).map(h => ({ ...h }));
+  const groups = new Map();
+  const order = [];
+  for (const h of holdings) {
+    const orig = String(h.ticker || '').trim().toUpperCase();
+    if (!orig) continue;
+    const canon = normalizeTicker(orig, true);
+    if (!groups.has(canon)) {
+      groups.set(canon, { ticker: canon, weight: 0, mergedFrom: [], firstIdx: order.length });
+      order.push(canon);
+    }
+    const g = groups.get(canon);
+    g.weight += parseFloat(h.weight) || 0;
+    if (!g.mergedFrom.includes(orig)) g.mergedFrom.push(orig);
+  }
+  return order.map(c => {
+    const g = groups.get(c);
+    return {
+      ticker: g.ticker,
+      weight: Math.round(g.weight * 1e6) / 1e6,
+      mergedFrom: g.mergedFrom.length > 1 ? [...g.mergedFrom].sort() : null,
+    };
+  });
+};
+
 // ============================================================================
 // PRICE PARSER
 // ============================================================================
@@ -485,13 +514,22 @@ const buildLinks = (ticker) => {
 // ============================================================================
 
 const PortfolioRow = ({
-  portfolio, onToggle, onEdit, performance, missingTickers, coveragePct, disabledSet,
-  onDragStart, onDragOver, onDragLeave, onDrop, onDragEnd, isDragging, isDropTarget
+  portfolio, onToggle, onEdit, performance, pctReturn, missingTickers, coveragePct, disabledSet,
+  onDragStart, onDragOver, onDragLeave, onDrop, onDragEnd, isDragging, isDropTarget,
+  mergeMode
 }) => {
-  const lastValue = performance?.[performance.length - 1]?.value;
-  const pctReturn = lastValue ? lastValue - 100 : null;
-  const positive = pctReturn !== null && pctReturn >= 0;
-  const stockCount = portfolio.holdings?.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).length || 0;
+  // `pctReturn` is passed in from the parent (computed for the current chart period + mode).
+  // Treat undefined as "no number yet", but null/0 as legitimate values.
+  const hasReturn = pctReturn !== null && pctReturn !== undefined && Number.isFinite(pctReturn);
+  const positive = hasReturn && pctReturn >= 0;
+  // Count active holdings; when mergeMode is ON, count each dual-class pair as a single issuer.
+  const stockCount = (() => {
+    const active = (portfolio.holdings || []).filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase()));
+    if (!mergeMode) return active.length;
+    const seen = new Set();
+    for (const h of active) seen.add(normalizeTicker(h.ticker.trim().toUpperCase(), true));
+    return seen.size;
+  })();
   return (
     <div
       draggable
@@ -542,7 +580,7 @@ const PortfolioRow = ({
           )}
         </div>
         <div className="flex items-center gap-3">
-          {pctReturn !== null && (
+          {hasReturn && (
             <button
               onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }}
               title="Edit portfolio"
@@ -552,8 +590,8 @@ const PortfolioRow = ({
               </div>
             </button>
           )}
-          {!performance && stockCount === 0 && <div className="text-[10px] text-stone-400 italic font-mono">empty</div>}
-          {!performance && stockCount > 0 && <div className="text-[10px] text-stone-400 italic font-mono">no data</div>}
+          {!hasReturn && stockCount === 0 && <div className="text-[10px] text-stone-400 italic font-mono">empty</div>}
+          {!hasReturn && stockCount > 0 && <div className="text-[10px] text-stone-400 italic font-mono">no data</div>}
           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
             <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800" title="Edit portfolio">
               <Pencil size={12} />
@@ -575,7 +613,7 @@ const asOfLabel = (iso) => {
   return `Q${q} '${String(y).slice(2)}`;
 };
 
-const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio }) => {
+const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode }) => {
   const isNew = !portfolio?.holdings;
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
@@ -597,18 +635,26 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
 
   // Diff vs previous quarter — for each visible holding, compute Δ weight; also collect tickers that
   // existed last quarter but disappeared (sold). For the earliest snapshot (Q1) there is no prev.
+  // When mergeMode is ON, dual-class deltas net out (e.g. selling all GOOGL and buying the same
+  // dollar amount of GOOG → net delta 0 for the merged "GOOGL" row).
   const allSnapshotsForDiff = [...historySnapshots, { asOf: 'current', holdings }];
   const currentSnapIdx = isReadonly ? viewIdx : historySnapshots.length;
   const prevSnap = currentSnapIdx > 0 ? allSnapshotsForDiff[currentSnapIdx - 1] : null;
+  // Merge-aware prev → weight map; key is normalized canonical when mergeMode is ON.
   const prevByTicker = {};
-  prevSnap?.holdings.forEach(h => {
-    const t = h.ticker.trim().toUpperCase();
-    if (t) prevByTicker[t] = parseFloat(h.weight) || 0;
-  });
+  if (prevSnap) {
+    const prevMerged = mergeHoldingsDisplay(prevSnap.holdings, mergeMode);
+    prevMerged.forEach(h => {
+      const t = h.ticker.trim().toUpperCase();
+      if (t) prevByTicker[t] = parseFloat(h.weight) || 0;
+    });
+  }
+  // For the rendered row list and "sold this quarter" detection, also work on the merged view.
+  const mergedDisplayed = mergeHoldingsDisplay(displayedHoldings, mergeMode);
   const soldThisQuarter = prevSnap
-    ? prevSnap.holdings
-        .map(h => ({ ticker: h.ticker.trim().toUpperCase(), weight: parseFloat(h.weight) || 0 }))
-        .filter(p => p.ticker && !displayedHoldings.some(d => d.ticker.trim().toUpperCase() === p.ticker))
+    ? mergeHoldingsDisplay(prevSnap.holdings, mergeMode)
+        .map(h => ({ ticker: h.ticker.trim().toUpperCase(), weight: parseFloat(h.weight) || 0, mergedFrom: h.mergedFrom }))
+        .filter(p => p.ticker && !mergedDisplayed.some(d => d.ticker.trim().toUpperCase() === p.ticker))
     : [];
 
   // Mini-chart: edited current holdings (with eye toggle applied) vs VOO over the available history.
@@ -790,6 +836,12 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
               <div className="flex items-center gap-2 flex-wrap">
                 <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono">Holdings</label>
+                <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none"
+                  title="Display BRK.A/BRK.B, GOOG/GOOGL etc. as a single ticker. Merged rows are read-only — uncheck to edit individual share classes.">
+                  <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
+                    className="accent-amber-700" />
+                  <span>Merge dual-class</span>
+                </label>
                 {historySnapshots.length > 0 && (
                   <div className="flex items-center gap-1">
                     {historySnapshots.map((s, idx) => (
@@ -833,17 +885,24 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
             <div className="space-y-1.5">
               {[
-                ...displayedHoldings.map((h, i) => ({ kind: 'live', h, i })),
-                ...soldThisQuarter.map(s => ({ kind: 'sold', h: { ticker: s.ticker, weight: 0 }, prevWeight: s.weight }))
+                ...mergedDisplayed.map((h, i) => ({ kind: 'live', h, i })),
+                ...soldThisQuarter.map(s => ({ kind: 'sold', h: { ticker: s.ticker, weight: 0, mergedFrom: s.mergedFrom }, prevWeight: s.weight }))
               ].map((row, rowKey) => {
                 const isSold = row.kind === 'sold';
                 const h = row.h;
                 const w = parseFloat(h.weight) || 0;
                 const ticker = h.ticker.trim().toUpperCase();
+                const isMerged = Array.isArray(h.mergedFrom) && h.mergedFrom.length > 1;
+                // A merged display row aggregates two underlying entries — controls are disabled
+                // (user must turn off Merge dual-class to edit individual classes).
+                const lockedByMerge = isMerged && mergeMode;
                 // Eye toggle is global across all snapshots (transient, never saved). A ticker may
                 // only appear in earlier quarters — let the user disable/enable it from any view,
                 // including the sold/read-only states.
-                const isDisabled = ticker && disabledSet?.has(ticker);
+                // When merged, treat the row as disabled iff EVERY original class is disabled.
+                const isDisabled = isMerged
+                  ? h.mergedFrom.every(o => disabledSet?.has(o))
+                  : (ticker && disabledSet?.has(ticker));
                 // For visual diff bar, normalize against the larger of the two snapshots' totals so
                 // Δ segments stay consistent across rows.
                 const prevW = isSold ? row.prevWeight : (ticker ? prevByTicker[ticker] : undefined);
@@ -864,7 +923,20 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 return (
                   <div key={rowKey} className={`flex items-center gap-2 ${isDisabled ? 'opacity-40' : ''} ${isSold ? 'opacity-60' : ''}`}>
                     {onToggleDisabled && (ticker ? (
-                      <button onClick={() => onToggleDisabled(portfolio.id, ticker)}
+                      <button
+                        onClick={() => {
+                          if (lockedByMerge) {
+                            // Toggle every original class in lockstep — anyOn → disable all; allOff → enable all.
+                            const anyOn = h.mergedFrom.some(o => !disabledSet?.has(o));
+                            for (const o of h.mergedFrom) {
+                              const isOff = disabledSet?.has(o);
+                              if (anyOn && !isOff) onToggleDisabled(portfolio.id, o);
+                              if (!anyOn && isOff) onToggleDisabled(portfolio.id, o);
+                            }
+                          } else {
+                            onToggleDisabled(portfolio.id, ticker);
+                          }
+                        }}
                         className="w-[29px] h-[29px] flex-shrink-0 flex items-center justify-center text-stone-400 hover:text-stone-700"
                         title={isDisabled ? 'Enable holding' : 'Disable holding (excluded from chart)'}>
                         {isDisabled ? <EyeOff size={13} /> : <Eye size={13} />}
@@ -896,17 +968,27 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                         <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
                           style={{ width: `${prevPct}%`, background: 'var(--danger)', opacity: 0.25 }} />
                       )}
-                      <input value={h.ticker} readOnly={isReadonly || isSold}
-                        onChange={(e) => !isReadonly && !isSold && updateHolding(row.i, 'ticker', e.target.value)} placeholder="TICKER"
-                        className={`relative w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'} ${(isReadonly || isSold) ? 'cursor-default' : ''}`} />
+                      <div className="relative flex items-center">
+                        <input value={h.ticker} readOnly={isReadonly || isSold || lockedByMerge}
+                          onChange={(e) => !isReadonly && !isSold && !lockedByMerge && updateHolding(row.i, 'ticker', e.target.value)} placeholder="TICKER"
+                          title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined}
+                          className={`relative flex-1 w-full bg-transparent px-3 py-2 text-sm font-mono uppercase focus:outline-none ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'} ${(isReadonly || isSold || lockedByMerge) ? 'cursor-default' : ''}`} />
+                        {isMerged && (
+                          <span className="relative mr-2 text-[9px] tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm bg-amber-100 text-amber-800 border border-amber-300 whitespace-nowrap"
+                            title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : 'Merged display row'}>
+                            {h.mergedFrom.join(' + ')}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                    <input type="number" step="0.01" value={h.weight} readOnly={isReadonly || isSold}
-                      onChange={(e) => !isReadonly && !isSold && updateHolding(row.i, 'weight', e.target.value)} placeholder="0.00"
-                      className={`w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none ${isSold ? 'text-stone-500' : 'text-stone-900'} ${(isReadonly || isSold) ? 'cursor-default' : ''}`} />
+                    <input type="number" step="0.01" value={h.weight} readOnly={isReadonly || isSold || lockedByMerge}
+                      onChange={(e) => !isReadonly && !isSold && !lockedByMerge && updateHolding(row.i, 'weight', e.target.value)} placeholder="0.00"
+                      title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined}
+                      className={`w-24 bg-white border border-stone-300 rounded px-3 py-2 text-sm font-mono text-right tabular-nums focus:border-stone-700 focus:outline-none ${isSold ? 'text-stone-500' : 'text-stone-900'} ${(isReadonly || isSold || lockedByMerge) ? 'cursor-default' : ''}`} />
                     <span className="text-stone-500 text-xs font-mono">%</span>
-                    {(!isReadonly && !isSold)
+                    {(!isReadonly && !isSold && !lockedByMerge)
                       ? <button onClick={() => removeHolding(row.i)} className="p-1.5 text-stone-400 hover:text-red-600"><X size={14} /></button>
-                      : <div className="w-[26px] flex-shrink-0" />}
+                      : <div className="w-[26px] flex-shrink-0" title={lockedByMerge ? 'Disable Merge dual-class to edit individual share classes.' : undefined} />}
                   </div>
                 );
               })}
@@ -1484,8 +1566,7 @@ const DataManager = ({ neededTickers, prices, onImport, onDelete }) => {
 // CONSENSUS PANEL — toggleable portfolios + merge dual-class + insights
 // ============================================================================
 
-const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate }) => {
-  const [mergeMode, setMergeMode] = useState(true);
+const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate, mergeMode, setMergeMode }) => {
   const [showMergedDetails, setShowMergedDetails] = useState(false);
   // 'held' = aggregate current weights (consensus by holdings).
   // 'bought' = aggregate positive Δ vs the last history snapshot (consensus by recent buying).
@@ -1838,11 +1919,26 @@ export default function PortfolioTracker() {
   const [darkMode, setDarkMode] = useState(() => {
     try { return localStorage.getItem('theme') === 'dark'; } catch { return false; }
   });
+  // Global "Merge dual-class" toggle. Defaults to ON. Persists across reloads.
+  // When ON, the app displays each share-class pair (BRK.A/BRK.B, GOOG/GOOGL) as a single
+  // canonical row; price-series math (computeSeries) is unaffected because dual-class shares
+  // move proportionally so chain-link returns are identical either way.
+  const [mergeMode, setMergeMode] = useState(() => {
+    try {
+      const v = localStorage.getItem('mergeMode:v1');
+      if (v === null) return true;
+      return v === 'true';
+    } catch { return true; }
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
     try { localStorage.setItem('theme', darkMode ? 'dark' : 'light'); } catch {}
   }, [darkMode]);
+
+  useEffect(() => {
+    try { localStorage.setItem('mergeMode:v1', mergeMode ? 'true' : 'false'); } catch {}
+  }, [mergeMode]);
 
   const toggleHoldingDisabled = (portfolioId, ticker) => {
     setDisabledHoldings(prev => {
@@ -2085,6 +2181,56 @@ export default function PortfolioTracker() {
       return newRow;
     });
   }, [fullChartData, chartPeriod]);
+
+  // Per-portfolio return for the CURRENT chart period and mode. Used by PortfolioRow so the
+  // % shown next to each name matches what the chart line shows (e.g. when YTD is selected,
+  // the row shows YTD return; when `vs VOO` is active, it shows the outperformance vs VOO).
+  // Computed for ALL portfolios (visible and not) so hidden ones still show a number.
+  const displayPctByPortfolio = useMemo(() => {
+    const result = {};
+    // Find the latest date across any series — anchors the period cutoff.
+    let globalLast = null;
+    for (const k in portfolioSeries) {
+      const arr = portfolioSeries[k];
+      if (arr?.length) {
+        const lastD = arr[arr.length - 1].date;
+        if (!globalLast || lastD > globalLast) globalLast = lastD;
+      }
+    }
+    if (!globalLast) return result;
+    let cutoff = null;
+    const lastDate = new Date(globalLast);
+    if (chartPeriod === '3M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 3); }
+    else if (chartPeriod === '6M') { cutoff = new Date(lastDate); cutoff.setMonth(cutoff.getMonth() - 6); }
+    else if (chartPeriod === 'YTD') { cutoff = new Date(lastDate.getFullYear(), 0, 1); }
+    else if (chartPeriod === '1Y') { cutoff = new Date(lastDate); cutoff.setFullYear(cutoff.getFullYear() - 1); }
+
+    const slice = (series) => {
+      if (!cutoff || !series?.length) return series || [];
+      const s = series.filter(d => new Date(d.date) >= cutoff);
+      return s.length >= 2 ? s : series; // fall back to full series if the slice is too thin
+    };
+
+    if (effectiveMode === 'vs' && benchmarkPortfolio) {
+      const benchSliced = slice(portfolioSeries[benchmarkPortfolio.id]);
+      const benchByDate = new Map(benchSliced.map(d => [d.date, d.value]));
+      for (const [pid, series] of Object.entries(portfolioSeries)) {
+        const sliced = slice(series);
+        const ratios = sliced
+          .map(d => benchByDate.has(d.date) ? d.value / benchByDate.get(d.date) : null)
+          .filter(r => r !== null);
+        if (ratios.length < 2 || ratios[0] === 0) continue;
+        result[pid] = (ratios[ratios.length - 1] / ratios[0]) * 100 - 100;
+      }
+    } else {
+      for (const [pid, series] of Object.entries(portfolioSeries)) {
+        const sliced = slice(series);
+        if (sliced.length < 2 || sliced[0].value === 0) continue;
+        result[pid] = (sliced[sliced.length - 1].value / sliced[0].value) * 100 - 100;
+      }
+    }
+    return result;
+  }, [portfolioSeries, chartPeriod, effectiveMode, benchmarkPortfolio]);
 
   const getMissingTickers = (p) => getActiveHoldings(p, disabledHoldings)
     .filter(h => !prices[h.ticker.toUpperCase()]).map(h => h.ticker);
@@ -2463,12 +2609,14 @@ export default function PortfolioTracker() {
               <div>
                 {investorPortfolios.map(p => (
                   <PortfolioRow key={p.id} portfolio={p} performance={portfolioSeries[p.id]}
+                    pctReturn={displayPctByPortfolio[p.id]}
                     missingTickers={getMissingTickers(p)} coveragePct={getCoveragePct(p)}
                     disabledSet={disabledHoldings[p.id]}
                     onToggle={handleListToggle} onEdit={setEditing}
                     onDragStart={handleDragStart} onDragOver={handleDragOver}
                     onDragLeave={handleDragLeave} onDrop={handleDrop} onDragEnd={handleDragEnd}
-                    isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id} />
+                    isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id}
+                    mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
                   <div className="px-4 py-6 text-center text-[11px] font-mono text-stone-500">
@@ -2478,7 +2626,7 @@ export default function PortfolioTracker() {
               </div>
             </div>
 
-            <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} />
+            <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings} onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} mergeMode={mergeMode} setMergeMode={setMergeMode} />
           </div>
 
           <DataManager neededTickers={neededTickers} prices={prices}
@@ -2493,7 +2641,7 @@ export default function PortfolioTracker() {
       {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}
         onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
         disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled}
-        prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} />}
+        prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} mergeMode={mergeMode} setMergeMode={setMergeMode} />}
       {importing !== null && <ImportModal tickerHint={importing} onSave={handleImportPrice} onClose={() => setImporting(null)} />}
       {showBackup && <BackupModal portfolios={portfolios} prices={prices} onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>
