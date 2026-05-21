@@ -1,0 +1,206 @@
+{
+  "id": "valley-forge",
+  "holdings": [
+    {
+      "ticker": "FICO",
+      "weight": 24.33
+    },
+    {
+      "ticker": "SPGI",
+      "weight": 22.15
+    },
+    {
+      "ticker": "MA",
+      "weight": 22.02
+    },
+    {
+      "ticker": "MCO",
+      "weight": 17.02
+    },
+    {
+      "ticker": "ASML",
+      "weight": 6.69
+    },
+    {
+      "ticker": "V",
+      "weight": 5.36
+    },
+    {
+      "ticker": "INTU",
+      "weight": 2.43
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 32.29
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 20.32
+        },
+        {
+          "ticker": "MA",
+          "weight": 18.54
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.94
+        },
+        {
+          "ticker": "V",
+          "weight": 7.28
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.16
+        },
+        {
+          "ticker": "ASML",
+          "weight": 1.9
+        },
+        {
+          "ticker": "EFX",
+          "weight": 0.8
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 0.77
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 31.04
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 20.44
+        },
+        {
+          "ticker": "MA",
+          "weight": 18.43
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.56
+        },
+        {
+          "ticker": "V",
+          "weight": 7.15
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.58
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.22
+        },
+        {
+          "ticker": "EFX",
+          "weight": 0.82
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 0.76
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 27.66
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 20.55
+        },
+        {
+          "ticker": "MA",
+          "weight": 20.32
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.06
+        },
+        {
+          "ticker": "V",
+          "weight": 7.49
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.29
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.93
+        },
+        {
+          "ticker": "EFX",
+          "weight": 0.89
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 0.81
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 29.49
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 20.83
+        },
+        {
+          "ticker": "MA",
+          "weight": 19.25
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.25
+        },
+        {
+          "ticker": "V",
+          "weight": 7.29
+        },
+        {
+          "ticker": "INTU",
+          "weight": 3.32
+        },
+        {
+          "ticker": "ASML",
+          "weight": 3.06
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 0.79
+        },
+        {
+          "ticker": "EFX",
+          "weight": 0.72
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=VFC",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777225852884"
+  }
+}

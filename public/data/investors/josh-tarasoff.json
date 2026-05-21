@@ -1,0 +1,198 @@
+{
+  "id": "josh-tarasoff",
+  "holdings": [
+    {
+      "ticker": "AMZN",
+      "weight": 18.91
+    },
+    {
+      "ticker": "BN",
+      "weight": 16.37
+    },
+    {
+      "ticker": "BRK.A",
+      "weight": 13.14
+    },
+    {
+      "ticker": "MKL",
+      "weight": 12.54
+    },
+    {
+      "ticker": "SGOV",
+      "weight": 11.2
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 8.36
+    },
+    {
+      "ticker": "NFLX",
+      "weight": 7.8
+    },
+    {
+      "ticker": "TSLA",
+      "weight": 5.91
+    },
+    {
+      "ticker": "TRUP",
+      "weight": 5.77
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 21.34
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 18.48
+        },
+        {
+          "ticker": "BN",
+          "weight": 17.52
+        },
+        {
+          "ticker": "MKL",
+          "weight": 14.5
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 11.69
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 7.26
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.6
+        },
+        {
+          "ticker": "BUR",
+          "weight": 3.61
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 20.03
+        },
+        {
+          "ticker": "BAM",
+          "weight": 16.57
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 13.74
+        },
+        {
+          "ticker": "BUR",
+          "weight": 12.86
+        },
+        {
+          "ticker": "MKL",
+          "weight": 12.62
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 11.9
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 7.09
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.19
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 20.61
+        },
+        {
+          "ticker": "BN",
+          "weight": 19.04
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 14.73
+        },
+        {
+          "ticker": "MKL",
+          "weight": 12.51
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 10.29
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 9.64
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.43
+        },
+        {
+          "ticker": "BUR",
+          "weight": 5.75
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 21.3
+        },
+        {
+          "ticker": "BN",
+          "weight": 18.93
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 14.76
+        },
+        {
+          "ticker": "MKL",
+          "weight": 14.37
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.24
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 8.47
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 8.15
+        },
+        {
+          "ticker": "BUR",
+          "weight": 4.78
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GBP",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777150376264"
+  }
+}

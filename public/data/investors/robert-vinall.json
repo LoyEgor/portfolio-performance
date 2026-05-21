@@ -1,0 +1,258 @@
+{
+  "id": "robert-vinall",
+  "holdings": [
+    {
+      "ticker": "CVNA",
+      "weight": 31.83
+    },
+    {
+      "ticker": "META",
+      "weight": 22.31
+    },
+    {
+      "ticker": "CACC",
+      "weight": 14.11
+    },
+    {
+      "ticker": "IBKR",
+      "weight": 13.69
+    },
+    {
+      "ticker": "HTHT",
+      "weight": 7.52
+    },
+    {
+      "ticker": "YUMC",
+      "weight": 5.5
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 2.52
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 2.52
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 25.26
+        },
+        {
+          "ticker": "META",
+          "weight": 18.19
+        },
+        {
+          "ticker": "CACC",
+          "weight": 14.7
+        },
+        {
+          "ticker": "WIX",
+          "weight": 12.19
+        },
+        {
+          "ticker": "PDD",
+          "weight": 8.77
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.77
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 5.66
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 5.39
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 0.95
+        },
+        {
+          "ticker": "PAYC",
+          "weight": 0.6
+        },
+        {
+          "ticker": "DE",
+          "weight": 0.52
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 31.84
+        },
+        {
+          "ticker": "META",
+          "weight": 19.54
+        },
+        {
+          "ticker": "CACC",
+          "weight": 12.16
+        },
+        {
+          "ticker": "WIX",
+          "weight": 9.91
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 8.72
+        },
+        {
+          "ticker": "PDD",
+          "weight": 6.5
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 4.14
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 4.07
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 1.06
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.06
+        },
+        {
+          "ticker": "PAYC",
+          "weight": 0.53
+        },
+        {
+          "ticker": "DE",
+          "weight": 0.47
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 30.75
+        },
+        {
+          "ticker": "META",
+          "weight": 18.78
+        },
+        {
+          "ticker": "CACC",
+          "weight": 11.15
+        },
+        {
+          "ticker": "WIX",
+          "weight": 10.24
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 10.07
+        },
+        {
+          "ticker": "PDD",
+          "weight": 7.29
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 4.32
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 3.49
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.45
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 1.09
+        },
+        {
+          "ticker": "CRM",
+          "weight": 0.48
+        },
+        {
+          "ticker": "PAYC",
+          "weight": 0.47
+        },
+        {
+          "ticker": "DE",
+          "weight": 0.42
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 29.8
+        },
+        {
+          "ticker": "META",
+          "weight": 20.95
+        },
+        {
+          "ticker": "CACC",
+          "weight": 13.47
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 11.27
+        },
+        {
+          "ticker": "WIX",
+          "weight": 7.62
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 6.61
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 4.94
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.37
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 1.29
+        },
+        {
+          "ticker": "CRM",
+          "weight": 0.68
+        },
+        {
+          "ticker": "DE",
+          "weight": 0.54
+        },
+        {
+          "ticker": "PAYC",
+          "weight": 0.46
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=RV",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777225955634"
+  }
+}

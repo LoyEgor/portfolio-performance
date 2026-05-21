@@ -1,0 +1,418 @@
+{
+  "id": "greenhaven",
+  "holdings": [
+    {
+      "ticker": "GM",
+      "weight": 15.53
+    },
+    {
+      "ticker": "LEN",
+      "weight": 15.37
+    },
+    {
+      "ticker": "TOL",
+      "weight": 12.82
+    },
+    {
+      "ticker": "PHM",
+      "weight": 10.76
+    },
+    {
+      "ticker": "DHI",
+      "weight": 7.92
+    },
+    {
+      "ticker": "OSK",
+      "weight": 6.2
+    },
+    {
+      "ticker": "ARW",
+      "weight": 4.53
+    },
+    {
+      "ticker": "AVT",
+      "weight": 4.02
+    },
+    {
+      "ticker": "BAX",
+      "weight": 4
+    },
+    {
+      "ticker": "SLB",
+      "weight": 3.99
+    },
+    {
+      "ticker": "ICLR",
+      "weight": 3.69
+    },
+    {
+      "ticker": "LEA",
+      "weight": 3.42
+    },
+    {
+      "ticker": "AVTR",
+      "weight": 2.95
+    },
+    {
+      "ticker": "NOV",
+      "weight": 1.8
+    },
+    {
+      "ticker": "VBIL",
+      "weight": 1.51
+    },
+    {
+      "ticker": "MTH",
+      "weight": 1.49
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 18.82
+        },
+        {
+          "ticker": "GM",
+          "weight": 17.78
+        },
+        {
+          "ticker": "LEN",
+          "weight": 17.23
+        },
+        {
+          "ticker": "TOL",
+          "weight": 9.34
+        },
+        {
+          "ticker": "PHM",
+          "weight": 9.14
+        },
+        {
+          "ticker": "DHI",
+          "weight": 7.42
+        },
+        {
+          "ticker": "OSK",
+          "weight": 3.82
+        },
+        {
+          "ticker": "MRP",
+          "weight": 3.32
+        },
+        {
+          "ticker": "ARW",
+          "weight": 3.16
+        },
+        {
+          "ticker": "AVT",
+          "weight": 3.03
+        },
+        {
+          "ticker": "LEA",
+          "weight": 2.58
+        },
+        {
+          "ticker": "MTH",
+          "weight": 1.62
+        },
+        {
+          "ticker": "NOV",
+          "weight": 0.99
+        },
+        {
+          "ticker": "TEX",
+          "weight": 0.9
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 0.63
+        },
+        {
+          "ticker": "G",
+          "weight": 0.12
+        },
+        {
+          "ticker": "CRH",
+          "weight": 0.04
+        },
+        {
+          "ticker": "GS",
+          "weight": 0.02
+        },
+        {
+          "ticker": "A",
+          "weight": 0.02
+        },
+        {
+          "ticker": "MS",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 20.51
+        },
+        {
+          "ticker": "GM",
+          "weight": 17.33
+        },
+        {
+          "ticker": "LEN",
+          "weight": 15.63
+        },
+        {
+          "ticker": "TOL",
+          "weight": 9.51
+        },
+        {
+          "ticker": "PHM",
+          "weight": 8.76
+        },
+        {
+          "ticker": "DHI",
+          "weight": 7.06
+        },
+        {
+          "ticker": "OSK",
+          "weight": 4.31
+        },
+        {
+          "ticker": "ARW",
+          "weight": 3.63
+        },
+        {
+          "ticker": "MRP",
+          "weight": 3.35
+        },
+        {
+          "ticker": "AVT",
+          "weight": 3.13
+        },
+        {
+          "ticker": "LEA",
+          "weight": 2.6
+        },
+        {
+          "ticker": "MTH",
+          "weight": 1.49
+        },
+        {
+          "ticker": "TEX",
+          "weight": 1.04
+        },
+        {
+          "ticker": "NOV",
+          "weight": 0.92
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 0.57
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 0.04
+        },
+        {
+          "ticker": "CRH",
+          "weight": 0.04
+        },
+        {
+          "ticker": "GS",
+          "weight": 0.03
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 0.03
+        },
+        {
+          "ticker": "A",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "GM",
+          "weight": 21.44
+        },
+        {
+          "ticker": "LEN",
+          "weight": 18.52
+        },
+        {
+          "ticker": "TOL",
+          "weight": 11.73
+        },
+        {
+          "ticker": "PHM",
+          "weight": 11.2
+        },
+        {
+          "ticker": "DHI",
+          "weight": 9.39
+        },
+        {
+          "ticker": "OSK",
+          "weight": 4.98
+        },
+        {
+          "ticker": "ARW",
+          "weight": 3.49
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 3.48
+        },
+        {
+          "ticker": "AVT",
+          "weight": 3.12
+        },
+        {
+          "ticker": "LEA",
+          "weight": 2.75
+        },
+        {
+          "ticker": "MRP",
+          "weight": 2.35
+        },
+        {
+          "ticker": "BAX",
+          "weight": 2.18
+        },
+        {
+          "ticker": "MTH",
+          "weight": 1.6
+        },
+        {
+          "ticker": "NOV",
+          "weight": 1.16
+        },
+        {
+          "ticker": "TEX",
+          "weight": 1.15
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 0.66
+        },
+        {
+          "ticker": "VBIL",
+          "weight": 0.57
+        },
+        {
+          "ticker": "C",
+          "weight": 0.13
+        },
+        {
+          "ticker": "CRH",
+          "weight": 0.05
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 0.05
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GM",
+          "weight": 20.05
+        },
+        {
+          "ticker": "LEN",
+          "weight": 16.86
+        },
+        {
+          "ticker": "TOL",
+          "weight": 12.31
+        },
+        {
+          "ticker": "PHM",
+          "weight": 10.55
+        },
+        {
+          "ticker": "DHI",
+          "weight": 8.15
+        },
+        {
+          "ticker": "OSK",
+          "weight": 5.14
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 3.82
+        },
+        {
+          "ticker": "ARW",
+          "weight": 3.4
+        },
+        {
+          "ticker": "BAX",
+          "weight": 3.32
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.31
+        },
+        {
+          "ticker": "AVT",
+          "weight": 3.07
+        },
+        {
+          "ticker": "SLB",
+          "weight": 2.91
+        },
+        {
+          "ticker": "MRP",
+          "weight": 2.24
+        },
+        {
+          "ticker": "MTH",
+          "weight": 1.56
+        },
+        {
+          "ticker": "NOV",
+          "weight": 1.46
+        },
+        {
+          "ticker": "VBIL",
+          "weight": 0.94
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 0.56
+        },
+        {
+          "ticker": "TFX",
+          "weight": 0.24
+        },
+        {
+          "ticker": "C",
+          "weight": 0.06
+        },
+        {
+          "ticker": "RHI",
+          "weight": 0.05
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GA",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777150247501"
+  }
+}

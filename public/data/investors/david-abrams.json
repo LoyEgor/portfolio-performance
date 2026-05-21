@@ -1,0 +1,274 @@
+{
+  "id": "david-abrams",
+  "holdings": [
+    {
+      "ticker": "LOAR",
+      "weight": 39.65
+    },
+    {
+      "ticker": "LAD",
+      "weight": 13.43
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 11.59
+    },
+    {
+      "ticker": "SGI",
+      "weight": 9.25
+    },
+    {
+      "ticker": "ABG",
+      "weight": 9.09
+    },
+    {
+      "ticker": "CPNG",
+      "weight": 5.31
+    },
+    {
+      "ticker": "WTW",
+      "weight": 4.53
+    },
+    {
+      "ticker": "META",
+      "weight": 4.02
+    },
+    {
+      "ticker": "UHAL.B",
+      "weight": 3.13
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 46.92
+        },
+        {
+          "ticker": "LAD",
+          "weight": 12.73
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.26
+        },
+        {
+          "ticker": "SGI",
+          "weight": 6.21
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.83
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 5.07
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.32
+        },
+        {
+          "ticker": "META",
+          "weight": 4.04
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 3.41
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.05
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1
+        },
+        {
+          "ticker": "NUVB",
+          "weight": 0.12
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 0.04
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 45.16
+        },
+        {
+          "ticker": "LAD",
+          "weight": 13.51
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.23
+        },
+        {
+          "ticker": "SGI",
+          "weight": 6.51
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.38
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.12
+        },
+        {
+          "ticker": "META",
+          "weight": 4.77
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.61
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.89
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.84
+        },
+        {
+          "ticker": "CRCL",
+          "weight": 0.82
+        },
+        {
+          "ticker": "NUVB",
+          "weight": 0.12
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 0.04
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 41.55
+        },
+        {
+          "ticker": "LAD",
+          "weight": 12.76
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.54
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.37
+        },
+        {
+          "ticker": "SGI",
+          "weight": 7.99
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.79
+        },
+        {
+          "ticker": "META",
+          "weight": 4.7
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.04
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.68
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.73
+        },
+        {
+          "ticker": "CRCL",
+          "weight": 0.59
+        },
+        {
+          "ticker": "NUVB",
+          "weight": 0.23
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 0.03
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 38.43
+        },
+        {
+          "ticker": "LAD",
+          "weight": 14.59
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.57
+        },
+        {
+          "ticker": "SGI",
+          "weight": 9.13
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.83
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 5.41
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.17
+        },
+        {
+          "ticker": "META",
+          "weight": 3.78
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.68
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.78
+        },
+        {
+          "ticker": "NUVB",
+          "weight": 0.6
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 0.03
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AB",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777228154883"
+  }
+}

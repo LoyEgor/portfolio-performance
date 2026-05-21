@@ -1,0 +1,198 @@
+{
+  "id": "altarock",
+  "holdings": [
+    {
+      "ticker": "AMZN",
+      "weight": 38.36
+    },
+    {
+      "ticker": "TDG",
+      "weight": 25.65
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 16.82
+    },
+    {
+      "ticker": "MCO",
+      "weight": 9.15
+    },
+    {
+      "ticker": "MA",
+      "weight": 6.36
+    },
+    {
+      "ticker": "V",
+      "weight": 3.66
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.28
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 19.9
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 19.46
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.74
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.9
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.46
+        },
+        {
+          "ticker": "V",
+          "weight": 5.99
+        },
+        {
+          "ticker": "HLT",
+          "weight": 1.25
+        },
+        {
+          "ticker": "FICO",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.21
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 25.14
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 23.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.72
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.01
+        },
+        {
+          "ticker": "V",
+          "weight": 3.47
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 3.36
+        },
+        {
+          "ticker": "HLT",
+          "weight": 2.65
+        },
+        {
+          "ticker": "FICO",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 30.35
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 24.33
+        },
+        {
+          "ticker": "TDG",
+          "weight": 23.53
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.27
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.07
+        },
+        {
+          "ticker": "V",
+          "weight": 3.33
+        },
+        {
+          "ticker": "HLT",
+          "weight": 2.57
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.53
+        },
+        {
+          "ticker": "FICO",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 33.09
+        },
+        {
+          "ticker": "TDG",
+          "weight": 25.28
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 19.75
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.16
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.07
+        },
+        {
+          "ticker": "V",
+          "weight": 3.55
+        },
+        {
+          "ticker": "HLT",
+          "weight": 3.06
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.04
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AR",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777227848490"
+  }
+}

@@ -321,7 +321,7 @@ const PortfolioRow = ({
               fontWeight: 500, color: portfolio.visible ? 'var(--text-primary)' : 'var(--text-muted)'
             }}>{portfolio.name}</span>
             <span className="text-[10px] font-mono text-stone-400 tabular-nums">·{stockCount}</span>
-            {portfolio.kind === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-stone-900 text-stone-50 rounded-sm">YOU</span>}
+            {portfolio.id === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-stone-900 text-stone-50 rounded-sm">YOU</span>}
             {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-stone-500">bench</span>}
           </div>
           {portfolio.subtitle && <div className="text-[11px] text-stone-500 mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
@@ -1282,31 +1282,95 @@ export default function PortfolioTracker() {
   };
 
   // Simple hash for comparing data snapshots
-  const computeHash = (portfolios, prices) => {
-    // Include every persisted field so reorder / color / visibility / subtitle changes all dirty the
-    // Save button. Array order is preserved by JSON.stringify, so drag-and-drop reordering shows up.
+  // Hash of the user-editable surface only — what Save persists to default-data.json.
+  // Investors' holdings/history live in the read-only base (public/data/investors/*) and
+  // do NOT influence dirty state; prices live in public/data/prices.json and don't either.
+  // Reorder / color / visibility / subtitle / name on any portfolio still mark dirty.
+  const computeHash = (portfolios) => {
     const p = JSON.stringify(portfolios.map(p => ({
       id: p.id, name: p.name, subtitle: p.subtitle, kind: p.kind, color: p.color,
-      visible: p.visible, locked: p.locked, holdings: p.holdings, history: p.history,
+      visible: p.visible, locked: p.locked,
+      // Holdings/history are part of the hash only for kinds the user actually edits
+      // (benchmarks shells, myPortfolio, tarasGuk). For investors loaded from the base
+      // they're stable — we omit them here so a re-fetch never flags dirty.
+      holdings: (p.kind === 'guru' || p.kind === 'custom' && p.id !== 'mine' && p.id !== 'youtuber') ? undefined : p.holdings,
+      history:  (p.kind === 'guru' || p.kind === 'custom' && p.id !== 'mine' && p.id !== 'youtuber') ? undefined : p.history,
     })));
-    const pr = JSON.stringify(Object.keys(prices).sort().map(t => [t, Object.keys(prices[t]).length]));
     let h = 0;
-    const s = p + pr;
-    for (let i = 0; i < s.length; i++) { h = ((h << 5) - h + s.charCodeAt(i)) | 0; }
+    for (let i = 0; i < p.length; i++) { h = ((h << 5) - h + p.charCodeAt(i)) | 0; }
     return h;
   };
 
-  // Single source for the bundled default state. Used on mount, for the "Save" hash comparison,
-  // and on Reset.
+  // Fetch the bundled default state. v9 layout splits data into:
+  //   - public/default-data.json        — user config (selectedInvestors, customization, benchmarks, myPortfolio, tarasGuk)
+  //   - public/data/investors-index.json — investor catalog (metadata only, no holdings)
+  //   - public/data/investors/<id>.json  — per-investor holdings + history (read-only base)
+  //   - public/data/prices.json          — all ticker prices
+  //   - public/data/meta.json            — { latestQuarter, lastBackfillAt, ... }
+  // Assembled into the existing in-memory shape { portfolios: [...], prices: {...} }
+  // so downstream code (computeSeries, chart wiring, edit modal) keeps working unchanged.
+  // Backwards-compatible: if default-data.json lacks a v9 marker, falls back to v8 monolithic shape.
   const fetchDefaultData = async () => {
     try {
-      const res = await fetch(import.meta.env.BASE_URL + 'default-data.json');
-      if (!res.ok) return null;
-      const raw = await res.json();
-      return {
-        portfolios: Array.isArray(raw.portfolios) ? raw.portfolios : null,
-        prices: (raw.prices && typeof raw.prices === 'object') ? raw.prices : {}
-      };
+      const base = import.meta.env.BASE_URL;
+      const cfgRes = await fetch(base + 'default-data.json');
+      if (!cfgRes.ok) return null;
+      const cfg = await cfgRes.json();
+
+      // ----- Legacy v8 monolithic fallback -----
+      if (cfg.version !== 'v9' || Array.isArray(cfg.portfolios)) {
+        return {
+          portfolios: Array.isArray(cfg.portfolios) ? cfg.portfolios : null,
+          prices: (cfg.prices && typeof cfg.prices === 'object') ? cfg.prices : {}
+        };
+      }
+
+      // ----- v9 split layout -----
+      const [pricesRes, indexRes] = await Promise.all([
+        fetch(base + 'data/prices.json'),
+        fetch(base + 'data/investors-index.json'),
+      ]);
+      const prices = pricesRes.ok ? await pricesRes.json() : {};
+      const index = indexRes.ok ? await indexRes.json() : { investors: [] };
+      const indexById = new Map((index.investors || []).map(i => [i.id, i]));
+
+      // Per-investor files — fetch in parallel for the currently selected set.
+      // Unselected investors aren't loaded here (lazy: load when user adds them via the
+      // upcoming investors table). For Phase 0 the migration set ALL of them as
+      // selected, so this fetches every file — fine, ~10 files × ~10KB each.
+      const selectedIds = Array.isArray(cfg.selectedInvestors) ? cfg.selectedInvestors : [];
+      const investorFiles = await Promise.all(selectedIds.map(async (id) => {
+        try {
+          const r = await fetch(`${base}data/investors/${id}.json`);
+          if (!r.ok) return null;
+          const inv = await r.json();
+          const meta = indexById.get(id) || {};
+          const custom = (cfg.investorCustomization || {})[id] || {};
+          // Re-hydrate into the legacy portfolio shape so the rest of the app sees
+          // the same object structure it always did.
+          return {
+            id,
+            name: meta.name || id,
+            subtitle: meta.subtitle || '',
+            kind: meta.kind || 'custom',
+            color: custom.color || '#1a1815',
+            visible: custom.visible !== false,
+            locked: !!custom.locked,
+            holdings: inv.holdings || [],
+            history: inv.history || [],
+          };
+        } catch { return null; }
+      }));
+
+      // Assemble the legacy `portfolios` array in display order:
+      //   benchmarks → myPortfolio → tarasGuk → selected investors (in selectedInvestors[] order)
+      const portfolios = [
+        ...(Array.isArray(cfg.benchmarks) ? cfg.benchmarks : []),
+        ...(cfg.myPortfolio ? [cfg.myPortfolio] : []),
+        ...(cfg.tarasGuk ? [cfg.tarasGuk] : []),
+        ...investorFiles.filter(Boolean),
+      ];
+      return { portfolios, prices };
     } catch { return null; }
   };
 
@@ -1316,7 +1380,7 @@ export default function PortfolioTracker() {
       if (def?.portfolios) {
         setPortfolios(def.portfolios);
         setPrices(def.prices || {});
-        setDefaultDataHash(computeHash(def.portfolios, def.prices));
+        setDefaultDataHash(computeHash(def.portfolios));
       } else {
         setPortfolios(DEFAULT_PORTFOLIOS);
         setPrices({});
@@ -1327,23 +1391,54 @@ export default function PortfolioTracker() {
 
   const currentDataHash = useMemo(() => {
     if (!loaded) return null;
-    return computeHash(portfolios, prices);
-  }, [portfolios, prices, loaded]);
+    return computeHash(portfolios);
+  }, [portfolios, loaded]);
 
   const hasUnsavedChanges = loaded && defaultDataHash !== null && currentDataHash !== defaultDataHash;
 
+  // Save only writes the user-config layer back into public/default-data.json.
+  // The read-only investor base (public/data/*) is NEVER written from here — that's
+  // the goals' job (INVESTORS-BACKFILL / STOCKS-UPDATE).
   const handleSaveDefault = async () => {
     if (saving) return;
     setSaving(true);
     try {
-      const data = { version: 'v8', exportedAt: new Date().toISOString(), portfolios, prices };
+      const isBenchmark = (p) => p.kind === 'benchmark';
+      const isMine = (p) => p.id === 'mine';
+      const isTarasGuk = (p) => p.id === 'youtuber';
+      const isInvestor = (p) => !isBenchmark(p) && !isMine(p) && !isTarasGuk(p);
+
+      const benchmarks = portfolios.filter(isBenchmark);
+      const myPortfolio = portfolios.find(isMine) || null;
+      const tarasGuk = portfolios.find(isTarasGuk) || null;
+      const investors = portfolios.filter(isInvestor);
+
+      const selectedInvestors = investors.map(p => p.id);
+      const investorCustomization = {};
+      for (const p of investors) {
+        investorCustomization[p.id] = {
+          color: p.color,
+          visible: p.visible,
+          locked: p.locked,
+        };
+      }
+
+      const data = {
+        version: 'v9',
+        exportedAt: new Date().toISOString(),
+        benchmarks,
+        myPortfolio,
+        tarasGuk,
+        selectedInvestors,
+        investorCustomization,
+      };
+
       const res = await fetch('/api/save-default', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
       if (!res.ok) throw new Error('Save failed');
-      // Update the hash to match what we just saved
       setDefaultDataHash(currentDataHash);
     } catch (err) {
       console.error('[save] Failed to save default data:', err);
@@ -1627,6 +1722,8 @@ export default function PortfolioTracker() {
     }
     setPortfolios(def.portfolios);
     setPrices(def.prices || {});
+    // Re-baseline the saved hash so Save isn't immediately dirty after reset.
+    setDefaultDataHash(computeHash(def.portfolios));
   };
 
   const handleDragStart = (id) => setDraggedId(id);
@@ -1890,7 +1987,7 @@ export default function PortfolioTracker() {
                         })
                         .map(p => (
                         <Line key={p.id} type="monotone" dataKey={p.id} stroke={p.color}
-                          strokeWidth={p.kind === 'mine' ? 2.5 : 1.75} dot={false}
+                          strokeWidth={p.id === 'mine' ? 2.5 : 1.75} dot={false}
                           strokeDasharray={p.kind === 'benchmark' ? '8 3 1 3' : undefined}
                           activeDot={{ r: 4, strokeWidth: 0 }} isAnimationActive={false} />
                       ))}

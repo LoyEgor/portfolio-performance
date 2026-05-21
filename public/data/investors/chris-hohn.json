@@ -1,0 +1,226 @@
+{
+  "id": "chris-hohn",
+  "holdings": [
+    {
+      "ticker": "GE",
+      "weight": 29.85
+    },
+    {
+      "ticker": "V",
+      "weight": 20.39
+    },
+    {
+      "ticker": "MCO",
+      "weight": 13.84
+    },
+    {
+      "ticker": "SPGI",
+      "weight": 13.22
+    },
+    {
+      "ticker": "CP",
+      "weight": 8.1
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 5.62
+    },
+    {
+      "ticker": "FER",
+      "weight": 2.94
+    },
+    {
+      "ticker": "CNI",
+      "weight": 2.24
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 2.24
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 1.56
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 21.95
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 14.97
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.13
+        },
+        {
+          "ticker": "V",
+          "weight": 13.44
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 12.14
+        },
+        {
+          "ticker": "CP",
+          "weight": 8.89
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.04
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.99
+        },
+        {
+          "ticker": "FER",
+          "weight": 1.99
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 24.12
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 17.23
+        },
+        {
+          "ticker": "V",
+          "weight": 13.35
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.1
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.53
+        },
+        {
+          "ticker": "CP",
+          "weight": 8.26
+        },
+        {
+          "ticker": "CNI",
+          "weight": 4.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.54
+        },
+        {
+          "ticker": "FER",
+          "weight": 2.05
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 27.12
+        },
+        {
+          "ticker": "V",
+          "weight": 18.18
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.31
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.03
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 10.33
+        },
+        {
+          "ticker": "CP",
+          "weight": 7.05
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.51
+        },
+        {
+          "ticker": "CNI",
+          "weight": 3.36
+        },
+        {
+          "ticker": "FER",
+          "weight": 2.11
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 27.29
+        },
+        {
+          "ticker": "V",
+          "weight": 18.12
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.13
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.67
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.48
+        },
+        {
+          "ticker": "CP",
+          "weight": 6.54
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.44
+        },
+        {
+          "ticker": "FER",
+          "weight": 2.51
+        },
+        {
+          "ticker": "CNI",
+          "weight": 1.82
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=C",
+    "migratedFromLegacy": true,
+    "legacyId": "custom-1777150124526"
+  }
+}

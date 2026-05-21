@@ -1,0 +1,409 @@
+{
+  "id": "buffett",
+  "holdings": [
+    {
+      "ticker": "AAPL",
+      "weight": 22.91
+    },
+    {
+      "ticker": "AXP",
+      "weight": 18.16
+    },
+    {
+      "ticker": "KO",
+      "weight": 12.05
+    },
+    {
+      "ticker": "BAC",
+      "weight": 9.92
+    },
+    {
+      "ticker": "CVX",
+      "weight": 6.92
+    },
+    {
+      "ticker": "OXY",
+      "weight": 6.83
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 6.18
+    },
+    {
+      "ticker": "CB",
+      "weight": 4.42
+    },
+    {
+      "ticker": "MCO",
+      "weight": 4.26
+    },
+    {
+      "ticker": "KHC",
+      "weight": 2.9
+    },
+    {
+      "ticker": "DVA",
+      "weight": 1.83
+    },
+    {
+      "ticker": "KR",
+      "weight": 1.44
+    },
+    {
+      "ticker": "SIRI",
+      "weight": 1.14
+    },
+    {
+      "ticker": "DAL",
+      "weight": 1.04
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 26.36
+        },
+        {
+          "ticker": "AXP",
+          "weight": 16.12
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.33
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.41
+        },
+        {
+          "ticker": "CVX",
+          "weight": 7.84
+        },
+        {
+          "ticker": "OXY",
+          "weight": 5.16
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.54
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.91
+        },
+        {
+          "ticker": "CB",
+          "weight": 3.22
+        },
+        {
+          "ticker": "DVA",
+          "weight": 2.13
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.33
+        },
+        {
+          "ticker": "KR",
+          "weight": 1.33
+        },
+        {
+          "ticker": "V",
+          "weight": 1.15
+        },
+        {
+          "ticker": "SIRI",
+          "weight": 1.07
+        },
+        {
+          "ticker": "STZ",
+          "weight": 0.87
+        },
+        {
+          "ticker": "MA",
+          "weight": 0.86
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 0.75
+        },
+        {
+          "ticker": "AON",
+          "weight": 0.65
+        },
+        {
+          "ticker": "COF",
+          "weight": 0.5
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 0.47
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 23.06
+        },
+        {
+          "ticker": "AXP",
+          "weight": 19.42
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.5
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.36
+        },
+        {
+          "ticker": "CVX",
+          "weight": 7.02
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.97
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.47
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.37
+        },
+        {
+          "ticker": "CB",
+          "weight": 3.14
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.93
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.54
+        },
+        {
+          "ticker": "KR",
+          "weight": 1.44
+        },
+        {
+          "ticker": "V",
+          "weight": 1.18
+        },
+        {
+          "ticker": "SIRI",
+          "weight": 1.11
+        },
+        {
+          "ticker": "MA",
+          "weight": 0.9
+        },
+        {
+          "ticker": "STZ",
+          "weight": 0.88
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 0.88
+        },
+        {
+          "ticker": "UNH",
+          "weight": 0.63
+        },
+        {
+          "ticker": "COF",
+          "weight": 0.61
+        },
+        {
+          "ticker": "AON",
+          "weight": 0.59
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 23.61
+        },
+        {
+          "ticker": "AXP",
+          "weight": 19.58
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.39
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.31
+        },
+        {
+          "ticker": "CVX",
+          "weight": 7.37
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.86
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.57
+        },
+        {
+          "ticker": "CB",
+          "weight": 3.44
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.3
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.68
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.66
+        },
+        {
+          "ticker": "KR",
+          "weight": 1.31
+        },
+        {
+          "ticker": "SIRI",
+          "weight": 1.13
+        },
+        {
+          "ticker": "V",
+          "weight": 1.1
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 0.98
+        },
+        {
+          "ticker": "MA",
+          "weight": 0.88
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 0.85
+        },
+        {
+          "ticker": "STZ",
+          "weight": 0.71
+        },
+        {
+          "ticker": "UNH",
+          "weight": 0.68
+        },
+        {
+          "ticker": "COF",
+          "weight": 0.59
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 23.37
+        },
+        {
+          "ticker": "AXP",
+          "weight": 21.15
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.73
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.54
+        },
+        {
+          "ticker": "CVX",
+          "weight": 7.48
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.76
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.1
+        },
+        {
+          "ticker": "CB",
+          "weight": 4.03
+        },
+        {
+          "ticker": "KHC",
+          "weight": 2.98
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.11
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.36
+        },
+        {
+          "ticker": "KR",
+          "weight": 1.18
+        },
+        {
+          "ticker": "V",
+          "weight": 1.1
+        },
+        {
+          "ticker": "SIRI",
+          "weight": 0.94
+        },
+        {
+          "ticker": "MA",
+          "weight": 0.86
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 0.83
+        },
+        {
+          "ticker": "STZ",
+          "weight": 0.67
+        },
+        {
+          "ticker": "COF",
+          "weight": 0.65
+        },
+        {
+          "ticker": "UNH",
+          "weight": 0.63
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 0.53
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": null,
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=BRK",
+    "migratedFromLegacy": true
+  }
+}
