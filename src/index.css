@@ -129,6 +129,17 @@ html.dark .bg-amber-50 { background-color: rgba(120, 53, 15, 0.2); }
 html.dark .bg-amber-50\/40 { background-color: rgba(120, 53, 15, 0.15); }
 html.dark .bg-amber-50\/60 { background-color: rgba(120, 53, 15, 0.2); }
 html.dark .bg-amber-50\/80 { background-color: rgba(120, 53, 15, 0.25); }
+/* bg-amber-100 is used by the "merged dual-class" badge inside the holdings rows. Without an
+   explicit dark override the badge stays light-yellow on top of the dark card and looks broken. */
+html.dark .bg-amber-100 { background-color: rgba(146, 64, 14, 0.45); }
+
+/* The near-black palette swatch (#1a1815) in the Edit Portfolio color picker disappears against
+   the dark canvas. Give it a subtle inset ring only in dark mode and only when unselected (the
+   selected state already has its own bright border via --border-selected). */
+html.dark .swatch-near-black {
+  outline: 1px solid #57534e;
+  outline-offset: -3px;
+}
 html.dark .border-amber-200 { border-color: #92400e; }
 html.dark .border-amber-300 { border-color: #b45309; }
 html.dark .border-amber-700\/30 { border-color: rgba(180, 83, 9, 0.3); }
@@ -212,6 +223,12 @@ html.dark .recharts-tooltip-label { color: #a8a29e !important; }
   --danger: #a14535;
   /* Background fill for the weight progress bar inside the holdings input. */
   --weight-bar: rgba(214, 207, 192, 0.7);
+  /* Fill colors for the vs-benchmark over/under zones in the chart. Light theme uses standard
+     green-600 / red-600 at very low opacity (0.06) — almost invisible but enough to tint. */
+  --zone-up: #16a34a;
+  --zone-down: #dc2626;
+  /* Brand accent for the hero "side by side" em phrase. */
+  --accent-brand: #a06b1c;
 }
 html.dark {
   --text-primary: #e7e5e4;
@@ -222,4 +239,9 @@ html.dark {
   --success: #34d399;
   --danger: #f87171;
   --weight-bar: rgba(120, 113, 108, 0.55);
+  /* In dark mode the same hex barely shows over the dark canvas — bump to brighter shades
+     so the zones remain perceptible at 0.06 opacity. */
+  --zone-up: #34d399;
+  --zone-down: #f87171;
+  --accent-brand: #d4a843;
 }

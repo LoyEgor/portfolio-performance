@@ -377,9 +377,8 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   const [viewIdx, setViewIdx] = useState('current');
   const isReadonly = viewIdx !== 'current';
   const displayedHoldings = isReadonly ? (historySnapshots[viewIdx]?.holdings || []) : holdings;
+  // Used as the bar's baseline (so per-row width math is consistent even if weights don't sum to 100).
   const totalWeight = displayedHoldings.reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
-  const enabledWeight = displayedHoldings.filter(h => !disabledSet?.has(h.ticker.trim().toUpperCase())).reduce((s, h) => s + (parseFloat(h.weight) || 0), 0);
-  const disabledCount = displayedHoldings.filter(h => h.ticker.trim() && disabledSet?.has(h.ticker.trim().toUpperCase())).length;
 
   // Diff vs previous quarter — for each visible holding, compute Δ weight; also collect tickers that
   // existed last quarter but disappeared (sold). For the earliest snapshot (Q1) there is no prev.
@@ -434,6 +433,19 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   }, [holdings, disabledSet, portfolio, prices, vooPortfolio]);
   const miniLast = miniChartData?.[miniChartData.length - 1]?.value;
   const miniDelta = miniLast != null ? miniLast - 100 : null;
+  // Symmetric Y-domain around the 100 baseline so the dashed reference line stays anchored at the
+  // same vertical position across quarter switches (otherwise Recharts auto-fits and the X axis
+  // visually jumps). 1.2× padding keeps the line from kissing the chart edges.
+  const miniYDomain = useMemo(() => {
+    if (!miniChartData?.length) return [98, 102];
+    let maxDev = 0;
+    for (const d of miniChartData) {
+      const dev = Math.abs(d.value - 100);
+      if (dev > maxDev) maxDev = dev;
+    }
+    const pad = Math.max(maxDev * 1.2, 2);
+    return [100 - pad, 100 + pad];
+  }, [miniChartData]);
 
   const handleSave = () => {
     onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color });
@@ -449,19 +461,26 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
           <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* On mobile: Color first, then Name. On desktop: Name | Color side by side. */}
+            <div className="order-2 sm:order-1">
               <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Name</label>
               <input value={name} onChange={(e) => setName(e.target.value)}
                 className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-sm font-serif focus:border-stone-700 focus:outline-none" />
             </div>
-            <div>
+            <div className="order-1 sm:order-2">
               <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Color</label>
               <div className="flex flex-wrap gap-1.5 pt-1.5 items-center">
-                {PALETTE.map(c => (
-                  <button key={c} onClick={() => setColor(c)} className="w-6 h-6 rounded-full hover:scale-110 transition-transform"
-                    style={{ backgroundColor: c, border: color === c ? '2px solid var(--border-selected)' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
-                ))}
+                {PALETTE.map(c => {
+                  // The near-black swatch (#1a1815) blends into the dark theme's canvas when not
+                  // selected — give it a CSS-only outline visible only in dark mode.
+                  const needsDarkRing = c === '#1a1815';
+                  return (
+                    <button key={c} onClick={() => setColor(c)}
+                      className={`w-6 h-6 rounded-full hover:scale-110 transition-transform ${needsDarkRing ? 'swatch-near-black' : ''}`}
+                      style={{ backgroundColor: c, border: color === c ? '2px solid var(--border-selected)' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
+                  );
+                })}
                 <span className="w-px h-5 bg-stone-300 mx-0.5" />
                 <label className="relative w-6 h-6 cursor-pointer group" title="Pick any color">
                   <input type="color" value={color} onChange={(e) => setColor(e.target.value)}
@@ -491,9 +510,9 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
               <div className="flex-1 h-12">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={miniChartData} margin={{ top: 4, right: 4, bottom: 4, left: 4 }}>
-                    <YAxis hide domain={['auto', 'auto']} />
+                    <YAxis hide domain={miniYDomain} />
                     <XAxis hide dataKey="date" />
-                    <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={0.3} />
+                    <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={0.55} />
                     <Line type="monotone" dataKey="value" stroke={color || '#1a1815'} strokeWidth={1.5} dot={false} isAnimationActive={false} />
                   </LineChart>
                 </ResponsiveContainer>
@@ -501,50 +520,41 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
           )}
           <div>
-            <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
-              <div className="flex items-center gap-2 flex-wrap">
-                <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono">Holdings</label>
-                <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none"
-                  title="Display BRK.A/BRK.B, GOOG/GOOGL etc. as a single ticker. Merged rows are read-only — uncheck to edit individual share classes.">
-                  <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
-                    className="accent-amber-700" />
-                  <span>Merge dual-class</span>
-                </label>
-                {historySnapshots.length > 0 && (
-                  <div className="flex items-center gap-1">
-                    {historySnapshots.map((s, idx) => (
-                      <button key={s.asOf} onClick={() => setViewIdx(idx)}
-                        className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
-                          viewIdx === idx
-                            ? 'bg-stone-900 text-stone-50 border-stone-900'
-                            : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
-                        }`}
-                        title={`13F snapshot · ${s.asOf} · read-only`}>
-                        {asOfLabel(s.asOf)}
-                      </button>
-                    ))}
-                    <button onClick={() => setViewIdx('current')}
+            {/* Header is padded to match the holding bar's horizontal extent:
+                left = eye-toggle slot (29px) + gap (8px), right = weight column (56px) + gap (8px).
+                So both Merge toggle and quarter switcher align with the bar, leaving the area above
+                the percent column empty. */}
+            <div className="flex items-center justify-between mb-2 gap-3 pl-[37px] pr-16">
+              <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none"
+                title="Display BRK.A/BRK.B, GOOG/GOOGL etc. as a single ticker. Merged rows are read-only — uncheck to edit individual share classes.">
+                <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
+                  className="accent-amber-700" />
+                <span>Merge dual-class</span>
+              </label>
+              {historySnapshots.length > 0 && (
+                <div className="flex items-center gap-1 flex-wrap justify-end">
+                  {historySnapshots.map((s, idx) => (
+                    <button key={s.asOf} onClick={() => setViewIdx(idx)}
                       className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
-                        viewIdx === 'current'
+                        viewIdx === idx
                           ? 'bg-stone-900 text-stone-50 border-stone-900'
                           : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
                       }`}
-                      title="Current quarter">
-                      Now
+                      title={`13F snapshot · ${s.asOf} · read-only`}>
+                      {asOfLabel(s.asOf)}
                     </button>
-                  </div>
-                )}
-              </div>
-              <div className="flex items-center gap-3">
-                <span className={`text-[11px] font-mono tabular-nums ${
-                  totalWeight >= 99.5 && totalWeight <= 100.5 ? 'text-emerald-700' : totalWeight > 100.5 ? 'text-red-700' : 'text-amber-700'
-                }`}>Σ {totalWeight >= 99.5 && totalWeight <= 100.5 ? '100.00' : totalWeight.toFixed(2)}%</span>
-                {disabledCount > 0 && (
-                  <span className="text-[10px] font-mono text-stone-400" title="Weight of enabled holdings (disabled excluded)">
-                    active {enabledWeight >= 99.5 && enabledWeight <= 100.5 ? '100.00' : enabledWeight.toFixed(2)}%
-                  </span>
-                )}
-              </div>
+                  ))}
+                  <button onClick={() => setViewIdx('current')}
+                    className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                      viewIdx === 'current'
+                        ? 'bg-stone-900 text-stone-50 border-stone-900'
+                        : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
+                    }`}
+                    title="Current quarter">
+                    Now
+                  </button>
+                </div>
+              )}
             </div>
             <div className="space-y-1.5">
               {[
@@ -575,14 +585,34 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 const isIncrease = !isSold && prevPct !== null && pct > prevPct + 0.01;
                 const isDecrease = !isSold && prevPct !== null && pct < prevPct - 0.01;
                 const isNewPosition = !isSold && prevSnap && prevW === undefined && pct > 0;
-                // base = the "kept" / unchanged portion of the bar (gray)
-                const baseWidth = isSold
-                  ? 0
-                  : isNewPosition
-                    ? 0
-                    : prevPct !== null
-                      ? Math.min(pct, prevPct)
-                      : pct;
+                // Unified bar geometry. Brown base = the kept/unchanged portion. Green overlay = what
+                // grew vs prev. Red overlay = what shrank vs prev. All three layers are ALWAYS mounted
+                // so that switching quarters (or even flipping direction green↔red) transitions
+                // smoothly via CSS width — no DOM unmount/mount kills the animation.
+                // Special cases:
+                //   no prev (initial quarter):    effPrev = pct          → brown=pct, no overlays
+                //   sold (pct=0, prev>0):         effPrev = prevPct      → red overlay 0→prevPct
+                //   new position (prev undef):    effPrev = 0            → green overlay 0→pct
+                const hasPrev = prevSnap !== null;
+                const effPrev = !hasPrev
+                  ? pct
+                  : isSold
+                    ? prevPct
+                    : isNewPosition
+                      ? 0
+                      : (prevPct ?? pct);
+                const baseWidth = Math.min(pct, effPrev);
+                const growthWidth = Math.max(0, pct - effPrev);
+                const declineWidth = Math.max(0, effPrev - pct);
+                /* --- Legacy 4-conditional bar geometry (commented out, kept for reference) ---
+                 *   const baseWidth = isSold
+                 *     ? 0
+                 *     : isNewPosition
+                 *       ? 0
+                 *       : prevPct !== null
+                 *         ? Math.min(pct, prevPct)
+                 *         : pct;
+                 */
                 return (
                   <div key={rowKey} className={`flex items-center gap-2 ${isDisabled ? 'opacity-40' : ''} ${isSold ? 'opacity-60' : ''}`}>
                     {onToggleDisabled && (ticker ? (
@@ -606,31 +636,37 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                       </button>
                     ) : <div className="w-[29px] h-[29px] flex-shrink-0" />)}
                     <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden">
-                      {/* base/kept bar — gray */}
-                      {baseWidth > 0 && (
-                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
-                          style={{ width: `${baseWidth}%`, background: 'var(--weight-bar)' }} />
-                      )}
-                      {/* increase: green sliver from prev to current */}
-                      {isIncrease && (
-                        <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
-                          style={{ left: `${prevPct}%`, width: `${pct - prevPct}%`, background: 'var(--success)', opacity: 0.22 }} />
-                      )}
-                      {/* decrease: red ghost from current to prev (where the position used to extend) */}
-                      {isDecrease && (
-                        <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
-                          style={{ left: `${pct}%`, width: `${prevPct - pct}%`, background: 'var(--danger)', opacity: 0.25 }} />
-                      )}
-                      {/* fully new position: green from 0 to current */}
-                      {isNewPosition && (
-                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
-                          style={{ width: `${pct}%`, background: 'var(--success)', opacity: 0.22 }} />
-                      )}
-                      {/* sold: red ghost spanning what the position used to be */}
-                      {isSold && prevPct !== null && (
-                        <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
-                          style={{ width: `${prevPct}%`, background: 'var(--danger)', opacity: 0.25 }} />
-                      )}
+                      {/* Brown base — kept/unchanged portion. Always mounted. */}
+                      <div className="absolute inset-y-0 left-0 transition-all duration-300 pointer-events-none"
+                        style={{ width: `${baseWidth}%`, background: 'var(--weight-bar)' }} />
+                      {/* Green overlay — what GREW vs prev. Always mounted (width=0 when nothing grew). */}
+                      <div className="absolute inset-y-0 transition-all duration-300 pointer-events-none"
+                        style={{ left: `${baseWidth}%`, width: `${growthWidth}%`, background: 'var(--success)', opacity: 0.22 }} />
+                      {/* Red overlay — what SHRANK vs prev. Always mounted (width=0 when nothing shrank). */}
+                      <div className="absolute inset-y-0 transition-all duration-300 pointer-events-none"
+                        style={{ left: `${baseWidth}%`, width: `${declineWidth}%`, background: 'var(--danger)', opacity: 0.25 }} />
+                      {/* --- Legacy 4-conditional bars (commented out, see notes above) ---
+                       *   {baseWidth > 0 && (
+                       *     <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                       *       style={{ width: `${baseWidth}%`, background: 'var(--weight-bar)' }} />
+                       *   )}
+                       *   {isIncrease && (
+                       *     <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
+                       *       style={{ left: `${prevPct}%`, width: `${pct - prevPct}%`, background: 'var(--success)', opacity: 0.22 }} />
+                       *   )}
+                       *   {isDecrease && (
+                       *     <div className="absolute inset-y-0 transition-all duration-200 pointer-events-none"
+                       *       style={{ left: `${pct}%`, width: `${prevPct - pct}%`, background: 'var(--danger)', opacity: 0.25 }} />
+                       *   )}
+                       *   {isNewPosition && (
+                       *     <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                       *       style={{ width: `${pct}%`, background: 'var(--success)', opacity: 0.22 }} />
+                       *   )}
+                       *   {isSold && prevPct !== null && (
+                       *     <div className="absolute inset-y-0 left-0 transition-all duration-200 pointer-events-none"
+                       *       style={{ width: `${prevPct}%`, background: 'var(--danger)', opacity: 0.25 }} />
+                       *   )}
+                       */}
                       <div className="relative flex items-center">
                         <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'}`}>
                           {h.ticker}
@@ -641,9 +677,33 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                             {h.mergedFrom.join(' + ')}
                           </span>
                         )}
+                        {/* Relative position change vs the previous quarter.
+                            New position → +100% (entry from nothing). Sold → −100% (exit to nothing).
+                            Otherwise (curr - prev) / prev × 100. Same font as ticker / weight, only the color changes. */}
+                        {(() => {
+                          if (!prevSnap) return null;
+                          let delta = null;
+                          if (isSold) delta = -100;
+                          else if (isNewPosition) delta = 100;
+                          else if (prevW !== undefined && prevW > 0) {
+                            delta = ((w - prevW) / prevW) * 100;
+                          }
+                          if (delta === null) return null;
+                          // Sub-1% moves are noise — show "0" with no sign, in muted gray.
+                          // 1%+ moves get the rounded integer with sign and full color.
+                          const abs = Math.abs(delta);
+                          const isNoise = abs < 1;
+                          const cls = isNoise ? 'text-stone-500' : (delta >= 0 ? 'text-emerald-700' : 'text-red-700');
+                          const label = isNoise ? '0%' : `${delta >= 0 ? '+' : '−'}${Math.round(abs)}%`;
+                          return (
+                            <span className={`relative mr-3 text-sm font-mono tabular-nums ${cls}`}>
+                              {label}
+                            </span>
+                          );
+                        })()}
                       </div>
                     </div>
-                    <div className={`w-24 px-3 py-2 text-sm font-mono text-right tabular-nums ${isSold ? 'text-stone-500' : 'text-stone-900'}`}>
+                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-stone-500' : 'text-stone-900'}`}>
                       {(parseFloat(h.weight) || 0).toFixed(2)}%
                     </div>
                   </div>
@@ -1259,7 +1319,25 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
-  const [darkMode, setDarkMode] = useState(false);
+  // Theme: initial value follows the OS's prefers-color-scheme (which already implements the
+  // user's day/night schedule on macOS/Windows/Linux/iOS/Android). Keeps updating with OS until
+  // the user explicitly toggles — manual override sticks for the rest of the session.
+  const [darkMode, setDarkMode] = useState(() =>
+    typeof window !== 'undefined' && window.matchMedia?.('(prefers-color-scheme: dark)').matches || false
+  );
+  const [themeManualOverride, setThemeManualOverride] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    const handler = (e) => {
+      // OS-level theme change — honor it unless the user has already clicked the toggle this session.
+      if (!themeManualOverride) setDarkMode(e.matches);
+    };
+    mql.addEventListener('change', handler);
+    return () => mql.removeEventListener('change', handler);
+  }, [themeManualOverride]);
+
   // Global "Merge dual-class" toggle. Defaults to ON.
   // When ON, the app displays each share-class pair (BRK.A/BRK.B, GOOG/GOOGL) as a single
   // canonical row; price-series math (computeSeries) is unaffected because dual-class shares
@@ -1811,7 +1889,7 @@ export default function PortfolioTracker() {
       background: darkMode
         ? 'linear-gradient(180deg, #0c0a09 0%, #1c1917 100%)'
         : 'linear-gradient(180deg, #faf7ee 0%, #f5f0e1 100%)',
-      color: darkMode ? '#e7e5e4' : '#1a1815',
+      color: 'var(--text-primary)',
       fontFamily: "'Geist', -apple-system, sans-serif"
     }}>
       <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -1839,7 +1917,7 @@ export default function PortfolioTracker() {
                 <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
                   Performance,
                   <br />
-                  <em style={{ color: darkMode ? '#d4a843' : '#a06b1c', fontWeight: 500 }}>side by side.</em>
+                  <em style={{ color: 'var(--accent-brand)', fontWeight: 500 }}>side by side.</em>
                 </h1>
                 <div className="text-xs text-stone-600 mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
@@ -1863,7 +1941,7 @@ export default function PortfolioTracker() {
                   className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
                   <Save size={11} /> Backup
                 </button>
-                <button onClick={() => setDarkMode(!darkMode)}
+                <button onClick={() => { setDarkMode(!darkMode); setThemeManualOverride(true); }}
                   className="p-2 text-stone-500 hover:text-stone-900 rounded border border-stone-300 hover:border-stone-700 bg-white/60 transition-colors"
                   title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
                   {darkMode ? <Sun size={13} /> : <Moon size={13} />}
@@ -1955,8 +2033,8 @@ export default function PortfolioTracker() {
                       <YAxis domain={chartYDomain} hide={true} />
                       {effectiveMode === 'vs' && (
                         <>
-                          <ReferenceArea y1={100} y2={typeof chartYDomain[1] === 'number' ? chartYDomain[1] : vsVooDomain[1]} fill="#16a34a" fillOpacity={0.06} />
-                          <ReferenceArea y1={typeof chartYDomain[0] === 'number' ? chartYDomain[0] : vsVooDomain[0]} y2={100} fill="#dc2626" fillOpacity={0.06} />
+                          <ReferenceArea y1={100} y2={typeof chartYDomain[1] === 'number' ? chartYDomain[1] : vsVooDomain[1]} fill="var(--zone-up)" fillOpacity={0.06} />
+                          <ReferenceArea y1={typeof chartYDomain[0] === 'number' ? chartYDomain[0] : vsVooDomain[0]} y2={100} fill="var(--zone-down)" fillOpacity={0.06} />
                         </>
                       )}
                       <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />

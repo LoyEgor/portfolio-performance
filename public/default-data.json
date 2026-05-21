@@ -5,7 +5,7 @@
     {
       "id": "voo",
       "name": "VOO",
-      "subtitle": "S&P 500 — US large cap",
+      "subtitle": "S&P 500 \u2014 US large cap",
       "kind": "benchmark",
       "color": "#aeb3bc",
       "visible": false,
@@ -20,7 +20,7 @@
     {
       "id": "vt",
       "name": "VT",
-      "subtitle": "Total World — global equity",
+      "subtitle": "Total World \u2014 global equity",
       "kind": "benchmark",
       "color": "#475569",
       "visible": false,
@@ -44,43 +44,86 @@
     "holdings": [
       {
         "ticker": "TTWO",
-        "weight": 19.27
+        "weight": 19.36
       },
       {
         "ticker": "GOOGL",
-        "weight": 18.54
+        "weight": 17.81
       },
       {
         "ticker": "BRK.B",
-        "weight": 17.22
+        "weight": 14.65
       },
       {
         "ticker": "NVDA",
-        "weight": 14.59
+        "weight": 13.41
       },
       {
         "ticker": "MSFT",
-        "weight": 8.63
-      },
-      {
-        "ticker": "NFLX",
-        "weight": 5.49
-      },
-      {
-        "ticker": "AAPL",
-        "weight": 4.91
-      },
-      {
-        "ticker": "SONY",
-        "weight": 3.95
-      },
-      {
-        "ticker": "REMEDY.HE",
-        "weight": 3.84
+        "weight": 12.83
       },
       {
         "ticker": "AMZN",
-        "weight": 3.55
+        "weight": 8.21
+      },
+      {
+        "ticker": "NFLX",
+        "weight": 5.47
+      },
+      {
+        "ticker": "AAPL",
+        "weight": 4.66
+      },
+      {
+        "ticker": "REMEDY.HE",
+        "weight": 3.6
+      }
+    ],
+    "history": [
+      {
+        "asOf": "2025-12-31",
+        "holdings": [
+          {
+            "ticker": "TTWO",
+            "weight": 19.27
+          },
+          {
+            "ticker": "GOOGL",
+            "weight": 18.54
+          },
+          {
+            "ticker": "BRK.B",
+            "weight": 17.22
+          },
+          {
+            "ticker": "NVDA",
+            "weight": 14.59
+          },
+          {
+            "ticker": "MSFT",
+            "weight": 8.63
+          },
+          {
+            "ticker": "NFLX",
+            "weight": 5.49
+          },
+          {
+            "ticker": "AAPL",
+            "weight": 4.91
+          },
+          {
+            "ticker": "SONY",
+            "weight": 3.95
+          },
+          {
+            "ticker": "REMEDY.HE",
+            "weight": 3.84
+          },
+          {
+            "ticker": "AMZN",
+            "weight": 3.55
+          }
+        ]
       }
     ]
   },
