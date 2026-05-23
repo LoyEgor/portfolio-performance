@@ -71,12 +71,20 @@ const mergeHoldingsDisplay = (holdings, mergeMode) => {
   // After merging dual-class pairs, re-sort by combined weight descending —
   // a merged position (BRK.A 7% + BRK.B 6% → BRK 13%) belongs at its NEW rank,
   // not at the rank of whichever class came first in the source array.
+  //
+  // `mergedFrom` is ALWAYS an array of the underlying original tickers (sorted),
+  // even when a position has only one class. Downstream code uses it to look up
+  // shares and prices in the original (un-canonicalized) holdings/prices data —
+  // for example, Li Lu holds only BRK.B; canonical ticker is "BRK" but shares
+  // and prices are keyed by "BRK.B". Returning ['BRK.B'] keeps that lookup
+  // working. The "X + Y" badge in the modal still checks length > 1, so single-
+  // class rows don't show a merge indicator.
   return [...groups.values()]
     .sort((a, b) => b.weight - a.weight)
     .map(g => ({
       ticker: g.ticker,
       weight: Math.round(g.weight * 1e6) / 1e6,
-      mergedFrom: g.mergedFrom.length > 1 ? [...g.mergedFrom].sort() : null,
+      mergedFrom: [...g.mergedFrom].sort(),
     }));
 };
 
@@ -249,6 +257,131 @@ const useMediaQuery = (query) => {
   return matches;
 };
 
+// Closest available date ≤ target in a sorted ISO-date array. Used for both chart math
+// and activity-delta computation when a snapshot's asOf may not exactly match a price key.
+const closestLEDate = (sortedDates, target) => {
+  let lo = 0, hi = sortedDates.length - 1, ans = null;
+  while (lo <= hi) {
+    const m = (lo + hi) >> 1;
+    if (sortedDates[m] <= target) { ans = sortedDates[m]; lo = m + 1; } else hi = m - 1;
+  }
+  return ans;
+};
+
+// Weighted average price ratio of every prev-quarter holding from prevAsOf → currAsOf.
+// "What the portfolio would have grown to if the investor did nothing." Used to
+// decompose weight changes into (price drift) + (real trading).
+const computePortfolioGrowth = (prevHoldings, prevAsOf, currAsOf, prices) => {
+  let weightedRatio = 0;
+  let coveredWeight = 0;
+  for (const h of (prevHoldings || [])) {
+    const px = prices[(h.ticker || '').toUpperCase()];
+    if (!px) continue;
+    const dates = Object.keys(px).sort();
+    const pK = closestLEDate(dates, prevAsOf);
+    const cK = closestLEDate(dates, currAsOf);
+    if (!pK || !cK) continue;
+    const pP = px[pK], cP = px[cK];
+    if (!pP || pP <= 0 || !cP || cP <= 0) continue;
+    weightedRatio += (h.weight || 0) * (cP / pP);
+    coveredWeight += (h.weight || 0);
+  }
+  return coveredWeight > 0 ? (weightedRatio / coveredWeight) : 1;
+};
+
+// Activity delta for one ticker (or merged ticker group). Two output modes:
+//
+//   mode='portfolio' — delta in pp of investor's portfolio (used for consensus aggregation
+//                      across multiple investors; summable in a meaningful way)
+//   mode='asset'     — delta in % of the position's own share count (DataRoma-style:
+//                      "Add 203%", "Reduce 35%"; intuitive for single-investor views)
+//
+// Confidence levels:
+//   'real'  — shares-based or new/exit. Exact.
+//   'rough' — anything else (price-corrected estimate, or raw weight delta fallback).
+//             Visually dimmed; tooltip explains it's an approximation.
+//
+// origTickers: array of original tickers (single, or members of a merged group).
+const computeActivityDelta = (
+  origTickers, currWeight, prevWeight,
+  currHoldings, prevHoldings,
+  prevAsOf, currAsOf,
+  prices, portfolioGrowth,
+  mode = 'portfolio'
+) => {
+  const upper = origTickers.map(t => t.toUpperCase());
+
+  // Sum shares across the group (returns null if any constituent lacks shares).
+  const sumShares = (rawHoldings) => {
+    let total = 0;
+    for (const t of upper) {
+      const orig = (rawHoldings || []).find(x => (x.ticker || '').toUpperCase() === t);
+      if (orig?.shares == null) return null;
+      total += orig.shares;
+    }
+    return total;
+  };
+
+  // Average price of the group at a given asOf (equal-weighted across original tickers).
+  const avgPriceAt = (asOf) => {
+    let total = 0;
+    let n = 0;
+    for (const t of upper) {
+      const px = prices[t];
+      if (!px) continue;
+      const dates = Object.keys(px).sort();
+      const k = closestLEDate(dates, asOf);
+      const v = k ? px[k] : null;
+      if (v && v > 0) { total += v; n += 1; }
+    }
+    return n > 0 ? total / n : null;
+  };
+
+  // For new/exit, asset-mode returns ±100% (full new / full sold);
+  // portfolio-mode returns the position's weight (its contribution in pp).
+  if (currWeight > 0 && (prevWeight === 0 || prevWeight === undefined)) {
+    return { delta: mode === 'asset' ? 100 : currWeight, confidence: 'real' };
+  }
+  if (prevWeight > 0 && (currWeight === 0 || currWeight === undefined)) {
+    return { delta: mode === 'asset' ? -100 : -prevWeight, confidence: 'real' };
+  }
+
+  // Both quarters present — prefer share-based delta.
+  const currShares = sumShares(currHoldings);
+  const prevShares = sumShares(prevHoldings);
+  if (currShares != null && prevShares != null && prevShares > 0) {
+    const sharesRatio = (currShares - prevShares) / prevShares;  // e.g. +0.50 = "Add 50%"
+    return {
+      delta: mode === 'asset' ? sharesRatio * 100 : sharesRatio * currWeight,
+      confidence: 'real',
+    };
+  }
+
+  // Estimate via price correction.
+  // assumed-no-trade hypothesis: currShares/prevShares = priceRatio_position / priceRatio_portfolio
+  // Anything beyond that is interpreted as actual trading. Derived without knowing absolute shares.
+  const prevP = avgPriceAt(prevAsOf);
+  const currP = avgPriceAt(currAsOf);
+  if (prevP && currP && portfolioGrowth && prevWeight > 0) {
+    const priceRatio = currP / prevP;
+    // Portfolio-mode: weight delta the investor wouldn't have without trading.
+    const expectedCurrWeight = prevWeight * priceRatio / portfolioGrowth;
+    const portfolioDelta = currWeight - expectedCurrWeight;
+    // Asset-mode: implied shares ratio. If investor didn't trade, sharesRatio = 1.
+    // sharesRatio = (currShares / prevShares) = (currWeight × portfolioGrowth) / (prevWeight × priceRatio)
+    const impliedSharesRatio = (currWeight * portfolioGrowth) / (prevWeight * priceRatio);
+    const assetDelta = (impliedSharesRatio - 1) * 100;
+    return {
+      delta: mode === 'asset' ? assetDelta : portfolioDelta,
+      confidence: 'rough',
+    };
+  }
+
+  // No prices either — last-resort raw weight delta. Asset-mode can't be computed
+  // meaningfully without prices, so just use the same number.
+  return { delta: currWeight - prevWeight, confidence: 'rough' };
+};
+
 // Period cutoff as an ISO date string ("YYYY-MM-DD") — relies on the fact that all
 // price keys in this app are YYYY-MM-DD, which sort lexicographically the same as
 // chronologically. Returns null for 'ALL' or unrecognized periods.
@@ -387,6 +520,26 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   const allSnapshotsForDiff = [...historySnapshots, { asOf: 'current', holdings }];
   const currentSnapIdx = isReadonly ? viewIdx : historySnapshots.length;
   const prevSnap = currentSnapIdx > 0 ? allSnapshotsForDiff[currentSnapIdx - 1] : null;
+  // asOf of the snapshot currently displayed. For "current" (editable) view, derive it from
+  // the latest history asOf + one quarter — same logic as computeSeries' implicit asOf.
+  const currAsOfForDelta = (() => {
+    if (isReadonly) return historySnapshots[viewIdx]?.asOf || null;
+    if (!historySnapshots.length) return null;
+    const last = historySnapshots[historySnapshots.length - 1].asOf;
+    const [y, m] = last.split('-').map(Number);
+    const nm = m + 3;
+    const ny = y + Math.floor((nm - 1) / 12);
+    const nmm = ((nm - 1) % 12) + 1;
+    const lastDay = new Date(ny, nmm, 0).getDate();
+    return `${ny}-${String(nmm).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+  })();
+  // Portfolio growth between prevSnap.asOf → currAsOf, weighted by prev holdings using
+  // the price data we already have. Used by computeActivityDelta's price-corrected branch.
+  const portfolioGrowthForPrev = useMemo(() => {
+    if (!prevSnap || !currAsOfForDelta) return 1;
+    return computePortfolioGrowth(prevSnap.holdings, prevSnap.asOf, currAsOfForDelta, prices);
+  }, [prevSnap, currAsOfForDelta, prices]);
+
   // Merge-aware prev → weight map; key is normalized canonical when mergeMode is ON.
   const prevByTicker = {};
   if (prevSnap) {
@@ -677,26 +830,48 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                             {h.mergedFrom.join(' + ')}
                           </span>
                         )}
-                        {/* Relative position change vs the previous quarter.
-                            New position → +100% (entry from nothing). Sold → −100% (exit to nothing).
-                            Otherwise (curr - prev) / prev × 100. Same font as ticker / weight, only the color changes. */}
+                        {/* Real buy/sell activity vs the previous quarter.
+                            Tries shares-delta (exact); falls back to price-corrected weight delta
+                            (which separates price drift from real trading); last resort is raw
+                            weight delta with a "~" rough marker. Noise (|Δ| < 1pp) is hidden
+                            entirely for real/price confidence — those numbers reflect actual
+                            trading, so "no trade" should literally show nothing. */}
                         {(() => {
                           if (!prevSnap) return null;
-                          let delta = null;
-                          if (isSold) delta = -100;
-                          else if (isNewPosition) delta = 100;
-                          else if (prevW !== undefined && prevW > 0) {
-                            delta = ((w - prevW) / prevW) * 100;
-                          }
-                          if (delta === null) return null;
-                          // Sub-1% moves are noise — show "0" with no sign, in muted gray.
-                          // 1%+ moves get the rounded integer with sign and full color.
+                          // mergedFrom is always an array (even for single-class rows like BRK.B
+                          // where canonical = "BRK"), so shares/prices lookups find the right keys.
+                          const origTickers = h.mergedFrom || [h.ticker.toUpperCase()];
+                          // Asset-level metric: % change in shares of this position (DataRoma-style).
+                          // Independent of how big the position is in the portfolio.
+                          const { delta, confidence } = computeActivityDelta(
+                            origTickers, w, prevW || 0,
+                            displayedHoldings, prevSnap.holdings,
+                            prevSnap.asOf, currAsOfForDelta,
+                            prices, portfolioGrowthForPrev,
+                            'asset'
+                          );
+                          if (delta === null || delta === undefined) return null;
+
+                          // Noise thresholds: real has 1% floor (exact data — small signals are real);
+                          // rough has 25% floor — calibrated empirically against DataRoma's Recent
+                          // Activity column for Buffett (Q4 2025 → Q1 2026) and Li Lu. Below 25% the
+                          // estimate is dominated by monthly-price approximation noise (typical false
+                          // positive: 7-19% range). 25% catches all meaningful trades (BAC -71%,
+                          // CROX +41%, GOOGL +204%, CVX -35%, etc.) while hiding the noise.
                           const abs = Math.abs(delta);
-                          const isNoise = abs < 1;
-                          const cls = isNoise ? 'text-stone-500' : (delta >= 0 ? 'text-emerald-700' : 'text-red-700');
-                          const label = isNoise ? '0%' : `${delta >= 0 ? '+' : '−'}${Math.round(abs)}%`;
+                          const isRough = confidence === 'rough';
+                          if (abs < (isRough ? 25 : 1)) return null;
+
+                          const cls = isRough
+                            ? (delta >= 0 ? 'text-emerald-700/60' : 'text-red-700/60')
+                            : (delta >= 0 ? 'text-emerald-700' : 'text-red-700');
+                          const label = `${delta >= 0 ? '+' : '−'}${Math.round(abs)}%`;
+                          const title = isRough
+                            ? 'Approximate: estimated from prices (price-corrected weight delta). Exact share counts will appear after INVESTORS-BACKFILL fills shares for this quarter.'
+                            : 'Real trading activity — change in share count vs previous quarter.';
                           return (
-                            <span className={`relative mr-3 text-sm font-mono tabular-nums ${cls}`}>
+                            <span className={`relative mr-3 text-sm font-mono tabular-nums ${cls}`}
+                              title={title}>
                               {label}
                             </span>
                           );
@@ -949,7 +1124,7 @@ const ConsensusPool = ({ portfolios, onSetVisibility, onIsolate }) => {
   );
 };
 
-const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate, onEdit, mergeMode, setMergeMode, forcedViewMode, hideMergeToggle, hidePool }) => {
+const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsolate, onEdit, prices, mergeMode, setMergeMode, forcedViewMode, hideMergeToggle, hidePool }) => {
   const [showMergedDetails, setShowMergedDetails] = useState(false);
   // 'held' = aggregate current weights (consensus by holdings).
   // 'bought' = aggregate positive Δ vs the last history snapshot (consensus by recent buying).
@@ -985,26 +1160,77 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     .filter(p => viewMode !== 'held' ? hasPrevSnapshot(p) : true);
   const N = includedPortfolios.length;
 
-  // Build a {normalizedTicker → renormalized 100%-sum weight} map for an arbitrary holdings array,
-  // applying eye-toggle filter and dual-class merging in one place.
-  const contribFor = (holdings, p, originalsAcc) => {
+  // Group an investor's holdings by normalized ticker (handles dual-class merging) and
+  // renormalize weights to 100. Also rolls up shares across original tickers in the group;
+  // hasShares=false if any original lacks share data (forces weight-based fallback in caller).
+  const groupForActivity = (holdings, p) => {
     const disabled = disabledHoldings[p.id];
     const active = disabled?.size
-      ? (holdings || []).filter(h => !disabled.has(h.ticker.trim().toUpperCase()))
+      ? (holdings || []).filter(h => !disabled.has((h.ticker || '').toUpperCase()))
       : (holdings || []);
     const sum = active.reduce((s, h) => s + h.weight, 0);
-    const out = {};
-    if (sum === 0) return out;
-    active.forEach(h => {
-      const orig = h.ticker.toUpperCase();
+    const groups = {};  // norm → { weight, shares, hasShares, origs:Set }
+    if (sum === 0) return groups;
+    for (const h of active) {
+      const orig = (h.ticker || '').toUpperCase();
       const norm = normalizeTicker(orig, mergeMode);
-      const w = (h.weight / sum) * 100;
-      out[norm] = (out[norm] || 0) + w;
+      if (!groups[norm]) groups[norm] = { weight: 0, shares: 0, hasShares: true, origs: new Set() };
+      groups[norm].weight += (h.weight / sum) * 100;
+      if (h.shares != null) groups[norm].shares += h.shares;
+      else groups[norm].hasShares = false;
+      groups[norm].origs.add(orig);
+    }
+    return groups;
+  };
+
+  // Per-ticker contribution to the activity (bought/sold) consensus signal for one investor.
+  //
+  // Confidence tiers (best to worst):
+  //   'real'  shares-delta (or new/exit) — exact
+  //   'rough' anything else (price-corrected estimate or raw weight delta)
+  //
+  // Aggregates positive signed values into "bought"; magnitudes of negatives into "sold".
+  const activityContribFor = (currHoldings, prevHoldings, p, mode, prevAsOf, currAsOf, originalsAcc) => {
+    const currG = groupForActivity(currHoldings, p);
+    const prevG = groupForActivity(prevHoldings, p);
+    const allTickers = new Set([...Object.keys(currG), ...Object.keys(prevG)]);
+    const portfolioGrowth = computePortfolioGrowth(prevHoldings, prevAsOf, currAsOf, prices || {});
+    const contrib = {};
+    for (const t of allTickers) {
+      const c = currG[t];
+      const pr = prevG[t];
+      if (originalsAcc) {
+        if (!originalsAcc[t]) originalsAcc[t] = new Set();
+        c?.origs.forEach(o => originalsAcc[t].add(o));
+        if (mode === 'sold') pr?.origs.forEach(o => originalsAcc[t].add(o));
+      }
+      const origTickers = [...((c?.origs || pr?.origs) || [])];
+      const { delta: signed } = computeActivityDelta(
+        origTickers,
+        c?.weight || 0,
+        pr?.weight || 0,
+        currHoldings, prevHoldings,
+        prevAsOf, currAsOf,
+        prices || {}, portfolioGrowth
+      );
+      if (signed === null || signed === undefined) continue;
+      if (mode === 'bought' && signed > 0) contrib[t] = signed;
+      else if (mode === 'sold' && signed < 0) contrib[t] = -signed;
+    }
+    return contrib;
+  };
+
+  // For 'held' mode only — same shape as before, weight-based, no activity.
+  const heldContribFor = (holdings, p, originalsAcc) => {
+    const g = groupForActivity(holdings, p);
+    const out = {};
+    for (const [norm, data] of Object.entries(g)) {
+      out[norm] = data.weight;
       if (originalsAcc) {
         if (!originalsAcc[norm]) originalsAcc[norm] = new Set();
-        originalsAcc[norm].add(orig);
+        data.origs.forEach(o => originalsAcc[norm].add(o));
       }
-    });
+    }
     return out;
   };
 
@@ -1012,32 +1238,23 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     const result = {};
     includedPortfolios.forEach(p => {
       const portfolioOriginals = {};
-      const currContrib = contribFor(getActiveHoldings(p, disabledHoldings), p, portfolioOriginals);
-
-      // Each portfolio's per-ticker contribution depends on the mode.
       let contrib;
       if ((viewMode === 'bought' || viewMode === 'sold') && p.history?.length) {
-        // Latest history entry by asOf is the previous quarter.
-        const prev = [...p.history].sort((a, b) => a.asOf.localeCompare(b.asOf))[p.history.length - 1];
-        // For 'sold' the originals tracker is also fed from prev so fully-exited tickers keep names.
-        const prevContrib = contribFor(prev.holdings, p, viewMode === 'sold' ? portfolioOriginals : null);
-        contrib = {};
-        if (viewMode === 'bought') {
-          Object.keys(currContrib).forEach(t => {
-            const delta = currContrib[t] - (prevContrib[t] || 0);
-            if (delta > 0) contrib[t] = delta;
-          });
-        } else {
-          // 'sold': aggregate magnitudes of weight reductions and full exits (positions in prev,
-          // not in current). The score for a fully-sold ticker is its previous weight.
-          const allTickers = new Set([...Object.keys(prevContrib), ...Object.keys(currContrib)]);
-          allTickers.forEach(t => {
-            const delta = (prevContrib[t] || 0) - (currContrib[t] || 0);
-            if (delta > 0) contrib[t] = delta;
-          });
-        }
+        const sortedHist = [...p.history].sort((a, b) => a.asOf.localeCompare(b.asOf));
+        const prev = sortedHist[sortedHist.length - 1];
+        // Current implicit asOf = prev.asOf + 1 quarter (matches computeSeries).
+        const [yy, mm] = prev.asOf.split('-').map(Number);
+        const nm = mm + 3;
+        const ny = yy + Math.floor((nm - 1) / 12);
+        const nmm = ((nm - 1) % 12) + 1;
+        const lastDay = new Date(ny, nmm, 0).getDate();
+        const currAsOf = `${ny}-${String(nmm).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+        contrib = activityContribFor(
+          getActiveHoldings(p, disabledHoldings), prev.holdings, p,
+          viewMode, prev.asOf, currAsOf, portfolioOriginals
+        );
       } else {
-        contrib = currContrib;
+        contrib = heldContribFor(getActiveHoldings(p, disabledHoldings), p, portfolioOriginals);
       }
 
       Object.entries(contrib).forEach(([t, weight]) => {
@@ -1056,7 +1273,8 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
       s.originalsList = originalsList;
     });
     return result;
-  }, [includedPortfolios, mergeMode, N, viewMode, disabledHoldings]);
+  }, [includedPortfolios, mergeMode, N, viewMode, disabledHoldings, prices]);
+  const statsResult = stats;
 
   if (visibleNonEmpty.length < 1) {
     return (
@@ -1066,7 +1284,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     );
   }
 
-  const sorted = Object.values(stats).sort((a, b) => b.combined - a.combined);
+  const sorted = Object.values(statsResult).sort((a, b) => b.combined - a.combined);
   const consensusTop = sorted.slice(0, 15);
   const consensusMax = consensusTop[0]?.combined || 1;
   // Ticker column width fits the longest ticker among shown rows — saves space on mobile.
@@ -1164,9 +1382,9 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   ? 'No portfolios included — toggle below'
                   : 'No portfolios with quarterly history are included — toggle below')
               : viewMode === 'bought'
-                ? `Sum of positive Δ since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
+                ? `Real buys since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
                 : viewMode === 'sold'
-                  ? `Sum of weight cuts and full exits since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
+                  ? `Real sells since last quarter, across ${N} portfolio${N === 1 ? '' : 's'} with history`
                   : (N === 1
                       ? `Sorted by weight · pool more portfolios below to compute consensus`
                       : `Combined weight from ${N} portfolios — what they collectively believe in`)}
@@ -1319,23 +1537,26 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
-  // Theme: initial value follows the OS's prefers-color-scheme (which already implements the
-  // user's day/night schedule on macOS/Windows/Linux/iOS/Android). Keeps updating with OS until
-  // the user explicitly toggles — manual override sticks for the rest of the session.
-  const [darkMode, setDarkMode] = useState(() =>
-    typeof window !== 'undefined' && window.matchMedia?.('(prefers-color-scheme: dark)').matches || false
-  );
+  // Theme: time-of-day-based. Light between 07:00 and 19:00 local time, dark otherwise.
+  // Re-checks on window focus and every 15 minutes, so leaving the app open across sunset
+  // still flips the theme. The button toggle sets a manual override that sticks for the
+  // session (until reload).
+  const isDayHourNow = () => {
+    const h = new Date().getHours();
+    return h >= 7 && h < 19;
+  };
+  const [darkMode, setDarkMode] = useState(() => !isDayHourNow());
   const [themeManualOverride, setThemeManualOverride] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return;
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-    const handler = (e) => {
-      // OS-level theme change — honor it unless the user has already clicked the toggle this session.
-      if (!themeManualOverride) setDarkMode(e.matches);
+    if (themeManualOverride) return;
+    const sync = () => setDarkMode(!isDayHourNow());
+    const id = setInterval(sync, 15 * 60 * 1000);
+    window.addEventListener('focus', sync);
+    return () => {
+      clearInterval(id);
+      window.removeEventListener('focus', sync);
     };
-    mql.addEventListener('change', handler);
-    return () => mql.removeEventListener('change', handler);
   }, [themeManualOverride]);
 
   // Global "Merge dual-class" toggle. Defaults to ON.
@@ -2115,6 +2336,7 @@ export default function PortfolioTracker() {
             <div className="min-[1200px]:hidden">
               <ConsensusPanel portfolios={portfolios} disabledHoldings={disabledHoldings}
                 onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} onEdit={setEditing}
+                prices={prices}
                 mergeMode={mergeMode} setMergeMode={setMergeMode} />
             </div>
             {/* Wide layout — three panels side-by-side, one per mode. Pool lives once below. */}
@@ -2123,6 +2345,7 @@ export default function PortfolioTracker() {
                 <ConsensusPanel key={mode}
                   portfolios={portfolios} disabledHoldings={disabledHoldings}
                   onSetVisibility={setPortfolioVisibility} onIsolate={isolateInConsensus} onEdit={setEditing}
+                  prices={prices}
                   mergeMode={mergeMode} setMergeMode={setMergeMode}
                   forcedViewMode={mode} hideMergeToggle hidePool />
               ))}

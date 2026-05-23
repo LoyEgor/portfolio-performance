@@ -1,6 +1,7 @@
 {
   "version": "v9",
   "latestQuarter": "2026-03-31",
+  "activityWindowQuarters": 6,
   "lastBackfillAt": null,
   "lastStocksUpdateAt": null,
   "generatedBy": "migrate-to-v9.mjs",

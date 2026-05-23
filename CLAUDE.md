@@ -29,7 +29,11 @@ existing state, do the push, write the new state.
 When the user posts a broker screenshot for `myPortfolio`:
 - Skip ETFs (`ARCA`, `LSEETF`, `IBIS2`, `SBF` suffixes, or anything explicitly an ETF) and cash entries — myPortfolio is equities-only.
 - Compute weights = `market_value / total_equity_MV × 100`, rounded to 2 decimals.
-- Save as `{ ticker, weight }` — no `shares` field. myPortfolio uses the same shape as gurus.
+- Save as `{ ticker, weight }`. `shares` is an optional field on the holding
+  schema — goals (INVESTORS-BACKFILL) populate it for gurus inside the
+  `meta.activityWindowQuarters` rolling window so the UI can show real trading
+  activity. For `myPortfolio` it's left absent (we don't track share counts
+  for the user's own positions).
 
 ## Source of truth & save behaviour
 

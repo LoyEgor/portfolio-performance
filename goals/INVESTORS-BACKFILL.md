@@ -57,6 +57,47 @@ case, runs after a 13F deadline).
      (newest available quarter, or N years back if `--years` given).
    - Skip if already complete (no `--force`).
 
+### Activity data (shares) — rolling window
+
+For the `meta.json.activityWindowQuarters` most recent quarters (currently 6),
+holdings must include a `shares` field alongside `weight`. This lets the UI
+compute real buy/sell activity (`Δshares / prev_shares`) instead of weight
+delta — which mixes actual trading with price drift.
+
+Schema for a holding in any snapshot inside the window:
+
+```json
+{ "ticker": "AAPL", "weight": 22.91, "shares": 227917808 }
+```
+
+Outside the window, `shares` is omitted — that data isn't kept and the UI shows
+a `~` marker on its weight-based fallback.
+
+**Source priority for shares (try until something works — don't give up early):**
+
+1. **DataRoma current quarter:** `holdings.php?m=<code>` has a `Shares` column.
+2. **DataRoma historic quarter:** check if the page accepts a quarter parameter
+   (e.g. `?q=YYYY-QN`); if it does, use it.
+3. **Web Archive of DataRoma:** captures of `holdings.php?m=<code>` taken near
+   each 13F deadline (15 May / 14 Aug / 14 Nov / 14 Feb). Pick the capture
+   closest to deadline+30 days for that quarter.
+4. **13F.info:** per-quarter pages list shares (`https://13f.info/manager/...`).
+5. **Other priority sources** from README.md: stockzoa, valuesider, GuruFocus,
+   WhaleWisdom, HedgeFollow, StockCircle.
+
+For each quarter inside the window, try every source in order until shares is
+filled for every position. Log a warning only if all sources failed; never
+leave the quarter without an attempt at every source. Weight is fetched from
+the primary source as before — only `shares` triggers the multi-source search.
+
+**Cleanup when the window advances:**
+
+When `meta.latestQuarter` is bumped to a new quarter, the oldest quarter that
+just fell out of the window must lose its `shares` fields. e.g. when window
+moves from `[Q1 2025 … Q1 2026]` to `[Q2 2025 … Q2 2026]`, every holding in
+the `2025-03-31` snapshot of every investor file gets `shares` deleted (weight
+stays). This keeps disk usage flat over time.
+
 ### Phase B — Fetch (paced)
 
 For each investor in the work plan:

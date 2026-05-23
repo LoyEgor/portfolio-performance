@@ -198,10 +198,16 @@ html.dark textarea:focus {
   border-color: #78716c;
 }
 
-/* --- Scrollbar --- */
-html.dark ::-webkit-scrollbar { width: 6px; height: 6px; }
+/* --- Scrollbar ---
+   Size must be identical in light and dark themes — otherwise the scrollbar takes a different
+   amount of horizontal space when it appears, the available content width changes, and rows
+   reflow / lines jump on theme toggle. Colors are themed; geometry stays put. */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d6cfc0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b8b3aa; }
 html.dark ::-webkit-scrollbar-track { background: #1c1917; }
-html.dark ::-webkit-scrollbar-thumb { background: #44403c; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb { background: #44403c; }
 html.dark ::-webkit-scrollbar-thumb:hover { background: #57534e; }
 
 /* --- Tooltip (recharts) --- */

@@ -222,6 +222,13 @@ writeJson(resolve(DATA_DIR, 'prices.json'), prices);
 writeJson(resolve(DATA_DIR, 'meta.json'), {
   version: 'v9',
   latestQuarter,
+  // Rolling window for which quarters must include shares data alongside weight.
+  // Used by both the goals (BACKFILL writes shares only inside the window) and the UI
+  // (ConsensusPanel + EditModal compute share-based activity when both quarters have
+  // shares; otherwise fall back to weight-based delta with a "~" marker).
+  // 6 = 5 visible quarters + 1 reference, so the earliest visible quarter still has
+  // something to compare against. Bump this and re-run BACKFILL to widen the window.
+  activityWindowQuarters: 6,
   lastBackfillAt: null,
   lastStocksUpdateAt: null,
   generatedBy: 'migrate-to-v9.mjs',
