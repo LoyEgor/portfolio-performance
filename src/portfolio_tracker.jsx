@@ -32,6 +32,22 @@ const DEFAULT_PORTFOLIOS = [
 
 // 9 distinct hues that fit on one row alongside the custom color picker.
 // Anything outside this set still works (Color picker → exact hex), it's just not preset.
+// Single source of truth for an investor's color across every component (portfolio
+// row dot, chart line, matrix column dot, etc.). Priority:
+//   1. If a portfolio object exists in the in-memory `portfolios[]` and has a color,
+//      use that (it's what the chart draws with and what Save persists).
+//   2. Otherwise check `investorCustomization[id].color` (saved override in
+//      default-data.json).
+//   3. Otherwise pick deterministically from PALETTE by hashing the id —
+//      stable for the same id across reloads and across components.
+const getInvestorColor = (id, activePortfolio, customization) => {
+  if (activePortfolio?.color) return activePortfolio.color;
+  if (customization?.[id]?.color) return customization[id].color;
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = ((h << 5) - h + id.charCodeAt(i)) | 0;
+  return PALETTE[Math.abs(h) % PALETTE.length];
+};
+
 const PALETTE = [
   '#1a1815', '#dc2626', '#ea580c', '#d97706', '#16a34a',
   '#0d9488', '#2563eb', '#7c3aed', '#db2777',
@@ -658,7 +674,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
               readOnly={isFromBase}
               title={isFromBase ? 'Subtitle comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
-              className={`w-full border border-stone-300 rounded px-3 py-2 text-xs font-mono focus:outline-none ${
+              className={`w-full border border-stone-300 rounded px-3 py-2 text-sm font-mono focus:outline-none ${
                 isFromBase ? 'bg-stone-100 text-stone-500 cursor-not-allowed' : 'bg-white text-stone-700 focus:border-stone-700'
               }`} />
           </div>
@@ -1622,7 +1638,7 @@ const fmtRatio = (v, d = 2) => v == null || !Number.isFinite(v) ? '—' : v.toFi
 
 const InvestorsMatrix = ({
   investorsIndex, portfolios, prices, latestQuarter,
-  onAddInvestor, onRemoveInvestor, onEditInvestor,
+  onToggleVisibility, onEditInvestor,
 }) => {
   const [mode, setMode] = useState('absolute');
   const [granularity, setGranularity] = useState('yearly'); // 'yearly' | 'quarterly'
@@ -1663,7 +1679,9 @@ const InvestorsMatrix = ({
     if (!extra) return null;
     return {
       id: inv.id, name: inv.name, subtitle: inv.subtitle || '',
-      kind: inv.kind || 'custom', color: '#1a1815', visible: true,
+      kind: inv.kind || 'custom',
+      color: getInvestorColor(inv.id, null, null),
+      visible: true,
       holdings: extra.holdings || [], history: extra.history || [],
     };
   }), [investorsIndex, portfolios, extraInvestors]);
@@ -1878,28 +1896,40 @@ const InvestorsMatrix = ({
                 <div className="text-[9px] tracking-[0.15em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Year / Metric</div>
               </th>
               {sortedInvestors.map(p => {
-                const isActive = activeIds.has(p.id);
+                const inPortfolio = activeIds.has(p.id);
+                const isVisible = inPortfolio && p.visible !== false;
+                // Color comes from the same helper used everywhere — single source.
+                // For investors not yet in `portfolios`, we don't have a portfolio object,
+                // so the deterministic palette fallback kicks in (stable per id).
+                const dotColor = getInvestorColor(p.id, inPortfolio ? p : null, null);
                 return (
                   <th key={p.id} style={{
                     position: 'sticky', top: 0, zIndex: 2,
                     background: 'var(--bg-card-elevated)',
                     borderBottom: '1px solid var(--border-strong)',
                     padding: '6px 8px',
-                    // Investors share remaining horizontal width evenly. minWidth keeps the
-                    // column readable; maxWidth prevents 2-line ellipsis names from blowing
-                    // up the column when only a handful of investors are visible.
                     minWidth: 90, maxWidth: 140,
                     textAlign: 'center', verticalAlign: 'top',
                   }}>
-                    {/* Eye toggle on top — visually anchors the column. */}
-                    <div className="flex items-center justify-center" style={{ marginBottom: 4 }}>
-                      <button onClick={() => isActive ? onRemoveInvestor(p.id) : onAddInvestor(p.id)}
-                        title={isActive ? 'Remove from portfolio' : 'Add to portfolio'}
+                    {/* Color dot + eye toggle on the top row. The dot mirrors the chart line
+                        color so the user can see the link between table column and chart line.
+                        The eye toggle shows/hides the chart line WITHOUT removing the column. */}
+                    <div className="flex items-center justify-center gap-1.5" style={{ marginBottom: 4 }}>
+                      <span title={`Chart line color`}
+                        style={{
+                          width: 8, height: 8, borderRadius: '50%',
+                          backgroundColor: isVisible ? dotColor : 'transparent',
+                          border: `1.5px solid ${dotColor}`,
+                          opacity: isVisible ? 1 : 0.5,
+                          flexShrink: 0,
+                        }} />
+                      <button onClick={() => onToggleVisibility(p.id)}
+                        title={isVisible ? 'Hide chart line' : 'Show chart line'}
                         style={{
                           background: 'none', border: 'none', cursor: 'pointer',
-                          color: isActive ? 'var(--accent-on-bg)' : 'var(--text-muted)', padding: '2px',
+                          color: isVisible ? 'var(--accent-on-bg)' : 'var(--text-muted)', padding: '2px',
                         }}>
-                        {isActive ? <Eye size={13} /> : <EyeOff size={13} />}
+                        {isVisible ? <Eye size={13} /> : <EyeOff size={13} />}
                       </button>
                     </div>
                     {/* Name below — clamps to 2 lines, then ellipsis. */}
@@ -2138,7 +2168,11 @@ export default function PortfolioTracker() {
         name: meta.name,
         subtitle: meta.subtitle || '',
         kind: meta.kind || 'custom',
-        color: '#1a1815',                                       // default; user can change via EditModal
+        // Deterministic palette color so the line/dot color is stable across
+        // load → unload → re-load (and matches the InvestorsMatrix dot before
+        // the investor is added). User can override via EditModal color picker;
+        // override is persisted via Save → investorCustomization in default-data.json.
+        color: getInvestorColor(id, null, null),
         visible: true,
         locked: false,
         holdings: inv.holdings || [],
@@ -2156,11 +2190,21 @@ export default function PortfolioTracker() {
     setPortfolios(prev => [...prev, p]);
   };
 
-  // Remove an investor from the active portfolio set. Doesn't delete their data file —
-  // only the in-memory selection. Save persists the new selectedInvestors[].
-  const removeInvestorFromPortfolio = (id) => {
-    setPortfolios(prev => prev.filter(p => p.id !== id));
+  // Toggle the visibility of an investor in the chart. If the investor isn't yet
+  // in the active portfolio set, fetch + add them (with visible=true). Used by
+  // the matrix table's eye-toggle in the column header — clicking it shows/hides
+  // the chart line without removing the column from the table.
+  const togglePortfolioVisibilityById = async (id) => {
+    const existing = portfolios.find(p => p.id === id);
+    if (existing) {
+      setPortfolios(prev => prev.map(p => p.id === id ? { ...p, visible: !p.visible } : p));
+      return;
+    }
+    const p = await loadInvestor(id);
+    if (!p) return;
+    setPortfolios(prev => [...prev, { ...p, visible: true }]);
   };
+
 
   useEffect(() => {
     (async () => {
@@ -2684,8 +2728,7 @@ export default function PortfolioTracker() {
             portfolios={portfolios}
             prices={prices}
             latestQuarter={latestQuarter}
-            onAddInvestor={addInvestorToPortfolio}
-            onRemoveInvestor={removeInvestorFromPortfolio}
+            onToggleVisibility={togglePortfolioVisibilityById}
             onEditInvestor={setEditing}
           />
         ) : (
