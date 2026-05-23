@@ -498,7 +498,7 @@ const asOfLabel = (iso) => {
   return `Q${q} '${String(y).slice(2)}`;
 };
 
-const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode }) => {
+const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode, isFromBase = false }) => {
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
   const [holdings] = useState(
@@ -617,9 +617,14 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* On mobile: Color first, then Name. On desktop: Name | Color side by side. */}
             <div className="order-2 sm:order-1">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Name</label>
-              <input value={name} onChange={(e) => setName(e.target.value)}
-                className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-sm font-serif focus:border-stone-700 focus:outline-none" />
+              <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">
+                Name {isFromBase && <span className="text-stone-400 normal-case tracking-normal">· from base, read-only</span>}
+              </label>
+              <input value={name} onChange={(e) => setName(e.target.value)} readOnly={isFromBase}
+                title={isFromBase ? 'Name comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
+                className={`w-full border border-stone-300 rounded px-3 py-2 text-sm font-serif focus:outline-none ${
+                  isFromBase ? 'bg-stone-100 text-stone-500 cursor-not-allowed' : 'bg-white focus:border-stone-700'
+                }`} />
             </div>
             <div className="order-1 sm:order-2">
               <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Color</label>
@@ -647,9 +652,15 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
           </div>
           <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Subtitle</label>
+            <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">
+              Subtitle {isFromBase && <span className="text-stone-400 normal-case tracking-normal">· from base, read-only</span>}
+            </label>
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
-              className="w-full bg-white border border-stone-300 rounded px-3 py-2 text-xs text-stone-700 font-mono focus:border-stone-700 focus:outline-none" />
+              readOnly={isFromBase}
+              title={isFromBase ? 'Subtitle comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
+              className={`w-full border border-stone-300 rounded px-3 py-2 text-xs font-mono focus:outline-none ${
+                isFromBase ? 'bg-stone-100 text-stone-500 cursor-not-allowed' : 'bg-white text-stone-700 focus:border-stone-700'
+              }`} />
           </div>
           {miniChartData && (
             <div className="flex items-center gap-3">
@@ -853,14 +864,12 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           if (delta === null || delta === undefined) return null;
 
                           // Noise thresholds: real has 1% floor (exact data — small signals are real);
-                          // rough has 25% floor — calibrated empirically against DataRoma's Recent
-                          // Activity column for Buffett (Q4 2025 → Q1 2026) and Li Lu. Below 25% the
-                          // estimate is dominated by monthly-price approximation noise (typical false
-                          // positive: 7-19% range). 25% catches all meaningful trades (BAC -71%,
-                          // CROX +41%, GOOGL +204%, CVX -35%, etc.) while hiding the noise.
+                          // rough has 15% floor — picks up mid-range real trades (Reduce ~11-20%)
+                          // while still hiding most monthly-price approximation noise. Accepts a few
+                          // more false positives in exchange for catching smaller real moves.
                           const abs = Math.abs(delta);
                           const isRough = confidence === 'rough';
-                          if (abs < (isRough ? 25 : 1)) return null;
+                          if (abs < (isRough ? 15 : 1)) return null;
 
                           const cls = isRough
                             ? (delta >= 0 ? 'text-emerald-700/60' : 'text-red-700/60')
@@ -941,15 +950,11 @@ const BackupModal = ({ onRestore, onClose }) => {
       });
     }
 
-    // Prices — handle unwrapped {date: price}, wrapped {data: {date: price}, importedAt}, and array form
+    // Prices — flat {date: price} per ticker (the v8 backup format).
     const cleanPrices = {};
     const rawPrices = (raw.prices && typeof raw.prices === 'object' && !Array.isArray(raw.prices)) ? raw.prices : {};
-    Object.entries(rawPrices).forEach(([ticker, priceData]) => {
+    Object.entries(rawPrices).forEach(([ticker, priceMap]) => {
       if (typeof ticker !== 'string' || !ticker.trim()) { skipped.prices++; return; }
-      let priceMap = priceData;
-      if (priceData && typeof priceData === 'object' && priceData.data && typeof priceData.data === 'object') {
-        priceMap = priceData.data;
-      }
       if (!priceMap || typeof priceMap !== 'object') { skipped.prices++; return; }
       const cleaned = {};
       Object.entries(priceMap).forEach(([date, price]) => {
@@ -1510,9 +1515,448 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     </div>
   );
 };
+// ============================================================================
+// INVESTORS MATRIX — rows = years + CAGR/Sortino/MaxDD, columns = investors
+// ============================================================================
+//
+// Excel-like grid. Click on a row label → sort columns by that row's values.
+// Click on an investor's eye toggle (under the name) → add/remove from the
+// active portfolio set.
+//
+// Modes (top right of table):
+//   - Absolute: raw annual return per cell
+//   - vs VT:    cell = investor_return - VT_return (same year), in pp
+//   - vs VOO:   cell = investor_return - VOO_return (same year), in pp
+//
+// Color + font-weight per cell follow the magnitude rule (see styleForDelta).
+
+const annualReturnFromSeries = (series, year) => {
+  if (!series?.length) return null;
+  const inYear = series.filter(d => d.date.startsWith(`${year}-`));
+  if (inYear.length < 2) {
+    const yearStart = series.find(d => d.date >= `${year}-01-01`);
+    const yearEndIdx = (() => { let i = -1; series.forEach((d, k) => { if (d.date.startsWith(`${year}-`) || (d.date < `${year + 1}-01-01` && d.date >= `${year}-01-01`)) i = k; }); return i; })();
+    if (!yearStart || yearEndIdx < 0) return null;
+    const yearEnd = series[yearEndIdx];
+    if (yearStart.date === yearEnd.date) return null;
+    if (!yearStart.value) return null;
+    return (yearEnd.value / yearStart.value - 1) * 100;
+  }
+  const first = inYear[0].value;
+  const last  = inYear[inYear.length - 1].value;
+  if (!first) return null;
+  return (last / first - 1) * 100;
+};
+
+// Quarter return: value at quarter-end / value at previous quarter-end - 1.
+// Uses closest-LE matching so missing month-ends fall back to the nearest earlier point.
+const quarterReturnFromSeries = (series, year, q) => {
+  if (!series?.length) return null;
+  const ends = ['03-31', '06-30', '09-30', '12-31'];
+  const endIso = `${year}-${ends[q - 1]}`;
+  const startIso = q === 1 ? `${year - 1}-12-31` : `${year}-${ends[q - 2]}`;
+  const closestLE = (target) => {
+    let lo = 0, hi = series.length - 1, ans = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (series[mid].date <= target) { ans = mid; lo = mid + 1; } else hi = mid - 1;
+    }
+    return ans >= 0 ? series[ans] : null;
+  };
+  const a = closestLE(startIso); const b = closestLE(endIso);
+  if (!a || !b || !a.value || a.date >= b.date) return null;
+  return (b.value / a.value - 1) * 100;
+};
+
+const cagrFromSeries = (series) => {
+  if (!series || series.length < 2) return null;
+  const first = series[0]; const last = series[series.length - 1];
+  if (!first.value) return null;
+  const days = (new Date(last.date) - new Date(first.date)) / 86400000;
+  if (days < 30) return null;
+  const years = days / 365.25;
+  return (Math.pow(last.value / first.value, 1 / years) - 1) * 100;
+};
+
+const sortinoFromSeries = (series) => {
+  if (!series || series.length < 3) return null;
+  const rets = [];
+  for (let i = 1; i < series.length; i++) {
+    const prev = series[i - 1].value, curr = series[i].value;
+    if (!prev) continue;
+    rets.push(curr / prev - 1);
+  }
+  if (rets.length < 2) return null;
+  const mean = rets.reduce((s, r) => s + r, 0) / rets.length;
+  const downside = rets.filter(r => r < 0);
+  if (!downside.length) return null;
+  const downsideStd = Math.sqrt(downside.reduce((s, r) => s + r * r, 0) / downside.length);
+  if (!downsideStd) return null;
+  return (mean * 12) / (downsideStd * Math.sqrt(12));
+};
+
+const maxDrawdownFromSeries = (series) => {
+  if (!series || series.length < 2) return null;
+  let peak = -Infinity, maxDD = 0;
+  for (const d of series) {
+    if (d.value > peak) peak = d.value;
+    if (peak > 0) { const dd = (d.value - peak) / peak; if (dd < maxDD) maxDD = dd; }
+  }
+  return maxDD * 100;
+};
+
+const styleForDelta = (delta) => {
+  if (delta == null || !Number.isFinite(delta)) return { color: 'var(--text-muted)', fontWeight: 400 };
+  const abs = Math.abs(delta);
+  if (abs < 3) return { color: 'var(--magnitude-low)', fontWeight: 400 };
+  const isPos = delta >= 0;
+  const mild   = isPos ? 'var(--success-mild)'   : 'var(--danger-mild)';
+  const strong = isPos ? 'var(--success-strong)' : 'var(--danger-strong)';
+  if (abs < 20) return { color: mild,   fontWeight: 400 };
+  if (abs < 40) return { color: strong, fontWeight: 700 };
+  return                { color: strong, fontWeight: 900 };
+};
+
+const fmtPct = (v, d = 1) => v == null || !Number.isFinite(v) ? '—' : `${v >= 0 ? '+' : ''}${v.toFixed(d)}%`;
+const fmtRatio = (v, d = 2) => v == null || !Number.isFinite(v) ? '—' : v.toFixed(d);
+
+const InvestorsMatrix = ({
+  investorsIndex, portfolios, prices, latestQuarter,
+  onAddInvestor, onRemoveInvestor, onEditInvestor,
+}) => {
+  const [mode, setMode] = useState('absolute');
+  const [granularity, setGranularity] = useState('yearly'); // 'yearly' | 'quarterly'
+  // Default: sort columns by CAGR descending — gives the user the best long-term
+  // performers on the left immediately on open.
+  const [sortRow, setSortRow] = useState({ kind: 'cagr' });
+  const [sortDir, setSortDir] = useState('desc');
+  const [extraInvestors, setExtraInvestors] = useState({});
+
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL;
+    const inActive = new Set(portfolios.map(p => p.id));
+    const missing = investorsIndex.map(i => i.id).filter(id => !inActive.has(id) && !extraInvestors[id]);
+    if (!missing.length) return;
+    let cancelled = false;
+    (async () => {
+      const fetched = {};
+      await Promise.all(missing.map(async id => {
+        try {
+          const r = await fetch(`${base}data/investors/${id}.json`);
+          if (!r.ok) return;
+          fetched[id] = await r.json();
+        } catch {}
+      }));
+      if (!cancelled && Object.keys(fetched).length) {
+        setExtraInvestors(prev => ({ ...prev, ...fetched }));
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [investorsIndex, portfolios, extraInvestors]);
+
+  const activeIds = useMemo(() => new Set(portfolios.map(p => p.id)), [portfolios]);
+
+  const investorPortfolios = useMemo(() => investorsIndex.map(inv => {
+    const active = portfolios.find(p => p.id === inv.id);
+    if (active) return active;
+    const extra = extraInvestors[inv.id];
+    if (!extra) return null;
+    return {
+      id: inv.id, name: inv.name, subtitle: inv.subtitle || '',
+      kind: inv.kind || 'custom', color: '#1a1815', visible: true,
+      holdings: extra.holdings || [], history: extra.history || [],
+    };
+  }), [investorsIndex, portfolios, extraInvestors]);
+
+  const seriesByInvestor = useMemo(() => {
+    const out = {};
+    investorPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
+    return out;
+  }, [investorPortfolios, prices]);
+
+  const voo = portfolios.find(p => p.id === 'voo');
+  const vt  = portfolios.find(p => p.id === 'vt');
+  const benchSeries = useMemo(() => ({
+    voo: voo ? computeSeries(voo, prices) : null,
+    vt:  vt  ? computeSeries(vt,  prices) : null,
+  }), [voo, vt, prices]);
+
+  // Periods array — one row per period in the body. Yearly = calendar years.
+  // Quarterly = every Y-Qn quarter present in the data.
+  const periods = useMemo(() => {
+    if (granularity === 'yearly') {
+      const found = new Set();
+      Object.values(seriesByInvestor).forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 4))); });
+      return [...found].sort().map(y => ({ key: `year-${y}`, kind: 'year', year: parseInt(y), label: y }));
+    }
+    // Quarterly
+    const found = new Set();
+    Object.values(seriesByInvestor).forEach(s => {
+      (s || []).forEach(d => {
+        const [y, m] = d.date.split('-').map(Number);
+        found.add(`${y}-${Math.ceil(m / 3)}`);
+      });
+    });
+    return [...found].sort((a, b) => {
+      const [ay, aq] = a.split('-').map(Number);
+      const [by, bq] = b.split('-').map(Number);
+      return ay - by || aq - bq;
+    }).map(s => {
+      const [y, q] = s.split('-').map(Number);
+      return { key: `q-${y}-${q}`, kind: 'quarter', year: y, q, label: `${y} Q${q}` };
+    });
+  }, [granularity, seriesByInvestor]);
+
+  const computePeriodValue = (s, per) => per.kind === 'year'
+    ? annualReturnFromSeries(s, per.year)
+    : quarterReturnFromSeries(s, per.year, per.q);
+
+  const absoluteMetrics = useMemo(() => {
+    const out = {};
+    investorPortfolios.forEach(p => {
+      if (!p) return;
+      const s = seriesByInvestor[p.id];
+      out[p.id] = {
+        byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(s, per)])),
+        cagr: cagrFromSeries(s), sortino: sortinoFromSeries(s), maxdd: maxDrawdownFromSeries(s),
+      };
+    });
+    return out;
+  }, [investorPortfolios, seriesByInvestor, periods]);
+
+  const benchMetrics = useMemo(() => {
+    const bench = mode === 'vt' ? benchSeries.vt : mode === 'voo' ? benchSeries.voo : null;
+    if (!bench) return null;
+    return {
+      byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(bench, per)])),
+      cagr: cagrFromSeries(bench), sortino: sortinoFromSeries(bench), maxdd: maxDrawdownFromSeries(bench),
+    };
+  }, [mode, benchSeries, periods]);
+
+  // sortRow shapes: { kind: 'period', periodKey } | { kind: 'cagr' } | { kind: 'sortino' } | { kind: 'maxdd' }
+  const cellValue = (invId, kind, periodKey) => {
+    const abs = absoluteMetrics[invId];
+    if (!abs) return null;
+    const absVal = kind === 'period'  ? abs.byPeriod[periodKey]
+                 : kind === 'cagr'    ? abs.cagr
+                 : kind === 'sortino' ? abs.sortino
+                 : kind === 'maxdd'   ? abs.maxdd : null;
+    if (mode === 'absolute' || !benchMetrics) return absVal;
+    const benchVal = kind === 'period'  ? benchMetrics.byPeriod[periodKey]
+                   : kind === 'cagr'    ? benchMetrics.cagr
+                   : kind === 'sortino' ? benchMetrics.sortino
+                   : kind === 'maxdd'   ? benchMetrics.maxdd : null;
+    if (absVal == null || benchVal == null) return null;
+    return absVal - benchVal;
+  };
+
+  const sortedInvestors = useMemo(() => {
+    if (!sortRow) return investorPortfolios.filter(Boolean);
+    const dir = sortDir === 'asc' ? 1 : -1;
+    return investorPortfolios.filter(Boolean).slice().sort((a, b) => {
+      const va = cellValue(a.id, sortRow.kind, sortRow.periodKey);
+      const vb = cellValue(b.id, sortRow.kind, sortRow.periodKey);
+      if (va == null && vb == null) return 0;
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      return (va - vb) * dir;
+    });
+  }, [investorPortfolios, sortRow, sortDir, absoluteMetrics, benchMetrics, mode]);
+
+  const onRowClick = (kind, periodKey) => {
+    if (sortRow?.kind === kind && sortRow?.periodKey === periodKey) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
+    else { setSortRow({ kind, periodKey }); setSortDir('desc'); }
+  };
+
+  const isSortRow = (kind, periodKey) => sortRow?.kind === kind && sortRow?.periodKey === periodKey;
+  // Row sort moves COLUMNS horizontally — use left/right arrows.
+  // Arrow points to the side that holds the larger values:
+  //   desc = max on the left  → ←
+  //   asc  = max on the right → →
+  const sortIndicator = (kind, periodKey) => isSortRow(kind, periodKey)
+    ? <span style={{ color: 'var(--text-muted)', marginLeft: 4 }}>{sortDir === 'asc' ? '→' : '←'}</span> : null;
+
+  const styleForRatio = (v, isDelta) => {
+    if (v == null) return { color: 'var(--text-muted)', fontWeight: 400 };
+    if (!isDelta) return { color: 'var(--text-primary)', fontWeight: 500 };
+    if (Math.abs(v) < 0.1) return { color: 'var(--magnitude-low)', fontWeight: 400 };
+    const isPos = v >= 0;
+    return { color: isPos ? 'var(--success-mild)' : 'var(--danger-mild)', fontWeight: Math.abs(v) >= 0.5 ? 700 : 400 };
+  };
+
+  // Cell pattern: the <td> centers its content horizontally (so the number block
+  // sits under the investor's name in the column header). Inside, an inline-block
+  // <span> is right-aligned so digits line up vertically across rows. minWidth on
+  // the span gives every cell the same internal width — right edges align even
+  // when values have different lengths (+12.4% vs +123.4%).
+  const renderPctCell = (key, v) => (
+    <td key={key} style={{ padding: '8px 10px', textAlign: 'center' }}>
+      <span style={{
+        ...styleForDelta(v),
+        display: 'inline-block', textAlign: 'right',
+        fontVariantNumeric: 'tabular-nums', minWidth: 60,
+      }}>{fmtPct(v)}</span>
+    </td>
+  );
+  const renderRatioCell = (key, v) => (
+    <td key={key} style={{ padding: '8px 10px', textAlign: 'center' }}>
+      <span style={{
+        ...styleForRatio(v, mode !== 'absolute'),
+        display: 'inline-block', textAlign: 'right',
+        fontVariantNumeric: 'tabular-nums', minWidth: 60,
+      }}>{fmtRatio(v)}</span>
+    </td>
+  );
+
+  const labelCellStyle = (active) => ({
+    position: 'sticky', left: 0, zIndex: 1,
+    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    borderRight: '1px solid var(--border-subtle)',
+    padding: '8px 12px', textAlign: 'left',
+    cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
+    // Matches the header cell: shrink to longest label, never wrap.
+    width: '1%', whiteSpace: 'nowrap',
+  });
+
+  return (
+    <div className="rounded-lg overflow-hidden shadow-sm"
+      style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
+      <div className="px-5 py-3 flex items-center justify-between flex-wrap gap-3"
+        style={{ background: 'var(--bg-panel)', borderBottom: '1px solid var(--border-subtle)' }}>
+        <div className="text-[10px] tracking-[0.2em] uppercase font-mono" style={{ color: 'var(--text-secondary)' }}>
+          Investors · {investorsIndex.length} in base · {[...activeIds].filter(id => investorsIndex.some(i => i.id === id)).length} in portfolio
+          <span className="ml-3" style={{ color: 'var(--text-muted)' }}>· base latest: {latestQuarter || '—'}</span>
+        </div>
+        <div className="flex items-center gap-3 flex-wrap">
+          {/* Granularity: yearly | quarterly. Switches the body rows; CAGR/Sortino/MaxDD stay aggregate. */}
+          <div className="flex items-center gap-0.5 rounded p-0.5" style={{ background: 'var(--row-stripe)' }}>
+            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }].map(opt => {
+              const active = granularity === opt.id;
+              return (
+                <button key={opt.id} onClick={() => setGranularity(opt.id)}
+                  className="px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all"
+                  style={{
+                    background: active ? 'var(--bg-card-elevated)' : 'transparent',
+                    color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
+                    boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none', cursor: 'pointer',
+                  }}>{opt.label}</button>
+              );
+            })}
+          </div>
+          {/* Comparison mode: absolute | vs VT | vs VOO. */}
+          <div className="flex items-center gap-0.5 rounded p-0.5" style={{ background: 'var(--row-stripe)' }}>
+            {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => {
+              const active = mode === opt.id;
+              return (
+                <button key={opt.id} onClick={() => setMode(opt.id)}
+                  className="px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all"
+                  style={{
+                    background: active ? 'var(--bg-card-elevated)' : 'transparent',
+                    color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
+                    boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none', cursor: 'pointer',
+                  }}>{opt.label}</button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div style={{ overflow: 'auto', maxHeight: '70vh' }}>
+        <table className="font-mono text-[12px]" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
+          <thead>
+            <tr>
+              {/* First column: shrinks to longest label content via width:1% + nowrap.
+                  All other columns split the remaining horizontal space evenly. */}
+              <th style={{
+                position: 'sticky', left: 0, top: 0, zIndex: 3,
+                background: 'var(--bg-card-elevated)',
+                borderBottom: '1px solid var(--border-strong)',
+                borderRight: '1px solid var(--border-subtle)',
+                padding: '8px 12px', textAlign: 'left',
+                width: '1%', whiteSpace: 'nowrap',
+              }}>
+                <div className="text-[9px] tracking-[0.15em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Year / Metric</div>
+              </th>
+              {sortedInvestors.map(p => {
+                const isActive = activeIds.has(p.id);
+                return (
+                  <th key={p.id} style={{
+                    position: 'sticky', top: 0, zIndex: 2,
+                    background: 'var(--bg-card-elevated)',
+                    borderBottom: '1px solid var(--border-strong)',
+                    padding: '6px 8px',
+                    // Investors share remaining horizontal width evenly. minWidth keeps the
+                    // column readable; maxWidth prevents 2-line ellipsis names from blowing
+                    // up the column when only a handful of investors are visible.
+                    minWidth: 90, maxWidth: 140,
+                    textAlign: 'center', verticalAlign: 'top',
+                  }}>
+                    {/* Eye toggle on top — visually anchors the column. */}
+                    <div className="flex items-center justify-center" style={{ marginBottom: 4 }}>
+                      <button onClick={() => isActive ? onRemoveInvestor(p.id) : onAddInvestor(p.id)}
+                        title={isActive ? 'Remove from portfolio' : 'Add to portfolio'}
+                        style={{
+                          background: 'none', border: 'none', cursor: 'pointer',
+                          color: isActive ? 'var(--accent-on-bg)' : 'var(--text-muted)', padding: '2px',
+                        }}>
+                        {isActive ? <Eye size={13} /> : <EyeOff size={13} />}
+                      </button>
+                    </div>
+                    {/* Name below — clamps to 2 lines, then ellipsis. */}
+                    <button onClick={() => onEditInvestor(p)} title={p.subtitle || p.name}
+                      style={{
+                        color: 'var(--text-primary)', fontWeight: 500, fontSize: 12,
+                        background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+                        width: '100%', textAlign: 'center',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden', textOverflow: 'ellipsis',
+                        whiteSpace: 'normal', wordBreak: 'break-word',
+                        lineHeight: 1.2, maxHeight: '2.4em',
+                      }}>{p.name}</button>
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {periods.map((per, pi) => (
+              <tr key={per.key} style={{ background: pi % 2 === 1 ? 'var(--row-stripe)' : 'transparent' }}>
+                <td onClick={() => onRowClick('period', per.key)} style={labelCellStyle(isSortRow('period', per.key))}>
+                  {per.label}{sortIndicator('period', per.key)}
+                </td>
+                {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'period', per.key)))}
+              </tr>
+            ))}
+            <tr style={{ height: 6 }}><td colSpan={1 + sortedInvestors.length}
+              style={{ background: 'var(--bg-panel)', borderTop: '1px solid var(--border-strong)' }} /></tr>
+            <tr style={{ background: 'var(--row-stripe)' }}>
+              <td onClick={() => onRowClick('cagr')} style={labelCellStyle(isSortRow('cagr'))}>CAGR{sortIndicator('cagr')}</td>
+              {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'cagr')))}
+            </tr>
+            <tr>
+              <td onClick={() => onRowClick('sortino')} style={labelCellStyle(isSortRow('sortino'))}>Sortino{sortIndicator('sortino')}</td>
+              {sortedInvestors.map(p => renderRatioCell(p.id, cellValue(p.id, 'sortino')))}
+            </tr>
+            <tr style={{ background: 'var(--row-stripe)' }}>
+              <td onClick={() => onRowClick('maxdd')} style={labelCellStyle(isSortRow('maxdd'))}>Max DD{sortIndicator('maxdd')}</td>
+              {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'maxdd')))}
+            </tr>
+            {sortedInvestors.length === 0 && (
+              <tr><td colSpan={1} style={{ padding: 32, textAlign: 'center', color: 'var(--text-muted)' }}>
+                Investor base is empty — run INVESTORS-BACKFILL.
+              </td></tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
 
 // ============================================================================
-// MAIN APP
+// MAIN APP — top-level glue
 // ============================================================================
 
 const PERIOD_OPTIONS = [
@@ -1537,6 +1981,9 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
+  const [view, setView] = useState('portfolio'); // 'portfolio' | 'investors'
+  const [investorsIndex, setInvestorsIndex] = useState([]);     // metadata of every investor in the base
+  const [latestQuarter, setLatestQuarter] = useState(null);     // from public/data/meta.json
   // Theme: time-of-day-based. Light between 07:00 and 19:00 local time, dark otherwise.
   // Re-checks on window focus and every 15 minutes, so leaving the app open across sunset
   // still flips the theme. The button toggle sets a manual override that sticks for the
@@ -1625,12 +2072,14 @@ export default function PortfolioTracker() {
       }
 
       // ----- v9 split layout -----
-      const [pricesRes, indexRes] = await Promise.all([
+      const [pricesRes, indexRes, metaRes] = await Promise.all([
         fetch(base + 'data/prices.json'),
         fetch(base + 'data/investors-index.json'),
+        fetch(base + 'data/meta.json'),
       ]);
       const prices = pricesRes.ok ? await pricesRes.json() : {};
       const index = indexRes.ok ? await indexRes.json() : { investors: [] };
+      const meta = metaRes.ok ? await metaRes.json() : {};
       const indexById = new Map((index.investors || []).map(i => [i.id, i]));
 
       // Per-investor files — fetch in parallel for the currently selected set.
@@ -1669,8 +2118,48 @@ export default function PortfolioTracker() {
         ...(cfg.tarasGuk ? [cfg.tarasGuk] : []),
         ...investorFiles.filter(Boolean),
       ];
-      return { portfolios, prices };
+      return { portfolios, prices, investorsIndex: index.investors || [], meta };
     } catch { return null; }
+  };
+
+  // Lazy-load a single investor file. Used when the user checks an investor in the
+  // table that isn't currently in selectedInvestors[]. Returns the assembled portfolio
+  // object (same shape the rest of the code expects), or null if not found.
+  const loadInvestor = async (id) => {
+    try {
+      const base = import.meta.env.BASE_URL;
+      const meta = investorsIndex.find(i => i.id === id);
+      if (!meta) return null;
+      const r = await fetch(`${base}data/investors/${id}.json`);
+      if (!r.ok) return null;
+      const inv = await r.json();
+      return {
+        id,
+        name: meta.name,
+        subtitle: meta.subtitle || '',
+        kind: meta.kind || 'custom',
+        color: '#1a1815',                                       // default; user can change via EditModal
+        visible: true,
+        locked: false,
+        holdings: inv.holdings || [],
+        history: inv.history || [],
+      };
+    } catch { return null; }
+  };
+
+  // Add an investor to the active portfolio set (chart + portfolio list).
+  // Fetches their per-investor file if not already loaded.
+  const addInvestorToPortfolio = async (id) => {
+    if (portfolios.some(p => p.id === id)) return; // already in
+    const p = await loadInvestor(id);
+    if (!p) return;
+    setPortfolios(prev => [...prev, p]);
+  };
+
+  // Remove an investor from the active portfolio set. Doesn't delete their data file —
+  // only the in-memory selection. Save persists the new selectedInvestors[].
+  const removeInvestorFromPortfolio = (id) => {
+    setPortfolios(prev => prev.filter(p => p.id !== id));
   };
 
   useEffect(() => {
@@ -1679,6 +2168,8 @@ export default function PortfolioTracker() {
       if (def?.portfolios) {
         setPortfolios(def.portfolios);
         setPrices(def.prices || {});
+        setInvestorsIndex(def.investorsIndex || []);
+        setLatestQuarter(def.meta?.latestQuarter || null);
         setDefaultDataHash(computeHash(def.portfolios));
       } else {
         setPortfolios(DEFAULT_PORTFOLIOS);
@@ -2145,6 +2636,21 @@ export default function PortfolioTracker() {
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
+                {/* View toggle: Portfolio (chart + selected list) ⇄ Investors (full base table). */}
+                <div className="flex items-center gap-0.5 bg-stone-100 rounded p-0.5 border border-stone-300">
+                  <button onClick={() => setView('portfolio')}
+                    className={`px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all ${
+                      view === 'portfolio' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                    }`}>
+                    Portfolio
+                  </button>
+                  <button onClick={() => setView('investors')}
+                    className={`px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all ${
+                      view === 'investors' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                    }`}>
+                    Investors
+                  </button>
+                </div>
                 {hasUnsavedChanges && !saving && (
                   <button onClick={resetToDefaults}
                     className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded"
@@ -2172,6 +2678,17 @@ export default function PortfolioTracker() {
           </div>
         </div>
 
+        {view === 'investors' ? (
+          <InvestorsMatrix
+            investorsIndex={investorsIndex}
+            portfolios={portfolios}
+            prices={prices}
+            latestQuarter={latestQuarter}
+            onAddInvestor={addInvestorToPortfolio}
+            onRemoveInvestor={removeInvestorFromPortfolio}
+            onEditInvestor={setEditing}
+          />
+        ) : (
         <div className="grid grid-cols-1 min-[1200px]:grid-cols-[360px_1fr] min-[1200px]:items-stretch gap-6 items-start">
           {/* Chart — column 2 on wide screens, first on mobile (above the portfolios list). */}
           <div className="min-[1200px]:col-start-2 min-[1200px]:row-start-1 min-w-0">
@@ -2356,6 +2873,7 @@ export default function PortfolioTracker() {
           </div>
 
         </div>
+        )}
 
         <div className="mt-6 text-[10px] text-stone-500 font-mono leading-relaxed max-w-3xl">
           Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
@@ -2365,7 +2883,8 @@ export default function PortfolioTracker() {
       {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}
         onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
         disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled}
-        prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} mergeMode={mergeMode} setMergeMode={setMergeMode} />}
+        prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} mergeMode={mergeMode} setMergeMode={setMergeMode}
+        isFromBase={investorsIndex.some(i => i.id === editing.id)} />}
       {showBackup && <BackupModal onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>
   );

@@ -50,19 +50,59 @@ When the user posts a broker screenshot for `myPortfolio`:
 
 ## Theme tokens
 
-Use CSS variables instead of hardcoding hex/Tailwind dark conditionals in JSX:
-- `var(--text-primary)`, `var(--text-muted)`, `var(--text-muted-alt)`
-- `var(--success)`, `var(--danger)`
-- `var(--zone-up)`, `var(--zone-down)` — chart vs-benchmark fills
-- `var(--accent-brand)` — hero accent
-- `var(--weight-bar)`, `var(--ref-line)`, `var(--border-selected)`
+The project has a dual color system. **They must not mix in new components.**
 
-Light + dark values live in `src/index.css` `:root` and `html.dark`.
+1. **Legacy Tailwind color classes** (`bg-stone-XXX`, `text-amber-XXX`, etc.)
+   exist throughout older code (~166 references in `src/portfolio_tracker.jsx`).
+   Each requires a matching `html.dark .bg-stone-XXX {}` override in
+   `src/index.css`. Forgetting one → component looks broken in dark mode. This
+   is a leaky abstraction we tolerate for old code, **NOT a pattern to extend**.
 
-## Tailwind dark mode
+2. **CSS tokens** in `src/index.css` `:root` / `html.dark` — auto-switch with
+   theme. This is the correct way going forward.
 
-The app uses `html.dark .class { ... }` overrides in `index.css` rather than the
-`dark:` modifier. Most stone/amber/emerald/red classes already have overrides.
-If you introduce a new `bg-amber-NNN` / `border-X-NNN` and it doesn't look right
-in dark mode, search `src/index.css` for the closest existing pattern and add
-the override there — don't pollute JSX with `darkMode ? X : Y`.
+### Rule for new components
+
+**Use only `var(--…)` tokens for colors.** Do NOT add new `bg-stone-XXX`,
+`text-amber-XXX`, `border-emerald-XXX`, `hover:bg-stone-NNN` to JSX written
+from scratch. Inline style is acceptable:
+
+```jsx
+<div style={{ background: 'var(--bg-card)', color: 'var(--text-primary)' }} />
+```
+
+or via a dedicated `.foo { background: var(--bg-card); }` class in `index.css`.
+
+If the token you need doesn't exist — add it to BOTH `:root` and `html.dark`,
+then use it. Never inline a hex in JSX, never branch on `darkMode ? X : Y`.
+
+### Token reference (full set in `src/index.css`)
+
+**Surfaces:** `--bg-app`, `--bg-card`, `--bg-card-elevated`, `--bg-panel`,
+`--bg-input`, `--row-stripe`, `--row-hover`, `--row-selected`
+
+**Borders:** `--border-subtle`, `--border-strong`, `--border-focus`,
+`--border-selected`
+
+**Text** (decreasing intensity): `--text-primary`, `--text-secondary`,
+`--text-tertiary`, `--text-muted`, `--text-muted-alt`
+
+**Accent:** `--accent-brand` (hero), `--accent-on-bg` (interactive)
+
+**Status** — paired strong/mild: `--success`, `--success-strong`,
+`--success-mild`, `--danger`, `--danger-strong`, `--danger-mild`,
+`--neutral-mild`
+
+**Magnitude** for return/diff cells colored by `|Δ|`:
+- `--magnitude-low` — `|Δ| < 3%`, grey
+- `--magnitude-mid` — `3-20%`, regular weight, use `--success`/`--danger`
+- `--magnitude-high` — `20-40%`, bold, use `--success-strong`/`--danger-strong`
+- `--magnitude-extreme` — `≥40%`, black weight, same colors as `high`
+
+**Chart-specific:** `--zone-up`, `--zone-down`, `--ref-line`, `--weight-bar`
+
+### Migrating old code
+
+Don't bulk-rewrite. When you touch a section of old code, port its colors to
+tokens opportunistically. Eventually the legacy Tailwind color classes shrink
+and we can drop the `html.dark .X {}` override block en masse.
