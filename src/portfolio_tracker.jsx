@@ -32,14 +32,16 @@ const DEFAULT_PORTFOLIOS = [
 
 // 9 distinct hues that fit on one row alongside the custom color picker.
 // Anything outside this set still works (Color picker → exact hex), it's just not preset.
+const PALETTE = [
+  '#1a1815', '#dc2626', '#ea580c', '#d97706', '#16a34a',
+  '#0d9488', '#2563eb', '#7c3aed', '#db2777',
+];
+
 // Single source of truth for an investor's color across every component (portfolio
 // row dot, chart line, matrix column dot, etc.). Priority:
-//   1. If a portfolio object exists in the in-memory `portfolios[]` and has a color,
-//      use that (it's what the chart draws with and what Save persists).
-//   2. Otherwise check `investorCustomization[id].color` (saved override in
-//      default-data.json).
-//   3. Otherwise pick deterministically from PALETTE by hashing the id —
-//      stable for the same id across reloads and across components.
+//   1. activePortfolio.color (what the chart already draws with, Save persists).
+//   2. customization[id].color (saved override in default-data.json).
+//   3. Deterministic PALETTE pick by hash(id) — stable per id across components.
 const getInvestorColor = (id, activePortfolio, customization) => {
   if (activePortfolio?.color) return activePortfolio.color;
   if (customization?.[id]?.color) return customization[id].color;
@@ -47,11 +49,6 @@ const getInvestorColor = (id, activePortfolio, customization) => {
   for (let i = 0; i < id.length; i++) h = ((h << 5) - h + id.charCodeAt(i)) | 0;
   return PALETTE[Math.abs(h) % PALETTE.length];
 };
-
-const PALETTE = [
-  '#1a1815', '#dc2626', '#ea580c', '#d97706', '#16a34a',
-  '#0d9488', '#2563eb', '#7c3aed', '#db2777',
-];
 
 // Same-company different-class tickers — used when "merge dual-class" is enabled
 const TICKER_ALIASES = {
@@ -443,13 +440,13 @@ const PortfolioRow = ({
       onDragOver={(e) => onDragOver?.(e, portfolio.id)}
       onDrop={(e) => onDrop?.(e, portfolio.id)}
       onDragEnd={onDragEnd}
-      className={`group relative px-4 py-3 border-b border-stone-200/80 hover:bg-stone-100/60 transition-colors ${
+      className={`group relative px-4 py-3 border-b border-subtle hover-surface transition-colors ${
         isDragging ? 'opacity-30' : ''
-      } ${isDropTarget ? (dropPosition === 'after' ? 'bg-amber-50 border-b-2 border-b-amber-600' : 'bg-amber-50 border-t-2 border-t-amber-600') : ''}`}
+      } ${isDropTarget ? (dropPosition === 'after' ? 'accent-tint-mild border-b-2 border-b-accent-brand' : 'accent-tint-mild border-t-2 border-t-accent-brand') : ''}`}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
     >
       <div className="flex items-center gap-3">
-        <GripVertical size={12} className="text-stone-300 group-hover:text-stone-500 transition-colors flex-shrink-0" />
+        <GripVertical size={12} className="text-muted group-hover-text-secondary transition-colors flex-shrink-0" />
         <button onClick={(e) => { e.stopPropagation(); onToggle(portfolio.id, e); }}
           title={portfolio.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}
           className="flex-shrink-0 hover:opacity-70 p-1 -m-1">
@@ -469,14 +466,14 @@ const PortfolioRow = ({
             <span className={`text-[15px] tracking-tight font-serif ${!portfolio.visible ? 'line-through' : ''}`} style={{
               fontWeight: 500, color: portfolio.visible ? 'var(--text-primary)' : 'var(--text-muted)'
             }}>{portfolio.name}</span>
-            <span className="text-[10px] font-mono text-stone-400 tabular-nums">·{stockCount}</span>
-            {portfolio.id === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-stone-900 text-stone-50 rounded-sm">YOU</span>}
-            {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-stone-500">bench</span>}
+            <span className="text-[10px] font-mono text-muted tabular-nums">·{stockCount}</span>
+            {portfolio.id === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-contrast-pill text-on-contrast-pill rounded-sm">YOU</span>}
+            {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-muted-alt">bench</span>}
           </div>
-          {portfolio.subtitle && <div className="text-[11px] text-stone-500 mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
+          {portfolio.subtitle && <div className="text-[11px] text-muted-alt mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
           {missingTickers?.length > 0 && (
-            <div className="text-[10px] text-amber-700 mt-0.5 font-mono">
-              missing: {missingTickers.join(', ')} <span className="text-stone-500">({coveragePct}% covered)</span>
+            <div className="text-[10px] text-accent-brand mt-0.5 font-mono">
+              missing: {missingTickers.join(', ')} <span className="text-muted-alt">({coveragePct}% covered)</span>
             </div>
           )}
         </div>
@@ -491,10 +488,10 @@ const PortfolioRow = ({
               </div>
             </button>
           )}
-          {!hasReturn && stockCount === 0 && <div className="text-[10px] text-stone-400 italic font-mono">empty</div>}
-          {!hasReturn && stockCount > 0 && <div className="text-[10px] text-stone-400 italic font-mono">no data</div>}
+          {!hasReturn && stockCount === 0 && <div className="text-[10px] text-muted italic font-mono">empty</div>}
+          {!hasReturn && stockCount > 0 && <div className="text-[10px] text-muted italic font-mono">no data</div>}
           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover:bg-stone-200 rounded text-stone-500 hover:text-stone-800" title="Edit portfolio">
+            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover-surface rounded text-muted-alt hover-text-primary" title="Edit portfolio">
               <Pencil size={12} />
             </button>
           </div>
@@ -623,27 +620,28 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   return (
     // Pin near the top so the modal does not jump vertically when content height changes
     // (e.g. switching quarters with different holdings counts).
-    <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-12 overflow-y-auto">
-      <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
-        <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
+    <div className="fixed inset-0 modal-backdrop backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-12 overflow-y-auto">
+      <div className="surface-card-elevated border border-subtle rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
+        <div className="px-6 py-4 border-b border-subtle flex items-center justify-between">
           <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Edit Portfolio</h2>
-          <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
+          <button onClick={onClose} className="text-muted-alt hover-text-primary"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* On mobile: Color first, then Name. On desktop: Name | Color side by side. */}
             <div className="order-2 sm:order-1">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">
-                Name {isFromBase && <span className="text-stone-400 normal-case tracking-normal">· from base, read-only</span>}
+              <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">
+                Name {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
               </label>
               <input value={name} onChange={(e) => setName(e.target.value)} readOnly={isFromBase}
                 title={isFromBase ? 'Name comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
-                className={`w-full border border-stone-300 rounded px-3 py-2 text-sm font-serif focus:outline-none ${
-                  isFromBase ? 'bg-stone-100 text-stone-500 cursor-not-allowed' : 'bg-white focus:border-stone-700'
+                style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
+                className={`w-full border border-subtle rounded px-3 py-2 text-sm font-serif focus:outline-none ${
+                  isFromBase ? 'text-muted cursor-not-allowed' : 'surface-input focus-border'
                 }`} />
             </div>
             <div className="order-1 sm:order-2">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">Color</label>
+              <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">Color</label>
               <div className="flex flex-wrap gap-1.5 pt-1.5 items-center">
                 {PALETTE.map(c => {
                   // The near-black swatch (#1a1815) blends into the dark theme's canvas when not
@@ -655,33 +653,34 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                       style={{ backgroundColor: c, border: color === c ? '2px solid var(--border-selected)' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
                   );
                 })}
-                <span className="w-px h-5 bg-stone-300 mx-0.5" />
+                <span className="w-px h-5 bg-border-subtle mx-0.5" />
                 <label className="relative w-6 h-6 cursor-pointer group" title="Pick any color">
                   <input type="color" value={color} onChange={(e) => setColor(e.target.value)}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
-                  <div className="w-6 h-6 rounded-full border-2 border-dashed border-stone-400 group-hover:border-stone-700 flex items-center justify-center bg-white transition-colors"
+                  <div className="w-6 h-6 rounded-full border-2 border-dashed border-strong group-hover-border-focus flex items-center justify-center surface-card-elevated transition-colors"
                     style={!PALETTE.includes(color) ? { backgroundColor: color, borderStyle: 'solid', borderColor: 'var(--border-selected)', boxShadow: '0 0 0 1px white inset' } : undefined}>
-                    {PALETTE.includes(color) && <Pipette size={11} className="text-stone-500 group-hover:text-stone-800" />}
+                    {PALETTE.includes(color) && <Pipette size={11} className="text-muted-alt group-hover-text-primary" />}
                   </div>
                 </label>
               </div>
             </div>
           </div>
           <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-1.5 block">
-              Subtitle {isFromBase && <span className="text-stone-400 normal-case tracking-normal">· from base, read-only</span>}
+            <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">
+              Subtitle {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
             </label>
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
               readOnly={isFromBase}
               title={isFromBase ? 'Subtitle comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
-              className={`w-full border border-stone-300 rounded px-3 py-2 text-sm font-mono focus:outline-none ${
-                isFromBase ? 'bg-stone-100 text-stone-500 cursor-not-allowed' : 'bg-white text-stone-700 focus:border-stone-700'
+              style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
+              className={`w-full border border-subtle rounded px-3 py-2 text-sm font-mono focus:outline-none ${
+                isFromBase ? 'text-muted cursor-not-allowed' : 'surface-input text-secondary focus-border'
               }`} />
           </div>
           {miniChartData && (
             <div className="flex items-center gap-3">
               <div className="flex flex-col text-[10px] font-mono leading-tight">
-                <span className="text-stone-500 tracking-[0.1em] uppercase">vs VOO</span>
+                <span className="text-muted-alt tracking-[0.1em] uppercase">vs VOO</span>
                 <span className="tabular-nums font-medium"
                   style={{ color: miniDelta >= 0 ? 'var(--success)' : 'var(--danger)' }}>
                   {miniDelta >= 0 ? '+' : ''}{miniDelta.toFixed(2)}%
@@ -705,10 +704,10 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 So both Merge toggle and quarter switcher align with the bar, leaving the area above
                 the percent column empty. */}
             <div className="flex items-center justify-between mb-2 gap-3 pl-[37px] pr-16">
-              <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none"
+              <label className="flex items-center gap-1.5 text-[10px] font-mono text-secondary cursor-pointer select-none"
                 title="Display BRK.A/BRK.B, GOOG/GOOGL etc. as a single ticker. Merged rows are read-only — uncheck to edit individual share classes.">
                 <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
-                  className="accent-amber-700" />
+                  className="accent-on-bg-color" />
                 <span>Merge dual-class</span>
               </label>
               {historySnapshots.length > 0 && (
@@ -717,8 +716,8 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                     <button key={s.asOf} onClick={() => setViewIdx(idx)}
                       className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
                         viewIdx === idx
-                          ? 'bg-stone-900 text-stone-50 border-stone-900'
-                          : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
+                          ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
+                          : 'bg-transparent text-muted-alt hover-text-primary hover-border-strong border-subtle'
                       }`}
                       title={`13F snapshot · ${s.asOf} · read-only`}>
                       {asOfLabel(s.asOf)}
@@ -727,8 +726,8 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                   <button onClick={() => setViewIdx('current')}
                     className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
                       viewIdx === 'current'
-                        ? 'bg-stone-900 text-stone-50 border-stone-900'
-                        : 'bg-transparent text-stone-500 hover:text-stone-900 hover:border-stone-500 border-stone-300'
+                        ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
+                        : 'bg-transparent text-muted-alt hover-text-primary hover-border-strong border-subtle'
                     }`}
                     title="Current quarter">
                     Now
@@ -810,12 +809,12 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                             onToggleDisabled(portfolio.id, ticker);
                           }
                         }}
-                        className="w-[29px] h-[29px] flex-shrink-0 flex items-center justify-center text-stone-400 hover:text-stone-700"
+                        className="w-[29px] h-[29px] flex-shrink-0 flex items-center justify-center text-muted hover-text-secondary"
                         title={isDisabled ? 'Enable holding' : 'Disable holding (excluded from chart)'}>
                         {isDisabled ? <EyeOff size={13} /> : <Eye size={13} />}
                       </button>
                     ) : <div className="w-[29px] h-[29px] flex-shrink-0" />)}
-                    <div className="flex-1 relative bg-white border border-stone-300 rounded overflow-hidden">
+                    <div className="flex-1 relative surface-card-elevated border border-subtle rounded overflow-hidden">
                       {/* Brown base — kept/unchanged portion. Always mounted. */}
                       <div className="absolute inset-y-0 left-0 transition-all duration-300 pointer-events-none"
                         style={{ width: `${baseWidth}%`, background: 'var(--weight-bar)' }} />
@@ -848,11 +847,11 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                        *   )}
                        */}
                       <div className="relative flex items-center">
-                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-stone-500 line-through' : isDisabled ? 'text-stone-400 line-through' : 'text-stone-900'}`}>
+                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-muted-alt line-through' : isDisabled ? 'text-muted line-through' : 'text-primary'}`}>
                           {h.ticker}
                         </div>
                         {isMerged && (
-                          <span className="relative mr-2 text-[9px] tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm bg-amber-100 text-amber-800 border border-amber-300 whitespace-nowrap"
+                          <span className="relative mr-2 text-[9px] tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm accent-tint-strong text-accent-brand border border-accent-brand whitespace-nowrap"
                             title="Merged display row">
                             {h.mergedFrom.join(' + ')}
                           </span>
@@ -880,16 +879,18 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           if (delta === null || delta === undefined) return null;
 
                           // Noise thresholds: real has 1% floor (exact data — small signals are real);
-                          // rough has 15% floor — picks up mid-range real trades (Reduce ~11-20%)
-                          // while still hiding most monthly-price approximation noise. Accepts a few
-                          // more false positives in exchange for catching smaller real moves.
+                          // rough has 25% floor — calibrated empirically against DataRoma's Recent
+                          // Activity column for Buffett (Q4 2025 → Q1 2026) and Li Lu. Below 25% the
+                          // estimate is dominated by monthly-price approximation noise (typical false
+                          // positive: 7-19% range). 25% catches all meaningful trades (BAC -71%,
+                          // CROX +41%, GOOGL +204%, CVX -35%, etc.) while hiding the noise.
                           const abs = Math.abs(delta);
                           const isRough = confidence === 'rough';
-                          if (abs < (isRough ? 15 : 1)) return null;
+                          if (abs < (isRough ? 25 : 1)) return null;
 
                           const cls = isRough
-                            ? (delta >= 0 ? 'text-emerald-700/60' : 'text-red-700/60')
-                            : (delta >= 0 ? 'text-emerald-700' : 'text-red-700');
+                            ? (delta >= 0 ? 'text-success-faded' : 'text-danger-faded')
+                            : (delta >= 0 ? 'text-success' : 'text-danger');
                           const label = `${delta >= 0 ? '+' : '−'}${Math.round(abs)}%`;
                           const title = isRough
                             ? 'Approximate: estimated from prices (price-corrected weight delta). Exact share counts will appear after INVESTORS-BACKFILL fills shares for this quarter.'
@@ -903,7 +904,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                         })()}
                       </div>
                     </div>
-                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-stone-500' : 'text-stone-900'}`}>
+                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-muted-alt' : 'text-primary'}`}>
                       {(parseFloat(h.weight) || 0).toFixed(2)}%
                     </div>
                   </div>
@@ -912,18 +913,19 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
           </div>
         </div>
-        <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-between gap-3 bg-stone-100/50">
+        <div className="px-6 py-4 border-t border-subtle flex items-center justify-between gap-3 surface-card-elevated">
           <div>
             {!portfolio.locked && onDelete && (
               <button onClick={() => onDelete(portfolio.id)}
-                className="flex items-center gap-1.5 px-3 py-2 text-[11px] tracking-[0.15em] uppercase font-mono text-red-700 hover:text-red-900 hover:bg-red-50 rounded transition-colors">
+                style={{ color: 'var(--danger)' }}
+                className="flex items-center gap-1.5 px-3 py-2 text-[11px] tracking-[0.15em] uppercase font-mono hover-text-danger-strong hover-danger-tint rounded transition-colors">
                 <Trash2 size={12} /> Delete
               </button>
             )}
           </div>
           <div className="flex items-center gap-3">
-            <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Cancel</button>
-            <button onClick={handleSave} className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-stone-900 text-stone-50 rounded hover:bg-stone-800">Save</button>
+            <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Cancel</button>
+            <button onClick={handleSave} className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-contrast-pill text-on-contrast-pill rounded hover-contrast-pill-soft">Save</button>
           </div>
         </div>
       </div>
@@ -1032,14 +1034,14 @@ const BackupModal = ({ onRestore, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-stone-50 border border-stone-300 rounded-lg max-w-md w-full overflow-hidden shadow-2xl">
-        <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
+    <div className="fixed inset-0 modal-backdrop backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="surface-card-elevated border border-subtle rounded-lg max-w-md w-full overflow-hidden shadow-2xl">
+        <div className="px-6 py-4 border-b border-subtle flex items-center justify-between">
           <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Restore from file</h2>
-          <button onClick={onClose} className="text-stone-500 hover:text-stone-800"><X size={20} /></button>
+          <button onClick={onClose} className="text-muted-alt hover-text-primary"><X size={20} /></button>
         </div>
         <div className="px-6 py-5 space-y-5">
-          <div className="text-[11px] font-mono text-stone-600">
+          <div className="text-[11px] font-mono text-tertiary">
             Upload a JSON snapshot to view an older state. The restored data is held in memory only — reloading the page returns to the bundled default.
           </div>
 
@@ -1048,39 +1050,39 @@ const BackupModal = ({ onRestore, onClose }) => {
 
             {!restorePreview && (
               <button onClick={() => fileInputRef.current?.click()}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] tracking-[0.15em] uppercase font-mono bg-white border border-stone-400 text-stone-800 rounded hover:bg-stone-100">
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
                 <Upload size={13} /> Restore from backup file
               </button>
             )}
 
             {restorePreview && (
               <div className="space-y-3">
-                <div className="bg-emerald-50 border border-emerald-300 rounded p-3">
-                  <div className="flex items-center gap-2 text-[12px] font-mono text-emerald-900 font-medium mb-2">
+                <div className="success-tint border border-success rounded p-3">
+                  <div className="flex items-center gap-2 text-[12px] font-mono text-success-strong font-medium mb-2">
                     <Check size={13} /> File loaded
                   </div>
-                  <div className="text-[11px] font-mono text-stone-700 space-y-0.5">
+                  <div className="text-[11px] font-mono text-secondary space-y-0.5">
                     <div className="truncate">· {restorePreview.fileName}</div>
-                    <div>· Version <span className="text-stone-900">{restorePreview.version}</span> · exported {restorePreview.exportedAt ? new Date(restorePreview.exportedAt).toLocaleDateString() : 'unknown date'}</div>
-                    <div>· <span className="text-stone-900 font-medium">{restorePreview.portfolios.length}</span> portfolios</div>
-                    <div>· <span className="text-stone-900 font-medium">{Object.keys(restorePreview.prices).length}</span> tickers · {restorePreview.totalPoints.toLocaleString()} price points</div>
+                    <div>· Version <span className="text-primary">{restorePreview.version}</span> · exported {restorePreview.exportedAt ? new Date(restorePreview.exportedAt).toLocaleDateString() : 'unknown date'}</div>
+                    <div>· <span className="text-primary font-medium">{restorePreview.portfolios.length}</span> portfolios</div>
+                    <div>· <span className="text-primary font-medium">{Object.keys(restorePreview.prices).length}</span> tickers · {restorePreview.totalPoints.toLocaleString()} price points</div>
                     {(restorePreview.skipped.portfolios > 0 || restorePreview.skipped.prices > 0 || restorePreview.skipped.priceEntries > 0) && (
-                      <div className="text-amber-700 mt-1.5 pt-1.5 border-t border-emerald-200">
+                      <div className="text-accent-brand mt-1.5 pt-1.5 border-t border-success">
                         ⚠ Skipped during parsing: {restorePreview.skipped.portfolios} bad portfolios, {restorePreview.skipped.prices} bad tickers, {restorePreview.skipped.priceEntries} bad price entries
                       </div>
                     )}
                   </div>
                 </div>
-                <div className="text-[11px] font-mono text-amber-800 bg-amber-50 border border-amber-200 rounded p-2.5">
+                <div className="text-[11px] font-mono text-accent-brand accent-tint-mild border border-accent-brand rounded p-2.5">
                   ⚠ This replaces all current data in memory. Reload the page to return to the bundled default.
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <button onClick={() => { setRestorePreview(null); setRestoreError(null); }}
-                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono bg-white border border-stone-400 text-stone-800 rounded hover:bg-stone-100">
+                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
                     Cancel
                   </button>
                   <button onClick={performRestore}
-                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono bg-amber-700 text-white rounded hover:bg-amber-800">
+                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono bg-accent-on-bg text-on-accent rounded hover-accent-darker">
                     Confirm restore
                   </button>
                 </div>
@@ -1088,14 +1090,14 @@ const BackupModal = ({ onRestore, onClose }) => {
             )}
 
             {restoreError && (
-              <div className="text-[11px] font-mono text-red-800 bg-red-50 border border-red-300 rounded p-2.5 flex items-start gap-1.5">
+              <div className="text-[11px] font-mono text-danger-strong danger-tint border border-danger rounded p-2.5 flex items-start gap-1.5">
                 <AlertCircle size={11} className="mt-0.5 flex-shrink-0" /> <div>{restoreError}</div>
               </div>
             )}
           </div>
         </div>
-        <div className="px-6 py-4 border-t border-stone-200 flex items-center justify-end bg-stone-100/50">
-          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-stone-600 hover:text-stone-900 font-mono">Close</button>
+        <div className="px-6 py-4 border-t border-subtle flex items-center justify-end surface-card-elevated">
+          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Close</button>
         </div>
       </div>
     </div>
@@ -1120,14 +1122,14 @@ const ConsensusPool = ({ portfolios, onSetVisibility, onIsolate }) => {
     onSetVisibility?.(p.id, !p.visible);
   };
   return (
-    <div className="bg-white/70 border border-stone-300 rounded-lg px-5 py-3 shadow-sm">
-      <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+    <div className="surface-card border border-subtle rounded-lg px-5 py-3 shadow-sm">
+      <div className="text-[9px] tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
       <div className="flex items-center gap-1.5 flex-wrap">
         {allWithHoldings.map(p => {
           const hidden = !p.visible;
           const cls = hidden
-            ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
-            : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
+            ? 'bg-transparent border-subtle text-muted line-through hover-text-secondary hover-border-strong'
+            : 'surface-card-elevated border-subtle text-primary hover-border-strong';
           const tip = hidden
             ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
             : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
@@ -1299,7 +1301,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
   if (visibleNonEmpty.length < 1) {
     return (
-      <div className="bg-white/70 border border-stone-300 rounded-lg p-6 text-center text-[11px] font-mono text-stone-500 shadow-sm">
+      <div className="surface-card border border-subtle rounded-lg p-6 text-center text-[11px] font-mono text-muted-alt shadow-sm">
         Show at least 1 portfolio to see analytics
       </div>
     );
@@ -1327,10 +1329,10 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
   return (
     <div className="space-y-4">
-      <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
-        <div className="px-5 py-4 border-b border-stone-300 bg-stone-100/60">
+      <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm">
+        <div className="px-5 py-4 border-b border-subtle surface-card-elevated">
           <div className="flex items-center justify-between gap-3 flex-wrap">
-            <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
+            <div className="text-[15px] font-serif tracking-tight text-primary" style={{ fontWeight: 500 }}>
               {viewMode === 'bought'
                 ? (N === 1 ? `Recent buys · ${singlePortfolio.name}` : 'Recent buys')
                 : viewMode === 'sold'
@@ -1339,34 +1341,34 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
             </div>
             <div className="flex items-center gap-4 flex-wrap">
               {!hideMergeToggle && (
-                <label className="flex items-center gap-1.5 text-[10px] font-mono text-stone-700 cursor-pointer select-none">
+                <label className="flex items-center gap-1.5 text-[10px] font-mono text-secondary cursor-pointer select-none">
                   <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
-                    className="accent-amber-700" />
+                    className="accent-on-bg-color" />
                   <span>Merge dual-class</span>
                 </label>
               )}
-              <div className="flex items-center gap-3 text-[10px] font-mono text-stone-700">
-                <div><span className="tabular-nums text-stone-900 font-medium">{totalUnique}</span> unique</div>
+              <div className="flex items-center gap-3 text-[10px] font-mono text-secondary">
+                <div><span className="tabular-nums text-primary font-medium">{totalUnique}</span> unique</div>
                 {mergeMode && mergedCount > 0 && (
                   <div className="relative">
                     <button onClick={() => setShowMergedDetails(s => !s)}
-                      className="hover:text-stone-900 transition-colors cursor-pointer">
-                      <span className="tabular-nums text-amber-800 font-medium">{mergedCount}</span> merged
+                      className="hover-text-primary transition-colors cursor-pointer">
+                      <span className="tabular-nums text-accent-brand font-medium">{mergedCount}</span> merged
                     </button>
                     {showMergedDetails && (
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowMergedDetails(false)} />
-                        <div className="absolute right-0 top-full mt-1.5 z-20 bg-white border border-stone-300 rounded shadow-lg p-3 min-w-[240px] max-w-[320px]">
-                          <div className="text-[9px] tracking-[0.15em] uppercase text-stone-500 font-mono mb-2 flex items-center gap-1.5">
-                            <Link2 size={10} className="text-amber-700" />
+                        <div className="absolute right-0 top-full mt-1.5 z-20 surface-card-elevated border border-subtle rounded shadow-lg p-3 min-w-[240px] max-w-[320px]">
+                          <div className="text-[9px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-2 flex items-center gap-1.5">
+                            <Link2 size={10} className="text-accent-brand" />
                             <span>{mergedCount} merged ticker{mergedCount > 1 ? 's' : ''}</span>
                           </div>
                           <div className="space-y-1 max-h-64 overflow-y-auto">
                             {sorted.filter(s => s.merged).map(s => (
                               <div key={s.ticker} className="text-[11px] font-mono flex items-center gap-2">
-                                <span className="text-stone-900 font-medium tabular-nums min-w-[3.5rem]">{s.ticker}</span>
-                                <span className="text-stone-400">←</span>
-                                <span className="text-amber-800">{s.originalsList.join(' + ')}</span>
+                                <span className="text-primary font-medium tabular-nums min-w-[3.5rem]">{s.ticker}</span>
+                                <span className="text-muted">←</span>
+                                <span className="text-accent-brand">{s.originalsList.join(' + ')}</span>
                               </div>
                             ))}
                           </div>
@@ -1375,11 +1377,11 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                     )}
                   </div>
                 )}
-                {N >= 2 && <div><span className="tabular-nums text-stone-900 font-medium">{heldByMultiple}</span> shared</div>}
-                {N >= 2 && <div><span className="tabular-nums text-amber-700 font-medium">{heldByAll}</span> ★ all</div>}
+                {N >= 2 && <div><span className="tabular-nums text-primary font-medium">{heldByMultiple}</span> shared</div>}
+                {N >= 2 && <div><span className="tabular-nums text-accent-brand font-medium">{heldByAll}</span> ★ all</div>}
               </div>
               {!forcedViewMode && (
-                <div className="flex items-center gap-0.5 bg-stone-200/60 rounded p-0.5">
+                <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
                   {[
                     { id: 'held',   label: 'Held',   tip: 'Aggregate current weights' },
                     { id: 'bought', label: 'Bought', tip: 'Aggregate positive Δ vs last quarter' },
@@ -1387,7 +1389,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   ].map(opt => (
                     <button key={opt.id} onClick={() => setViewMode(opt.id)}
                       className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
-                        viewMode === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                        viewMode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                       }`}
                       title={opt.tip}>
                       {opt.label}
@@ -1397,7 +1399,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
               )}
             </div>
           </div>
-          <div className="text-[11px] text-stone-600 font-mono mt-1.5">
+          <div className="text-[11px] text-tertiary font-mono mt-1.5">
             {N === 0
               ? (viewMode === 'held'
                   ? 'No portfolios included — toggle below'
@@ -1413,16 +1415,16 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
         </div>
 
         {N >= 1 ? (
-          <div className="divide-y divide-stone-200/60">
+          <div className="divide-y divide-subtle">
             {consensusTop.map(s => (
-              <div key={s.ticker} className="px-5 py-2.5 hover:bg-stone-100/40 transition-colors">
+              <div key={s.ticker} className="px-5 py-2.5 hover-surface transition-colors">
                 <div className="flex items-center gap-3">
                   <div style={{ '--mobile-tw': tickerColWidth }}
-                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-stone-800 font-medium flex items-center gap-1.5 flex-shrink-0">
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-primary font-medium flex items-center gap-1.5 flex-shrink-0">
                     <span>{s.ticker}</span>
-                    {N >= 2 && s.count === N && <span className="text-amber-600 text-[11px]">★</span>}
+                    {N >= 2 && s.count === N && <span className="text-accent-on-bg text-[11px]">★</span>}
                   </div>
-                  <div className="flex-1 relative h-5 bg-stone-100 rounded overflow-hidden flex">
+                  <div className="flex-1 relative h-5 surface-panel rounded overflow-hidden flex">
                     {s.holders.map((h, i) => {
                       const segWidth = (h.weight / N) / consensusMax * 100;
                       const interactive = !!onEdit;
@@ -1435,29 +1437,29 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       );
                     })}
                   </div>
-                  <div className="text-[12px] font-mono tabular-nums text-stone-800 font-medium w-14 text-right flex-shrink-0">
+                  <div className="text-[12px] font-mono tabular-nums text-primary font-medium w-14 text-right flex-shrink-0">
                     {s.combined.toFixed(2)}%
                   </div>
-                  {N >= 2 && <div className="text-[10px] font-mono text-stone-500 w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
+                  {N >= 2 && <div className="text-[10px] font-mono text-muted-alt w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="p-6 text-center text-[11px] font-mono text-stone-500">
+          <div className="p-6 text-center text-[11px] font-mono text-muted-alt">
             No portfolios included — toggle some below
           </div>
         )}
 
         {!hidePool && (
-          <div className="px-5 py-3 bg-stone-100/40">
-            <div className="text-[9px] tracking-[0.2em] uppercase text-stone-600 font-mono mb-2">Pool <span className="normal-case tracking-normal text-stone-400">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+          <div className="px-5 py-3 surface-panel">
+            <div className="text-[9px] tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
             <div className="flex items-center gap-1.5 flex-wrap">
               {allWithHoldings.map(p => {
                 const hidden = !p.visible;
                 const cls = hidden
-                  ? 'bg-transparent border-stone-200 text-stone-400 line-through hover:text-stone-700 hover:border-stone-400'
-                  : 'bg-white border-stone-300 text-stone-800 hover:border-stone-500';
+                  ? 'bg-transparent border-subtle text-muted line-through hover-text-secondary hover-border-strong'
+                  : 'surface-card-elevated border-subtle text-primary hover-border-strong';
                 const tip = hidden
                   ? 'Click to show · Ctrl/⌘/Shift+click to isolate'
                   : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
@@ -1480,14 +1482,14 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
       {/* High-conviction picks (orthogonal to consensus) */}
       {highConviction.length > 0 && (
-        <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm">
-          <div className="px-5 py-4 border-b border-stone-300 bg-stone-100/60">
-            <div className="text-[15px] font-serif tracking-tight text-stone-900" style={{ fontWeight: 500 }}>
+        <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm">
+          <div className="px-5 py-4 border-b border-subtle surface-card-elevated">
+            <div className="text-[15px] font-serif tracking-tight text-primary" style={{ fontWeight: 500 }}>
               {viewMode === 'bought' ? 'Concentrated buys'
                 : viewMode === 'sold' ? 'Concentrated sells'
                 : 'High-conviction bets'}
             </div>
-            <div className="text-[11px] text-stone-600 font-mono mt-0.5">
+            <div className="text-[11px] text-tertiary font-mono mt-0.5">
               {viewMode === 'bought'
                 ? 'Big add by 1–2 investors — non-consensus, concentrated buying signal'
                 : viewMode === 'sold'
@@ -1495,12 +1497,12 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   : 'Held by few investors but with significant weight — non-consensus, high-conviction picks'}
             </div>
           </div>
-          <div className="divide-y divide-stone-200/60">
+          <div className="divide-y divide-subtle">
             {highConviction.map(s => (
-              <div key={s.ticker} className="px-5 py-2.5 hover:bg-stone-100/40 transition-colors">
+              <div key={s.ticker} className="px-5 py-2.5 hover-surface transition-colors">
                 <div className="flex items-center gap-3">
                   <div style={{ '--mobile-tw': tickerColWidth }}
-                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-stone-800 font-medium flex-shrink-0">
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-primary font-medium flex-shrink-0">
                     {s.ticker}
                   </div>
                   <div className="flex-1 flex items-center gap-1.5 flex-wrap">
@@ -1510,17 +1512,17 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       return (
                         <Tag key={i}
                           onClick={interactive ? () => onEdit(h.portfolio) : undefined}
-                          className={`flex items-center gap-1 text-[11px] font-mono px-1.5 py-0.5 rounded bg-stone-100 ${interactive ? 'hover:bg-stone-200 transition-colors cursor-pointer' : ''}`}
+                          className={`flex items-center gap-1 text-[11px] font-mono px-1.5 py-0.5 rounded surface-panel ${interactive ? 'hover-surface transition-colors cursor-pointer' : ''}`}
                           style={{ borderLeft: `2px solid ${h.portfolio.color}` }}
                           title={interactive ? `Edit ${h.portfolio.name}` : undefined}>
-                          <span className="text-stone-700">{h.portfolio.name}</span>
-                          <span className="text-stone-900 tabular-nums font-medium">{h.weight.toFixed(1)}%</span>
+                          <span className="text-secondary">{h.portfolio.name}</span>
+                          <span className="text-primary tabular-nums font-medium">{h.weight.toFixed(1)}%</span>
                         </Tag>
                       );
                     })}
                   </div>
-                  <div className="text-[10px] font-mono text-stone-500 flex-shrink-0">
-                    max <span className="text-stone-900 font-medium tabular-nums">{s.maxSingle.toFixed(1)}%</span>
+                  <div className="text-[10px] font-mono text-muted-alt flex-shrink-0">
+                    max <span className="text-primary font-medium tabular-nums">{s.maxSingle.toFixed(1)}%</span>
                   </div>
                 </div>
               </div>
@@ -1531,7 +1533,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
     </div>
   );
 };
-// ============================================================================
+
 // INVESTORS MATRIX — rows = years + CAGR/Sortino/MaxDD, columns = investors
 // ============================================================================
 //
@@ -1624,9 +1626,9 @@ const maxDrawdownFromSeries = (series) => {
 const styleForDelta = (delta) => {
   if (delta == null || !Number.isFinite(delta)) return { color: 'var(--text-muted)', fontWeight: 400 };
   const abs = Math.abs(delta);
-  if (abs < 3) return { color: 'var(--magnitude-low)', fontWeight: 400 };
+  if (abs < 3) return { color: 'var(--text-muted)', fontWeight: 400 };
   const isPos = delta >= 0;
-  const mild   = isPos ? 'var(--success-mild)'   : 'var(--danger-mild)';
+  const mild   = isPos ? 'var(--success)'   : 'var(--danger)';
   const strong = isPos ? 'var(--success-strong)' : 'var(--danger-strong)';
   if (abs < 20) return { color: mild,   fontWeight: 400 };
   if (abs < 40) return { color: strong, fontWeight: 700 };
@@ -1797,9 +1799,9 @@ const InvestorsMatrix = ({
   const styleForRatio = (v, isDelta) => {
     if (v == null) return { color: 'var(--text-muted)', fontWeight: 400 };
     if (!isDelta) return { color: 'var(--text-primary)', fontWeight: 500 };
-    if (Math.abs(v) < 0.1) return { color: 'var(--magnitude-low)', fontWeight: 400 };
+    if (Math.abs(v) < 0.1) return { color: 'var(--text-muted)', fontWeight: 400 };
     const isPos = v >= 0;
-    return { color: isPos ? 'var(--success-mild)' : 'var(--danger-mild)', fontWeight: Math.abs(v) >= 0.5 ? 700 : 400 };
+    return { color: isPos ? 'var(--success)' : 'var(--danger)', fontWeight: Math.abs(v) >= 0.5 ? 700 : 400 };
   };
 
   // Cell pattern: the <td> centers its content horizontally (so the number block
@@ -1985,8 +1987,9 @@ const InvestorsMatrix = ({
   );
 };
 
+
 // ============================================================================
-// MAIN APP — top-level glue
+// MAIN APP
 // ============================================================================
 
 const PERIOD_OPTIONS = [
@@ -2011,9 +2014,9 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
-  const [view, setView] = useState('portfolio'); // 'portfolio' | 'investors'
-  const [investorsIndex, setInvestorsIndex] = useState([]);     // metadata of every investor in the base
-  const [latestQuarter, setLatestQuarter] = useState(null);     // from public/data/meta.json
+  const [view, setView] = useState('portfolio');               // 'portfolio' | 'investors'
+  const [investorsIndex, setInvestorsIndex] = useState([]);    // catalog of every investor in the base
+  const [latestQuarter, setLatestQuarter] = useState(null);    // from public/data/meta.json
   // Theme: time-of-day-based. Light between 07:00 and 19:00 local time, dark otherwise.
   // Re-checks on window focus and every 15 minutes, so leaving the app open across sunset
   // still flips the theme. The button toggle sets a manual override that sticks for the
@@ -2152,9 +2155,8 @@ export default function PortfolioTracker() {
     } catch { return null; }
   };
 
-  // Lazy-load a single investor file. Used when the user checks an investor in the
-  // table that isn't currently in selectedInvestors[]. Returns the assembled portfolio
-  // object (same shape the rest of the code expects), or null if not found.
+  // Lazy-load one per-investor file when the user toggles them on from the matrix.
+  // Returns the assembled portfolio object in the same shape every consumer expects.
   const loadInvestor = async (id) => {
     try {
       const base = import.meta.env.BASE_URL;
@@ -2168,10 +2170,6 @@ export default function PortfolioTracker() {
         name: meta.name,
         subtitle: meta.subtitle || '',
         kind: meta.kind || 'custom',
-        // Deterministic palette color so the line/dot color is stable across
-        // load → unload → re-load (and matches the InvestorsMatrix dot before
-        // the investor is added). User can override via EditModal color picker;
-        // override is persisted via Save → investorCustomization in default-data.json.
         color: getInvestorColor(id, null, null),
         visible: true,
         locked: false,
@@ -2181,19 +2179,9 @@ export default function PortfolioTracker() {
     } catch { return null; }
   };
 
-  // Add an investor to the active portfolio set (chart + portfolio list).
-  // Fetches their per-investor file if not already loaded.
-  const addInvestorToPortfolio = async (id) => {
-    if (portfolios.some(p => p.id === id)) return; // already in
-    const p = await loadInvestor(id);
-    if (!p) return;
-    setPortfolios(prev => [...prev, p]);
-  };
-
-  // Toggle the visibility of an investor in the chart. If the investor isn't yet
-  // in the active portfolio set, fetch + add them (with visible=true). Used by
-  // the matrix table's eye-toggle in the column header — clicking it shows/hides
-  // the chart line without removing the column from the table.
+  // Toggle the chart-line visibility of an investor without removing them from the
+  // matrix. If they're not yet in the active portfolio set, lazy-fetch + add with
+  // visible=true. Used by the matrix table's eye-toggle in the column header.
   const togglePortfolioVisibilityById = async (id) => {
     const existing = portfolios.find(p => p.id === id);
     if (existing) {
@@ -2204,7 +2192,6 @@ export default function PortfolioTracker() {
     if (!p) return;
     setPortfolios(prev => [...prev, { ...p, visible: true }]);
   };
-
 
   useEffect(() => {
     (async () => {
@@ -2659,15 +2646,15 @@ export default function PortfolioTracker() {
 
       <div className="max-w-[1600px] mx-auto px-6 py-8">
         <div className="mb-6">
-          <div className="border-b border-stone-900 pb-1 mb-1">
+          <div className="border-b border-strong pb-1 mb-1">
             <div className="flex items-center justify-between">
-              <div className="text-[10px] tracking-[0.3em] uppercase font-mono text-stone-700">Portfolio Comparator · Vol. 1</div>
-              <div className="text-[10px] tracking-[0.2em] uppercase font-mono text-stone-600">
+              <div className="text-[10px] tracking-[0.3em] uppercase font-mono text-secondary">Portfolio Comparator · Vol. 1</div>
+              <div className="text-[10px] tracking-[0.2em] uppercase font-mono text-tertiary">
                 {new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
               </div>
             </div>
           </div>
-          <div className="border-b-2 border-stone-900 pb-3">
+          <div className="border-b-2 border-strong pb-3">
             <div className="flex items-end justify-between flex-wrap gap-4">
               <div>
                 <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
@@ -2675,45 +2662,48 @@ export default function PortfolioTracker() {
                   <br />
                   <em style={{ color: 'var(--accent-brand)', fontWeight: 500 }}>side by side.</em>
                 </h1>
-                <div className="text-xs text-stone-600 mt-3 font-mono tracking-tight">
+                <div className="text-xs text-tertiary mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
                 </div>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
-                {/* View toggle: Portfolio (chart + selected list) ⇄ Investors (full base table). */}
-                <div className="flex items-center gap-0.5 bg-stone-100 rounded p-0.5 border border-stone-300">
-                  <button onClick={() => setView('portfolio')}
-                    className={`px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all ${
-                      view === 'portfolio' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
-                    }`}>
-                    Portfolio
-                  </button>
-                  <button onClick={() => setView('investors')}
-                    className={`px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all ${
-                      view === 'investors' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
-                    }`}>
-                    Investors
-                  </button>
+                {/* View toggle: Portfolio (chart + selected list) ⇄ Investors (full base matrix). */}
+                <div className="flex items-center gap-0.5 rounded p-0.5 border border-strong" style={{ background: 'var(--row-stripe)' }}>
+                  {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }].map(opt => {
+                    const active = view === opt.id;
+                    return (
+                      <button key={opt.id} onClick={() => setView(opt.id)}
+                        className="px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all"
+                        style={{
+                          background: active ? 'var(--bg-card-elevated)' : 'transparent',
+                          color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
+                          boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                          cursor: 'pointer',
+                        }}>
+                        {opt.label}
+                      </button>
+                    );
+                  })}
                 </div>
                 {hasUnsavedChanges && !saving && (
                   <button onClick={resetToDefaults}
-                    className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded"
+                    className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded"
                     title="Discard local changes and reload from default-data.json">
                     <RotateCcw size={11} /> Reset
                   </button>
                 )}
                 <button onClick={handleSaveDefault} disabled={!hasUnsavedChanges || saving}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded disabled:text-stone-400 disabled:border-stone-300 disabled:bg-white/40 disabled:cursor-not-allowed disabled:hover:text-stone-400 disabled:hover:border-stone-300"
+                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded disabled-mute"
                   title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
                   {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
                   {saving ? 'Saving…' : 'Save'}
                 </button>
                 <button onClick={() => setShowBackup(true)}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-stone-700 hover:text-stone-900 font-mono border border-stone-400 hover:border-stone-700 bg-white/60 rounded">
+                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded">
                   <Save size={11} /> Backup
                 </button>
                 <button onClick={() => { setDarkMode(!darkMode); setThemeManualOverride(true); }}
-                  className="p-2 text-stone-500 hover:text-stone-900 rounded border border-stone-300 hover:border-stone-700 bg-white/60 transition-colors"
+                  className="p-2 text-muted-alt hover-text-primary rounded border border-subtle hover-border-focus surface-card transition-colors"
                   title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
                   {darkMode ? <Sun size={13} /> : <Moon size={13} />}
                 </button>
@@ -2735,51 +2725,51 @@ export default function PortfolioTracker() {
         <div className="grid grid-cols-1 min-[1200px]:grid-cols-[360px_1fr] min-[1200px]:items-stretch gap-6 items-start">
           {/* Chart — column 2 on wide screens, first on mobile (above the portfolios list). */}
           <div className="min-[1200px]:col-start-2 min-[1200px]:row-start-1 min-w-0">
-            <div className="bg-white/70 border border-stone-300 rounded-lg shadow-sm overflow-hidden h-full flex flex-col">
-              <div className="px-5 py-3 border-b border-stone-200 flex items-center justify-between flex-wrap gap-3">
+            <div className="surface-card border border-subtle rounded-lg shadow-sm overflow-hidden h-full flex flex-col">
+              <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono">
+                  <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
                     {effectiveMode === 'vs' ? `vs ${benchmarkPortfolio?.name || 'benchmark'}` : 'Absolute return'}
                   </div>
-                  <div className="flex items-center gap-0.5 bg-stone-100 rounded p-0.5">
+                  <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
                     {PERIOD_OPTIONS.map(opt => (
                       <button key={opt.id} onClick={() => setChartPeriod(opt.id)}
                         className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
-                          chartPeriod === opt.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                          chartPeriod === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                         }`}>
                         {opt.label}
                       </button>
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center gap-1 bg-stone-100 rounded p-0.5">
+                <div className="flex items-center gap-1 surface-panel rounded p-0.5">
                   <button onClick={() => setChartMode('absolute')}
                     className={`px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all ${
-                      effectiveMode === 'absolute' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                      effectiveMode === 'absolute' ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                     }`}>Absolute</button>
                   {availableBenchmarks.map(b => (
                     <button key={b.id} onClick={() => setChartMode(b.id)}
                       className={`px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all ${
-                        chartMode === b.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-800'
+                        chartMode === b.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                       }`}>vs {b.name}</button>
                   ))}
                 </div>
               </div>
               {legendPortfolios.length > 0 && (
-                <div className="px-5 py-2.5 border-b border-stone-200 flex items-center gap-1.5 flex-wrap bg-stone-50/40">
+                <div className="px-5 py-2.5 border-b border-subtle flex items-center gap-1.5 flex-wrap surface-card-elevated">
                   <button onClick={selectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-stone-500 hover:text-stone-900 px-2 py-1 transition-colors">
+                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-muted-alt hover-text-primary px-2 py-1 transition-colors">
                     All
                   </button>
                   <button onClick={deselectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-stone-500 hover:text-stone-900 px-2 py-1 transition-colors">
+                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-muted-alt hover-text-primary px-2 py-1 transition-colors">
                     None
                   </button>
-                  <span className="text-stone-300 mx-0.5 select-none">|</span>
+                  <span className="text-muted mx-0.5 select-none">|</span>
                   {legendPortfolios.map(p => (
                     <button key={p.id} onClick={(e) => handleLegendClick(p.id, e)}
                       className={`flex items-center gap-1.5 text-[11px] font-mono px-2 py-1 rounded transition-all ${
-                        p.visible ? 'text-stone-800 hover:bg-stone-200/60' : 'text-stone-400 line-through hover:bg-stone-100'
+                        p.visible ? 'text-primary hover-surface' : 'text-muted line-through hover-surface'
                       }`}
                       title={p.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}>
                       <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{
@@ -2794,15 +2784,15 @@ export default function PortfolioTracker() {
               )}
               <div className="p-5 min-h-[280px] min-[500px]:min-h-[480px] min-[1200px]:min-h-[580px] flex-1 flex flex-col">
                 {chartMode !== 'absolute' && !benchmarkPortfolio && (
-                  <div className="mb-3 px-3 py-2 bg-amber-50 border border-amber-300 rounded text-[10px] font-mono text-amber-800 flex items-center gap-2">
+                  <div className="mb-3 px-3 py-2 accent-tint-mild border border-accent-brand rounded text-[10px] font-mono text-accent-brand flex items-center gap-2">
                     <AlertCircle size={11} /> Selected benchmark has no price data — showing absolute mode.
                   </div>
                 )}
                 {chartData.length === 0 ? (
-                  <div className="h-full flex items-center justify-center text-stone-500 text-sm font-mono py-32 text-center">
+                  <div className="h-full flex items-center justify-center text-muted-alt text-sm font-mono py-32 text-center">
                     <div>
                       <div className="mb-2">No data to chart yet.</div>
-                      <div className="text-[10px] text-stone-400">Bundled price data is empty or failed to load.</div>
+                      <div className="text-[10px] text-muted">Bundled price data is empty or failed to load.</div>
                     </div>
                   </div>
                 ) : (
@@ -2861,12 +2851,12 @@ export default function PortfolioTracker() {
 
           {/* Portfolios — column 1 on wide screens, second on mobile. Scrollable to chart's height. */}
           <div className="min-[1200px]:col-start-1 min-[1200px]:row-start-1 min-[1200px]:min-h-0">
-            <div className="bg-white/70 border border-stone-300 rounded-lg overflow-hidden shadow-sm h-full flex flex-col">
-              <div className="px-4 py-3 border-b border-stone-300 bg-stone-100/60 flex items-center justify-between flex-shrink-0">
-                <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono">
-                  Portfolios · {investorPortfolios.length} <span className="text-stone-400 normal-case tracking-normal">· drag to reorder</span>
+            <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm h-full flex flex-col">
+              <div className="px-4 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-shrink-0">
+                <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
+                  Portfolios · {investorPortfolios.length} <span className="text-muted normal-case tracking-normal">· drag to reorder</span>
                 </div>
-                <div className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-mono tabular-nums">return</div>
+                <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono tabular-nums">return</div>
               </div>
               <div className="min-[1200px]:overflow-y-auto min-[1200px]:flex-1">
                 {investorPortfolios.map(p => (
@@ -2882,7 +2872,7 @@ export default function PortfolioTracker() {
                     mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
-                  <div className="px-4 py-6 text-center text-[11px] font-mono text-stone-500">
+                  <div className="px-4 py-6 text-center text-[11px] font-mono text-muted-alt">
                     No investor portfolios in the bundled data
                   </div>
                 )}
@@ -2918,7 +2908,7 @@ export default function PortfolioTracker() {
         </div>
         )}
 
-        <div className="mt-6 text-[10px] text-stone-500 font-mono leading-relaxed max-w-3xl">
+        <div className="mt-6 text-[10px] text-muted-alt font-mono leading-relaxed max-w-3xl">
           Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
         </div>
       </div>

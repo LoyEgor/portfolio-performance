@@ -35,103 +35,12 @@ html.dark {
 html.dark body {
   background-color: #0c0a09;
 }
-html.dark .bg-stone-50 { background-color: #1c1917; }
 
-/* --- Card / surface backgrounds --- */
-html.dark .bg-white { background-color: #292524; }
-html.dark .bg-white\/40 { background-color: rgba(41, 37, 36, 0.4); }
-html.dark .bg-white\/60 { background-color: rgba(41, 37, 36, 0.6); }
-html.dark .bg-white\/70 { background-color: rgba(41, 37, 36, 0.7); }
-html.dark .bg-stone-100 { background-color: #1c1917; }
-html.dark .bg-stone-100\/40 { background-color: rgba(28, 25, 23, 0.4); }
-html.dark .bg-stone-100\/50 { background-color: rgba(28, 25, 23, 0.5); }
-html.dark .bg-stone-100\/60 { background-color: rgba(28, 25, 23, 0.6); }
-html.dark .bg-stone-200 { background-color: #1c1917; }
-html.dark .bg-stone-200\/60 { background-color: rgba(68, 64, 60, 0.6); }
-html.dark .bg-stone-200\/70 { background-color: rgba(68, 64, 60, 0.7); }
-html.dark .bg-stone-300 { background-color: #44403c; }
-html.dark .bg-stone-400 { background-color: #57534e; }
-html.dark .bg-stone-50\/40 { background-color: rgba(12, 10, 9, 0.4); }
-html.dark .bg-stone-50\/60 { background-color: rgba(12, 10, 9, 0.6); }
-/* Custom warm-paper tint used by DataAuditModal — keep #fdfbf6 in light, swap to dark surface in dark. */
-html.dark .bg-\[\#fdfbf6\] { background-color: #1c1917; }
-
-/* Semi-transparent overlays */
-html.dark .bg-stone-900\/40 { background-color: rgba(0, 0, 0, 0.6); }
-html.dark .bg-black\/40 { background-color: rgba(0, 0, 0, 0.6); }
-
-/* --- Text colors --- */
-html.dark .text-stone-900 { color: #e7e5e4; }
-html.dark .text-stone-800 { color: #d6d3d1; }
-html.dark .text-stone-700 { color: #a8a29e; }
-html.dark .text-stone-600 { color: #a8a29e; }
-html.dark .text-stone-500 { color: #78716c; }
-html.dark .text-stone-400 { color: #57534e; }
-html.dark .text-stone-300 { color: #44403c; }
-
-/* --- Border colors --- */
-html.dark .border-stone-200 { border-color: #292524; }
-html.dark .border-stone-200\/60 { border-color: rgba(41, 37, 36, 0.6); }
-html.dark .border-stone-200\/80 { border-color: rgba(41, 37, 36, 0.8); }
-html.dark .border-stone-300 { border-color: #44403c; }
-html.dark .border-stone-400 { border-color: #57534e; }
-html.dark .border-stone-500 { border-color: #78716c; }
-html.dark .border-stone-700 { border-color: #78716c; }
-html.dark .border-stone-900 { border-color: #44403c; }
-
-/* --- Divide (Tailwind divide-y utilities) --- */
-/* Match Tailwind's exact selector (`> :not([hidden]) ~ :not([hidden])`) — using `> * + *`
-   loses the specificity contest and Tailwind's original light-stone color wins in dark.
-   Consensus / High-conviction separators should match the muted feel of PortfolioRow / DataManager. */
-html.dark .divide-stone-200\/60 > :not([hidden]) ~ :not([hidden]) { border-color: rgba(41, 37, 36, 0.6); }
-html.dark .divide-stone-200 > :not([hidden]) ~ :not([hidden]) { border-color: #292524; }
-html.dark .divide-stone-300 > :not([hidden]) ~ :not([hidden]) { border-color: #44403c; }
-
-/* --- Hover states --- */
-html.dark .hover\:text-stone-900:hover { color: #fafaf9; }
-html.dark .hover\:text-stone-800:hover { color: #e7e5e4; }
-html.dark .hover\:text-stone-700:hover { color: #d6d3d1; }
-html.dark .hover\:bg-stone-100:hover { background-color: #1c1917; }
-html.dark .hover\:bg-stone-100\/40:hover { background-color: rgba(28, 25, 23, 0.4); }
-html.dark .hover\:bg-stone-100\/60:hover { background-color: rgba(28, 25, 23, 0.6); }
-html.dark .hover\:bg-stone-200:hover { background-color: #292524; }
-html.dark .hover\:bg-amber-50\/60:hover { background-color: rgba(120, 53, 15, 0.2); }
-html.dark .hover\:border-stone-700:hover { border-color: #78716c; }
-html.dark .hover\:border-stone-600:hover { border-color: #78716c; }
-html.dark .hover\:opacity-70:hover { opacity: 0.7; }
-
-/* --- Group hover states (e.g. action buttons revealed on row hover) --- */
-html.dark .group:hover .group-hover\:opacity-100 { opacity: 1; }
-
-/* --- Disabled states --- */
-html.dark .disabled\:text-stone-400:disabled { color: #57534e; }
-html.dark .disabled\:border-stone-300:disabled { border-color: #44403c; }
-html.dark .disabled\:bg-stone-400:disabled { background-color: #44403c; }
-html.dark .disabled\:bg-white\/40:disabled { background-color: rgba(41, 37, 36, 0.4); }
-html.dark .disabled\:hover\:text-stone-400:hover:disabled { color: #57534e; }
-html.dark .disabled\:hover\:border-stone-300:hover:disabled { border-color: #44403c; }
-
-/* --- Focus states --- */
-html.dark .focus\:border-stone-700:focus { border-color: #a8a29e; }
-
-/* --- Accent colors: emerald (success) --- */
-html.dark .bg-emerald-50 { background-color: rgba(6, 78, 59, 0.2); }
-html.dark .border-emerald-300 { border-color: #065f46; }
-html.dark .border-emerald-200 { border-color: #064e3b; }
-html.dark .border-emerald-500 { border-color: #065f46; }
-html.dark .text-emerald-900 { color: #6ee7b7; }
-html.dark .text-emerald-800 { color: #6ee7b7; }
-html.dark .text-emerald-700 { color: #34d399; }
-html.dark .bg-emerald-600 { background-color: #10b981; }
-
-/* --- Accent colors: amber (warning) --- */
-html.dark .bg-amber-50 { background-color: rgba(120, 53, 15, 0.2); }
-html.dark .bg-amber-50\/40 { background-color: rgba(120, 53, 15, 0.15); }
-html.dark .bg-amber-50\/60 { background-color: rgba(120, 53, 15, 0.2); }
-html.dark .bg-amber-50\/80 { background-color: rgba(120, 53, 15, 0.25); }
-/* bg-amber-100 is used by the "merged dual-class" badge inside the holdings rows. Without an
-   explicit dark override the badge stays light-yellow on top of the dark card and looks broken. */
-html.dark .bg-amber-100 { background-color: rgba(146, 64, 14, 0.45); }
+/* --- Charts: recharts --- */
+html.dark .recharts-cartesian-grid line { stroke: #292524; }
+html.dark .recharts-cartesian-axis-tick text { fill: #78716c; }
+html.dark .recharts-cartesian-axis line { stroke: #44403c; }
+html.dark .recharts-reference-line line { stroke: #44403c; }
 
 /* The near-black palette swatch (#1a1815) in the Edit Portfolio color picker disappears against
    the dark canvas. Give it a subtle inset ring only in dark mode and only when unselected (the
@@ -140,47 +49,19 @@ html.dark .swatch-near-black {
   outline: 1px solid #57534e;
   outline-offset: -3px;
 }
-html.dark .border-amber-200 { border-color: #92400e; }
-html.dark .border-amber-300 { border-color: #b45309; }
-html.dark .border-amber-700\/30 { border-color: rgba(180, 83, 9, 0.3); }
-html.dark .text-amber-900 { color: #fbbf24; }
-html.dark .text-amber-800 { color: #fbbf24; }
-html.dark .text-amber-700 { color: #f59e0b; }
-html.dark .text-amber-600 { color: #fbbf24; }
-html.dark .bg-amber-500 { background-color: #f59e0b; }
-html.dark .bg-amber-700 { background-color: #d97706; }
-html.dark .bg-amber-800 { background-color: #b45309; }
-html.dark .hover\:bg-amber-800:hover { background-color: #92400e; }
-html.dark .hover\:text-amber-800:hover { color: #fbbf24; }
-html.dark .focus\:border-amber-700\/60:focus { border-color: rgba(180, 83, 9, 0.6); }
 
-/* --- Accent colors: red (error/delete) --- */
-html.dark .bg-red-50 { background-color: rgba(127, 29, 29, 0.2); }
-html.dark .border-red-300 { border-color: #991b1b; }
-html.dark .border-red-200 { border-color: #7f1d1d; }
-html.dark .text-red-900 { color: #fca5a5; }
-html.dark .text-red-800 { color: #fca5a5; }
-html.dark .text-red-700 { color: #f87171; }
-html.dark .text-red-600 { color: #f87171; }
-html.dark .hover\:text-red-600:hover { color: #ef4444; }
-html.dark .bg-red-200\/60 { background-color: rgba(127, 29, 29, 0.3); }
-
-/* --- Accent colors: blue --- */
-html.dark .text-blue-600 { color: #60a5fa; }
-
-/* --- Charts: recharts --- */
-html.dark .recharts-cartesian-grid line { stroke: #292524; }
-html.dark .recharts-cartesian-axis-tick text { fill: #78716c; }
-html.dark .recharts-cartesian-axis line { stroke: #44403c; }
-html.dark .recharts-reference-line line { stroke: #44403c; }
-
-/* --- Inputs --- */
+/* --- Inputs ---
+   Use tokens so `surface-input` (or the input element's default styling) stays
+   in sync with the theme system. Previously this hard-coded `#292524` which is
+   the modal/card-elevated color — inputs ended up matching their container and
+   looked passive, not "active well". Token-based now: `--bg-input` is one level
+   darker than card-elevated in dark, giving the well effect. */
 html.dark input,
 html.dark textarea,
 html.dark select {
-  background-color: #292524;
-  color: #e7e5e4;
-  border-color: #44403c;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
 }
 /* Inputs explicitly marked bg-transparent (e.g. weight input layered over a progress fill) must
    stay transparent so the overlay underneath remains visible. The general rule above otherwise
@@ -218,96 +99,178 @@ html.dark .recharts-tooltip-wrapper .recharts-default-tooltip {
 html.dark .recharts-tooltip-item { color: #d6d3d1 !important; }
 html.dark .recharts-tooltip-label { color: #a8a29e !important; }
 
-/* ----------------------------------------------------------------------------
-   THEME TOKENS — single source of truth for colors.
-
-   Rule for new code: use these CSS variables via inline `style={{ background:
-   'var(--bg-card)' }}` or a dedicated class. Do NOT add new `bg-stone-XXX`,
-   `text-amber-XXX`, `border-emerald-XXX` etc. directly in JSX — that's the
-   pattern that requires a matching `html.dark` override block above, and
-   forgetting one creates the "light strip in dark mode" hover bug.
-
-   Existing usages of Tailwind color classes elsewhere in the file are tolerated
-   for now; they're patched by the `html.dark .XXX {}` overrides above. New
-   components migrate gradually.
-   ---------------------------------------------------------------------------- */
+/* ============================================================================
+   THEME TOKENS
+   Single source of truth for the dual light/dark palette. Use these tokens
+   (via .surface-card / .text-primary / inline style={{color:'var(--text-X)'}})
+   in all new code. The legacy `html.dark .X {}` block above is being phased out.
+   ============================================================================ */
 
 :root {
-  /* Surfaces — backgrounds layered from app shell down to inputs */
-  --bg-app:           #faf7ee;
-  --bg-card:          rgba(255, 255, 255, 0.7);
+  /* Surfaces */
+  --bg-app: #faf7ee;
+  --bg-card: rgba(255, 255, 255, 0.7);
   --bg-card-elevated: #ffffff;
-  --bg-panel:         #f5f0e1;
-  --bg-input:         #ffffff;
-  /* Rows inside lists/tables */
-  --row-stripe:       rgba(0, 0, 0, 0.02);
-  --row-hover:        rgba(0, 0, 0, 0.04);
-  --row-selected:     rgba(160, 107, 28, 0.10);
+  --bg-panel: #f5f0e1;
+  --bg-input: #ffffff;
+  --row-stripe: rgba(0, 0, 0, 0.02);
+  --row-hover: rgba(0, 0, 0, 0.04);
+  --row-selected: rgba(160, 107, 28, 0.10);
+  --modal-backdrop: rgba(0, 0, 0, 0.4);
+
   /* Borders */
-  --border-subtle:    #e7e2d4;
-  --border-strong:    #c2bbac;
-  --border-focus:     #1a1815;
+  --border-subtle: #e7e2d4;
+  --border-strong: #c2bbac;
+  --border-focus: #1a1815;
+  --border-selected: #1a1815;
+
   /* Text */
-  --text-primary:     #1a1815;
-  --text-secondary:   #4a4640;
-  --text-tertiary:    #6b6660;
-  --text-muted:       #a8a39a;
-  --text-muted-alt:   #6b6660;
-  /* Accents */
-  --accent-brand:     #a06b1c;
-  --accent-on-bg:     #d97706;
-  /* Status — paired strong (saturated) + mild (background-friendly) variants */
-  --success:          #1a6b3e;
-  --success-strong:   #15803d;
-  --success-mild:     #2f7d4e;
-  --danger:           #a14535;
-  --danger-strong:    #b91c1c;
-  --danger-mild:      #9a4031;
-  --neutral-mild:     #6b6660;
-  /* Magnitude (for return/diff cells: small → grey, big → strong, huge → black) */
-  --magnitude-low:    #6b6660;  /* |Δ| < 3% — visually quiet */
-  --magnitude-mid:    inherit;  /* 3% ≤ |Δ| < 20% — use --success/--danger */
-  --magnitude-high:   inherit;  /* 20% ≤ |Δ| < 40% — bold + use --success-strong/--danger-strong */
-  --magnitude-extreme:inherit;  /* |Δ| ≥ 40% — black weight, same color as high */
-  /* Chart-specific */
-  --ref-line:         #1a1815;
-  --border-selected:  #1a1815;
-  --weight-bar:       rgba(214, 207, 192, 0.7);
-  --zone-up:          #16a34a;
-  --zone-down:        #dc2626;
+  --text-primary: #1a1815;
+  --text-secondary: #4a4640;
+  --text-tertiary: #6b6660;
+  --text-muted: #a8a39a;
+  --text-muted-alt: #6b6660;
+
+  /* Accent */
+  --accent-brand: #a06b1c;
+  --accent-on-bg: #d97706;
+  --accent-tint-mild: rgba(160, 107, 28, 0.06);
+  --accent-tint-strong: rgba(160, 107, 28, 0.18);
+
+  /* Status */
+  --success: #1a6b3e;
+  --success-strong: #15803d;
+  --success-tint: rgba(22, 163, 74, 0.06);
+  --danger: #a14535;
+  --danger-strong: #b91c1c;
+  --danger-tint: rgba(220, 38, 38, 0.06);
+
+  /* Pill (YOU badge / Save button) */
+  --contrast-pill-bg: #1a1815;
+  --contrast-pill-text: #fafaf9;
+
+  /* Chart / existing tokens (keep) */
+  --ref-line: #1a1815;
+  --weight-bar: rgba(214, 207, 192, 0.7);
+  --zone-up: #16a34a;
+  --zone-down: #dc2626;
 }
 
 html.dark {
-  --bg-app:           #0c0a09;
-  --bg-card:          rgba(41, 37, 36, 0.7);
+  --bg-app: #0c0a09;
+  --bg-card: rgba(41, 37, 36, 0.7);
   --bg-card-elevated: #292524;
-  --bg-panel:         #1c1917;
-  --bg-input:         #292524;
-  --row-stripe:       rgba(255, 255, 255, 0.025);
-  --row-hover:        rgba(255, 255, 255, 0.05);
-  --row-selected:     rgba(212, 168, 67, 0.12);
-  --border-subtle:    #2d2825;
-  --border-strong:    #44403c;
-  --border-focus:     #e7e5e4;
-  --text-primary:     #e7e5e4;
-  --text-secondary:   #d6d3d1;
-  --text-tertiary:    #a8a29e;
-  --text-muted:       #78716c;
-  --text-muted-alt:   #a8a29e;
-  --accent-brand:     #d4a843;
-  --accent-on-bg:     #e7b95c;
-  --success:          #34d399;
-  --success-strong:   #4ade80;
-  --success-mild:     #34d399;
-  --danger:           #f87171;
-  --danger-strong:    #fb7185;
-  --danger-mild:      #f87171;
-  --neutral-mild:     #a8a29e;
-  --magnitude-low:    #78716c;
-  /* Dark mode: same inheritance rule. magnitude-mid/high/extreme inherit color, only weight changes. */
-  --ref-line:         #57534e;
-  --border-selected:  #e7e5e4;
-  --weight-bar:       rgba(120, 113, 108, 0.55);
-  --zone-up:          #34d399;
-  --zone-down:        #f87171;
+  --bg-panel: #1c1917;
+  /* Input "wells" sit one level below the card they're embedded in. In dark this
+     means inputs are visibly darker than the modal/card around them — readable
+     without needing a thick border. */
+  --bg-input: #1c1917;
+  --row-stripe: rgba(255, 255, 255, 0.025);
+  --row-hover: rgba(255, 255, 255, 0.05);
+  --row-selected: rgba(212, 168, 67, 0.12);
+  --modal-backdrop: rgba(0, 0, 0, 0.6);
+
+  /* Slightly lifted from the previous #2d2825 so inputs/buttons inside
+     modal/card backgrounds get a readable outline in dark mode. */
+  --border-subtle: #3d3934;
+  --border-strong: #57534e;
+  --border-focus: #e7e5e4;
+  --border-selected: #e7e5e4;
+
+  --text-primary: #e7e5e4;
+  --text-secondary: #d6d3d1;
+  --text-tertiary: #a8a29e;
+  --text-muted: #78716c;
+  --text-muted-alt: #a8a29e;
+
+  --accent-brand: #d4a843;
+  --accent-on-bg: #e7b95c;
+  --accent-tint-mild: rgba(212, 168, 67, 0.10);
+  --accent-tint-strong: rgba(212, 168, 67, 0.28);
+
+  --success: #34d399;
+  --success-strong: #4ade80;
+  --success-tint: rgba(52, 211, 153, 0.12);
+  --danger: #f87171;
+  --danger-strong: #fb7185;
+  --danger-tint: rgba(248, 113, 113, 0.12);
+
+  --contrast-pill-bg: #e7e5e4;
+  --contrast-pill-text: #1c1917;
+
+  --ref-line: #a8a29e;
+  --weight-bar: rgba(120, 113, 108, 0.55);
+  --zone-up: #34d399;
+  --zone-down: #f87171;
 }
+
+/* ============================================================================
+   UTILITY CLASSES
+   Token-backed counterparts to the most common Tailwind color utilities.
+   Use these in JSX instead of bg-stone-XXX / text-amber-XXX / etc.
+   ============================================================================ */
+
+.surface-card { background: var(--bg-card); }
+.surface-card-elevated { background: var(--bg-card-elevated); }
+.surface-panel { background: var(--bg-panel); }
+.surface-input { background: var(--bg-input); }
+.modal-backdrop { background: var(--modal-backdrop); }
+.accent-tint-mild { background: var(--accent-tint-mild); }
+.accent-tint-strong { background: var(--accent-tint-strong); }
+.success-tint { background: var(--success-tint); }
+.danger-tint { background: var(--danger-tint); }
+.bg-accent-on-bg { background: var(--accent-on-bg); }
+.bg-success-strong { background: var(--success-strong); }
+.bg-border-subtle { background: var(--border-subtle); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-muted { color: var(--text-muted); }
+.text-muted-alt { color: var(--text-muted-alt); }
+.text-on-contrast-pill { color: var(--contrast-pill-text); }
+.text-on-accent { color: #ffffff; }
+.text-accent-brand { color: var(--accent-brand); }
+.text-accent-on-bg { color: var(--accent-on-bg); }
+.text-success { color: var(--success); }
+.text-success-strong { color: var(--success-strong); }
+.text-danger { color: var(--danger); }
+.text-danger-strong { color: var(--danger-strong); }
+.bg-contrast-pill { background: var(--contrast-pill-bg); }
+.border-contrast-pill { border-color: var(--contrast-pill-bg); }
+.text-success-faded { color: var(--success); opacity: 0.6; }
+.text-danger-faded { color: var(--danger); opacity: 0.6; }
+
+.border-subtle { border-color: var(--border-subtle); }
+.border-strong { border-color: var(--border-strong); }
+.border-focus { border-color: var(--border-focus); }
+.border-accent-on-bg { border-color: var(--accent-on-bg); }
+.border-accent-brand { border-color: var(--accent-brand); }
+.border-t-accent-brand { border-top-color: var(--accent-brand); }
+.border-b-accent-brand { border-bottom-color: var(--accent-brand); }
+.border-success { border-color: var(--success); }
+.border-danger { border-color: var(--danger); }
+.divide-subtle > :not([hidden]) ~ :not([hidden]) { border-color: var(--border-subtle); }
+
+.hover-surface:hover { background: var(--row-hover); }
+.hover-danger-tint:hover { background: var(--danger-tint); }
+.hover-text-primary:hover { color: var(--text-primary); }
+.hover-text-secondary:hover { color: var(--text-secondary); }
+.hover-border-strong:hover { border-color: var(--border-strong); }
+.hover-border-focus:hover { border-color: var(--border-focus); }
+
+.group:hover .group-hover-text-primary { color: var(--text-primary); }
+.group:hover .group-hover-text-secondary { color: var(--text-secondary); }
+.group:hover .group-hover-border-focus { border-color: var(--border-focus); }
+.hover-accent:hover { color: var(--accent-on-bg); }
+.hover-text-danger-strong:hover { color: var(--danger-strong); }
+.hover-accent-darker:hover { filter: brightness(0.92); }
+.hover-contrast-pill-soft:hover { opacity: 0.85; }
+
+.focus-border:focus { border-color: var(--border-focus); outline: none; }
+.focus-within-border:focus-within { border-color: var(--border-focus); }
+
+.accent-on-bg-color { accent-color: var(--accent-on-bg); }
+
+.disabled-mute:disabled { opacity: 0.5; cursor: not-allowed; }
+.disabled-mute:disabled:hover { opacity: 0.5; cursor: not-allowed; }
