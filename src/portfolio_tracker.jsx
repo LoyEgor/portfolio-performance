@@ -414,7 +414,7 @@ const periodCutoffIso = (period, lastIso) => {
 
 const PortfolioRow = ({
   portfolio, onToggle, onEdit, pctReturn, missingTickers, coveragePct, disabledSet,
-  onDragStart, onDragOver, onDrop, onDragEnd, isDragging, isDropTarget, dropPosition,
+  onDragStart, onDragOver, onDrop, onDragEnd, isDragging, isDropTarget, dropPosition, isLast,
   mergeMode
 }) => {
   // `pctReturn` is passed in from the parent (computed for the current chart period + mode).
@@ -440,7 +440,7 @@ const PortfolioRow = ({
       onDragOver={(e) => onDragOver?.(e, portfolio.id)}
       onDrop={(e) => onDrop?.(e, portfolio.id)}
       onDragEnd={onDragEnd}
-      className={`group relative px-4 py-3 border-b border-subtle hover-surface transition-colors ${
+      className={`group relative px-4 py-3 ${isLast ? '' : 'border-b border-subtle'} hover-surface transition-colors ${
         isDragging ? 'opacity-30' : ''
       } ${isDropTarget ? (dropPosition === 'after' ? 'accent-tint-mild border-b-2 border-b-accent-brand' : 'accent-tint-mild border-t-2 border-t-accent-brand') : ''}`}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
@@ -468,12 +468,12 @@ const PortfolioRow = ({
             }}>{portfolio.name}</span>
             <span className="text-[10px] font-mono text-muted tabular-nums">·{stockCount}</span>
             {portfolio.id === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-contrast-pill text-on-contrast-pill rounded-sm">YOU</span>}
-            {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-muted-alt">bench</span>}
+            {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-tertiary">bench</span>}
           </div>
-          {portfolio.subtitle && <div className="text-[11px] text-muted-alt mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
+          {portfolio.subtitle && <div className="text-[11px] text-tertiary mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
           {missingTickers?.length > 0 && (
             <div className="text-[10px] text-accent-brand mt-0.5 font-mono">
-              missing: {missingTickers.join(', ')} <span className="text-muted-alt">({coveragePct}% covered)</span>
+              missing: {missingTickers.join(', ')} <span className="text-tertiary">({coveragePct}% covered)</span>
             </div>
           )}
         </div>
@@ -491,7 +491,7 @@ const PortfolioRow = ({
           {!hasReturn && stockCount === 0 && <div className="text-[10px] text-muted italic font-mono">empty</div>}
           {!hasReturn && stockCount > 0 && <div className="text-[10px] text-muted italic font-mono">no data</div>}
           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover-surface rounded text-muted-alt hover-text-primary" title="Edit portfolio">
+            <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover-surface rounded text-tertiary hover-text-primary" title="Edit portfolio">
               <Pencil size={12} />
             </button>
           </div>
@@ -624,13 +624,13 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
       <div className="surface-card-elevated border border-subtle rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
         <div className="px-6 py-4 border-b border-subtle flex items-center justify-between">
           <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Edit Portfolio</h2>
-          <button onClick={onClose} className="text-muted-alt hover-text-primary"><X size={20} /></button>
+          <button onClick={onClose} className="text-tertiary hover-text-primary"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* On mobile: Color first, then Name. On desktop: Name | Color side by side. */}
             <div className="order-2 sm:order-1">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">
+              <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
                 Name {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
               </label>
               <input value={name} onChange={(e) => setName(e.target.value)} readOnly={isFromBase}
@@ -641,7 +641,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 }`} />
             </div>
             <div className="order-1 sm:order-2">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">Color</label>
+              <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">Color</label>
               <div className="flex flex-wrap gap-1.5 pt-1.5 items-center">
                 {PALETTE.map(c => {
                   // The near-black swatch (#1a1815) blends into the dark theme's canvas when not
@@ -659,14 +659,14 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
                   <div className="w-6 h-6 rounded-full border-2 border-dashed border-strong group-hover-border-focus flex items-center justify-center surface-card-elevated transition-colors"
                     style={!PALETTE.includes(color) ? { backgroundColor: color, borderStyle: 'solid', borderColor: 'var(--border-selected)', boxShadow: '0 0 0 1px white inset' } : undefined}>
-                    {PALETTE.includes(color) && <Pipette size={11} className="text-muted-alt group-hover-text-primary" />}
+                    {PALETTE.includes(color) && <Pipette size={11} className="text-tertiary group-hover-text-primary" />}
                   </div>
                 </label>
               </div>
             </div>
           </div>
           <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-1.5 block">
+            <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
               Subtitle {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
             </label>
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
@@ -680,7 +680,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
           {miniChartData && (
             <div className="flex items-center gap-3">
               <div className="flex flex-col text-[10px] font-mono leading-tight">
-                <span className="text-muted-alt tracking-[0.1em] uppercase">vs VOO</span>
+                <span className="text-tertiary tracking-[0.1em] uppercase">vs VOO</span>
                 <span className="tabular-nums font-medium"
                   style={{ color: miniDelta >= 0 ? 'var(--success)' : 'var(--danger)' }}>
                   {miniDelta >= 0 ? '+' : ''}{miniDelta.toFixed(2)}%
@@ -691,7 +691,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                   <LineChart data={miniChartData} margin={{ top: 4, right: 4, bottom: 4, left: 4 }}>
                     <YAxis hide domain={miniYDomain} />
                     <XAxis hide dataKey="date" />
-                    <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={0.55} />
+                    <ReferenceLine y={100} stroke="var(--text-primary)" strokeDasharray="3 3" strokeOpacity={0.55} />
                     <Line type="monotone" dataKey="value" stroke={color || '#1a1815'} strokeWidth={1.5} dot={false} isAnimationActive={false} />
                   </LineChart>
                 </ResponsiveContainer>
@@ -717,7 +717,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                       className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
                         viewIdx === idx
                           ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
-                          : 'bg-transparent text-muted-alt hover-text-primary hover-border-strong border-subtle'
+                          : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
                       }`}
                       title={`13F snapshot · ${s.asOf} · read-only`}>
                       {asOfLabel(s.asOf)}
@@ -727,7 +727,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                     className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
                       viewIdx === 'current'
                         ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
-                        : 'bg-transparent text-muted-alt hover-text-primary hover-border-strong border-subtle'
+                        : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
                     }`}
                     title="Current quarter">
                     Now
@@ -847,7 +847,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                        *   )}
                        */}
                       <div className="relative flex items-center">
-                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-muted-alt line-through' : isDisabled ? 'text-muted line-through' : 'text-primary'}`}>
+                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-tertiary line-through' : isDisabled ? 'text-muted line-through' : 'text-primary'}`}>
                           {h.ticker}
                         </div>
                         {isMerged && (
@@ -904,7 +904,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                         })()}
                       </div>
                     </div>
-                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-muted-alt' : 'text-primary'}`}>
+                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-tertiary' : 'text-primary'}`}>
                       {(parseFloat(h.weight) || 0).toFixed(2)}%
                     </div>
                   </div>
@@ -1038,7 +1038,7 @@ const BackupModal = ({ onRestore, onClose }) => {
       <div className="surface-card-elevated border border-subtle rounded-lg max-w-md w-full overflow-hidden shadow-2xl">
         <div className="px-6 py-4 border-b border-subtle flex items-center justify-between">
           <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Restore from file</h2>
-          <button onClick={onClose} className="text-muted-alt hover-text-primary"><X size={20} /></button>
+          <button onClick={onClose} className="text-tertiary hover-text-primary"><X size={20} /></button>
         </div>
         <div className="px-6 py-5 space-y-5">
           <div className="text-[11px] font-mono text-tertiary">
@@ -1301,7 +1301,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
   if (visibleNonEmpty.length < 1) {
     return (
-      <div className="surface-card border border-subtle rounded-lg p-6 text-center text-[11px] font-mono text-muted-alt shadow-sm">
+      <div className="surface-card border border-subtle rounded-lg p-6 text-center text-[11px] font-mono text-tertiary shadow-sm">
         Show at least 1 portfolio to see analytics
       </div>
     );
@@ -1359,7 +1359,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowMergedDetails(false)} />
                         <div className="absolute right-0 top-full mt-1.5 z-20 surface-card-elevated border border-subtle rounded shadow-lg p-3 min-w-[240px] max-w-[320px]">
-                          <div className="text-[9px] tracking-[0.15em] uppercase text-muted-alt font-mono mb-2 flex items-center gap-1.5">
+                          <div className="text-[9px] tracking-[0.15em] uppercase text-tertiary font-mono mb-2 flex items-center gap-1.5">
                             <Link2 size={10} className="text-accent-brand" />
                             <span>{mergedCount} merged ticker{mergedCount > 1 ? 's' : ''}</span>
                           </div>
@@ -1440,13 +1440,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   <div className="text-[12px] font-mono tabular-nums text-primary font-medium w-14 text-right flex-shrink-0">
                     {s.combined.toFixed(2)}%
                   </div>
-                  {N >= 2 && <div className="text-[10px] font-mono text-muted-alt w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
+                  {N >= 2 && <div className="text-[10px] font-mono text-tertiary w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="p-6 text-center text-[11px] font-mono text-muted-alt">
+          <div className="p-6 text-center text-[11px] font-mono text-tertiary">
             No portfolios included — toggle some below
           </div>
         )}
@@ -1521,7 +1521,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       );
                     })}
                   </div>
-                  <div className="text-[10px] font-mono text-muted-alt flex-shrink-0">
+                  <div className="text-[10px] font-mono text-tertiary flex-shrink-0">
                     max <span className="text-primary font-medium tabular-nums">{s.maxSingle.toFixed(1)}%</span>
                   </div>
                 </div>
@@ -1839,44 +1839,30 @@ const InvestorsMatrix = ({
   });
 
   return (
-    <div className="rounded-lg overflow-hidden shadow-sm"
-      style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)' }}>
-      <div className="px-5 py-3 flex items-center justify-between flex-wrap gap-3"
-        style={{ background: 'var(--bg-panel)', borderBottom: '1px solid var(--border-subtle)' }}>
-        <div className="text-[10px] tracking-[0.2em] uppercase font-mono" style={{ color: 'var(--text-secondary)' }}>
+    <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm">
+      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3">
+        <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
           Investors · {investorsIndex.length} in base · {[...activeIds].filter(id => investorsIndex.some(i => i.id === id)).length} in portfolio
           <span className="ml-3" style={{ color: 'var(--text-muted)' }}>· base latest: {latestQuarter || '—'}</span>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
           {/* Granularity: yearly | quarterly. Switches the body rows; CAGR/Sortino/MaxDD stay aggregate. */}
-          <div className="flex items-center gap-0.5 rounded p-0.5" style={{ background: 'var(--row-stripe)' }}>
-            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }].map(opt => {
-              const active = granularity === opt.id;
-              return (
-                <button key={opt.id} onClick={() => setGranularity(opt.id)}
-                  className="px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all"
-                  style={{
-                    background: active ? 'var(--bg-card-elevated)' : 'transparent',
-                    color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
-                    boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none', cursor: 'pointer',
-                  }}>{opt.label}</button>
-              );
-            })}
+          <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
+            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }].map(opt => (
+              <button key={opt.id} onClick={() => setGranularity(opt.id)}
+                className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                  granularity === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
+                }`}>{opt.label}</button>
+            ))}
           </div>
           {/* Comparison mode: absolute | vs VT | vs VOO. */}
-          <div className="flex items-center gap-0.5 rounded p-0.5" style={{ background: 'var(--row-stripe)' }}>
-            {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => {
-              const active = mode === opt.id;
-              return (
-                <button key={opt.id} onClick={() => setMode(opt.id)}
-                  className="px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all"
-                  style={{
-                    background: active ? 'var(--bg-card-elevated)' : 'transparent',
-                    color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
-                    boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none', cursor: 'pointer',
-                  }}>{opt.label}</button>
-              );
-            })}
+          <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
+            {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => (
+              <button key={opt.id} onClick={() => setMode(opt.id)}
+                className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                  mode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
+                }`}>{opt.label}</button>
+            ))}
           </div>
         </div>
       </div>
@@ -1914,26 +1900,28 @@ const InvestorsMatrix = ({
                     textAlign: 'center', verticalAlign: 'top',
                   }}>
                     {/* Color dot + eye toggle on the top row. The dot mirrors the chart line
-                        color so the user can see the link between table column and chart line.
-                        The eye toggle shows/hides the chart line WITHOUT removing the column. */}
-                    <div className="flex items-center justify-center gap-1.5" style={{ marginBottom: 4 }}>
-                      <span title={`Chart line color`}
-                        style={{
-                          width: 8, height: 8, borderRadius: '50%',
-                          backgroundColor: isVisible ? dotColor : 'transparent',
-                          border: `1.5px solid ${dotColor}`,
-                          opacity: isVisible ? 1 : 0.5,
-                          flexShrink: 0,
-                        }} />
-                      <button onClick={() => onToggleVisibility(p.id)}
-                        title={isVisible ? 'Hide chart line' : 'Show chart line'}
-                        style={{
-                          background: 'none', border: 'none', cursor: 'pointer',
-                          color: isVisible ? 'var(--accent-on-bg)' : 'var(--text-muted)', padding: '2px',
-                        }}>
+                        color (so the user sees the link between column and chart line); the eye
+                        shows/hides the chart line WITHOUT removing the column. The entire
+                        dot+eye area is one button so clicking either side toggles visibility. */}
+                    <button onClick={() => onToggleVisibility(p.id)}
+                      title={isVisible ? 'Hide chart line' : 'Show chart line'}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        padding: '2px 4px', marginBottom: 4,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                        width: '100%',
+                      }}>
+                      <span style={{
+                        width: 8, height: 8, borderRadius: '50%',
+                        backgroundColor: isVisible ? dotColor : 'transparent',
+                        border: `1.5px solid ${dotColor}`,
+                        opacity: isVisible ? 1 : 0.5,
+                        flexShrink: 0,
+                      }} />
+                      <span style={{ color: isVisible ? 'var(--accent-on-bg)' : 'var(--text-muted)', display: 'inline-flex' }}>
                         {isVisible ? <Eye size={13} /> : <EyeOff size={13} />}
-                      </button>
-                    </div>
+                      </span>
+                    </button>
                     {/* Name below — clamps to 2 lines, then ellipsis. */}
                     <button onClick={() => onEditInvestor(p)} title={p.subtitle || p.name}
                       style={{
@@ -2668,18 +2656,17 @@ export default function PortfolioTracker() {
               </div>
               <div className="flex items-center gap-2 flex-wrap">
                 {/* View toggle: Portfolio (chart + selected list) ⇄ Investors (full base matrix). */}
-                <div className="flex items-center gap-0.5 rounded p-0.5 border border-strong" style={{ background: 'var(--row-stripe)' }}>
+                {/* View toggle — sits in the page header beside Save/Backup/Theme buttons,
+                    so it mirrors their look (border + surface-card) rather than the soft
+                    pill style used for tabs INSIDE cards. */}
+                <div className="flex items-center surface-card border border-strong rounded overflow-hidden">
                   {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }].map(opt => {
                     const active = view === opt.id;
                     return (
                       <button key={opt.id} onClick={() => setView(opt.id)}
-                        className="px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase font-mono rounded transition-all"
-                        style={{
-                          background: active ? 'var(--bg-card-elevated)' : 'transparent',
-                          color: active ? 'var(--text-primary)' : 'var(--text-tertiary)',
-                          boxShadow: active ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
-                          cursor: 'pointer',
-                        }}>
+                        className={`px-3 py-2 text-[10px] tracking-[0.15em] uppercase font-mono transition-colors ${
+                          active ? 'surface-card-elevated text-primary' : 'text-secondary hover-text-primary'
+                        }`}>
                         {opt.label}
                       </button>
                     );
@@ -2703,7 +2690,7 @@ export default function PortfolioTracker() {
                   <Save size={11} /> Backup
                 </button>
                 <button onClick={() => { setDarkMode(!darkMode); setThemeManualOverride(true); }}
-                  className="p-2 text-muted-alt hover-text-primary rounded border border-subtle hover-border-focus surface-card transition-colors"
+                  className="p-2 text-tertiary hover-text-primary rounded border border-subtle hover-border-focus surface-card transition-colors"
                   title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
                   {darkMode ? <Sun size={13} /> : <Moon size={13} />}
                 </button>
@@ -2742,14 +2729,14 @@ export default function PortfolioTracker() {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center gap-1 surface-panel rounded p-0.5">
+                <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
                   <button onClick={() => setChartMode('absolute')}
-                    className={`px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all ${
+                    className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
                       effectiveMode === 'absolute' ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                     }`}>Absolute</button>
                   {availableBenchmarks.map(b => (
                     <button key={b.id} onClick={() => setChartMode(b.id)}
-                      className={`px-3 py-1 text-[10px] tracking-[0.1em] uppercase font-mono rounded transition-all ${
+                      className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
                         chartMode === b.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                       }`}>vs {b.name}</button>
                   ))}
@@ -2758,11 +2745,11 @@ export default function PortfolioTracker() {
               {legendPortfolios.length > 0 && (
                 <div className="px-5 py-2.5 border-b border-subtle flex items-center gap-1.5 flex-wrap surface-card-elevated">
                   <button onClick={selectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-muted-alt hover-text-primary px-2 py-1 transition-colors">
+                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
                     All
                   </button>
                   <button onClick={deselectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-muted-alt hover-text-primary px-2 py-1 transition-colors">
+                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
                     None
                   </button>
                   <span className="text-muted mx-0.5 select-none">|</span>
@@ -2789,7 +2776,7 @@ export default function PortfolioTracker() {
                   </div>
                 )}
                 {chartData.length === 0 ? (
-                  <div className="h-full flex items-center justify-center text-muted-alt text-sm font-mono py-32 text-center">
+                  <div className="h-full flex items-center justify-center text-tertiary text-sm font-mono py-32 text-center">
                     <div>
                       <div className="mb-2">No data to chart yet.</div>
                       <div className="text-[10px] text-muted">Bundled price data is empty or failed to load.</div>
@@ -2804,11 +2791,11 @@ export default function PortfolioTracker() {
                       <YAxis domain={chartYDomain} hide={true} />
                       {effectiveMode === 'vs' && (
                         <>
-                          <ReferenceArea y1={100} y2={typeof chartYDomain[1] === 'number' ? chartYDomain[1] : vsVooDomain[1]} fill="var(--zone-up)" fillOpacity={0.06} />
-                          <ReferenceArea y1={typeof chartYDomain[0] === 'number' ? chartYDomain[0] : vsVooDomain[0]} y2={100} fill="var(--zone-down)" fillOpacity={0.06} />
+                          <ReferenceArea y1={100} y2={typeof chartYDomain[1] === 'number' ? chartYDomain[1] : vsVooDomain[1]} fill="var(--success-strong)" fillOpacity={0.06} />
+                          <ReferenceArea y1={typeof chartYDomain[0] === 'number' ? chartYDomain[0] : vsVooDomain[0]} y2={100} fill="var(--danger-strong)" fillOpacity={0.06} />
                         </>
                       )}
-                      <ReferenceLine y={100} stroke="var(--ref-line)" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />
+                      <ReferenceLine y={100} stroke="var(--text-primary)" strokeDasharray="3 3" strokeOpacity={effectiveMode === 'vs' ? 0.5 : 0.3} />
                       <Tooltip
                         contentStyle={{ backgroundColor: darkMode ? '#292524' : '#fdfbf6', border: `1px solid ${darkMode ? '#44403c' : '#d6cfc0'}`, borderRadius: '4px', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', padding: '10px 12px', boxShadow: darkMode ? '0 4px 12px rgba(0,0,0,0.3)' : '0 4px 12px rgba(0,0,0,0.08)' }}
                         labelStyle={{ color: darkMode ? '#a8a29e' : '#6b6660', marginBottom: '6px', fontSize: '10px' }}
@@ -2852,14 +2839,13 @@ export default function PortfolioTracker() {
           {/* Portfolios — column 1 on wide screens, second on mobile. Scrollable to chart's height. */}
           <div className="min-[1200px]:col-start-1 min-[1200px]:row-start-1 min-[1200px]:min-h-0">
             <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm h-full flex flex-col">
-              <div className="px-4 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-shrink-0">
+              <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-shrink-0">
                 <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
                   Portfolios · {investorPortfolios.length} <span className="text-muted normal-case tracking-normal">· drag to reorder</span>
                 </div>
-                <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono tabular-nums">return</div>
               </div>
               <div className="min-[1200px]:overflow-y-auto min-[1200px]:flex-1">
-                {investorPortfolios.map(p => (
+                {investorPortfolios.map((p, i) => (
                   <PortfolioRow key={p.id} portfolio={p}
                     pctReturn={displayPctByPortfolio[p.id]}
                     missingTickers={getMissingTickers(p)} coveragePct={getCoveragePct(p)}
@@ -2869,10 +2855,11 @@ export default function PortfolioTracker() {
                     onDrop={handleDrop} onDragEnd={handleDragEnd}
                     isDragging={draggedId === p.id} isDropTarget={dragOverId === p.id && draggedId !== p.id}
                     dropPosition={dragOverPos}
+                    isLast={i === investorPortfolios.length - 1}
                     mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
-                  <div className="px-4 py-6 text-center text-[11px] font-mono text-muted-alt">
+                  <div className="px-4 py-6 text-center text-[11px] font-mono text-tertiary">
                     No investor portfolios in the bundled data
                   </div>
                 )}
@@ -2908,7 +2895,7 @@ export default function PortfolioTracker() {
         </div>
         )}
 
-        <div className="mt-6 text-[10px] text-muted-alt font-mono leading-relaxed max-w-3xl">
+        <div className="mt-6 text-[10px] text-tertiary font-mono leading-relaxed max-w-3xl">
           Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
         </div>
       </div>

@@ -40,7 +40,10 @@ html.dark body {
 html.dark .recharts-cartesian-grid line { stroke: #292524; }
 html.dark .recharts-cartesian-axis-tick text { fill: #78716c; }
 html.dark .recharts-cartesian-axis line { stroke: #44403c; }
-html.dark .recharts-reference-line line { stroke: #44403c; }
+/* Note: .recharts-reference-line stroke is controlled inline in JSX via the
+   --text-primary token (single source for "max-contrast text"). No override
+   here — a hardcoded dark `stroke: #44403c` used to silently win over the
+   inline `var(--text-primary)` and made the y=100 baseline almost invisible. */
 
 /* The near-black palette swatch (#1a1815) in the Edit Portfolio color picker disappears against
    the dark canvas. Give it a subtle inset ring only in dark mode and only when unselected (the
@@ -121,15 +124,17 @@ html.dark .recharts-tooltip-label { color: #a8a29e !important; }
   /* Borders */
   --border-subtle: #e7e2d4;
   --border-strong: #c2bbac;
-  --border-focus: #1a1815;
-  --border-selected: #1a1815;
+  /* --border-focus / --border-selected are aliases for max-contrast text so they
+     auto-switch with the theme. If you ever want them distinct, give them their
+     own hex here and in the html.dark block — but most UIs don't need them. */
+  --border-focus: var(--text-primary);
+  --border-selected: var(--text-primary);
 
   /* Text */
   --text-primary: #1a1815;
   --text-secondary: #4a4640;
   --text-tertiary: #6b6660;
   --text-muted: #a8a39a;
-  --text-muted-alt: #6b6660;
 
   /* Accent */
   --accent-brand: #a06b1c;
@@ -145,15 +150,12 @@ html.dark .recharts-tooltip-label { color: #a8a29e !important; }
   --danger-strong: #b91c1c;
   --danger-tint: rgba(220, 38, 38, 0.06);
 
-  /* Pill (YOU badge / Save button) */
-  --contrast-pill-bg: #1a1815;
+  /* Pill (YOU badge / Save button) — `bg` aliases max-contrast text. */
+  --contrast-pill-bg: var(--text-primary);
   --contrast-pill-text: #fafaf9;
 
   /* Chart / existing tokens (keep) */
-  --ref-line: #1a1815;
   --weight-bar: rgba(214, 207, 192, 0.7);
-  --zone-up: #16a34a;
-  --zone-down: #dc2626;
 }
 
 html.dark {
@@ -174,14 +176,12 @@ html.dark {
      modal/card backgrounds get a readable outline in dark mode. */
   --border-subtle: #3d3934;
   --border-strong: #57534e;
-  --border-focus: #e7e5e4;
-  --border-selected: #e7e5e4;
+  /* --border-focus / --border-selected alias --text-primary, defined once in :root */
 
   --text-primary: #e7e5e4;
   --text-secondary: #d6d3d1;
   --text-tertiary: #a8a29e;
   --text-muted: #78716c;
-  --text-muted-alt: #a8a29e;
 
   --accent-brand: #d4a843;
   --accent-on-bg: #e7b95c;
@@ -195,13 +195,10 @@ html.dark {
   --danger-strong: #fb7185;
   --danger-tint: rgba(248, 113, 113, 0.12);
 
-  --contrast-pill-bg: #e7e5e4;
+  /* --contrast-pill-bg aliases --text-primary, defined once in :root */
   --contrast-pill-text: #1c1917;
 
-  --ref-line: #a8a29e;
   --weight-bar: rgba(120, 113, 108, 0.55);
-  --zone-up: #34d399;
-  --zone-down: #f87171;
 }
 
 /* ============================================================================
@@ -220,14 +217,12 @@ html.dark {
 .success-tint { background: var(--success-tint); }
 .danger-tint { background: var(--danger-tint); }
 .bg-accent-on-bg { background: var(--accent-on-bg); }
-.bg-success-strong { background: var(--success-strong); }
 .bg-border-subtle { background: var(--border-subtle); }
 
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
 .text-tertiary { color: var(--text-tertiary); }
 .text-muted { color: var(--text-muted); }
-.text-muted-alt { color: var(--text-muted-alt); }
 .text-on-contrast-pill { color: var(--contrast-pill-text); }
 .text-on-accent { color: #ffffff; }
 .text-accent-brand { color: var(--accent-brand); }
@@ -243,8 +238,6 @@ html.dark {
 
 .border-subtle { border-color: var(--border-subtle); }
 .border-strong { border-color: var(--border-strong); }
-.border-focus { border-color: var(--border-focus); }
-.border-accent-on-bg { border-color: var(--accent-on-bg); }
 .border-accent-brand { border-color: var(--accent-brand); }
 .border-t-accent-brand { border-top-color: var(--accent-brand); }
 .border-b-accent-brand { border-bottom-color: var(--accent-brand); }
@@ -262,13 +255,11 @@ html.dark {
 .group:hover .group-hover-text-primary { color: var(--text-primary); }
 .group:hover .group-hover-text-secondary { color: var(--text-secondary); }
 .group:hover .group-hover-border-focus { border-color: var(--border-focus); }
-.hover-accent:hover { color: var(--accent-on-bg); }
 .hover-text-danger-strong:hover { color: var(--danger-strong); }
 .hover-accent-darker:hover { filter: brightness(0.92); }
 .hover-contrast-pill-soft:hover { opacity: 0.85; }
 
 .focus-border:focus { border-color: var(--border-focus); outline: none; }
-.focus-within-border:focus-within { border-color: var(--border-focus); }
 
 .accent-on-bg-color { accent-color: var(--accent-on-bg); }
 
