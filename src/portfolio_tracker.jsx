@@ -466,13 +466,13 @@ const PortfolioRow = ({
             <span className={`text-[15px] tracking-tight font-serif ${!portfolio.visible ? 'line-through' : ''}`} style={{
               fontWeight: 500, color: portfolio.visible ? 'var(--text-primary)' : 'var(--text-muted)'
             }}>{portfolio.name}</span>
-            <span className="text-[10px] font-mono text-muted tabular-nums">·{stockCount}</span>
-            {portfolio.id === 'mine' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-contrast-pill text-on-contrast-pill rounded-sm">YOU</span>}
-            {portfolio.kind === 'benchmark' && <span className="text-[9px] tracking-[0.18em] uppercase font-mono text-tertiary">bench</span>}
+            <span className="text-micro font-mono text-muted tabular-nums">·{stockCount}</span>
+            {portfolio.id === 'mine' && <span className="text-micro tracking-[0.18em] uppercase font-mono px-1.5 py-0.5 bg-contrast-pill text-on-contrast-pill rounded-sm">YOU</span>}
+            {portfolio.kind === 'benchmark' && <span className="text-micro tracking-[0.18em] uppercase font-mono text-tertiary">bench</span>}
           </div>
-          {portfolio.subtitle && <div className="text-[11px] text-tertiary mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
+          {portfolio.subtitle && <div className="text-body text-tertiary mt-0.5 font-mono tracking-tight truncate">{portfolio.subtitle}</div>}
           {missingTickers?.length > 0 && (
-            <div className="text-[10px] text-accent-brand mt-0.5 font-mono">
+            <div className="text-micro text-accent-brand mt-0.5 font-mono">
               missing: {missingTickers.join(', ')} <span className="text-tertiary">({coveragePct}% covered)</span>
             </div>
           )}
@@ -483,13 +483,13 @@ const PortfolioRow = ({
               onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }}
               title="Edit portfolio"
               className="text-right font-mono cursor-pointer hover:opacity-70 transition-opacity">
-              <div className="text-[13px] tabular-nums font-medium" style={{ color: positive ? 'var(--success)' : 'var(--danger)' }}>
+              <div className="text-prom tabular-nums font-medium" style={{ color: positive ? 'var(--success)' : 'var(--danger)' }}>
                 {positive ? '+' : ''}{pctReturn.toFixed(2)}%
               </div>
             </button>
           )}
-          {!hasReturn && stockCount === 0 && <div className="text-[10px] text-muted italic font-mono">empty</div>}
-          {!hasReturn && stockCount > 0 && <div className="text-[10px] text-muted italic font-mono">no data</div>}
+          {!hasReturn && stockCount === 0 && <div className="text-micro text-muted italic font-mono">empty</div>}
+          {!hasReturn && stockCount > 0 && <div className="text-micro text-muted italic font-mono">no data</div>}
           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
             <button onClick={(e) => { e.stopPropagation(); onEdit(portfolio); }} className="p-1.5 hover-surface rounded text-tertiary hover-text-primary" title="Edit portfolio">
               <Pencil size={12} />
@@ -630,18 +630,18 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* On mobile: Color first, then Name. On desktop: Name | Color side by side. */}
             <div className="order-2 sm:order-1">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
+              <label className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
                 Name {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
               </label>
               <input value={name} onChange={(e) => setName(e.target.value)} readOnly={isFromBase}
                 title={isFromBase ? 'Name comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
                 style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
-                className={`w-full border border-subtle rounded px-3 py-2 text-sm font-serif focus:outline-none ${
+                className={`w-full border border-subtle rounded px-3 py-2 text-prom font-serif focus:outline-none ${
                   isFromBase ? 'text-muted cursor-not-allowed' : 'surface-input focus-border'
                 }`} />
             </div>
             <div className="order-1 sm:order-2">
-              <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">Color</label>
+              <label className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">Color</label>
               <div className="flex flex-wrap gap-1.5 pt-1.5 items-center">
                 {PALETTE.map(c => {
                   // The near-black swatch (#1a1815) blends into the dark theme's canvas when not
@@ -666,20 +666,20 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
           </div>
           <div>
-            <label className="text-[10px] tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
+            <label className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
               Subtitle {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
             </label>
             <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
               readOnly={isFromBase}
               title={isFromBase ? 'Subtitle comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
               style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
-              className={`w-full border border-subtle rounded px-3 py-2 text-sm font-mono focus:outline-none ${
+              className={`w-full border border-subtle rounded px-3 py-2 text-prom font-mono focus:outline-none ${
                 isFromBase ? 'text-muted cursor-not-allowed' : 'surface-input text-secondary focus-border'
               }`} />
           </div>
           {miniChartData && (
             <div className="flex items-center gap-3">
-              <div className="flex flex-col text-[10px] font-mono leading-tight">
+              <div className="flex flex-col text-micro font-mono leading-tight">
                 <span className="text-tertiary tracking-[0.1em] uppercase">vs VOO</span>
                 <span className="tabular-nums font-medium"
                   style={{ color: miniDelta >= 0 ? 'var(--success)' : 'var(--danger)' }}>
@@ -704,7 +704,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 So both Merge toggle and quarter switcher align with the bar, leaving the area above
                 the percent column empty. */}
             <div className="flex items-center justify-between mb-2 gap-3 pl-[37px] pr-16">
-              <label className="flex items-center gap-1.5 text-[10px] font-mono text-secondary cursor-pointer select-none"
+              <label className="flex items-center gap-1.5 text-micro font-mono text-secondary cursor-pointer select-none"
                 title="Display BRK.A/BRK.B, GOOG/GOOGL etc. as a single ticker. Merged rows are read-only — uncheck to edit individual share classes.">
                 <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
                   className="accent-on-bg-color" />
@@ -714,7 +714,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                 <div className="flex items-center gap-1 flex-wrap justify-end">
                   {historySnapshots.map((s, idx) => (
                     <button key={s.asOf} onClick={() => setViewIdx(idx)}
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                      className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
                         viewIdx === idx
                           ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
                           : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
@@ -724,7 +724,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                     </button>
                   ))}
                   <button onClick={() => setViewIdx('current')}
-                    className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                    className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
                       viewIdx === 'current'
                         ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
                         : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
@@ -847,11 +847,11 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                        *   )}
                        */}
                       <div className="relative flex items-center">
-                        <div className={`relative flex-1 px-3 py-2 text-sm font-mono uppercase ${isSold ? 'text-tertiary line-through' : isDisabled ? 'text-muted line-through' : 'text-primary'}`}>
+                        <div className={`relative flex-1 px-3 py-2 text-prom font-mono uppercase ${isSold ? 'text-tertiary line-through' : isDisabled ? 'text-muted line-through' : 'text-primary'}`}>
                           {h.ticker}
                         </div>
                         {isMerged && (
-                          <span className="relative mr-2 text-[9px] tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm accent-tint-strong text-accent-brand border border-accent-brand whitespace-nowrap"
+                          <span className="relative mr-2 text-micro tracking-[0.08em] uppercase font-mono px-1.5 py-0.5 rounded-sm accent-tint-strong text-accent-brand border border-accent-brand whitespace-nowrap"
                             title="Merged display row">
                             {h.mergedFrom.join(' + ')}
                           </span>
@@ -896,7 +896,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                             ? 'Approximate: estimated from prices (price-corrected weight delta). Exact share counts will appear after INVESTORS-BACKFILL fills shares for this quarter.'
                             : 'Real trading activity — change in share count vs previous quarter.';
                           return (
-                            <span className={`relative mr-3 text-sm font-mono tabular-nums ${cls}`}
+                            <span className={`relative mr-3 text-prom font-mono tabular-nums ${cls}`}
                               title={title}>
                               {label}
                             </span>
@@ -904,7 +904,7 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                         })()}
                       </div>
                     </div>
-                    <div className={`w-14 text-sm font-mono text-right tabular-nums ${isSold ? 'text-tertiary' : 'text-primary'}`}>
+                    <div className={`w-14 text-prom font-mono text-right tabular-nums ${isSold ? 'text-tertiary' : 'text-primary'}`}>
                       {(parseFloat(h.weight) || 0).toFixed(2)}%
                     </div>
                   </div>
@@ -918,14 +918,14 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             {!portfolio.locked && onDelete && (
               <button onClick={() => onDelete(portfolio.id)}
                 style={{ color: 'var(--danger)' }}
-                className="flex items-center gap-1.5 px-3 py-2 text-[11px] tracking-[0.15em] uppercase font-mono hover-text-danger-strong hover-danger-tint rounded transition-colors">
+                className="flex items-center gap-1.5 px-3 py-2 text-body tracking-[0.15em] uppercase font-mono hover-text-danger-strong hover-danger-tint rounded transition-colors">
                 <Trash2 size={12} /> Delete
               </button>
             )}
           </div>
           <div className="flex items-center gap-3">
-            <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Cancel</button>
-            <button onClick={handleSave} className="px-5 py-2 text-[11px] tracking-[0.15em] uppercase font-mono bg-contrast-pill text-on-contrast-pill rounded hover-contrast-pill-soft">Save</button>
+            <button onClick={onClose} className="px-4 py-2 text-body tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Cancel</button>
+            <button onClick={handleSave} className="px-5 py-2 text-body tracking-[0.15em] uppercase font-mono bg-contrast-pill text-on-contrast-pill rounded hover-contrast-pill-soft">Save</button>
           </div>
         </div>
       </div>
@@ -1041,7 +1041,7 @@ const BackupModal = ({ onRestore, onClose }) => {
           <button onClick={onClose} className="text-tertiary hover-text-primary"><X size={20} /></button>
         </div>
         <div className="px-6 py-5 space-y-5">
-          <div className="text-[11px] font-mono text-tertiary">
+          <div className="text-body font-mono text-tertiary">
             Upload a JSON snapshot to view an older state. The restored data is held in memory only — reloading the page returns to the bundled default.
           </div>
 
@@ -1050,7 +1050,7 @@ const BackupModal = ({ onRestore, onClose }) => {
 
             {!restorePreview && (
               <button onClick={() => fileInputRef.current?.click()}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-body tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
                 <Upload size={13} /> Restore from backup file
               </button>
             )}
@@ -1058,10 +1058,10 @@ const BackupModal = ({ onRestore, onClose }) => {
             {restorePreview && (
               <div className="space-y-3">
                 <div className="success-tint border border-success rounded p-3">
-                  <div className="flex items-center gap-2 text-[12px] font-mono text-success-strong font-medium mb-2">
+                  <div className="flex items-center gap-2 text-body font-mono text-success-strong font-medium mb-2">
                     <Check size={13} /> File loaded
                   </div>
-                  <div className="text-[11px] font-mono text-secondary space-y-0.5">
+                  <div className="text-body font-mono text-secondary space-y-0.5">
                     <div className="truncate">· {restorePreview.fileName}</div>
                     <div>· Version <span className="text-primary">{restorePreview.version}</span> · exported {restorePreview.exportedAt ? new Date(restorePreview.exportedAt).toLocaleDateString() : 'unknown date'}</div>
                     <div>· <span className="text-primary font-medium">{restorePreview.portfolios.length}</span> portfolios</div>
@@ -1073,16 +1073,16 @@ const BackupModal = ({ onRestore, onClose }) => {
                     )}
                   </div>
                 </div>
-                <div className="text-[11px] font-mono text-accent-brand accent-tint-mild border border-accent-brand rounded p-2.5">
+                <div className="text-body font-mono text-accent-brand accent-tint-mild border border-accent-brand rounded p-2.5">
                   ⚠ This replaces all current data in memory. Reload the page to return to the bundled default.
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <button onClick={() => { setRestorePreview(null); setRestoreError(null); }}
-                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
+                    className="px-4 py-2.5 text-body tracking-[0.15em] uppercase font-mono surface-card-elevated border border-strong text-primary rounded hover-surface">
                     Cancel
                   </button>
                   <button onClick={performRestore}
-                    className="px-4 py-2.5 text-[11px] tracking-[0.15em] uppercase font-mono bg-accent-on-bg text-on-accent rounded hover-accent-darker">
+                    className="px-4 py-2.5 text-body tracking-[0.15em] uppercase font-mono bg-accent-on-bg text-on-accent rounded hover-accent-darker">
                     Confirm restore
                   </button>
                 </div>
@@ -1090,14 +1090,14 @@ const BackupModal = ({ onRestore, onClose }) => {
             )}
 
             {restoreError && (
-              <div className="text-[11px] font-mono text-danger-strong danger-tint border border-danger rounded p-2.5 flex items-start gap-1.5">
+              <div className="text-body font-mono text-danger-strong danger-tint border border-danger rounded p-2.5 flex items-start gap-1.5">
                 <AlertCircle size={11} className="mt-0.5 flex-shrink-0" /> <div>{restoreError}</div>
               </div>
             )}
           </div>
         </div>
         <div className="px-6 py-4 border-t border-subtle flex items-center justify-end surface-card-elevated">
-          <button onClick={onClose} className="px-4 py-2 text-[11px] tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Close</button>
+          <button onClick={onClose} className="px-4 py-2 text-body tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Close</button>
         </div>
       </div>
     </div>
@@ -1123,7 +1123,7 @@ const ConsensusPool = ({ portfolios, onSetVisibility, onIsolate }) => {
   };
   return (
     <div className="surface-card border border-subtle rounded-lg px-5 py-3 shadow-sm">
-      <div className="text-[9px] tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+      <div className="text-micro tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
       <div className="flex items-center gap-1.5 flex-wrap">
         {allWithHoldings.map(p => {
           const hidden = !p.visible;
@@ -1135,7 +1135,7 @@ const ConsensusPool = ({ portfolios, onSetVisibility, onIsolate }) => {
             : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
           return (
             <button key={p.id} onClick={(e) => handleClick(p, e)}
-              className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
+              className={`flex items-center gap-1.5 text-body font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
               title={tip}>
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color, opacity: hidden ? 0.3 : 1 }} />
               <span>{p.name}</span>
@@ -1301,7 +1301,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
   if (visibleNonEmpty.length < 1) {
     return (
-      <div className="surface-card border border-subtle rounded-lg p-6 text-center text-[11px] font-mono text-tertiary shadow-sm">
+      <div className="surface-card border border-subtle rounded-lg p-6 text-center text-body font-mono text-tertiary shadow-sm">
         Show at least 1 portfolio to see analytics
       </div>
     );
@@ -1341,13 +1341,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
             </div>
             <div className="flex items-center gap-4 flex-wrap">
               {!hideMergeToggle && (
-                <label className="flex items-center gap-1.5 text-[10px] font-mono text-secondary cursor-pointer select-none">
+                <label className="flex items-center gap-1.5 text-micro font-mono text-secondary cursor-pointer select-none">
                   <input type="checkbox" checked={mergeMode} onChange={(e) => setMergeMode(e.target.checked)}
                     className="accent-on-bg-color" />
                   <span>Merge dual-class</span>
                 </label>
               )}
-              <div className="flex items-center gap-3 text-[10px] font-mono text-secondary">
+              <div className="flex items-center gap-3 text-micro font-mono text-secondary">
                 <div><span className="tabular-nums text-primary font-medium">{totalUnique}</span> unique</div>
                 {mergeMode && mergedCount > 0 && (
                   <div className="relative">
@@ -1359,13 +1359,13 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowMergedDetails(false)} />
                         <div className="absolute right-0 top-full mt-1.5 z-20 surface-card-elevated border border-subtle rounded shadow-lg p-3 min-w-[240px] max-w-[320px]">
-                          <div className="text-[9px] tracking-[0.15em] uppercase text-tertiary font-mono mb-2 flex items-center gap-1.5">
+                          <div className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-2 flex items-center gap-1.5">
                             <Link2 size={10} className="text-accent-brand" />
                             <span>{mergedCount} merged ticker{mergedCount > 1 ? 's' : ''}</span>
                           </div>
                           <div className="space-y-1 max-h-64 overflow-y-auto">
                             {sorted.filter(s => s.merged).map(s => (
-                              <div key={s.ticker} className="text-[11px] font-mono flex items-center gap-2">
+                              <div key={s.ticker} className="text-body font-mono flex items-center gap-2">
                                 <span className="text-primary font-medium tabular-nums min-w-[3.5rem]">{s.ticker}</span>
                                 <span className="text-muted">←</span>
                                 <span className="text-accent-brand">{s.originalsList.join(' + ')}</span>
@@ -1388,7 +1388,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                     { id: 'sold',   label: 'Sold',   tip: 'Aggregate weight cuts and full exits vs last quarter' },
                   ].map(opt => (
                     <button key={opt.id} onClick={() => setViewMode(opt.id)}
-                      className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                      className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                         viewMode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                       }`}
                       title={opt.tip}>
@@ -1399,7 +1399,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
               )}
             </div>
           </div>
-          <div className="text-[11px] text-tertiary font-mono mt-1.5">
+          <div className="text-body text-tertiary font-mono mt-1.5">
             {N === 0
               ? (viewMode === 'held'
                   ? 'No portfolios included — toggle below'
@@ -1420,9 +1420,9 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
               <div key={s.ticker} className="px-5 py-2.5 hover-surface transition-colors">
                 <div className="flex items-center gap-3">
                   <div style={{ '--mobile-tw': tickerColWidth }}
-                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-primary font-medium flex items-center gap-1.5 flex-shrink-0">
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-body font-mono text-primary font-medium flex items-center gap-1.5 flex-shrink-0">
                     <span>{s.ticker}</span>
-                    {N >= 2 && s.count === N && <span className="text-accent-on-bg text-[11px]">★</span>}
+                    {N >= 2 && s.count === N && <span className="text-accent-on-bg text-body">★</span>}
                   </div>
                   <div className="flex-1 relative h-5 surface-panel rounded overflow-hidden flex">
                     {s.holders.map((h, i) => {
@@ -1437,23 +1437,23 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       );
                     })}
                   </div>
-                  <div className="text-[12px] font-mono tabular-nums text-primary font-medium w-14 text-right flex-shrink-0">
+                  <div className="text-body font-mono tabular-nums text-primary font-medium w-14 text-right flex-shrink-0">
                     {s.combined.toFixed(2)}%
                   </div>
-                  {N >= 2 && <div className="text-[10px] font-mono text-tertiary w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
+                  {N >= 2 && <div className="text-micro font-mono text-tertiary w-10 text-right flex-shrink-0">{s.count}/{N}</div>}
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="p-6 text-center text-[11px] font-mono text-tertiary">
+          <div className="p-6 text-center text-body font-mono text-tertiary">
             No portfolios included — toggle some below
           </div>
         )}
 
         {!hidePool && (
           <div className="px-5 py-3 surface-panel">
-            <div className="text-[9px] tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
+            <div className="text-micro tracking-[0.2em] uppercase text-tertiary font-mono mb-2">Pool <span className="normal-case tracking-normal text-muted">· click to hide / show · Ctrl/⌘/Shift+click to isolate</span></div>
             <div className="flex items-center gap-1.5 flex-wrap">
               {allWithHoldings.map(p => {
                 const hidden = !p.visible;
@@ -1465,7 +1465,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                   : 'Click to hide · Ctrl/⌘/Shift+click to isolate';
                 return (
                   <button key={p.id} onClick={(e) => handlePoolChipClick(p, e)}
-                    className={`flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
+                    className={`flex items-center gap-1.5 text-body font-mono px-2.5 py-1 rounded border transition-all ${cls}`}
                     title={tip}>
                     <div className="w-2 h-2 rounded-full" style={{
                       backgroundColor: p.color,
@@ -1489,7 +1489,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                 : viewMode === 'sold' ? 'Concentrated sells'
                 : 'High-conviction bets'}
             </div>
-            <div className="text-[11px] text-tertiary font-mono mt-0.5">
+            <div className="text-body text-tertiary font-mono mt-0.5">
               {viewMode === 'bought'
                 ? 'Big add by 1–2 investors — non-consensus, concentrated buying signal'
                 : viewMode === 'sold'
@@ -1502,7 +1502,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
               <div key={s.ticker} className="px-5 py-2.5 hover-surface transition-colors">
                 <div className="flex items-center gap-3">
                   <div style={{ '--mobile-tw': tickerColWidth }}
-                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-[12px] font-mono text-primary font-medium flex-shrink-0">
+                    className="w-20 max-[499px]:w-[var(--mobile-tw)] text-body font-mono text-primary font-medium flex-shrink-0">
                     {s.ticker}
                   </div>
                   <div className="flex-1 flex items-center gap-1.5 flex-wrap">
@@ -1512,7 +1512,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       return (
                         <Tag key={i}
                           onClick={interactive ? () => onEdit(h.portfolio) : undefined}
-                          className={`flex items-center gap-1 text-[11px] font-mono px-1.5 py-0.5 rounded surface-panel ${interactive ? 'hover-surface transition-colors cursor-pointer' : ''}`}
+                          className={`flex items-center gap-1 text-body font-mono px-1.5 py-0.5 rounded surface-panel ${interactive ? 'hover-surface transition-colors cursor-pointer' : ''}`}
                           style={{ borderLeft: `2px solid ${h.portfolio.color}` }}
                           title={interactive ? `Edit ${h.portfolio.name}` : undefined}>
                           <span className="text-secondary">{h.portfolio.name}</span>
@@ -1521,7 +1521,7 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
                       );
                     })}
                   </div>
-                  <div className="text-[10px] font-mono text-tertiary flex-shrink-0">
+                  <div className="text-micro font-mono text-tertiary flex-shrink-0">
                     max <span className="text-primary font-medium tabular-nums">{s.maxSingle.toFixed(1)}%</span>
                   </div>
                 </div>
@@ -1566,6 +1566,16 @@ const annualReturnFromSeries = (series, year) => {
   return (last / first - 1) * 100;
 };
 
+// Closest-or-earlier point lookup. Series is assumed sorted by date.
+const _closestLEinSeries = (series, target) => {
+  let lo = 0, hi = series.length - 1, ans = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (series[mid].date <= target) { ans = mid; lo = mid + 1; } else hi = mid - 1;
+  }
+  return ans >= 0 ? series[ans] : null;
+};
+
 // Quarter return: value at quarter-end / value at previous quarter-end - 1.
 // Uses closest-LE matching so missing month-ends fall back to the nearest earlier point.
 const quarterReturnFromSeries = (series, year, q) => {
@@ -1573,17 +1583,41 @@ const quarterReturnFromSeries = (series, year, q) => {
   const ends = ['03-31', '06-30', '09-30', '12-31'];
   const endIso = `${year}-${ends[q - 1]}`;
   const startIso = q === 1 ? `${year - 1}-12-31` : `${year}-${ends[q - 2]}`;
-  const closestLE = (target) => {
-    let lo = 0, hi = series.length - 1, ans = -1;
-    while (lo <= hi) {
-      const mid = (lo + hi) >> 1;
-      if (series[mid].date <= target) { ans = mid; lo = mid + 1; } else hi = mid - 1;
-    }
-    return ans >= 0 ? series[ans] : null;
-  };
-  const a = closestLE(startIso); const b = closestLE(endIso);
+  const a = _closestLEinSeries(series, startIso);
+  const b = _closestLEinSeries(series, endIso);
   if (!a || !b || !a.value || a.date >= b.date) return null;
   return (b.value / a.value - 1) * 100;
+};
+
+// Month return: value at month-end / value at previous month-end - 1.
+const monthReturnFromSeries = (series, year, month) => {
+  if (!series?.length) return null;
+  const endDay = new Date(year, month, 0).getDate();
+  const endIso = `${year}-${String(month).padStart(2, '0')}-${String(endDay).padStart(2, '0')}`;
+  const prevYear = month === 1 ? year - 1 : year;
+  const prevMonth = month === 1 ? 12 : month - 1;
+  const prevEndDay = new Date(prevYear, prevMonth, 0).getDate();
+  const startIso = `${prevYear}-${String(prevMonth).padStart(2, '0')}-${String(prevEndDay).padStart(2, '0')}`;
+  const a = _closestLEinSeries(series, startIso);
+  const b = _closestLEinSeries(series, endIso);
+  if (!a || !b || !a.value || a.date >= b.date) return null;
+  return (b.value / a.value - 1) * 100;
+};
+
+// Reduce series to one point per period (the latest point in each period).
+// Used by Max DD and Sortino so they reflect the chosen granularity.
+const samplesAtGranularity = (series, granularity) => {
+  if (!series?.length) return series || [];
+  if (granularity === 'monthly') return series;
+  const keyOf = (d) => {
+    const [y, m] = d.date.split('-').map(Number);
+    if (granularity === 'yearly')    return String(y);
+    if (granularity === 'quarterly') return `${y}-Q${Math.ceil(m / 3)}`;
+    return d.date;
+  };
+  const last = new Map();
+  for (const d of series) last.set(keyOf(d), d);
+  return [...last.values()].sort((a, b) => a.date.localeCompare(b.date));
 };
 
 const cagrFromSeries = (series) => {
@@ -1596,11 +1630,16 @@ const cagrFromSeries = (series) => {
   return (Math.pow(last.value / first.value, 1 / years) - 1) * 100;
 };
 
-const sortinoFromSeries = (series) => {
+// Sortino — annualized downside std risk-adjusted return. Uses returns between
+// consecutive points at the chosen granularity (yearly / quarterly / monthly).
+// Annualization factor matches the granularity (1 / 4 / 12).
+const sortinoFromSeries = (series, granularity = 'monthly') => {
   if (!series || series.length < 3) return null;
+  const pts = samplesAtGranularity(series, granularity);
+  if (pts.length < 3) return null;
   const rets = [];
-  for (let i = 1; i < series.length; i++) {
-    const prev = series[i - 1].value, curr = series[i].value;
+  for (let i = 1; i < pts.length; i++) {
+    const prev = pts[i - 1].value, curr = pts[i].value;
     if (!prev) continue;
     rets.push(curr / prev - 1);
   }
@@ -1610,13 +1649,18 @@ const sortinoFromSeries = (series) => {
   if (!downside.length) return null;
   const downsideStd = Math.sqrt(downside.reduce((s, r) => s + r * r, 0) / downside.length);
   if (!downsideStd) return null;
-  return (mean * 12) / (downsideStd * Math.sqrt(12));
+  const annFactor = granularity === 'yearly' ? 1 : granularity === 'quarterly' ? 4 : 12;
+  return (mean * annFactor) / (downsideStd * Math.sqrt(annFactor));
 };
 
-const maxDrawdownFromSeries = (series) => {
+// Max drawdown — worst peak-to-trough at the chosen granularity. Monthly is the
+// natural finest grain; yearly smooths a lot (only year-end values participate).
+const maxDrawdownFromSeries = (series, granularity = 'monthly') => {
   if (!series || series.length < 2) return null;
+  const pts = samplesAtGranularity(series, granularity);
+  if (pts.length < 2) return null;
   let peak = -Infinity, maxDD = 0;
-  for (const d of series) {
+  for (const d of pts) {
     if (d.value > peak) peak = d.value;
     if (peak > 0) { const dd = (d.value - peak) / peak; if (dd < maxDD) maxDD = dd; }
   }
@@ -1643,7 +1687,7 @@ const InvestorsMatrix = ({
   onToggleVisibility, onEditInvestor,
 }) => {
   const [mode, setMode] = useState('absolute');
-  const [granularity, setGranularity] = useState('yearly'); // 'yearly' | 'quarterly'
+  const [granularity, setGranularity] = useState('yearly'); // 'yearly' | 'quarterly' | 'monthly'
   // Default: sort columns by CAGR descending — gives the user the best long-term
   // performers on the left immediately on open.
   const [sortRow, setSortRow] = useState({ kind: 'cagr' });
@@ -1701,17 +1745,27 @@ const InvestorsMatrix = ({
     vt:  vt  ? computeSeries(vt,  prices) : null,
   }), [voo, vt, prices]);
 
-  // Periods array — one row per period in the body. Yearly = calendar years.
-  // Quarterly = every Y-Qn quarter present in the data.
+  // Periods array — one row per period in the body. Yearly = calendar years,
+  // Quarterly = every Y-Qn, Monthly = every YYYY-MM present in the data.
   const periods = useMemo(() => {
+    const allSeries = Object.values(seriesByInvestor);
     if (granularity === 'yearly') {
       const found = new Set();
-      Object.values(seriesByInvestor).forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 4))); });
+      allSeries.forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 4))); });
       return [...found].sort().map(y => ({ key: `year-${y}`, kind: 'year', year: parseInt(y), label: y }));
+    }
+    if (granularity === 'monthly') {
+      const found = new Set();
+      allSeries.forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 7))); });
+      const MONTH_LABEL = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return [...found].sort().map(s => {
+        const [y, m] = s.split('-').map(Number);
+        return { key: `m-${y}-${m}`, kind: 'month', year: y, month: m, label: `${MONTH_LABEL[m - 1]} ${y}` };
+      });
     }
     // Quarterly
     const found = new Set();
-    Object.values(seriesByInvestor).forEach(s => {
+    allSeries.forEach(s => {
       (s || []).forEach(d => {
         const [y, m] = d.date.split('-').map(Number);
         found.add(`${y}-${Math.ceil(m / 3)}`);
@@ -1727,9 +1781,10 @@ const InvestorsMatrix = ({
     });
   }, [granularity, seriesByInvestor]);
 
-  const computePeriodValue = (s, per) => per.kind === 'year'
-    ? annualReturnFromSeries(s, per.year)
-    : quarterReturnFromSeries(s, per.year, per.q);
+  const computePeriodValue = (s, per) => per.kind === 'year'    ? annualReturnFromSeries(s, per.year)
+                                       : per.kind === 'quarter' ? quarterReturnFromSeries(s, per.year, per.q)
+                                       : per.kind === 'month'   ? monthReturnFromSeries(s, per.year, per.month)
+                                       : null;
 
   const absoluteMetrics = useMemo(() => {
     const out = {};
@@ -1738,20 +1793,24 @@ const InvestorsMatrix = ({
       const s = seriesByInvestor[p.id];
       out[p.id] = {
         byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(s, per)])),
-        cagr: cagrFromSeries(s), sortino: sortinoFromSeries(s), maxdd: maxDrawdownFromSeries(s),
+        cagr: cagrFromSeries(s),
+        sortino: sortinoFromSeries(s, granularity),
+        maxdd: maxDrawdownFromSeries(s, granularity),
       };
     });
     return out;
-  }, [investorPortfolios, seriesByInvestor, periods]);
+  }, [investorPortfolios, seriesByInvestor, periods, granularity]);
 
   const benchMetrics = useMemo(() => {
     const bench = mode === 'vt' ? benchSeries.vt : mode === 'voo' ? benchSeries.voo : null;
     if (!bench) return null;
     return {
       byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(bench, per)])),
-      cagr: cagrFromSeries(bench), sortino: sortinoFromSeries(bench), maxdd: maxDrawdownFromSeries(bench),
+      cagr: cagrFromSeries(bench),
+      sortino: sortinoFromSeries(bench, granularity),
+      maxdd: maxDrawdownFromSeries(bench, granularity),
     };
-  }, [mode, benchSeries, periods]);
+  }, [mode, benchSeries, periods, granularity]);
 
   // sortRow shapes: { kind: 'period', periodKey } | { kind: 'cagr' } | { kind: 'sortino' } | { kind: 'maxdd' }
   const cellValue = (invId, kind, periodKey) => {
@@ -1841,16 +1900,17 @@ const InvestorsMatrix = ({
   return (
     <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm">
       <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3">
-        <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
+        <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
           Investors · {investorsIndex.length} in base · {[...activeIds].filter(id => investorsIndex.some(i => i.id === id)).length} in portfolio
           <span className="ml-3" style={{ color: 'var(--text-muted)' }}>· base latest: {latestQuarter || '—'}</span>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
-          {/* Granularity: yearly | quarterly. Switches the body rows; CAGR/Sortino/MaxDD stay aggregate. */}
+          {/* Granularity: yearly | quarterly | monthly. Switches the body rows and how
+              Max DD / Sortino are computed (samples taken at the chosen grain). */}
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
-            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }].map(opt => (
+            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }, { id: 'monthly', label: 'Monthly' }].map(opt => (
               <button key={opt.id} onClick={() => setGranularity(opt.id)}
-                className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   granularity === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
@@ -1859,7 +1919,7 @@ const InvestorsMatrix = ({
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
             {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => (
               <button key={opt.id} onClick={() => setMode(opt.id)}
-                className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   mode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
@@ -1868,7 +1928,7 @@ const InvestorsMatrix = ({
       </div>
 
       <div style={{ overflow: 'auto', maxHeight: '70vh' }}>
-        <table className="font-mono text-[12px]" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
+        <table className="font-mono text-body" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
           <thead>
             <tr>
               {/* First column: shrinks to longest label content via width:1% + nowrap.
@@ -1881,7 +1941,7 @@ const InvestorsMatrix = ({
                 padding: '8px 12px', textAlign: 'left',
                 width: '1%', whiteSpace: 'nowrap',
               }}>
-                <div className="text-[9px] tracking-[0.15em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Year / Metric</div>
+                <div className="text-micro tracking-[0.15em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Year / Metric</div>
               </th>
               {sortedInvestors.map(p => {
                 const inPortfolio = activeIds.has(p.id);
@@ -1924,8 +1984,9 @@ const InvestorsMatrix = ({
                     </button>
                     {/* Name below — clamps to 2 lines, then ellipsis. */}
                     <button onClick={() => onEditInvestor(p)} title={p.subtitle || p.name}
+                      className="text-body"
                       style={{
-                        color: 'var(--text-primary)', fontWeight: 500, fontSize: 12,
+                        color: 'var(--text-primary)', fontWeight: 500,
                         background: 'none', border: 'none', cursor: 'pointer', padding: 0,
                         width: '100%', textAlign: 'center',
                         display: '-webkit-box',
@@ -2015,6 +2076,16 @@ export default function PortfolioTracker() {
   };
   const [darkMode, setDarkMode] = useState(() => !isDayHourNow());
   const [themeManualOverride, setThemeManualOverride] = useState(false);
+
+  // UI zoom — scales the root font-size so every `rem`-based UI class
+  // (text-micro/-body/-prom) grows or shrinks together. Session-only,
+  // resets on reload (matching the darkMode / chartMode pattern).
+  const MIN_SCALE = 0.85, MAX_SCALE = 1.5, STEP = 0.1;
+  const [uiScale, setUiScale] = useState(1.0);
+  useEffect(() => {
+    document.documentElement.style.fontSize = `${16 * uiScale}px`;
+    return () => { document.documentElement.style.fontSize = ''; };
+  }, [uiScale]);
 
   useEffect(() => {
     if (themeManualOverride) return;
@@ -2636,64 +2707,87 @@ export default function PortfolioTracker() {
         <div className="mb-6">
           <div className="border-b border-strong pb-1 mb-1">
             <div className="flex items-center justify-between">
-              <div className="text-[10px] tracking-[0.3em] uppercase font-mono text-secondary">Portfolio Comparator · Vol. 1</div>
-              <div className="text-[10px] tracking-[0.2em] uppercase font-mono text-tertiary">
+              <div className="text-micro tracking-[0.3em] uppercase font-mono text-secondary">Portfolio Comparator · Vol. 1</div>
+              <div className="text-micro tracking-[0.2em] uppercase font-mono text-tertiary">
                 {new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
               </div>
             </div>
           </div>
-          <div className="border-b-2 border-strong pb-3">
-            <div className="flex items-end justify-between flex-wrap gap-4">
+          <div className="border-b-2 border-strong py-3">
+            <div className="flex items-stretch justify-between flex-wrap gap-4">
               <div>
                 <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
                   Performance,
                   <br />
                   <em style={{ color: 'var(--accent-brand)', fontWeight: 500 }}>side by side.</em>
                 </h1>
-                <div className="text-xs text-tertiary mt-3 font-mono tracking-tight">
+                <div className="text-body text-tertiary mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
                 </div>
               </div>
-              <div className="flex items-center gap-2 flex-wrap">
-                {/* View toggle: Portfolio (chart + selected list) ⇄ Investors (full base matrix). */}
-                {/* View toggle — sits in the page header beside Save/Backup/Theme buttons,
-                    so it mirrors their look (border + surface-card) rather than the soft
-                    pill style used for tabs INSIDE cards. */}
-                <div className="flex items-center surface-card border border-strong rounded overflow-hidden">
-                  {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }].map(opt => {
-                    const active = view === opt.id;
-                    return (
-                      <button key={opt.id} onClick={() => setView(opt.id)}
-                        className={`px-3 py-2 text-[10px] tracking-[0.15em] uppercase font-mono transition-colors ${
-                          active ? 'surface-card-elevated text-primary' : 'text-secondary hover-text-primary'
-                        }`}>
-                        {opt.label}
-                      </button>
-                    );
-                  })}
-                </div>
-                {hasUnsavedChanges && !saving && (
-                  <button onClick={resetToDefaults}
-                    className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded"
-                    title="Discard local changes and reload from default-data.json">
-                    <RotateCcw size={11} /> Reset
+              <div className="flex flex-col items-start md:items-end justify-between gap-2">
+                {/* UI scale controls — pin to TOP of the header column (A−/A+ above,
+                    main action row at the bottom). justify-between on this column
+                    + items-stretch on the parent does the distribution. On mobile
+                    (when the flex parent wraps and the button block stacks below
+                    the title), items-start aligns everything to the LEFT edge —
+                    matching the title — instead of dangling at the right. */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setUiScale(s => Math.max(MIN_SCALE, +(s - STEP).toFixed(2)))}
+                    disabled={uiScale <= MIN_SCALE + 1e-6}
+                    className="flex items-center gap-2 px-3 py-2 text-body tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded disabled-mute"
+                    title="Smaller UI text">
+                    A−
                   </button>
-                )}
-                <button onClick={handleSaveDefault} disabled={!hasUnsavedChanges || saving}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded disabled-mute"
-                  title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
-                  {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
-                  {saving ? 'Saving…' : 'Save'}
-                </button>
-                <button onClick={() => setShowBackup(true)}
-                  className="flex items-center gap-2 px-3 py-2 text-[10px] tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded">
-                  <Save size={11} /> Backup
-                </button>
-                <button onClick={() => { setDarkMode(!darkMode); setThemeManualOverride(true); }}
-                  className="p-2 text-tertiary hover-text-primary rounded border border-subtle hover-border-focus surface-card transition-colors"
-                  title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
-                  {darkMode ? <Sun size={13} /> : <Moon size={13} />}
-                </button>
+                  <button
+                    onClick={() => setUiScale(s => Math.min(MAX_SCALE, +(s + STEP).toFixed(2)))}
+                    disabled={uiScale >= MAX_SCALE - 1e-6}
+                    className="flex items-center gap-2 px-3 py-2 text-body tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded disabled-mute"
+                    title="Bigger UI text">
+                    A+
+                  </button>
+                </div>
+                <div className="flex items-stretch gap-2 flex-wrap">
+                  {/* View toggle — sits in the page header beside Save/Backup/Theme buttons,
+                      so it mirrors their look (border + surface-card) rather than the soft
+                      pill style used for tabs INSIDE cards. */}
+                  <div className="flex items-center surface-card border border-strong rounded overflow-hidden">
+                    {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }].map(opt => {
+                      const active = view === opt.id;
+                      return (
+                        <button key={opt.id} onClick={() => setView(opt.id)}
+                          className={`px-3 py-2 text-body tracking-[0.15em] uppercase font-mono transition-colors ${
+                            active ? 'surface-card-elevated text-primary' : 'text-secondary hover-text-primary'
+                          }`}>
+                          {opt.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {hasUnsavedChanges && !saving && (
+                    <button onClick={resetToDefaults}
+                      className="flex items-center gap-2 px-3 py-2 text-body tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded"
+                      title="Discard local changes and reload from default-data.json">
+                      <RotateCcw size={11} /> Reset
+                    </button>
+                  )}
+                  <button onClick={handleSaveDefault} disabled={!hasUnsavedChanges || saving}
+                    className="flex items-center gap-2 px-3 py-2 text-body tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded disabled-mute"
+                    title={hasUnsavedChanges ? 'Save current data as default (overwrites default-data.json)' : 'No changes to save'}>
+                    {saving ? <Loader2 size={11} className="animate-spin" /> : <HardDriveDownload size={11} />}
+                    {saving ? 'Saving…' : 'Save'}
+                  </button>
+                  <button onClick={() => setShowBackup(true)}
+                    className="flex items-center gap-2 px-3 py-2 text-body tracking-[0.15em] uppercase text-secondary hover-text-primary font-mono border border-strong hover-border-focus surface-card rounded">
+                    <Save size={11} /> Backup
+                  </button>
+                  <button onClick={() => { setDarkMode(!darkMode); setThemeManualOverride(true); }}
+                    className="flex items-center justify-center w-9 h-9 text-secondary hover-text-primary border border-strong hover-border-focus surface-card rounded"
+                    title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+                    {darkMode ? <Sun size={14} /> : <Moon size={14} />}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -2715,13 +2809,13 @@ export default function PortfolioTracker() {
             <div className="surface-card border border-subtle rounded-lg shadow-sm overflow-hidden h-full flex flex-col">
               <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
+                  <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
                     {effectiveMode === 'vs' ? `vs ${benchmarkPortfolio?.name || 'benchmark'}` : 'Absolute return'}
                   </div>
                   <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
                     {PERIOD_OPTIONS.map(opt => (
                       <button key={opt.id} onClick={() => setChartPeriod(opt.id)}
-                        className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                        className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                           chartPeriod === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                         }`}>
                         {opt.label}
@@ -2731,12 +2825,12 @@ export default function PortfolioTracker() {
                 </div>
                 <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
                   <button onClick={() => setChartMode('absolute')}
-                    className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                    className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                       effectiveMode === 'absolute' ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                     }`}>Absolute</button>
                   {availableBenchmarks.map(b => (
                     <button key={b.id} onClick={() => setChartMode(b.id)}
-                      className={`px-2.5 py-0.5 text-[10px] tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                      className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                         chartMode === b.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                       }`}>vs {b.name}</button>
                   ))}
@@ -2745,17 +2839,17 @@ export default function PortfolioTracker() {
               {legendPortfolios.length > 0 && (
                 <div className="px-5 py-2.5 border-b border-subtle flex items-center gap-1.5 flex-wrap surface-card-elevated">
                   <button onClick={selectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
+                    className="text-micro tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
                     All
                   </button>
                   <button onClick={deselectAllPortfolios}
-                    className="text-[10px] tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
+                    className="text-micro tracking-[0.1em] uppercase font-mono text-tertiary hover-text-primary px-2 py-1 transition-colors">
                     None
                   </button>
                   <span className="text-muted mx-0.5 select-none">|</span>
                   {legendPortfolios.map(p => (
                     <button key={p.id} onClick={(e) => handleLegendClick(p.id, e)}
-                      className={`flex items-center gap-1.5 text-[11px] font-mono px-2 py-1 rounded transition-all ${
+                      className={`flex items-center gap-1.5 text-body font-mono px-2 py-1 rounded transition-all ${
                         p.visible ? 'text-primary hover-surface' : 'text-muted line-through hover-surface'
                       }`}
                       title={p.visible ? 'Click to hide · Ctrl/⌘/Shift+click to isolate' : 'Click to show · Ctrl/⌘/Shift+click to isolate'}>
@@ -2771,15 +2865,15 @@ export default function PortfolioTracker() {
               )}
               <div className="p-5 min-h-[280px] min-[500px]:min-h-[480px] min-[1200px]:min-h-[580px] flex-1 flex flex-col">
                 {chartMode !== 'absolute' && !benchmarkPortfolio && (
-                  <div className="mb-3 px-3 py-2 accent-tint-mild border border-accent-brand rounded text-[10px] font-mono text-accent-brand flex items-center gap-2">
+                  <div className="mb-3 px-3 py-2 accent-tint-mild border border-accent-brand rounded text-micro font-mono text-accent-brand flex items-center gap-2">
                     <AlertCircle size={11} /> Selected benchmark has no price data — showing absolute mode.
                   </div>
                 )}
                 {chartData.length === 0 ? (
-                  <div className="h-full flex items-center justify-center text-tertiary text-sm font-mono py-32 text-center">
+                  <div className="h-full flex items-center justify-center text-tertiary text-prom font-mono py-32 text-center">
                     <div>
                       <div className="mb-2">No data to chart yet.</div>
-                      <div className="text-[10px] text-muted">Bundled price data is empty or failed to load.</div>
+                      <div className="text-micro text-muted">Bundled price data is empty or failed to load.</div>
                     </div>
                   </div>
                 ) : (
@@ -2840,7 +2934,7 @@ export default function PortfolioTracker() {
           <div className="min-[1200px]:col-start-1 min-[1200px]:row-start-1 min-[1200px]:min-h-0">
             <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm h-full flex flex-col">
               <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-shrink-0">
-                <div className="text-[10px] tracking-[0.2em] uppercase text-secondary font-mono">
+                <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
                   Portfolios · {investorPortfolios.length} <span className="text-muted normal-case tracking-normal">· drag to reorder</span>
                 </div>
               </div>
@@ -2859,7 +2953,7 @@ export default function PortfolioTracker() {
                     mergeMode={mergeMode} />
                 ))}
                 {investorPortfolios.length === 0 && (
-                  <div className="px-4 py-6 text-center text-[11px] font-mono text-tertiary">
+                  <div className="px-4 py-6 text-center text-body font-mono text-tertiary">
                     No investor portfolios in the bundled data
                   </div>
                 )}
@@ -2895,7 +2989,7 @@ export default function PortfolioTracker() {
         </div>
         )}
 
-        <div className="mt-6 text-[10px] text-tertiary font-mono leading-relaxed max-w-3xl">
+        <div className="mt-6 text-micro text-tertiary font-mono leading-relaxed max-w-3xl">
           Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
         </div>
       </div>

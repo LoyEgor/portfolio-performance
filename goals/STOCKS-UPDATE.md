@@ -71,11 +71,18 @@ tickers vs. the old ~143.
      `max(keys)`.
 
 2. **Decide work:**
-   - Tickers with no entry in `prices.json` → fetch from scratch, default range
-     last 18 months (or longer if `meta.latestQuarter` implies we have older
-     holdings — fetch enough history to cover all quarters in any
-     `investors/*.json`).
-   - Tickers with stale entry (max < target) → fetch only the missing months.
+   - Determine the earliest required date for the entire base:
+     `earliestAsOf = min(asOf across history[] of every investors/*.json)`.
+     This is the deepest history any holding references; prices need to cover
+     it for chain-linked chart math to work back that far.
+     If no investor files exist yet (cold start), fall back to `today - 24 months`.
+   - Tickers with no entry in `prices.json` → fetch monthly from
+     `earliestAsOf` (or the cold-start fallback) to `target`. For a fresh
+     `INVESTORS-BACKFILL --years=5` run this is ~60 monthly points per ticker.
+   - Tickers with stale entry (`max(keys) < target`) → fetch only the missing months.
+   - Tickers with entry but `min(keys) > earliestAsOf` → backfill the missing
+     earlier months too (happens when a later BACKFILL with `--years=N` pushed
+     history further back than what's currently in `prices.json`).
 
 3. **Fetch (paced):**
    - Primary: `https://stockanalysis.com/stocks/<lower>/history/` (or

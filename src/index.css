@@ -219,6 +219,12 @@ html.dark {
 .bg-accent-on-bg { background: var(--accent-on-bg); }
 .bg-border-subtle { background: var(--border-subtle); }
 
+/* UI font scale — 3 sizes, rem-based so they auto-scale with the root font-size.
+   Decorative font-serif sizes (text-xl, text-4xl, [15px], etc.) stay on Tailwind. */
+.text-micro { font-size: 0.625rem; }  /* 10px at base 16 — tiny labels, badges, button text, tab text */
+.text-body  { font-size: 0.75rem;  }  /* 12px — secondary text, table cells, subtitles */
+.text-prom  { font-size: 0.875rem; }  /* 14px — inputs, return %, prominent UI */
+
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
 .text-tertiary { color: var(--text-tertiary); }
