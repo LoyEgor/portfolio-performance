@@ -271,3 +271,8 @@ html.dark {
 
 .disabled-mute:disabled { opacity: 0.5; cursor: not-allowed; }
 .disabled-mute:disabled:hover { opacity: 0.5; cursor: not-allowed; }
+
+/* Narrow month-picker so two of them + the chip groups fit in a single toolbar row.
+   Native <input type=month> defaults to ~150-160px in Chrome; this clamps it
+   without breaking the calendar icon. */
+.matrix-date-input { width: 110px; }

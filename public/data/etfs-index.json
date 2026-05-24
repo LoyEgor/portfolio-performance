@@ -15,6 +15,7 @@
     { "id": "etf-dbmf", "ticker": "DBMF", "name": "iMGP DBi Managed Futures Strategy ETF",             "issuer": "iMGP / DBi", "assetClass": "Alternative / Managed Futures",   "link": "https://stockanalysis.com/etf/dbmf/", "tags": ["alternative", "managed-futures"] },
     { "id": "etf-schd", "ticker": "SCHD", "name": "Schwab US Dividend Equity ETF",                     "issuer": "Schwab",     "assetClass": "Equity / US Dividend",            "link": "https://stockanalysis.com/etf/schd/", "tags": ["dividend", "us"] },
     { "id": "etf-vtv",  "ticker": "VTV",  "name": "Vanguard Value ETF",                                "issuer": "Vanguard",   "assetClass": "Equity / US Value",               "link": "https://stockanalysis.com/etf/vtv/",  "tags": ["factor", "value", "us"] },
-    { "id": "etf-cta",  "ticker": "CTA",  "name": "Simplify Managed Futures Strategy ETF",             "issuer": "Simplify",   "assetClass": "Alternative / Managed Futures",   "link": "https://stockanalysis.com/etf/cta/",  "tags": ["alternative", "managed-futures"] }
+    { "id": "etf-cta",  "ticker": "CTA",  "name": "Simplify Managed Futures Strategy ETF",             "issuer": "Simplify",   "assetClass": "Alternative / Managed Futures",   "link": "https://stockanalysis.com/etf/cta/",  "tags": ["alternative", "managed-futures"] },
+    { "id": "etf-fmtm", "ticker": "FMTM" }
   ]
 }

@@ -1620,6 +1620,33 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 //
 // Color + font-weight per cell follow the magnitude rule (see styleForDelta).
 
+// Clip a (date, value)[] series to a [fromYM, toYM] window — each in 'YYYY-MM' format,
+// empty string meaning "unbounded on that side". Series is assumed sorted ascending.
+//
+// IMPORTANT: keeps ONE anchor point right before `fromYM` (if available). Period-return
+// functions (annual/quarter/month) need a point at the previous period-end to compute the
+// first in-window period's return. Without the anchor, picking "from Jan 2022" would
+// silently hide January (no anchor → null return → row filtered by visiblePeriods).
+// The anchor itself won't render as a row because its own period gets null (no point
+// before IT to anchor against), and visiblePeriods drops null-only rows.
+const clipSeriesToRange = (series, fromYM, toYM) => {
+  if (!series) return series;
+  if (!fromYM && !toYM) return series;
+  const fromIso = fromYM ? `${fromYM}-01` : null;
+  const toIso = toYM ? `${toYM}-32` : null;
+  let anchorIdx = -1;
+  if (fromIso) {
+    for (let i = 0; i < series.length; i++) {
+      if (series[i].date < fromIso) anchorIdx = i;
+      else break;
+    }
+  }
+  return series.filter((d, i) =>
+    i === anchorIdx ||
+    ((!fromIso || d.date >= fromIso) && (!toIso || d.date < toIso))
+  );
+};
+
 const annualReturnFromSeries = (series, year) => {
   if (!series?.length) return null;
   // Anchor on prev-year-end → this-year-end so the boundary months don't get dropped.
@@ -1748,6 +1775,104 @@ const styleForDelta = (delta) => {
 const fmtPct = (v, d = 1) => v == null || !Number.isFinite(v) ? '—' : `${v >= 0 ? '+' : ''}${v.toFixed(d)}%`;
 const fmtRatio = (v, d = 2) => v == null || !Number.isFinite(v) ? '—' : v.toFixed(d);
 
+const MATRIX_MONTH_LABELS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// Date-range filter for the matrix toolbars. Options match the active granularity
+// (yearly → years, quarterly → "YYYY Q#", monthly → "MMM YYYY"). Internally still stores
+// `range = { from, to }` as 'YYYY-MM' so clipSeriesToRange + downstream logic don't care
+// about which unit the user picked; from = start-of-period, to = end-of-period.
+const MatrixDateRange = ({ range, onChange, yearRange, granularity }) => {
+  const active = !!(range.from || range.to);
+  const selectCls = 'matrix-date-input surface-panel border border-subtle rounded px-2 py-0.5 text-body font-mono';
+
+  // YYYY-MM → option-value displayed in the dropdown.
+  const toOption = (ym) => {
+    if (!ym) return '';
+    if (granularity === 'yearly') return ym.slice(0, 4);
+    if (granularity === 'quarterly') {
+      const y = ym.slice(0, 4);
+      const m = parseInt(ym.slice(5, 7));
+      return `${y}-Q${Math.ceil(m / 3)}`;
+    }
+    return ym;
+  };
+  // Option-value → YYYY-MM, snapped to start/end of period depending on side.
+  const fromValue = (opt, side) => {
+    if (!opt) return '';
+    if (granularity === 'yearly') return `${opt}-${side === 'from' ? '01' : '12'}`;
+    if (granularity === 'quarterly') {
+      const [y, q] = opt.split('-Q');
+      const baseM = (parseInt(q) - 1) * 3;
+      const m = side === 'from' ? baseM + 1 : baseM + 3;
+      return `${y}-${String(m).padStart(2, '0')}`;
+    }
+    return opt;
+  };
+
+  const options = useMemo(() => {
+    const opts = [{ value: '', label: '—' }];
+    if (!yearRange) return opts;
+    if (granularity === 'yearly') {
+      for (let y = yearRange.min; y <= yearRange.max; y++) opts.push({ value: `${y}`, label: `${y}` });
+    } else if (granularity === 'quarterly') {
+      for (let y = yearRange.min; y <= yearRange.max; y++) {
+        for (let q = 1; q <= 4; q++) opts.push({ value: `${y}-Q${q}`, label: `${y} Q${q}` });
+      }
+    } else {
+      for (let y = yearRange.min; y <= yearRange.max; y++) {
+        for (let m = 1; m <= 12; m++) {
+          opts.push({ value: `${y}-${String(m).padStart(2, '0')}`, label: `${MATRIX_MONTH_LABELS[m - 1]} ${y}` });
+        }
+      }
+    }
+    return opts;
+  }, [yearRange, granularity]);
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <select value={toOption(range.from)}
+        onChange={e => onChange({ ...range, from: fromValue(e.target.value, 'from') })}
+        className={selectCls} style={{ color: 'var(--text-primary)' }} aria-label="From">
+        {options.map(o => <option key={o.value || 'none'} value={o.value}>{o.label}</option>)}
+      </select>
+      <span style={{ color: 'var(--text-tertiary)' }}>→</span>
+      <select value={toOption(range.to)}
+        onChange={e => onChange({ ...range, to: fromValue(e.target.value, 'to') })}
+        className={selectCls} style={{ color: 'var(--text-primary)' }} aria-label="To">
+        {options.map(o => <option key={o.value || 'none'} value={o.value}>{o.label}</option>)}
+      </select>
+      <button
+        onClick={() => onChange({ from: '', to: '' })}
+        disabled={!active}
+        className="px-1.5 py-0.5 text-body font-mono rounded transition-all"
+        style={{
+          color: active ? 'var(--text-tertiary)' : 'var(--text-muted)',
+          cursor: active ? 'pointer' : 'default',
+          opacity: active ? 1 : 0.4,
+        }}
+        title="Clear date range">×</button>
+    </div>
+  );
+};
+
+// When granularity changes, snap the current dateRange bounds to the new period unit so
+// the picker shows a coherent selection (e.g. "Mar 2022" → "2022 Q1" → "2022").
+const snapRangeToGranularity = (range, granularity) => {
+  const snap = (ym, side) => {
+    if (!ym) return '';
+    const y = ym.slice(0, 4);
+    const m = parseInt(ym.slice(5, 7));
+    if (granularity === 'yearly') return `${y}-${side === 'from' ? '01' : '12'}`;
+    if (granularity === 'quarterly') {
+      const q = Math.ceil(m / 3);
+      const snapM = side === 'from' ? (q - 1) * 3 + 1 : q * 3;
+      return `${y}-${String(snapM).padStart(2, '0')}`;
+    }
+    return ym;
+  };
+  return { from: snap(range.from, 'from'), to: snap(range.to, 'to') };
+};
+
 const InvestorsMatrix = ({
   investorsIndex, portfolios, prices, latestQuarter,
   onToggleVisibility, onEditInvestor,
@@ -1759,6 +1884,15 @@ const InvestorsMatrix = ({
   const [sortRow, setSortRow] = useState({ kind: 'cagr' });
   const [sortDir, setSortDir] = useState('desc');
   const [extraInvestors, setExtraInvestors] = useState({});
+  // YYYY-MM | '' (unbounded). Affects period rows AND bottom stats (CAGR/Sortino/MaxDD).
+  const [dateRange, setDateRange] = useState({ from: '', to: '' });
+  // Re-snap range bounds when granularity changes so the picker shows a coherent value.
+  useEffect(() => {
+    setDateRange(curr => {
+      const next = snapRangeToGranularity(curr, granularity);
+      return (next.from === curr.from && next.to === curr.to) ? curr : next;
+    });
+  }, [granularity]);
 
   useEffect(() => {
     const base = import.meta.env.BASE_URL;
@@ -1798,7 +1932,7 @@ const InvestorsMatrix = ({
     };
   }), [investorsIndex, portfolios, extraInvestors]);
 
-  const seriesByInvestor = useMemo(() => {
+  const rawSeriesByInvestor = useMemo(() => {
     const out = {};
     investorPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
     return out;
@@ -1806,10 +1940,32 @@ const InvestorsMatrix = ({
 
   const voo = portfolios.find(p => p.id === 'voo');
   const vt  = portfolios.find(p => p.id === 'vt');
-  const benchSeries = useMemo(() => ({
+  const rawBenchSeries = useMemo(() => ({
     voo: voo ? computeSeries(voo, prices) : null,
     vt:  vt  ? computeSeries(vt,  prices) : null,
   }), [voo, vt, prices]);
+
+  // Year range for the date picker — derived from the raw (unfiltered) data so
+  // changing the filter doesn't shrink the options the user can pick from next.
+  const yearRange = useMemo(() => {
+    const ys = new Set();
+    for (const id in rawSeriesByInvestor) (rawSeriesByInvestor[id] || []).forEach(d => ys.add(parseInt(d.date.slice(0, 4))));
+    if (!ys.size) return null;
+    const a = [...ys];
+    return { min: Math.min(...a), max: Math.max(...a) };
+  }, [rawSeriesByInvestor]);
+
+  // Clipped views — feed everything downstream of these so the date-range filter
+  // propagates uniformly into periods, per-period values, and bottom stats.
+  const seriesByInvestor = useMemo(() => {
+    const out = {};
+    for (const id in rawSeriesByInvestor) out[id] = clipSeriesToRange(rawSeriesByInvestor[id], dateRange.from, dateRange.to);
+    return out;
+  }, [rawSeriesByInvestor, dateRange]);
+  const benchSeries = useMemo(() => ({
+    voo: clipSeriesToRange(rawBenchSeries.voo, dateRange.from, dateRange.to),
+    vt:  clipSeriesToRange(rawBenchSeries.vt,  dateRange.from, dateRange.to),
+  }), [rawBenchSeries, dateRange]);
 
   // Periods array — one row per period in the body. Yearly = calendar years,
   // Quarterly = every Y-Qn, Monthly = every YYYY-MM present in the data.
@@ -2030,18 +2186,20 @@ const InvestorsMatrix = ({
   return (
     <div ref={cardRef}
       className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm flex flex-col">
-      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3 flex-shrink-0">
-        <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
-          Investors · {investorsIndex.length} in base · {[...activeIds].filter(id => investorsIndex.some(i => i.id === id)).length} in portfolio
-          <span className="ml-3" style={{ color: 'var(--text-muted)' }}>· base latest: {latestQuarter || '—'}</span>
+      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between gap-3 flex-shrink-0" style={{ overflowX: 'auto' }}>
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
+            Investors
+          </div>
+          <MatrixDateRange range={dateRange} onChange={setDateRange} yearRange={yearRange} granularity={granularity} />
         </div>
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-3 flex-shrink-0">
           {/* Granularity: yearly | quarterly | monthly. Switches the body rows and how
               Max DD / Sortino are computed (samples taken at the chosen grain). */}
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
             {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }, { id: 'monthly', label: 'Monthly' }].map(opt => (
               <button key={opt.id} onClick={() => setGranularity(opt.id)}
-                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-1.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   granularity === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
@@ -2050,7 +2208,7 @@ const InvestorsMatrix = ({
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
             {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => (
               <button key={opt.id} onClick={() => setMode(opt.id)}
-                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-1.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   mode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
@@ -2228,6 +2386,14 @@ const ETFsMatrix = ({
   const [granularity, setGranularity] = useState('yearly');
   const [sortRow, setSortRow] = useState({ kind: 'cagr' });
   const [sortDir, setSortDir] = useState('desc');
+  // YYYY-MM | '' (unbounded). Affects period rows AND bottom stats (CAGR/Sortino/MaxDD).
+  const [dateRange, setDateRange] = useState({ from: '', to: '' });
+  useEffect(() => {
+    setDateRange(curr => {
+      const next = snapRangeToGranularity(curr, granularity);
+      return (next.from === curr.from && next.to === curr.to) ? curr : next;
+    });
+  }, [granularity]);
 
   const activeIds = useMemo(() => new Set(portfolios.map(p => p.id)), [portfolios]);
 
@@ -2253,7 +2419,7 @@ const ETFsMatrix = ({
     };
   }), [etfsIndex, portfolios]);
 
-  const seriesByEtf = useMemo(() => {
+  const rawSeriesByEtf = useMemo(() => {
     const out = {};
     etfPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
     return out;
@@ -2261,10 +2427,29 @@ const ETFsMatrix = ({
 
   const voo = portfolios.find(p => p.id === 'voo');
   const vt  = portfolios.find(p => p.id === 'vt');
-  const benchSeries = useMemo(() => ({
+  const rawBenchSeries = useMemo(() => ({
     voo: voo ? computeSeries(voo, prices) : null,
     vt:  vt  ? computeSeries(vt,  prices) : null,
   }), [voo, vt, prices]);
+
+  const yearRange = useMemo(() => {
+    const ys = new Set();
+    for (const id in rawSeriesByEtf) (rawSeriesByEtf[id] || []).forEach(d => ys.add(parseInt(d.date.slice(0, 4))));
+    if (!ys.size) return null;
+    const a = [...ys];
+    return { min: Math.min(...a), max: Math.max(...a) };
+  }, [rawSeriesByEtf]);
+
+  // See InvestorsMatrix for why clipping feeds everything downstream.
+  const seriesByEtf = useMemo(() => {
+    const out = {};
+    for (const id in rawSeriesByEtf) out[id] = clipSeriesToRange(rawSeriesByEtf[id], dateRange.from, dateRange.to);
+    return out;
+  }, [rawSeriesByEtf, dateRange]);
+  const benchSeries = useMemo(() => ({
+    voo: clipSeriesToRange(rawBenchSeries.voo, dateRange.from, dateRange.to),
+    vt:  clipSeriesToRange(rawBenchSeries.vt,  dateRange.from, dateRange.to),
+  }), [rawBenchSeries, dateRange]);
 
   const periods = useMemo(() => {
     const allSeries = Object.values(seriesByEtf);
@@ -2462,15 +2647,18 @@ const ETFsMatrix = ({
   return (
     <div ref={cardRef}
       className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm flex flex-col">
-      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3 flex-shrink-0">
-        <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
-          ETFs · {etfsIndex.length} in base · {activeEtfCount} in portfolio
+      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between gap-3 flex-shrink-0" style={{ overflowX: 'auto' }}>
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
+            ETFs
+          </div>
+          <MatrixDateRange range={dateRange} onChange={setDateRange} yearRange={yearRange} granularity={granularity} />
         </div>
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
             {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }, { id: 'monthly', label: 'Monthly' }].map(opt => (
               <button key={opt.id} onClick={() => setGranularity(opt.id)}
-                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-1.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   granularity === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
@@ -2478,7 +2666,7 @@ const ETFsMatrix = ({
           <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
             {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => (
               <button key={opt.id} onClick={() => setMode(opt.id)}
-                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                className={`px-1.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
                   mode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
                 }`}>{opt.label}</button>
             ))}
