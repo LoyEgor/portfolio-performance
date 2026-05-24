@@ -118,9 +118,18 @@ The project has a dual color system. **They must not mix in new components.**
 
 ### Rule for new components
 
-**Use only `var(--…)` tokens for colors.** Do NOT add new `bg-stone-XXX`,
-`text-amber-XXX`, `border-emerald-XXX`, `hover:bg-stone-NNN` to JSX written
-from scratch. Inline style is acceptable:
+**Use only `var(--…)` tokens for colors.** This is a hard rule — every new
+inline hex in JSX is a bug to be fixed. Same applies to font sizes (`text-body`,
+`text-micro`, etc. — see `src/index.css`) and font weights.
+
+Do NOT add new `bg-stone-XXX`, `text-amber-XXX`, `border-emerald-XXX`,
+`hover:bg-stone-NNN`, `text-[12px]`, `font-bold` (with raw value), or any
+inline `style={{ color: '#…' }}` / `style={{ fontSize: 12 }}` to JSX written
+from scratch. The whole point of the token layer is one source of truth:
+when the user adjusts the palette or the scale, every component updates
+automatically. A single hardcoded hex breaks that contract.
+
+Inline style with a token reference is acceptable:
 
 ```jsx
 <div style={{ background: 'var(--bg-card)', color: 'var(--text-primary)' }} />
@@ -130,6 +139,33 @@ or via a dedicated `.foo { background: var(--bg-card); }` class in `index.css`.
 
 If the token you need doesn't exist — add it to BOTH `:root` and `html.dark`,
 then use it. Never inline a hex in JSX, never branch on `darkMode ? X : Y`.
+
+### Picking a color for a portfolio / investor / ETF chart line
+
+Use the existing helper `getInvestorColor(id, activePortfolio, customization)`
+(in `src/portfolio_tracker.jsx`). It returns the user's saved override if any,
+the active portfolio's color if not, otherwise a deterministic pick from the
+`PALETTE` constant hashed by id. **Never write `color: '#1a1815'` (or any other
+literal) as a default fallback** — that breaks the "stable color per entity"
+invariant the chart and matrix dots both rely on. The helper is the only
+correct way to derive a default color across the app.
+
+Examples:
+
+```jsx
+// In a useMemo that hydrates shell portfolio objects from an index entry:
+return { id, name, kind: 'etf', color: getInvestorColor(id, null, null), … };
+
+// When the user toggles a new entity on from a matrix:
+setPortfolios(prev => [...prev, { id, color: getInvestorColor(id, null, null), … }]);
+```
+
+### Font sizes / weights
+
+Same rule — use the token utility classes (`text-body`, `text-micro`,
+`font-medium`, etc., defined in `src/index.css`) instead of `text-[12px]`,
+`font-bold`, or inline `style={{ fontSize: 11 }}`. If a size you need is
+missing, add it as a token in `src/index.css` and reference the class.
 
 ### Token reference (full set in `src/index.css`)
 
