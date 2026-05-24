@@ -9,9 +9,12 @@ out of scope (use `INVESTORS-BACKFILL.md` for those).
 
 > **How this file is used.** This is a goal specification consumed by Claude
 > Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
-> looping turns until the **Done condition** at the bottom is satisfied. Don't
-> run this file with plain `claude -p` (single turn) — it won't iterate. See
-> `goals/README.md` for the full `/goal` invocation form.
+> looping turns until the **Done condition** at the bottom is satisfied. Run it
+> interactively: open `claude --dangerously-skip-permissions`, then type
+> `/goal Follow goals/STOCKS-UPDATE.md … Done when …` inside the session —
+> you'll see every tool call as it happens. Avoid headless `claude -p` for
+> hand-launched runs; it hides progress until the very end. See
+> `goals/README.md` for canonical invocations.
 
 ---
 

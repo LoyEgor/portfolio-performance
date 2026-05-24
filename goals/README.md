@@ -76,89 +76,86 @@ A `/goal` invocation has two parts:
    script exits 0, or specific files exist with expected shape).
 
 The `.md` files in this folder are the **instructions**. `/goal` is the **driver**.
-Without `/goal`, a single `claude -p "..."` runs one turn and stops — useful for
-quick checks, useless for multi-hour bootstraps that need to iterate.
 
-### Required flags
+### Always interactive (`claude` + `/goal`)
 
-Every invocation passes `--dangerously-skip-permissions` so the goal doesn't
-block on permission prompts for routine WebFetch / Bash / file writes. Without
-it, headless execution stalls on the first tool call.
+> **Use interactive mode.** `claude -p "/goal …"` runs headless and hides every
+> tool call until the very end — for a multi-hour bootstrap that means staring
+> at a frozen terminal with no idea whether progress is happening. There is **no
+> speed benefit** to headless: the same loop runs, the same tokens are spent.
+> The only thing you trade away is visibility.
+>
+> The pattern is always: open a session, then type `/goal …` inside it.
 
-```bash
-# General form:
-claude -p --dangerously-skip-permissions "/goal <instructions> Done when <condition>."
-```
-
-`-p` is the short form of `--print` (non-interactive single-invocation mode).
-`/goal` also works in interactive sessions (`claude` then type `/goal …`) and
-through Remote Control.
-
-### Stocks update (monthly, between quarterly refreshes)
+Every session passes `--dangerously-skip-permissions` so the goal doesn't block
+on permission prompts for routine WebFetch / Bash / file writes.
 
 ```bash
 cd /Volumes/Work/Projects/portfolio-performance
+claude --dangerously-skip-permissions
+```
 
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/STOCKS-UPDATE.md. \
-  Done when /tmp/verify-stocks.py exits 0 — every referenced ticker has \
-  YYYY-MM-01 keys up through the first-of-month of the prior calendar month."
+Then inside the session:
+
+```
+/goal <instructions referencing one of the goal files> Done when <condition>.
+```
+
+You'll see every tool call, per-turn status, elapsed time, and you can Ctrl+C
+at any moment without losing data (`/goal` is idempotent — resuming continues
+where it stopped).
+
+### Stocks update (monthly, between quarterly refreshes)
+
+Inside `claude --dangerously-skip-permissions`:
+
+```
+/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0 — every referenced ticker has YYYY-MM-01 keys up through the first-of-month of the prior calendar month.
 ```
 
 ### Investors backfill — incremental quarterly update (every ~3 months)
 
 Run after the 13F deadlines: **May 15 / Aug 14 / Nov 14 / Feb 14**.
 
-```bash
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-BACKFILL.md (no params — incremental quarterly). \
-  Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals \
-  the most recent 13F-released quarter for today's date."
+```
+/goal Follow goals/INVESTORS-BACKFILL.md (no params — incremental quarterly). Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals the most recent 13F-released quarter for today's date.
 ```
 
 ### Investors backfill — extend history backward
 
-```bash
-# Last year only (fast, for testing)
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-BACKFILL.md with --years=1. \
-  Done when every investor file in public/data/investors/ has 4+ history snapshots."
+Test on one investor first:
 
-# Full history available on DataRoma (~5 years)
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-BACKFILL.md with --years=max. \
-  Done when /tmp/verify-backfill.py exits 0 AND every investor file has history \
-  covering 5 years (16+ quarterly snapshots) — or, where the source genuinely \
-  has less, the maximum the source provides."
+```
+/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --years=max. Done when public/data/investors/buffett.json has been rewritten with the full available history from DataRoma (~5 years, 16+ quarterly snapshots) AND /tmp/verify-backfill.py exits 0 for buffett.
+```
 
-# Single investor, force re-fetch
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --force --years=max. \
-  Done when public/data/investors/buffett.json has been rewritten and \
-  /tmp/verify-backfill.py exits 0 for that id."
+Then go big (the overnight bootstrap):
+
+```
+/goal Follow goals/INVESTORS-BACKFILL.md with --years=max. Done when /tmp/verify-backfill.py exits 0 AND every investor file has history covering 5 years (16+ quarterly snapshots) — or, where the source genuinely has less, the maximum the source provides.
+```
+
+Force re-fetch a specific investor:
+
+```
+/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --force --years=max. Done when public/data/investors/buffett.json has been rewritten and /tmp/verify-backfill.py exits 0 for that id.
 ```
 
 ### Add a new investor
 
-```bash
-# By name (picks most popular match automatically)
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-ADD.md with --name='Bill Ackman'. \
-  Done when investors-index.json contains a new entry for this person AND \
-  public/data/investors/<id>.json exists with non-empty holdings and history \
-  AND /tmp/verify-add.py exits 0."
+```
+/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman'. Done when investors-index.json contains a new entry for this person AND public/data/investors/<id>.json exists with non-empty holdings and history AND /tmp/verify-add.py exits 0.
+```
 
-# With a source hint (when the popular default isn't who you want)
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-ADD.md with --name='Bill Ackman' \
-  --source-hint=stockzoa/pershing-square. \
-  Done when the new investor file's _provenance.primarySource matches the hint \
-  AND /tmp/verify-add.py exits 0."
+With a source hint (when the popular default isn't who you want):
+
+```
+/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman' --source-hint=stockzoa/pershing-square. Done when the new investor file's _provenance.primarySource matches the hint AND /tmp/verify-add.py exits 0.
 ```
 
 ### Remove an investor
 
-Not a goal — a plain Node script (deletion is mechanical, doesn't need an LLM).
+Not a goal — a plain Node script (deletion is mechanical, doesn't need an LLM):
 
 ```bash
 node scripts/remove-investor.mjs <investor-id>
@@ -174,42 +171,51 @@ if you care).
 
 ## Typical workflows
 
+All inside `claude --dangerously-skip-permissions`.
+
 **Quarterly cycle (every 3 months after 13F deadline):**
 
-```bash
-# 1. Refresh all investors' new-quarter holdings
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-BACKFILL.md. \
-  Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals \
-  the most recently released 13F quarter."
+```
+/goal Follow goals/INVESTORS-BACKFILL.md. Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals the most recently released 13F quarter.
+```
 
-# 2. Fill price gaps (new tickers from new holdings)
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/STOCKS-UPDATE.md. \
-  Done when /tmp/verify-stocks.py exits 0."
+When that finishes, in the same session:
+
+```
+/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
 ```
 
 **Monthly cycle (between quarterly refreshes):**
 
-```bash
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/STOCKS-UPDATE.md. \
-  Done when /tmp/verify-stocks.py exits 0."
+```
+/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
 ```
 
 **Adding a brand-new investor:**
 
-```bash
-# 1. Add them
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/INVESTORS-ADD.md with --name='<NAME>'. \
-  Done when /tmp/verify-add.py exits 0."
-
-# 2. Their tickers may not be in prices.json yet
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/STOCKS-UPDATE.md. \
-  Done when /tmp/verify-stocks.py exits 0."
 ```
+/goal Follow goals/INVESTORS-ADD.md with --name='<NAME>'. Done when /tmp/verify-add.py exits 0.
+```
+
+Then (same session) to fetch any new tickers:
+
+```
+/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
+```
+
+### Headless mode (only for cron / scheduled automation)
+
+For non-interactive scheduled runs (e.g. a cron-triggered monthly STOCKS-UPDATE
+that writes to a log and emails you on failure), `-p` works:
+
+```bash
+claude -p --dangerously-skip-permissions --verbose "/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0." > /tmp/stocks-update.log 2>&1
+```
+
+The `--verbose` flag streams per-turn output to stdout (without it, the terminal
+sits silent until the run finishes hours later — that's the trap that prompted
+the "always interactive" rule above). Reserve this form for automation; for
+anything you launch by hand, use the interactive pattern.
 
 ### Watching a long run
 

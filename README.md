@@ -47,14 +47,19 @@ across many turns until a verifiable completion condition holds.
 | Add a single investor by name | `goals/INVESTORS-ADD.md` | on demand |
 | Remove an investor (mechanical, no LLM) | `scripts/remove-investor.mjs <id>` | on demand |
 
-All three goals run via the same invocation shape:
+All three goals run **interactively** — open a session, then type `/goal …`:
 
 ```bash
-claude -p --dangerously-skip-permissions "/goal Follow goals/<FILE>.md ... Done when ..."
+cd /Volumes/Work/Projects/portfolio-performance
+claude --dangerously-skip-permissions
+# then inside the session:
+# /goal Follow goals/<FILE>.md … Done when …
 ```
 
-See `goals/README.md` for canonical commands per scenario (quarterly bootstrap,
-history expansion, single-investor add, etc).
+Headless mode (`claude -p`) hides every tool call until the very end — a
+multi-hour bootstrap looks like a frozen terminal. There's no speed benefit;
+reserve `-p` for cron/automation. See `goals/README.md` for canonical commands
+per scenario.
 
 ## Documentation map
 

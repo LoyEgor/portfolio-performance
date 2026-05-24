@@ -66,7 +66,7 @@ turns, and tokens. Runs can last hours or days.
 Why this matters for any LLM/agent working in this repo:
 
 - **Don't treat goal files as one-shot prompts.** They're written assuming a
-  multi-turn loop with a completion check. A single `claude -p` call won't
+  multi-turn loop with a completion check. A single one-shot prompt won't
   iterate to finish — it'll do one turn and stop. Use `/goal` so the harness
   drives convergence.
 - **Don't invent your own "execute to done" wording.** The `/goal` command
@@ -76,13 +76,26 @@ Why this matters for any LLM/agent working in this repo:
   harness passes the goal file's contents verbatim each turn — they must be
   self-contained.
 
-Invocation form:
+### Always interactive — never headless `-p` by default
+
+Default invocation is **interactive**:
 
 ```bash
-claude -p --dangerously-skip-permissions "/goal \
-  Follow goals/<FILE>.md with <params>. \
-  Done when <verifiable condition>."
+cd /Volumes/Work/Projects/portfolio-performance
+claude --dangerously-skip-permissions
 ```
+
+Then inside the session:
+
+```
+/goal Follow goals/<FILE>.md with <params>. Done when <verifiable condition>.
+```
+
+`claude -p "/goal …"` (headless) runs the same loop but **hides all tool calls
+until the very end** — a multi-hour bootstrap looks like a frozen terminal. There
+is no speed advantage to headless; the only thing it trades is visibility. Reserve
+it for cron/automation, never for a run you launch by hand. If you must use
+headless, pair it with `--verbose` so per-turn output streams to stdout.
 
 The completion condition is typically "the goal's verify script exits 0",
 e.g. `/tmp/verify-backfill.py exits 0`. Each goal file documents its own
