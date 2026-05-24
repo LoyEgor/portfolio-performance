@@ -10,9 +10,9 @@
  *   - Removes the entry from public/data/investors-index.json
  *   - Removes the id from public/default-data.json.selectedInvestors[]
  *   - Removes id from public/default-data.json.investorCustomization
- *   - Does NOT touch prices.json (tickers may be used by other investors).
- *     If you want to GC orphaned tickers, run STOCKS-UPDATE.md after, with a
- *     `--gc` flag (TODO).
+ *   - Does NOT touch public/data/prices/*.json (tickers may be used by other
+ *     investors). If you want to GC orphaned tickers, run STOCKS-UPDATE.md
+ *     after, with a `--gc` flag (TODO).
  *
  * Safe to run multiple times — missing pieces are silently skipped.
  */

@@ -20,8 +20,8 @@ Opens at `http://localhost:5173`. Data is bundled — see "Architecture" below.
 **Read-only base** (`public/data/`) — maintained by goals, never written from UI:
 - `investors-index.json` — catalog of investors (name, AUM, source, history range)
 - `investors/<id>.json` — per-investor holdings + history per quarter
-- `prices.json` — all ticker prices (monthly, first-of-month keys)
-- `meta.json` — `latestQuarter`, `activityWindowQuarters`, run timestamps
+- `prices/<YYYY>.json` — ticker prices split by year (monthly, first-of-month keys)
+- `meta.json` — `latestQuarter`, `priceYears: {from,to}`, `activityWindowQuarters`, run timestamps
 
 **User config layer** (`public/default-data.json`, v9) — written by Save button:
 - `benchmarks` (VOO, VT)

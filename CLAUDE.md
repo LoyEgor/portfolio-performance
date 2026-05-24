@@ -39,7 +39,9 @@ When the user posts a broker screenshot for `myPortfolio`:
 
 - `public/default-data.json` is the canonical user-config file (v9 format).
 - The read-only investor base lives in `public/data/*` (`investors-index.json`,
-  `investors/<id>.json`, `prices.json`, `meta.json`) and is maintained by goals.
+  `investors/<id>.json`, `prices/<YYYY>.json`, `meta.json`) and is maintained
+  by goals. Prices are split by year; the range is recorded in
+  `meta.priceYears = { from, to }` and the React loader merges them at runtime.
 - No localStorage. App reloads from `default-data.json` and `public/data/*` on every page refresh.
 - Save button writes in-memory state to `default-data.json` via Vite dev-plugin endpoint.
 - Goals (run via `/goal` — see below) write directly to `public/data/*` JSON files; Save button is for user-driven changes.
@@ -49,6 +51,31 @@ When the user posts a broker screenshot for `myPortfolio`:
 - `public/default-data.backup-{1,2,3}.json` — app-managed snapshots, not version control.
 - The `color` field on any portfolio — user-curated.
 - The order of portfolios in `selectedInvestors` or any portfolios array — user-curated.
+
+## No legacy, no migration shims
+
+This app is in **active development**, used by one person, with no external
+deployments. There is no v8/v7/etc. install in the wild to worry about. Treat
+the current data shape as the **only** shape.
+
+- Don't add backwards-compatibility branches (`if (cfg.version === 'v8') …`,
+  `if (!meta.priceYears) fetch(legacy)`, etc.). When the shape changes,
+  change the migration script + the code + the goal specs in one go.
+- Don't keep "fallback to old path" logic around for safety. Missing/malformed
+  data should `throw` so the agent that touched the data layer notices on
+  the next reload. Silent fallbacks hide drift between the docs, the data,
+  and the code.
+- Don't preserve deprecated fields "just in case". Delete them; the next
+  Save round-trip cleans the file.
+- Migration scripts (`scripts/*.mjs`) exist for one-time transforms and are
+  removed once the corresponding shape change has been everywhere applied —
+  they are not a permanent compatibility layer.
+
+If you're an AI agent reading this and you find yourself reaching for a
+defensive fallback because "what if the data is in the old format" — stop.
+The data was migrated by the same agent (or its predecessor) that's now
+reading it. If it's in the wrong format, that's a bug to fix at the source,
+not a case to handle.
 
 ## Goals are run via Claude Code's `/goal` command
 

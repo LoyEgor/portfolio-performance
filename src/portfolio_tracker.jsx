@@ -2897,7 +2897,7 @@ export default function PortfolioTracker() {
   // Simple hash for comparing data snapshots
   // Hash of the user-editable surface only — what Save persists to default-data.json.
   // Investors' holdings/history live in the read-only base (public/data/investors/*) and
-  // do NOT influence dirty state; prices live in public/data/prices.json and don't either.
+  // do NOT influence dirty state; prices live in public/data/prices/<YYYY>.json and don't either.
   // Reorder / color / visibility / subtitle / name on any portfolio still mark dirty.
   const computeHash = (portfolios) => {
     const p = JSON.stringify(portfolios.map(p => ({
@@ -2914,15 +2914,16 @@ export default function PortfolioTracker() {
     return h;
   };
 
-  // Fetch the bundled default state. v9 layout splits data into:
+  // Fetch the bundled default state from:
   //   - public/default-data.json        — user config (selectedInvestors, customization, benchmarks, myPortfolio, tarasGuk)
   //   - public/data/investors-index.json — investor catalog (metadata only, no holdings)
   //   - public/data/investors/<id>.json  — per-investor holdings + history (read-only base)
-  //   - public/data/prices.json          — all ticker prices
-  //   - public/data/meta.json            — { latestQuarter, lastBackfillAt, ... }
-  // Assembled into the existing in-memory shape { portfolios: [...], prices: {...} }
-  // so downstream code (computeSeries, chart wiring, edit modal) keeps working unchanged.
-  // Backwards-compatible: if default-data.json lacks a v9 marker, falls back to v8 monolithic shape.
+  //   - public/data/prices/<YYYY>.json   — ticker prices, split by year (range in meta.priceYears)
+  //   - public/data/meta.json            — { latestQuarter, priceYears: {from,to}, lastBackfillAt, ... }
+  // Assembled into { portfolios: [...], prices: {...} } for downstream code
+  // (computeSeries, chart wiring, edit modal). No fallback paths — the app is
+  // single-format; missing pieces throw loudly so the agent that touched the
+  // data layer notices.
   const fetchDefaultData = async () => {
     try {
       const base = import.meta.env.BASE_URL;
@@ -2930,25 +2931,36 @@ export default function PortfolioTracker() {
       if (!cfgRes.ok) return null;
       const cfg = await cfgRes.json();
 
-      // ----- Legacy v8 monolithic fallback -----
-      if (cfg.version !== 'v9' || Array.isArray(cfg.portfolios)) {
-        return {
-          portfolios: Array.isArray(cfg.portfolios) ? cfg.portfolios : null,
-          prices: (cfg.prices && typeof cfg.prices === 'object') ? cfg.prices : {}
-        };
-      }
-
-      // ----- v9 split layout -----
-      const [pricesRes, indexRes, metaRes, etfsRes] = await Promise.all([
-        fetch(base + 'data/prices.json'),
+      // meta.json carries priceYears = {from, to}, the range of
+      // public/data/prices/<YYYY>.json files. Fetch them in parallel and merge
+      // into one { ticker: { 'YYYY-MM-01': price, ... } } map.
+      const [indexRes, metaRes, etfsRes] = await Promise.all([
         fetch(base + 'data/investors-index.json'),
         fetch(base + 'data/meta.json'),
         fetch(base + 'data/etfs-index.json'),
       ]);
-      const prices = pricesRes.ok ? await pricesRes.json() : {};
       const index = indexRes.ok ? await indexRes.json() : { investors: [] };
       const meta = metaRes.ok ? await metaRes.json() : {};
       const etfsCatalog = etfsRes.ok ? await etfsRes.json() : { etfs: [] };
+
+      const py = meta && meta.priceYears;
+      if (!py || !Number.isInteger(py.from) || !Number.isInteger(py.to) || py.from > py.to) {
+        throw new Error('meta.priceYears missing or malformed — run scripts/split-prices.mjs or fix meta.json');
+      }
+      const years = [];
+      for (let y = py.from; y <= py.to; y++) years.push(y);
+      const yearBlobs = await Promise.all(years.map(async (y) => {
+        const r = await fetch(`${base}data/prices/${y}.json`);
+        if (!r.ok) throw new Error(`prices/${y}.json missing — meta.priceYears is out of sync with the directory`);
+        return await r.json();
+      }));
+      const prices = {};
+      for (const blob of yearBlobs) {
+        for (const [ticker, dateMap] of Object.entries(blob)) {
+          if (!prices[ticker]) prices[ticker] = {};
+          Object.assign(prices[ticker], dateMap);
+        }
+      }
       const indexById = new Map((index.investors || []).map(i => [i.id, i]));
       const etfsById = new Map((etfsCatalog.etfs || []).map(e => [e.id, e]));
 
@@ -3017,7 +3029,13 @@ export default function PortfolioTracker() {
         investorsIndex: index.investors || [],
         etfsIndex: etfsCatalog.etfs || [],
       };
-    } catch { return null; }
+    } catch (e) {
+      // Don't swallow silently — the throws above (meta.priceYears malformed,
+      // prices/<y>.json missing, etc.) are diagnostic signals for whatever
+      // agent touched the data layer. They should be visible in devtools.
+      console.error('[fetchDefaultData] failed:', e);
+      return null;
+    }
   };
 
   // Lazy-load one per-investor file when the user toggles them on from the matrix.

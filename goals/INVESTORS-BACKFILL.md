@@ -42,8 +42,8 @@ case, runs after a 13F deadline).
   - `public/data/investors-index.json`
   - `public/data/investors/*.json`
   - `public/data/meta.json` (to bump `latestQuarter` when the run advances it)
-- Do NOT touch `prices.json` — that's `STOCKS-UPDATE.md`'s job. Run it after
-  this one to fill new ticker prices.
+- Do NOT touch `public/data/prices/*.json` — that's `STOCKS-UPDATE.md`'s job.
+  Run it after this one to fill new ticker prices.
 - Do NOT touch `public/default-data.json`, `public/default-data.backup-*.json`,
   source code, vite config, package.json.
 - Save snapshot before first mutation: `tar -cf /tmp/investors-base.pre-backfill.tar public/data/investors-index.json public/data/investors/ public/data/meta.json`.

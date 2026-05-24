@@ -15,8 +15,8 @@ investor's id from `selectedInvestors`).
 - **Read-only investor base** — `public/data/*` — maintained by goals only.
   - `investors-index.json` — 80-investor catalog (id, name, AUM, link, tags, history range)
   - `investors/<id>.json` — per-investor holdings + history
-  - `prices.json` — all ticker prices
-  - `meta.json` — global `latestQuarter` and last-fetched timestamp
+  - `prices/<YYYY>.json` — ticker prices, split by year (range in `meta.priceYears`)
+  - `meta.json` — global `latestQuarter`, `priceYears: {from,to}`, last-fetched timestamps
 - **User config** — `public/default-data.json` — `selectedInvestors[]`, color/visibility
   customization, myPortfolio. Goals NEVER write here (except `scripts/remove-investor.mjs`
   which prunes deleted investor IDs from the selection).
@@ -26,7 +26,7 @@ investor's id from `selectedInvestors`).
 
 | File | Trigger | Purpose |
 |---|---|---|
-| `STOCKS-UPDATE.md` | Monthly | Refresh `prices.json` to cover the latest completed month for every referenced ticker. |
+| `STOCKS-UPDATE.md` | Monthly | Refresh `prices/<YYYY>.json` files to cover the latest completed month for every referenced ticker. |
 | `INVESTORS-BACKFILL.md` | Quarterly (no params) / on demand (`--years=N`) | Refresh investor holdings + history. Without parameters → catches everyone up to the latest quarter on DataRoma (this is the "quarterly update" use case). With `--years=N` → fetches up to N years back per investor. Idempotent: only fetches what's missing unless `--force`. |
 | `INVESTORS-ADD.md` | On demand | Add a single investor by name. Searches sources by priority, picks the most popular match, fetches history up to `meta.latestQuarter` (not beyond — keeps the base aligned). |
 
@@ -143,9 +143,9 @@ node scripts/remove-investor.mjs ackman
 
 The script removes the investor's file, prunes the index entry, and cleans up
 any references in `public/default-data.json` (selectedInvestors, customization).
-Prices stay in `prices.json` — they may be referenced by other investors and
-re-removing them is a separate concern (run STOCKS-UPDATE to GC orphaned tickers
-if you care).
+Prices stay in `prices/<YYYY>.json` — they may be referenced by other investors
+and re-removing them is a separate concern (run STOCKS-UPDATE to GC orphaned
+tickers if you care).
 
 ## Typical workflows
 

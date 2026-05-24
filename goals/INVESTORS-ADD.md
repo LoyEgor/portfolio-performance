@@ -32,8 +32,8 @@ Picks the most popular match across sources (by AUM), fetches history up to
 - Mutate ONLY:
   - `public/data/investors-index.json` (add one entry)
   - `public/data/investors/<id>.json` (create one new file)
-- Do NOT touch `prices.json` — run `STOCKS-UPDATE.md` separately after to fill
-  ticker prices.
+- Do NOT touch `public/data/prices/*.json` — run `STOCKS-UPDATE.md` separately
+  after to fill ticker prices.
 - Do NOT touch `public/default-data.json`, `public/default-data.backup-*.json`,
   source files.
 - Save snapshot of `investors-index.json` before mutation:
