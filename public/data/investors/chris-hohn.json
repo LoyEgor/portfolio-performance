@@ -3,88 +3,834 @@
   "holdings": [
     {
       "ticker": "GE",
-      "weight": 29.85
+      "weight": 29.85,
+      "shares": 47510431
     },
     {
       "ticker": "V",
-      "weight": 20.39
+      "weight": 20.39,
+      "shares": 30468133
     },
     {
       "ticker": "MCO",
-      "weight": 13.84
+      "weight": 13.84,
+      "shares": 14334027
     },
     {
       "ticker": "SPGI",
-      "weight": 13.22
+      "weight": 13.22,
+      "shares": 14035310
     },
     {
       "ticker": "CP",
-      "weight": 8.1
+      "weight": 8.1,
+      "shares": 46521923
     },
     {
       "ticker": "GOOG",
-      "weight": 5.62
+      "weight": 5.62,
+      "shares": 8854019
     },
     {
       "ticker": "FER",
-      "weight": 2.94
+      "weight": 2.94,
+      "shares": 20740214
     },
     {
       "ticker": "CNI",
-      "weight": 2.24
+      "weight": 2.24,
+      "shares": 9849934
     },
     {
       "ticker": "MSFT",
-      "weight": 2.24
+      "weight": 2.24,
+      "shares": 2728412
     },
     {
       "ticker": "GOOGL",
-      "weight": 1.56
+      "weight": 1.56,
+      "shares": 2457000
     }
   ],
   "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 18.4
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 17.7
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 14.0
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.4
+        },
+        {
+          "ticker": "V",
+          "weight": 8.6
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.0
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 6.0
+        },
+        {
+          "ticker": "MCO",
+          "weight": 5.7
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.9
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 3.7
+        },
+        {
+          "ticker": "BXP",
+          "weight": 2.6
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 18.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 18.52
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 13.81
+        },
+        {
+          "ticker": "CP",
+          "weight": 10.71
+        },
+        {
+          "ticker": "V",
+          "weight": 8.21
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.91
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 6.01
+        },
+        {
+          "ticker": "MCO",
+          "weight": 5.91
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 3.8
+        },
+        {
+          "ticker": "BXP",
+          "weight": 3.3
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.1
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 18.98
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 18.17
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.35
+        },
+        {
+          "ticker": "V",
+          "weight": 10.74
+        },
+        {
+          "ticker": "CNI",
+          "weight": 10.24
+        },
+        {
+          "ticker": "CP",
+          "weight": 8.73
+        },
+        {
+          "ticker": "MCO",
+          "weight": 5.62
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 4.92
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.02
+        },
+        {
+          "ticker": "BXP",
+          "weight": 3.41
+        },
+        {
+          "ticker": "UNP",
+          "weight": 2.71
+        },
+        {
+          "ticker": "INFO",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 19.3
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 14.47
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.66
+        },
+        {
+          "ticker": "V",
+          "weight": 11.36
+        },
+        {
+          "ticker": "CNI",
+          "weight": 10.25
+        },
+        {
+          "ticker": "CP",
+          "weight": 9.05
+        },
+        {
+          "ticker": "MCO",
+          "weight": 5.83
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.02
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 4.02
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.52
+        },
+        {
+          "ticker": "BXP",
+          "weight": 3.22
+        },
+        {
+          "ticker": "INFO",
+          "weight": 2.3
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 18.0
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 14.4
+        },
+        {
+          "ticker": "CNI",
+          "weight": 13.4
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.5
+        },
+        {
+          "ticker": "V",
+          "weight": 12.0
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 7.6
+        },
+        {
+          "ticker": "MCO",
+          "weight": 6.7
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.3
+        },
+        {
+          "ticker": "BXP",
+          "weight": 4.1
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.9
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.1
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 17.24
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.13
+        },
+        {
+          "ticker": "CNI",
+          "weight": 13.21
+        },
+        {
+          "ticker": "V",
+          "weight": 12.5
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.4
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 9.48
+        },
+        {
+          "ticker": "MCO",
+          "weight": 7.16
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.34
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.53
+        },
+        {
+          "ticker": "BXP",
+          "weight": 3.01
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 17.6
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.2
+        },
+        {
+          "ticker": "CNI",
+          "weight": 13.9
+        },
+        {
+          "ticker": "CP",
+          "weight": 13.0
+        },
+        {
+          "ticker": "V",
+          "weight": 12.4
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 9.4
+        },
+        {
+          "ticker": "MCO",
+          "weight": 7.0
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.3
+        },
+        {
+          "ticker": "UNP",
+          "weight": 3.8
+        },
+        {
+          "ticker": "BXP",
+          "weight": 1.4
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 17.82
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 16.22
+        },
+        {
+          "ticker": "CNI",
+          "weight": 14.61
+        },
+        {
+          "ticker": "CP",
+          "weight": 13.91
+        },
+        {
+          "ticker": "V",
+          "weight": 13.81
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 10.31
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.61
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.71
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 15.12
+        },
+        {
+          "ticker": "V",
+          "weight": 14.91
+        },
+        {
+          "ticker": "CNI",
+          "weight": 14.81
+        },
+        {
+          "ticker": "CP",
+          "weight": 14.71
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.01
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.91
+        },
+        {
+          "ticker": "GE",
+          "weight": 8.51
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.41
+        },
+        {
+          "ticker": "TMO",
+          "weight": 1.61
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "CNI",
+          "weight": 14.74
+        },
+        {
+          "ticker": "GE",
+          "weight": 13.64
+        },
+        {
+          "ticker": "CP",
+          "weight": 13.44
+        },
+        {
+          "ticker": "V",
+          "weight": 12.54
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.04
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.13
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.93
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.62
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.92
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 16.73
+        },
+        {
+          "ticker": "CNI",
+          "weight": 16.13
+        },
+        {
+          "ticker": "CP",
+          "weight": 15.13
+        },
+        {
+          "ticker": "V",
+          "weight": 14.03
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 12.02
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.92
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.12
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.92
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 14.84
+        },
+        {
+          "ticker": "CNI",
+          "weight": 14.04
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.14
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.24
+        },
+        {
+          "ticker": "V",
+          "weight": 12.24
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.13
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.13
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.62
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.62
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 20.8
+        },
+        {
+          "ticker": "CNI",
+          "weight": 13.17
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.26
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.16
+        },
+        {
+          "ticker": "V",
+          "weight": 11.86
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.26
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 9.75
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.53
+        },
+        {
+          "ticker": "TMO",
+          "weight": 2.21
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 18.7
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.6
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.5
+        },
+        {
+          "ticker": "CNI",
+          "weight": 11.4
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 11.3
+        },
+        {
+          "ticker": "V",
+          "weight": 10.8
+        },
+        {
+          "ticker": "CP",
+          "weight": 10.6
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.6
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.7
+        },
+        {
+          "ticker": "FER.MC",
+          "weight": 1.8
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 20.6
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.3
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 12.2
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.7
+        },
+        {
+          "ticker": "CP",
+          "weight": 10.7
+        },
+        {
+          "ticker": "V",
+          "weight": 10.5
+        },
+        {
+          "ticker": "CNI",
+          "weight": 9.4
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.4
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.3
+        },
+        {
+          "ticker": "FER.MC",
+          "weight": 1.9
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "GE",
+          "weight": 18.1,
+          "shares": 45999876
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.8,
+          "shares": 13246769
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 13.9,
+          "shares": 13993637
+        },
+        {
+          "ticker": "V",
+          "weight": 12.5,
+          "shares": 16797187
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 12.2,
+          "shares": 10400077
+        },
+        {
+          "ticker": "CP",
+          "weight": 9.4,
+          "shares": 54913285
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.4,
+          "shares": 16507056
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.1,
+          "shares": 29693764
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.7,
+          "shares": 6027410
+        },
+        {
+          "ticker": "FER.MC",
+          "weight": 1.9,
+          "shares": 19333428
+        }
+      ]
+    },
     {
       "asOf": "2025-03-31",
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 21.95
+          "weight": 21.95,
+          "shares": 47570947
         },
         {
           "ticker": "MSFT",
-          "weight": 14.97
+          "weight": 14.97,
+          "shares": 17299881
         },
         {
           "ticker": "MCO",
-          "weight": 14.13
+          "weight": 14.13,
+          "shares": 13163107
         },
         {
           "ticker": "V",
-          "weight": 13.44
+          "weight": 13.44,
+          "shares": 16637562
         },
         {
           "ticker": "SPGI",
-          "weight": 12.14
+          "weight": 12.14,
+          "shares": 10361269
         },
         {
           "ticker": "CP",
-          "weight": 8.89
+          "weight": 8.89,
+          "shares": 54913285
         },
         {
           "ticker": "CNI",
-          "weight": 6.04
+          "weight": 6.04,
+          "shares": 26899078
         },
         {
           "ticker": "GOOG",
-          "weight": 4.99
+          "weight": 4.99,
+          "shares": 13855735
         },
         {
           "ticker": "FER",
-          "weight": 1.99
+          "weight": 1.99,
+          "shares": 19333428
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.46
+          "weight": 1.46,
+          "shares": 4085110
         }
       ]
     },
@@ -93,43 +839,53 @@
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 24.12
+          "weight": 24.12,
+          "shares": 47510431
         },
         {
           "ticker": "MSFT",
-          "weight": 17.23
+          "weight": 17.23,
+          "shares": 17565231
         },
         {
           "ticker": "V",
-          "weight": 13.35
+          "weight": 13.35,
+          "shares": 19067558
         },
         {
           "ticker": "MCO",
-          "weight": 13.1
+          "weight": 13.1,
+          "shares": 13246979
         },
         {
           "ticker": "SPGI",
-          "weight": 11.53
+          "weight": 11.53,
+          "shares": 11091623
         },
         {
           "ticker": "CP",
-          "weight": 8.26
+          "weight": 8.26,
+          "shares": 52826885
         },
         {
           "ticker": "CNI",
-          "weight": 4.72
+          "weight": 4.72,
+          "shares": 22989066
         },
         {
           "ticker": "GOOG",
-          "weight": 4.54
+          "weight": 4.54,
+          "shares": 12966235
         },
         {
           "ticker": "FER",
-          "weight": 2.05
+          "weight": 2.05,
+          "shares": 19470666
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.1
+          "weight": 1.1,
+          "shares": 3155110
         }
       ]
     },
@@ -138,39 +894,48 @@
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 27.12
+          "weight": 27.12,
+          "shares": 47510431
         },
         {
           "ticker": "V",
-          "weight": 18.18
+          "weight": 18.18,
+          "shares": 28057351
         },
         {
           "ticker": "MSFT",
-          "weight": 16.31
+          "weight": 16.31,
+          "shares": 16592204
         },
         {
           "ticker": "MCO",
-          "weight": 12.03
+          "weight": 12.03,
+          "shares": 13308479
         },
         {
           "ticker": "SPGI",
-          "weight": 10.33
+          "weight": 10.33,
+          "shares": 11189870
         },
         {
           "ticker": "CP",
-          "weight": 7.05
+          "weight": 7.05,
+          "shares": 49865735
         },
         {
           "ticker": "GOOG",
-          "weight": 3.51
+          "weight": 3.51,
+          "shares": 7596819
         },
         {
           "ticker": "CNI",
-          "weight": 3.36
+          "weight": 3.36,
+          "shares": 18767774
         },
         {
           "ticker": "FER",
-          "weight": 2.11
+          "weight": 2.11,
+          "shares": 19470666
         }
       ]
     },
@@ -179,48 +944,59 @@
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 27.29
+          "weight": 27.29,
+          "shares": 47510431
         },
         {
           "ticker": "V",
-          "weight": 18.12
+          "weight": 18.12,
+          "shares": 27724233
         },
         {
           "ticker": "MSFT",
-          "weight": 15.13
+          "weight": 15.13,
+          "shares": 16781953
         },
         {
           "ticker": "MCO",
-          "weight": 12.67
+          "weight": 12.67,
+          "shares": 13308479
         },
         {
           "ticker": "SPGI",
-          "weight": 11.48
+          "weight": 11.48,
+          "shares": 11790310
         },
         {
           "ticker": "CP",
-          "weight": 6.54
+          "weight": 6.54,
+          "shares": 47654423
         },
         {
           "ticker": "GOOG",
-          "weight": 4.44
+          "weight": 4.44,
+          "shares": 7596819
         },
         {
           "ticker": "FER",
-          "weight": 2.51
+          "weight": 2.51,
+          "shares": 20740214
         },
         {
           "ticker": "CNI",
-          "weight": 1.82
+          "weight": 1.82,
+          "shares": 9849934
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": null,
+    "lastFetchedAt": "2026-05-24T01:50:45Z",
     "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=C",
     "migratedFromLegacy": true,
-    "legacyId": "custom-1777150124526"
+    "legacyId": "custom-1777150124526",
+    "fallbackSource": "13f.info",
+    "sharesSource": "13f.info"
   }
 }

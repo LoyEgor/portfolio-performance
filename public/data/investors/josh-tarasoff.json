@@ -3,76 +3,805 @@
   "holdings": [
     {
       "ticker": "AMZN",
-      "weight": 18.91
+      "weight": 18.91,
+      "shares": 312530
     },
     {
       "ticker": "BN",
-      "weight": 16.37
+      "weight": 16.37,
+      "shares": 1392742
     },
     {
       "ticker": "BRK.A",
-      "weight": 13.14
+      "weight": 13.14,
+      "shares": 63
     },
     {
       "ticker": "MKL",
-      "weight": 12.54
+      "weight": 12.54,
+      "shares": 22555
     },
     {
       "ticker": "SGOV",
-      "weight": 11.2
+      "weight": 11.2,
+      "shares": 383000
     },
     {
       "ticker": "GOOGL",
-      "weight": 8.36
+      "weight": 8.36,
+      "shares": 100035
     },
     {
       "ticker": "NFLX",
-      "weight": 7.8
+      "weight": 7.8,
+      "shares": 279480
     },
     {
       "ticker": "TSLA",
-      "weight": 5.91
+      "weight": 5.91,
+      "shares": 54735
     },
     {
       "ticker": "TRUP",
-      "weight": 5.77
+      "weight": 5.77,
+      "shares": 776490
     }
   ],
   "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "BN",
+          "weight": 18.4
+        },
+        {
+          "ticker": "CRM",
+          "weight": 17.88
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 13.05
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 12.46
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.27
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.75
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 7.71
+        },
+        {
+          "ticker": "WORK",
+          "weight": 6.32
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 6.16
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CRM",
+          "weight": 16.47
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 14.25
+        },
+        {
+          "ticker": "BN",
+          "weight": 11.93
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 11.9
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 10.16
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.76
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 7.68
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 6.89
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.58
+        },
+        {
+          "ticker": "WORK",
+          "weight": 4.38
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "CRM",
+          "weight": 22.16
+        },
+        {
+          "ticker": "BN",
+          "weight": 15.23
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 10.58
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 10.47
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.13
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 8.66
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 8.47
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.83
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 6.47
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "CRM",
+          "weight": 21.65
+        },
+        {
+          "ticker": "BN",
+          "weight": 17.91
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 11.51
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.73
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 10.43
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 8.91
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.85
+        },
+        {
+          "ticker": "PTON",
+          "weight": 8.81
+        },
+        {
+          "ticker": "BUR",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 18.79
+        },
+        {
+          "ticker": "CRM",
+          "weight": 17.94
+        },
+        {
+          "ticker": "BN",
+          "weight": 14.88
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 11.65
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.42
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 6.86
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 6.73
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 6.48
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 3.66
+        },
+        {
+          "ticker": "PTON",
+          "weight": 3.18
+        },
+        {
+          "ticker": "BUR",
+          "weight": 1.41
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 22.86
+        },
+        {
+          "ticker": "CRM",
+          "weight": 18.42
+        },
+        {
+          "ticker": "BN",
+          "weight": 15.45
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 11.62
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 8.44
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 6.67
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 5.76
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 5.52
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 3.14
+        },
+        {
+          "ticker": "BUR",
+          "weight": 2.12
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 23.58
+        },
+        {
+          "ticker": "CRM",
+          "weight": 16.24
+        },
+        {
+          "ticker": "BN",
+          "weight": 13.06
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 11.7
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 8.21
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 7.73
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 6.95
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 6.19
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 4.56
+        },
+        {
+          "ticker": "BUR",
+          "weight": 1.78
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 22.17
+        },
+        {
+          "ticker": "BN",
+          "weight": 14.13
+        },
+        {
+          "ticker": "CRM",
+          "weight": 13.53
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 11.95
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 9.45
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 7.4
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 5.75
+        },
+        {
+          "ticker": "BUR",
+          "weight": 5.39
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 5.28
+        },
+        {
+          "ticker": "BAM",
+          "weight": 2.95
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 2.0
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 22.86
+        },
+        {
+          "ticker": "BN",
+          "weight": 12.27
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 11.78
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.46
+        },
+        {
+          "ticker": "CRM",
+          "weight": 9.54
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 8.16
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 6.56
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 6.51
+        },
+        {
+          "ticker": "BUR",
+          "weight": 3.55
+        },
+        {
+          "ticker": "MKL",
+          "weight": 3.18
+        },
+        {
+          "ticker": "BAM",
+          "weight": 2.82
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 2.31
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 26.07
+        },
+        {
+          "ticker": "BN",
+          "weight": 16.07
+        },
+        {
+          "ticker": "MKL",
+          "weight": 12.17
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.13
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.51
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 7.15
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 7.05
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 6.19
+        },
+        {
+          "ticker": "BUR",
+          "weight": 3.49
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 2.17
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 24.96
+        },
+        {
+          "ticker": "BN",
+          "weight": 17.48
+        },
+        {
+          "ticker": "MKL",
+          "weight": 17.1
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.75
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.14
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 6.44
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 5.14
+        },
+        {
+          "ticker": "BUR",
+          "weight": 4.94
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 3.05
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 22.84
+        },
+        {
+          "ticker": "BN",
+          "weight": 20.07
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 11.93
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.38
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.73
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 6.31
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.98
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 5.01
+        },
+        {
+          "ticker": "BUR",
+          "weight": 4.92
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 2.83
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 24.72
+        },
+        {
+          "ticker": "BN",
+          "weight": 18.35
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 12.76
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.62
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.54
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 5.68
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 5.51
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.82
+        },
+        {
+          "ticker": "BUR",
+          "weight": 4.68
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 3.32
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 25.51
+        },
+        {
+          "ticker": "BN",
+          "weight": 17.54
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 11.86
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.88
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.79
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 8.83
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 6.3
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.61
+        },
+        {
+          "ticker": "BUR",
+          "weight": 3.68
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 21.17
+        },
+        {
+          "ticker": "BN",
+          "weight": 16.71
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 14.89
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 13.86
+        },
+        {
+          "ticker": "MKL",
+          "weight": 10.7
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 7.72
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.61
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.14
+        },
+        {
+          "ticker": "BUR",
+          "weight": 4.2
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 23.82,
+          "shares": 360065
+        },
+        {
+          "ticker": "BN",
+          "weight": 17.23,
+          "shares": 994895
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 14.37,
+          "shares": 70
+        },
+        {
+          "ticker": "TRUP",
+          "weight": 13.57,
+          "shares": 933655
+        },
+        {
+          "ticker": "MKL",
+          "weight": 11.31,
+          "shares": 21720
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 10.15,
+          "shares": 83370
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.15,
+          "shares": 107770
+        },
+        {
+          "ticker": "BUR",
+          "weight": 3.4,
+          "shares": 884405
+        }
+      ]
+    },
     {
       "asOf": "2025-03-31",
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 21.34
+          "weight": 21.34,
+          "shares": 324640
         },
         {
           "ticker": "BRK.A",
-          "weight": 18.48
+          "weight": 18.48,
+          "shares": 67
         },
         {
           "ticker": "BN",
-          "weight": 17.52
+          "weight": 17.52,
+          "shares": 967425
         },
         {
           "ticker": "MKL",
-          "weight": 14.5
+          "weight": 14.5,
+          "shares": 22455
         },
         {
           "ticker": "TRUP",
-          "weight": 11.69
+          "weight": 11.69,
+          "shares": 907835
         },
         {
           "ticker": "TSLA",
-          "weight": 7.26
+          "weight": 7.26,
+          "shares": 81060
         },
         {
           "ticker": "GOOGL",
-          "weight": 5.6
+          "weight": 5.6,
+          "shares": 104770
         },
         {
           "ticker": "BUR",
-          "weight": 3.61
+          "weight": 3.61,
+          "shares": 790405
         }
       ]
     },
@@ -81,35 +810,43 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 20.03
+          "weight": 20.03,
+          "shares": 324640
         },
         {
-          "ticker": "BAM",
-          "weight": 16.57
+          "ticker": "BN",
+          "weight": 16.57,
+          "shares": 952215
         },
         {
           "ticker": "BRK.A",
-          "weight": 13.74
+          "weight": 13.74,
+          "shares": 67
         },
         {
           "ticker": "BUR",
-          "weight": 12.86
+          "weight": 12.86,
+          "shares": 3362322
         },
         {
           "ticker": "MKL",
-          "weight": 12.62
+          "weight": 12.62,
+          "shares": 22455
         },
         {
           "ticker": "TRUP",
-          "weight": 11.9
+          "weight": 11.9,
+          "shares": 764095
         },
         {
           "ticker": "TSLA",
-          "weight": 7.09
+          "weight": 7.09,
+          "shares": 79335
         },
         {
           "ticker": "GOOGL",
-          "weight": 5.19
+          "weight": 5.19,
+          "shares": 104770
         }
       ]
     },
@@ -118,35 +855,43 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 20.61
+          "weight": 20.61,
+          "shares": 321895
         },
         {
           "ticker": "BN",
-          "weight": 19.04
+          "weight": 19.04,
+          "shares": 952215
         },
         {
           "ticker": "BRK.A",
-          "weight": 14.73
+          "weight": 14.73,
+          "shares": 67
         },
         {
           "ticker": "MKL",
-          "weight": 12.51
+          "weight": 12.51,
+          "shares": 22455
         },
         {
           "ticker": "TSLA",
-          "weight": 10.29
+          "weight": 10.29,
+          "shares": 79335
         },
         {
           "ticker": "TRUP",
-          "weight": 9.64
+          "weight": 9.64,
+          "shares": 764095
         },
         {
           "ticker": "GOOGL",
-          "weight": 7.43
+          "weight": 7.43,
+          "shares": 104770
         },
         {
           "ticker": "BUR",
-          "weight": 5.75
+          "weight": 5.75,
+          "shares": 1835072
         }
       ]
     },
@@ -155,44 +900,53 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 21.3
+          "weight": 21.3,
+          "shares": 316285
         },
         {
           "ticker": "BN",
-          "weight": 18.93
+          "weight": 18.93,
+          "shares": 1413462
         },
         {
           "ticker": "BRK.A",
-          "weight": 14.76
+          "weight": 14.76,
+          "shares": 67
         },
         {
           "ticker": "MKL",
-          "weight": 14.37
+          "weight": 14.37,
+          "shares": 22905
         },
         {
           "ticker": "GOOGL",
-          "weight": 9.24
+          "weight": 9.24,
+          "shares": 101155
         },
         {
           "ticker": "TRUP",
-          "weight": 8.47
+          "weight": 8.47,
+          "shares": 776490
         },
         {
           "ticker": "TSLA",
-          "weight": 8.15
+          "weight": 8.15,
+          "shares": 62100
         },
         {
           "ticker": "BUR",
-          "weight": 4.78
+          "weight": 4.78,
+          "shares": 1835072
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": null,
+    "lastFetchedAt": "2026-05-24T01:50:45Z",
     "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GBP",
     "migratedFromLegacy": true,
-    "legacyId": "custom-1777150376264"
+    "legacyId": "custom-1777150376264",
+    "sharesSource": "13f.info"
   }
 }

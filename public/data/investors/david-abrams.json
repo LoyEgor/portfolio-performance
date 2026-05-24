@@ -3,96 +3,1021 @@
   "holdings": [
     {
       "ticker": "LOAR",
-      "weight": 39.65
+      "weight": 39.65,
+      "shares": 32050240
     },
     {
       "ticker": "LAD",
-      "weight": 13.43
+      "weight": 13.43,
+      "shares": 2490534
     },
     {
       "ticker": "GOOGL",
-      "weight": 11.59
+      "weight": 11.59,
+      "shares": 1865768
     },
     {
       "ticker": "SGI",
-      "weight": 9.25
+      "weight": 9.25,
+      "shares": 5798776
     },
     {
       "ticker": "ABG",
-      "weight": 9.09
+      "weight": 9.09,
+      "shares": 2155492
     },
     {
       "ticker": "CPNG",
-      "weight": 5.31
+      "weight": 5.31,
+      "shares": 13017964
     },
     {
       "ticker": "WTW",
-      "weight": 4.53
+      "weight": 4.53,
+      "shares": 720779
     },
     {
       "ticker": "META",
-      "weight": 4.02
+      "weight": 4.02,
+      "shares": 325155
     },
     {
       "ticker": "UHAL.B",
-      "weight": 3.13
+      "weight": 3.13,
+      "shares": 3251469
     }
   ],
   "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 22.29
+        },
+        {
+          "ticker": "ABG",
+          "weight": 10.17
+        },
+        {
+          "ticker": "META",
+          "weight": 8.66
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 8.33
+        },
+        {
+          "ticker": "TDG",
+          "weight": 7.68
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.36
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 6.71
+        },
+        {
+          "ticker": "PCG",
+          "weight": 6.49
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.06
+        },
+        {
+          "ticker": "KMI",
+          "weight": 5.09
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.55
+        },
+        {
+          "ticker": "ET",
+          "weight": 4.11
+        },
+        {
+          "ticker": "OI",
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 19.63
+        },
+        {
+          "ticker": "META",
+          "weight": 10.14
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.83
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.62
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.51
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 8.07
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.11
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 5.78
+        },
+        {
+          "ticker": "ET",
+          "weight": 5.67
+        },
+        {
+          "ticker": "KMI",
+          "weight": 5.56
+        },
+        {
+          "ticker": "PCG",
+          "weight": 5.23
+        },
+        {
+          "ticker": "CWH",
+          "weight": 5.13
+        },
+        {
+          "ticker": "OI",
+          "weight": 2.72
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 17.99
+        },
+        {
+          "ticker": "ABG",
+          "weight": 10.04
+        },
+        {
+          "ticker": "META",
+          "weight": 9.82
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.38
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 8.72
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.06
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.07
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 5.63
+        },
+        {
+          "ticker": "ET",
+          "weight": 5.08
+        },
+        {
+          "ticker": "KMI",
+          "weight": 5.08
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.75
+        },
+        {
+          "ticker": "TPX",
+          "weight": 3.97
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 2.98
+        },
+        {
+          "ticker": "OI",
+          "weight": 2.43
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 16.92
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.29
+        },
+        {
+          "ticker": "META",
+          "weight": 9.85
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.85
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.3
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 7.85
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.86
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.19
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.98
+        },
+        {
+          "ticker": "KMI",
+          "weight": 4.76
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 4.65
+        },
+        {
+          "ticker": "ET",
+          "weight": 4.42
+        },
+        {
+          "ticker": "TPX",
+          "weight": 4.09
+        },
+        {
+          "ticker": "OI",
+          "weight": 1.99
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 18.31
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.54
+        },
+        {
+          "ticker": "TDG",
+          "weight": 9.1
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.77
+        },
+        {
+          "ticker": "META",
+          "weight": 6.99
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.55
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 6.55
+        },
+        {
+          "ticker": "ET",
+          "weight": 6.44
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.22
+        },
+        {
+          "ticker": "KMI",
+          "weight": 6.1
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 5.88
+        },
+        {
+          "ticker": "CWH",
+          "weight": 3.66
+        },
+        {
+          "ticker": "TPX",
+          "weight": 2.55
+        },
+        {
+          "ticker": "OI",
+          "weight": 2.34
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 19.66
+        },
+        {
+          "ticker": "ABG",
+          "weight": 10.85
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.72
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.81
+        },
+        {
+          "ticker": "ET",
+          "weight": 6.67
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.44
+        },
+        {
+          "ticker": "KMI",
+          "weight": 6.33
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 6.1
+        },
+        {
+          "ticker": "META",
+          "weight": 5.88
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 5.54
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 5.31
+        },
+        {
+          "ticker": "CWH",
+          "weight": 3.39
+        },
+        {
+          "ticker": "OI",
+          "weight": 2.94
+        },
+        {
+          "ticker": "TPX",
+          "weight": 2.36
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 16.78
+        },
+        {
+          "ticker": "ABG",
+          "weight": 10.65
+        },
+        {
+          "ticker": "TDG",
+          "weight": 9.49
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.26
+        },
+        {
+          "ticker": "ET",
+          "weight": 8.1
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 7.41
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 7.18
+        },
+        {
+          "ticker": "WTW",
+          "weight": 7.18
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 6.48
+        },
+        {
+          "ticker": "META",
+          "weight": 5.44
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.28
+        },
+        {
+          "ticker": "OI",
+          "weight": 3.01
+        },
+        {
+          "ticker": "TPX",
+          "weight": 2.89
+        },
+        {
+          "ticker": "KMI",
+          "weight": 1.85
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 17.53
+        },
+        {
+          "ticker": "ABG",
+          "weight": 13.76
+        },
+        {
+          "ticker": "META",
+          "weight": 9.48
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.36
+        },
+        {
+          "ticker": "ET",
+          "weight": 7.65
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.54
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 7.34
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 7.24
+        },
+        {
+          "ticker": "WTW",
+          "weight": 7.14
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 5.3
+        },
+        {
+          "ticker": "TPX",
+          "weight": 4.49
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.17
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 17.22
+        },
+        {
+          "ticker": "META",
+          "weight": 14.59
+        },
+        {
+          "ticker": "ABG",
+          "weight": 14.18
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.61
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.8
+        },
+        {
+          "ticker": "ET",
+          "weight": 7.09
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.89
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 6.08
+        },
+        {
+          "ticker": "WTW",
+          "weight": 5.98
+        },
+        {
+          "ticker": "TPX",
+          "weight": 4.56
+        },
+        {
+          "ticker": "CWH",
+          "weight": 3.44
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 2.23
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 20.85
+        },
+        {
+          "ticker": "ABG",
+          "weight": 14.78
+        },
+        {
+          "ticker": "META",
+          "weight": 9.51
+        },
+        {
+          "ticker": "TDG",
+          "weight": 8.1
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.1
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.58
+        },
+        {
+          "ticker": "ET",
+          "weight": 6.58
+        },
+        {
+          "ticker": "WTW",
+          "weight": 5.57
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 5.36
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.45
+        },
+        {
+          "ticker": "TPX",
+          "weight": 4.15
+        },
+        {
+          "ticker": "HZNP",
+          "weight": 2.63
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 1.72
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.62
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 23.58
+        },
+        {
+          "ticker": "ABG",
+          "weight": 16.19
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.12
+        },
+        {
+          "ticker": "META",
+          "weight": 9.31
+        },
+        {
+          "ticker": "ET",
+          "weight": 8.4
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 7.39
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 6.38
+        },
+        {
+          "ticker": "WTW",
+          "weight": 5.67
+        },
+        {
+          "ticker": "TPX",
+          "weight": 5.26
+        },
+        {
+          "ticker": "CWH",
+          "weight": 3.44
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 2.73
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.53
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 24.82
+        },
+        {
+          "ticker": "ABG",
+          "weight": 14.89
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.23
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 8.11
+        },
+        {
+          "ticker": "META",
+          "weight": 7.9
+        },
+        {
+          "ticker": "ET",
+          "weight": 7.7
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 6.59
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.08
+        },
+        {
+          "ticker": "TPX",
+          "weight": 5.78
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.26
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 1.93
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.71
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "LAD",
+          "weight": 22.75
+        },
+        {
+          "ticker": "ABG",
+          "weight": 15.67
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.81
+        },
+        {
+          "ticker": "META",
+          "weight": 9.5
+        },
+        {
+          "ticker": "ET",
+          "weight": 8.9
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 7.48
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 7.28
+        },
+        {
+          "ticker": "TPX",
+          "weight": 6.47
+        },
+        {
+          "ticker": "WTW",
+          "weight": 6.27
+        },
+        {
+          "ticker": "CWH",
+          "weight": 4.45
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.42
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 40.59
+        },
+        {
+          "ticker": "LAD",
+          "weight": 11.94
+        },
+        {
+          "ticker": "ABG",
+          "weight": 9.51
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.49
+        },
+        {
+          "ticker": "META",
+          "weight": 6.17
+        },
+        {
+          "ticker": "ET",
+          "weight": 5.77
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 5.36
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 4.25
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.74
+        },
+        {
+          "ticker": "TPX",
+          "weight": 3.34
+        },
+        {
+          "ticker": "CWH",
+          "weight": 1.84
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 46.51
+        },
+        {
+          "ticker": "LAD",
+          "weight": 12.34
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.19
+        },
+        {
+          "ticker": "META",
+          "weight": 5.76
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.56
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 5.16
+        },
+        {
+          "ticker": "ET",
+          "weight": 4.65
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 3.94
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.44
+        },
+        {
+          "ticker": "TPX",
+          "weight": 3.24
+        },
+        {
+          "ticker": "CWH",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "LOAR",
+          "weight": 44.63,
+          "shares": 37427917
+        },
+        {
+          "ticker": "LAD",
+          "weight": 13.74,
+          "shares": 2391188
+        },
+        {
+          "ticker": "ABG",
+          "weight": 8.22,
+          "shares": 2108540
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.52,
+          "shares": 2124130
+        },
+        {
+          "ticker": "ET",
+          "weight": 5.62,
+          "shares": 17834322
+        },
+        {
+          "ticker": "META",
+          "weight": 5.32,
+          "shares": 557752
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 4.61,
+          "shares": 13017964
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.61,
+          "shares": 720779
+        },
+        {
+          "ticker": "UHAL-B",
+          "weight": 3.31,
+          "shares": 3251469
+        },
+        {
+          "ticker": "TPX",
+          "weight": 3.31,
+          "shares": 3600000
+        },
+        {
+          "ticker": "CTLP",
+          "weight": 1.11,
+          "shares": 7180000
+        }
+      ]
+    },
     {
       "asOf": "2025-03-31",
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 46.92
+          "weight": 46.92,
+          "shares": 37427917
         },
         {
           "ticker": "LAD",
-          "weight": 12.73
+          "weight": 12.73,
+          "shares": 2444678
         },
         {
           "ticker": "ABG",
-          "weight": 8.26
+          "weight": 8.26,
+          "shares": 2108540
         },
         {
           "ticker": "SGI",
-          "weight": 6.21
+          "weight": 6.21,
+          "shares": 5845246
         },
         {
           "ticker": "GOOGL",
-          "weight": 5.83
+          "weight": 5.83,
+          "shares": 2124130
         },
         {
           "ticker": "CPNG",
-          "weight": 5.07
+          "weight": 5.07,
+          "shares": 13017964
         },
         {
           "ticker": "WTW",
-          "weight": 4.32
+          "weight": 4.32,
+          "shares": 720779
         },
         {
           "ticker": "META",
-          "weight": 4.04
+          "weight": 4.04,
+          "shares": 394755
         },
         {
           "ticker": "UHAL.B",
-          "weight": 3.41
+          "weight": 3.41,
+          "shares": 3251469
         },
         {
           "ticker": "ET",
-          "weight": 2.05
+          "weight": 2.05,
+          "shares": 6205777
         },
         {
           "ticker": "CTLP",
-          "weight": 1
+          "weight": 1,
+          "shares": 7180000
         },
         {
           "ticker": "NUVB",
-          "weight": 0.12
+          "weight": 0.12,
+          "shares": 3811513
         },
         {
           "ticker": "UHAL",
-          "weight": 0.04
+          "weight": 0.04,
+          "shares": 36401
         }
       ]
     },
@@ -101,55 +1026,68 @@
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 45.16
+          "weight": 45.16,
+          "shares": 32050240
         },
         {
           "ticker": "LAD",
-          "weight": 13.51
+          "weight": 13.51,
+          "shares": 2444678
         },
         {
           "ticker": "ABG",
-          "weight": 8.23
+          "weight": 8.23,
+          "shares": 2108540
         },
         {
           "ticker": "SGI",
-          "weight": 6.51
+          "weight": 6.51,
+          "shares": 5845246
         },
         {
           "ticker": "CPNG",
-          "weight": 6.38
+          "weight": 6.38,
+          "shares": 13017964
         },
         {
           "ticker": "GOOGL",
-          "weight": 6.12
+          "weight": 6.12,
+          "shares": 2124130
         },
         {
           "ticker": "META",
-          "weight": 4.77
+          "weight": 4.77,
+          "shares": 394755
         },
         {
           "ticker": "WTW",
-          "weight": 3.61
+          "weight": 3.61,
+          "shares": 720779
         },
         {
           "ticker": "UHAL.B",
-          "weight": 2.89
+          "weight": 2.89,
+          "shares": 3251469
         },
         {
           "ticker": "ET",
-          "weight": 1.84
+          "weight": 1.84,
+          "shares": 6205777
         },
         {
           "ticker": "CRCL",
-          "weight": 0.82
+          "weight": 0.82,
+          "shares": 275000
         },
         {
           "ticker": "NUVB",
-          "weight": 0.12
+          "weight": 0.12,
+          "shares": 3811513
         },
         {
           "ticker": "UHAL",
-          "weight": 0.04
+          "weight": 0.04,
+          "shares": 36401
         }
       ]
     },
@@ -158,55 +1096,68 @@
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 41.55
+          "weight": 41.55,
+          "shares": 32050240
         },
         {
           "ticker": "LAD",
-          "weight": 12.76
+          "weight": 12.76,
+          "shares": 2490534
         },
         {
           "ticker": "ABG",
-          "weight": 8.54
+          "weight": 8.54,
+          "shares": 2155492
         },
         {
           "ticker": "GOOGL",
-          "weight": 8.37
+          "weight": 8.37,
+          "shares": 2124130
         },
         {
           "ticker": "SGI",
-          "weight": 7.99
+          "weight": 7.99,
+          "shares": 5845246
         },
         {
           "ticker": "CPNG",
-          "weight": 6.79
+          "weight": 6.79,
+          "shares": 13017964
         },
         {
           "ticker": "META",
-          "weight": 4.7
+          "weight": 4.7,
+          "shares": 394755
         },
         {
           "ticker": "WTW",
-          "weight": 4.04
+          "weight": 4.04,
+          "shares": 720779
         },
         {
           "ticker": "UHAL.B",
-          "weight": 2.68
+          "weight": 2.68,
+          "shares": 3251469
         },
         {
           "ticker": "ET",
-          "weight": 1.73
+          "weight": 1.73,
+          "shares": 6205777
         },
         {
           "ticker": "CRCL",
-          "weight": 0.59
+          "weight": 0.59,
+          "shares": 275000
         },
         {
           "ticker": "NUVB",
-          "weight": 0.23
+          "weight": 0.23,
+          "shares": 3811513
         },
         {
           "ticker": "UHAL",
-          "weight": 0.03
+          "weight": 0.03,
+          "shares": 36401
         }
       ]
     },
@@ -215,60 +1166,74 @@
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 38.43
+          "weight": 38.43,
+          "shares": 32050240
         },
         {
           "ticker": "LAD",
-          "weight": 14.59
+          "weight": 14.59,
+          "shares": 2490534
         },
         {
           "ticker": "GOOGL",
-          "weight": 10.57
+          "weight": 10.57,
+          "shares": 1916630
         },
         {
           "ticker": "SGI",
-          "weight": 9.13
+          "weight": 9.13,
+          "shares": 5804136
         },
         {
           "ticker": "ABG",
-          "weight": 8.83
+          "weight": 8.83,
+          "shares": 2155492
         },
         {
           "ticker": "CPNG",
-          "weight": 5.41
+          "weight": 5.41,
+          "shares": 13017964
         },
         {
           "ticker": "WTW",
-          "weight": 4.17
+          "weight": 4.17,
+          "shares": 720779
         },
         {
           "ticker": "META",
-          "weight": 3.78
+          "weight": 3.78,
+          "shares": 325155
         },
         {
           "ticker": "UHAL.B",
-          "weight": 2.68
+          "weight": 2.68,
+          "shares": 3251469
         },
         {
           "ticker": "ET",
-          "weight": 1.78
+          "weight": 1.78,
+          "shares": 6115417
         },
         {
           "ticker": "NUVB",
-          "weight": 0.6
+          "weight": 0.6,
+          "shares": 3811513
         },
         {
           "ticker": "UHAL",
-          "weight": 0.03
+          "weight": 0.03,
+          "shares": 36401
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": null,
+    "lastFetchedAt": "2026-05-24T01:50:45Z",
     "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AB",
     "migratedFromLegacy": true,
-    "legacyId": "custom-1777228154883"
+    "legacyId": "custom-1777228154883",
+    "fallbackSource": "13f.info",
+    "sharesSource": "13f.info"
   }
 }

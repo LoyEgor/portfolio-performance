@@ -3,68 +3,662 @@
   "holdings": [
     {
       "ticker": "AMZN",
-      "weight": 38.36
+      "weight": 38.36,
+      "shares": 7567946
     },
     {
       "ticker": "TDG",
-      "weight": 25.65
+      "weight": 25.65,
+      "shares": 909168
     },
     {
       "ticker": "MSFT",
-      "weight": 16.82
+      "weight": 16.82,
+      "shares": 1867537
     },
     {
       "ticker": "MCO",
-      "weight": 9.15
+      "weight": 9.15,
+      "shares": 862036
     },
     {
       "ticker": "MA",
-      "weight": 6.36
+      "weight": 6.36,
+      "shares": 522836
     },
     {
       "ticker": "V",
-      "weight": 3.66
+      "weight": 3.66,
+      "shares": 498677
     }
   ],
   "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 25.09
+        },
+        {
+          "ticker": "META",
+          "weight": 24.39
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 24.22
+        },
+        {
+          "ticker": "TDG",
+          "weight": 21.3
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.6
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 24.07
+        },
+        {
+          "ticker": "TDG",
+          "weight": 22.53
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 21.64
+        },
+        {
+          "ticker": "META",
+          "weight": 21.53
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.17
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.29
+        },
+        {
+          "ticker": "MA",
+          "weight": 1.77
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.36
+        },
+        {
+          "ticker": "TDG",
+          "weight": 22.35
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 20.63
+        },
+        {
+          "ticker": "META",
+          "weight": 17.73
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 13.09
+        },
+        {
+          "ticker": "MA",
+          "weight": 1.65
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.19
+        },
+        {
+          "ticker": "TDG",
+          "weight": 22.66
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 22.02
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.25
+        },
+        {
+          "ticker": "V",
+          "weight": 8.55
+        },
+        {
+          "ticker": "META",
+          "weight": 4.69
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.38
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 23.91
+        },
+        {
+          "ticker": "TDG",
+          "weight": 23.75
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 20.85
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.64
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 8.96
+        },
+        {
+          "ticker": "V",
+          "weight": 8.51
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.3
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 24.16
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 22.74
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 21.65
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.04
+        },
+        {
+          "ticker": "V",
+          "weight": 9.53
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 8.42
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.04
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 25.81
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 21.93
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 21.49
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 12.19
+        },
+        {
+          "ticker": "V",
+          "weight": 10.09
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.43
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.05
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.01
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.9
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 19.3
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 17.83
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 14.9
+        },
+        {
+          "ticker": "V",
+          "weight": 10.93
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.56
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.29
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.29
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.92
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 18.42
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 17.85
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 16.59
+        },
+        {
+          "ticker": "V",
+          "weight": 10.18
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.91
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.93
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.2
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 29.15
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 18.58
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 16.49
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 15.99
+        },
+        {
+          "ticker": "V",
+          "weight": 11.3
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.52
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.78
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.19
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.67
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 17.49
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 17.24
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 14.65
+        },
+        {
+          "ticker": "V",
+          "weight": 11.97
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.48
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.78
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.72
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 27.93
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.7
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 15.14
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 15.03
+        },
+        {
+          "ticker": "V",
+          "weight": 10.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 7.06
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 4.97
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.56
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 30.61
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 16.3
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.86
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 13.9
+        },
+        {
+          "ticker": "V",
+          "weight": 10.67
+        },
+        {
+          "ticker": "MCO",
+          "weight": 6.76
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 3.15
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.75
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 28.23
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 17.81
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 16.44
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 15.01
+        },
+        {
+          "ticker": "V",
+          "weight": 9.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.42
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.42
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 29.47
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 19.84
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.4
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.89
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.97
+        },
+        {
+          "ticker": "V",
+          "weight": 6.06
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.03
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 25.79,
+          "shares": 1000604
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 23.54,
+          "shares": 5278320
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.22,
+          "shares": 1891641
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 13.4,
+          "shares": 3480801
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.16,
+          "shares": 950905
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.27,
+          "shares": 586254
+        },
+        {
+          "ticker": "V",
+          "weight": 5.62,
+          "shares": 874912
+        }
+      ]
+    },
     {
       "asOf": "2025-03-31",
       "holdings": [
         {
           "ticker": "TDG",
-          "weight": 27.28
+          "weight": 27.28,
+          "shares": 979950
         },
         {
           "ticker": "AMZN",
-          "weight": 19.9
+          "weight": 19.9,
+          "shares": 5202415
         },
         {
           "ticker": "MSFT",
-          "weight": 19.46
+          "weight": 19.46,
+          "shares": 2578649
         },
         {
           "ticker": "GOOGL",
-          "weight": 10.74
+          "weight": 10.74,
+          "shares": 3454367
         },
         {
           "ticker": "MCO",
-          "weight": 8.9
+          "weight": 8.9,
+          "shares": 950905
         },
         {
           "ticker": "MA",
-          "weight": 6.46
+          "weight": 6.46,
+          "shares": 586254
         },
         {
           "ticker": "V",
-          "weight": 5.99
+          "weight": 5.99,
+          "shares": 850412
         },
         {
           "ticker": "HLT",
-          "weight": 1.25
+          "weight": 1.25,
+          "shares": 273957
         },
         {
           "ticker": "FICO",
-          "weight": 0.02
+          "weight": 0.02,
+          "shares": 670
         }
       ]
     },
@@ -73,39 +667,48 @@
       "holdings": [
         {
           "ticker": "TDG",
-          "weight": 27.21
+          "weight": 27.21,
+          "shares": 979950
         },
         {
           "ticker": "AMZN",
-          "weight": 25.14
+          "weight": 25.14,
+          "shares": 6275906
         },
         {
           "ticker": "MSFT",
-          "weight": 23.42
+          "weight": 23.42,
+          "shares": 2578649
         },
         {
           "ticker": "MCO",
-          "weight": 8.72
+          "weight": 8.72,
+          "shares": 952254
         },
         {
           "ticker": "MA",
-          "weight": 6.01
+          "weight": 6.01,
+          "shares": 586254
         },
         {
           "ticker": "V",
-          "weight": 3.47
+          "weight": 3.47,
+          "shares": 535412
         },
         {
           "ticker": "GOOGL",
-          "weight": 3.36
+          "weight": 3.36,
+          "shares": 1045429
         },
         {
           "ticker": "HLT",
-          "weight": 2.65
+          "weight": 2.65,
+          "shares": 544596
         },
         {
           "ticker": "FICO",
-          "weight": 0.02
+          "weight": 0.02,
+          "shares": 670
         }
       ]
     },
@@ -114,39 +717,48 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 30.35
+          "weight": 30.35,
+          "shares": 7558253
         },
         {
           "ticker": "MSFT",
-          "weight": 24.33
+          "weight": 24.33,
+          "shares": 2569267
         },
         {
           "ticker": "TDG",
-          "weight": 23.53
+          "weight": 23.53,
+          "shares": 976392
         },
         {
           "ticker": "MCO",
-          "weight": 8.27
+          "weight": 8.27,
+          "shares": 948735
         },
         {
           "ticker": "MA",
-          "weight": 6.07
+          "weight": 6.07,
+          "shares": 584086
         },
         {
           "ticker": "V",
-          "weight": 3.33
+          "weight": 3.33,
+          "shares": 533522
         },
         {
           "ticker": "HLT",
-          "weight": 2.57
+          "weight": 2.57,
+          "shares": 542613
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.53
+          "weight": 1.53,
+          "shares": 344391
         },
         {
           "ticker": "FICO",
-          "weight": 0.02
+          "weight": 0.02,
+          "shares": 667
         }
       ]
     },
@@ -155,44 +767,53 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 33.09
+          "weight": 33.09,
+          "shares": 7314534
         },
         {
           "ticker": "TDG",
-          "weight": 25.28
+          "weight": 25.28,
+          "shares": 969400
         },
         {
           "ticker": "MSFT",
-          "weight": 19.75
+          "weight": 19.75,
+          "shares": 2082357
         },
         {
           "ticker": "MCO",
-          "weight": 8.16
+          "weight": 8.16,
+          "shares": 814503
         },
         {
           "ticker": "MA",
-          "weight": 6.07
+          "weight": 6.07,
+          "shares": 541836
         },
         {
           "ticker": "V",
-          "weight": 3.55
+          "weight": 3.55,
+          "shares": 516677
         },
         {
           "ticker": "HLT",
-          "weight": 3.06
+          "weight": 3.06,
+          "shares": 542613
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.04
+          "weight": 1.04,
+          "shares": 169391
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": null,
+    "lastFetchedAt": "2026-05-24T01:50:45Z",
     "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AR",
     "migratedFromLegacy": true,
-    "legacyId": "custom-1777227848490"
+    "legacyId": "custom-1777227848490",
+    "sharesSource": "13f.info"
   }
 }

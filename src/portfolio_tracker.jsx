@@ -419,6 +419,8 @@ const periodCutoffIso = (period, lastIso) => {
   else if (period === '6M') d.setMonth(d.getMonth() - 6);
   else if (period === 'YTD') return `${d.getFullYear()}-01-01`;
   else if (period === '1Y') d.setFullYear(d.getFullYear() - 1);
+  else if (period === '3Y') d.setFullYear(d.getFullYear() - 3);
+  else if (period === '5Y') d.setFullYear(d.getFullYear() - 5);
   else return null;
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 };
@@ -535,6 +537,9 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
   // Quarter switcher: 'current' shows portfolio.holdings; numeric idx shows portfolio.history[idx]. Both read-only.
   const historySnapshots = portfolio?.history || [];
   const [viewIdx, setViewIdx] = useState('current');
+  // Quarter switcher: collapsed by default — show only the last 4 history
+  // snapshots + Now. Toggle button above expands to the full history grid.
+  const [showFullHistory, setShowFullHistory] = useState(false);
   const isReadonly = viewIdx !== 'current';
   const displayedHoldings = isReadonly ? (historySnapshots[viewIdx]?.holdings || []) : holdings;
   // Used as the bar's baseline (so per-row width math is consistent even if weights don't sum to 100).
@@ -724,30 +729,51 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                   className="accent-on-bg-color" />
                 <span>Merge dual-class</span>
               </label>
-              {historySnapshots.length > 0 && (
-                <div className="flex items-center gap-1 flex-wrap justify-end">
-                  {historySnapshots.map((s, idx) => (
-                    <button key={s.asOf} onClick={() => setViewIdx(idx)}
-                      className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
-                        viewIdx === idx
-                          ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
-                          : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
-                      }`}
-                      title={`13F snapshot · ${s.asOf} · read-only`}>
-                      {asOfLabel(s.asOf)}
-                    </button>
-                  ))}
-                  <button onClick={() => setViewIdx('current')}
-                    className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
-                      viewIdx === 'current'
-                        ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
-                        : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
-                    }`}
-                    title="Current quarter">
-                    Now
-                  </button>
-                </div>
-              )}
+              {historySnapshots.length > 0 && (() => {
+                const visibleSnaps = showFullHistory ? historySnapshots : historySnapshots.slice(-4);
+                const visibleStartIdx = historySnapshots.length - visibleSnaps.length;
+                const olderCount = historySnapshots.length - 4;
+                const hasMore = olderCount > 0;
+                // Collapsed: single row (4 prev quarters + Now) — same-quarter-last-year
+                // sits at the left edge, "Now" at the right. Expanded: calendar grid (4/year).
+                const gridClass = showFullHistory ? 'grid grid-cols-4 gap-1' : 'flex gap-1';
+                return (
+                  <div className="space-y-1">
+                    {hasMore && (
+                      <button onClick={() => setShowFullHistory(s => !s)}
+                        className="w-full text-micro font-mono px-2 py-0.5 rounded border border-subtle text-tertiary hover-text-primary hover-border-strong transition-colors"
+                        title={showFullHistory ? 'Collapse to last year' : 'Show every quarter in history'}>
+                        {showFullHistory ? 'collapse' : `+${olderCount} older`}
+                      </button>
+                    )}
+                    <div className={gridClass}>
+                      {visibleSnaps.map((s, i) => {
+                        const idx = visibleStartIdx + i;
+                        return (
+                          <button key={s.asOf} onClick={() => setViewIdx(idx)}
+                            className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
+                              viewIdx === idx
+                                ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
+                                : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
+                            }`}
+                            title={`13F snapshot · ${s.asOf} · read-only`}>
+                            {asOfLabel(s.asOf)}
+                          </button>
+                        );
+                      })}
+                      <button onClick={() => setViewIdx('current')}
+                        className={`text-micro font-mono px-2 py-0.5 rounded border transition-colors ${
+                          viewIdx === 'current'
+                            ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
+                            : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
+                        }`}
+                        title="Current quarter">
+                        Now
+                      </button>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
             <div className="space-y-1.5">
               {[
@@ -1813,6 +1839,18 @@ const InvestorsMatrix = ({
     return out;
   }, [investorPortfolios, seriesByInvestor, periods, granularity]);
 
+  // Drop periods where no investor has a value — happens at the very edge of the
+  // data window (e.g. the first quarter has nothing to compare to). An all-"—" row
+  // is just visual noise.
+  const visiblePeriods = useMemo(() => {
+    return periods.filter(per => {
+      for (const inv of Object.values(absoluteMetrics)) {
+        if (inv?.byPeriod?.[per.key] != null) return true;
+      }
+      return false;
+    });
+  }, [periods, absoluteMetrics]);
+
   const benchMetrics = useMemo(() => {
     const bench = mode === 'vt' ? benchSeries.vt : mode === 'voo' ? benchSeries.voo : null;
     if (!bench) return null;
@@ -1899,9 +1937,20 @@ const InvestorsMatrix = ({
     </td>
   );
 
+  // Sticky cell backgrounds must be FULLY OPAQUE — `var(--row-selected)` is
+  // rgba(…,0.10), which means scrolling data cells would show through it.
+  // Solution: solid `var(--bg-card-elevated)` underneath + tint as a
+  // background-image layer when the row is the active sort target.
+  const tintedStickyBg = (active) => active ? ({
+    backgroundColor: 'var(--bg-card-elevated)',
+    backgroundImage: 'linear-gradient(var(--row-selected), var(--row-selected))',
+  }) : ({
+    backgroundColor: 'var(--bg-card-elevated)',
+  });
+
   const labelCellStyle = (active) => ({
-    position: 'sticky', left: 0, zIndex: 1,
-    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    position: 'sticky', left: 0, zIndex: 3,
+    ...tintedStickyBg(active),
     borderRight: '1px solid var(--border-subtle)',
     padding: '8px 12px', textAlign: 'left',
     cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
@@ -1918,8 +1967,8 @@ const InvestorsMatrix = ({
     position: 'sticky', bottom: offset, zIndex: 2, background: bg,
   });
   const stickyLabel = (offset, active) => ({
-    position: 'sticky', left: 0, bottom: offset, zIndex: 4,
-    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    position: 'sticky', left: 0, bottom: offset, zIndex: 10,
+    ...tintedStickyBg(active),
     borderRight: '1px solid var(--border-subtle)',
     padding: '8px 12px', textAlign: 'left',
     cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
@@ -1935,8 +1984,13 @@ const InvestorsMatrix = ({
     const update = () => {
       const el = cardRef.current;
       if (!el) return;
+      // Bottom buffer must cover the wrapper's bottom padding so the page itself
+      // never overflows. Wrapper uses `py-8` (= 32px bottom). Reading it from
+      // computed style keeps this resilient if the wrapper padding ever changes.
+      const wrapper = el.closest('.max-w-\\[1600px\\]') || el.parentElement;
+      const pb = wrapper ? parseFloat(getComputedStyle(wrapper).paddingBottom) || 0 : 0;
       const top = el.getBoundingClientRect().top;
-      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + 24}px)`;
+      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + pb}px)`;
     };
     update();
     const ro = new ResizeObserver(update);
@@ -1984,9 +2038,13 @@ const InvestorsMatrix = ({
           <thead>
             <tr>
               {/* First column: shrinks to longest label content via width:1% + nowrap.
-                  All other columns split the remaining horizontal space evenly. */}
+                  All other columns split the remaining horizontal space evenly.
+                  zIndex 4: this is the corner cell (sticky top + sticky left). It
+                  must paint above period label cells (which are sticky left at
+                  z=3) when they meet at the top-left of the viewport during
+                  vertical scroll. */}
               <th style={{
-                position: 'sticky', left: 0, top: 0, zIndex: 3,
+                position: 'sticky', left: 0, top: 0, zIndex: 4,
                 background: 'var(--bg-card-elevated)',
                 borderBottom: '1px solid var(--border-strong)',
                 borderRight: '1px solid var(--border-subtle)',
@@ -2054,7 +2112,7 @@ const InvestorsMatrix = ({
             </tr>
           </thead>
           <tbody>
-            {periods.map((per, pi) => (
+            {visiblePeriods.map((per, pi) => (
               <tr key={per.key} style={{ background: pi % 2 === 1 ? 'var(--row-stripe)' : 'transparent' }}>
                 <td onClick={() => onRowClick('period', per.key)} style={labelCellStyle(isSortRow('period', per.key))}>
                   {per.label}{sortIndicator('period', per.key)}
@@ -2063,12 +2121,20 @@ const InvestorsMatrix = ({
               </tr>
             ))}
             {/* Sticky metric footer — Max DD pinned to bottom, Sortino above,
-                CAGR above that, separator stripe on top of the stack. */}
-            <tr style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), height: SEP_H }}>
+                CAGR above that, separator stripe on top of the stack.
+                IMPORTANT: do NOT put `position: sticky` on the <tr>. Sticky on
+                table rows is poorly supported and creates a stacking context that
+                traps the inner cell's z-index — period labels (z=3) then paint
+                over the footer label (z=10). Sticky on individual <td> works
+                correctly and stacks cleanly.
+                Background: every footer cell uses `--bg-card-elevated` (solid).
+                Previous `--bg-card` is rgba(...,0.7) — content scrolling under
+                bleeds through. */}
+            <tr style={{ height: SEP_H }}>
               <td colSpan={1 + sortedInvestors.length}
-                style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), borderTop: '1px solid var(--border-strong)', padding: 0 }} />
+                style={{ position: 'sticky', bottom: ROW_H * 3, zIndex: 3, background: 'var(--bg-panel)', borderTop: '1px solid var(--border-strong)', padding: 0 }} />
             </tr>
-            <tr style={stickyRow(ROW_H * 2, 'var(--bg-card-elevated)')}>
+            <tr>
               <td onClick={() => onRowClick('cagr')} style={stickyLabel(ROW_H * 2, isSortRow('cagr'))}>
                 CAGR{sortIndicator('cagr')}
               </td>
@@ -2080,19 +2146,19 @@ const InvestorsMatrix = ({
                 </td>
               ))}
             </tr>
-            <tr style={stickyRow(ROW_H, 'var(--bg-card)')}>
+            <tr>
               <td onClick={() => onRowClick('sortino')} style={stickyLabel(ROW_H, isSortRow('sortino'))}>
                 Sortino{sortIndicator('sortino')}
               </td>
               {sortedInvestors.map(p => (
-                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card)'), padding: '8px 10px', textAlign: 'center' }}>
+                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
                   <span style={{ ...styleForRatio(cellValue(p.id, 'sortino'), mode !== 'absolute'), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
                     {fmtRatio(cellValue(p.id, 'sortino'))}
                   </span>
                 </td>
               ))}
             </tr>
-            <tr style={stickyRow(0, 'var(--bg-card-elevated)')}>
+            <tr>
               <td onClick={() => onRowClick('maxdd')} style={stickyLabel(0, isSortRow('maxdd'))}>
                 Max DD{sortIndicator('maxdd')}
               </td>
@@ -2226,6 +2292,16 @@ const ETFsMatrix = ({
     return out;
   }, [etfPortfolios, seriesByEtf, periods, granularity]);
 
+  // Drop periods where no ETF has a value (edge of the data window).
+  const visiblePeriods = useMemo(() => {
+    return periods.filter(per => {
+      for (const item of Object.values(absoluteMetrics)) {
+        if (item?.byPeriod?.[per.key] != null) return true;
+      }
+      return false;
+    });
+  }, [periods, absoluteMetrics]);
+
   const benchMetrics = useMemo(() => {
     const bench = mode === 'vt' ? benchSeries.vt : mode === 'voo' ? benchSeries.voo : null;
     if (!bench) return null;
@@ -2294,9 +2370,17 @@ const ETFsMatrix = ({
     </td>
   );
 
+  // Same fully-opaque sticky pattern as in InvestorsMatrix — see that helper for why.
+  const tintedStickyBg = (active) => active ? ({
+    backgroundColor: 'var(--bg-card-elevated)',
+    backgroundImage: 'linear-gradient(var(--row-selected), var(--row-selected))',
+  }) : ({
+    backgroundColor: 'var(--bg-card-elevated)',
+  });
+
   const labelCellStyle = (active) => ({
-    position: 'sticky', left: 0, zIndex: 1,
-    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    position: 'sticky', left: 0, zIndex: 3,
+    ...tintedStickyBg(active),
     borderRight: '1px solid var(--border-subtle)',
     padding: '8px 12px', textAlign: 'left',
     cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
@@ -2315,8 +2399,8 @@ const ETFsMatrix = ({
     position: 'sticky', bottom: offset, zIndex: 2, background: bg,
   });
   const stickyLabel = (offset, active) => ({
-    position: 'sticky', left: 0, bottom: offset, zIndex: 4,
-    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    position: 'sticky', left: 0, bottom: offset, zIndex: 10,
+    ...tintedStickyBg(active),
     borderRight: '1px solid var(--border-subtle)',
     padding: '8px 12px', textAlign: 'left',
     cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
@@ -2332,8 +2416,13 @@ const ETFsMatrix = ({
     const update = () => {
       const el = cardRef.current;
       if (!el) return;
+      // Bottom buffer must cover the wrapper's bottom padding so the page itself
+      // never overflows. Wrapper uses `py-8` (= 32px bottom). Reading it from
+      // computed style keeps this resilient if the wrapper padding ever changes.
+      const wrapper = el.closest('.max-w-\\[1600px\\]') || el.parentElement;
+      const pb = wrapper ? parseFloat(getComputedStyle(wrapper).paddingBottom) || 0 : 0;
       const top = el.getBoundingClientRect().top;
-      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + 24}px)`;
+      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + pb}px)`;
     };
     update();
     const ro = new ResizeObserver(update);
@@ -2376,8 +2465,10 @@ const ETFsMatrix = ({
         <table className="font-mono text-body" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
           <thead>
             <tr>
+              {/* Corner cell — sticky top + left. zIndex 4 puts it above period
+                  label cells (z=3) when they meet at the top-left of the viewport. */}
               <th style={{
-                position: 'sticky', left: 0, top: 0, zIndex: 3,
+                position: 'sticky', left: 0, top: 0, zIndex: 4,
                 background: 'var(--bg-card-elevated)',
                 borderBottom: '1px solid var(--border-strong)',
                 borderRight: '1px solid var(--border-subtle)',
@@ -2435,7 +2526,7 @@ const ETFsMatrix = ({
             </tr>
           </thead>
           <tbody>
-            {periods.map((per, pi) => (
+            {visiblePeriods.map((per, pi) => (
               <tr key={per.key} style={{ background: pi % 2 === 1 ? 'var(--row-stripe)' : 'transparent' }}>
                 <td onClick={() => onRowClick('period', per.key)} style={labelCellStyle(isSortRow('period', per.key))}>
                   {per.label}{sortIndicator('period', per.key)}
@@ -2447,11 +2538,13 @@ const ETFsMatrix = ({
                 Offsets stack: Max DD at 0, Sortino above it, CAGR above that,
                 separator stripe on top. Background is opaque so scrolling
                 periods don't bleed through. */}
-            <tr style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), height: SEP_H }}>
+            {/* Sticky on individual <td>, not on <tr>. Sticky on tr is poorly
+                supported and creates a stacking context that traps inner z-index. */}
+            <tr style={{ height: SEP_H }}>
               <td colSpan={1 + sortedEtfs.length}
-                style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), borderTop: '1px solid var(--border-strong)', padding: 0 }} />
+                style={{ position: 'sticky', bottom: ROW_H * 3, zIndex: 3, background: 'var(--bg-panel)', borderTop: '1px solid var(--border-strong)', padding: 0 }} />
             </tr>
-            <tr style={stickyRow(ROW_H * 2, 'var(--bg-card-elevated)')}>
+            <tr>
               <td onClick={() => onRowClick('cagr')} style={stickyLabel(ROW_H * 2, isSortRow('cagr'))}>
                 CAGR{sortIndicator('cagr')}
               </td>
@@ -2463,19 +2556,19 @@ const ETFsMatrix = ({
                 </td>
               ))}
             </tr>
-            <tr style={stickyRow(ROW_H, 'var(--bg-card)')}>
+            <tr>
               <td onClick={() => onRowClick('sortino')} style={stickyLabel(ROW_H, isSortRow('sortino'))}>
                 Sortino{sortIndicator('sortino')}
               </td>
               {sortedEtfs.map(p => (
-                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card)'), padding: '8px 10px', textAlign: 'center' }}>
+                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
                   <span style={{ ...styleForRatio(cellValue(p.id, 'sortino'), mode !== 'absolute'), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
                     {fmtRatio(cellValue(p.id, 'sortino'))}
                   </span>
                 </td>
               ))}
             </tr>
-            <tr style={stickyRow(0, 'var(--bg-card-elevated)')}>
+            <tr>
               <td onClick={() => onRowClick('maxdd')} style={stickyLabel(0, isSortRow('maxdd'))}>
                 Max DD{sortIndicator('maxdd')}
               </td>
@@ -2509,6 +2602,8 @@ const PERIOD_OPTIONS = [
   { id: '6M',  label: '6M' },
   { id: 'YTD', label: 'YTD' },
   { id: '1Y',  label: '1Y' },
+  { id: '3Y',  label: '3Y' },
+  { id: '5Y',  label: '5Y' },
   { id: 'ALL', label: 'ALL' },
 ];
 

@@ -3,84 +3,568 @@
   "holdings": [
     {
       "ticker": "CVNA",
-      "weight": 31.83
+      "weight": 31.83,
+      "shares": 377298
     },
     {
       "ticker": "META",
-      "weight": 22.31
+      "weight": 22.31,
+      "shares": 145534
     },
     {
       "ticker": "CACC",
-      "weight": 14.11
+      "weight": 14.11,
+      "shares": 124160
     },
     {
       "ticker": "IBKR",
-      "weight": 13.69
+      "weight": 13.69,
+      "shares": 757919
     },
     {
       "ticker": "HTHT",
-      "weight": 7.52
+      "weight": 7.52,
+      "shares": 558380
     },
     {
       "ticker": "YUMC",
-      "weight": 5.5
+      "weight": 5.5,
+      "shares": 421539
     },
     {
       "ticker": "MSFT",
-      "weight": 2.52
+      "weight": 2.52,
+      "shares": 25220
     },
     {
       "ticker": "GOOGL",
-      "weight": 2.52
+      "weight": 2.52,
+      "shares": 32520
     }
   ],
   "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "WIX",
+          "weight": 26.98
+        },
+        {
+          "ticker": "CACC",
+          "weight": 24.65
+        },
+        {
+          "ticker": "META",
+          "weight": 19.81
+        },
+        {
+          "ticker": "CRM",
+          "weight": 14.89
+        },
+        {
+          "ticker": "WORK",
+          "weight": 13.67
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 26.9
+        },
+        {
+          "ticker": "WIX",
+          "weight": 25.91
+        },
+        {
+          "ticker": "META",
+          "weight": 19.96
+        },
+        {
+          "ticker": "CRM",
+          "weight": 14.34
+        },
+        {
+          "ticker": "WORK",
+          "weight": 12.89
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 36.4
+        },
+        {
+          "ticker": "CRM",
+          "weight": 23.43
+        },
+        {
+          "ticker": "META",
+          "weight": 21.17
+        },
+        {
+          "ticker": "WIX",
+          "weight": 19.0
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 34.52
+        },
+        {
+          "ticker": "CRM",
+          "weight": 21.07
+        },
+        {
+          "ticker": "META",
+          "weight": 19.53
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.87
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 8.01
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 33.5
+        },
+        {
+          "ticker": "CRM",
+          "weight": 20.89
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 18.34
+        },
+        {
+          "ticker": "WIX",
+          "weight": 14.63
+        },
+        {
+          "ticker": "META",
+          "weight": 12.64
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 42.58
+        },
+        {
+          "ticker": "CRM",
+          "weight": 23.5
+        },
+        {
+          "ticker": "META",
+          "weight": 15.23
+        },
+        {
+          "ticker": "WIX",
+          "weight": 13.39
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 5.3
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 41.11
+        },
+        {
+          "ticker": "CRM",
+          "weight": 21.1
+        },
+        {
+          "ticker": "WIX",
+          "weight": 17.14
+        },
+        {
+          "ticker": "META",
+          "weight": 13.73
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 6.92
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 47.13
+        },
+        {
+          "ticker": "CRM",
+          "weight": 20.45
+        },
+        {
+          "ticker": "WIX",
+          "weight": 17.82
+        },
+        {
+          "ticker": "META",
+          "weight": 12.89
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 1.71
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 28.21
+        },
+        {
+          "ticker": "CRM",
+          "weight": 23.14
+        },
+        {
+          "ticker": "META",
+          "weight": 22.19
+        },
+        {
+          "ticker": "WIX",
+          "weight": 17.38
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 6.43
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 2.65
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 28.68
+        },
+        {
+          "ticker": "META",
+          "weight": 25.23
+        },
+        {
+          "ticker": "CRM",
+          "weight": 20.6
+        },
+        {
+          "ticker": "WIX",
+          "weight": 11.65
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.83
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 6.01
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 24.65
+        },
+        {
+          "ticker": "CACC",
+          "weight": 22.19
+        },
+        {
+          "ticker": "CRM",
+          "weight": 18.28
+        },
+        {
+          "ticker": "WIX",
+          "weight": 13.09
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 8.17
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.65
+        },
+        {
+          "ticker": "PDD",
+          "weight": 5.97
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "CACC",
+          "weight": 22.53
+        },
+        {
+          "ticker": "META",
+          "weight": 20.35
+        },
+        {
+          "ticker": "WIX",
+          "weight": 15.99
+        },
+        {
+          "ticker": "CRM",
+          "weight": 14.25
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 10.98
+        },
+        {
+          "ticker": "PDD",
+          "weight": 8.45
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.45
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 25.73
+        },
+        {
+          "ticker": "CACC",
+          "weight": 20.28
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 19.9
+        },
+        {
+          "ticker": "WIX",
+          "weight": 15.83
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 9.25
+        },
+        {
+          "ticker": "PDD",
+          "weight": 9.01
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 25.61
+        },
+        {
+          "ticker": "META",
+          "weight": 22.41
+        },
+        {
+          "ticker": "CACC",
+          "weight": 17.2
+        },
+        {
+          "ticker": "WIX",
+          "weight": 15.31
+        },
+        {
+          "ticker": "PDD",
+          "weight": 10.25
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 9.22
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 27.7
+        },
+        {
+          "ticker": "META",
+          "weight": 17.89
+        },
+        {
+          "ticker": "WIX",
+          "weight": 13.83
+        },
+        {
+          "ticker": "CACC",
+          "weight": 12.43
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 9.19
+        },
+        {
+          "ticker": "PDD",
+          "weight": 8.99
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 5.19
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 4.78
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 24.1,
+          "shares": 547514
+        },
+        {
+          "ticker": "META",
+          "weight": 18.96,
+          "shares": 149583
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.71,
+          "shares": 359780
+        },
+        {
+          "ticker": "CACC",
+          "weight": 13.38,
+          "shares": 131588
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 8.69,
+          "shares": 224347
+        },
+        {
+          "ticker": "PDD",
+          "weight": 7.25,
+          "shares": 345489
+        },
+        {
+          "ticker": "YUMC",
+          "weight": 5.46,
+          "shares": 522729
+        },
+        {
+          "ticker": "HTHT",
+          "weight": 4.4,
+          "shares": 616337
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 1.05,
+          "shares": 11500
+        }
+      ]
+    },
     {
       "asOf": "2025-03-31",
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 25.26
+          "weight": 25.26,
+          "shares": 547514
         },
         {
           "ticker": "META",
-          "weight": 18.19
+          "weight": 18.19,
+          "shares": 142988
         },
         {
           "ticker": "CACC",
-          "weight": 14.7
+          "weight": 14.7,
+          "shares": 128929
         },
         {
           "ticker": "WIX",
-          "weight": 12.19
+          "weight": 12.19,
+          "shares": 338000
         },
         {
           "ticker": "PDD",
-          "weight": 8.77
+          "weight": 8.77,
+          "shares": 335569
         },
         {
           "ticker": "IBKR",
-          "weight": 7.77
+          "weight": 7.77,
+          "shares": 212480
         },
         {
           "ticker": "YUMC",
-          "weight": 5.66
+          "weight": 5.66,
+          "shares": 492265
         },
         {
           "ticker": "HTHT",
-          "weight": 5.39
+          "weight": 5.39,
+          "shares": 659652
         },
         {
           "ticker": "MSFT",
-          "weight": 0.95
+          "weight": 0.95,
+          "shares": 11500
         },
         {
           "ticker": "PAYC",
-          "weight": 0.6
+          "weight": 0.6,
+          "shares": 12395
         },
         {
           "ticker": "DE",
-          "weight": 0.52
+          "weight": 0.52,
+          "shares": 5001
         }
       ]
     },
@@ -89,51 +573,63 @@
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 31.84
+          "weight": 31.84,
+          "shares": 510352
         },
         {
           "ticker": "META",
-          "weight": 19.54
+          "weight": 19.54,
+          "shares": 142988
         },
         {
           "ticker": "CACC",
-          "weight": 12.16
+          "weight": 12.16,
+          "shares": 128929
         },
         {
           "ticker": "WIX",
-          "weight": 9.91
+          "weight": 9.91,
+          "shares": 338000
         },
         {
           "ticker": "IBKR",
-          "weight": 8.72
+          "weight": 8.72,
+          "shares": 849920
         },
         {
           "ticker": "PDD",
-          "weight": 6.5
+          "weight": 6.5,
+          "shares": 335569
         },
         {
           "ticker": "HTHT",
-          "weight": 4.14
+          "weight": 4.14,
+          "shares": 659652
         },
         {
           "ticker": "YUMC",
-          "weight": 4.07
+          "weight": 4.07,
+          "shares": 492265
         },
         {
           "ticker": "MSFT",
-          "weight": 1.06
+          "weight": 1.06,
+          "shares": 11500
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.06
+          "weight": 1.06,
+          "shares": 32520
         },
         {
           "ticker": "PAYC",
-          "weight": 0.53
+          "weight": 0.53,
+          "shares": 12395
         },
         {
           "ticker": "DE",
-          "weight": 0.47
+          "weight": 0.47,
+          "shares": 5001
         }
       ]
     },
@@ -142,55 +638,68 @@
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 30.75
+          "weight": 30.75,
+          "shares": 445255
         },
         {
           "ticker": "META",
-          "weight": 18.78
+          "weight": 18.78,
+          "shares": 139712
         },
         {
           "ticker": "CACC",
-          "weight": 11.15
+          "weight": 11.15,
+          "shares": 130431
         },
         {
           "ticker": "WIX",
-          "weight": 10.24
+          "weight": 10.24,
+          "shares": 314996
         },
         {
           "ticker": "IBKR",
-          "weight": 10.07
+          "weight": 10.07,
+          "shares": 799267
         },
         {
           "ticker": "PDD",
-          "weight": 7.29
+          "weight": 7.29,
+          "shares": 301232
         },
         {
           "ticker": "HTHT",
-          "weight": 4.32
+          "weight": 4.32,
+          "shares": 603416
         },
         {
           "ticker": "YUMC",
-          "weight": 3.49
+          "weight": 3.49,
+          "shares": 444321
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.45
+          "weight": 1.45,
+          "shares": 32520
         },
         {
           "ticker": "MSFT",
-          "weight": 1.09
+          "weight": 1.09,
+          "shares": 11500
         },
         {
           "ticker": "CRM",
-          "weight": 0.48
+          "weight": 0.48,
+          "shares": 10980
         },
         {
           "ticker": "PAYC",
-          "weight": 0.47
+          "weight": 0.47,
+          "shares": 12395
         },
         {
           "ticker": "DE",
-          "weight": 0.42
+          "weight": 0.42,
+          "shares": 5001
         }
       ]
     },
@@ -199,60 +708,73 @@
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 29.8
+          "weight": 29.8,
+          "shares": 303403
         },
         {
           "ticker": "META",
-          "weight": 20.95
+          "weight": 20.95,
+          "shares": 136311
         },
         {
           "ticker": "CACC",
-          "weight": 13.47
+          "weight": 13.47,
+          "shares": 130431
         },
         {
           "ticker": "IBKR",
-          "weight": 11.27
+          "weight": 11.27,
+          "shares": 752478
         },
         {
           "ticker": "WIX",
-          "weight": 7.62
+          "weight": 7.62,
+          "shares": 314996
         },
         {
           "ticker": "HTHT",
-          "weight": 6.61
+          "weight": 6.61,
+          "shares": 603416
         },
         {
           "ticker": "YUMC",
-          "weight": 4.94
+          "weight": 4.94,
+          "shares": 444321
         },
         {
           "ticker": "GOOGL",
-          "weight": 2.37
+          "weight": 2.37,
+          "shares": 32520
         },
         {
           "ticker": "MSFT",
-          "weight": 1.29
+          "weight": 1.29,
+          "shares": 11500
         },
         {
           "ticker": "CRM",
-          "weight": 0.68
+          "weight": 0.68,
+          "shares": 10980
         },
         {
           "ticker": "DE",
-          "weight": 0.54
+          "weight": 0.54,
+          "shares": 5001
         },
         {
           "ticker": "PAYC",
-          "weight": 0.46
+          "weight": 0.46,
+          "shares": 12395
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": null,
+    "lastFetchedAt": "2026-05-24T01:50:45Z",
     "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=RV",
     "migratedFromLegacy": true,
-    "legacyId": "custom-1777225955634"
+    "legacyId": "custom-1777225955634",
+    "sharesSource": "13f.info"
   }
 }
