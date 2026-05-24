@@ -1,0 +1,1820 @@
+{
+  "id": "david-einhorn",
+  "holdings": [
+    {
+      "ticker": "GRBK",
+      "weight": 20.43,
+      "shares": 9467383
+    },
+    {
+      "ticker": "FLR",
+      "weight": 7.41,
+      "shares": 4747350
+    },
+    {
+      "ticker": "CNR",
+      "weight": 6.52,
+      "shares": 1858140
+    },
+    {
+      "ticker": "BHF",
+      "weight": 5.69,
+      "shares": 2842100
+    },
+    {
+      "ticker": "PCG",
+      "weight": 3.9,
+      "shares": 6632852
+    },
+    {
+      "ticker": "VSNT",
+      "weight": 3.75,
+      "shares": 3028615
+    },
+    {
+      "ticker": "ACHC",
+      "weight": 3.54,
+      "shares": 4518381
+    },
+    {
+      "ticker": "VSCO",
+      "weight": 3.5,
+      "shares": 2256889
+    },
+    {
+      "ticker": "DHT",
+      "weight": 3.23,
+      "shares": 5272770
+    },
+    {
+      "ticker": "PENN",
+      "weight": 3.04,
+      "shares": 6044440
+    },
+    {
+      "ticker": "GPK",
+      "weight": 3.02,
+      "shares": 9099980
+    },
+    {
+      "ticker": "CNC",
+      "weight": 2.99,
+      "shares": 2731810
+    },
+    {
+      "ticker": "TEVA",
+      "weight": 2.94,
+      "shares": 2910729
+    },
+    {
+      "ticker": "CPRI",
+      "weight": 2.91,
+      "shares": 4930318
+    },
+    {
+      "ticker": "SNX",
+      "weight": 2.71,
+      "shares": 479530
+    },
+    {
+      "ticker": "BKV",
+      "weight": 2.57,
+      "shares": 2695543
+    },
+    {
+      "ticker": "LBTYA",
+      "weight": 2.01,
+      "shares": 4963322
+    },
+    {
+      "ticker": "ROIV",
+      "weight": 2.0,
+      "shares": 2152669
+    },
+    {
+      "ticker": "CROX",
+      "weight": 1.86,
+      "shares": 669140
+    },
+    {
+      "ticker": "REZI",
+      "weight": 1.77,
+      "shares": 1574950
+    },
+    {
+      "ticker": "DECK",
+      "weight": 1.61,
+      "shares": 481398
+    },
+    {
+      "ticker": "SPB",
+      "weight": 1.6,
+      "shares": 650359
+    },
+    {
+      "ticker": "CNH",
+      "weight": 1.54,
+      "shares": 4188940
+    },
+    {
+      "ticker": "SLM",
+      "weight": 1.51,
+      "shares": 2101840
+    },
+    {
+      "ticker": "HSIC",
+      "weight": 1.47,
+      "shares": 599300
+    },
+    {
+      "ticker": "PTON",
+      "weight": 1.45,
+      "shares": 10113940
+    },
+    {
+      "ticker": "GLD",
+      "weight": 1.43,
+      "shares": 99611
+    },
+    {
+      "ticker": "DCH",
+      "weight": 1.25,
+      "shares": 6311350
+    },
+    {
+      "ticker": "PSKY",
+      "weight": 1.19,
+      "shares": 3926080
+    },
+    {
+      "ticker": "AR",
+      "weight": 1.15,
+      "shares": 808520
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 30.7
+        },
+        {
+          "ticker": "BHF",
+          "weight": 12.51
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 7.11
+        },
+        {
+          "ticker": "DNMRQ-OLD",
+          "weight": 6.32
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 5.93
+        },
+        {
+          "ticker": "CNXC",
+          "weight": 5.54
+        },
+        {
+          "ticker": "CC",
+          "weight": 4.84
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.46
+        },
+        {
+          "ticker": "REZI",
+          "weight": 3.05
+        },
+        {
+          "ticker": "AER",
+          "weight": 3.04
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.41
+        },
+        {
+          "ticker": "CNR",
+          "weight": 2.13
+        },
+        {
+          "ticker": "APG",
+          "weight": 2.07
+        },
+        {
+          "ticker": "SATS",
+          "weight": 1.9
+        },
+        {
+          "ticker": "ADT",
+          "weight": 1.83
+        },
+        {
+          "ticker": "KPLT",
+          "weight": 1.53
+        },
+        {
+          "ticker": "JACK",
+          "weight": 1.53
+        },
+        {
+          "ticker": "CNX",
+          "weight": 1.51
+        },
+        {
+          "ticker": "SNX",
+          "weight": 1.31
+        },
+        {
+          "ticker": "WPF",
+          "weight": 1.29
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 28.82
+        },
+        {
+          "ticker": "BHF",
+          "weight": 12.07
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 7.51
+        },
+        {
+          "ticker": "TECK",
+          "weight": 6.78
+        },
+        {
+          "ticker": "CC",
+          "weight": 5.9
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 5.79
+        },
+        {
+          "ticker": "CNXC",
+          "weight": 4.57
+        },
+        {
+          "ticker": "DNMRQ-OLD",
+          "weight": 3.84
+        },
+        {
+          "ticker": "GPRO",
+          "weight": 3.11
+        },
+        {
+          "ticker": "REZI",
+          "weight": 3.11
+        },
+        {
+          "ticker": "CNR",
+          "weight": 2.91
+        },
+        {
+          "ticker": "AER",
+          "weight": 2.48
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.45
+        },
+        {
+          "ticker": "SATS",
+          "weight": 2.27
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 2.26
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.05
+        },
+        {
+          "ticker": "SPY",
+          "weight": 1.69
+        },
+        {
+          "ticker": "GLD",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PLBY",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 26.45
+        },
+        {
+          "ticker": "BHF",
+          "weight": 13.12
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 9.16
+        },
+        {
+          "ticker": "TECK",
+          "weight": 8.34
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 5.56
+        },
+        {
+          "ticker": "CC",
+          "weight": 5.0
+        },
+        {
+          "ticker": "CNR",
+          "weight": 4.08
+        },
+        {
+          "ticker": "CNXC",
+          "weight": 3.49
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 3.41
+        },
+        {
+          "ticker": "DNMRQ-OLD",
+          "weight": 2.85
+        },
+        {
+          "ticker": "GPRO",
+          "weight": 2.54
+        },
+        {
+          "ticker": "REZI",
+          "weight": 2.5
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.36
+        },
+        {
+          "ticker": "AER",
+          "weight": 2.26
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.17
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.17
+        },
+        {
+          "ticker": "SATS",
+          "weight": 1.94
+        },
+        {
+          "ticker": "GLD",
+          "weight": 1.41
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 36.08
+        },
+        {
+          "ticker": "BHF",
+          "weight": 13.4
+        },
+        {
+          "ticker": "TECK",
+          "weight": 6.68
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 5.3
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 5.24
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.67
+        },
+        {
+          "ticker": "CC",
+          "weight": 3.99
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 3.91
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 3.86
+        },
+        {
+          "ticker": "CNR",
+          "weight": 2.92
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.29
+        },
+        {
+          "ticker": "REZI",
+          "weight": 2.07
+        },
+        {
+          "ticker": "GPRO",
+          "weight": 2.06
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 2.04
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 1.73
+        },
+        {
+          "ticker": "GLD",
+          "weight": 1.36
+        },
+        {
+          "ticker": "JACK",
+          "weight": 1.26
+        },
+        {
+          "ticker": "KD",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 23.91
+        },
+        {
+          "ticker": "BHF",
+          "weight": 13.34
+        },
+        {
+          "ticker": "TECK",
+          "weight": 8.54
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 5.8
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 5.18
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.92
+        },
+        {
+          "ticker": "CC",
+          "weight": 4.78
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.57
+        },
+        {
+          "ticker": "CNR",
+          "weight": 3.94
+        },
+        {
+          "ticker": "WBD",
+          "weight": 2.93
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.85
+        },
+        {
+          "ticker": "REZI",
+          "weight": 2.56
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 2.56
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.54
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.35
+        },
+        {
+          "ticker": "KD",
+          "weight": 2.26
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 2.1
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.66
+        },
+        {
+          "ticker": "GPRO",
+          "weight": 1.63
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 1.59
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 27.97
+        },
+        {
+          "ticker": "BHF",
+          "weight": 12.04
+        },
+        {
+          "ticker": "AAWW-OLD",
+          "weight": 6.87
+        },
+        {
+          "ticker": "CNR",
+          "weight": 6.78
+        },
+        {
+          "ticker": "TECK",
+          "weight": 5.16
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.78
+        },
+        {
+          "ticker": "KD",
+          "weight": 4.41
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.29
+        },
+        {
+          "ticker": "GLD",
+          "weight": 3.88
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 3.23
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 2.84
+        },
+        {
+          "ticker": "REZI",
+          "weight": 2.56
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.44
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 2.35
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 2.17
+        },
+        {
+          "ticker": "CC",
+          "weight": 1.88
+        },
+        {
+          "ticker": "WBD",
+          "weight": 1.86
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 1.74
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.43
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 26.8
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 13.94
+        },
+        {
+          "ticker": "BHF",
+          "weight": 10.75
+        },
+        {
+          "ticker": "CNR",
+          "weight": 8.17
+        },
+        {
+          "ticker": "TECK",
+          "weight": 4.88
+        },
+        {
+          "ticker": "KD",
+          "weight": 4.45
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.41
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 3.06
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.87
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.82
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 2.76
+        },
+        {
+          "ticker": "REZI",
+          "weight": 2.22
+        },
+        {
+          "ticker": "GPN",
+          "weight": 2.19
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.02
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.8
+        },
+        {
+          "ticker": "CHNG-OLD",
+          "weight": 1.63
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 1.48
+        },
+        {
+          "ticker": "INTC",
+          "weight": 1.36
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.21
+        },
+        {
+          "ticker": "CIVI-OLD",
+          "weight": 1.18
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 29.85
+        },
+        {
+          "ticker": "BHF",
+          "weight": 11.94
+        },
+        {
+          "ticker": "CNR",
+          "weight": 8.59
+        },
+        {
+          "ticker": "KD",
+          "weight": 7.3
+        },
+        {
+          "ticker": "TECK",
+          "weight": 6.16
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 5.48
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 3.95
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 3.84
+        },
+        {
+          "ticker": "GPN",
+          "weight": 3.43
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 3.4
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.59
+        },
+        {
+          "ticker": "SLV",
+          "weight": 2.45
+        },
+        {
+          "ticker": "THC",
+          "weight": 2.34
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.17
+        },
+        {
+          "ticker": "CIVI-OLD",
+          "weight": 1.94
+        },
+        {
+          "ticker": "REZI",
+          "weight": 1.78
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.73
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 33.18
+        },
+        {
+          "ticker": "CNR",
+          "weight": 9.02
+        },
+        {
+          "ticker": "BHF",
+          "weight": 7.85
+        },
+        {
+          "ticker": "KD",
+          "weight": 7.15
+        },
+        {
+          "ticker": "TECK",
+          "weight": 5.18
+        },
+        {
+          "ticker": "THC",
+          "weight": 4.83
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.18
+        },
+        {
+          "ticker": "GPN",
+          "weight": 3.6
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 3.33
+        },
+        {
+          "ticker": "BKI-OLD",
+          "weight": 3.03
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 2.57
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 2.54
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.38
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.96
+        },
+        {
+          "ticker": "SLV",
+          "weight": 1.88
+        },
+        {
+          "ticker": "CIVI-OLD",
+          "weight": 1.78
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.55
+        },
+        {
+          "ticker": "CNXC",
+          "weight": 1.44
+        },
+        {
+          "ticker": "GPOR",
+          "weight": 1.29
+        },
+        {
+          "ticker": "FCNCA",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 46.77
+        },
+        {
+          "ticker": "CNR",
+          "weight": 9.57
+        },
+        {
+          "ticker": "BHF",
+          "weight": 7.33
+        },
+        {
+          "ticker": "BKI-OLD",
+          "weight": 3.96
+        },
+        {
+          "ticker": "THC",
+          "weight": 3.77
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.93
+        },
+        {
+          "ticker": "KD",
+          "weight": 2.93
+        },
+        {
+          "ticker": "TECK",
+          "weight": 2.81
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 2.75
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 2.64
+        },
+        {
+          "ticker": "GPK",
+          "weight": 2.11
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.02
+        },
+        {
+          "ticker": "NPWR",
+          "weight": 1.62
+        },
+        {
+          "ticker": "FCNCA",
+          "weight": 1.44
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.43
+        },
+        {
+          "ticker": "SLV",
+          "weight": 1.28
+        },
+        {
+          "ticker": "GPOR",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 30.61
+        },
+        {
+          "ticker": "CNR",
+          "weight": 15.07
+        },
+        {
+          "ticker": "BHF",
+          "weight": 9.19
+        },
+        {
+          "ticker": "KD",
+          "weight": 5.04
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.45
+        },
+        {
+          "ticker": "GLD",
+          "weight": 4.42
+        },
+        {
+          "ticker": "SWN-OLD",
+          "weight": 3.89
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.77
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 3.76
+        },
+        {
+          "ticker": "THC",
+          "weight": 3.59
+        },
+        {
+          "ticker": "NPWR",
+          "weight": 2.56
+        },
+        {
+          "ticker": "GPK",
+          "weight": 2.56
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.32
+        },
+        {
+          "ticker": "FCNCA",
+          "weight": 1.93
+        },
+        {
+          "ticker": "SLV",
+          "weight": 1.5
+        },
+        {
+          "ticker": "GPOR",
+          "weight": 1.49
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 1.44
+        },
+        {
+          "ticker": "DHT",
+          "weight": 1.24
+        },
+        {
+          "ticker": "FLG",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 31.53
+        },
+        {
+          "ticker": "CNR",
+          "weight": 11.27
+        },
+        {
+          "ticker": "BHF",
+          "weight": 8.57
+        },
+        {
+          "ticker": "KD",
+          "weight": 7.03
+        },
+        {
+          "ticker": "THC",
+          "weight": 5.3
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 5.24
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 4.2
+        },
+        {
+          "ticker": "GLD",
+          "weight": 3.94
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.49
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 3.39
+        },
+        {
+          "ticker": "GPK",
+          "weight": 3.32
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.38
+        },
+        {
+          "ticker": "DHT",
+          "weight": 1.97
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 1.93
+        },
+        {
+          "ticker": "FCNCA",
+          "weight": 1.88
+        },
+        {
+          "ticker": "NPWR",
+          "weight": 1.61
+        },
+        {
+          "ticker": "GPOR",
+          "weight": 1.58
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 31.04
+        },
+        {
+          "ticker": "BHF",
+          "weight": 7.67
+        },
+        {
+          "ticker": "KD",
+          "weight": 7.08
+        },
+        {
+          "ticker": "CNR",
+          "weight": 6.77
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 5.59
+        },
+        {
+          "ticker": "THC",
+          "weight": 4.6
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.46
+        },
+        {
+          "ticker": "PENN",
+          "weight": 4.09
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 3.67
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.5
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 2.66
+        },
+        {
+          "ticker": "GPK",
+          "weight": 2.58
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.5
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 2.41
+        },
+        {
+          "ticker": "DHT",
+          "weight": 2.28
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 2.17
+        },
+        {
+          "ticker": "FCNCA",
+          "weight": 2.02
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.81
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 1.7
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.41
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 31.02
+        },
+        {
+          "ticker": "CNR",
+          "weight": 8.67
+        },
+        {
+          "ticker": "BHF",
+          "weight": 6.67
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 6.12
+        },
+        {
+          "ticker": "KD",
+          "weight": 6.04
+        },
+        {
+          "ticker": "PENN",
+          "weight": 5.1
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 4.52
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 4.23
+        },
+        {
+          "ticker": "THC",
+          "weight": 4.12
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 4.07
+        },
+        {
+          "ticker": "TECK",
+          "weight": 2.7
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 2.64
+        },
+        {
+          "ticker": "DHT",
+          "weight": 2.41
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.25
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.89
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 1.84
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 1.83
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.51
+        },
+        {
+          "ticker": "PTON",
+          "weight": 1.19
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 35.18
+        },
+        {
+          "ticker": "CNR",
+          "weight": 7.64
+        },
+        {
+          "ticker": "BHF",
+          "weight": 5.79
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 5.63
+        },
+        {
+          "ticker": "KD",
+          "weight": 5.03
+        },
+        {
+          "ticker": "PENN",
+          "weight": 4.71
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 4.0
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 3.9
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 3.75
+        },
+        {
+          "ticker": "CNH",
+          "weight": 3.51
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 2.73
+        },
+        {
+          "ticker": "TECK",
+          "weight": 2.52
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.26
+        },
+        {
+          "ticker": "DHT",
+          "weight": 2.13
+        },
+        {
+          "ticker": "THC",
+          "weight": 2.13
+        },
+        {
+          "ticker": "ODP-OLD",
+          "weight": 2.12
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.05
+        },
+        {
+          "ticker": "PTON",
+          "weight": 1.99
+        },
+        {
+          "ticker": "IAC",
+          "weight": 1.53
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 1.41
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 28.49
+        },
+        {
+          "ticker": "CNR",
+          "weight": 7.92
+        },
+        {
+          "ticker": "BHF",
+          "weight": 7.26
+        },
+        {
+          "ticker": "KD",
+          "weight": 6.94
+        },
+        {
+          "ticker": "CNH",
+          "weight": 6.17
+        },
+        {
+          "ticker": "PENN",
+          "weight": 6.07
+        },
+        {
+          "ticker": "PTON",
+          "weight": 4.88
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 3.83
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 3.67
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 3.32
+        },
+        {
+          "ticker": "CNC",
+          "weight": 2.81
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 2.64
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.61
+        },
+        {
+          "ticker": "DHT",
+          "weight": 2.6
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.36
+        },
+        {
+          "ticker": "TECK",
+          "weight": 2.35
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.74
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.59
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 28.77
+        },
+        {
+          "ticker": "CNR",
+          "weight": 8.87
+        },
+        {
+          "ticker": "BHF",
+          "weight": 8.47
+        },
+        {
+          "ticker": "KD",
+          "weight": 6.77
+        },
+        {
+          "ticker": "PENN",
+          "weight": 5.33
+        },
+        {
+          "ticker": "CNH",
+          "weight": 5.17
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 4.35
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.8
+        },
+        {
+          "ticker": "DHT",
+          "weight": 3.62
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 3.58
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 3.13
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 2.86
+        },
+        {
+          "ticker": "VTRS",
+          "weight": 2.73
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.71
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 2.07
+        },
+        {
+          "ticker": "CNC",
+          "weight": 1.73
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 1.71
+        },
+        {
+          "ticker": "PTON",
+          "weight": 1.65
+        },
+        {
+          "ticker": "GPK",
+          "weight": 1.42
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 1.28
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 26.49
+        },
+        {
+          "ticker": "FLR",
+          "weight": 8.71
+        },
+        {
+          "ticker": "CNR",
+          "weight": 6.69
+        },
+        {
+          "ticker": "BHF",
+          "weight": 6.6
+        },
+        {
+          "ticker": "KD",
+          "weight": 6.18
+        },
+        {
+          "ticker": "PENN",
+          "weight": 5.96
+        },
+        {
+          "ticker": "CNH",
+          "weight": 4.54
+        },
+        {
+          "ticker": "GPK",
+          "weight": 4.41
+        },
+        {
+          "ticker": "DHT",
+          "weight": 3.66
+        },
+        {
+          "ticker": "TECK",
+          "weight": 3.59
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 3.28
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 2.82
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.74
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 2.33
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.3
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 2.29
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.15
+        },
+        {
+          "ticker": "CNC",
+          "weight": 2.03
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.85
+        },
+        {
+          "ticker": "CI",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 28.99
+        },
+        {
+          "ticker": "FLR",
+          "weight": 9.62
+        },
+        {
+          "ticker": "CNR",
+          "weight": 7.46
+        },
+        {
+          "ticker": "BHF",
+          "weight": 6.14
+        },
+        {
+          "ticker": "KD",
+          "weight": 5.41
+        },
+        {
+          "ticker": "PENN",
+          "weight": 5.41
+        },
+        {
+          "ticker": "PCG",
+          "weight": 3.99
+        },
+        {
+          "ticker": "GPK",
+          "weight": 3.81
+        },
+        {
+          "ticker": "DHT",
+          "weight": 3.77
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 3.16
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.73
+        },
+        {
+          "ticker": "CNH",
+          "weight": 2.66
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.58
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 2.48
+        },
+        {
+          "ticker": "CNC",
+          "weight": 2.31
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 2.22
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 2.17
+        },
+        {
+          "ticker": "SDRL",
+          "weight": 1.99
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.69
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 1.42
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GRBK",
+          "weight": 23.64
+        },
+        {
+          "ticker": "FLR",
+          "weight": 8.78
+        },
+        {
+          "ticker": "CNR",
+          "weight": 7.4
+        },
+        {
+          "ticker": "BHF",
+          "weight": 7.21
+        },
+        {
+          "ticker": "GPK",
+          "weight": 5.05
+        },
+        {
+          "ticker": "PCG",
+          "weight": 4.98
+        },
+        {
+          "ticker": "CPRI",
+          "weight": 4.63
+        },
+        {
+          "ticker": "CNC",
+          "weight": 4.33
+        },
+        {
+          "ticker": "KD",
+          "weight": 4.04
+        },
+        {
+          "ticker": "TEVA",
+          "weight": 3.8
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 3.75
+        },
+        {
+          "ticker": "DHT",
+          "weight": 3.59
+        },
+        {
+          "ticker": "PENN",
+          "weight": 3.55
+        },
+        {
+          "ticker": "GLD",
+          "weight": 2.69
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 2.33
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.32
+        },
+        {
+          "ticker": "LBTYA",
+          "weight": 2.23
+        },
+        {
+          "ticker": "CNH",
+          "weight": 2.12
+        },
+        {
+          "ticker": "ROIV",
+          "weight": 1.79
+        },
+        {
+          "ticker": "WBD",
+          "weight": 1.76
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:34:09Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GLRE",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

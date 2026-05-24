@@ -1,0 +1,1775 @@
+{
+  "id": "david-rolfe",
+  "holdings": [
+    {
+      "ticker": "GOOGL",
+      "weight": 9.25,
+      "shares": 155701
+    },
+    {
+      "ticker": "TSM",
+      "weight": 9.03,
+      "shares": 129353
+    },
+    {
+      "ticker": "META",
+      "weight": 7.77,
+      "shares": 65805
+    },
+    {
+      "ticker": "AAPL",
+      "weight": 7.08,
+      "shares": 135128
+    },
+    {
+      "ticker": "MSI",
+      "weight": 6.09,
+      "shares": 67941
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 5.65,
+      "shares": 73919
+    },
+    {
+      "ticker": "V",
+      "weight": 5.18,
+      "shares": 83010
+    },
+    {
+      "ticker": "BKNG",
+      "weight": 4.8,
+      "shares": 137925
+    },
+    {
+      "ticker": "ODFL",
+      "weight": 4.6,
+      "shares": 113941
+    },
+    {
+      "ticker": "AMZN",
+      "weight": 4.3,
+      "shares": 99907
+    },
+    {
+      "ticker": "TSCO",
+      "weight": 4.27,
+      "shares": 456094
+    },
+    {
+      "ticker": "URI",
+      "weight": 3.79,
+      "shares": 25192
+    },
+    {
+      "ticker": "CB",
+      "weight": 3.63,
+      "shares": 53886
+    },
+    {
+      "ticker": "CDW",
+      "weight": 3.62,
+      "shares": 144870
+    },
+    {
+      "ticker": "PGR",
+      "weight": 3.41,
+      "shares": 83352
+    },
+    {
+      "ticker": "ORLY",
+      "weight": 3.4,
+      "shares": 178397
+    },
+    {
+      "ticker": "CPRT",
+      "weight": 3.17,
+      "shares": 462749
+    },
+    {
+      "ticker": "SPGI",
+      "weight": 2.84,
+      "shares": 32371
+    },
+    {
+      "ticker": "EW",
+      "weight": 2.83,
+      "shares": 170969
+    },
+    {
+      "ticker": "ZTS",
+      "weight": 2.77,
+      "shares": 113541
+    },
+    {
+      "ticker": "TOL",
+      "weight": 2.49,
+      "shares": 88275
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 7.91
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.8
+        },
+        {
+          "ticker": "META",
+          "weight": 7.51
+        },
+        {
+          "ticker": "EW",
+          "weight": 6.94
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.4
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.28
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.27
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.35
+        },
+        {
+          "ticker": "KEYS",
+          "weight": 5.21
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.19
+        },
+        {
+          "ticker": "V",
+          "weight": 5.02
+        },
+        {
+          "ticker": "SBUX",
+          "weight": 4.73
+        },
+        {
+          "ticker": "EA",
+          "weight": 4.56
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.76
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.62
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.29
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.08
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.57
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.49
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 2.03
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 8.28
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.89
+        },
+        {
+          "ticker": "META",
+          "weight": 7.86
+        },
+        {
+          "ticker": "EW",
+          "weight": 7.61
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.73
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.43
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.02
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.48
+        },
+        {
+          "ticker": "KEYS",
+          "weight": 5.02
+        },
+        {
+          "ticker": "V",
+          "weight": 4.99
+        },
+        {
+          "ticker": "CDW",
+          "weight": 4.83
+        },
+        {
+          "ticker": "EA",
+          "weight": 4.34
+        },
+        {
+          "ticker": "SBUX",
+          "weight": 4.32
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.89
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.79
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.29
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.59
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.39
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.16
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 2.1
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "EW",
+          "weight": 8.03
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.97
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.95
+        },
+        {
+          "ticker": "META",
+          "weight": 7.48
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.71
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.39
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.84
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.58
+        },
+        {
+          "ticker": "CDW",
+          "weight": 4.89
+        },
+        {
+          "ticker": "V",
+          "weight": 4.65
+        },
+        {
+          "ticker": "KEYS",
+          "weight": 4.39
+        },
+        {
+          "ticker": "EA",
+          "weight": 4.19
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.98
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.52
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.47
+        },
+        {
+          "ticker": "SBUX",
+          "weight": 3.36
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.31
+        },
+        {
+          "ticker": "UNH",
+          "weight": 3.04
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.63
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.62
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 9.15
+        },
+        {
+          "ticker": "META",
+          "weight": 8.03
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.98
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.92
+        },
+        {
+          "ticker": "EW",
+          "weight": 6.41
+        },
+        {
+          "ticker": "V",
+          "weight": 6.31
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.14
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.95
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.12
+        },
+        {
+          "ticker": "KEYS",
+          "weight": 4.2
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.15
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.04
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 3.99
+        },
+        {
+          "ticker": "UNH",
+          "weight": 3.7
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.63
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.26
+        },
+        {
+          "ticker": "SBUX",
+          "weight": 3.22
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 2.98
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.69
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.11
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 9.57
+        },
+        {
+          "ticker": "META",
+          "weight": 7.2
+        },
+        {
+          "ticker": "V",
+          "weight": 7.16
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 7.16
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.84
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.48
+        },
+        {
+          "ticker": "EW",
+          "weight": 6.24
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.02
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.36
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.0
+        },
+        {
+          "ticker": "UNH",
+          "weight": 4.77
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 4.63
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.97
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.72
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 3.39
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.01
+        },
+        {
+          "ticker": "SBUX",
+          "weight": 2.89
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.47
+        },
+        {
+          "ticker": "TPL",
+          "weight": 2.23
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 1.87
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 9.14
+        },
+        {
+          "ticker": "V",
+          "weight": 7.04
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.6
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.54
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.39
+        },
+        {
+          "ticker": "META",
+          "weight": 6.39
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.35
+        },
+        {
+          "ticker": "EW",
+          "weight": 5.91
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.84
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.33
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.21
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 4.22
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 4.03
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.91
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.89
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 3.12
+        },
+        {
+          "ticker": "TPL",
+          "weight": 2.94
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.71
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.48
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.96
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 9.83
+        },
+        {
+          "ticker": "MSI",
+          "weight": 7.14
+        },
+        {
+          "ticker": "V",
+          "weight": 6.71
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.46
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.35
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.07
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.07
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.56
+        },
+        {
+          "ticker": "EW",
+          "weight": 5.41
+        },
+        {
+          "ticker": "META",
+          "weight": 5.38
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.3
+        },
+        {
+          "ticker": "PGR",
+          "weight": 4.09
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.03
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.01
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 3.88
+        },
+        {
+          "ticker": "TPL",
+          "weight": 3.67
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 3.01
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.76
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.37
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.9
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 9.04
+        },
+        {
+          "ticker": "MSI",
+          "weight": 7.95
+        },
+        {
+          "ticker": "V",
+          "weight": 7.6
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 7.6
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.18
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.17
+        },
+        {
+          "ticker": "CDW",
+          "weight": 6.15
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.39
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.79
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.49
+        },
+        {
+          "ticker": "FRCB",
+          "weight": 4.32
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.31
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 4.25
+        },
+        {
+          "ticker": "TPL",
+          "weight": 3.82
+        },
+        {
+          "ticker": "META",
+          "weight": 3.71
+        },
+        {
+          "ticker": "PGR",
+          "weight": 3.52
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 3.39
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 3.07
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.51
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.74
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 10.21
+        },
+        {
+          "ticker": "MSI",
+          "weight": 7.82
+        },
+        {
+          "ticker": "V",
+          "weight": 7.31
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 6.93
+        },
+        {
+          "ticker": "META",
+          "weight": 6.84
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.39
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.17
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.94
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.93
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.45
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.92
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.74
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 4.36
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.09
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 3.27
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.65
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.31
+        },
+        {
+          "ticker": "TPL",
+          "weight": 2.1
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 1.48
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 10.49
+        },
+        {
+          "ticker": "META",
+          "weight": 7.87
+        },
+        {
+          "ticker": "MSI",
+          "weight": 7.26
+        },
+        {
+          "ticker": "V",
+          "weight": 6.87
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.72
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.34
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.84
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.78
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.59
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.37
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.27
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.2
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.87
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.04
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 3.39
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.74
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.43
+        },
+        {
+          "ticker": "TPL",
+          "weight": 1.47
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 1.38
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 9.96
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.75
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.6
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.99
+        },
+        {
+          "ticker": "V",
+          "weight": 6.55
+        },
+        {
+          "ticker": "CDW",
+          "weight": 6.4
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.06
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.7
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.58
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.54
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.23
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 4.9
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.85
+        },
+        {
+          "ticker": "EW",
+          "weight": 3.21
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 3.17
+        },
+        {
+          "ticker": "POOL",
+          "weight": 3.06
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.29
+        },
+        {
+          "ticker": "TPL",
+          "weight": 2.09
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 2.06
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 9.89
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.29
+        },
+        {
+          "ticker": "V",
+          "weight": 7.73
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.03
+        },
+        {
+          "ticker": "TSM",
+          "weight": 6.94
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.39
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.13
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.59
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.52
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.35
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.17
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.06
+        },
+        {
+          "ticker": "CDW",
+          "weight": 5.02
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.55
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.82
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.76
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.28
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 2.03
+        },
+        {
+          "ticker": "TPL",
+          "weight": 1.41
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 9.24
+        },
+        {
+          "ticker": "META",
+          "weight": 8.28
+        },
+        {
+          "ticker": "TSM",
+          "weight": 7.9
+        },
+        {
+          "ticker": "V",
+          "weight": 7.4
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 6.77
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.57
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.23
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.98
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.87
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.83
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.72
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.77
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.43
+        },
+        {
+          "ticker": "CDW",
+          "weight": 4.41
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.63
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.29
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.19
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 1.84
+        },
+        {
+          "ticker": "TPL",
+          "weight": 1.65
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 8.82
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.64
+        },
+        {
+          "ticker": "TSM",
+          "weight": 8.48
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.7
+        },
+        {
+          "ticker": "V",
+          "weight": 6.81
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.8
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.52
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.73
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.44
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.29
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.08
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.74
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.31
+        },
+        {
+          "ticker": "CDW",
+          "weight": 4.18
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.44
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.37
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.37
+        },
+        {
+          "ticker": "TPL",
+          "weight": 2.27
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 2.03
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 8.72
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.36
+        },
+        {
+          "ticker": "TSM",
+          "weight": 8.34
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.85
+        },
+        {
+          "ticker": "V",
+          "weight": 7.12
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.02
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.38
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.51
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.36
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.33
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.24
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.06
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.34
+        },
+        {
+          "ticker": "TPL",
+          "weight": 3.27
+        },
+        {
+          "ticker": "CDW",
+          "weight": 3.24
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.47
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.26
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.14
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 1.98
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "TSM",
+          "weight": 9.24
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.24
+        },
+        {
+          "ticker": "META",
+          "weight": 9.2
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 8.1
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.91
+        },
+        {
+          "ticker": "V",
+          "weight": 7.56
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.71
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.54
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 5.54
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.43
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.16
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.03
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.96
+        },
+        {
+          "ticker": "CDW",
+          "weight": 3.11
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.3
+        },
+        {
+          "ticker": "POOL",
+          "weight": 2.01
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.0
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 1.99
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "TSM",
+          "weight": 9.41
+        },
+        {
+          "ticker": "META",
+          "weight": 9.36
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.36
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.15
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.13
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.03
+        },
+        {
+          "ticker": "V",
+          "weight": 6.52
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 6.22
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 6.19
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.03
+        },
+        {
+          "ticker": "MSI",
+          "weight": 4.79
+        },
+        {
+          "ticker": "CDW",
+          "weight": 4.45
+        },
+        {
+          "ticker": "URI",
+          "weight": 3.61
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 3.56
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.4
+        },
+        {
+          "ticker": "EW",
+          "weight": 3.01
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.89
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.9
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 10.3
+        },
+        {
+          "ticker": "TSM",
+          "weight": 9.16
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.96
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.62
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 6.39
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.15
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 6.01
+        },
+        {
+          "ticker": "V",
+          "weight": 5.69
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.46
+        },
+        {
+          "ticker": "MSI",
+          "weight": 4.75
+        },
+        {
+          "ticker": "URI",
+          "weight": 4.39
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.26
+        },
+        {
+          "ticker": "CDW",
+          "weight": 3.88
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 3.66
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.64
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.63
+        },
+        {
+          "ticker": "EW",
+          "weight": 2.77
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.39
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.88
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "TSM",
+          "weight": 9.65
+        },
+        {
+          "ticker": "META",
+          "weight": 9.46
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.19
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.76
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.49
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.93
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.81
+        },
+        {
+          "ticker": "V",
+          "weight": 5.55
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 5.09
+        },
+        {
+          "ticker": "MSI",
+          "weight": 4.8
+        },
+        {
+          "ticker": "URI",
+          "weight": 4.69
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 4.08
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.77
+        },
+        {
+          "ticker": "CDW",
+          "weight": 3.5
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.41
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 3.08
+        },
+        {
+          "ticker": "EW",
+          "weight": 2.62
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 2.28
+        },
+        {
+          "ticker": "POOL",
+          "weight": 1.83
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "TSM",
+          "weight": 10.59
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.68
+        },
+        {
+          "ticker": "META",
+          "weight": 8.61
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 7.34
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.08
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.88
+        },
+        {
+          "ticker": "V",
+          "weight": 5.77
+        },
+        {
+          "ticker": "MSI",
+          "weight": 5.19
+        },
+        {
+          "ticker": "TSCO",
+          "weight": 4.54
+        },
+        {
+          "ticker": "URI",
+          "weight": 4.05
+        },
+        {
+          "ticker": "CDW",
+          "weight": 3.9
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.59
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 3.56
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 3.33
+        },
+        {
+          "ticker": "CB",
+          "weight": 3.33
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.25
+        },
+        {
+          "ticker": "EW",
+          "weight": 2.91
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.54
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 2.49
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.38
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:34:21Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=WP",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

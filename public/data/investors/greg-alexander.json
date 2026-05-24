@@ -1,0 +1,720 @@
+{
+  "id": "greg-alexander",
+  "holdings": [
+    {
+      "ticker": "GPI",
+      "weight": 47.66,
+      "shares": 755032
+    },
+    {
+      "ticker": "EQH",
+      "weight": 29.75,
+      "shares": 4200000
+    },
+    {
+      "ticker": "LAD",
+      "weight": 10.11,
+      "shares": 212000
+    },
+    {
+      "ticker": "MNDY",
+      "weight": 5.28,
+      "shares": 400000
+    },
+    {
+      "ticker": "RMNI",
+      "weight": 3.7,
+      "shares": 5913199
+    },
+    {
+      "ticker": "SDHC",
+      "weight": 3.5,
+      "shares": 1433350
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 21.04
+        },
+        {
+          "ticker": "STLA",
+          "weight": 20.02
+        },
+        {
+          "ticker": "EQH",
+          "weight": 18.35
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 13.61
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 8.55
+        },
+        {
+          "ticker": "JD",
+          "weight": 5.88
+        },
+        {
+          "ticker": "SBGI",
+          "weight": 5.28
+        },
+        {
+          "ticker": "JTKWY",
+          "weight": 2.46
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 2.43
+        },
+        {
+          "ticker": "GTYH-OLD",
+          "weight": 2.38
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 21.8
+        },
+        {
+          "ticker": "STLA",
+          "weight": 21.45
+        },
+        {
+          "ticker": "EQH",
+          "weight": 17.41
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 12.59
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 9.79
+        },
+        {
+          "ticker": "JD",
+          "weight": 6.11
+        },
+        {
+          "ticker": "SBGI",
+          "weight": 5.58
+        },
+        {
+          "ticker": "GTYH-OLD",
+          "weight": 2.87
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 19.92
+        },
+        {
+          "ticker": "BABA",
+          "weight": 18.78
+        },
+        {
+          "ticker": "EQH",
+          "weight": 17.38
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 15.67
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 11.31
+        },
+        {
+          "ticker": "JD",
+          "weight": 5.68
+        },
+        {
+          "ticker": "SBGI",
+          "weight": 5.46
+        },
+        {
+          "ticker": "GTYH-OLD",
+          "weight": 3.11
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 2.68
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 19.83
+        },
+        {
+          "ticker": "EQH",
+          "weight": 19.5
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 18.37
+        },
+        {
+          "ticker": "BABA",
+          "weight": 18.29
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 8.71
+        },
+        {
+          "ticker": "JD",
+          "weight": 5.58
+        },
+        {
+          "ticker": "SBGI",
+          "weight": 4.61
+        },
+        {
+          "ticker": "GTYH-OLD",
+          "weight": 2.82
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 2.29
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 32.78
+        },
+        {
+          "ticker": "STLA",
+          "weight": 27.74
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 18.59
+        },
+        {
+          "ticker": "JD",
+          "weight": 7.44
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 4.75
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 3.84
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.67
+        },
+        {
+          "ticker": "GTYH-OLD",
+          "weight": 2.19
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 31.59
+        },
+        {
+          "ticker": "STLA",
+          "weight": 31.45
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 20.33
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 6.2
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 5.05
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 3.81
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 30.42
+        },
+        {
+          "ticker": "EQH",
+          "weight": 30.09
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 21.03
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 7.05
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 5.21
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 3.27
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 1.62
+        },
+        {
+          "ticker": "COF",
+          "weight": 1.31
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 29.83
+        },
+        {
+          "ticker": "EQH",
+          "weight": 26.63
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 15.85
+        },
+        {
+          "ticker": "LAD",
+          "weight": 12.5
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 4.76
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 4.11
+        },
+        {
+          "ticker": "GPI",
+          "weight": 2.9
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.29
+        },
+        {
+          "ticker": "COF",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 32.86
+        },
+        {
+          "ticker": "EQH",
+          "weight": 23.23
+        },
+        {
+          "ticker": "LAD",
+          "weight": 13.78
+        },
+        {
+          "ticker": "BLDR",
+          "weight": 12.83
+        },
+        {
+          "ticker": "GPI",
+          "weight": 6.56
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 4.04
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 3.1
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.44
+        },
+        {
+          "ticker": "COF",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 28.97
+        },
+        {
+          "ticker": "LAD",
+          "weight": 23.44
+        },
+        {
+          "ticker": "EQH",
+          "weight": 22.73
+        },
+        {
+          "ticker": "GPI",
+          "weight": 14.21
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 4.13
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 2.7
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.6
+        },
+        {
+          "ticker": "COF",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 30.21
+        },
+        {
+          "ticker": "EQH",
+          "weight": 24.33
+        },
+        {
+          "ticker": "LAD",
+          "weight": 23.31
+        },
+        {
+          "ticker": "GPI",
+          "weight": 15.16
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 3.85
+        },
+        {
+          "ticker": "IMXI",
+          "weight": 1.91
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 1.22
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 31.72
+        },
+        {
+          "ticker": "EQH",
+          "weight": 24.59
+        },
+        {
+          "ticker": "LAD",
+          "weight": 22.4
+        },
+        {
+          "ticker": "GPI",
+          "weight": 15.62
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 3.79
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 1.88
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 28.77
+        },
+        {
+          "ticker": "LAD",
+          "weight": 23.26
+        },
+        {
+          "ticker": "STLA",
+          "weight": 22.26
+        },
+        {
+          "ticker": "GPI",
+          "weight": 17.02
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 6.56
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.13
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 30.05
+        },
+        {
+          "ticker": "LAD",
+          "weight": 21.67
+        },
+        {
+          "ticker": "GPI",
+          "weight": 20.72
+        },
+        {
+          "ticker": "STLA",
+          "weight": 17.33
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 8.01
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.23
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 28.87
+        },
+        {
+          "ticker": "LAD",
+          "weight": 25.45
+        },
+        {
+          "ticker": "GPI",
+          "weight": 24.92
+        },
+        {
+          "ticker": "STLA",
+          "weight": 14.47
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 5.04
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "GPI",
+          "weight": 30.88
+        },
+        {
+          "ticker": "EQH",
+          "weight": 30.4
+        },
+        {
+          "ticker": "LAD",
+          "weight": 23.04
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 8.93
+        },
+        {
+          "ticker": "STLA",
+          "weight": 4.72
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.04
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 39.48
+        },
+        {
+          "ticker": "GPI",
+          "weight": 32.91
+        },
+        {
+          "ticker": "LAD",
+          "weight": 22.25
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 3.12
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 2.24
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "EQH",
+          "weight": 36.51
+        },
+        {
+          "ticker": "GPI",
+          "weight": 32.31
+        },
+        {
+          "ticker": "LAD",
+          "weight": 21.98
+        },
+        {
+          "ticker": "YNDX",
+          "weight": 5.04
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 2.9
+        },
+        {
+          "ticker": "SDHC",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "GPI",
+          "weight": 39.41
+        },
+        {
+          "ticker": "EQH",
+          "weight": 33.8
+        },
+        {
+          "ticker": "LAD",
+          "weight": 20.03
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 4.39
+        },
+        {
+          "ticker": "SDHC",
+          "weight": 2.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GPI",
+          "weight": 37.04
+        },
+        {
+          "ticker": "EQH",
+          "weight": 33.16
+        },
+        {
+          "ticker": "LAD",
+          "weight": 22.02
+        },
+        {
+          "ticker": "SDHC",
+          "weight": 3.98
+        },
+        {
+          "ticker": "RMNI",
+          "weight": 3.8
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:35:23Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=CM",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

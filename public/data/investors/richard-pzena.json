@@ -1,0 +1,844 @@
+{
+  "id": "richard-pzena",
+  "holdings": [
+    {
+      "ticker": "MGA",
+      "weight": 8.48,
+      "shares": 25329355
+    },
+    {
+      "ticker": "CTSH",
+      "weight": 5.36,
+      "shares": 20262362
+    },
+    {
+      "ticker": "TSN",
+      "weight": 4.74,
+      "shares": 17155713
+    },
+    {
+      "ticker": "BAX",
+      "weight": 4.67,
+      "shares": 64527823
+    },
+    {
+      "ticker": "BMY",
+      "weight": 4.47,
+      "shares": 17095731
+    },
+    {
+      "ticker": "CVS",
+      "weight": 4.26,
+      "shares": 13773053
+    },
+    {
+      "ticker": "HUM",
+      "weight": 4.09,
+      "shares": 5470982
+    },
+    {
+      "ticker": "C",
+      "weight": 4.0,
+      "shares": 8175364
+    },
+    {
+      "ticker": "SWKS",
+      "weight": 3.72,
+      "shares": 16108138
+    },
+    {
+      "ticker": "COF",
+      "weight": 3.6,
+      "shares": 4580120
+    },
+    {
+      "ticker": "DOX",
+      "weight": 3.57,
+      "shares": 12681089
+    },
+    {
+      "ticker": "DG",
+      "weight": 3.53,
+      "shares": 6897541
+    },
+    {
+      "ticker": "LEA",
+      "weight": 3.53,
+      "shares": 6758505
+    },
+    {
+      "ticker": "UBS",
+      "weight": 3.52,
+      "shares": 26544355
+    },
+    {
+      "ticker": "MET",
+      "weight": 3.45,
+      "shares": 11303819
+    },
+    {
+      "ticker": "PPG",
+      "weight": 3.45,
+      "shares": 7478646
+    },
+    {
+      "ticker": "DOW",
+      "weight": 3.4,
+      "shares": 18947602
+    },
+    {
+      "ticker": "GPN",
+      "weight": 3.37,
+      "shares": 11615577
+    },
+    {
+      "ticker": "NOV",
+      "weight": 3.04,
+      "shares": 37535449
+    },
+    {
+      "ticker": "WFC",
+      "weight": 3.01,
+      "shares": 8773128
+    },
+    {
+      "ticker": "SSNC",
+      "weight": 2.83,
+      "shares": 9699260
+    },
+    {
+      "ticker": "CRBG",
+      "weight": 2.79,
+      "shares": 27045794
+    },
+    {
+      "ticker": "NOK",
+      "weight": 2.2,
+      "shares": 63425518
+    },
+    {
+      "ticker": "ACN",
+      "weight": 2.06,
+      "shares": 2405683
+    },
+    {
+      "ticker": "PVH",
+      "weight": 1.74,
+      "shares": 5768906
+    },
+    {
+      "ticker": "AVT",
+      "weight": 1.51,
+      "shares": 5692230
+    },
+    {
+      "ticker": "UHS",
+      "weight": 1.47,
+      "shares": 1912235
+    },
+    {
+      "ticker": "FMS",
+      "weight": 1.46,
+      "shares": 15052822
+    },
+    {
+      "ticker": "BAC",
+      "weight": 1.35,
+      "shares": 6422754
+    },
+    {
+      "ticker": "BAP",
+      "weight": 1.33,
+      "shares": 912060
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 7.34
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.73
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.99
+        },
+        {
+          "ticker": "DOW",
+          "weight": 5.91
+        },
+        {
+          "ticker": "BAX",
+          "weight": 5.75
+        },
+        {
+          "ticker": "C",
+          "weight": 5.69
+        },
+        {
+          "ticker": "WFC",
+          "weight": 5.48
+        },
+        {
+          "ticker": "EIX",
+          "weight": 5.3
+        },
+        {
+          "ticker": "EQH",
+          "weight": 5.3
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 5.16
+        },
+        {
+          "ticker": "LEA",
+          "weight": 4.98
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 4.56
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.55
+        },
+        {
+          "ticker": "BAC",
+          "weight": 4.48
+        },
+        {
+          "ticker": "PVH",
+          "weight": 4.14
+        },
+        {
+          "ticker": "MET",
+          "weight": 4.1
+        },
+        {
+          "ticker": "NOV",
+          "weight": 3.77
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.68
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.68
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.42
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "CTSH",
+          "weight": 7.19
+        },
+        {
+          "ticker": "MGA",
+          "weight": 6.84
+        },
+        {
+          "ticker": "BAX",
+          "weight": 5.87
+        },
+        {
+          "ticker": "DOW",
+          "weight": 5.69
+        },
+        {
+          "ticker": "C",
+          "weight": 5.53
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.46
+        },
+        {
+          "ticker": "WFC",
+          "weight": 5.3
+        },
+        {
+          "ticker": "EIX",
+          "weight": 5.25
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.14
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 5.06
+        },
+        {
+          "ticker": "HUM",
+          "weight": 4.93
+        },
+        {
+          "ticker": "LEA",
+          "weight": 4.67
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.51
+        },
+        {
+          "ticker": "BAC",
+          "weight": 4.48
+        },
+        {
+          "ticker": "CVS",
+          "weight": 4.35
+        },
+        {
+          "ticker": "EQH",
+          "weight": 4.33
+        },
+        {
+          "ticker": "TSN",
+          "weight": 4.06
+        },
+        {
+          "ticker": "MET",
+          "weight": 3.85
+        },
+        {
+          "ticker": "NOV",
+          "weight": 3.8
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.72
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 7.81
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 7.68
+        },
+        {
+          "ticker": "BAX",
+          "weight": 6.55
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.56
+        },
+        {
+          "ticker": "DOW",
+          "weight": 5.54
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.22
+        },
+        {
+          "ticker": "C",
+          "weight": 5.06
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 5.02
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.73
+        },
+        {
+          "ticker": "DG",
+          "weight": 4.63
+        },
+        {
+          "ticker": "LEA",
+          "weight": 4.51
+        },
+        {
+          "ticker": "CVS",
+          "weight": 4.41
+        },
+        {
+          "ticker": "EIX",
+          "weight": 4.31
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.3
+        },
+        {
+          "ticker": "HUM",
+          "weight": 4.25
+        },
+        {
+          "ticker": "MET",
+          "weight": 4.25
+        },
+        {
+          "ticker": "MDT",
+          "weight": 4.13
+        },
+        {
+          "ticker": "BAC",
+          "weight": 4.13
+        },
+        {
+          "ticker": "TSN",
+          "weight": 4.0
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.93
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 8.86
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 7.42
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.01
+        },
+        {
+          "ticker": "BAX",
+          "weight": 5.36
+        },
+        {
+          "ticker": "WFC",
+          "weight": 5.3
+        },
+        {
+          "ticker": "C",
+          "weight": 5.28
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.25
+        },
+        {
+          "ticker": "GPN",
+          "weight": 5.07
+        },
+        {
+          "ticker": "HUM",
+          "weight": 5.01
+        },
+        {
+          "ticker": "DG",
+          "weight": 4.88
+        },
+        {
+          "ticker": "CVS",
+          "weight": 4.82
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 4.79
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.48
+        },
+        {
+          "ticker": "DOW",
+          "weight": 4.13
+        },
+        {
+          "ticker": "BMY",
+          "weight": 4.11
+        },
+        {
+          "ticker": "BAC",
+          "weight": 3.98
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.97
+        },
+        {
+          "ticker": "MET",
+          "weight": 3.93
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.76
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.58
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 7.43
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.97
+        },
+        {
+          "ticker": "BAX",
+          "weight": 6.73
+        },
+        {
+          "ticker": "CVS",
+          "weight": 6.39
+        },
+        {
+          "ticker": "DG",
+          "weight": 5.99
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.47
+        },
+        {
+          "ticker": "HUM",
+          "weight": 5.41
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.34
+        },
+        {
+          "ticker": "C",
+          "weight": 5.05
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 4.65
+        },
+        {
+          "ticker": "DOW",
+          "weight": 4.65
+        },
+        {
+          "ticker": "TSN",
+          "weight": 4.53
+        },
+        {
+          "ticker": "BMY",
+          "weight": 4.39
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.36
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.2
+        },
+        {
+          "ticker": "MDT",
+          "weight": 4.02
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.76
+        },
+        {
+          "ticker": "MET",
+          "weight": 3.67
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.61
+        },
+        {
+          "ticker": "NOV",
+          "weight": 3.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 7.87
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.91
+        },
+        {
+          "ticker": "DG",
+          "weight": 6.87
+        },
+        {
+          "ticker": "BAX",
+          "weight": 6.03
+        },
+        {
+          "ticker": "C",
+          "weight": 5.86
+        },
+        {
+          "ticker": "CVS",
+          "weight": 5.86
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.85
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 5.49
+        },
+        {
+          "ticker": "HUM",
+          "weight": 5.05
+        },
+        {
+          "ticker": "SWKS",
+          "weight": 4.61
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.49
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 4.4
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.21
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.21
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.91
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.88
+        },
+        {
+          "ticker": "MET",
+          "weight": 3.73
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.66
+        },
+        {
+          "ticker": "DOW",
+          "weight": 3.63
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.48
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 9.75
+        },
+        {
+          "ticker": "BAX",
+          "weight": 6.64
+        },
+        {
+          "ticker": "C",
+          "weight": 6.47
+        },
+        {
+          "ticker": "DG",
+          "weight": 6.14
+        },
+        {
+          "ticker": "CVS",
+          "weight": 6.07
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.04
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.46
+        },
+        {
+          "ticker": "HUM",
+          "weight": 5.33
+        },
+        {
+          "ticker": "UBS",
+          "weight": 4.92
+        },
+        {
+          "ticker": "SWKS",
+          "weight": 4.8
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.61
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 4.59
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.36
+        },
+        {
+          "ticker": "MET",
+          "weight": 4.06
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.84
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.82
+        },
+        {
+          "ticker": "CRBG",
+          "weight": 3.63
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.41
+        },
+        {
+          "ticker": "DOW",
+          "weight": 3.16
+        },
+        {
+          "ticker": "MDT",
+          "weight": 2.88
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "MGA",
+          "weight": 9.79
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.72
+        },
+        {
+          "ticker": "DG",
+          "weight": 6.51
+        },
+        {
+          "ticker": "BAX",
+          "weight": 6.15
+        },
+        {
+          "ticker": "C",
+          "weight": 5.69
+        },
+        {
+          "ticker": "CVS",
+          "weight": 5.68
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.59
+        },
+        {
+          "ticker": "UBS",
+          "weight": 5.05
+        },
+        {
+          "ticker": "HUM",
+          "weight": 4.79
+        },
+        {
+          "ticker": "BMY",
+          "weight": 4.45
+        },
+        {
+          "ticker": "DOX",
+          "weight": 4.45
+        },
+        {
+          "ticker": "MET",
+          "weight": 4.31
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.28
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 4.14
+        },
+        {
+          "ticker": "TSN",
+          "weight": 4.13
+        },
+        {
+          "ticker": "GPN",
+          "weight": 4.05
+        },
+        {
+          "ticker": "LEA",
+          "weight": 3.93
+        },
+        {
+          "ticker": "SWKS",
+          "weight": 3.68
+        },
+        {
+          "ticker": "PPG",
+          "weight": 3.35
+        },
+        {
+          "ticker": "CRBG",
+          "weight": 3.27
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:37:23Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=PIM",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

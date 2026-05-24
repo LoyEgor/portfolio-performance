@@ -1,0 +1,1884 @@
+{
+  "id": "yacktman-asset-management",
+  "holdings": [
+    {
+      "ticker": "CNQ",
+      "weight": 11.68,
+      "shares": 16541598
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 5.32,
+      "shares": 992916
+    },
+    {
+      "ticker": "SCHW",
+      "weight": 5.31,
+      "shares": 3904856
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 4.68,
+      "shares": 1126534
+    },
+    {
+      "ticker": "PEP",
+      "weight": 4.56,
+      "shares": 2027967
+    },
+    {
+      "ticker": "JNJ",
+      "weight": 4.42,
+      "shares": 1249409
+    },
+    {
+      "ticker": "FOX",
+      "weight": 4.28,
+      "shares": 5566518
+    },
+    {
+      "ticker": "PG",
+      "weight": 4.04,
+      "shares": 1931131
+    },
+    {
+      "ticker": "UHAL.B",
+      "weight": 3.91,
+      "shares": 6048331
+    },
+    {
+      "ticker": "RS",
+      "weight": 3.05,
+      "shares": 693126
+    },
+    {
+      "ticker": "COP",
+      "weight": 3.02,
+      "shares": 1581521
+    },
+    {
+      "ticker": "FANG",
+      "weight": 2.88,
+      "shares": 1003970
+    },
+    {
+      "ticker": "CTSH",
+      "weight": 2.67,
+      "shares": 3008138
+    },
+    {
+      "ticker": "NWSA",
+      "weight": 2.67,
+      "shares": 7388648
+    },
+    {
+      "ticker": "EOG",
+      "weight": 2.56,
+      "shares": 1221843
+    },
+    {
+      "ticker": "INGR",
+      "weight": 2.35,
+      "shares": 1440258
+    },
+    {
+      "ticker": "TSN",
+      "weight": 2.34,
+      "shares": 2514870
+    },
+    {
+      "ticker": "KO",
+      "weight": 2.31,
+      "shares": 2098755
+    },
+    {
+      "ticker": "BRK.B",
+      "weight": 2.18,
+      "shares": 314981
+    },
+    {
+      "ticker": "LHX",
+      "weight": 2.04,
+      "shares": 407875
+    },
+    {
+      "ticker": "EBAY",
+      "weight": 2.02,
+      "shares": 1529194
+    },
+    {
+      "ticker": "KVUE",
+      "weight": 1.98,
+      "shares": 7932459
+    },
+    {
+      "ticker": "NOC",
+      "weight": 1.92,
+      "shares": 194173
+    },
+    {
+      "ticker": "DIS",
+      "weight": 1.88,
+      "shares": 1347536
+    },
+    {
+      "ticker": "LMT",
+      "weight": 1.87,
+      "shares": 213628
+    },
+    {
+      "ticker": "AWI",
+      "weight": 1.77,
+      "shares": 741937
+    },
+    {
+      "ticker": "OLN",
+      "weight": 1.76,
+      "shares": 4092211
+    },
+    {
+      "ticker": "EWY",
+      "weight": 1.75,
+      "shares": 980605
+    },
+    {
+      "ticker": "STT",
+      "weight": 1.66,
+      "shares": 909191
+    },
+    {
+      "ticker": "TLN",
+      "weight": 1.66,
+      "shares": 359900
+    },
+    {
+      "ticker": "PYPL",
+      "weight": 1.5,
+      "shares": 2290642
+    },
+    {
+      "ticker": "ELV",
+      "weight": 1.42,
+      "shares": 334315
+    },
+    {
+      "ticker": "SYY",
+      "weight": 1.27,
+      "shares": 1234872
+    },
+    {
+      "ticker": "DAR",
+      "weight": 1.26,
+      "shares": 1403668
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 7.34
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.19
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.93
+        },
+        {
+          "ticker": "SYY",
+          "weight": 6.89
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.44
+        },
+        {
+          "ticker": "DIS",
+          "weight": 6.18
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 6.13
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.7
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 5.35
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.11
+        },
+        {
+          "ticker": "KO",
+          "weight": 5.08
+        },
+        {
+          "ticker": "FOX",
+          "weight": 4.46
+        },
+        {
+          "ticker": "STT",
+          "weight": 4.41
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.88
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.51
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.37
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.11
+        },
+        {
+          "ticker": "CNQ",
+          "weight": 3.06
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.0
+        },
+        {
+          "ticker": "HUN",
+          "weight": 2.87
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "PEP",
+          "weight": 9.07
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.97
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.74
+        },
+        {
+          "ticker": "CNQ",
+          "weight": 6.33
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.95
+        },
+        {
+          "ticker": "SYY",
+          "weight": 5.8
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 5.67
+        },
+        {
+          "ticker": "DIS",
+          "weight": 5.14
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.94
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.74
+        },
+        {
+          "ticker": "KO",
+          "weight": 4.72
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.18
+        },
+        {
+          "ticker": "FOX",
+          "weight": 4.14
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.97
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.67
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.6
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.46
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.25
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.83
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.82
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "PEP",
+          "weight": 8.76
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.97
+        },
+        {
+          "ticker": "CNQ",
+          "weight": 7.93
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.54
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.84
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.63
+        },
+        {
+          "ticker": "SYY",
+          "weight": 5.56
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.92
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.88
+        },
+        {
+          "ticker": "DIS",
+          "weight": 4.71
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.61
+        },
+        {
+          "ticker": "KO",
+          "weight": 4.35
+        },
+        {
+          "ticker": "FOX",
+          "weight": 4.15
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.88
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.74
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.65
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.29
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.02
+        },
+        {
+          "ticker": "TSN",
+          "weight": 2.81
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.75
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "PEP",
+          "weight": 9.42
+        },
+        {
+          "ticker": "CNQ",
+          "weight": 8.75
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.37
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.49
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.39
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 6.37
+        },
+        {
+          "ticker": "KO",
+          "weight": 4.61
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.6
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.59
+        },
+        {
+          "ticker": "SYY",
+          "weight": 4.57
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.4
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.99
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.96
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.6
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.58
+        },
+        {
+          "ticker": "DIS",
+          "weight": 3.34
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.24
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.1
+        },
+        {
+          "ticker": "TSN",
+          "weight": 2.92
+        },
+        {
+          "ticker": "BNY",
+          "weight": 2.72
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.58
+        },
+        {
+          "ticker": "PEP",
+          "weight": 8.55
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.16
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.92
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.89
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.63
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 5.08
+        },
+        {
+          "ticker": "KO",
+          "weight": 4.71
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.6
+        },
+        {
+          "ticker": "SYY",
+          "weight": 4.55
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.37
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.3
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.71
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.65
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.5
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.12
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.02
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.99
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.9
+        },
+        {
+          "ticker": "RS",
+          "weight": 2.78
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.73
+        },
+        {
+          "ticker": "PEP",
+          "weight": 9.96
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.01
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.36
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.16
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 5.33
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.21
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 4.92
+        },
+        {
+          "ticker": "SYY",
+          "weight": 4.88
+        },
+        {
+          "ticker": "KO",
+          "weight": 4.87
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 3.82
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.6
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 3.6
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.52
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 3.1
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.06
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.03
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.0
+        },
+        {
+          "ticker": "INGR",
+          "weight": 2.92
+        },
+        {
+          "ticker": "NOC",
+          "weight": 2.92
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 11.88
+        },
+        {
+          "ticker": "PEP",
+          "weight": 9.85
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.3
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.44
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 6.03
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.01
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 5.51
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.11
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 4.15
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.15
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.03
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.98
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.54
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.44
+        },
+        {
+          "ticker": "NOC",
+          "weight": 3.29
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.1
+        },
+        {
+          "ticker": "TSN",
+          "weight": 3.1
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.05
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.05
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 2.99
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.56
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.98
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.89
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.6
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.51
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 5.47
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.47
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.32
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.61
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.57
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.57
+        },
+        {
+          "ticker": "STT",
+          "weight": 4.06
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.79
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 3.74
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.68
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.37
+        },
+        {
+          "ticker": "NOC",
+          "weight": 3.34
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.26
+        },
+        {
+          "ticker": "COP",
+          "weight": 3.11
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.1
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.23
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.05
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.78
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.24
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.79
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 5.59
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.11
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 4.79
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.74
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.67
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.57
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.24
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.96
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.83
+        },
+        {
+          "ticker": "PXD-OLD",
+          "weight": 3.76
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 3.47
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.35
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.17
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.83
+        },
+        {
+          "ticker": "EOG",
+          "weight": 2.82
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 11.79
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.05
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.93
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.58
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.63
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.02
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.87
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 4.85
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.69
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.59
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.58
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 4.42
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.87
+        },
+        {
+          "ticker": "PXD-OLD",
+          "weight": 3.67
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.54
+        },
+        {
+          "ticker": "WFRD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.35
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.28
+        },
+        {
+          "ticker": "OLN",
+          "weight": 3.07
+        },
+        {
+          "ticker": "EOG",
+          "weight": 2.71
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 13.91
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.99
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.74
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.18
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.53
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.53
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.18
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 4.98
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.85
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.6
+        },
+        {
+          "ticker": "PXD-OLD",
+          "weight": 4.17
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.59
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.46
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.39
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.33
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.21
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.13
+        },
+        {
+          "ticker": "COP",
+          "weight": 3.11
+        },
+        {
+          "ticker": "EOG",
+          "weight": 3.08
+        },
+        {
+          "ticker": "OLN",
+          "weight": 3.07
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 13.23
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.32
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.26
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 7.05
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.87
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.83
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 5.55
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.28
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.0
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.58
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.58
+        },
+        {
+          "ticker": "PXD-OLD",
+          "weight": 3.39
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.3
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.26
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.21
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.21
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.18
+        },
+        {
+          "ticker": "OLN",
+          "weight": 3.11
+        },
+        {
+          "ticker": "EOG",
+          "weight": 2.92
+        },
+        {
+          "ticker": "COP",
+          "weight": 2.85
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 14.86
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.65
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.2
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 6.15
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.89
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.64
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.17
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.95
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.68
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.3
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.76
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.69
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.4
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.34
+        },
+        {
+          "ticker": "OLN",
+          "weight": 3.27
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.24
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.09
+        },
+        {
+          "ticker": "COP",
+          "weight": 2.99
+        },
+        {
+          "ticker": "EOG",
+          "weight": 2.97
+        },
+        {
+          "ticker": "BNY",
+          "weight": 2.78
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 14.05
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.18
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.68
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.82
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.68
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.5
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.41
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 5.37
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.47
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.83
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.78
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.74
+        },
+        {
+          "ticker": "FOX",
+          "weight": 3.74
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.33
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.2
+        },
+        {
+          "ticker": "EOG",
+          "weight": 3.01
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 2.95
+        },
+        {
+          "ticker": "BNY",
+          "weight": 2.8
+        },
+        {
+          "ticker": "COP",
+          "weight": 2.78
+        },
+        {
+          "ticker": "ELV",
+          "weight": 2.7
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 14.43
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.04
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 6.8
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.67
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.52
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.33
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.33
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.24
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.85
+        },
+        {
+          "ticker": "FOX",
+          "weight": 4.64
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 4.02
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.93
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.88
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.8
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.43
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.29
+        },
+        {
+          "ticker": "EOG",
+          "weight": 3.02
+        },
+        {
+          "ticker": "BNY",
+          "weight": 2.95
+        },
+        {
+          "ticker": "NOC",
+          "weight": 2.93
+        },
+        {
+          "ticker": "KVUE",
+          "weight": 2.91
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 14.51
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.34
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 6.43
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.88
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 5.86
+        },
+        {
+          "ticker": "FOX",
+          "weight": 5.35
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.24
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.2
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 5.07
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.14
+        },
+        {
+          "ticker": "STT",
+          "weight": 3.88
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.75
+        },
+        {
+          "ticker": "FANG",
+          "weight": 3.7
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.7
+        },
+        {
+          "ticker": "EOG",
+          "weight": 3.6
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.47
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.25
+        },
+        {
+          "ticker": "COP",
+          "weight": 3.03
+        },
+        {
+          "ticker": "KVUE",
+          "weight": 2.88
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.72
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 14.82
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.98
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 6.51
+        },
+        {
+          "ticker": "PG",
+          "weight": 6.36
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 6.26
+        },
+        {
+          "ticker": "FOX",
+          "weight": 6.11
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.6
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.73
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.1
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.02
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.89
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.87
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.81
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.55
+        },
+        {
+          "ticker": "KVUE",
+          "weight": 3.5
+        },
+        {
+          "ticker": "COP",
+          "weight": 3.13
+        },
+        {
+          "ticker": "EOG",
+          "weight": 3.01
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.97
+        },
+        {
+          "ticker": "TSN",
+          "weight": 2.95
+        },
+        {
+          "ticker": "KO",
+          "weight": 2.83
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.83
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.17
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 7.7
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 6.01
+        },
+        {
+          "ticker": "FOX",
+          "weight": 5.94
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.94
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.14
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.92
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.46
+        },
+        {
+          "ticker": "RS",
+          "weight": 4.35
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.2
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.95
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.85
+        },
+        {
+          "ticker": "DIS",
+          "weight": 3.26
+        },
+        {
+          "ticker": "KVUE",
+          "weight": 3.16
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.93
+        },
+        {
+          "ticker": "KO",
+          "weight": 2.9
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 2.81
+        },
+        {
+          "ticker": "EOG",
+          "weight": 2.78
+        },
+        {
+          "ticker": "TSN",
+          "weight": 2.7
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.8
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.2
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 7.67
+        },
+        {
+          "ticker": "FOX",
+          "weight": 6.37
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.71
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.66
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.55
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.44
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.57
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 4.37
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.24
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.78
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.38
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.09
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.98
+        },
+        {
+          "ticker": "TLN",
+          "weight": 2.93
+        },
+        {
+          "ticker": "COP",
+          "weight": 2.88
+        },
+        {
+          "ticker": "AWI",
+          "weight": 2.85
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.78
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 2.75
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "CNQ",
+          "weight": 12.36
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.06
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 7.65
+        },
+        {
+          "ticker": "FOX",
+          "weight": 7.03
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.89
+        },
+        {
+          "ticker": "PEP",
+          "weight": 5.67
+        },
+        {
+          "ticker": "PG",
+          "weight": 5.35
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 5.27
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 5.04
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.82
+        },
+        {
+          "ticker": "RS",
+          "weight": 3.89
+        },
+        {
+          "ticker": "NWSA",
+          "weight": 3.72
+        },
+        {
+          "ticker": "INGR",
+          "weight": 3.06
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.06
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.95
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.92
+        },
+        {
+          "ticker": "KO",
+          "weight": 2.86
+        },
+        {
+          "ticker": "TSN",
+          "weight": 2.83
+        },
+        {
+          "ticker": "COP",
+          "weight": 2.82
+        },
+        {
+          "ticker": "AWI",
+          "weight": 2.75
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:38:57Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=YAM",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

@@ -1,0 +1,756 @@
+{
+  "id": "nelson-peltz",
+  "holdings": [
+    {
+      "ticker": "JHG",
+      "weight": 42.46,
+      "shares": 31867800
+    },
+    {
+      "ticker": "GE",
+      "weight": 29.66,
+      "shares": 4030765
+    },
+    {
+      "ticker": "SOLV",
+      "weight": 13.95,
+      "shares": 8236753
+    },
+    {
+      "ticker": "FERG",
+      "weight": 6.58,
+      "shares": 1086357
+    },
+    {
+      "ticker": "WEN",
+      "weight": 5.49,
+      "shares": 30446022
+    },
+    {
+      "ticker": "IVZ",
+      "weight": 1.87,
+      "shares": 2970944
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "SYY",
+          "weight": 19.18
+        },
+        {
+          "ticker": "FERG",
+          "weight": 18.68
+        },
+        {
+          "ticker": "PG",
+          "weight": 14.23
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 12.71
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 11.3
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 6.49
+        },
+        {
+          "ticker": "WEN",
+          "weight": 6.38
+        },
+        {
+          "ticker": "JHG",
+          "weight": 6.03
+        },
+        {
+          "ticker": "GE",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 21.29
+        },
+        {
+          "ticker": "SYY",
+          "weight": 16.25
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 13.86
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 11.17
+        },
+        {
+          "ticker": "JHG",
+          "weight": 9.63
+        },
+        {
+          "ticker": "PG",
+          "weight": 9.14
+        },
+        {
+          "ticker": "WEN",
+          "weight": 7.29
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 6.31
+        },
+        {
+          "ticker": "GE",
+          "weight": 5.07
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 22.05
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 13.9
+        },
+        {
+          "ticker": "SYY",
+          "weight": 13.06
+        },
+        {
+          "ticker": "JHG",
+          "weight": 12.18
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 11.88
+        },
+        {
+          "ticker": "PG",
+          "weight": 9.16
+        },
+        {
+          "ticker": "WEN",
+          "weight": 6.83
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 5.78
+        },
+        {
+          "ticker": "GE",
+          "weight": 5.16
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 27.36
+        },
+        {
+          "ticker": "JHG",
+          "weight": 16.05
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 16.0
+        },
+        {
+          "ticker": "SYY",
+          "weight": 13.66
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 13.61
+        },
+        {
+          "ticker": "WEN",
+          "weight": 8.17
+        },
+        {
+          "ticker": "GE",
+          "weight": 5.15
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 26.22
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 23.63
+        },
+        {
+          "ticker": "JHG",
+          "weight": 18.78
+        },
+        {
+          "ticker": "SYY",
+          "weight": 15.81
+        },
+        {
+          "ticker": "WEN",
+          "weight": 9.36
+        },
+        {
+          "ticker": "GE",
+          "weight": 6.2
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 31.22
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 19.78
+        },
+        {
+          "ticker": "JHG",
+          "weight": 16.48
+        },
+        {
+          "ticker": "SYY",
+          "weight": 16.38
+        },
+        {
+          "ticker": "WEN",
+          "weight": 10.51
+        },
+        {
+          "ticker": "GE",
+          "weight": 5.63
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 30.42
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 20.12
+        },
+        {
+          "ticker": "JHG",
+          "weight": 17.05
+        },
+        {
+          "ticker": "SYY",
+          "weight": 13.37
+        },
+        {
+          "ticker": "WEN",
+          "weight": 12.48
+        },
+        {
+          "ticker": "GE",
+          "weight": 6.57
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "FERG",
+          "weight": 29.24
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 20.58
+        },
+        {
+          "ticker": "DIS",
+          "weight": 16.1
+        },
+        {
+          "ticker": "JHG",
+          "weight": 15.38
+        },
+        {
+          "ticker": "WEN",
+          "weight": 11.76
+        },
+        {
+          "ticker": "GE",
+          "weight": 6.93
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 22.63
+        },
+        {
+          "ticker": "FERG",
+          "weight": 20.91
+        },
+        {
+          "ticker": "DIS",
+          "weight": 15.79
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 14.84
+        },
+        {
+          "ticker": "WEN",
+          "weight": 12.6
+        },
+        {
+          "ticker": "GE",
+          "weight": 10.27
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 2.94
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 22.39
+        },
+        {
+          "ticker": "FERG",
+          "weight": 22.28
+        },
+        {
+          "ticker": "DIS",
+          "weight": 14.79
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 14.71
+        },
+        {
+          "ticker": "WEN",
+          "weight": 11.62
+        },
+        {
+          "ticker": "GE",
+          "weight": 11.4
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 2.81
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "DIS",
+          "weight": 40.52
+        },
+        {
+          "ticker": "FERG",
+          "weight": 13.55
+        },
+        {
+          "ticker": "JHG",
+          "weight": 12.52
+        },
+        {
+          "ticker": "WEN",
+          "weight": 10.35
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 7.5
+        },
+        {
+          "ticker": "GE",
+          "weight": 6.78
+        },
+        {
+          "ticker": "ALL",
+          "weight": 6.17
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 1.39
+        },
+        {
+          "ticker": "SYY",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "DIS",
+          "weight": 41.67
+        },
+        {
+          "ticker": "JHG",
+          "weight": 13.71
+        },
+        {
+          "ticker": "FERG",
+          "weight": 11.55
+        },
+        {
+          "ticker": "WEN",
+          "weight": 8.75
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 8.64
+        },
+        {
+          "ticker": "GE",
+          "weight": 7.34
+        },
+        {
+          "ticker": "ALL",
+          "weight": 5.58
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 1.48
+        },
+        {
+          "ticker": "SYY",
+          "weight": 1.28
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "DIS",
+          "weight": 49.33
+        },
+        {
+          "ticker": "JHG",
+          "weight": 13.07
+        },
+        {
+          "ticker": "GE",
+          "weight": 8.82
+        },
+        {
+          "ticker": "WEN",
+          "weight": 7.39
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 7.02
+        },
+        {
+          "ticker": "FERG",
+          "weight": 6.79
+        },
+        {
+          "ticker": "ALL",
+          "weight": 4.83
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 1.52
+        },
+        {
+          "ticker": "SYY",
+          "weight": 1.24
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 26.45
+        },
+        {
+          "ticker": "GE",
+          "weight": 15.78
+        },
+        {
+          "ticker": "WEN",
+          "weight": 13.15
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 10.02
+        },
+        {
+          "ticker": "FERG",
+          "weight": 9.32
+        },
+        {
+          "ticker": "ALL",
+          "weight": 7.91
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 6.98
+        },
+        {
+          "ticker": "DIS",
+          "weight": 6.47
+        },
+        {
+          "ticker": "GEHC",
+          "weight": 2.57
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 31.46
+        },
+        {
+          "ticker": "GE",
+          "weight": 19.71
+        },
+        {
+          "ticker": "WEN",
+          "weight": 13.86
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 12.89
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 10.55
+        },
+        {
+          "ticker": "FERG",
+          "weight": 6.55
+        },
+        {
+          "ticker": "ALL",
+          "weight": 3.02
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.96
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 34.93
+        },
+        {
+          "ticker": "GE",
+          "weight": 17.32
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 14.41
+        },
+        {
+          "ticker": "WEN",
+          "weight": 12.82
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 10.44
+        },
+        {
+          "ticker": "FERG",
+          "weight": 5.53
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.86
+        },
+        {
+          "ticker": "ALL",
+          "weight": 1.52
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 30.84
+        },
+        {
+          "ticker": "GE",
+          "weight": 21.59
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 17.23
+        },
+        {
+          "ticker": "WEN",
+          "weight": 11.91
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 9.41
+        },
+        {
+          "ticker": "FERG",
+          "weight": 4.33
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.78
+        },
+        {
+          "ticker": "ALL",
+          "weight": 1.76
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 33.16
+        },
+        {
+          "ticker": "GE",
+          "weight": 27.8
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 17.2
+        },
+        {
+          "ticker": "WEN",
+          "weight": 9.32
+        },
+        {
+          "ticker": "FERG",
+          "weight": 6.34
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 6.18
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 34.53
+        },
+        {
+          "ticker": "GE",
+          "weight": 29.52
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 15.04
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 8.17
+        },
+        {
+          "ticker": "WEN",
+          "weight": 6.79
+        },
+        {
+          "ticker": "FERG",
+          "weight": 5.94
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "JHG",
+          "weight": 38.06
+        },
+        {
+          "ticker": "GE",
+          "weight": 31.17
+        },
+        {
+          "ticker": "SOLV",
+          "weight": 16.38
+        },
+        {
+          "ticker": "WEN",
+          "weight": 6.36
+        },
+        {
+          "ticker": "FERG",
+          "weight": 6.07
+        },
+        {
+          "ticker": "IVZ",
+          "weight": 1.96
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:55Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=TF",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

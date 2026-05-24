@@ -1,0 +1,1795 @@
+{
+  "id": "david-tepper",
+  "holdings": [
+    {
+      "ticker": "AMZN",
+      "weight": 16.04,
+      "shares": 4320000
+    },
+    {
+      "ticker": "MU",
+      "weight": 10.03,
+      "shares": 1665000
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 8.86,
+      "shares": 1732700
+    },
+    {
+      "ticker": "UBER",
+      "weight": 8.12,
+      "shares": 6332720
+    },
+    {
+      "ticker": "TSM",
+      "weight": 8.0,
+      "shares": 1327500
+    },
+    {
+      "ticker": "BABA",
+      "weight": 7.75,
+      "shares": 3465000
+    },
+    {
+      "ticker": "VST",
+      "weight": 5.42,
+      "shares": 2022332
+    },
+    {
+      "ticker": "EWY",
+      "weight": 5.27,
+      "shares": 2400000
+    },
+    {
+      "ticker": "NVDA",
+      "weight": 4.58,
+      "shares": 1471500
+    },
+    {
+      "ticker": "NRG",
+      "weight": 4.52,
+      "shares": 1734442
+    },
+    {
+      "ticker": "META",
+      "weight": 4.45,
+      "shares": 436500
+    },
+    {
+      "ticker": "SNDK",
+      "weight": 3.18,
+      "shares": 281250
+    },
+    {
+      "ticker": "GLW",
+      "weight": 2.74,
+      "shares": 1129500
+    },
+    {
+      "ticker": "WHR",
+      "weight": 1.87,
+      "shares": 1950000
+    },
+    {
+      "ticker": "PDD",
+      "weight": 1.64,
+      "shares": 900000
+    },
+    {
+      "ticker": "LRCX",
+      "weight": 1.46,
+      "shares": 382500
+    },
+    {
+      "ticker": "BIDU",
+      "weight": 1.38,
+      "shares": 692100
+    },
+    {
+      "ticker": "LHX",
+      "weight": 1.22,
+      "shares": 198000
+    },
+    {
+      "ticker": "RTX",
+      "weight": 1.17,
+      "shares": 342000
+    },
+    {
+      "ticker": "ASML",
+      "weight": 1.16,
+      "shares": 49500
+    },
+    {
+      "ticker": "QCOM",
+      "weight": 1.14,
+      "shares": 498613
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 12.14
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.88
+        },
+        {
+          "ticker": "META",
+          "weight": 10.14
+        },
+        {
+          "ticker": "TMUS",
+          "weight": 9.93
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.04
+        },
+        {
+          "ticker": "PCG",
+          "weight": 6.34
+        },
+        {
+          "ticker": "BABA",
+          "weight": 4.89
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.23
+        },
+        {
+          "ticker": "XLE",
+          "weight": 4.02
+        },
+        {
+          "ticker": "HCA",
+          "weight": 3.39
+        },
+        {
+          "ticker": "ET",
+          "weight": 3.32
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 3.19
+        },
+        {
+          "ticker": "EXE",
+          "weight": 3.06
+        },
+        {
+          "ticker": "PARA-OLD",
+          "weight": 2.94
+        },
+        {
+          "ticker": "PSFE",
+          "weight": 2.56
+        },
+        {
+          "ticker": "XOP",
+          "weight": 2.11
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 2.05
+        },
+        {
+          "ticker": "DHI",
+          "weight": 1.96
+        },
+        {
+          "ticker": "UNH",
+          "weight": 1.95
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 1.88
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 13.15
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 11.78
+        },
+        {
+          "ticker": "META",
+          "weight": 11.47
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.02
+        },
+        {
+          "ticker": "TMUS",
+          "weight": 9.99
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.9
+        },
+        {
+          "ticker": "PCG",
+          "weight": 4.54
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.64
+        },
+        {
+          "ticker": "XLE",
+          "weight": 3.43
+        },
+        {
+          "ticker": "ET",
+          "weight": 3.1
+        },
+        {
+          "ticker": "DHI",
+          "weight": 2.83
+        },
+        {
+          "ticker": "PSFE",
+          "weight": 2.82
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.79
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.45
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 2.32
+        },
+        {
+          "ticker": "HCA",
+          "weight": 2.29
+        },
+        {
+          "ticker": "PHM",
+          "weight": 2.25
+        },
+        {
+          "ticker": "MOS",
+          "weight": 2.16
+        },
+        {
+          "ticker": "UNH",
+          "weight": 2.05
+        },
+        {
+          "ticker": "FCX",
+          "weight": 2.04
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 12.6
+        },
+        {
+          "ticker": "META",
+          "weight": 12.47
+        },
+        {
+          "ticker": "TMUS",
+          "weight": 10.45
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 7.4
+        },
+        {
+          "ticker": "OXY",
+          "weight": 6.32
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.28
+        },
+        {
+          "ticker": "M",
+          "weight": 5.09
+        },
+        {
+          "ticker": "PCG",
+          "weight": 4.13
+        },
+        {
+          "ticker": "XLE",
+          "weight": 3.7
+        },
+        {
+          "ticker": "DHI",
+          "weight": 3.23
+        },
+        {
+          "ticker": "XOP",
+          "weight": 3.15
+        },
+        {
+          "ticker": "ET",
+          "weight": 3.12
+        },
+        {
+          "ticker": "HCA",
+          "weight": 3.02
+        },
+        {
+          "ticker": "GT",
+          "weight": 2.96
+        },
+        {
+          "ticker": "ALIT",
+          "weight": 2.96
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.81
+        },
+        {
+          "ticker": "MOS",
+          "weight": 2.73
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 2.7
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.5
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 12.06
+        },
+        {
+          "ticker": "META",
+          "weight": 11.43
+        },
+        {
+          "ticker": "M",
+          "weight": 8.16
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.91
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 7.2
+        },
+        {
+          "ticker": "OXY",
+          "weight": 5.91
+        },
+        {
+          "ticker": "PCG",
+          "weight": 4.68
+        },
+        {
+          "ticker": "TMUS",
+          "weight": 4.57
+        },
+        {
+          "ticker": "GM",
+          "weight": 4.07
+        },
+        {
+          "ticker": "DHI",
+          "weight": 3.69
+        },
+        {
+          "ticker": "XLE",
+          "weight": 3.69
+        },
+        {
+          "ticker": "GT",
+          "weight": 3.38
+        },
+        {
+          "ticker": "EQT",
+          "weight": 3.29
+        },
+        {
+          "ticker": "ET",
+          "weight": 3.14
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.08
+        },
+        {
+          "ticker": "XOP",
+          "weight": 2.96
+        },
+        {
+          "ticker": "MOS",
+          "weight": 2.92
+        },
+        {
+          "ticker": "UNH",
+          "weight": 2.77
+        },
+        {
+          "ticker": "PHM",
+          "weight": 2.56
+        },
+        {
+          "ticker": "KSS",
+          "weight": 2.52
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 14.45
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 12.05
+        },
+        {
+          "ticker": "META",
+          "weight": 8.61
+        },
+        {
+          "ticker": "M",
+          "weight": 8.38
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.12
+        },
+        {
+          "ticker": "OXY",
+          "weight": 7.01
+        },
+        {
+          "ticker": "EQT",
+          "weight": 5.89
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.91
+        },
+        {
+          "ticker": "ET",
+          "weight": 4.48
+        },
+        {
+          "ticker": "UNH",
+          "weight": 3.73
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.13
+        },
+        {
+          "ticker": "PCG",
+          "weight": 3.12
+        },
+        {
+          "ticker": "SYY",
+          "weight": 2.66
+        },
+        {
+          "ticker": "AR",
+          "weight": 2.62
+        },
+        {
+          "ticker": "MOS",
+          "weight": 2.41
+        },
+        {
+          "ticker": "XLE",
+          "weight": 2.31
+        },
+        {
+          "ticker": "GT",
+          "weight": 2.02
+        },
+        {
+          "ticker": "KSS",
+          "weight": 1.84
+        },
+        {
+          "ticker": "XOP",
+          "weight": 1.66
+        },
+        {
+          "ticker": "FCX",
+          "weight": 1.6
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 14.67
+        },
+        {
+          "ticker": "META",
+          "weight": 10.81
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.68
+        },
+        {
+          "ticker": "CEG",
+          "weight": 10.38
+        },
+        {
+          "ticker": "M",
+          "weight": 7.37
+        },
+        {
+          "ticker": "ET",
+          "weight": 6.87
+        },
+        {
+          "ticker": "EQT",
+          "weight": 6.57
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.17
+        },
+        {
+          "ticker": "KSS",
+          "weight": 4.49
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.31
+        },
+        {
+          "ticker": "OXY",
+          "weight": 3.45
+        },
+        {
+          "ticker": "AR",
+          "weight": 2.93
+        },
+        {
+          "ticker": "SYY",
+          "weight": 2.41
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.21
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.14
+        },
+        {
+          "ticker": "APTV",
+          "weight": 1.5
+        },
+        {
+          "ticker": "CHKEZ",
+          "weight": 1.4
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.37
+        },
+        {
+          "ticker": "EPD",
+          "weight": 1.27
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "CEG",
+          "weight": 16.41
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 14.39
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 12.29
+        },
+        {
+          "ticker": "META",
+          "weight": 8.91
+        },
+        {
+          "ticker": "ET",
+          "weight": 8.44
+        },
+        {
+          "ticker": "EQT",
+          "weight": 7.72
+        },
+        {
+          "ticker": "M",
+          "weight": 7.05
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.68
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.1
+        },
+        {
+          "ticker": "AR",
+          "weight": 2.86
+        },
+        {
+          "ticker": "CHKEZ",
+          "weight": 2.18
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.05
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.99
+        },
+        {
+          "ticker": "EPD",
+          "weight": 1.39
+        },
+        {
+          "ticker": "CHKEL",
+          "weight": 1.33
+        },
+        {
+          "ticker": "AMLP",
+          "weight": 1.11
+        },
+        {
+          "ticker": "SYY",
+          "weight": 1.06
+        },
+        {
+          "ticker": "HCA",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "CEG",
+          "weight": 16.09
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 13.78
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.81
+        },
+        {
+          "ticker": "M",
+          "weight": 9.56
+        },
+        {
+          "ticker": "ET",
+          "weight": 9.42
+        },
+        {
+          "ticker": "EQT",
+          "weight": 6.71
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.19
+        },
+        {
+          "ticker": "META",
+          "weight": 5.38
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.39
+        },
+        {
+          "ticker": "HCA",
+          "weight": 3.41
+        },
+        {
+          "ticker": "CRM",
+          "weight": 3.1
+        },
+        {
+          "ticker": "AR",
+          "weight": 3.01
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.36
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.02
+        },
+        {
+          "ticker": "EXE",
+          "weight": 1.86
+        },
+        {
+          "ticker": "CHKEZ",
+          "weight": 1.53
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "GOOG",
+          "weight": 12.49
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 11.75
+        },
+        {
+          "ticker": "UBER",
+          "weight": 10.83
+        },
+        {
+          "ticker": "CEG",
+          "weight": 9.34
+        },
+        {
+          "ticker": "META",
+          "weight": 8.45
+        },
+        {
+          "ticker": "ET",
+          "weight": 7.25
+        },
+        {
+          "ticker": "M",
+          "weight": 5.97
+        },
+        {
+          "ticker": "EQT",
+          "weight": 4.63
+        },
+        {
+          "ticker": "FDX",
+          "weight": 4.55
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.27
+        },
+        {
+          "ticker": "UNH",
+          "weight": 4.03
+        },
+        {
+          "ticker": "CRM",
+          "weight": 3.3
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 2.37
+        },
+        {
+          "ticker": "HCA",
+          "weight": 2.14
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 1.77
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.71
+        },
+        {
+          "ticker": "AR",
+          "weight": 1.67
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.18
+        },
+        {
+          "ticker": "MTCH",
+          "weight": 1.15
+        },
+        {
+          "ticker": "ARKK",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "NVDA",
+          "weight": 9.43
+        },
+        {
+          "ticker": "META",
+          "weight": 9.42
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.23
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.0
+        },
+        {
+          "ticker": "BABA",
+          "weight": 8.15
+        },
+        {
+          "ticker": "UBER",
+          "weight": 6.74
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.11
+        },
+        {
+          "ticker": "AMD",
+          "weight": 5.74
+        },
+        {
+          "ticker": "INTC",
+          "weight": 4.94
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 4.81
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.91
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 3.81
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.52
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.72
+        },
+        {
+          "ticker": "MRVL",
+          "weight": 2.28
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 2.27
+        },
+        {
+          "ticker": "UNH",
+          "weight": 2.1
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 2.04
+        },
+        {
+          "ticker": "MU",
+          "weight": 1.93
+        },
+        {
+          "ticker": "EQT",
+          "weight": 1.85
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 12.51
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.03
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.18
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 9.52
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.75
+        },
+        {
+          "ticker": "UBER",
+          "weight": 7.12
+        },
+        {
+          "ticker": "BABA",
+          "weight": 6.67
+        },
+        {
+          "ticker": "AMD",
+          "weight": 5.0
+        },
+        {
+          "ticker": "INTC",
+          "weight": 4.75
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.68
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.08
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.93
+        },
+        {
+          "ticker": "PDD",
+          "weight": 2.93
+        },
+        {
+          "ticker": "UNH",
+          "weight": 2.15
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.03
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 1.9
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.86
+        },
+        {
+          "ticker": "EQT",
+          "weight": 1.79
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.6
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.51
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 12.79
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.49
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 11.73
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 7.65
+        },
+        {
+          "ticker": "UBER",
+          "weight": 7.22
+        },
+        {
+          "ticker": "BABA",
+          "weight": 6.59
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.33
+        },
+        {
+          "ticker": "AMD",
+          "weight": 5.79
+        },
+        {
+          "ticker": "INTC",
+          "weight": 4.52
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.22
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 2.83
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 2.73
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.64
+        },
+        {
+          "ticker": "PDD",
+          "weight": 2.21
+        },
+        {
+          "ticker": "CZR",
+          "weight": 2.06
+        },
+        {
+          "ticker": "UNH",
+          "weight": 2.06
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.02
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.8
+        },
+        {
+          "ticker": "M",
+          "weight": 1.75
+        },
+        {
+          "ticker": "EQT",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 14.03
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 11.9
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.15
+        },
+        {
+          "ticker": "META",
+          "weight": 9.4
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 6.88
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.44
+        },
+        {
+          "ticker": "AMD",
+          "weight": 5.07
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 4.98
+        },
+        {
+          "ticker": "PDD",
+          "weight": 4.21
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 3.26
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.04
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.0
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 2.88
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.86
+        },
+        {
+          "ticker": "FXI",
+          "weight": 2.64
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.47
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.34
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.93
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.8
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.73
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 14.4
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 12.79
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.06
+        },
+        {
+          "ticker": "META",
+          "weight": 8.98
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.73
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 5.38
+        },
+        {
+          "ticker": "PDD",
+          "weight": 4.92
+        },
+        {
+          "ticker": "AMD",
+          "weight": 4.24
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.81
+        },
+        {
+          "ticker": "FXI",
+          "weight": 3.44
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.19
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.14
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.94
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 2.74
+        },
+        {
+          "ticker": "ET",
+          "weight": 2.38
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.31
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.21
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 2.14
+        },
+        {
+          "ticker": "JD",
+          "weight": 2.12
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.08
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 18.65
+        },
+        {
+          "ticker": "PDD",
+          "weight": 12.57
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.48
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.34
+        },
+        {
+          "ticker": "META",
+          "weight": 6.28
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.53
+        },
+        {
+          "ticker": "JD",
+          "weight": 5.14
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 4.71
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 3.53
+        },
+        {
+          "ticker": "AMD",
+          "weight": 3.28
+        },
+        {
+          "ticker": "FXI",
+          "weight": 3.25
+        },
+        {
+          "ticker": "VST",
+          "weight": 2.65
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 2.64
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 2.39
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.25
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.93
+        },
+        {
+          "ticker": "MU",
+          "weight": 1.92
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.86
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.82
+        },
+        {
+          "ticker": "FDX",
+          "weight": 1.8
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 17.96
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.19
+        },
+        {
+          "ticker": "PDD",
+          "weight": 9.29
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.32
+        },
+        {
+          "ticker": "VST",
+          "weight": 6.66
+        },
+        {
+          "ticker": "JD",
+          "weight": 6.48
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.4
+        },
+        {
+          "ticker": "META",
+          "weight": 5.13
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 4.17
+        },
+        {
+          "ticker": "FXI",
+          "weight": 3.62
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 3.11
+        },
+        {
+          "ticker": "NRG",
+          "weight": 2.92
+        },
+        {
+          "ticker": "AMD",
+          "weight": 2.59
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.39
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 2.3
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 2.2
+        },
+        {
+          "ticker": "ASML",
+          "weight": 1.99
+        },
+        {
+          "ticker": "MU",
+          "weight": 1.8
+        },
+        {
+          "ticker": "FDX",
+          "weight": 1.76
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.72
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 23.92
+        },
+        {
+          "ticker": "PDD",
+          "weight": 10.14
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.36
+        },
+        {
+          "ticker": "JD",
+          "weight": 6.49
+        },
+        {
+          "ticker": "META",
+          "weight": 6.21
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.16
+        },
+        {
+          "ticker": "VST",
+          "weight": 5.29
+        },
+        {
+          "ticker": "UBER",
+          "weight": 4.57
+        },
+        {
+          "ticker": "FXI",
+          "weight": 3.94
+        },
+        {
+          "ticker": "NRG",
+          "weight": 3.84
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.75
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.74
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 2.1
+        },
+        {
+          "ticker": "ORCL",
+          "weight": 1.92
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.81
+        },
+        {
+          "ticker": "UNH",
+          "weight": 1.8
+        },
+        {
+          "ticker": "DB",
+          "weight": 1.76
+        },
+        {
+          "ticker": "GLW",
+          "weight": 1.56
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 1.4
+        },
+        {
+          "ticker": "LHX",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 14.1
+        },
+        {
+          "ticker": "UNH",
+          "weight": 13.45
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.43
+        },
+        {
+          "ticker": "VST",
+          "weight": 6.14
+        },
+        {
+          "ticker": "NRG",
+          "weight": 5.59
+        },
+        {
+          "ticker": "META",
+          "weight": 5.2
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 4.87
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.69
+        },
+        {
+          "ticker": "UBER",
+          "weight": 4.52
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.38
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.08
+        },
+        {
+          "ticker": "JD",
+          "weight": 4.02
+        },
+        {
+          "ticker": "PDD",
+          "weight": 3.69
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.15
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.42
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 2.22
+        },
+        {
+          "ticker": "DB",
+          "weight": 2.07
+        },
+        {
+          "ticker": "MU",
+          "weight": 1.79
+        },
+        {
+          "ticker": "GLW",
+          "weight": 1.62
+        },
+        {
+          "ticker": "ET",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 18.99
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.04
+        },
+        {
+          "ticker": "WHR",
+          "weight": 7.12
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.84
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.57
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 5.12
+        },
+        {
+          "ticker": "NRG",
+          "weight": 4.99
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.88
+        },
+        {
+          "ticker": "META",
+          "weight": 4.48
+        },
+        {
+          "ticker": "VST",
+          "weight": 4.01
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.94
+        },
+        {
+          "ticker": "PDD",
+          "weight": 3.92
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.88
+        },
+        {
+          "ticker": "JD",
+          "weight": 3.59
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.42
+        },
+        {
+          "ticker": "AMD",
+          "weight": 2.53
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 2.26
+        },
+        {
+          "ticker": "DB",
+          "weight": 2.21
+        },
+        {
+          "ticker": "GLW",
+          "weight": 2.2
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 2.03
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 13.15
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.79
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.78
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.48
+        },
+        {
+          "ticker": "META",
+          "weight": 6.92
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.99
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.54
+        },
+        {
+          "ticker": "WHR",
+          "weight": 4.93
+        },
+        {
+          "ticker": "NRG",
+          "weight": 4.56
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.22
+        },
+        {
+          "ticker": "AAL",
+          "weight": 3.79
+        },
+        {
+          "ticker": "PDD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.42
+        },
+        {
+          "ticker": "EWY",
+          "weight": 3.18
+        },
+        {
+          "ticker": "KWEB",
+          "weight": 2.82
+        },
+        {
+          "ticker": "VST",
+          "weight": 2.66
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.64
+        },
+        {
+          "ticker": "GLW",
+          "weight": 2.4
+        },
+        {
+          "ticker": "DB",
+          "weight": 2.12
+        },
+        {
+          "ticker": "JD",
+          "weight": 2.08
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:34:26Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AM",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

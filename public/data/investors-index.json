@@ -192,6 +192,1307 @@
         "to": "2025-12-31"
       },
       "currentHoldingsCount": 20
+    },
+    {
+      "id": "bill-ackman",
+      "name": "Bill Ackman",
+      "subtitle": "Bill Ackman \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "psc"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=psc",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 7,
+      "fund": "Pershing Square Capital Management"
+    },
+    {
+      "id": "ako-capital",
+      "name": "AKO Capital",
+      "subtitle": "AKO Capital \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "AKO"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=AKO",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 23
+    },
+    {
+      "id": "alex-roepers",
+      "name": "Alex Roepers",
+      "subtitle": "Alex Roepers \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "AIM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=AIM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 11,
+      "fund": "Atlantic Investment Management"
+    },
+    {
+      "id": "bill-melinda-gates-foundation-tr",
+      "name": "Bill & Melinda Gates Foundation Trust",
+      "subtitle": "Bill & Melinda Gates Foundation Trust \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "GFT"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=GFT",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 10
+    },
+    {
+      "id": "bill-miller",
+      "name": "Bill Miller",
+      "subtitle": "Bill Miller \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "LMM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=LMM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 31,
+      "fund": "Miller Value Partners"
+    },
+    {
+      "id": "bill-nygren",
+      "name": "Bill Nygren",
+      "subtitle": "Bill Nygren \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "HA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=HA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 43,
+      "fund": "Oakmark Funds"
+    },
+    {
+      "id": "bruce-berkowitz",
+      "name": "Bruce Berkowitz",
+      "subtitle": "Bruce Berkowitz \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "fairx"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=fairx",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 5,
+      "fund": "Fairholme Capital"
+    },
+    {
+      "id": "bryan-lawrence",
+      "name": "Bryan Lawrence",
+      "subtitle": "Bryan Lawrence \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "OCL"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=OCL",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 8,
+      "fund": "Oakcliff Capital"
+    },
+    {
+      "id": "carl-icahn",
+      "name": "Carl Icahn",
+      "subtitle": "Carl Icahn \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "ic"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=ic",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 8,
+      "fund": "Icahn Capital Management"
+    },
+    {
+      "id": "chase-coleman",
+      "name": "Chase Coleman",
+      "subtitle": "Chase Coleman \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "TGM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=TGM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 23,
+      "fund": "Tiger Global Management"
+    },
+    {
+      "id": "christopher-bloomstran",
+      "name": "Christopher Bloomstran",
+      "subtitle": "Christopher Bloomstran \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "SA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=SA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17,
+      "fund": "Semper Augustus"
+    },
+    {
+      "id": "christopher-davis",
+      "name": "Christopher Davis",
+      "subtitle": "Christopher Davis \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "DAV"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=DAV",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 31,
+      "fund": "Davis Advisors"
+    },
+    {
+      "id": "chuck-akre",
+      "name": "Chuck Akre",
+      "subtitle": "Chuck Akre \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "AC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=AC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 14,
+      "fund": "Akre Capital Management"
+    },
+    {
+      "id": "clifford-sosin",
+      "name": "Clifford Sosin",
+      "subtitle": "Clifford Sosin \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "CAS"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=CAS",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 3,
+      "fund": "CAS Investment Partners"
+    },
+    {
+      "id": "daniel-loeb",
+      "name": "Daniel Loeb",
+      "subtitle": "Daniel Loeb \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "tp"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=tp",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 20,
+      "fund": "Third Point"
+    },
+    {
+      "id": "david-einhorn",
+      "name": "David Einhorn",
+      "subtitle": "David Einhorn \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "GLRE"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=GLRE",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30,
+      "fund": "Greenlight Capital"
+    },
+    {
+      "id": "david-katz",
+      "name": "David Katz",
+      "subtitle": "David Katz \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "MAVFX"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=MAVFX",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 37,
+      "fund": "Matrix Asset Advisors"
+    },
+    {
+      "id": "david-rolfe",
+      "name": "David Rolfe",
+      "subtitle": "David Rolfe \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "WP"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=WP",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 21,
+      "fund": "Wedgewood Partners"
+    },
+    {
+      "id": "david-tepper",
+      "name": "David Tepper",
+      "subtitle": "David Tepper \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "AM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=AM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 21,
+      "fund": "Appaloosa Management"
+    },
+    {
+      "id": "dennis-hong",
+      "name": "Dennis Hong",
+      "subtitle": "Dennis Hong \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "SP"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=SP",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 12,
+      "fund": "ShawSpring Partners"
+    },
+    {
+      "id": "dodge-cox-funds",
+      "name": "Dodge & Cox Funds",
+      "subtitle": "Dodge & Cox Funds \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "DAC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=DAC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 38
+    },
+    {
+      "id": "duan-yongping",
+      "name": "Duan Yongping",
+      "subtitle": "Duan Yongping \u00b7 DataRoma \u00b7 Q1 2026 (15q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "HH"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=HH",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2022-09-30",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 8,
+      "fund": "H&H International Investment"
+    },
+    {
+      "id": "first-eagle-investment-managemen",
+      "name": "First Eagle Investment Management",
+      "subtitle": "First Eagle Investment Management \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "FE"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=FE",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 39
+    },
+    {
+      "id": "first-pacific-advisors",
+      "name": "First Pacific Advisors",
+      "subtitle": "First Pacific Advisors \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "FPA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=FPA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30
+    },
+    {
+      "id": "francis-chou",
+      "name": "Francis Chou",
+      "subtitle": "Francis Chou \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "ca"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=ca",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17,
+      "fund": "Chou Associates"
+    },
+    {
+      "id": "francois-rochon",
+      "name": "Francois Rochon",
+      "subtitle": "Francois Rochon \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "GC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=GC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 26,
+      "fund": "Giverny Capital"
+    },
+    {
+      "id": "glenn-greenberg",
+      "name": "Glenn Greenberg",
+      "subtitle": "Glenn Greenberg \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "CCM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=CCM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17,
+      "fund": "Brave Warrior Advisors"
+    },
+    {
+      "id": "glenn-welling",
+      "name": "Glenn Welling",
+      "subtitle": "Glenn Welling \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "ENG"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=ENG",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 8,
+      "fund": "Engaged Capital"
+    },
+    {
+      "id": "greg-alexander",
+      "name": "Greg Alexander",
+      "subtitle": "Greg Alexander \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "CM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=CM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 6,
+      "fund": "Conifer Management"
+    },
+    {
+      "id": "guy-spier",
+      "name": "Guy Spier",
+      "subtitle": "Guy Spier \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "aq"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=aq",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 7,
+      "fund": "Aquamarine Capital"
+    },
+    {
+      "id": "harry-burn",
+      "name": "Harry Burn",
+      "subtitle": "Harry Burn \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "SSHFX"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=SSHFX",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 38,
+      "fund": "Sound Shore"
+    },
+    {
+      "id": "henry-ellenbogen",
+      "name": "Henry Ellenbogen",
+      "subtitle": "Henry Ellenbogen \u00b7 DataRoma \u00b7 Q1 2026 (13q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "DCP"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=DCP",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2023-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 28,
+      "fund": "Durable Capital Partners"
+    },
+    {
+      "id": "hillman-capital-management",
+      "name": "Hillman Capital Management",
+      "subtitle": "Hillman Capital Management \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "HCM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=HCM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 39
+    },
+    {
+      "id": "howard-marks",
+      "name": "Howard Marks",
+      "subtitle": "Howard Marks \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "oc"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=oc",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 25,
+      "fund": "Oaktree Capital Management"
+    },
+    {
+      "id": "jensen-investment-management",
+      "name": "Jensen Investment Management",
+      "subtitle": "Jensen Investment Management \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "JIM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=JIM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 24
+    },
+    {
+      "id": "john-armitage",
+      "name": "John Armitage",
+      "subtitle": "John Armitage \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "EC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=EC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 22,
+      "fund": "Egerton Capital"
+    },
+    {
+      "id": "john-rogers",
+      "name": "John Rogers",
+      "subtitle": "John Rogers \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "AI"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=AI",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 34,
+      "fund": "Ariel Investments"
+    },
+    {
+      "id": "kahn-brothers-group",
+      "name": "Kahn Brothers Group",
+      "subtitle": "Kahn Brothers Group \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "KB"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=KB",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17
+    },
+    {
+      "id": "lee-ainslie",
+      "name": "Lee Ainslie",
+      "subtitle": "Lee Ainslie \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "mc"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=mc",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 34,
+      "fund": "Maverick Capital"
+    },
+    {
+      "id": "lindsell-train",
+      "name": "Lindsell Train",
+      "subtitle": "Lindsell Train \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "LT"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=LT",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 13
+    },
+    {
+      "id": "mairs-power-funds",
+      "name": "Mairs & Power Funds",
+      "subtitle": "Mairs & Power Funds \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "MPF"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=MPF",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30
+    },
+    {
+      "id": "mason-hawkins",
+      "name": "Mason Hawkins",
+      "subtitle": "Mason Hawkins \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "SE"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=SE",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30,
+      "fund": "Southeastern Asset Management"
+    },
+    {
+      "id": "michael-burry",
+      "name": "Michael Burry",
+      "subtitle": "Michael Burry \u00b7 DataRoma \u00b7 Q3 2025 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "SAM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=SAM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2020-09-30",
+        "to": "2025-09-30"
+      },
+      "currentHoldingsCount": 3,
+      "fund": "Scion Asset Management"
+    },
+    {
+      "id": "mohnish-pabrai",
+      "name": "Mohnish Pabrai",
+      "subtitle": "Mohnish Pabrai \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "PI"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=PI",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 3,
+      "fund": "Pabrai Investments"
+    },
+    {
+      "id": "nelson-peltz",
+      "name": "Nelson Peltz",
+      "subtitle": "Nelson Peltz \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "TF"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=TF",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 6,
+      "fund": "Trian Fund Management"
+    },
+    {
+      "id": "norbert-lou",
+      "name": "Norbert Lou",
+      "subtitle": "Norbert Lou \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "PC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=PC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 5,
+      "fund": "Punch Card Management"
+    },
+    {
+      "id": "pat-dorsey",
+      "name": "Pat Dorsey",
+      "subtitle": "Pat Dorsey \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "DA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=DA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 11,
+      "fund": "Dorsey Asset Management"
+    },
+    {
+      "id": "polen-capital-management",
+      "name": "Polen Capital Management",
+      "subtitle": "Polen Capital Management \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "pcm"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=pcm",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 25
+    },
+    {
+      "id": "prem-watsa",
+      "name": "Prem Watsa",
+      "subtitle": "Prem Watsa \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "FFH"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=FFH",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17,
+      "fund": "Fairfax Financial Holdings"
+    },
+    {
+      "id": "richard-pzena",
+      "name": "Richard Pzena",
+      "subtitle": "Richard Pzena \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "PIM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=PIM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30,
+      "fund": "Pzena Investment Management"
+    },
+    {
+      "id": "robert-olstein",
+      "name": "Robert Olstein",
+      "subtitle": "Robert Olstein \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "OFALX"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=OFALX",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 55,
+      "fund": "Olstein Capital Management"
+    },
+    {
+      "id": "ruane-cunniff-lp",
+      "name": "Ruane Cunniff LP",
+      "subtitle": "Ruane Cunniff LP \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "RC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=RC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 21
+    },
+    {
+      "id": "samantha-mclemore",
+      "name": "Samantha McLemore",
+      "subtitle": "Samantha McLemore \u00b7 DataRoma \u00b7 Q1 2026 (18q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "PTNT"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=PTNT",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-12-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 30,
+      "fund": "Patient Capital Management"
+    },
+    {
+      "id": "sarah-ketterer",
+      "name": "Sarah Ketterer",
+      "subtitle": "Sarah Ketterer \u00b7 DataRoma \u00b7 Q1 2026 (14q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "CAU"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=CAU",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2022-12-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 18,
+      "fund": "Causeway Capital Management"
+    },
+    {
+      "id": "seth-klarman",
+      "name": "Seth Klarman",
+      "subtitle": "Seth Klarman \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "BAUPOST"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=BAUPOST",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 20,
+      "fund": "Baupost Group"
+    },
+    {
+      "id": "stephen-mandel",
+      "name": "Stephen Mandel",
+      "subtitle": "Stephen Mandel \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "LPC"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=LPC",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 25,
+      "fund": "Lone Pine Capital"
+    },
+    {
+      "id": "terry-smith",
+      "name": "Terry Smith",
+      "subtitle": "Terry Smith \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "FS"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=FS",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 17,
+      "fund": "Fundsmith"
+    },
+    {
+      "id": "third-avenue-management",
+      "name": "Third Avenue Management",
+      "subtitle": "Third Avenue Management \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "TA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=TA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 33
+    },
+    {
+      "id": "triple-frond-partners",
+      "name": "Triple Frond Partners",
+      "subtitle": "Triple Frond Partners \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "TFP"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=TFP",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 12
+    },
+    {
+      "id": "tweedy-browne",
+      "name": "Tweedy Browne",
+      "subtitle": "Tweedy Browne \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "TB"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=TB",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 20
+    },
+    {
+      "id": "valueact-capital",
+      "name": "ValueAct Capital",
+      "subtitle": "ValueAct Capital \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "VA"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=VA",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 16
+    },
+    {
+      "id": "viking-global-investors",
+      "name": "Viking Global Investors",
+      "subtitle": "Viking Global Investors \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "vg"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=vg",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 38
+    },
+    {
+      "id": "vulcan-value-partners",
+      "name": "Vulcan Value Partners",
+      "subtitle": "Vulcan Value Partners \u00b7 DataRoma \u00b7 Q1 2026 (9q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "VVP"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=VVP",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2024-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 20
+    },
+    {
+      "id": "wallace-weitz",
+      "name": "Wallace Weitz",
+      "subtitle": "Wallace Weitz \u00b7 DataRoma \u00b7 Q1 2026 (13q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "WIM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=WIM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2023-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 28,
+      "fund": "Weitz Investment Management"
+    },
+    {
+      "id": "william-von-mueffling",
+      "name": "William Von Mueffling",
+      "subtitle": "William Von Mueffling \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "cc"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=cc",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 34,
+      "fund": "Cantillon Capital Management"
+    },
+    {
+      "id": "yacktman-asset-management",
+      "name": "Yacktman Asset Management",
+      "subtitle": "Yacktman Asset Management \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "YAM"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=YAM",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2021-03-31",
+        "to": "2026-03-31"
+      },
+      "currentHoldingsCount": 34
     }
   ]
 }

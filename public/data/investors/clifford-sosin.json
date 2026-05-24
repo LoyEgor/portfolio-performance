@@ -1,0 +1,513 @@
+{
+  "id": "clifford-sosin",
+  "holdings": [
+    {
+      "ticker": "CVNA",
+      "weight": 82.15,
+      "shares": 22706455
+    },
+    {
+      "ticker": "HGV",
+      "weight": 11.8,
+      "shares": 5239891
+    },
+    {
+      "ticker": "COF",
+      "weight": 6.05,
+      "shares": 575548
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 44.31
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 25.16
+        },
+        {
+          "ticker": "HOME",
+          "weight": 16.25
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 5.01
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 4.74
+        },
+        {
+          "ticker": "HLF",
+          "weight": 4.53
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 42.43
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 24.24
+        },
+        {
+          "ticker": "HOME",
+          "weight": 17.36
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 6.34
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 5.15
+        },
+        {
+          "ticker": "HLF",
+          "weight": 4.48
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 47.5
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 20.6
+        },
+        {
+          "ticker": "HGV",
+          "weight": 13.6
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 6.83
+        },
+        {
+          "ticker": "HLF",
+          "weight": 6.05
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 5.41
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 40.09
+        },
+        {
+          "ticker": "HGV",
+          "weight": 21.01
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 17.89
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 9.68
+        },
+        {
+          "ticker": "HLF",
+          "weight": 6.54
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 4.78
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 33.24
+        },
+        {
+          "ticker": "HGV",
+          "weight": 26.9
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 19.93
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 9.7
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.91
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 4.33
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "HGV",
+          "weight": 41.86
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 23.04
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 18.32
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 12.86
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 3.91
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "HGV",
+          "weight": 46.4
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 25.3
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 13.36
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 9.29
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 5.64
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "HGV",
+          "weight": 67.82
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 11.9
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 7.73
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 7.48
+        },
+        {
+          "ticker": "COF",
+          "weight": 3.36
+        },
+        {
+          "ticker": "PRTYQ-OLD",
+          "weight": 1.71
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "HGV",
+          "weight": 62.61
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 13.71
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 12.91
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.0
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 3.77
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "HGV",
+          "weight": 46.83
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 26.95
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 15.19
+        },
+        {
+          "ticker": "COF",
+          "weight": 5.82
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 5.21
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 36.75
+        },
+        {
+          "ticker": "HGV",
+          "weight": 35.32
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 12.13
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 11.46
+        },
+        {
+          "ticker": "COF",
+          "weight": 4.35
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 43.72
+        },
+        {
+          "ticker": "HGV",
+          "weight": 32.9
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 8.88
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.46
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 6.03
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 51.45
+        },
+        {
+          "ticker": "HGV",
+          "weight": 27.27
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.61
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 8.28
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 4.39
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 65.65
+        },
+        {
+          "ticker": "HGV",
+          "weight": 20.35
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.42
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 4.15
+        },
+        {
+          "ticker": "WRLD",
+          "weight": 2.43
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 75.07
+        },
+        {
+          "ticker": "HGV",
+          "weight": 15.44
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.12
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 75.52
+        },
+        {
+          "ticker": "HGV",
+          "weight": 14.73
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.37
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 77.7
+        },
+        {
+          "ticker": "HGV",
+          "weight": 13.98
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.31
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 81.19
+        },
+        {
+          "ticker": "HGV",
+          "weight": 11.5
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.31
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 83.02
+        },
+        {
+          "ticker": "HGV",
+          "weight": 10.62
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.37
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 83.68
+        },
+        {
+          "ticker": "HGV",
+          "weight": 10.23
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.09
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:33:56Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=CAS",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

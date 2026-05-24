@@ -1,0 +1,782 @@
+{
+  "id": "tweedy-browne",
+  "holdings": [
+    {
+      "ticker": "CNH",
+      "weight": 20.37,
+      "shares": 20150358
+    },
+    {
+      "ticker": "IONS",
+      "weight": 15.7,
+      "shares": 2275625
+    },
+    {
+      "ticker": "KOF",
+      "weight": 10.49,
+      "shares": 1170026
+    },
+    {
+      "ticker": "BRK.A",
+      "weight": 9.51,
+      "shares": 144
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 5.24,
+      "shares": 198341
+    },
+    {
+      "ticker": "JNJ",
+      "weight": 4.93,
+      "shares": 219490
+    },
+    {
+      "ticker": "BRK.B",
+      "weight": 4.29,
+      "shares": 97406
+    },
+    {
+      "ticker": "WFC",
+      "weight": 3.77,
+      "shares": 515920
+    },
+    {
+      "ticker": "ALV",
+      "weight": 3.7,
+      "shares": 383592
+    },
+    {
+      "ticker": "NVST",
+      "weight": 3.36,
+      "shares": 1436781
+    },
+    {
+      "ticker": "FDX",
+      "weight": 2.42,
+      "shares": 74035
+    },
+    {
+      "ticker": "TFC",
+      "weight": 2.36,
+      "shares": 557435
+    },
+    {
+      "ticker": "UNF",
+      "weight": 2.35,
+      "shares": 101671
+    },
+    {
+      "ticker": "UHAL.B",
+      "weight": 1.9,
+      "shares": 463332
+    },
+    {
+      "ticker": "AXP",
+      "weight": 1.75,
+      "shares": 62985
+    },
+    {
+      "ticker": "AZO",
+      "weight": 1.72,
+      "shares": 5535
+    },
+    {
+      "ticker": "SEE",
+      "weight": 1.65,
+      "shares": 509581
+    },
+    {
+      "ticker": "VRTX",
+      "weight": 1.65,
+      "shares": 40387
+    },
+    {
+      "ticker": "BAC",
+      "weight": 1.63,
+      "shares": 365274
+    },
+    {
+      "ticker": "BNY",
+      "weight": 1.19,
+      "shares": 108955
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 21.66
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 15.6
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 9.25
+        },
+        {
+          "ticker": "FMC",
+          "weight": 8.24
+        },
+        {
+          "ticker": "IONS",
+          "weight": 7.72
+        },
+        {
+          "ticker": "KOF",
+          "weight": 7.38
+        },
+        {
+          "ticker": "ALV",
+          "weight": 5.97
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.49
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.25
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.67
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.43
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.09
+        },
+        {
+          "ticker": "AZO",
+          "weight": 1.99
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.74
+        },
+        {
+          "ticker": "TFC",
+          "weight": 1.6
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.44
+        },
+        {
+          "ticker": "AXP",
+          "weight": 1.29
+        },
+        {
+          "ticker": "NWLI",
+          "weight": 1.11
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 19.81
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 17.58
+        },
+        {
+          "ticker": "FMC",
+          "weight": 9.02
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 8.2
+        },
+        {
+          "ticker": "IONS",
+          "weight": 8.17
+        },
+        {
+          "ticker": "CNH",
+          "weight": 7.73
+        },
+        {
+          "ticker": "KOF",
+          "weight": 5.92
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.02
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.57
+        },
+        {
+          "ticker": "ALV",
+          "weight": 2.5
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.4
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.79
+        },
+        {
+          "ticker": "AZO",
+          "weight": 1.78
+        },
+        {
+          "ticker": "NVST",
+          "weight": 1.56
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.54
+        },
+        {
+          "ticker": "TFC",
+          "weight": 1.5
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 1.35
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.26
+        },
+        {
+          "ticker": "AXP",
+          "weight": 1.2
+        },
+        {
+          "ticker": "NWLI",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 20.3
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 14.7
+        },
+        {
+          "ticker": "FMC",
+          "weight": 10.74
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 9.51
+        },
+        {
+          "ticker": "CNH",
+          "weight": 8.86
+        },
+        {
+          "ticker": "IONS",
+          "weight": 7.21
+        },
+        {
+          "ticker": "KOF",
+          "weight": 6.4
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.38
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.51
+        },
+        {
+          "ticker": "ALV",
+          "weight": 2.29
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.24
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.24
+        },
+        {
+          "ticker": "NVST",
+          "weight": 1.94
+        },
+        {
+          "ticker": "AZO",
+          "weight": 1.81
+        },
+        {
+          "ticker": "TFC",
+          "weight": 1.69
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.45
+        },
+        {
+          "ticker": "AXP",
+          "weight": 1.41
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.3
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 13.94
+        },
+        {
+          "ticker": "CNH",
+          "weight": 11.92
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 11.22
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 10.02
+        },
+        {
+          "ticker": "FMC",
+          "weight": 10.0
+        },
+        {
+          "ticker": "IONS",
+          "weight": 8.17
+        },
+        {
+          "ticker": "KOF",
+          "weight": 7.44
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.42
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.27
+        },
+        {
+          "ticker": "ALV",
+          "weight": 3.0
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.4
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.25
+        },
+        {
+          "ticker": "NVST",
+          "weight": 2.12
+        },
+        {
+          "ticker": "TFC",
+          "weight": 1.98
+        },
+        {
+          "ticker": "AXP",
+          "weight": 1.91
+        },
+        {
+          "ticker": "AZO",
+          "weight": 1.77
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.38
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.35
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.27
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CNH",
+          "weight": 15.72
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 12.8
+        },
+        {
+          "ticker": "KOF",
+          "weight": 11.27
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.99
+        },
+        {
+          "ticker": "IONS",
+          "weight": 8.64
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 6.98
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 4.6
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.44
+        },
+        {
+          "ticker": "ALV",
+          "weight": 3.68
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.73
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.7
+        },
+        {
+          "ticker": "NVST",
+          "weight": 2.48
+        },
+        {
+          "ticker": "TFC",
+          "weight": 2.4
+        },
+        {
+          "ticker": "AZO",
+          "weight": 2.29
+        },
+        {
+          "ticker": "AXP",
+          "weight": 1.85
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.79
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.57
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.52
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.36
+        },
+        {
+          "ticker": "BNY",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CNH",
+          "weight": 17.56
+        },
+        {
+          "ticker": "KOF",
+          "weight": 11.99
+        },
+        {
+          "ticker": "IONS",
+          "weight": 11.64
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 11.35
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.76
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 5.02
+        },
+        {
+          "ticker": "ALV",
+          "weight": 4.94
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.88
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 3.81
+        },
+        {
+          "ticker": "NVST",
+          "weight": 2.91
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.63
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.63
+        },
+        {
+          "ticker": "TFC",
+          "weight": 2.54
+        },
+        {
+          "ticker": "AZO",
+          "weight": 2.28
+        },
+        {
+          "ticker": "AXP",
+          "weight": 2.21
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.86
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.69
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.64
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.34
+        },
+        {
+          "ticker": "BNY",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "IONS",
+          "weight": 18.42
+        },
+        {
+          "ticker": "CNH",
+          "weight": 14.0
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 10.54
+        },
+        {
+          "ticker": "KOF",
+          "weight": 9.74
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.52
+        },
+        {
+          "ticker": "ALV",
+          "weight": 5.19
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 4.84
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.73
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.36
+        },
+        {
+          "ticker": "NVST",
+          "weight": 2.87
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.59
+        },
+        {
+          "ticker": "TFC",
+          "weight": 2.56
+        },
+        {
+          "ticker": "AZO",
+          "weight": 2.43
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.29
+        },
+        {
+          "ticker": "AXP",
+          "weight": 2.14
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.91
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.74
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.49
+        },
+        {
+          "ticker": "BNY",
+          "weight": 1.48
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "IONS",
+          "weight": 17.58
+        },
+        {
+          "ticker": "CNH",
+          "weight": 16.78
+        },
+        {
+          "ticker": "KOF",
+          "weight": 10.15
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 9.81
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.63
+        },
+        {
+          "ticker": "WFC",
+          "weight": 4.7
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 4.4
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 4.4
+        },
+        {
+          "ticker": "ALV",
+          "weight": 4.29
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.94
+        },
+        {
+          "ticker": "NVST",
+          "weight": 2.83
+        },
+        {
+          "ticker": "TFC",
+          "weight": 2.49
+        },
+        {
+          "ticker": "AXP",
+          "weight": 2.16
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 1.97
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.85
+        },
+        {
+          "ticker": "UNF",
+          "weight": 1.78
+        },
+        {
+          "ticker": "AZO",
+          "weight": 1.71
+        },
+        {
+          "ticker": "SEE-OLD",
+          "weight": 1.62
+        },
+        {
+          "ticker": "VRTX",
+          "weight": 1.6
+        },
+        {
+          "ticker": "BNY",
+          "weight": 1.33
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:38:20Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=TB",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

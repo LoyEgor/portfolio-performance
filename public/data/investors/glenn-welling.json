@@ -1,0 +1,834 @@
+{
+  "id": "glenn-welling",
+  "holdings": [
+    {
+      "ticker": "VFC",
+      "weight": 26.2,
+      "shares": 4678989
+    },
+    {
+      "ticker": "YETI",
+      "weight": 21.52,
+      "shares": 1784095
+    },
+    {
+      "ticker": "BL",
+      "weight": 16.68,
+      "shares": 1367619
+    },
+    {
+      "ticker": "GXO",
+      "weight": 14.04,
+      "shares": 821769
+    },
+    {
+      "ticker": "CGNX",
+      "weight": 7.81,
+      "shares": 484000
+    },
+    {
+      "ticker": "PTLO",
+      "weight": 6.0,
+      "shares": 3442990
+    },
+    {
+      "ticker": "EVH",
+      "weight": 4.18,
+      "shares": 5563912
+    },
+    {
+      "ticker": "BRCC",
+      "weight": 3.57,
+      "shares": 13935560
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 50.47
+        },
+        {
+          "ticker": "EVH",
+          "weight": 12.5
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 12.17
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 10.5
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 6.47
+        },
+        {
+          "ticker": "GIL",
+          "weight": 3.41
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 2.25
+        },
+        {
+          "ticker": "CORE",
+          "weight": 2.22
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 50.03
+        },
+        {
+          "ticker": "EVH",
+          "weight": 14.08
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 9.74
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 9.38
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 6.14
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 4.83
+        },
+        {
+          "ticker": "GIL",
+          "weight": 4.43
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 1.39
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 49.38
+        },
+        {
+          "ticker": "EVH",
+          "weight": 17.66
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 9.55
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 8.29
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 6.34
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 4.73
+        },
+        {
+          "ticker": "GIL",
+          "weight": 4.05
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "EVH",
+          "weight": 26.76
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 21.68
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 13.98
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 11.93
+        },
+        {
+          "ticker": "HAIN",
+          "weight": 9.83
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 8.44
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 5.6
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 1.8
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "BRCC",
+          "weight": 33.87
+        },
+        {
+          "ticker": "EVH",
+          "weight": 23.37
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 18.12
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 6.77
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 6.01
+        },
+        {
+          "ticker": "HAIN",
+          "weight": 4.29
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 3.95
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 3.63
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "EVH",
+          "weight": 29.02
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 21.27
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 18.68
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 13.94
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 7.28
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 7.03
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 2.78
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 27.57
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 20.25
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 16.74
+        },
+        {
+          "ticker": "EVH",
+          "weight": 15.93
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 8.88
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 3.58
+        },
+        {
+          "ticker": "FRPT",
+          "weight": 2.92
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 2.79
+        },
+        {
+          "ticker": "IWM",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 25.03
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 20.91
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 13.87
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 13.82
+        },
+        {
+          "ticker": "EVH",
+          "weight": 13.3
+        },
+        {
+          "ticker": "BRBR",
+          "weight": 6.81
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 4.73
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 1.54
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 21.59
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 17.78
+        },
+        {
+          "ticker": "SHAK",
+          "weight": 13.67
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 13.56
+        },
+        {
+          "ticker": "EVH",
+          "weight": 10.3
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 9.84
+        },
+        {
+          "ticker": "STKL-OLD",
+          "weight": 6.53
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 3.81
+        },
+        {
+          "ticker": "FRPT",
+          "weight": 2.91
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "SHAK",
+          "weight": 20.98
+        },
+        {
+          "ticker": "NCR-OLD",
+          "weight": 19.15
+        },
+        {
+          "ticker": "NEWR-OLD",
+          "weight": 18.93
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 17.37
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 9.97
+        },
+        {
+          "ticker": "EVH",
+          "weight": 7.66
+        },
+        {
+          "ticker": "QUOT-OLD",
+          "weight": 4.17
+        },
+        {
+          "ticker": "KTOS",
+          "weight": 1.77
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "NCR-OLD",
+          "weight": 24.67
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 19.69
+        },
+        {
+          "ticker": "VFC",
+          "weight": 16.74
+        },
+        {
+          "ticker": "SHAK",
+          "weight": 14.47
+        },
+        {
+          "ticker": "EVH",
+          "weight": 14.06
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 8.15
+        },
+        {
+          "ticker": "PRMW-OLD",
+          "weight": 2.21
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "EVH",
+          "weight": 15.78
+        },
+        {
+          "ticker": "SHAK",
+          "weight": 14.84
+        },
+        {
+          "ticker": "VFC",
+          "weight": 14.71
+        },
+        {
+          "ticker": "VYX",
+          "weight": 12.43
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 11.93
+        },
+        {
+          "ticker": "NATL",
+          "weight": 8.93
+        },
+        {
+          "ticker": "PRAA",
+          "weight": 7.72
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 6.83
+        },
+        {
+          "ticker": "NVRO-OLD",
+          "weight": 6.83
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "EVH",
+          "weight": 17.33
+        },
+        {
+          "ticker": "VFC",
+          "weight": 13.28
+        },
+        {
+          "ticker": "SHAK",
+          "weight": 13.06
+        },
+        {
+          "ticker": "VYX",
+          "weight": 11.94
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 9.5
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 8.91
+        },
+        {
+          "ticker": "NATL",
+          "weight": 8.03
+        },
+        {
+          "ticker": "PRAA",
+          "weight": 7.83
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 4.57
+        },
+        {
+          "ticker": "NVRO-OLD",
+          "weight": 4.41
+        },
+        {
+          "ticker": "ENV-OLD",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "BRCC",
+          "weight": 13.49
+        },
+        {
+          "ticker": "EVH",
+          "weight": 13.46
+        },
+        {
+          "ticker": "VYX",
+          "weight": 13.29
+        },
+        {
+          "ticker": "VFC",
+          "weight": 12.35
+        },
+        {
+          "ticker": "NATL",
+          "weight": 11.61
+        },
+        {
+          "ticker": "ENV-OLD",
+          "weight": 7.42
+        },
+        {
+          "ticker": "UPBD",
+          "weight": 6.14
+        },
+        {
+          "ticker": "PRAA",
+          "weight": 5.74
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 5.07
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 4.6
+        },
+        {
+          "ticker": "SHAK",
+          "weight": 4.11
+        },
+        {
+          "ticker": "NVRO-OLD",
+          "weight": 2.72
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "EVH",
+          "weight": 18.3
+        },
+        {
+          "ticker": "VFC",
+          "weight": 17.28
+        },
+        {
+          "ticker": "VYX",
+          "weight": 15.78
+        },
+        {
+          "ticker": "NATL",
+          "weight": 13.92
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 13.36
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 7.51
+        },
+        {
+          "ticker": "PRAA",
+          "weight": 6.18
+        },
+        {
+          "ticker": "BL",
+          "weight": 5.45
+        },
+        {
+          "ticker": "NVRO-OLD",
+          "weight": 2.21
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "VFC",
+          "weight": 23.57
+        },
+        {
+          "ticker": "VYX",
+          "weight": 16.42
+        },
+        {
+          "ticker": "NATL",
+          "weight": 15.39
+        },
+        {
+          "ticker": "EVH",
+          "weight": 12.5
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 11.82
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 8.82
+        },
+        {
+          "ticker": "GTLS",
+          "weight": 8.82
+        },
+        {
+          "ticker": "PRAA",
+          "weight": 2.66
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "VFC",
+          "weight": 21.7
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 16.61
+        },
+        {
+          "ticker": "GTLS",
+          "weight": 13.58
+        },
+        {
+          "ticker": "YETI",
+          "weight": 13.03
+        },
+        {
+          "ticker": "EVH",
+          "weight": 12.51
+        },
+        {
+          "ticker": "GXO",
+          "weight": 9.09
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 7.21
+        },
+        {
+          "ticker": "NATL",
+          "weight": 5.21
+        },
+        {
+          "ticker": "VYX",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "YETI",
+          "weight": 19.06
+        },
+        {
+          "ticker": "EVH",
+          "weight": 18.43
+        },
+        {
+          "ticker": "VFC",
+          "weight": 17.8
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 15.77
+        },
+        {
+          "ticker": "GXO",
+          "weight": 12.22
+        },
+        {
+          "ticker": "FRPT",
+          "weight": 11.77
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 4.96
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "VFC",
+          "weight": 20.75
+        },
+        {
+          "ticker": "YETI",
+          "weight": 17.66
+        },
+        {
+          "ticker": "GXO",
+          "weight": 12.7
+        },
+        {
+          "ticker": "EVH",
+          "weight": 11.75
+        },
+        {
+          "ticker": "CGNX",
+          "weight": 9.5
+        },
+        {
+          "ticker": "FRPT",
+          "weight": 8.37
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 8.02
+        },
+        {
+          "ticker": "BL",
+          "weight": 5.91
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 5.33
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "VFC",
+          "weight": 24.47
+        },
+        {
+          "ticker": "YETI",
+          "weight": 22.9
+        },
+        {
+          "ticker": "BL",
+          "weight": 15.28
+        },
+        {
+          "ticker": "GXO",
+          "weight": 11.14
+        },
+        {
+          "ticker": "CGNX",
+          "weight": 8.56
+        },
+        {
+          "ticker": "FRPT",
+          "weight": 6.23
+        },
+        {
+          "ticker": "EVH",
+          "weight": 5.68
+        },
+        {
+          "ticker": "BRCC",
+          "weight": 3.95
+        },
+        {
+          "ticker": "PTLO",
+          "weight": 1.78
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:35:16Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=ENG",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

@@ -1,0 +1,844 @@
+{
+  "id": "mason-hawkins",
+  "holdings": [
+    {
+      "ticker": "RYN",
+      "weight": 11.23,
+      "shares": 10762643
+    },
+    {
+      "ticker": "MAT",
+      "weight": 9.42,
+      "shares": 12812157
+    },
+    {
+      "ticker": "IAC",
+      "weight": 8.14,
+      "shares": 4022729
+    },
+    {
+      "ticker": "CNX",
+      "weight": 7.83,
+      "shares": 4014111
+    },
+    {
+      "ticker": "ACI",
+      "weight": 6.4,
+      "shares": 7419801
+    },
+    {
+      "ticker": "REGN",
+      "weight": 5.11,
+      "shares": 130662
+    },
+    {
+      "ticker": "KHC",
+      "weight": 4.49,
+      "shares": 3948713
+    },
+    {
+      "ticker": "FDX",
+      "weight": 4.46,
+      "shares": 247495
+    },
+    {
+      "ticker": "FBIN",
+      "weight": 4.25,
+      "shares": 2153285
+    },
+    {
+      "ticker": "MGM",
+      "weight": 3.12,
+      "shares": 1662961
+    },
+    {
+      "ticker": "PVH",
+      "weight": 2.6,
+      "shares": 736935
+    },
+    {
+      "ticker": "GLIBK",
+      "weight": 2.49,
+      "shares": 1321110
+    },
+    {
+      "ticker": "TRIP",
+      "weight": 2.48,
+      "shares": 4598068
+    },
+    {
+      "ticker": "BIO",
+      "weight": 2.29,
+      "shares": 162804
+    },
+    {
+      "ticker": "SHEN",
+      "weight": 2.29,
+      "shares": 2940296
+    },
+    {
+      "ticker": "WTM",
+      "weight": 2.1,
+      "shares": 18864
+    },
+    {
+      "ticker": "CNH",
+      "weight": 2.07,
+      "shares": 3716808
+    },
+    {
+      "ticker": "GHC",
+      "weight": 2.02,
+      "shares": 37760
+    },
+    {
+      "ticker": "FIS",
+      "weight": 1.96,
+      "shares": 827501
+    },
+    {
+      "ticker": "ESRT",
+      "weight": 1.71,
+      "shares": 6473317
+    },
+    {
+      "ticker": "ACMR",
+      "weight": 1.56,
+      "shares": 782900
+    },
+    {
+      "ticker": "EDU",
+      "weight": 1.5,
+      "shares": 522280
+    },
+    {
+      "ticker": "BATRK",
+      "weight": 1.45,
+      "shares": 671014
+    },
+    {
+      "ticker": "AVTR",
+      "weight": 1.4,
+      "shares": 3520212
+    },
+    {
+      "ticker": "DOLE",
+      "weight": 1.4,
+      "shares": 1933708
+    },
+    {
+      "ticker": "SAM",
+      "weight": 1.38,
+      "shares": 118401
+    },
+    {
+      "ticker": "SN",
+      "weight": 1.35,
+      "shares": 250666
+    },
+    {
+      "ticker": "MICC",
+      "weight": 1.22,
+      "shares": 1619620
+    },
+    {
+      "ticker": "ALX",
+      "weight": 1.18,
+      "shares": 99013
+    },
+    {
+      "ticker": "CLW",
+      "weight": 1.11,
+      "shares": 1525491
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 10.21
+        },
+        {
+          "ticker": "MAT",
+          "weight": 8.04
+        },
+        {
+          "ticker": "FDX",
+          "weight": 7.47
+        },
+        {
+          "ticker": "AMG",
+          "weight": 6.67
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.57
+        },
+        {
+          "ticker": "LYV",
+          "weight": 5.86
+        },
+        {
+          "ticker": "FIS",
+          "weight": 5.71
+        },
+        {
+          "ticker": "K-OLD",
+          "weight": 5.69
+        },
+        {
+          "ticker": "BIO",
+          "weight": 5.65
+        },
+        {
+          "ticker": "WBD",
+          "weight": 4.81
+        },
+        {
+          "ticker": "CNH",
+          "weight": 4.61
+        },
+        {
+          "ticker": "MGM",
+          "weight": 4.54
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.69
+        },
+        {
+          "ticker": "WMG",
+          "weight": 3.62
+        },
+        {
+          "ticker": "H",
+          "weight": 3.35
+        },
+        {
+          "ticker": "GHC",
+          "weight": 3.2
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.85
+        },
+        {
+          "ticker": "WEST",
+          "weight": 2.71
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.57
+        },
+        {
+          "ticker": "OSCR",
+          "weight": 2.16
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 9.73
+        },
+        {
+          "ticker": "FDX",
+          "weight": 8.51
+        },
+        {
+          "ticker": "MAT",
+          "weight": 7.42
+        },
+        {
+          "ticker": "AMG",
+          "weight": 6.9
+        },
+        {
+          "ticker": "FIS",
+          "weight": 6.4
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.34
+        },
+        {
+          "ticker": "K-OLD",
+          "weight": 6.31
+        },
+        {
+          "ticker": "MGM",
+          "weight": 5.51
+        },
+        {
+          "ticker": "BIO",
+          "weight": 4.93
+        },
+        {
+          "ticker": "LYV",
+          "weight": 4.71
+        },
+        {
+          "ticker": "WBD",
+          "weight": 4.48
+        },
+        {
+          "ticker": "CNH",
+          "weight": 3.95
+        },
+        {
+          "ticker": "WMG",
+          "weight": 3.7
+        },
+        {
+          "ticker": "H",
+          "weight": 3.58
+        },
+        {
+          "ticker": "GHC",
+          "weight": 3.2
+        },
+        {
+          "ticker": "PVH",
+          "weight": 3.07
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.01
+        },
+        {
+          "ticker": "WEST",
+          "weight": 3.01
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.72
+        },
+        {
+          "ticker": "MLCO",
+          "weight": 2.52
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 11.4
+        },
+        {
+          "ticker": "MAT",
+          "weight": 8.63
+        },
+        {
+          "ticker": "AMG",
+          "weight": 7.31
+        },
+        {
+          "ticker": "FIS",
+          "weight": 7.12
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.93
+        },
+        {
+          "ticker": "FDX",
+          "weight": 6.9
+        },
+        {
+          "ticker": "BIO",
+          "weight": 6.04
+        },
+        {
+          "ticker": "LYV",
+          "weight": 5.48
+        },
+        {
+          "ticker": "MGM",
+          "weight": 4.87
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 3.73
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.7
+        },
+        {
+          "ticker": "SN",
+          "weight": 3.58
+        },
+        {
+          "ticker": "H",
+          "weight": 3.46
+        },
+        {
+          "ticker": "GHC",
+          "weight": 3.39
+        },
+        {
+          "ticker": "WMG",
+          "weight": 3.25
+        },
+        {
+          "ticker": "WBD",
+          "weight": 3.13
+        },
+        {
+          "ticker": "PVH",
+          "weight": 2.98
+        },
+        {
+          "ticker": "ACI",
+          "weight": 2.91
+        },
+        {
+          "ticker": "MLCO",
+          "weight": 2.66
+        },
+        {
+          "ticker": "PCH-OLD",
+          "weight": 2.53
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 9.43
+        },
+        {
+          "ticker": "MAT",
+          "weight": 7.76
+        },
+        {
+          "ticker": "AMG",
+          "weight": 7.44
+        },
+        {
+          "ticker": "FDX",
+          "weight": 6.94
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.8
+        },
+        {
+          "ticker": "FIS",
+          "weight": 6.71
+        },
+        {
+          "ticker": "ACI",
+          "weight": 6.49
+        },
+        {
+          "ticker": "BIO",
+          "weight": 5.8
+        },
+        {
+          "ticker": "DINO",
+          "weight": 5.52
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.99
+        },
+        {
+          "ticker": "MGM",
+          "weight": 4.78
+        },
+        {
+          "ticker": "H",
+          "weight": 3.54
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.48
+        },
+        {
+          "ticker": "TIGO",
+          "weight": 3.46
+        },
+        {
+          "ticker": "PVH",
+          "weight": 3.1
+        },
+        {
+          "ticker": "CNH",
+          "weight": 3.08
+        },
+        {
+          "ticker": "GHC",
+          "weight": 2.95
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.84
+        },
+        {
+          "ticker": "SN",
+          "weight": 2.45
+        },
+        {
+          "ticker": "OSCR",
+          "weight": 2.42
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 9.91
+        },
+        {
+          "ticker": "MAT",
+          "weight": 8.74
+        },
+        {
+          "ticker": "IAC",
+          "weight": 7.42
+        },
+        {
+          "ticker": "ACI",
+          "weight": 7.33
+        },
+        {
+          "ticker": "FIS",
+          "weight": 6.38
+        },
+        {
+          "ticker": "FDX",
+          "weight": 6.23
+        },
+        {
+          "ticker": "DINO",
+          "weight": 5.78
+        },
+        {
+          "ticker": "AMG",
+          "weight": 5.31
+        },
+        {
+          "ticker": "BIO",
+          "weight": 5.18
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.93
+        },
+        {
+          "ticker": "REGN",
+          "weight": 4.79
+        },
+        {
+          "ticker": "TIGO",
+          "weight": 4.02
+        },
+        {
+          "ticker": "MGM",
+          "weight": 3.76
+        },
+        {
+          "ticker": "GHC",
+          "weight": 3.48
+        },
+        {
+          "ticker": "H",
+          "weight": 3.15
+        },
+        {
+          "ticker": "CNH",
+          "weight": 3.12
+        },
+        {
+          "ticker": "SN",
+          "weight": 2.99
+        },
+        {
+          "ticker": "PVH",
+          "weight": 2.58
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.46
+        },
+        {
+          "ticker": "PCH-OLD",
+          "weight": 2.43
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 10.11
+        },
+        {
+          "ticker": "MAT",
+          "weight": 9.57
+        },
+        {
+          "ticker": "IAC",
+          "weight": 7.36
+        },
+        {
+          "ticker": "KHC",
+          "weight": 6.37
+        },
+        {
+          "ticker": "PVH",
+          "weight": 6.32
+        },
+        {
+          "ticker": "FDX",
+          "weight": 5.8
+        },
+        {
+          "ticker": "REGN",
+          "weight": 5.67
+        },
+        {
+          "ticker": "FIS",
+          "weight": 5.2
+        },
+        {
+          "ticker": "BIO",
+          "weight": 5.12
+        },
+        {
+          "ticker": "ACI",
+          "weight": 5.0
+        },
+        {
+          "ticker": "DINO",
+          "weight": 4.84
+        },
+        {
+          "ticker": "MGM",
+          "weight": 4.11
+        },
+        {
+          "ticker": "FBIN",
+          "weight": 3.57
+        },
+        {
+          "ticker": "SN",
+          "weight": 3.53
+        },
+        {
+          "ticker": "CNH",
+          "weight": 3.28
+        },
+        {
+          "ticker": "MLCO",
+          "weight": 3.11
+        },
+        {
+          "ticker": "H",
+          "weight": 2.88
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.83
+        },
+        {
+          "ticker": "GHC",
+          "weight": 2.73
+        },
+        {
+          "ticker": "TIGO",
+          "weight": 2.61
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 9.83
+        },
+        {
+          "ticker": "MAT",
+          "weight": 8.85
+        },
+        {
+          "ticker": "RYN",
+          "weight": 7.69
+        },
+        {
+          "ticker": "KHC",
+          "weight": 6.1
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.07
+        },
+        {
+          "ticker": "FDX",
+          "weight": 5.69
+        },
+        {
+          "ticker": "PCH-OLD",
+          "weight": 5.59
+        },
+        {
+          "ticker": "ACI",
+          "weight": 5.58
+        },
+        {
+          "ticker": "REGN",
+          "weight": 5.24
+        },
+        {
+          "ticker": "PVH",
+          "weight": 5.05
+        },
+        {
+          "ticker": "BIO",
+          "weight": 4.29
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 4.14
+        },
+        {
+          "ticker": "MGM",
+          "weight": 3.9
+        },
+        {
+          "ticker": "ACMR",
+          "weight": 3.75
+        },
+        {
+          "ticker": "FBIN",
+          "weight": 3.5
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.41
+        },
+        {
+          "ticker": "SN",
+          "weight": 3.37
+        },
+        {
+          "ticker": "GHC",
+          "weight": 2.68
+        },
+        {
+          "ticker": "FIS",
+          "weight": 2.66
+        },
+        {
+          "ticker": "CNH",
+          "weight": 2.6
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "CNX",
+          "weight": 9.73
+        },
+        {
+          "ticker": "MAT",
+          "weight": 9.49
+        },
+        {
+          "ticker": "IAC",
+          "weight": 8.71
+        },
+        {
+          "ticker": "REGN",
+          "weight": 7.15
+        },
+        {
+          "ticker": "PCH-OLD",
+          "weight": 7.02
+        },
+        {
+          "ticker": "RYN",
+          "weight": 6.87
+        },
+        {
+          "ticker": "KHC",
+          "weight": 6.08
+        },
+        {
+          "ticker": "ACI",
+          "weight": 5.92
+        },
+        {
+          "ticker": "FDX",
+          "weight": 5.79
+        },
+        {
+          "ticker": "MGM",
+          "weight": 4.14
+        },
+        {
+          "ticker": "BIO",
+          "weight": 3.85
+        },
+        {
+          "ticker": "ACMR",
+          "weight": 3.7
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.67
+        },
+        {
+          "ticker": "FBIN",
+          "weight": 3.29
+        },
+        {
+          "ticker": "PVH",
+          "weight": 2.76
+        },
+        {
+          "ticker": "GLIBK",
+          "weight": 2.75
+        },
+        {
+          "ticker": "FIS",
+          "weight": 2.31
+        },
+        {
+          "ticker": "TRIP",
+          "weight": 2.31
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 2.27
+        },
+        {
+          "ticker": "GHC",
+          "weight": 2.19
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:39Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=SE",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

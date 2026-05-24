@@ -1,0 +1,381 @@
+{
+  "id": "mohnish-pabrai",
+  "holdings": [
+    {
+      "ticker": "HCC",
+      "weight": 39.89,
+      "shares": 1810831
+    },
+    {
+      "ticker": "RIG",
+      "weight": 31.97,
+      "shares": 20392672
+    },
+    {
+      "ticker": "AMR",
+      "weight": 28.14,
+      "shares": 579738
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 52.24
+        },
+        {
+          "ticker": "SRG",
+          "weight": 33.15
+        },
+        {
+          "ticker": "BABA",
+          "weight": 14.61
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 47.5
+        },
+        {
+          "ticker": "SRG",
+          "weight": 31.37
+        },
+        {
+          "ticker": "BABA",
+          "weight": 21.13
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 58.76
+        },
+        {
+          "ticker": "SRG",
+          "weight": 36.79
+        },
+        {
+          "ticker": "BABA",
+          "weight": 4.45
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 78.42
+        },
+        {
+          "ticker": "SRG",
+          "weight": 21.58
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 100.0
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 100.0
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 92.54
+        },
+        {
+          "ticker": "BN",
+          "weight": 7.46
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 77.17
+        },
+        {
+          "ticker": "BN",
+          "weight": 18.6
+        },
+        {
+          "ticker": "BAM",
+          "weight": 4.23
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 79.24
+        },
+        {
+          "ticker": "BN",
+          "weight": 20.76
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 81.2
+        },
+        {
+          "ticker": "CNR",
+          "weight": 18.8
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 67.6
+        },
+        {
+          "ticker": "CNR",
+          "weight": 24.53
+        },
+        {
+          "ticker": "ARCH-OLD",
+          "weight": 7.87
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 53.86
+        },
+        {
+          "ticker": "ARCH-OLD",
+          "weight": 15.72
+        },
+        {
+          "ticker": "HCC",
+          "weight": 15.47
+        },
+        {
+          "ticker": "CNR",
+          "weight": 14.95
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 62.08
+        },
+        {
+          "ticker": "CNR",
+          "weight": 14.21
+        },
+        {
+          "ticker": "HCC",
+          "weight": 13.25
+        },
+        {
+          "ticker": "ARCH-OLD",
+          "weight": 10.46
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 54.09
+        },
+        {
+          "ticker": "ARCH-OLD",
+          "weight": 25.66
+        },
+        {
+          "ticker": "HCC",
+          "weight": 12.71
+        },
+        {
+          "ticker": "CNR",
+          "weight": 7.54
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 45.89
+        },
+        {
+          "ticker": "CNR",
+          "weight": 32.66
+        },
+        {
+          "ticker": "HCC",
+          "weight": 18.08
+        },
+        {
+          "ticker": "ARCH-OLD",
+          "weight": 1.73
+        },
+        {
+          "ticker": "DAC",
+          "weight": 1.64
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "AMR",
+          "weight": 38.47
+        },
+        {
+          "ticker": "HCC",
+          "weight": 36.48
+        },
+        {
+          "ticker": "CNR",
+          "weight": 25.04
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "HCC",
+          "weight": 36.57
+        },
+        {
+          "ticker": "VAL",
+          "weight": 23.87
+        },
+        {
+          "ticker": "AMR",
+          "weight": 22.11
+        },
+        {
+          "ticker": "NE",
+          "weight": 17.45
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "HCC",
+          "weight": 30.37
+        },
+        {
+          "ticker": "VAL",
+          "weight": 29.21
+        },
+        {
+          "ticker": "AMR",
+          "weight": 19.06
+        },
+        {
+          "ticker": "NE",
+          "weight": 16.9
+        },
+        {
+          "ticker": "AN",
+          "weight": 4.46
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "HCC",
+          "weight": 34.0
+        },
+        {
+          "ticker": "AMR",
+          "weight": 25.91
+        },
+        {
+          "ticker": "RIG",
+          "weight": 22.64
+        },
+        {
+          "ticker": "VAL",
+          "weight": 15.44
+        },
+        {
+          "ticker": "NE",
+          "weight": 2.01
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "HCC",
+          "weight": 39.47
+        },
+        {
+          "ticker": "RIG",
+          "weight": 27.78
+        },
+        {
+          "ticker": "AMR",
+          "weight": 27.0
+        },
+        {
+          "ticker": "VAL",
+          "weight": 5.76
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:50Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=PI",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

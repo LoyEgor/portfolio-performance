@@ -1,0 +1,970 @@
+{
+  "id": "carl-icahn",
+  "holdings": [
+    {
+      "ticker": "IEP",
+      "weight": 50.14,
+      "shares": 549400539
+    },
+    {
+      "ticker": "CVI",
+      "weight": 28.96,
+      "shares": 71201875
+    },
+    {
+      "ticker": "UAN",
+      "weight": 6.38,
+      "shares": 4164274
+    },
+    {
+      "ticker": "CTRI",
+      "weight": 5.07,
+      "shares": 14336044
+    },
+    {
+      "ticker": "IFF",
+      "weight": 3.75,
+      "shares": 4275000
+    },
+    {
+      "ticker": "SATS",
+      "weight": 1.99,
+      "shares": 1404542
+    },
+    {
+      "ticker": "AEP",
+      "weight": 1.91,
+      "shares": 1205300
+    },
+    {
+      "ticker": "JBLU",
+      "weight": 1.8,
+      "shares": 33621735
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 51.62
+        },
+        {
+          "ticker": "OXY",
+          "weight": 9.92
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.92
+        },
+        {
+          "ticker": "NWL",
+          "weight": 5.07
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.04
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.69
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.19
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.03
+        },
+        {
+          "ticker": "FE",
+          "weight": 2.85
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 2.76
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.97
+        },
+        {
+          "ticker": "HLF",
+          "weight": 1.54
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.27
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 54.23
+        },
+        {
+          "ticker": "OXY",
+          "weight": 6.37
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.82
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.3
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.98
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.15
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 3.45
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.08
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.03
+        },
+        {
+          "ticker": "FE",
+          "weight": 2.93
+        },
+        {
+          "ticker": "HRI",
+          "weight": 2.09
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.19
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.19
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 1.12
+        },
+        {
+          "ticker": "WBT-OLD",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 55.95
+        },
+        {
+          "ticker": "LNG",
+          "weight": 7.16
+        },
+        {
+          "ticker": "OXY",
+          "weight": 6.03
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.38
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.39
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.31
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 3.79
+        },
+        {
+          "ticker": "HRI",
+          "weight": 3.33
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.06
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.85
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.44
+        },
+        {
+          "ticker": "WBT-OLD",
+          "weight": 1.17
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 59.18
+        },
+        {
+          "ticker": "LNG",
+          "weight": 7.62
+        },
+        {
+          "ticker": "OXY",
+          "weight": 6.05
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.56
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.45
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.43
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.66
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.37
+        },
+        {
+          "ticker": "HRI",
+          "weight": 2.93
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.51
+        },
+        {
+          "ticker": "WBT-OLD",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 62.14
+        },
+        {
+          "ticker": "CVI",
+          "weight": 8.47
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.27
+        },
+        {
+          "ticker": "FE",
+          "weight": 4.05
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.7
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.3
+        },
+        {
+          "ticker": "HRI",
+          "weight": 3.13
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.01
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 2.47
+        },
+        {
+          "ticker": "WBT-OLD",
+          "weight": 1.23
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.17
+        },
+        {
+          "ticker": "SWX",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 65.86
+        },
+        {
+          "ticker": "CVI",
+          "weight": 11.76
+        },
+        {
+          "ticker": "LNG",
+          "weight": 3.68
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.59
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.1
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 2.79
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.51
+        },
+        {
+          "ticker": "SWX",
+          "weight": 2.19
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.79
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.43
+        },
+        {
+          "ticker": "WBT-OLD",
+          "weight": 1.31
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 69.37
+        },
+        {
+          "ticker": "CVI",
+          "weight": 9.99
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.4
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 3.09
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 2.66
+        },
+        {
+          "ticker": "SWX",
+          "weight": 2.23
+        },
+        {
+          "ticker": "NWL",
+          "weight": 2.22
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.17
+        },
+        {
+          "ticker": "HRI",
+          "weight": 2.02
+        },
+        {
+          "ticker": "LNG",
+          "weight": 1.7
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 72.54
+        },
+        {
+          "ticker": "CVI",
+          "weight": 10.66
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.8
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 3.23
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.39
+        },
+        {
+          "ticker": "HRI",
+          "weight": 2.33
+        },
+        {
+          "ticker": "NWL",
+          "weight": 2.07
+        },
+        {
+          "ticker": "SWX",
+          "weight": 1.95
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.04
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 73.45
+        },
+        {
+          "ticker": "CVI",
+          "weight": 11.05
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.6
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 3.2
+        },
+        {
+          "ticker": "SWX",
+          "weight": 3.11
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.49
+        },
+        {
+          "ticker": "NWL",
+          "weight": 1.76
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 64.79
+        },
+        {
+          "ticker": "CVI",
+          "weight": 14.24
+        },
+        {
+          "ticker": "SWX",
+          "weight": 4.61
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 4.1
+        },
+        {
+          "ticker": "FE",
+          "weight": 3.66
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.4
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.85
+        },
+        {
+          "ticker": "NWL",
+          "weight": 1.74
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.62
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 59.33
+        },
+        {
+          "ticker": "CVI",
+          "weight": 19.41
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 6.09
+        },
+        {
+          "ticker": "SWX",
+          "weight": 5.69
+        },
+        {
+          "ticker": "FE",
+          "weight": 4.12
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.44
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.79
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 60.07
+        },
+        {
+          "ticker": "CVI",
+          "weight": 19.2
+        },
+        {
+          "ticker": "SWX",
+          "weight": 6.63
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 6.1
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.64
+        },
+        {
+          "ticker": "FE",
+          "weight": 2.05
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.98
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 53.83
+        },
+        {
+          "ticker": "CVI",
+          "weight": 20.46
+        },
+        {
+          "ticker": "SWX",
+          "weight": 7.22
+        },
+        {
+          "ticker": "OXY.WS",
+          "weight": 6.11
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.17
+        },
+        {
+          "ticker": "IFF",
+          "weight": 2.78
+        },
+        {
+          "ticker": "UAN",
+          "weight": 2.63
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.56
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.13
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 64.18
+        },
+        {
+          "ticker": "CVI",
+          "weight": 17.12
+        },
+        {
+          "ticker": "SWX",
+          "weight": 7.43
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.42
+        },
+        {
+          "ticker": "UAN",
+          "weight": 2.83
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.32
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.66
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.04
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 60.78
+        },
+        {
+          "ticker": "CVI",
+          "weight": 15.94
+        },
+        {
+          "ticker": "SWX",
+          "weight": 8.43
+        },
+        {
+          "ticker": "IFF",
+          "weight": 4.08
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.94
+        },
+        {
+          "ticker": "UAN",
+          "weight": 2.72
+        },
+        {
+          "ticker": "DAN",
+          "weight": 1.57
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.28
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.21
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 53.96
+        },
+        {
+          "ticker": "CVI",
+          "weight": 17.25
+        },
+        {
+          "ticker": "SWX",
+          "weight": 9.41
+        },
+        {
+          "ticker": "IFF",
+          "weight": 4.38
+        },
+        {
+          "ticker": "UAN",
+          "weight": 4.27
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.86
+        },
+        {
+          "ticker": "DAN",
+          "weight": 2.28
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.92
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.54
+        },
+        {
+          "ticker": "CZR",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 56.24
+        },
+        {
+          "ticker": "CVI",
+          "weight": 18.31
+        },
+        {
+          "ticker": "SWX",
+          "weight": 7.44
+        },
+        {
+          "ticker": "UAN",
+          "weight": 4.25
+        },
+        {
+          "ticker": "IFF",
+          "weight": 4.01
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.09
+        },
+        {
+          "ticker": "DAN",
+          "weight": 2.62
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 2.23
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.81
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 51.56
+        },
+        {
+          "ticker": "CVI",
+          "weight": 24.49
+        },
+        {
+          "ticker": "SWX",
+          "weight": 7.26
+        },
+        {
+          "ticker": "UAN",
+          "weight": 4.79
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.58
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.99
+        },
+        {
+          "ticker": "CTRI",
+          "weight": 1.86
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.84
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.62
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 48.87
+        },
+        {
+          "ticker": "CVI",
+          "weight": 28.73
+        },
+        {
+          "ticker": "SWX",
+          "weight": 5.29
+        },
+        {
+          "ticker": "UAN",
+          "weight": 4.2
+        },
+        {
+          "ticker": "SATS",
+          "weight": 3.72
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.27
+        },
+        {
+          "ticker": "CTRI",
+          "weight": 2.57
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.85
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.51
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 50.23
+        },
+        {
+          "ticker": "CVI",
+          "weight": 21.69
+        },
+        {
+          "ticker": "SWX",
+          "weight": 5.85
+        },
+        {
+          "ticker": "UAN",
+          "weight": 5.16
+        },
+        {
+          "ticker": "SATS",
+          "weight": 4.42
+        },
+        {
+          "ticker": "CTRI",
+          "weight": 4.39
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.49
+        },
+        {
+          "ticker": "JBLU",
+          "weight": 1.85
+        },
+        {
+          "ticker": "AEP",
+          "weight": 1.69
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.24
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:33:26Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=ic",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

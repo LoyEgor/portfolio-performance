@@ -1,0 +1,1817 @@
+{
+  "id": "chase-coleman",
+  "holdings": [
+    {
+      "ticker": "GOOGL",
+      "weight": 14.48,
+      "shares": 10631402
+    },
+    {
+      "ticker": "NVDA",
+      "weight": 9.92,
+      "shares": 12011752
+    },
+    {
+      "ticker": "AMZN",
+      "weight": 9.87,
+      "shares": 10000000
+    },
+    {
+      "ticker": "TSM",
+      "weight": 8.91,
+      "shares": 5565074
+    },
+    {
+      "ticker": "META",
+      "weight": 8.36,
+      "shares": 3086864
+    },
+    {
+      "ticker": "SE",
+      "weight": 6.05,
+      "shares": 15415835
+    },
+    {
+      "ticker": "AVGO",
+      "weight": 5.26,
+      "shares": 3584814
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 4.38,
+      "shares": 2500000
+    },
+    {
+      "ticker": "GEV",
+      "weight": 4.03,
+      "shares": 972994
+    },
+    {
+      "ticker": "LRCX",
+      "weight": 3.95,
+      "shares": 3900439
+    },
+    {
+      "ticker": "SPOT",
+      "weight": 3.64,
+      "shares": 1580761
+    },
+    {
+      "ticker": "CPNG",
+      "weight": 3.09,
+      "shares": 34595407
+    },
+    {
+      "ticker": "AMAT",
+      "weight": 2.68,
+      "shares": 1656900
+    },
+    {
+      "ticker": "CPAY",
+      "weight": 2.41,
+      "shares": 1752146
+    },
+    {
+      "ticker": "APP",
+      "weight": 1.88,
+      "shares": 1000000
+    },
+    {
+      "ticker": "TTWO",
+      "weight": 1.87,
+      "shares": 2000000
+    },
+    {
+      "ticker": "APO",
+      "weight": 1.74,
+      "shares": 3293334
+    },
+    {
+      "ticker": "RDDT",
+      "weight": 1.59,
+      "shares": 2500000
+    },
+    {
+      "ticker": "Z",
+      "weight": 1.44,
+      "shares": 7368957
+    },
+    {
+      "ticker": "XYZ",
+      "weight": 1.14,
+      "shares": 4000000
+    },
+    {
+      "ticker": "NFLX",
+      "weight": 1.11,
+      "shares": 2439000
+    },
+    {
+      "ticker": "MELI",
+      "weight": 1.1,
+      "shares": 135006
+    },
+    {
+      "ticker": "FWONK",
+      "weight": 1.08,
+      "shares": 2682000
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 13.53
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.05
+        },
+        {
+          "ticker": "RBLX",
+          "weight": 8.14
+        },
+        {
+          "ticker": "SE",
+          "weight": 6.59
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.89
+        },
+        {
+          "ticker": "PDD",
+          "weight": 5.85
+        },
+        {
+          "ticker": "APO",
+          "weight": 5.1
+        },
+        {
+          "ticker": "META",
+          "weight": 5.09
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 4.9
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 4.27
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.52
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.35
+        },
+        {
+          "ticker": "DOCU",
+          "weight": 3.24
+        },
+        {
+          "ticker": "TDG",
+          "weight": 3.21
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 3.19
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.16
+        },
+        {
+          "ticker": "RNG",
+          "weight": 3.08
+        },
+        {
+          "ticker": "PTON",
+          "weight": 2.74
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 2.65
+        },
+        {
+          "ticker": "ZM",
+          "weight": 2.44
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 10.92
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.44
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.38
+        },
+        {
+          "ticker": "RBLX",
+          "weight": 6.53
+        },
+        {
+          "ticker": "DOCU",
+          "weight": 5.4
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.17
+        },
+        {
+          "ticker": "DASH",
+          "weight": 5.16
+        },
+        {
+          "ticker": "APO",
+          "weight": 5.12
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 5.09
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 5.02
+        },
+        {
+          "ticker": "PDD",
+          "weight": 4.73
+        },
+        {
+          "ticker": "META",
+          "weight": 4.66
+        },
+        {
+          "ticker": "ZM",
+          "weight": 4.39
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 3.38
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.22
+        },
+        {
+          "ticker": "RNG",
+          "weight": 3.04
+        },
+        {
+          "ticker": "TDG",
+          "weight": 3.02
+        },
+        {
+          "ticker": "PTON",
+          "weight": 2.91
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.75
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 2.68
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 10.41
+        },
+        {
+          "ticker": "JD",
+          "weight": 10.4
+        },
+        {
+          "ticker": "SE",
+          "weight": 9.34
+        },
+        {
+          "ticker": "DASH",
+          "weight": 6.4
+        },
+        {
+          "ticker": "DOCU",
+          "weight": 5.29
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.24
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 5.21
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 5.21
+        },
+        {
+          "ticker": "META",
+          "weight": 4.82
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 4.39
+        },
+        {
+          "ticker": "APO",
+          "weight": 3.88
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.87
+        },
+        {
+          "ticker": "RBLX",
+          "weight": 3.7
+        },
+        {
+          "ticker": "PDD",
+          "weight": 3.59
+        },
+        {
+          "ticker": "ZM",
+          "weight": 3.5
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 3.37
+        },
+        {
+          "ticker": "TDG",
+          "weight": 3.09
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 2.97
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.71
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.62
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 11.81
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8.94
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.99
+        },
+        {
+          "ticker": "NU",
+          "weight": 7.82
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 6.39
+        },
+        {
+          "ticker": "DASH",
+          "weight": 5.43
+        },
+        {
+          "ticker": "META",
+          "weight": 5.33
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 5.27
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 4.84
+        },
+        {
+          "ticker": "NOW",
+          "weight": 4.49
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.69
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 3.61
+        },
+        {
+          "ticker": "ZM",
+          "weight": 3.53
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 3.48
+        },
+        {
+          "ticker": "DOCU",
+          "weight": 3.31
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 2.97
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.95
+        },
+        {
+          "ticker": "RNG",
+          "weight": 2.91
+        },
+        {
+          "ticker": "PDD",
+          "weight": 2.88
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.38
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 13.24
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.58
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 9.39
+        },
+        {
+          "ticker": "NU",
+          "weight": 9.23
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.6
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 7.35
+        },
+        {
+          "ticker": "NOW",
+          "weight": 6.39
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 4.78
+        },
+        {
+          "ticker": "DASH",
+          "weight": 4.51
+        },
+        {
+          "ticker": "META",
+          "weight": 4.08
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 3.35
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 2.9
+        },
+        {
+          "ticker": "RNG",
+          "weight": 2.73
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.41
+        },
+        {
+          "ticker": "LI",
+          "weight": 2.4
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.26
+        },
+        {
+          "ticker": "XPEV",
+          "weight": 1.78
+        },
+        {
+          "ticker": "XYZ",
+          "weight": 1.74
+        },
+        {
+          "ticker": "DOCU",
+          "weight": 1.7
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.59
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 19.17
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.96
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 10.8
+        },
+        {
+          "ticker": "NU",
+          "weight": 7.43
+        },
+        {
+          "ticker": "META",
+          "weight": 7.08
+        },
+        {
+          "ticker": "SE",
+          "weight": 5.37
+        },
+        {
+          "ticker": "NOW",
+          "weight": 5.19
+        },
+        {
+          "ticker": "LI",
+          "weight": 4.79
+        },
+        {
+          "ticker": "BZ",
+          "weight": 3.0
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 2.89
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.79
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.72
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.36
+        },
+        {
+          "ticker": "S",
+          "weight": 2.29
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.23
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.92
+        },
+        {
+          "ticker": "TOST",
+          "weight": 1.85
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 1.84
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.69
+        },
+        {
+          "ticker": "RNG",
+          "weight": 1.63
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "JD",
+          "weight": 15.98
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 14.88
+        },
+        {
+          "ticker": "NOW",
+          "weight": 6.8
+        },
+        {
+          "ticker": "META",
+          "weight": 6.48
+        },
+        {
+          "ticker": "SE",
+          "weight": 5.7
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.58
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 5.46
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 5.14
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 4.71
+        },
+        {
+          "ticker": "LI",
+          "weight": 4.22
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 3.86
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.22
+        },
+        {
+          "ticker": "BZ",
+          "weight": 3.2
+        },
+        {
+          "ticker": "UBER",
+          "weight": 2.79
+        },
+        {
+          "ticker": "XYZ",
+          "weight": 2.23
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.19
+        },
+        {
+          "ticker": "NU",
+          "weight": 2.17
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.92
+        },
+        {
+          "ticker": "TOST",
+          "weight": 1.76
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 1.7
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 17.85
+        },
+        {
+          "ticker": "JD",
+          "weight": 17.33
+        },
+        {
+          "ticker": "META",
+          "weight": 13.53
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.21
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 6.55
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 5.19
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.66
+        },
+        {
+          "ticker": "NOW",
+          "weight": 4.45
+        },
+        {
+          "ticker": "BZ",
+          "weight": 4.0
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.56
+        },
+        {
+          "ticker": "ZI",
+          "weight": 2.66
+        },
+        {
+          "ticker": "SE",
+          "weight": 2.62
+        },
+        {
+          "ticker": "XYZ",
+          "weight": 1.67
+        },
+        {
+          "ticker": "DLO",
+          "weight": 1.57
+        },
+        {
+          "ticker": "NU",
+          "weight": 1.46
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 1.37
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 17.64
+        },
+        {
+          "ticker": "META",
+          "weight": 16.3
+        },
+        {
+          "ticker": "JD",
+          "weight": 10.9
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 10.32
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.95
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 5.37
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.88
+        },
+        {
+          "ticker": "SE",
+          "weight": 3.01
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 2.95
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 2.95
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.71
+        },
+        {
+          "ticker": "INTU",
+          "weight": 2.06
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.99
+        },
+        {
+          "ticker": "ZI",
+          "weight": 1.91
+        },
+        {
+          "ticker": "APO",
+          "weight": 1.7
+        },
+        {
+          "ticker": "BZ",
+          "weight": 1.68
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.52
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 1.45
+        },
+        {
+          "ticker": "CFLT-OLD",
+          "weight": 1.43
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.27
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 22.32
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 17.52
+        },
+        {
+          "ticker": "APO",
+          "weight": 8.6
+        },
+        {
+          "ticker": "JD",
+          "weight": 6.53
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 6.38
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.42
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 4.38
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.14
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 4.1
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.16
+        },
+        {
+          "ticker": "LLY",
+          "weight": 3.09
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 2.41
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.99
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.79
+        },
+        {
+          "ticker": "SE",
+          "weight": 1.78
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.72
+        },
+        {
+          "ticker": "ZI",
+          "weight": 1.55
+        },
+        {
+          "ticker": "NU",
+          "weight": 1.46
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.39
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 1.27
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 22.34
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.19
+        },
+        {
+          "ticker": "APO",
+          "weight": 9.22
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 6.17
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.84
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 5.07
+        },
+        {
+          "ticker": "SE",
+          "weight": 4.3
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 4.19
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.13
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 4.04
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.78
+        },
+        {
+          "ticker": "JD",
+          "weight": 2.41
+        },
+        {
+          "ticker": "INTU",
+          "weight": 2.17
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.97
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.94
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.68
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.52
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.5
+        },
+        {
+          "ticker": "CFLT-OLD",
+          "weight": 1.28
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 20.71
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.76
+        },
+        {
+          "ticker": "APO",
+          "weight": 8.98
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 6.51
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.82
+        },
+        {
+          "ticker": "SE",
+          "weight": 4.55
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 4.44
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 4.29
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.07
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 3.76
+        },
+        {
+          "ticker": "NOW",
+          "weight": 3.21
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 2.89
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.48
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.48
+        },
+        {
+          "ticker": "JD",
+          "weight": 1.99
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.81
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.71
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 1.6
+        },
+        {
+          "ticker": "ESTC",
+          "weight": 1.5
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.47
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 21.6
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 13.4
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.27
+        },
+        {
+          "ticker": "APO",
+          "weight": 8.23
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.79
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.21
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 4.99
+        },
+        {
+          "ticker": "SE",
+          "weight": 4.8
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.12
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 3.05
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.64
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.46
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 2.45
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.05
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.8
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.72
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 1.44
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.38
+        },
+        {
+          "ticker": "NU",
+          "weight": 1.31
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 19.21
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.18
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.58
+        },
+        {
+          "ticker": "APO",
+          "weight": 7.4
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.23
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 6.1
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.1
+        },
+        {
+          "ticker": "SE",
+          "weight": 5.85
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 4.48
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.29
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.73
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.33
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 2.14
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.92
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 1.89
+        },
+        {
+          "ticker": "CRWD",
+          "weight": 1.75
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.69
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 1.49
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.42
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 20.13
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.83
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.05
+        },
+        {
+          "ticker": "APO",
+          "weight": 7.23
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.12
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.51
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.63
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.54
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 4.23
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.05
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.78
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.97
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.44
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 2.16
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.83
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.67
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 1.5
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 1.49
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.48
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.36
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 19.27
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 9.93
+        },
+        {
+          "ticker": "APO",
+          "weight": 8.94
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.61
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.5
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.21
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.73
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 4.74
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.46
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.85
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.16
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.71
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 2.49
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 2.14
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.94
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 1.89
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.87
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.62
+        },
+        {
+          "ticker": "SHW",
+          "weight": 1.51
+        },
+        {
+          "ticker": "RDDT",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 19.75
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.75
+        },
+        {
+          "ticker": "SE",
+          "weight": 9.61
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.31
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 5.75
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 5.55
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 5.46
+        },
+        {
+          "ticker": "LLY",
+          "weight": 5.07
+        },
+        {
+          "ticker": "APO",
+          "weight": 3.91
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.43
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.23
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 3.19
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 2.58
+        },
+        {
+          "ticker": "PDD",
+          "weight": 2.4
+        },
+        {
+          "ticker": "NOW",
+          "weight": 2.12
+        },
+        {
+          "ticker": "APP",
+          "weight": 2.03
+        },
+        {
+          "ticker": "WDAY",
+          "weight": 2.01
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 2.0
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.93
+        },
+        {
+          "ticker": "SHW",
+          "weight": 1.93
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 19.1
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 11.19
+        },
+        {
+          "ticker": "SE",
+          "weight": 8.81
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.05
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.44
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 6.36
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 4.87
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.05
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.56
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.39
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 3.32
+        },
+        {
+          "ticker": "RDDT",
+          "weight": 3.18
+        },
+        {
+          "ticker": "APO",
+          "weight": 3.02
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 2.56
+        },
+        {
+          "ticker": "APP",
+          "weight": 2.41
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 2.4
+        },
+        {
+          "ticker": "GEV",
+          "weight": 1.99
+        },
+        {
+          "ticker": "ZS",
+          "weight": 1.81
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.76
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.71
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 12.06
+        },
+        {
+          "ticker": "SE",
+          "weight": 10.19
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.19
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.61
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 7.76
+        },
+        {
+          "ticker": "META",
+          "weight": 7.36
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 5.36
+        },
+        {
+          "ticker": "APP",
+          "weight": 5.12
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.54
+        },
+        {
+          "ticker": "RDDT",
+          "weight": 3.82
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 3.39
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.3
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 3.13
+        },
+        {
+          "ticker": "APO",
+          "weight": 2.94
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 2.56
+        },
+        {
+          "ticker": "GEV",
+          "weight": 2.52
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.51
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.99
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 1.82
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 13.07
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.41
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.08
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 8.07
+        },
+        {
+          "ticker": "SE",
+          "weight": 7.73
+        },
+        {
+          "ticker": "META",
+          "weight": 7.13
+        },
+        {
+          "ticker": "TTWO",
+          "weight": 5.87
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.45
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 3.91
+        },
+        {
+          "ticker": "APO",
+          "weight": 3.54
+        },
+        {
+          "ticker": "RDDT",
+          "weight": 3.47
+        },
+        {
+          "ticker": "APP",
+          "weight": 3.42
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.39
+        },
+        {
+          "ticker": "SPOT",
+          "weight": 2.88
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.63
+        },
+        {
+          "ticker": "GEV",
+          "weight": 2.5
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 2.44
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 2.12
+        },
+        {
+          "ticker": "CPAY",
+          "weight": 2.07
+        },
+        {
+          "ticker": "GRAB",
+          "weight": 1.82
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:33:32Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=TGM",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

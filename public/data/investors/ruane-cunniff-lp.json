@@ -1,0 +1,747 @@
+{
+  "id": "ruane-cunniff-lp",
+  "holdings": [
+    {
+      "ticker": "GOOGL",
+      "weight": 10.51,
+      "shares": 2117644
+    },
+    {
+      "ticker": "FWONK",
+      "weight": 7.87,
+      "shares": 5357168
+    },
+    {
+      "ticker": "SCHW",
+      "weight": 7.65,
+      "shares": 4714780
+    },
+    {
+      "ticker": "ICE",
+      "weight": 7.17,
+      "shares": 2639372
+    },
+    {
+      "ticker": "TSM",
+      "weight": 7.04,
+      "shares": 1208419
+    },
+    {
+      "ticker": "ELV",
+      "weight": 7.01,
+      "shares": 1387968
+    },
+    {
+      "ticker": "COF",
+      "weight": 6.36,
+      "shares": 2017807
+    },
+    {
+      "ticker": "SUNB",
+      "weight": 6.17,
+      "shares": 5488261
+    },
+    {
+      "ticker": "MSA",
+      "weight": 5.03,
+      "shares": 1776282
+    },
+    {
+      "ticker": "ZTS",
+      "weight": 4.95,
+      "shares": 2425010
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 4.7,
+      "shares": 950394
+    },
+    {
+      "ticker": "ALGN",
+      "weight": 3.57,
+      "shares": 1206535
+    },
+    {
+      "ticker": "UNH",
+      "weight": 3.4,
+      "shares": 728407
+    },
+    {
+      "ticker": "ACN",
+      "weight": 3.17,
+      "shares": 928204
+    },
+    {
+      "ticker": "ICLR",
+      "weight": 3.12,
+      "shares": 1634611
+    },
+    {
+      "ticker": "TECH",
+      "weight": 3.06,
+      "shares": 3392001
+    },
+    {
+      "ticker": "BRK.B",
+      "weight": 2.57,
+      "shares": 310388
+    },
+    {
+      "ticker": "SAP",
+      "weight": 2.22,
+      "shares": 749909
+    },
+    {
+      "ticker": "META",
+      "weight": 1.99,
+      "shares": 201147
+    },
+    {
+      "ticker": "BRK.A",
+      "weight": 1.36,
+      "shares": 110
+    },
+    {
+      "ticker": "CACC",
+      "weight": 1.07,
+      "shares": 146203
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "ICE",
+          "weight": 11.61
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 9.28
+        },
+        {
+          "ticker": "ELV",
+          "weight": 8.79
+        },
+        {
+          "ticker": "UNH",
+          "weight": 8.02
+        },
+        {
+          "ticker": "TSM",
+          "weight": 7.98
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.93
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.92
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 6.67
+        },
+        {
+          "ticker": "J",
+          "weight": 6.52
+        },
+        {
+          "ticker": "CACC",
+          "weight": 6.25
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.46
+        },
+        {
+          "ticker": "META",
+          "weight": 4.61
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.8
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.99
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.67
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.49
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "ICE",
+          "weight": 11.1
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 9.1
+        },
+        {
+          "ticker": "ELV",
+          "weight": 8.8
+        },
+        {
+          "ticker": "TSM",
+          "weight": 8.34
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.02
+        },
+        {
+          "ticker": "UNH",
+          "weight": 7.95
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 7.04
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.2
+        },
+        {
+          "ticker": "CACC",
+          "weight": 5.79
+        },
+        {
+          "ticker": "J",
+          "weight": 5.71
+        },
+        {
+          "ticker": "META",
+          "weight": 4.62
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.42
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.35
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.83
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.23
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.16
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "ICE",
+          "weight": 12.85
+        },
+        {
+          "ticker": "UNH",
+          "weight": 9.01
+        },
+        {
+          "ticker": "ELV",
+          "weight": 8.33
+        },
+        {
+          "ticker": "TSM",
+          "weight": 8.05
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 7.7
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 7.52
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.06
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.62
+        },
+        {
+          "ticker": "J",
+          "weight": 5.28
+        },
+        {
+          "ticker": "META",
+          "weight": 5.18
+        },
+        {
+          "ticker": "CACC",
+          "weight": 4.82
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.9
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.19
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 3.1
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.36
+        },
+        {
+          "ticker": "KMX",
+          "weight": 2.25
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.48
+        },
+        {
+          "ticker": "AMTM",
+          "weight": 1.31
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "ICE",
+          "weight": 12.41
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 9.42
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 8.85
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.85
+        },
+        {
+          "ticker": "UNH",
+          "weight": 7.35
+        },
+        {
+          "ticker": "ELV",
+          "weight": 7.3
+        },
+        {
+          "ticker": "COF",
+          "weight": 6.72
+        },
+        {
+          "ticker": "TSM",
+          "weight": 6.61
+        },
+        {
+          "ticker": "CACC",
+          "weight": 5.33
+        },
+        {
+          "ticker": "META",
+          "weight": 5.28
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 4.6
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.59
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 3.12
+        },
+        {
+          "ticker": "J",
+          "weight": 2.81
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.73
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.46
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.49
+        },
+        {
+          "ticker": "FWONA",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "SCHW",
+          "weight": 9.71
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 9.51
+        },
+        {
+          "ticker": "ELV",
+          "weight": 8.96
+        },
+        {
+          "ticker": "ICE",
+          "weight": 8.84
+        },
+        {
+          "ticker": "UNH",
+          "weight": 7.9
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.01
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.73
+        },
+        {
+          "ticker": "CACC",
+          "weight": 6.09
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.69
+        },
+        {
+          "ticker": "META",
+          "weight": 5.4
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 4.03
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.81
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 3.72
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.29
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.71
+        },
+        {
+          "ticker": "J",
+          "weight": 2.61
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.85
+        },
+        {
+          "ticker": "FWONA",
+          "weight": 1.11
+        },
+        {
+          "ticker": "LBRDA",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "SCHW",
+          "weight": 10.46
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 10.19
+        },
+        {
+          "ticker": "ICE",
+          "weight": 8.83
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.82
+        },
+        {
+          "ticker": "TSM",
+          "weight": 7.55
+        },
+        {
+          "ticker": "ELV",
+          "weight": 7.41
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.25
+        },
+        {
+          "ticker": "CACC",
+          "weight": 5.17
+        },
+        {
+          "ticker": "META",
+          "weight": 5.1
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 4.32
+        },
+        {
+          "ticker": "UNH",
+          "weight": 4.14
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.96
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 3.23
+        },
+        {
+          "ticker": "MSA",
+          "weight": 2.77
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.76
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.75
+        },
+        {
+          "ticker": "J",
+          "weight": 2.45
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.48
+        },
+        {
+          "ticker": "FWONA",
+          "weight": 1.24
+        },
+        {
+          "ticker": "LBRDA",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "SCHW",
+          "weight": 10.23
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 9.88
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.72
+        },
+        {
+          "ticker": "TSM",
+          "weight": 8.92
+        },
+        {
+          "ticker": "ELV",
+          "weight": 7.94
+        },
+        {
+          "ticker": "ICE",
+          "weight": 7.85
+        },
+        {
+          "ticker": "COF",
+          "weight": 7.57
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.18
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 5.05
+        },
+        {
+          "ticker": "MSA",
+          "weight": 4.98
+        },
+        {
+          "ticker": "CACC",
+          "weight": 4.59
+        },
+        {
+          "ticker": "UNH",
+          "weight": 4.45
+        },
+        {
+          "ticker": "META",
+          "weight": 3.04
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.76
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.02
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.74
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.5
+        },
+        {
+          "ticker": "TECH",
+          "weight": 1.39
+        },
+        {
+          "ticker": "FWONA",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 11.0
+        },
+        {
+          "ticker": "SCHW",
+          "weight": 9.03
+        },
+        {
+          "ticker": "FWONK",
+          "weight": 8.74
+        },
+        {
+          "ticker": "COF",
+          "weight": 8.1
+        },
+        {
+          "ticker": "ELV",
+          "weight": 8.06
+        },
+        {
+          "ticker": "ICE",
+          "weight": 7.08
+        },
+        {
+          "ticker": "TSM",
+          "weight": 6.98
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.79
+        },
+        {
+          "ticker": "ICLR",
+          "weight": 4.95
+        },
+        {
+          "ticker": "MSA",
+          "weight": 4.69
+        },
+        {
+          "ticker": "ACN",
+          "weight": 4.09
+        },
+        {
+          "ticker": "UNH",
+          "weight": 3.98
+        },
+        {
+          "ticker": "CACC",
+          "weight": 3.84
+        },
+        {
+          "ticker": "ALGN",
+          "weight": 3.08
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.57
+        },
+        {
+          "ticker": "META",
+          "weight": 2.55
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 1.45
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 1.41
+        },
+        {
+          "ticker": "TECH",
+          "weight": 1.4
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.22
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:37:36Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=RC",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

@@ -1,0 +1,1023 @@
+{
+  "id": "lindsell-train",
+  "holdings": [
+    {
+      "ticker": "TKO",
+      "weight": 15.88,
+      "shares": 2449468
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 15.75,
+      "shares": 1704639
+    },
+    {
+      "ticker": "INTU",
+      "weight": 10.19,
+      "shares": 733699
+    },
+    {
+      "ticker": "DIS",
+      "weight": 9.93,
+      "shares": 3206407
+    },
+    {
+      "ticker": "TMO",
+      "weight": 9.75,
+      "shares": 617211
+    },
+    {
+      "ticker": "FICO",
+      "weight": 8.56,
+      "shares": 249422
+    },
+    {
+      "ticker": "MDLZ",
+      "weight": 6.6,
+      "shares": 3561964
+    },
+    {
+      "ticker": "PEP",
+      "weight": 6.37,
+      "shares": 1277185
+    },
+    {
+      "ticker": "PYPL",
+      "weight": 6.08,
+      "shares": 4179623
+    },
+    {
+      "ticker": "EBAY",
+      "weight": 5.63,
+      "shares": 1927485
+    },
+    {
+      "ticker": "BF.A",
+      "weight": 2.23,
+      "shares": 2585222
+    },
+    {
+      "ticker": "MANU",
+      "weight": 1.69,
+      "shares": 3142000
+    },
+    {
+      "ticker": "BF.B",
+      "weight": 1.34,
+      "shares": 1576049
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 25.94
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 14.83
+        },
+        {
+          "ticker": "DIS",
+          "weight": 13.61
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.31
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.62
+        },
+        {
+          "ticker": "TKO",
+          "weight": 8.52
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 8.02
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.58
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.58
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 24.28
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 16.02
+        },
+        {
+          "ticker": "INTU",
+          "weight": 13.72
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.79
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.43
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 8.53
+        },
+        {
+          "ticker": "TKO",
+          "weight": 8.36
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.62
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.24
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 23.93
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 14.51
+        },
+        {
+          "ticker": "INTU",
+          "weight": 13.75
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.91
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.77
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 8.85
+        },
+        {
+          "ticker": "TKO",
+          "weight": 8.77
+        },
+        {
+          "ticker": "MANU",
+          "weight": 3.04
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.48
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 25.54
+        },
+        {
+          "ticker": "INTU",
+          "weight": 14.61
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.54
+        },
+        {
+          "ticker": "PEP",
+          "weight": 12.54
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.54
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 8.4
+        },
+        {
+          "ticker": "TKO",
+          "weight": 8.21
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.9
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.26
+        },
+        {
+          "ticker": "CZOOF",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 25.31
+        },
+        {
+          "ticker": "PEP",
+          "weight": 12.12
+        },
+        {
+          "ticker": "INTU",
+          "weight": 11.97
+        },
+        {
+          "ticker": "DIS",
+          "weight": 11.83
+        },
+        {
+          "ticker": "TKO",
+          "weight": 10.77
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.72
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.66
+        },
+        {
+          "ticker": "FICO",
+          "weight": 5.2
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.97
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.45
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 27.28
+        },
+        {
+          "ticker": "PEP",
+          "weight": 12.7
+        },
+        {
+          "ticker": "INTU",
+          "weight": 11.93
+        },
+        {
+          "ticker": "TKO",
+          "weight": 11.14
+        },
+        {
+          "ticker": "DIS",
+          "weight": 10.28
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.31
+        },
+        {
+          "ticker": "FICO",
+          "weight": 6.69
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 6.31
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.98
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.39
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 23.39
+        },
+        {
+          "ticker": "PEP",
+          "weight": 12.47
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.0
+        },
+        {
+          "ticker": "TKO",
+          "weight": 11.64
+        },
+        {
+          "ticker": "DIS",
+          "weight": 10.55
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.45
+        },
+        {
+          "ticker": "FICO",
+          "weight": 7.75
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.71
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 4.08
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.97
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 25.48
+        },
+        {
+          "ticker": "PEP",
+          "weight": 12.34
+        },
+        {
+          "ticker": "INTU",
+          "weight": 10.84
+        },
+        {
+          "ticker": "FICO",
+          "weight": 10.67
+        },
+        {
+          "ticker": "TKO",
+          "weight": 9.8
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.05
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.22
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.98
+        },
+        {
+          "ticker": "MANU",
+          "weight": 4.92
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.69
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 23.93
+        },
+        {
+          "ticker": "TKO",
+          "weight": 11.89
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.57
+        },
+        {
+          "ticker": "INTU",
+          "weight": 11.28
+        },
+        {
+          "ticker": "FICO",
+          "weight": 10.79
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.92
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.19
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.77
+        },
+        {
+          "ticker": "MANU",
+          "weight": 4.31
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.36
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 23.93
+        },
+        {
+          "ticker": "TKO",
+          "weight": 12.34
+        },
+        {
+          "ticker": "FICO",
+          "weight": 11.65
+        },
+        {
+          "ticker": "INTU",
+          "weight": 11.31
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.31
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.04
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.46
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.52
+        },
+        {
+          "ticker": "MANU",
+          "weight": 4.86
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.59
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 24.6
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.56
+        },
+        {
+          "ticker": "FICO",
+          "weight": 12.51
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.4
+        },
+        {
+          "ticker": "TKO",
+          "weight": 10.04
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.17
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.29
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.52
+        },
+        {
+          "ticker": "MANU",
+          "weight": 4.45
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.46
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 23.88
+        },
+        {
+          "ticker": "FICO",
+          "weight": 13.78
+        },
+        {
+          "ticker": "INTU",
+          "weight": 13.4
+        },
+        {
+          "ticker": "PEP",
+          "weight": 10.79
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.82
+        },
+        {
+          "ticker": "TKO",
+          "weight": 9.39
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.32
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 4.76
+        },
+        {
+          "ticker": "MANU",
+          "weight": 4.43
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.42
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 21.24
+        },
+        {
+          "ticker": "FICO",
+          "weight": 13.62
+        },
+        {
+          "ticker": "INTU",
+          "weight": 13.51
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.98
+        },
+        {
+          "ticker": "PEP",
+          "weight": 11.11
+        },
+        {
+          "ticker": "TKO",
+          "weight": 10.1
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.77
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.16
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.2
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.31
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 18.33
+        },
+        {
+          "ticker": "FICO",
+          "weight": 15.23
+        },
+        {
+          "ticker": "INTU",
+          "weight": 13.77
+        },
+        {
+          "ticker": "TKO",
+          "weight": 12.66
+        },
+        {
+          "ticker": "DIS",
+          "weight": 11.65
+        },
+        {
+          "ticker": "PEP",
+          "weight": 10.94
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.38
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.51
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.86
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.68
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "MDLZ",
+          "weight": 17.12
+        },
+        {
+          "ticker": "FICO",
+          "weight": 13.01
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.94
+        },
+        {
+          "ticker": "TKO",
+          "weight": 12.72
+        },
+        {
+          "ticker": "DIS",
+          "weight": 11.92
+        },
+        {
+          "ticker": "PEP",
+          "weight": 10.71
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 8.15
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 6.09
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 3.14
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.35
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.83
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "TKO",
+          "weight": 13.02
+        },
+        {
+          "ticker": "FICO",
+          "weight": 12.83
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 12.66
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.51
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.19
+        },
+        {
+          "ticker": "PEP",
+          "weight": 9.8
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.22
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.7
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.34
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.65
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.52
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "TKO",
+          "weight": 14.48
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.71
+        },
+        {
+          "ticker": "FICO",
+          "weight": 12.37
+        },
+        {
+          "ticker": "DIS",
+          "weight": 11.8
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 11.4
+        },
+        {
+          "ticker": "PEP",
+          "weight": 10.27
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.6
+        },
+        {
+          "ticker": "TMO",
+          "weight": 7.07
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 6.38
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 2.57
+        },
+        {
+          "ticker": "MANU",
+          "weight": 1.85
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.49
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "TKO",
+          "weight": 13.71
+        },
+        {
+          "ticker": "INTU",
+          "weight": 12.45
+        },
+        {
+          "ticker": "DIS",
+          "weight": 12.04
+        },
+        {
+          "ticker": "FICO",
+          "weight": 9.68
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 9.14
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.48
+        },
+        {
+          "ticker": "TMO",
+          "weight": 8.23
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.99
+        },
+        {
+          "ticker": "PEP",
+          "weight": 7.61
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.8
+        },
+        {
+          "ticker": "MANU",
+          "weight": 2.03
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 1.78
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "TKO",
+          "weight": 14.74
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 13.42
+        },
+        {
+          "ticker": "DIS",
+          "weight": 10.54
+        },
+        {
+          "ticker": "INTU",
+          "weight": 10.32
+        },
+        {
+          "ticker": "TMO",
+          "weight": 9.8
+        },
+        {
+          "ticker": "FICO",
+          "weight": 8.24
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 7.77
+        },
+        {
+          "ticker": "PEP",
+          "weight": 7.64
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.43
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 5.52
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 1.82
+        },
+        {
+          "ticker": "MANU",
+          "weight": 1.64
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "GOOGL",
+          "weight": 16.71
+        },
+        {
+          "ticker": "TKO",
+          "weight": 15.06
+        },
+        {
+          "ticker": "INTU",
+          "weight": 10.33
+        },
+        {
+          "ticker": "TMO",
+          "weight": 10.21
+        },
+        {
+          "ticker": "DIS",
+          "weight": 10.13
+        },
+        {
+          "ticker": "FICO",
+          "weight": 9.36
+        },
+        {
+          "ticker": "PEP",
+          "weight": 6.61
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.41
+        },
+        {
+          "ticker": "MDLZ",
+          "weight": 6.17
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 4.62
+        },
+        {
+          "ticker": "BF.A",
+          "weight": 1.84
+        },
+        {
+          "ticker": "MANU",
+          "weight": 1.46
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 1.1
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:28Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=LT",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

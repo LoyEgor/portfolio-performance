@@ -1,0 +1,1379 @@
+{
+  "id": "kahn-brothers-group",
+  "holdings": [
+    {
+      "ticker": "C",
+      "weight": 17.61,
+      "shares": 840897
+    },
+    {
+      "ticker": "BAYRY",
+      "weight": 13.81,
+      "shares": 6513893
+    },
+    {
+      "ticker": "FLG",
+      "weight": 9.92,
+      "shares": 4083618
+    },
+    {
+      "ticker": "DIS",
+      "weight": 6.74,
+      "shares": 378909
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 6.47,
+      "shares": 122029
+    },
+    {
+      "ticker": "OGN",
+      "weight": 6.12,
+      "shares": 5536993
+    },
+    {
+      "ticker": "SEB",
+      "weight": 6.12,
+      "shares": 5871
+    },
+    {
+      "ticker": "BP",
+      "weight": 5.39,
+      "shares": 622256
+    },
+    {
+      "ticker": "MRK",
+      "weight": 5.05,
+      "shares": 227288
+    },
+    {
+      "ticker": "Z",
+      "weight": 4.17,
+      "shares": 545212
+    },
+    {
+      "ticker": "SEG",
+      "weight": 3.54,
+      "shares": 893227
+    },
+    {
+      "ticker": "PTEN",
+      "weight": 3.38,
+      "shares": 1690156
+    },
+    {
+      "ticker": "IDT",
+      "weight": 3.37,
+      "shares": 372566
+    },
+    {
+      "ticker": "PFE",
+      "weight": 2.51,
+      "shares": 484733
+    },
+    {
+      "ticker": "MBI",
+      "weight": 2.24,
+      "shares": 2056434
+    },
+    {
+      "ticker": "BMY",
+      "weight": 1.91,
+      "shares": 170381
+    },
+    {
+      "ticker": "GSK",
+      "weight": 1.65,
+      "shares": 160982
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 10.04
+        },
+        {
+          "ticker": "C",
+          "weight": 9.81
+        },
+        {
+          "ticker": "FLG",
+          "weight": 9.21
+        },
+        {
+          "ticker": "MRK",
+          "weight": 8.83
+        },
+        {
+          "ticker": "BMY",
+          "weight": 8.66
+        },
+        {
+          "ticker": "MBI",
+          "weight": 7.64
+        },
+        {
+          "ticker": "BP",
+          "weight": 7.55
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.32
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 6.51
+        },
+        {
+          "ticker": "SEB",
+          "weight": 6.14
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 4.31
+        },
+        {
+          "ticker": "PFE",
+          "weight": 3.89
+        },
+        {
+          "ticker": "BB",
+          "weight": 3.65
+        },
+        {
+          "ticker": "NTPIF",
+          "weight": 2.63
+        },
+        {
+          "ticker": "RFL",
+          "weight": 2.04
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.79
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 10.46
+        },
+        {
+          "ticker": "C",
+          "weight": 8.93
+        },
+        {
+          "ticker": "BMY",
+          "weight": 8.79
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 8.74
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.62
+        },
+        {
+          "ticker": "MRK",
+          "weight": 8.4
+        },
+        {
+          "ticker": "MBI",
+          "weight": 8.36
+        },
+        {
+          "ticker": "FLG",
+          "weight": 7.8
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.79
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.93
+        },
+        {
+          "ticker": "PFE",
+          "weight": 4.86
+        },
+        {
+          "ticker": "BB",
+          "weight": 3.24
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 2.93
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.72
+        },
+        {
+          "ticker": "RFL",
+          "weight": 2.42
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 9.92
+        },
+        {
+          "ticker": "MBI",
+          "weight": 9.45
+        },
+        {
+          "ticker": "BP",
+          "weight": 9.23
+        },
+        {
+          "ticker": "FLG",
+          "weight": 9.14
+        },
+        {
+          "ticker": "C",
+          "weight": 8.65
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 7.94
+        },
+        {
+          "ticker": "MRK",
+          "weight": 7.85
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.65
+        },
+        {
+          "ticker": "BMY",
+          "weight": 7.65
+        },
+        {
+          "ticker": "PFE",
+          "weight": 6.24
+        },
+        {
+          "ticker": "SEB",
+          "weight": 6.12
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.31
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.93
+        },
+        {
+          "ticker": "BB",
+          "weight": 2.48
+        },
+        {
+          "ticker": "RFL",
+          "weight": 1.42
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "MBI",
+          "weight": 11.39
+        },
+        {
+          "ticker": "AGO",
+          "weight": 10.44
+        },
+        {
+          "ticker": "GSK",
+          "weight": 9.18
+        },
+        {
+          "ticker": "PFE",
+          "weight": 8.71
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.64
+        },
+        {
+          "ticker": "FLG",
+          "weight": 8.62
+        },
+        {
+          "ticker": "BMY",
+          "weight": 8.32
+        },
+        {
+          "ticker": "MRK",
+          "weight": 7.87
+        },
+        {
+          "ticker": "C",
+          "weight": 7.81
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 7.28
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.72
+        },
+        {
+          "ticker": "IDT",
+          "weight": 3.03
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 2.98
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "PTEN",
+          "weight": 11.94
+        },
+        {
+          "ticker": "AGO",
+          "weight": 11.22
+        },
+        {
+          "ticker": "MBI",
+          "weight": 9.9
+        },
+        {
+          "ticker": "BMY",
+          "weight": 9.0
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.65
+        },
+        {
+          "ticker": "GSK",
+          "weight": 8.27
+        },
+        {
+          "ticker": "MRK",
+          "weight": 7.59
+        },
+        {
+          "ticker": "PFE",
+          "weight": 7.18
+        },
+        {
+          "ticker": "FLG",
+          "weight": 7.06
+        },
+        {
+          "ticker": "C",
+          "weight": 6.91
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.55
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.09
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.13
+        },
+        {
+          "ticker": "BB",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "PTEN",
+          "weight": 10.62
+        },
+        {
+          "ticker": "AGO",
+          "weight": 10.24
+        },
+        {
+          "ticker": "BMY",
+          "weight": 10.07
+        },
+        {
+          "ticker": "MRK",
+          "weight": 8.97
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.78
+        },
+        {
+          "ticker": "GSK",
+          "weight": 8.77
+        },
+        {
+          "ticker": "MBI",
+          "weight": 8.4
+        },
+        {
+          "ticker": "PFE",
+          "weight": 7.73
+        },
+        {
+          "ticker": "FLG",
+          "weight": 7.48
+        },
+        {
+          "ticker": "C",
+          "weight": 7.21
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.42
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.5
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.66
+        },
+        {
+          "ticker": "BB",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "BMY",
+          "weight": 10.75
+        },
+        {
+          "ticker": "BP",
+          "weight": 10.15
+        },
+        {
+          "ticker": "AGO",
+          "weight": 9.88
+        },
+        {
+          "ticker": "MRK",
+          "weight": 9.59
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 8.8
+        },
+        {
+          "ticker": "FLG",
+          "weight": 8.28
+        },
+        {
+          "ticker": "C",
+          "weight": 7.93
+        },
+        {
+          "ticker": "PFE",
+          "weight": 7.47
+        },
+        {
+          "ticker": "MBI",
+          "weight": 7.24
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.28
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.49
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.66
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.9
+        },
+        {
+          "ticker": "HLN",
+          "weight": 1.44
+        },
+        {
+          "ticker": "BB",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 10.66
+        },
+        {
+          "ticker": "MRK",
+          "weight": 10.53
+        },
+        {
+          "ticker": "BP",
+          "weight": 10.53
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 10.47
+        },
+        {
+          "ticker": "BMY",
+          "weight": 9.15
+        },
+        {
+          "ticker": "MBI",
+          "weight": 8.61
+        },
+        {
+          "ticker": "PFE",
+          "weight": 7.4
+        },
+        {
+          "ticker": "C",
+          "weight": 7.35
+        },
+        {
+          "ticker": "FLG",
+          "weight": 7.13
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.0
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.23
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.84
+        },
+        {
+          "ticker": "HLN",
+          "weight": 1.57
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "BP",
+          "weight": 11.33
+        },
+        {
+          "ticker": "MRK",
+          "weight": 10.9
+        },
+        {
+          "ticker": "BMY",
+          "weight": 9.51
+        },
+        {
+          "ticker": "FLG",
+          "weight": 8.8
+        },
+        {
+          "ticker": "AGO",
+          "weight": 8.77
+        },
+        {
+          "ticker": "C",
+          "weight": 8.71
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 7.23
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.93
+        },
+        {
+          "ticker": "MBI",
+          "weight": 6.68
+        },
+        {
+          "ticker": "PFE",
+          "weight": 6.41
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 5.6
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.5
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.91
+        },
+        {
+          "ticker": "HLN",
+          "weight": 1.72
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "MRK",
+          "weight": 11.39
+        },
+        {
+          "ticker": "FLG",
+          "weight": 10.87
+        },
+        {
+          "ticker": "BP",
+          "weight": 9.9
+        },
+        {
+          "ticker": "BMY",
+          "weight": 9.34
+        },
+        {
+          "ticker": "AGO",
+          "weight": 8.83
+        },
+        {
+          "ticker": "C",
+          "weight": 8.46
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 6.99
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.86
+        },
+        {
+          "ticker": "MBI",
+          "weight": 6.37
+        },
+        {
+          "ticker": "PFE",
+          "weight": 5.95
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 5.66
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.18
+        },
+        {
+          "ticker": "HLN",
+          "weight": 1.62
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.39
+        },
+        {
+          "ticker": "BB",
+          "weight": 1.18
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "FLG",
+          "weight": 11.61
+        },
+        {
+          "ticker": "BP",
+          "weight": 11.16
+        },
+        {
+          "ticker": "MRK",
+          "weight": 10.69
+        },
+        {
+          "ticker": "AGO",
+          "weight": 10.06
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 8.19
+        },
+        {
+          "ticker": "C",
+          "weight": 8.13
+        },
+        {
+          "ticker": "BMY",
+          "weight": 8.05
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.56
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.78
+        },
+        {
+          "ticker": "PFE",
+          "weight": 5.69
+        },
+        {
+          "ticker": "MBI",
+          "weight": 5.64
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.75
+        },
+        {
+          "ticker": "HLN",
+          "weight": 1.4
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.25
+        },
+        {
+          "ticker": "BB",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 12.24
+        },
+        {
+          "ticker": "MRK",
+          "weight": 11.28
+        },
+        {
+          "ticker": "FLG",
+          "weight": 10.44
+        },
+        {
+          "ticker": "C",
+          "weight": 10.3
+        },
+        {
+          "ticker": "BP",
+          "weight": 10.05
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.73
+        },
+        {
+          "ticker": "BMY",
+          "weight": 7.09
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 6.26
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.3
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 5.09
+        },
+        {
+          "ticker": "MBI",
+          "weight": 4.9
+        },
+        {
+          "ticker": "PFE",
+          "weight": 4.89
+        },
+        {
+          "ticker": "IDT",
+          "weight": 1.97
+        },
+        {
+          "ticker": "GNE",
+          "weight": 1.38
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "AGO",
+          "weight": 13.21
+        },
+        {
+          "ticker": "MRK",
+          "weight": 12.63
+        },
+        {
+          "ticker": "C",
+          "weight": 11.83
+        },
+        {
+          "ticker": "BP",
+          "weight": 9.79
+        },
+        {
+          "ticker": "GSK",
+          "weight": 8.38
+        },
+        {
+          "ticker": "BMY",
+          "weight": 7.04
+        },
+        {
+          "ticker": "MBI",
+          "weight": 5.46
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 4.94
+        },
+        {
+          "ticker": "SEB",
+          "weight": 4.55
+        },
+        {
+          "ticker": "PFE",
+          "weight": 4.43
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 3.7
+        },
+        {
+          "ticker": "VOXX-OLD",
+          "weight": 3.63
+        },
+        {
+          "ticker": "OGN",
+          "weight": 3.46
+        },
+        {
+          "ticker": "FLG",
+          "weight": 3.12
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.04
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.79
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 13.44
+        },
+        {
+          "ticker": "MRK",
+          "weight": 13.0
+        },
+        {
+          "ticker": "BP",
+          "weight": 10.5
+        },
+        {
+          "ticker": "GSK",
+          "weight": 8.47
+        },
+        {
+          "ticker": "FLG",
+          "weight": 6.98
+        },
+        {
+          "ticker": "OGN",
+          "weight": 6.1
+        },
+        {
+          "ticker": "BMY",
+          "weight": 6.09
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 5.47
+        },
+        {
+          "ticker": "MBI",
+          "weight": 5.42
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.17
+        },
+        {
+          "ticker": "PFE",
+          "weight": 4.97
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 4.26
+        },
+        {
+          "ticker": "AGO",
+          "weight": 4.12
+        },
+        {
+          "ticker": "DIS",
+          "weight": 3.89
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.11
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 13.46
+        },
+        {
+          "ticker": "MRK",
+          "weight": 11.95
+        },
+        {
+          "ticker": "BP",
+          "weight": 9.04
+        },
+        {
+          "ticker": "FLG",
+          "weight": 8.57
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 7.93
+        },
+        {
+          "ticker": "GSK",
+          "weight": 7.85
+        },
+        {
+          "ticker": "BMY",
+          "weight": 7.75
+        },
+        {
+          "ticker": "DIS",
+          "weight": 7.07
+        },
+        {
+          "ticker": "OGN",
+          "weight": 6.37
+        },
+        {
+          "ticker": "PFE",
+          "weight": 5.23
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.14
+        },
+        {
+          "ticker": "AGO",
+          "weight": 4.25
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 3.12
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.28
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 14.76
+        },
+        {
+          "ticker": "MRK",
+          "weight": 11.72
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.1
+        },
+        {
+          "ticker": "BMY",
+          "weight": 9.03
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.15
+        },
+        {
+          "ticker": "FLG",
+          "weight": 7.68
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.92
+        },
+        {
+          "ticker": "AGO",
+          "weight": 5.94
+        },
+        {
+          "ticker": "OGN",
+          "weight": 5.41
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 5.09
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.07
+        },
+        {
+          "ticker": "PFE",
+          "weight": 4.68
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 3.81
+        },
+        {
+          "ticker": "IDT",
+          "weight": 2.63
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 13.33
+        },
+        {
+          "ticker": "FLG",
+          "weight": 10.49
+        },
+        {
+          "ticker": "MRK",
+          "weight": 9.46
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 8.47
+        },
+        {
+          "ticker": "BP",
+          "weight": 8.32
+        },
+        {
+          "ticker": "OGN",
+          "weight": 7.95
+        },
+        {
+          "ticker": "BMY",
+          "weight": 7.8
+        },
+        {
+          "ticker": "DIS",
+          "weight": 7.36
+        },
+        {
+          "ticker": "GSK",
+          "weight": 6.82
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.09
+        },
+        {
+          "ticker": "IDT",
+          "weight": 4.01
+        },
+        {
+          "ticker": "PFE",
+          "weight": 3.99
+        },
+        {
+          "ticker": "AGO",
+          "weight": 3.5
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 3.41
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 16.04
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 10.78
+        },
+        {
+          "ticker": "DIS",
+          "weight": 10.34
+        },
+        {
+          "ticker": "FLG",
+          "weight": 9.73
+        },
+        {
+          "ticker": "MRK",
+          "weight": 8.25
+        },
+        {
+          "ticker": "BP",
+          "weight": 7.18
+        },
+        {
+          "ticker": "OGN",
+          "weight": 7.17
+        },
+        {
+          "ticker": "IDT",
+          "weight": 5.76
+        },
+        {
+          "ticker": "BMY",
+          "weight": 5.42
+        },
+        {
+          "ticker": "GSK",
+          "weight": 5.39
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.24
+        },
+        {
+          "ticker": "PFE",
+          "weight": 3.77
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 2.41
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 1.4
+        },
+        {
+          "ticker": "GNE",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 17.57
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 11.11
+        },
+        {
+          "ticker": "FLG",
+          "weight": 9.8
+        },
+        {
+          "ticker": "DIS",
+          "weight": 8.92
+        },
+        {
+          "ticker": "OGN",
+          "weight": 7.63
+        },
+        {
+          "ticker": "BP",
+          "weight": 7.38
+        },
+        {
+          "ticker": "MRK",
+          "weight": 7.19
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.48
+        },
+        {
+          "ticker": "SEB",
+          "weight": 5.57
+        },
+        {
+          "ticker": "IDT",
+          "weight": 4.05
+        },
+        {
+          "ticker": "PFE",
+          "weight": 3.56
+        },
+        {
+          "ticker": "SEG",
+          "weight": 2.64
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.43
+        },
+        {
+          "ticker": "GSK",
+          "weight": 2.23
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 1.93
+        },
+        {
+          "ticker": "MBI",
+          "weight": 1.51
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 19.01
+        },
+        {
+          "ticker": "BAYRY",
+          "weight": 13.58
+        },
+        {
+          "ticker": "FLG",
+          "weight": 9.77
+        },
+        {
+          "ticker": "MRK",
+          "weight": 8.42
+        },
+        {
+          "ticker": "DIS",
+          "weight": 8.34
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.9
+        },
+        {
+          "ticker": "BP",
+          "weight": 6.71
+        },
+        {
+          "ticker": "SEB",
+          "weight": 6.01
+        },
+        {
+          "ticker": "OGN",
+          "weight": 4.84
+        },
+        {
+          "ticker": "IDT",
+          "weight": 3.73
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.56
+        },
+        {
+          "ticker": "SEG",
+          "weight": 2.15
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.03
+        },
+        {
+          "ticker": "PTEN",
+          "weight": 1.97
+        },
+        {
+          "ticker": "GSK",
+          "weight": 1.63
+        },
+        {
+          "ticker": "MBI",
+          "weight": 1.36
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:14Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=KB",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

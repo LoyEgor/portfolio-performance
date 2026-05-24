@@ -1,0 +1,1021 @@
+{
+  "id": "guy-spier",
+  "holdings": [
+    {
+      "ticker": "BRK.B",
+      "weight": 34.57,
+      "shares": 97600
+    },
+    {
+      "ticker": "BRK.A",
+      "weight": 15.92,
+      "shares": 30
+    },
+    {
+      "ticker": "MA",
+      "weight": 14.77,
+      "shares": 40000
+    },
+    {
+      "ticker": "AXP",
+      "weight": 14.53,
+      "shares": 65000
+    },
+    {
+      "ticker": "MCO",
+      "weight": 8.71,
+      "shares": 27000
+    },
+    {
+      "ticker": "RACE",
+      "weight": 7.4,
+      "shares": 30000
+    },
+    {
+      "ticker": "DJCO",
+      "weight": 4.1,
+      "shares": 11500
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 18.93
+        },
+        {
+          "ticker": "BAC",
+          "weight": 15.65
+        },
+        {
+          "ticker": "AXP",
+          "weight": 15.65
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.33
+        },
+        {
+          "ticker": "MU",
+          "weight": 9.3
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.81
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 6.1
+        },
+        {
+          "ticker": "SRG",
+          "weight": 4.83
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.25
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.13
+        },
+        {
+          "ticker": "TWTR-OLD",
+          "weight": 1.01
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 18.68
+        },
+        {
+          "ticker": "AXP",
+          "weight": 16.59
+        },
+        {
+          "ticker": "BAC",
+          "weight": 15.14
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.48
+        },
+        {
+          "ticker": "MU",
+          "weight": 8.12
+        },
+        {
+          "ticker": "RACE",
+          "weight": 7.89
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 6.0
+        },
+        {
+          "ticker": "BABA",
+          "weight": 5.15
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.68
+        },
+        {
+          "ticker": "SRG",
+          "weight": 4.4
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.87
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 18.98
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.4
+        },
+        {
+          "ticker": "BAC",
+          "weight": 16.12
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.31
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.29
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.02
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 6.1
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.74
+        },
+        {
+          "ticker": "SRG",
+          "weight": 3.67
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.48
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.83
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 19.44
+        },
+        {
+          "ticker": "AXP",
+          "weight": 15.89
+        },
+        {
+          "ticker": "BAC",
+          "weight": 15.79
+        },
+        {
+          "ticker": "MA",
+          "weight": 10.93
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.57
+        },
+        {
+          "ticker": "MU",
+          "weight": 8.61
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 6.25
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.88
+        },
+        {
+          "ticker": "SRG",
+          "weight": 3.07
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.61
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.9
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.61
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.89
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.41
+        },
+        {
+          "ticker": "MA",
+          "weight": 10.71
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.01
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.23
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.1
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.15
+        },
+        {
+          "ticker": "SRG",
+          "weight": 2.89
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.35
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.64
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.02
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.55
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.1
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.04
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.19
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.63
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.21
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.49
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.31
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.17
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.75
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.53
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.02
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 23.06
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.4
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.24
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.48
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.24
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.49
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.16
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.03
+        },
+        {
+          "ticker": "SRG",
+          "weight": 2.77
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.33
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.81
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 23.55
+        },
+        {
+          "ticker": "AXP",
+          "weight": 16.82
+        },
+        {
+          "ticker": "BAC",
+          "weight": 13.79
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.4
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.29
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.62
+        },
+        {
+          "ticker": "MU",
+          "weight": 5.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.08
+        },
+        {
+          "ticker": "SRG",
+          "weight": 3.2
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.27
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.64
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.97
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.47
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.46
+        },
+        {
+          "ticker": "RACE",
+          "weight": 11.28
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.28
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.29
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.31
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.53
+        },
+        {
+          "ticker": "SRG",
+          "weight": 2.06
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.7
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 23.07
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.6
+        },
+        {
+          "ticker": "RACE",
+          "weight": 12.57
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.44
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.59
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.48
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.07
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.52
+        },
+        {
+          "ticker": "SRG",
+          "weight": 2.15
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.91
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.6
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 24.28
+        },
+        {
+          "ticker": "AXP",
+          "weight": 15.45
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.83
+        },
+        {
+          "ticker": "RACE",
+          "weight": 11.66
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.36
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.86
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.71
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.21
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.03
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.91
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.67
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.14
+        },
+        {
+          "ticker": "AXP",
+          "weight": 17.37
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.38
+        },
+        {
+          "ticker": "RACE",
+          "weight": 11.9
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.41
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.53
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.19
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.66
+        },
+        {
+          "ticker": "SRG",
+          "weight": 2.06
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.73
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.63
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.78
+        },
+        {
+          "ticker": "AXP",
+          "weight": 18.42
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.2
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.22
+        },
+        {
+          "ticker": "RACE",
+          "weight": 10.08
+        },
+        {
+          "ticker": "MU",
+          "weight": 9.08
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.34
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.09
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.86
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.6
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.32
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.27
+        },
+        {
+          "ticker": "AXP",
+          "weight": 18.94
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.89
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.3
+        },
+        {
+          "ticker": "MU",
+          "weight": 10.25
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.53
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.16
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.43
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.77
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.33
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 23.31
+        },
+        {
+          "ticker": "AXP",
+          "weight": 20.51
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.7
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.98
+        },
+        {
+          "ticker": "RACE",
+          "weight": 10.1
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.47
+        },
+        {
+          "ticker": "MU",
+          "weight": 7.47
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.62
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 2.03
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.54
+        },
+        {
+          "ticker": "AXP",
+          "weight": 22.04
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.25
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.93
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.75
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.22
+        },
+        {
+          "ticker": "MU",
+          "weight": 5.95
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.52
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 2.31
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.42
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 26.02
+        },
+        {
+          "ticker": "AXP",
+          "weight": 19.63
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.52
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.13
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 8.33
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.17
+        },
+        {
+          "ticker": "MU",
+          "weight": 6.04
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.37
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.18
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.59
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.47
+        },
+        {
+          "ticker": "AXP",
+          "weight": 22.05
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.15
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.96
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.22
+        },
+        {
+          "ticker": "MU",
+          "weight": 8.12
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.2
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.46
+        },
+        {
+          "ticker": "BABA",
+          "weight": 1.77
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.6
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 22.58
+        },
+        {
+          "ticker": "AXP",
+          "weight": 22.28
+        },
+        {
+          "ticker": "BAC",
+          "weight": 12.65
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.94
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.26
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 7.23
+        },
+        {
+          "ticker": "MU",
+          "weight": 4.28
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.11
+        },
+        {
+          "ticker": "BABA",
+          "weight": 2.72
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 1.71
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 33.25
+        },
+        {
+          "ticker": "AXP",
+          "weight": 16.3
+        },
+        {
+          "ticker": "MA",
+          "weight": 15.48
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 15.35
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.35
+        },
+        {
+          "ticker": "RACE",
+          "weight": 6.48
+        },
+        {
+          "ticker": "DJCO",
+          "weight": 3.8
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:35:29Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=aq",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

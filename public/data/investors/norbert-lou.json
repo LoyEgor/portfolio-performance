@@ -1,0 +1,455 @@
+{
+  "id": "norbert-lou",
+  "holdings": [
+    {
+      "ticker": "BRK.A",
+      "weight": 38.47,
+      "shares": 145
+    },
+    {
+      "ticker": "CROX",
+      "weight": 18.24,
+      "shares": 594570
+    },
+    {
+      "ticker": "SGOV",
+      "weight": 17.11,
+      "shares": 460000
+    },
+    {
+      "ticker": "PDD",
+      "weight": 15.67,
+      "shares": 415004
+    },
+    {
+      "ticker": "PYPL",
+      "weight": 10.51,
+      "shares": 628907
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "ALLY",
+          "weight": 41.11
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 37.2
+        },
+        {
+          "ticker": "WGO",
+          "weight": 21.69
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "ALLY",
+          "weight": 43.2
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 38.49
+        },
+        {
+          "ticker": "WGO",
+          "weight": 18.31
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "ALLY",
+          "weight": 43.55
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 37.23
+        },
+        {
+          "ticker": "WGO",
+          "weight": 19.22
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 40.27
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 40.11
+        },
+        {
+          "ticker": "WGO",
+          "weight": 19.62
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 47.32
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 36.68
+        },
+        {
+          "ticker": "WGO",
+          "weight": 16.0
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 44.22
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 36.23
+        },
+        {
+          "ticker": "WGO",
+          "weight": 17.41
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 2.13
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 47.17
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 32.29
+        },
+        {
+          "ticker": "WGO",
+          "weight": 17.63
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 2.9
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 52.99
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 27.64
+        },
+        {
+          "ticker": "WGO",
+          "weight": 17.01
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 2.36
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 50.89
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 27.86
+        },
+        {
+          "ticker": "WGO",
+          "weight": 18.01
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.24
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 52.05
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 25.66
+        },
+        {
+          "ticker": "WGO",
+          "weight": 19.14
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.15
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 53.99
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 25.61
+        },
+        {
+          "ticker": "WGO",
+          "weight": 17.25
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.15
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 50.04
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 27.77
+        },
+        {
+          "ticker": "WGO",
+          "weight": 19.19
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.01
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 55.71
+        },
+        {
+          "ticker": "ALLY",
+          "weight": 22.07
+        },
+        {
+          "ticker": "WGO",
+          "weight": 18.56
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.67
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 63.17
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 17.3
+        },
+        {
+          "ticker": "WGO",
+          "weight": 15.97
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.56
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 72.1
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 17.49
+        },
+        {
+          "ticker": "WGO",
+          "weight": 7.15
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 3.26
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 75.42
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 18.5
+        },
+        {
+          "ticker": "PDD",
+          "weight": 4.0
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 2.08
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 53.45
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 27.0
+        },
+        {
+          "ticker": "PDD",
+          "weight": 16.76
+        },
+        {
+          "ticker": "SWBI",
+          "weight": 2.79
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 34.28
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 18.49
+        },
+        {
+          "ticker": "CROX",
+          "weight": 17.45
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 15.68
+        },
+        {
+          "ticker": "PDD",
+          "weight": 14.09
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 33.92
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 17.68
+        },
+        {
+          "ticker": "PDD",
+          "weight": 17.01
+        },
+        {
+          "ticker": "CROX",
+          "weight": 16.38
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 13.53
+        },
+        {
+          "ticker": "FISV",
+          "weight": 1.48
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.A",
+          "weight": 36.38
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 18.88
+        },
+        {
+          "ticker": "CROX",
+          "weight": 16.9
+        },
+        {
+          "ticker": "PDD",
+          "weight": 15.64
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 12.2
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:37:01Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=PC",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

@@ -1,0 +1,1276 @@
+{
+  "id": "chuck-akre",
+  "holdings": [
+    {
+      "ticker": "MA",
+      "weight": 18.81,
+      "shares": 2281106
+    },
+    {
+      "ticker": "BN",
+      "weight": 11.38,
+      "shares": 17027077
+    },
+    {
+      "ticker": "KKR",
+      "weight": 10.26,
+      "shares": 6718078
+    },
+    {
+      "ticker": "MCO",
+      "weight": 8.97,
+      "shares": 1246114
+    },
+    {
+      "ticker": "V",
+      "weight": 8.18,
+      "shares": 1638798
+    },
+    {
+      "ticker": "ROP",
+      "weight": 7.34,
+      "shares": 1257232
+    },
+    {
+      "ticker": "CSGP",
+      "weight": 6.89,
+      "shares": 10348273
+    },
+    {
+      "ticker": "FICO",
+      "weight": 6.41,
+      "shares": 363765
+    },
+    {
+      "ticker": "ORLY",
+      "weight": 5.93,
+      "shares": 3885813
+    },
+    {
+      "ticker": "CPRT",
+      "weight": 4.38,
+      "shares": 7998938
+    },
+    {
+      "ticker": "ABNB",
+      "weight": 4.24,
+      "shares": 2034473
+    },
+    {
+      "ticker": "CCC",
+      "weight": 3.12,
+      "shares": 31513070
+    },
+    {
+      "ticker": "CRM",
+      "weight": 2.21,
+      "shares": 717799
+    },
+    {
+      "ticker": "NOW",
+      "weight": 1.89,
+      "shares": 1096099
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.38
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.57
+        },
+        {
+          "ticker": "AMT",
+          "weight": 11.55
+        },
+        {
+          "ticker": "V",
+          "weight": 7.64
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.5
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.53
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 5.52
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 5.01
+        },
+        {
+          "ticker": "KKR",
+          "weight": 4.96
+        },
+        {
+          "ticker": "ROP",
+          "weight": 4.82
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.37
+        },
+        {
+          "ticker": "BN",
+          "weight": 3.99
+        },
+        {
+          "ticker": "LYV",
+          "weight": 3.19
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.97
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 2.83
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.57
+        },
+        {
+          "ticker": "ANSS-OLD",
+          "weight": 1.43
+        },
+        {
+          "ticker": "ALRM",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 13.34
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.7
+        },
+        {
+          "ticker": "AMT",
+          "weight": 11.81
+        },
+        {
+          "ticker": "V",
+          "weight": 7.64
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.73
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 5.58
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 5.57
+        },
+        {
+          "ticker": "KKR",
+          "weight": 5.44
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.04
+        },
+        {
+          "ticker": "ROP",
+          "weight": 4.88
+        },
+        {
+          "ticker": "CRM",
+          "weight": 4.26
+        },
+        {
+          "ticker": "BN",
+          "weight": 4.17
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 3.83
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.77
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.66
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 2.23
+        },
+        {
+          "ticker": "ANSS-OLD",
+          "weight": 1.32
+        },
+        {
+          "ticker": "ALRM",
+          "weight": 1.04
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 12.78
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.52
+        },
+        {
+          "ticker": "AMT",
+          "weight": 11.67
+        },
+        {
+          "ticker": "V",
+          "weight": 7.33
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.05
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.7
+        },
+        {
+          "ticker": "KKR",
+          "weight": 5.62
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 5.53
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.27
+        },
+        {
+          "ticker": "CRM",
+          "weight": 4.77
+        },
+        {
+          "ticker": "ROP",
+          "weight": 4.66
+        },
+        {
+          "ticker": "BN",
+          "weight": 4.41
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.0
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.16
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.07
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 2.15
+        },
+        {
+          "ticker": "ANSS-OLD",
+          "weight": 1.3
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 12.96
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.43
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.11
+        },
+        {
+          "ticker": "V",
+          "weight": 6.72
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.58
+        },
+        {
+          "ticker": "KKR",
+          "weight": 6.48
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.61
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 5.12
+        },
+        {
+          "ticker": "ROP",
+          "weight": 4.83
+        },
+        {
+          "ticker": "BN",
+          "weight": 4.68
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 4.56
+        },
+        {
+          "ticker": "CRM",
+          "weight": 4.2
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 3.55
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.31
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.22
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 2.2
+        },
+        {
+          "ticker": "ANSS-OLD",
+          "weight": 1.44
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.66
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.38
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.32
+        },
+        {
+          "ticker": "V",
+          "weight": 8.15
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.57
+        },
+        {
+          "ticker": "KKR",
+          "weight": 6.09
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.5
+        },
+        {
+          "ticker": "BN",
+          "weight": 5.2
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 5.0
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.96
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 4.51
+        },
+        {
+          "ticker": "CRM",
+          "weight": 4.22
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.67
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.4
+        },
+        {
+          "ticker": "ANSS-OLD",
+          "weight": 1.36
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.97
+        },
+        {
+          "ticker": "AMT",
+          "weight": 14.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.55
+        },
+        {
+          "ticker": "V",
+          "weight": 8.36
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.04
+        },
+        {
+          "ticker": "KKR",
+          "weight": 5.76
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.38
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.29
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 4.92
+        },
+        {
+          "ticker": "BN",
+          "weight": 4.79
+        },
+        {
+          "ticker": "CRM",
+          "weight": 4.1
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 3.47
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.42
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.39
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.91
+        },
+        {
+          "ticker": "AMT",
+          "weight": 13.33
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.35
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.21
+        },
+        {
+          "ticker": "V",
+          "weight": 8.3
+        },
+        {
+          "ticker": "KKR",
+          "weight": 5.92
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.3
+        },
+        {
+          "ticker": "BN",
+          "weight": 4.87
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 4.41
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.33
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 4.08
+        },
+        {
+          "ticker": "CRM",
+          "weight": 3.96
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.81
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.71
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 1.51
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.79
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.64
+        },
+        {
+          "ticker": "AMT",
+          "weight": 13.65
+        },
+        {
+          "ticker": "V",
+          "weight": 9.42
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.19
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.59
+        },
+        {
+          "ticker": "KKR",
+          "weight": 6.45
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.06
+        },
+        {
+          "ticker": "BN",
+          "weight": 5.03
+        },
+        {
+          "ticker": "DHR",
+          "weight": 4.37
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.84
+        },
+        {
+          "ticker": "KMX",
+          "weight": 2.96
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.94
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.5
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.7
+        },
+        {
+          "ticker": "V",
+          "weight": 9.86
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.91
+        },
+        {
+          "ticker": "KKR",
+          "weight": 7.08
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.48
+        },
+        {
+          "ticker": "BN",
+          "weight": 5.26
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 4.34
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 4.1
+        },
+        {
+          "ticker": "DHR",
+          "weight": 4.0
+        },
+        {
+          "ticker": "KMX",
+          "weight": 1.76
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 19.41
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.44
+        },
+        {
+          "ticker": "AMT",
+          "weight": 11.0
+        },
+        {
+          "ticker": "V",
+          "weight": 9.83
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.95
+        },
+        {
+          "ticker": "KKR",
+          "weight": 7.17
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.7
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.33
+        },
+        {
+          "ticker": "BN",
+          "weight": 5.18
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 4.38
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.61
+        },
+        {
+          "ticker": "KMX",
+          "weight": 2.01
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.01
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 21.48
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.94
+        },
+        {
+          "ticker": "AMT",
+          "weight": 10.32
+        },
+        {
+          "ticker": "V",
+          "weight": 10.24
+        },
+        {
+          "ticker": "KKR",
+          "weight": 9.66
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.9
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.07
+        },
+        {
+          "ticker": "BN",
+          "weight": 5.26
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.17
+        },
+        {
+          "ticker": "DHR",
+          "weight": 4.08
+        },
+        {
+          "ticker": "KMX",
+          "weight": 1.8
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.41
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.91
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.52
+        },
+        {
+          "ticker": "KKR",
+          "weight": 11.76
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.26
+        },
+        {
+          "ticker": "V",
+          "weight": 7.79
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.3
+        },
+        {
+          "ticker": "BN",
+          "weight": 6.17
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.41
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.51
+        },
+        {
+          "ticker": "KMX",
+          "weight": 1.78
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.73
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.76
+        },
+        {
+          "ticker": "KKR",
+          "weight": 12.62
+        },
+        {
+          "ticker": "AMT",
+          "weight": 10.33
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.41
+        },
+        {
+          "ticker": "V",
+          "weight": 7.7
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.31
+        },
+        {
+          "ticker": "BN",
+          "weight": 6.34
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.91
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.74
+        },
+        {
+          "ticker": "KMX",
+          "weight": 1.99
+        },
+        {
+          "ticker": "UBER",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 16.07
+        },
+        {
+          "ticker": "MCO",
+          "weight": 16.02
+        },
+        {
+          "ticker": "KKR",
+          "weight": 12.99
+        },
+        {
+          "ticker": "AMT",
+          "weight": 10.75
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.1
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.85
+        },
+        {
+          "ticker": "V",
+          "weight": 7.75
+        },
+        {
+          "ticker": "BN",
+          "weight": 6.92
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.86
+        },
+        {
+          "ticker": "DHR",
+          "weight": 4.0
+        },
+        {
+          "ticker": "KMX",
+          "weight": 1.41
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 1.28
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 16.5
+        },
+        {
+          "ticker": "MCO",
+          "weight": 13.6
+        },
+        {
+          "ticker": "KKR",
+          "weight": 12.68
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.0
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.02
+        },
+        {
+          "ticker": "BN",
+          "weight": 8.58
+        },
+        {
+          "ticker": "V",
+          "weight": 7.67
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.11
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.75
+        },
+        {
+          "ticker": "DHR",
+          "weight": 4.21
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 2.87
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 17.05
+        },
+        {
+          "ticker": "KKR",
+          "weight": 13.3
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.74
+        },
+        {
+          "ticker": "BN",
+          "weight": 9.53
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.28
+        },
+        {
+          "ticker": "V",
+          "weight": 9.03
+        },
+        {
+          "ticker": "AMT",
+          "weight": 8.82
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.73
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.83
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.57
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 3.04
+        },
+        {
+          "ticker": "CCC",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 17.69
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 11.99
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.98
+        },
+        {
+          "ticker": "V",
+          "weight": 10.78
+        },
+        {
+          "ticker": "KKR",
+          "weight": 9.91
+        },
+        {
+          "ticker": "BN",
+          "weight": 9.69
+        },
+        {
+          "ticker": "ROP",
+          "weight": 8.28
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 7.14
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.46
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.53
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 3.38
+        },
+        {
+          "ticker": "CCC",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.4
+        },
+        {
+          "ticker": "BN",
+          "weight": 11.81
+        },
+        {
+          "ticker": "KKR",
+          "weight": 11.7
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.49
+        },
+        {
+          "ticker": "V",
+          "weight": 11.2
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.43
+        },
+        {
+          "ticker": "ROP",
+          "weight": 8.11
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 7.44
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 4.56
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.48
+        },
+        {
+          "ticker": "AMT",
+          "weight": 2.01
+        },
+        {
+          "ticker": "CCC",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 18.15
+        },
+        {
+          "ticker": "BN",
+          "weight": 13.33
+        },
+        {
+          "ticker": "KKR",
+          "weight": 11.46
+        },
+        {
+          "ticker": "V",
+          "weight": 10.27
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.22
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.4
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 7.95
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.83
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 4.26
+        },
+        {
+          "ticker": "FICO",
+          "weight": 3.95
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.93
+        },
+        {
+          "ticker": "DHR",
+          "weight": 1.76
+        },
+        {
+          "ticker": "CCC",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 19.06
+        },
+        {
+          "ticker": "BN",
+          "weight": 13.69
+        },
+        {
+          "ticker": "KKR",
+          "weight": 11.48
+        },
+        {
+          "ticker": "V",
+          "weight": 10.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.85
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 7.18
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.81
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.46
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 5.24
+        },
+        {
+          "ticker": "FICO",
+          "weight": 5.21
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 3.42
+        },
+        {
+          "ticker": "CCC",
+          "weight": 2.19
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:33:51Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AC",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

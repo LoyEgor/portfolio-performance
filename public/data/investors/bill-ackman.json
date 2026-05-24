@@ -1,0 +1,777 @@
+{
+  "id": "bill-ackman",
+  "holdings": [
+    {
+      "ticker": "BN",
+      "weight": 17.98,
+      "shares": 59697208
+    },
+    {
+      "ticker": "AMZN",
+      "weight": 17.75,
+      "shares": 11451981
+    },
+    {
+      "ticker": "UBER",
+      "weight": 16.03,
+      "shares": 29958771
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 15.57,
+      "shares": 5654078
+    },
+    {
+      "ticker": "QSR",
+      "weight": 12.45,
+      "shares": 22645483
+    },
+    {
+      "ticker": "META",
+      "weight": 11.33,
+      "shares": 2660861
+    },
+    {
+      "ticker": "HHH",
+      "weight": 8.88,
+      "shares": 18852064
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 21.74
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.89
+        },
+        {
+          "ticker": "QSR",
+          "weight": 14.87
+        },
+        {
+          "ticker": "CMG",
+          "weight": 14.75
+        },
+        {
+          "ticker": "A",
+          "weight": 14.35
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.25
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 7.16
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 18.37
+        },
+        {
+          "ticker": "A",
+          "weight": 16.14
+        },
+        {
+          "ticker": "CMG",
+          "weight": 15.72
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.37
+        },
+        {
+          "ticker": "QSR",
+          "weight": 14.26
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.26
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.88
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 21.94
+        },
+        {
+          "ticker": "CMG",
+          "weight": 21.41
+        },
+        {
+          "ticker": "HLT",
+          "weight": 17.99
+        },
+        {
+          "ticker": "QSR",
+          "weight": 15.48
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.64
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 10.54
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 24.54
+        },
+        {
+          "ticker": "HLT",
+          "weight": 18.22
+        },
+        {
+          "ticker": "CMG",
+          "weight": 18.08
+        },
+        {
+          "ticker": "QSR",
+          "weight": 13.47
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.86
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 10.95
+        },
+        {
+          "ticker": "CP",
+          "weight": 1.88
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 19.86
+        },
+        {
+          "ticker": "CMG",
+          "weight": 16.97
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.53
+        },
+        {
+          "ticker": "HHH",
+          "weight": 13.58
+        },
+        {
+          "ticker": "QSR",
+          "weight": 13.41
+        },
+        {
+          "ticker": "NFLX",
+          "weight": 11.21
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.1
+        },
+        {
+          "ticker": "CP",
+          "weight": 2.34
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 23.89
+        },
+        {
+          "ticker": "CMG",
+          "weight": 19.36
+        },
+        {
+          "ticker": "QSR",
+          "weight": 16.01
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.8
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.42
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 10.76
+        },
+        {
+          "ticker": "CP",
+          "weight": 2.76
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 24.74
+        },
+        {
+          "ticker": "CMG",
+          "weight": 21.08
+        },
+        {
+          "ticker": "QSR",
+          "weight": 16.33
+        },
+        {
+          "ticker": "HLT",
+          "weight": 15.36
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.91
+        },
+        {
+          "ticker": "HHH",
+          "weight": 9.58
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 23.53
+        },
+        {
+          "ticker": "QSR",
+          "weight": 17.81
+        },
+        {
+          "ticker": "CMG",
+          "weight": 17.46
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.43
+        },
+        {
+          "ticker": "HHH",
+          "weight": 13.83
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.94
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "LOW",
+          "weight": 19.64
+        },
+        {
+          "ticker": "CMG",
+          "weight": 17.21
+        },
+        {
+          "ticker": "QSR",
+          "weight": 15.9
+        },
+        {
+          "ticker": "HLT",
+          "weight": 12.82
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.52
+        },
+        {
+          "ticker": "CP",
+          "weight": 11.48
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.21
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.22
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "CMG",
+          "weight": 18.86
+        },
+        {
+          "ticker": "QSR",
+          "weight": 16.73
+        },
+        {
+          "ticker": "LOW",
+          "weight": 15.58
+        },
+        {
+          "ticker": "HLT",
+          "weight": 12.56
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.09
+        },
+        {
+          "ticker": "CP",
+          "weight": 11.27
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.49
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.42
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "CMG",
+          "weight": 16.65
+        },
+        {
+          "ticker": "QSR",
+          "weight": 14.82
+        },
+        {
+          "ticker": "HLT",
+          "weight": 14.75
+        },
+        {
+          "ticker": "LOW",
+          "weight": 14.0
+        },
+        {
+          "ticker": "HHH",
+          "weight": 11.87
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.78
+        },
+        {
+          "ticker": "CP",
+          "weight": 10.7
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.43
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "CMG",
+          "weight": 18.15
+        },
+        {
+          "ticker": "QSR",
+          "weight": 17.55
+        },
+        {
+          "ticker": "HLT",
+          "weight": 16.08
+        },
+        {
+          "ticker": "HHH",
+          "weight": 15.51
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.71
+        },
+        {
+          "ticker": "CP",
+          "weight": 11.48
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.85
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.67
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "CMG",
+          "weight": 20.1
+        },
+        {
+          "ticker": "HLT",
+          "weight": 18.2
+        },
+        {
+          "ticker": "QSR",
+          "weight": 17.24
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 13.27
+        },
+        {
+          "ticker": "HHH",
+          "weight": 12.72
+        },
+        {
+          "ticker": "CP",
+          "weight": 12.37
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.11
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "HLT",
+          "weight": 18.76
+        },
+        {
+          "ticker": "CMG",
+          "weight": 17.34
+        },
+        {
+          "ticker": "QSR",
+          "weight": 15.64
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 13.3
+        },
+        {
+          "ticker": "HHH",
+          "weight": 11.74
+        },
+        {
+          "ticker": "CP",
+          "weight": 11.32
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.97
+        },
+        {
+          "ticker": "BN",
+          "weight": 2.73
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.2
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "BN",
+          "weight": 13.54
+        },
+        {
+          "ticker": "HLT",
+          "weight": 13.22
+        },
+        {
+          "ticker": "CMG",
+          "weight": 12.92
+        },
+        {
+          "ticker": "QSR",
+          "weight": 12.91
+        },
+        {
+          "ticker": "HHH",
+          "weight": 11.36
+        },
+        {
+          "ticker": "NKE",
+          "weight": 11.2
+        },
+        {
+          "ticker": "CP",
+          "weight": 9.9
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.81
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.14
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "BN",
+          "weight": 15.89
+        },
+        {
+          "ticker": "QSR",
+          "weight": 11.89
+        },
+        {
+          "ticker": "CMG",
+          "weight": 11.78
+        },
+        {
+          "ticker": "HHH",
+          "weight": 11.49
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.39
+        },
+        {
+          "ticker": "NKE",
+          "weight": 11.26
+        },
+        {
+          "ticker": "HLT",
+          "weight": 10.66
+        },
+        {
+          "ticker": "CP",
+          "weight": 8.53
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.98
+        },
+        {
+          "ticker": "SEG",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "UBER",
+          "weight": 18.76
+        },
+        {
+          "ticker": "BN",
+          "weight": 18.27
+        },
+        {
+          "ticker": "QSR",
+          "weight": 13.03
+        },
+        {
+          "ticker": "HHH",
+          "weight": 11.88
+        },
+        {
+          "ticker": "CMG",
+          "weight": 9.2
+        },
+        {
+          "ticker": "CP",
+          "weight": 8.83
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.4
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.83
+        },
+        {
+          "ticker": "HLT",
+          "weight": 5.8
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "UBER",
+          "weight": 20.89
+        },
+        {
+          "ticker": "BN",
+          "weight": 18.81
+        },
+        {
+          "ticker": "QSR",
+          "weight": 11.27
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 9.45
+        },
+        {
+          "ticker": "HHH",
+          "weight": 9.41
+        },
+        {
+          "ticker": "CMG",
+          "weight": 8.94
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.29
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.98
+        },
+        {
+          "ticker": "HLT",
+          "weight": 5.97
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "UBER",
+          "weight": 20.56
+        },
+        {
+          "ticker": "BN",
+          "weight": 19.5
+        },
+        {
+          "ticker": "HHH",
+          "weight": 10.74
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.68
+        },
+        {
+          "ticker": "QSR",
+          "weight": 10.19
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.86
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.16
+        },
+        {
+          "ticker": "CMG",
+          "weight": 5.86
+        },
+        {
+          "ticker": "HLT",
+          "weight": 5.45
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "BN",
+          "weight": 18.36
+        },
+        {
+          "ticker": "UBER",
+          "weight": 16.08
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 14.44
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.6
+        },
+        {
+          "ticker": "META",
+          "weight": 11.5
+        },
+        {
+          "ticker": "QSR",
+          "weight": 10.16
+        },
+        {
+          "ticker": "HHH",
+          "weight": 9.8
+        },
+        {
+          "ticker": "HLT",
+          "weight": 5.66
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.39
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:32:05Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=psc",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

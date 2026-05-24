@@ -1,0 +1,878 @@
+{
+  "id": "bryan-lawrence",
+  "holdings": [
+    {
+      "ticker": "IBKR",
+      "weight": 30.5,
+      "shares": 1030740
+    },
+    {
+      "ticker": "GIL",
+      "weight": 16.74,
+      "shares": 681689
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 14.96,
+      "shares": 118161
+    },
+    {
+      "ticker": "TDG",
+      "weight": 12.36,
+      "shares": 24170
+    },
+    {
+      "ticker": "GWRE",
+      "weight": 9.51,
+      "shares": 144183
+    },
+    {
+      "ticker": "SGU",
+      "weight": 5.96,
+      "shares": 1099239
+    },
+    {
+      "ticker": "NRP",
+      "weight": 5.45,
+      "shares": 102057
+    },
+    {
+      "ticker": "LEN",
+      "weight": 4.52,
+      "shares": 118000
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 21.72
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.6
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 12.36
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 11.43
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 9.11
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.0
+        },
+        {
+          "ticker": "SGU",
+          "weight": 7.9
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 6.99
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 5.87
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.1
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.63
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 13.01
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 11.96
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.92
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.46
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 7.05
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.34
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 5.53
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.96
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.51
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 12.29
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.85
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 10.16
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 7.65
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 7.28
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 6.36
+        },
+        {
+          "ticker": "SGU",
+          "weight": 5.93
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 19.13
+        },
+        {
+          "ticker": "TDG",
+          "weight": 16.29
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.15
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 9.74
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 9.56
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 9.26
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 7.54
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.46
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 5.43
+        },
+        {
+          "ticker": "GDRX",
+          "weight": 4.45
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 18.99
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 13.36
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 13.1
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 11.3
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 10.35
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 9.24
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 8.77
+        },
+        {
+          "ticker": "SGU",
+          "weight": 7.58
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 7.31
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 22.04
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.59
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 14.65
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 12.46
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 10.44
+        },
+        {
+          "ticker": "SGU",
+          "weight": 8.82
+        },
+        {
+          "ticker": "CDLX",
+          "weight": 5.59
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 4.81
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 3.49
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 2.1
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 24.58
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 19.41
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.63
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 10.32
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 9.66
+        },
+        {
+          "ticker": "SGU",
+          "weight": 8.92
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 5.13
+        },
+        {
+          "ticker": "AYX-OLD",
+          "weight": 4.59
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 1.76
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 24.28
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 18.33
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 13.52
+        },
+        {
+          "ticker": "SGU",
+          "weight": 11.73
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 11.53
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 9.31
+        },
+        {
+          "ticker": "GIL",
+          "weight": 8.52
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 2.78
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 19.54
+        },
+        {
+          "ticker": "TDG",
+          "weight": 19.1
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.67
+        },
+        {
+          "ticker": "GIL",
+          "weight": 12.96
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 11.4
+        },
+        {
+          "ticker": "SGU",
+          "weight": 10.08
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 8.86
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 2.39
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 19.3
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 18.79
+        },
+        {
+          "ticker": "GIL",
+          "weight": 13.22
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.94
+        },
+        {
+          "ticker": "SGU",
+          "weight": 10.06
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 8.71
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 8.38
+        },
+        {
+          "ticker": "FNF",
+          "weight": 6.47
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 2.13
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 20.19
+        },
+        {
+          "ticker": "TDG",
+          "weight": 14.07
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.57
+        },
+        {
+          "ticker": "GIL",
+          "weight": 11.84
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 10.74
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 10.1
+        },
+        {
+          "ticker": "SGU",
+          "weight": 9.14
+        },
+        {
+          "ticker": "FNF",
+          "weight": 7.66
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 3.69
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 17.72
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.48
+        },
+        {
+          "ticker": "GIL",
+          "weight": 12.81
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.32
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 10.26
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 9.41
+        },
+        {
+          "ticker": "FNF",
+          "weight": 8.67
+        },
+        {
+          "ticker": "SGU",
+          "weight": 8.03
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 3.23
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 2.07
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 20.26
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.81
+        },
+        {
+          "ticker": "GIL",
+          "weight": 13.69
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.85
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 8.7
+        },
+        {
+          "ticker": "FNF",
+          "weight": 8.59
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 7.57
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 6.7
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.64
+        },
+        {
+          "ticker": "HNRG",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 19.84
+        },
+        {
+          "ticker": "TDG",
+          "weight": 14.64
+        },
+        {
+          "ticker": "GIL",
+          "weight": 12.48
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.66
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 9.18
+        },
+        {
+          "ticker": "NRP",
+          "weight": 7.42
+        },
+        {
+          "ticker": "FNF",
+          "weight": 7.14
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.29
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 6.15
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 5.2
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 21.21
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.38
+        },
+        {
+          "ticker": "GIL",
+          "weight": 14.58
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 11.45
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.0
+        },
+        {
+          "ticker": "NRP",
+          "weight": 7.62
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 6.98
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.53
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 6.27
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 27.07
+        },
+        {
+          "ticker": "GIL",
+          "weight": 14.72
+        },
+        {
+          "ticker": "TDG",
+          "weight": 13.8
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.51
+        },
+        {
+          "ticker": "NRP",
+          "weight": 8.74
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 6.7
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.49
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 5.66
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 5.32
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 22.48
+        },
+        {
+          "ticker": "TDG",
+          "weight": 15.52
+        },
+        {
+          "ticker": "GIL",
+          "weight": 14.25
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.73
+        },
+        {
+          "ticker": "NRP",
+          "weight": 8.43
+        },
+        {
+          "ticker": "SGU",
+          "weight": 7.63
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 7.43
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 6.48
+        },
+        {
+          "ticker": "LEN",
+          "weight": 6.29
+        },
+        {
+          "ticker": "LGIH",
+          "weight": 1.75
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 28.54
+        },
+        {
+          "ticker": "GIL",
+          "weight": 16.77
+        },
+        {
+          "ticker": "TDG",
+          "weight": 16.18
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.48
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 7.73
+        },
+        {
+          "ticker": "NRP",
+          "weight": 7.35
+        },
+        {
+          "ticker": "LEN",
+          "weight": 6.52
+        },
+        {
+          "ticker": "SGU",
+          "weight": 6.43
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 30.61
+        },
+        {
+          "ticker": "GIL",
+          "weight": 17.01
+        },
+        {
+          "ticker": "TDG",
+          "weight": 13.75
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.42
+        },
+        {
+          "ticker": "NRP",
+          "weight": 7.66
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 6.52
+        },
+        {
+          "ticker": "LEN",
+          "weight": 6.42
+        },
+        {
+          "ticker": "SGU",
+          "weight": 5.61
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "IBKR",
+          "weight": 28.42
+        },
+        {
+          "ticker": "GIL",
+          "weight": 18.25
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.9
+        },
+        {
+          "ticker": "TDG",
+          "weight": 13.78
+        },
+        {
+          "ticker": "GWRE",
+          "weight": 7.17
+        },
+        {
+          "ticker": "NRP",
+          "weight": 5.7
+        },
+        {
+          "ticker": "SGU",
+          "weight": 5.58
+        },
+        {
+          "ticker": "LEN",
+          "weight": 5.2
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:33:21Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=OCL",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

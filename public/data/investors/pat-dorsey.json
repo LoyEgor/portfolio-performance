@@ -1,0 +1,961 @@
+{
+  "id": "pat-dorsey",
+  "holdings": [
+    {
+      "ticker": "ASML",
+      "weight": 14.76,
+      "shares": 140295
+    },
+    {
+      "ticker": "AER",
+      "weight": 12.27,
+      "shares": 1123489
+    },
+    {
+      "ticker": "SUNB",
+      "weight": 11.43,
+      "shares": 2204996
+    },
+    {
+      "ticker": "APP",
+      "weight": 10.04,
+      "shares": 316952
+    },
+    {
+      "ticker": "DHR",
+      "weight": 8.76,
+      "shares": 580240
+    },
+    {
+      "ticker": "RPRX",
+      "weight": 8.7,
+      "shares": 2276570
+    },
+    {
+      "ticker": "SPGI",
+      "weight": 7.54,
+      "shares": 222683
+    },
+    {
+      "ticker": "LYV",
+      "weight": 7.38,
+      "shares": 607609
+    },
+    {
+      "ticker": "META",
+      "weight": 7.37,
+      "shares": 161683
+    },
+    {
+      "ticker": "UBER",
+      "weight": 6.24,
+      "shares": 1090281
+    },
+    {
+      "ticker": "BKNG",
+      "weight": 5.51,
+      "shares": 411100
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 22.99
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 18.19
+        },
+        {
+          "ticker": "WIX",
+          "weight": 12.44
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 12.4
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.82
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 8.57
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.98
+        },
+        {
+          "ticker": "DESP-OLD",
+          "weight": 6.61
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 17.74
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 17.46
+        },
+        {
+          "ticker": "WIX",
+          "weight": 13.81
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 12.09
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 12.06
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 9.46
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.4
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.67
+        },
+        {
+          "ticker": "DESP-OLD",
+          "weight": 3.31
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 17.05
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 16.66
+        },
+        {
+          "ticker": "WIX",
+          "weight": 14.5
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 12.92
+        },
+        {
+          "ticker": "DIS",
+          "weight": 11.48
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 10.09
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 6.37
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.8
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 5.13
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "WIX",
+          "weight": 19.99
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 18.54
+        },
+        {
+          "ticker": "META",
+          "weight": 16.59
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.19
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.06
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 6.79
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.18
+        },
+        {
+          "ticker": "POSH-OLD",
+          "weight": 4.8
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 4.65
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 4.21
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 16.19
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 15.87
+        },
+        {
+          "ticker": "WIX",
+          "weight": 15.75
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.77
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 8.23
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 8.17
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.13
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.34
+        },
+        {
+          "ticker": "POSH-OLD",
+          "weight": 5.11
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 3.96
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 3.49
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "WIX",
+          "weight": 15.37
+        },
+        {
+          "ticker": "META",
+          "weight": 15.23
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 14.58
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 13.49
+        },
+        {
+          "ticker": "DIS",
+          "weight": 8.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.73
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 6.89
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.45
+        },
+        {
+          "ticker": "POSH-OLD",
+          "weight": 5.98
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 5.57
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "WIX",
+          "weight": 18.71
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 15.05
+        },
+        {
+          "ticker": "META",
+          "weight": 13.08
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 10.21
+        },
+        {
+          "ticker": "POSH-OLD",
+          "weight": 9.46
+        },
+        {
+          "ticker": "DIS",
+          "weight": 8.89
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 8.11
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.94
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 4.92
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 4.63
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 22.01
+        },
+        {
+          "ticker": "WIX",
+          "weight": 17.91
+        },
+        {
+          "ticker": "META",
+          "weight": 17.36
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 9.93
+        },
+        {
+          "ticker": "DIS",
+          "weight": 9.43
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.36
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 4.2
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 4.08
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 22.98
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 19.71
+        },
+        {
+          "ticker": "WIX",
+          "weight": 17.49
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.65
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 8.68
+        },
+        {
+          "ticker": "DIS",
+          "weight": 8.17
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.19
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 3.82
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 3.33
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 23.8
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 16.62
+        },
+        {
+          "ticker": "WIX",
+          "weight": 14.44
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.82
+        },
+        {
+          "ticker": "DIS",
+          "weight": 7.67
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 6.62
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 5.8
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.73
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 3.83
+        },
+        {
+          "ticker": "HRI",
+          "weight": 3.67
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 18.39
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.63
+        },
+        {
+          "ticker": "WIX",
+          "weight": 14.74
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 14.23
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.93
+        },
+        {
+          "ticker": "HRI",
+          "weight": 6.73
+        },
+        {
+          "ticker": "DIS",
+          "weight": 6.64
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 6.64
+        },
+        {
+          "ticker": "DG",
+          "weight": 3.77
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 3.31
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 17.57
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 15.65
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.54
+        },
+        {
+          "ticker": "WIX",
+          "weight": 12.11
+        },
+        {
+          "ticker": "HRI",
+          "weight": 9.89
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.7
+        },
+        {
+          "ticker": "DHR",
+          "weight": 9.35
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 5.35
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 4.85
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 16.21
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 14.98
+        },
+        {
+          "ticker": "WIX",
+          "weight": 12.07
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 11.24
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.44
+        },
+        {
+          "ticker": "DHR",
+          "weight": 9.01
+        },
+        {
+          "ticker": "HRI",
+          "weight": 8.7
+        },
+        {
+          "ticker": "AZO",
+          "weight": 8.53
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 5.87
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 3.93
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 14.4
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 13.03
+        },
+        {
+          "ticker": "WIX",
+          "weight": 10.82
+        },
+        {
+          "ticker": "AZO",
+          "weight": 10.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.17
+        },
+        {
+          "ticker": "DHR",
+          "weight": 9.12
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 8.28
+        },
+        {
+          "ticker": "SPT",
+          "weight": 7.34
+        },
+        {
+          "ticker": "HRI",
+          "weight": 6.97
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 5.68
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 3.49
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 14.36
+        },
+        {
+          "ticker": "AZO",
+          "weight": 10.0
+        },
+        {
+          "ticker": "WIX",
+          "weight": 9.98
+        },
+        {
+          "ticker": "APP",
+          "weight": 9.83
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.78
+        },
+        {
+          "ticker": "DHR",
+          "weight": 8.92
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 8.91
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.14
+        },
+        {
+          "ticker": "HRI",
+          "weight": 7.32
+        },
+        {
+          "ticker": "SPT",
+          "weight": 6.19
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 3.58
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 2.98
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "WIX",
+          "weight": 12.8
+        },
+        {
+          "ticker": "META",
+          "weight": 12.57
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.55
+        },
+        {
+          "ticker": "AZO",
+          "weight": 12.4
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.45
+        },
+        {
+          "ticker": "DHR",
+          "weight": 9.34
+        },
+        {
+          "ticker": "SMAR-OLD",
+          "weight": 8.36
+        },
+        {
+          "ticker": "SPT",
+          "weight": 7.3
+        },
+        {
+          "ticker": "HRI",
+          "weight": 5.33
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 5.13
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 2.77
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "AZO",
+          "weight": 15.17
+        },
+        {
+          "ticker": "META",
+          "weight": 15.09
+        },
+        {
+          "ticker": "DHR",
+          "weight": 15.02
+        },
+        {
+          "ticker": "AER",
+          "weight": 12.33
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.58
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 7.8
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 5.93
+        },
+        {
+          "ticker": "WIX",
+          "weight": 5.53
+        },
+        {
+          "ticker": "SPT",
+          "weight": 5.37
+        },
+        {
+          "ticker": "ASML",
+          "weight": 4.96
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 2.23
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "DHR",
+          "weight": 16.42
+        },
+        {
+          "ticker": "META",
+          "weight": 16.22
+        },
+        {
+          "ticker": "AER",
+          "weight": 14.28
+        },
+        {
+          "ticker": "AZO",
+          "weight": 11.87
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.53
+        },
+        {
+          "ticker": "ASML",
+          "weight": 10.06
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 9.49
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 7.18
+        },
+        {
+          "ticker": "WIX",
+          "weight": 2.09
+        },
+        {
+          "ticker": "SEMR-OLD",
+          "weight": 1.85
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "DHR",
+          "weight": 15.34
+        },
+        {
+          "ticker": "ASML",
+          "weight": 15.07
+        },
+        {
+          "ticker": "AER",
+          "weight": 13.75
+        },
+        {
+          "ticker": "META",
+          "weight": 12.69
+        },
+        {
+          "ticker": "AZO",
+          "weight": 11.52
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.4
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 8.24
+        },
+        {
+          "ticker": "RPRX",
+          "weight": 7.45
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 6.54
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "ASML",
+          "weight": 17.89
+        },
+        {
+          "ticker": "DHR",
+          "weight": 16.47
+        },
+        {
+          "ticker": "AER",
+          "weight": 15.18
+        },
+        {
+          "ticker": "META",
+          "weight": 9.21
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 7.6
+        },
+        {
+          "ticker": "RPRX",
+          "weight": 7.59
+        },
+        {
+          "ticker": "LYV",
+          "weight": 7.47
+        },
+        {
+          "ticker": "AZO",
+          "weight": 7.41
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.92
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 5.28
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:37:06Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=DA",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

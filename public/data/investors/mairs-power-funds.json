@@ -1,0 +1,844 @@
+{
+  "id": "mairs-power-funds",
+  "holdings": [
+    {
+      "ticker": "NVDA",
+      "weight": 10.71,
+      "shares": 4761351
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 9.27,
+      "shares": 1942391
+    },
+    {
+      "ticker": "AMZN",
+      "weight": 6.99,
+      "shares": 2602912
+    },
+    {
+      "ticker": "GOOG",
+      "weight": 5.95,
+      "shares": 1611610
+    },
+    {
+      "ticker": "GGG",
+      "weight": 4.16,
+      "shares": 3815684
+    },
+    {
+      "ticker": "JPM",
+      "weight": 4.0,
+      "shares": 1054197
+    },
+    {
+      "ticker": "AAPL",
+      "weight": 3.95,
+      "shares": 1208398
+    },
+    {
+      "ticker": "LLY",
+      "weight": 3.87,
+      "shares": 326306
+    },
+    {
+      "ticker": "TTC",
+      "weight": 3.28,
+      "shares": 2718983
+    },
+    {
+      "ticker": "V",
+      "weight": 3.28,
+      "shares": 840917
+    },
+    {
+      "ticker": "LFUS",
+      "weight": 3.17,
+      "shares": 724710
+    },
+    {
+      "ticker": "NVT",
+      "weight": 3.15,
+      "shares": 2066420
+    },
+    {
+      "ticker": "MSI",
+      "weight": 3.03,
+      "shares": 540732
+    },
+    {
+      "ticker": "WEC",
+      "weight": 2.85,
+      "shares": 1910685
+    },
+    {
+      "ticker": "LNT",
+      "weight": 2.67,
+      "shares": 2889060
+    },
+    {
+      "ticker": "ECL",
+      "weight": 2.61,
+      "shares": 761818
+    },
+    {
+      "ticker": "UNH",
+      "weight": 2.59,
+      "shares": 741083
+    },
+    {
+      "ticker": "META",
+      "weight": 2.4,
+      "shares": 324625
+    },
+    {
+      "ticker": "FAST",
+      "weight": 2.35,
+      "shares": 3922442
+    },
+    {
+      "ticker": "VZ",
+      "weight": 2.14,
+      "shares": 3315436
+    },
+    {
+      "ticker": "TSM",
+      "weight": 2.12,
+      "shares": 486253
+    },
+    {
+      "ticker": "ENTG",
+      "weight": 2.03,
+      "shares": 1343104
+    },
+    {
+      "ticker": "FUL",
+      "weight": 1.88,
+      "shares": 2361617
+    },
+    {
+      "ticker": "TECH",
+      "weight": 1.85,
+      "shares": 2750282
+    },
+    {
+      "ticker": "CHRW",
+      "weight": 1.82,
+      "shares": 848203
+    },
+    {
+      "ticker": "JNJ",
+      "weight": 1.82,
+      "shares": 577590
+    },
+    {
+      "ticker": "SHW",
+      "weight": 1.8,
+      "shares": 437760
+    },
+    {
+      "ticker": "FISV",
+      "weight": 1.55,
+      "shares": 2152853
+    },
+    {
+      "ticker": "WFC",
+      "weight": 1.4,
+      "shares": 1365876
+    },
+    {
+      "ticker": "ROK",
+      "weight": 1.31,
+      "shares": 283553
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 12.7
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 9.1
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.5
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.72
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.2
+        },
+        {
+          "ticker": "GGG",
+          "weight": 5.44
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.28
+        },
+        {
+          "ticker": "FISV",
+          "weight": 4.68
+        },
+        {
+          "ticker": "TTC",
+          "weight": 4.57
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.36
+        },
+        {
+          "ticker": "USB",
+          "weight": 4.01
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.99
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.52
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.41
+        },
+        {
+          "ticker": "TECH",
+          "weight": 3.2
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 3.19
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.19
+        },
+        {
+          "ticker": "NVT",
+          "weight": 3.04
+        },
+        {
+          "ticker": "HRL",
+          "weight": 2.96
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 2.95
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 12.96
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 11.32
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.66
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.74
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.38
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.17
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.69
+        },
+        {
+          "ticker": "TTC",
+          "weight": 4.5
+        },
+        {
+          "ticker": "GGG",
+          "weight": 4.42
+        },
+        {
+          "ticker": "FISV",
+          "weight": 4.17
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.07
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.84
+        },
+        {
+          "ticker": "MDT",
+          "weight": 3.44
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 3.22
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.04
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.95
+        },
+        {
+          "ticker": "TECH",
+          "weight": 2.92
+        },
+        {
+          "ticker": "LNT",
+          "weight": 2.88
+        },
+        {
+          "ticker": "MSI",
+          "weight": 2.84
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.81
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 12.13
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 10.58
+        },
+        {
+          "ticker": "UNH",
+          "weight": 7.51
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.61
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.35
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.23
+        },
+        {
+          "ticker": "GGG",
+          "weight": 4.97
+        },
+        {
+          "ticker": "FISV",
+          "weight": 4.91
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.52
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.37
+        },
+        {
+          "ticker": "TTC",
+          "weight": 4.29
+        },
+        {
+          "ticker": "LNT",
+          "weight": 3.59
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 3.3
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 3.2
+        },
+        {
+          "ticker": "MSI",
+          "weight": 3.17
+        },
+        {
+          "ticker": "V",
+          "weight": 3.13
+        },
+        {
+          "ticker": "TECH",
+          "weight": 3.11
+        },
+        {
+          "ticker": "VZ",
+          "weight": 3.1
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.01
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.93
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 12.01
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 11.43
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 7.51
+        },
+        {
+          "ticker": "UNH",
+          "weight": 6.36
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.0
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.95
+        },
+        {
+          "ticker": "FISV",
+          "weight": 5.56
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.91
+        },
+        {
+          "ticker": "GGG",
+          "weight": 4.83
+        },
+        {
+          "ticker": "TTC",
+          "weight": 4.16
+        },
+        {
+          "ticker": "V",
+          "weight": 3.81
+        },
+        {
+          "ticker": "LLY",
+          "weight": 3.78
+        },
+        {
+          "ticker": "LNT",
+          "weight": 3.35
+        },
+        {
+          "ticker": "MSI",
+          "weight": 3.25
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 2.99
+        },
+        {
+          "ticker": "QCOM",
+          "weight": 2.93
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.92
+        },
+        {
+          "ticker": "FAST",
+          "weight": 2.81
+        },
+        {
+          "ticker": "TECH",
+          "weight": 2.78
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.66
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 11.77
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 9.87
+        },
+        {
+          "ticker": "UNH",
+          "weight": 7.45
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 7.17
+        },
+        {
+          "ticker": "JPM",
+          "weight": 6.4
+        },
+        {
+          "ticker": "FISV",
+          "weight": 5.96
+        },
+        {
+          "ticker": "GGG",
+          "weight": 5.14
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.02
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.72
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.72
+        },
+        {
+          "ticker": "V",
+          "weight": 4.54
+        },
+        {
+          "ticker": "TTC",
+          "weight": 4.16
+        },
+        {
+          "ticker": "MSI",
+          "weight": 3.29
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.27
+        },
+        {
+          "ticker": "LNT",
+          "weight": 3.08
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.08
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 2.73
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 2.59
+        },
+        {
+          "ticker": "SHW",
+          "weight": 2.58
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.46
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 14.71
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 13.56
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.07
+        },
+        {
+          "ticker": "JPM",
+          "weight": 6.43
+        },
+        {
+          "ticker": "GGG",
+          "weight": 5.04
+        },
+        {
+          "ticker": "UNH",
+          "weight": 4.87
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.72
+        },
+        {
+          "ticker": "FISV",
+          "weight": 4.41
+        },
+        {
+          "ticker": "LLY",
+          "weight": 4.2
+        },
+        {
+          "ticker": "V",
+          "weight": 4.17
+        },
+        {
+          "ticker": "TTC",
+          "weight": 3.81
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 3.45
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.33
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.14
+        },
+        {
+          "ticker": "MSI",
+          "weight": 2.95
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 2.9
+        },
+        {
+          "ticker": "LNT",
+          "weight": 2.72
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.57
+        },
+        {
+          "ticker": "NVT",
+          "weight": 2.54
+        },
+        {
+          "ticker": "META",
+          "weight": 2.38
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "NVDA",
+          "weight": 14.51
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 13.77
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 7.82
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.99
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.98
+        },
+        {
+          "ticker": "UNH",
+          "weight": 5.15
+        },
+        {
+          "ticker": "GGG",
+          "weight": 4.66
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.2
+        },
+        {
+          "ticker": "TTC",
+          "weight": 3.83
+        },
+        {
+          "ticker": "LLY",
+          "weight": 3.81
+        },
+        {
+          "ticker": "V",
+          "weight": 3.77
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.23
+        },
+        {
+          "ticker": "FISV",
+          "weight": 3.14
+        },
+        {
+          "ticker": "NVT",
+          "weight": 3.0
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.97
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 2.94
+        },
+        {
+          "ticker": "MSI",
+          "weight": 2.94
+        },
+        {
+          "ticker": "WEC",
+          "weight": 2.86
+        },
+        {
+          "ticker": "LNT",
+          "weight": 2.82
+        },
+        {
+          "ticker": "META",
+          "weight": 2.63
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 13.19
+        },
+        {
+          "ticker": "NVDA",
+          "weight": 13.16
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 8.54
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.6
+        },
+        {
+          "ticker": "JPM",
+          "weight": 5.87
+        },
+        {
+          "ticker": "LLY",
+          "weight": 5.29
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.73
+        },
+        {
+          "ticker": "GGG",
+          "weight": 4.56
+        },
+        {
+          "ticker": "V",
+          "weight": 4.02
+        },
+        {
+          "ticker": "UNH",
+          "weight": 3.91
+        },
+        {
+          "ticker": "TTC",
+          "weight": 3.84
+        },
+        {
+          "ticker": "NVT",
+          "weight": 3.07
+        },
+        {
+          "ticker": "META",
+          "weight": 2.98
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.89
+        },
+        {
+          "ticker": "WEC",
+          "weight": 2.88
+        },
+        {
+          "ticker": "MSI",
+          "weight": 2.88
+        },
+        {
+          "ticker": "LFUS",
+          "weight": 2.82
+        },
+        {
+          "ticker": "LNT",
+          "weight": 2.74
+        },
+        {
+          "ticker": "FAST",
+          "weight": 2.67
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 2.37
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:36:34Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=MPF",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}

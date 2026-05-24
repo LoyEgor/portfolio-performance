@@ -1,0 +1,1884 @@
+{
+  "id": "william-von-mueffling",
+  "holdings": [
+    {
+      "ticker": "AVGO",
+      "weight": 8.6,
+      "shares": 4056002
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 7.32,
+      "shares": 3715061
+    },
+    {
+      "ticker": "TSM",
+      "weight": 5.77,
+      "shares": 2493551
+    },
+    {
+      "ticker": "IBKR",
+      "weight": 5.16,
+      "shares": 11245881
+    },
+    {
+      "ticker": "SPGI",
+      "weight": 4.5,
+      "shares": 1547303
+    },
+    {
+      "ticker": "ADI",
+      "weight": 4.16,
+      "shares": 1911491
+    },
+    {
+      "ticker": "CBRE",
+      "weight": 3.65,
+      "shares": 3931976
+    },
+    {
+      "ticker": "AMAT",
+      "weight": 3.57,
+      "shares": 1521843
+    },
+    {
+      "ticker": "V",
+      "weight": 3.56,
+      "shares": 1718158
+    },
+    {
+      "ticker": "ICE",
+      "weight": 3.16,
+      "shares": 2941954
+    },
+    {
+      "ticker": "BLK",
+      "weight": 2.99,
+      "shares": 453282
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 2.82,
+      "shares": 1112265
+    },
+    {
+      "ticker": "CME",
+      "weight": 2.8,
+      "shares": 1386346
+    },
+    {
+      "ticker": "FERG",
+      "weight": 2.79,
+      "shares": 1749302
+    },
+    {
+      "ticker": "FAST",
+      "weight": 2.6,
+      "shares": 8166664
+    },
+    {
+      "ticker": "TMO",
+      "weight": 2.59,
+      "shares": 769698
+    },
+    {
+      "ticker": "LYV",
+      "weight": 2.58,
+      "shares": 2465059
+    },
+    {
+      "ticker": "UBER",
+      "weight": 2.56,
+      "shares": 5193864
+    },
+    {
+      "ticker": "AON",
+      "weight": 2.42,
+      "shares": 1095574
+    },
+    {
+      "ticker": "CP",
+      "weight": 2.34,
+      "shares": 4344435
+    },
+    {
+      "ticker": "EFX",
+      "weight": 2.21,
+      "shares": 1791379
+    },
+    {
+      "ticker": "A",
+      "weight": 2.14,
+      "shares": 2745829
+    },
+    {
+      "ticker": "IQV",
+      "weight": 2.0,
+      "shares": 1710896
+    },
+    {
+      "ticker": "YUM",
+      "weight": 1.93,
+      "shares": 1811796
+    },
+    {
+      "ticker": "AMT",
+      "weight": 1.91,
+      "shares": 1612473
+    },
+    {
+      "ticker": "TW",
+      "weight": 1.91,
+      "shares": 2367041
+    },
+    {
+      "ticker": "ENTG",
+      "weight": 1.74,
+      "shares": 2166428
+    },
+    {
+      "ticker": "SSNC",
+      "weight": 1.73,
+      "shares": 3753093
+    },
+    {
+      "ticker": "ADBE",
+      "weight": 1.7,
+      "shares": 1019710
+    },
+    {
+      "ticker": "TCOM",
+      "weight": 1.57,
+      "shares": 4589621
+    },
+    {
+      "ticker": "SPOT",
+      "weight": 1.46,
+      "shares": 439353
+    },
+    {
+      "ticker": "ALC",
+      "weight": 1.3,
+      "shares": 2507095
+    },
+    {
+      "ticker": "ORCL",
+      "weight": 1.29,
+      "shares": 1283185
+    },
+    {
+      "ticker": "MCO",
+      "weight": 1.18,
+      "shares": 392513
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.9
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.98
+        },
+        {
+          "ticker": "FIS",
+          "weight": 5.75
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.71
+        },
+        {
+          "ticker": "V",
+          "weight": 5.54
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 5.43
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.3
+        },
+        {
+          "ticker": "A",
+          "weight": 5.0
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.0
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.99
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.49
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.47
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.36
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.32
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.19
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.99
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.96
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.95
+        },
+        {
+          "ticker": "CTXS-OLD",
+          "weight": 3.87
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.79
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 9.4
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.51
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.78
+        },
+        {
+          "ticker": "V",
+          "weight": 5.56
+        },
+        {
+          "ticker": "A",
+          "weight": 5.28
+        },
+        {
+          "ticker": "FIS",
+          "weight": 5.28
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.15
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.15
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 5.08
+        },
+        {
+          "ticker": "EFX",
+          "weight": 5.02
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.83
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.47
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.16
+        },
+        {
+          "ticker": "META",
+          "weight": 4.1
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 4.05
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.94
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.88
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.82
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.78
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.77
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 9.67
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.17
+        },
+        {
+          "ticker": "A",
+          "weight": 5.6
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.58
+        },
+        {
+          "ticker": "EFX",
+          "weight": 5.28
+        },
+        {
+          "ticker": "V",
+          "weight": 5.27
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 5.14
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.04
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.02
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.65
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.62
+        },
+        {
+          "ticker": "FIS",
+          "weight": 4.51
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.38
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 4.19
+        },
+        {
+          "ticker": "META",
+          "weight": 3.98
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.85
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.85
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.82
+        },
+        {
+          "ticker": "WTW",
+          "weight": 3.79
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.62
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 9.3
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.96
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 6.33
+        },
+        {
+          "ticker": "EFX",
+          "weight": 5.48
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.28
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.27
+        },
+        {
+          "ticker": "A",
+          "weight": 5.1
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.08
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.98
+        },
+        {
+          "ticker": "AMT",
+          "weight": 4.98
+        },
+        {
+          "ticker": "V",
+          "weight": 4.61
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.39
+        },
+        {
+          "ticker": "FIS",
+          "weight": 4.27
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 4.21
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.06
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.92
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.88
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.72
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.64
+        },
+        {
+          "ticker": "META",
+          "weight": 3.55
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.96
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 8.46
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 6.65
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.49
+        },
+        {
+          "ticker": "ICE",
+          "weight": 5.34
+        },
+        {
+          "ticker": "V",
+          "weight": 5.22
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.19
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.92
+        },
+        {
+          "ticker": "AMT",
+          "weight": 4.74
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.71
+        },
+        {
+          "ticker": "A",
+          "weight": 4.68
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.48
+        },
+        {
+          "ticker": "FIS",
+          "weight": 4.35
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.11
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.11
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.97
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.81
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.61
+        },
+        {
+          "ticker": "TNET",
+          "weight": 3.6
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.58
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.78
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.9
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 6.11
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.79
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.74
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.68
+        },
+        {
+          "ticker": "V",
+          "weight": 5.52
+        },
+        {
+          "ticker": "A",
+          "weight": 5.01
+        },
+        {
+          "ticker": "FIS",
+          "weight": 4.73
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.53
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.51
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.46
+        },
+        {
+          "ticker": "IQV",
+          "weight": 4.16
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.08
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.06
+        },
+        {
+          "ticker": "CME",
+          "weight": 4.06
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.92
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 3.89
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.59
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.46
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.62
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.51
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 6.06
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.98
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.76
+        },
+        {
+          "ticker": "A",
+          "weight": 5.55
+        },
+        {
+          "ticker": "V",
+          "weight": 5.41
+        },
+        {
+          "ticker": "AMT",
+          "weight": 5.25
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.92
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.71
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.61
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.36
+        },
+        {
+          "ticker": "FIS",
+          "weight": 4.23
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 4.07
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.05
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.82
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 3.8
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.77
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.76
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.76
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.49
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 6.83
+        },
+        {
+          "ticker": "ADI",
+          "weight": 6.33
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.23
+        },
+        {
+          "ticker": "A",
+          "weight": 6.14
+        },
+        {
+          "ticker": "V",
+          "weight": 5.69
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.61
+        },
+        {
+          "ticker": "WTW",
+          "weight": 5.38
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.8
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.7
+        },
+        {
+          "ticker": "AMT",
+          "weight": 4.64
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.4
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 4.32
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.17
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.07
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.82
+        },
+        {
+          "ticker": "BLK",
+          "weight": 3.79
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.7
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.47
+        },
+        {
+          "ticker": "FIS",
+          "weight": 3.42
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.26
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 7.41
+        },
+        {
+          "ticker": "ADI",
+          "weight": 7.17
+        },
+        {
+          "ticker": "V",
+          "weight": 5.83
+        },
+        {
+          "ticker": "TMO",
+          "weight": 5.54
+        },
+        {
+          "ticker": "A",
+          "weight": 5.35
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.01
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.84
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.82
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.82
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.63
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.6
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.36
+        },
+        {
+          "ticker": "AMT",
+          "weight": 4.22
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 4.19
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.99
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.99
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.78
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.71
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.48
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 9.16
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 8.79
+        },
+        {
+          "ticker": "ADI",
+          "weight": 6.48
+        },
+        {
+          "ticker": "V",
+          "weight": 5.61
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.3
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.21
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.21
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.92
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.78
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.57
+        },
+        {
+          "ticker": "A",
+          "weight": 4.54
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.47
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.37
+        },
+        {
+          "ticker": "IQV",
+          "weight": 4.2
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 4.1
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.85
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.77
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.66
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.53
+        },
+        {
+          "ticker": "BDX",
+          "weight": 3.48
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 8.55
+        },
+        {
+          "ticker": "AVGO",
+          "weight": 8.52
+        },
+        {
+          "ticker": "ADI",
+          "weight": 6.22
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.17
+        },
+        {
+          "ticker": "V",
+          "weight": 5.79
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.33
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.15
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.94
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.75
+        },
+        {
+          "ticker": "A",
+          "weight": 4.5
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.38
+        },
+        {
+          "ticker": "TNET",
+          "weight": 4.31
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.24
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.08
+        },
+        {
+          "ticker": "CME",
+          "weight": 4.08
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.93
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.92
+        },
+        {
+          "ticker": "BDX",
+          "weight": 3.74
+        },
+        {
+          "ticker": "BC",
+          "weight": 3.74
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.68
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 9.79
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 8.81
+        },
+        {
+          "ticker": "ADI",
+          "weight": 6.03
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 5.64
+        },
+        {
+          "ticker": "V",
+          "weight": 5.61
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.33
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.25
+        },
+        {
+          "ticker": "A",
+          "weight": 4.79
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.75
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.72
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.59
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.43
+        },
+        {
+          "ticker": "AMT",
+          "weight": 4.36
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.95
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.92
+        },
+        {
+          "ticker": "TNET",
+          "weight": 3.77
+        },
+        {
+          "ticker": "BLK",
+          "weight": 3.75
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.67
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.43
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 3.41
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 9.63
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 7.88
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.53
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 6.29
+        },
+        {
+          "ticker": "V",
+          "weight": 5.58
+        },
+        {
+          "ticker": "ADI",
+          "weight": 5.56
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.45
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.72
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.71
+        },
+        {
+          "ticker": "A",
+          "weight": 4.65
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.5
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 4.45
+        },
+        {
+          "ticker": "IQV",
+          "weight": 4.0
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.94
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.89
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.71
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.67
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 3.66
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.59
+        },
+        {
+          "ticker": "BLK",
+          "weight": 3.57
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 11.27
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 7.77
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.62
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 6.96
+        },
+        {
+          "ticker": "ADI",
+          "weight": 6.22
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.59
+        },
+        {
+          "ticker": "V",
+          "weight": 5.07
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.88
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.53
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.15
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.13
+        },
+        {
+          "ticker": "A",
+          "weight": 4.0
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 3.94
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 3.88
+        },
+        {
+          "ticker": "BLK",
+          "weight": 3.66
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.64
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.52
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.07
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.06
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.03
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 10.82
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 8.22
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.34
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.45
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.04
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.93
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 4.87
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.86
+        },
+        {
+          "ticker": "V",
+          "weight": 4.86
+        },
+        {
+          "ticker": "EFX",
+          "weight": 4.59
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.52
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.45
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.23
+        },
+        {
+          "ticker": "A",
+          "weight": 4.2
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 4.03
+        },
+        {
+          "ticker": "BLK",
+          "weight": 3.98
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.89
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.85
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.74
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.15
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 13.97
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 7.6
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.94
+        },
+        {
+          "ticker": "V",
+          "weight": 5.36
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.1
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 5.09
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 4.91
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.86
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.63
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.33
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.21
+        },
+        {
+          "ticker": "BLK",
+          "weight": 4.06
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.02
+        },
+        {
+          "ticker": "TMO",
+          "weight": 3.95
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.88
+        },
+        {
+          "ticker": "EFX",
+          "weight": 3.83
+        },
+        {
+          "ticker": "A",
+          "weight": 3.64
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.31
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.18
+        },
+        {
+          "ticker": "LYV",
+          "weight": 3.15
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 9.66
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 8.42
+        },
+        {
+          "ticker": "V",
+          "weight": 6.46
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.16
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.51
+        },
+        {
+          "ticker": "ICE",
+          "weight": 5.44
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 4.99
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 4.73
+        },
+        {
+          "ticker": "AON",
+          "weight": 4.69
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.48
+        },
+        {
+          "ticker": "TSM",
+          "weight": 4.44
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.13
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.11
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.08
+        },
+        {
+          "ticker": "BLK",
+          "weight": 4.05
+        },
+        {
+          "ticker": "EFX",
+          "weight": 3.97
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.94
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.76
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.53
+        },
+        {
+          "ticker": "A",
+          "weight": 3.45
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 12.15
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 7.47
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 6.0
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 5.71
+        },
+        {
+          "ticker": "V",
+          "weight": 5.59
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 5.22
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.18
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 5.07
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.05
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.94
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.4
+        },
+        {
+          "ticker": "BLK",
+          "weight": 4.36
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.16
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.87
+        },
+        {
+          "ticker": "EFX",
+          "weight": 3.6
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.58
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.49
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.49
+        },
+        {
+          "ticker": "LYV",
+          "weight": 3.41
+        },
+        {
+          "ticker": "AMT",
+          "weight": 3.27
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 11.85
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 7.77
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 6.66
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 6.48
+        },
+        {
+          "ticker": "TSM",
+          "weight": 5.99
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.33
+        },
+        {
+          "ticker": "V",
+          "weight": 5.05
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.95
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 4.62
+        },
+        {
+          "ticker": "BLK",
+          "weight": 4.55
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 4.36
+        },
+        {
+          "ticker": "ICE",
+          "weight": 4.26
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.04
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.81
+        },
+        {
+          "ticker": "LYV",
+          "weight": 3.47
+        },
+        {
+          "ticker": "FAST",
+          "weight": 3.44
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.38
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.36
+        },
+        {
+          "ticker": "EFX",
+          "weight": 3.36
+        },
+        {
+          "ticker": "TME",
+          "weight": 3.29
+        }
+      ]
+    },
+    {
+      "asOf": "2025-12-31",
+      "holdings": [
+        {
+          "ticker": "AVGO",
+          "weight": 11.76
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 9.73
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 6.77
+        },
+        {
+          "ticker": "TSM",
+          "weight": 6.35
+        },
+        {
+          "ticker": "IBKR",
+          "weight": 6.06
+        },
+        {
+          "ticker": "AMAT",
+          "weight": 5.64
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.3
+        },
+        {
+          "ticker": "V",
+          "weight": 5.05
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.5
+        },
+        {
+          "ticker": "ADI",
+          "weight": 4.34
+        },
+        {
+          "ticker": "BLK",
+          "weight": 4.07
+        },
+        {
+          "ticker": "ICE",
+          "weight": 3.99
+        },
+        {
+          "ticker": "TMO",
+          "weight": 3.74
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 3.59
+        },
+        {
+          "ticker": "FERG",
+          "weight": 3.26
+        },
+        {
+          "ticker": "AON",
+          "weight": 3.23
+        },
+        {
+          "ticker": "IQV",
+          "weight": 3.23
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.17
+        },
+        {
+          "ticker": "A",
+          "weight": 3.13
+        },
+        {
+          "ticker": "UBER",
+          "weight": 3.1
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-24T22:38:51Z",
+    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=cc",
+    "sharesSource": "dataroma",
+    "discoveredVia": "managers.php"
+  }
+}
