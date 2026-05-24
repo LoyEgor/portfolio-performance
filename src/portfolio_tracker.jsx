@@ -173,6 +173,20 @@ const computeSeries = (portfolio, allPrices) => {
     return ans >= 0 ? allDates[ans] : null;
   };
 
+  // Drop snapshots that fall ENTIRELY outside the price window (asOf < allDates[0]).
+  // They can't form a valid segment because closestLE(nextSnapshot.asOf) would be null
+  // and the segment would be skipped, leaving the chart starting later than allDates[0].
+  // KEEP the latest such "outside" snapshot as the effective starting holdings — its
+  // composition extends forward through allDates[0] until the first in-range snapshot.
+  // This is the desired "missing data = composition didn't change" behaviour.
+  const earliestPriceDate = allDates[0];
+  const firstInRange = snapshots.findIndex(s => s.asOf >= earliestPriceDate);
+  const effectiveSnaps = firstInRange === -1
+    ? [snapshots[snapshots.length - 1]]              // all snapshots predate the price window
+    : firstInRange > 0
+      ? snapshots.slice(firstInRange - 1)            // keep the snapshot just before, drop earlier
+      : snapshots;                                    // all snapshots already in range
+
   // Build segments. Each segment owns dates [fromDate, nextFromDate) — the boundary belongs to the
   // next segment so chain-linked rebalance happens cleanly.
   // The first segment ALWAYS starts at the earliest available price, regardless of where its
@@ -180,17 +194,17 @@ const computeSeries = (portfolio, allPrices) => {
   // their asOf — a fair buy-and-hold approximation, and it keeps history portfolios visually
   // aligned with non-history ones (which always start at allDates[0]).
   const segs = [];
-  for (let i = 0; i < snapshots.length; i++) {
-    const fromDate = i === 0 ? allDates[0] : closestLE(snapshots[i].asOf);
+  for (let i = 0; i < effectiveSnaps.length; i++) {
+    const fromDate = i === 0 ? allDates[0] : closestLE(effectiveSnaps[i].asOf);
     if (!fromDate) continue;
     let toDate;
-    if (i + 1 < snapshots.length) {
-      toDate = closestLE(snapshots[i + 1].asOf);
+    if (i + 1 < effectiveSnaps.length) {
+      toDate = closestLE(effectiveSnaps[i + 1].asOf);
       if (!toDate || toDate <= fromDate) continue;
     } else {
       toDate = allDates[allDates.length - 1];
     }
-    segs.push({ holdings: snapshots[i].holdings, fromDate, toDate, isLast: i === snapshots.length - 1 });
+    segs.push({ holdings: effectiveSnaps[i].holdings, fromDate, toDate, isLast: i === effectiveSnaps.length - 1 });
   }
   if (!segs.length) return null;
 

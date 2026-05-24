@@ -98,60 +98,38 @@ claude --dangerously-skip-permissions
 Then inside the session:
 
 ```
-/goal <instructions referencing one of the goal files> Done when <condition>.
+/goal Follow goals/<FILE>.md [with <params>].
 ```
+
+That's it — no "Done when …" needed. Each spec file ends with its own
+**Done condition** section (verify script exits 0 + a couple of structural
+checks). `/goal` reads the spec each turn and uses that section as the
+completion condition automatically. Only add an explicit "Done when …"
+override if you want to change the condition for one specific run (e.g.
+"Done when only buffett.json is updated, ignore everyone else").
 
 You'll see every tool call, per-turn status, elapsed time, and you can Ctrl+C
 at any moment without losing data (`/goal` is idempotent — resuming continues
 where it stopped).
 
-### Stocks update (monthly, between quarterly refreshes)
+### Command catalog
 
-Inside `claude --dangerously-skip-permissions`:
+All commands run **inside `claude --dangerously-skip-permissions`** (open the
+session first). Each spec file's "Done condition" section is the implicit
+completion check — don't paste it into the command.
 
-```
-/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0 — every referenced ticker has YYYY-MM-01 keys up through the first-of-month of the prior calendar month.
-```
+| Use case | Command |
+|---|---|
+| Stocks update (monthly) | `/goal Follow goals/STOCKS-UPDATE.md.` |
+| Quarterly backfill (no-op if nothing new) | `/goal Follow goals/INVESTORS-BACKFILL.md.` |
+| First-time bootstrap / extend history | `/goal Follow goals/INVESTORS-BACKFILL.md with --years=5.` |
+| Try on one investor first | `/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --years=5.` |
+| Force re-fetch one investor | `/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --force --years=5.` |
+| Add a new investor | `/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman'.` |
+| Add with source hint | `/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman' --source-hint=stockzoa/pershing-square.` |
 
-### Investors backfill — incremental quarterly update (every ~3 months)
-
-Run after the 13F deadlines: **May 15 / Aug 14 / Nov 14 / Feb 14**.
-
-```
-/goal Follow goals/INVESTORS-BACKFILL.md (no params — incremental quarterly). Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals the most recent 13F-released quarter for today's date.
-```
-
-### Investors backfill — extend history backward
-
-Test on one investor first:
-
-```
-/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --years=max. Done when public/data/investors/buffett.json has been rewritten with the full available history from DataRoma (~5 years, 16+ quarterly snapshots) AND /tmp/verify-backfill.py exits 0 for buffett.
-```
-
-Then go big (the overnight bootstrap):
-
-```
-/goal Follow goals/INVESTORS-BACKFILL.md with --years=max. Done when /tmp/verify-backfill.py exits 0 AND every investor file has history covering 5 years (16+ quarterly snapshots) — or, where the source genuinely has less, the maximum the source provides.
-```
-
-Force re-fetch a specific investor:
-
-```
-/goal Follow goals/INVESTORS-BACKFILL.md with --investors=buffett --force --years=max. Done when public/data/investors/buffett.json has been rewritten and /tmp/verify-backfill.py exits 0 for that id.
-```
-
-### Add a new investor
-
-```
-/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman'. Done when investors-index.json contains a new entry for this person AND public/data/investors/<id>.json exists with non-empty holdings and history AND /tmp/verify-add.py exits 0.
-```
-
-With a source hint (when the popular default isn't who you want):
-
-```
-/goal Follow goals/INVESTORS-ADD.md with --name='Bill Ackman' --source-hint=stockzoa/pershing-square. Done when the new investor file's _provenance.primarySource matches the hint AND /tmp/verify-add.py exits 0.
-```
+13F deadlines that gate `INVESTORS-BACKFILL.md` (no-params form): **May 15 /
+Aug 14 / Nov 14 / Feb 14**. Run it the day after.
 
 ### Remove an investor
 
@@ -176,31 +154,31 @@ All inside `claude --dangerously-skip-permissions`.
 **Quarterly cycle (every 3 months after 13F deadline):**
 
 ```
-/goal Follow goals/INVESTORS-BACKFILL.md. Done when /tmp/verify-backfill.py exits 0 AND meta.json.latestQuarter equals the most recently released 13F quarter.
+/goal Follow goals/INVESTORS-BACKFILL.md.
 ```
 
 When that finishes, in the same session:
 
 ```
-/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
+/goal Follow goals/STOCKS-UPDATE.md.
 ```
 
 **Monthly cycle (between quarterly refreshes):**
 
 ```
-/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
+/goal Follow goals/STOCKS-UPDATE.md.
 ```
 
 **Adding a brand-new investor:**
 
 ```
-/goal Follow goals/INVESTORS-ADD.md with --name='<NAME>'. Done when /tmp/verify-add.py exits 0.
+/goal Follow goals/INVESTORS-ADD.md with --name='<NAME>'.
 ```
 
 Then (same session) to fetch any new tickers:
 
 ```
-/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0.
+/goal Follow goals/STOCKS-UPDATE.md.
 ```
 
 ### Headless mode (only for cron / scheduled automation)
@@ -209,7 +187,7 @@ For non-interactive scheduled runs (e.g. a cron-triggered monthly STOCKS-UPDATE
 that writes to a log and emails you on failure), `-p` works:
 
 ```bash
-claude -p --dangerously-skip-permissions --verbose "/goal Follow goals/STOCKS-UPDATE.md. Done when /tmp/verify-stocks.py exits 0." > /tmp/stocks-update.log 2>&1
+claude -p --dangerously-skip-permissions --verbose "/goal Follow goals/STOCKS-UPDATE.md." > /tmp/stocks-update.log 2>&1
 ```
 
 The `--verbose` flag streams per-turn output to stdout (without it, the terminal

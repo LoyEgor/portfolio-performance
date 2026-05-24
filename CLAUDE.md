@@ -88,8 +88,13 @@ claude --dangerously-skip-permissions
 Then inside the session:
 
 ```
-/goal Follow goals/<FILE>.md with <params>. Done when <verifiable condition>.
+/goal Follow goals/<FILE>.md with <params>.
 ```
+
+**No "Done when …" needed.** The spec file's "Done condition" section is the
+completion check — `/goal` reads it each turn. Only add an explicit
+"Done when …" if you want to override the spec for a one-off run (e.g. a
+narrower scope for testing).
 
 `claude -p "/goal …"` (headless) runs the same loop but **hides all tool calls
 until the very end** — a multi-hour bootstrap looks like a frozen terminal. There
@@ -97,11 +102,7 @@ is no speed advantage to headless; the only thing it trades is visibility. Reser
 it for cron/automation, never for a run you launch by hand. If you must use
 headless, pair it with `--verbose` so per-turn output streams to stdout.
 
-The completion condition is typically "the goal's verify script exits 0",
-e.g. `/tmp/verify-backfill.py exits 0`. Each goal file documents its own
-verify script in the "Done condition" section.
-
-See `goals/README.md` for canonical invocations of each goal.
+See `goals/README.md` for the command catalog (one row per use case).
 
 ## Theme tokens
 

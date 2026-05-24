@@ -53,7 +53,7 @@ All three goals run **interactively** — open a session, then type `/goal …`:
 cd /Volumes/Work/Projects/portfolio-performance
 claude --dangerously-skip-permissions
 # then inside the session:
-# /goal Follow goals/<FILE>.md … Done when …
+# /goal Follow goals/<FILE>.md [with <params>].
 ```
 
 Headless mode (`claude -p`) hides every tool call until the very end — a

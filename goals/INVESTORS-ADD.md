@@ -7,12 +7,13 @@ Picks the most popular match across sources (by AUM), fetches history up to
 
 > **How this file is used.** This is a goal specification consumed by Claude
 > Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
-> looping turns until the **Done condition** at the bottom is satisfied. Run it
-> interactively: open `claude --dangerously-skip-permissions`, then type
-> `/goal Follow goals/INVESTORS-ADD.md … Done when …` inside the session —
-> you'll see every tool call as it happens. Avoid headless `claude -p` for
-> hand-launched runs; it hides progress until the very end. See
-> `goals/README.md` for canonical invocations.
+> looping turns until the **Done condition** at the bottom is satisfied — it
+> reads the spec each turn and uses that section as the completion check, so
+> you don't need to paste it into the command. Run it interactively: open
+> `claude --dangerously-skip-permissions`, then type
+> `/goal Follow goals/INVESTORS-ADD.md with --name='…'` inside the session.
+> Avoid headless `claude -p` for hand-launched runs; it hides progress until
+> the very end. See `goals/README.md` for the command catalog.
 
 ---
 

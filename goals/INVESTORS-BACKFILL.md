@@ -13,11 +13,12 @@ Idempotent: only fetches what's missing unless `--force`.
 > **How this file is used.** This is a goal specification consumed by Claude
 > Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
 > looping turns until the **Done condition** at the bottom of this file is
-> satisfied. Run it interactively: open `claude --dangerously-skip-permissions`,
-> then type `/goal Follow goals/INVESTORS-BACKFILL.md … Done when …` inside the
-> session — you'll see every tool call as it happens. Avoid headless `claude -p`
-> for hand-launched runs; it hides progress until the very end. See
-> `goals/README.md` for canonical invocations.
+> satisfied — it reads the spec each turn and uses that section as the
+> completion check, so you don't need to paste it into the command. Run it
+> interactively: open `claude --dangerously-skip-permissions`, then type
+> `/goal Follow goals/INVESTORS-BACKFILL.md.` (plus any `--params`) inside the
+> session. Avoid headless `claude -p` for hand-launched runs; it hides progress
+> until the very end. See `goals/README.md` for the command catalog.
 
 ---
 
@@ -55,16 +56,36 @@ case, runs after a 13F deadline).
 
 ### Phase A — Determine work
 
-1. Read `public/data/meta.json` for `latestQuarter` (e.g. `"2026-Q1"`).
-2. Determine the new target quarter from `today` (13F lag: a quarter Q is
-   "available" 45 days after Q ends). e.g. `today = 2026-05-19` → newest
-   available quarter is `2026-Q1`.
+1. Read `public/data/meta.json` for `latestQuarter` (e.g. `"2026-03-31"`).
+2. Determine `dataromaLatestQuarter` — the newest quarter actually available on
+   DataRoma right now (13F lag: a quarter Q is "available" 45 days after Q ends).
+   e.g. `today = 2026-05-19` → newest available is `2026-03-31`.
 3. Read `public/data/investors-index.json` for the investor list.
 4. Build the work plan per investor:
    - If `--investors=` is set, restrict to that list.
-   - For each investor: compare existing `history[].asOf` against target window
-     (newest available quarter, or N years back if `--years` given).
+   - For each investor compute `existingLatest = max(history[].asOf)` and the
+     "implicit current asOf" (one quarter after `existingLatest`).
+   - Compare existing coverage against the target window (newest available
+     quarter, or N years back if `--years` given).
    - Skip if already complete (no `--force`).
+
+> **Idempotency guard — DON'T create duplicate quarters.**
+>
+> A common failure mode is: a previous run already stored Qx as `holdings`
+> (current), but a later run reads the file, sees `history.max < Qx`, "pushes"
+> the current into history (now Qx in both `history` and as the data behind
+> `holdings`), then re-fetches Qx for `holdings` because nothing newer exists
+> yet. Result: Qx appears twice — once in `history`, once as the duplicate
+> implicit-current. The chart compensates but the data is dirty and
+> `verify-backfill.py` will flag it (see "duplicate asOf in history" check
+> below — adapted to also catch current==last-history).
+>
+> **Rule:** before pushing `holdings` to `history`, check whether
+> `dataromaLatestQuarter == existingLatest + 1 quarter` AND the current
+> `holdings` already matches what a fresh fetch would return. If both hold →
+> there is no new data to record; **leave the file unchanged and skip this
+> investor**. Only push current → history when a strictly newer quarter is
+> actually available.
 
 ### Activity data (shares) — rolling window
 
@@ -82,7 +103,33 @@ Schema for a holding in any snapshot inside the window:
 Outside the window, `shares` is omitted — that data isn't kept and the UI shows
 a `~` marker on its weight-based fallback.
 
-**Source priority for shares (try until something works — don't give up early):**
+**Shares are NOT optional inside the window. The Goal is not done until every
+investor's last `activityWindowQuarters` snapshots have shares filled, OR the
+explicit failure log lists why a specific (investor, quarter) pair couldn't be
+filled after exhausting every source below.**
+
+A common failure mode in past runs: shares were filled for the first investor
+(usually Buffett, who has the cleanest 13F.info match) but skipped for everyone
+else. That happens when the goal treats shares as "best effort, move on" instead
+of "required, exhaust sources." Don't repeat that. Pseudocode for the inner
+loop:
+
+```
+for investor in workPlan:
+  for quarter in last N (= activityWindowQuarters) snapshots of this investor:
+    for source in [dataroma-current, dataroma-historic, web-archive,
+                   13f-info, stockzoa, valuesider, gurufocus,
+                   whalewisdom, hedgefollow, stockcircle]:
+      shares = try_fetch_shares(source, investor, quarter)
+      if shares: break
+    if not shares:
+      append (investor, quarter, "exhausted all sources") to /tmp/shares-failures.txt
+    else:
+      write shares into the snapshot's holdings
+```
+
+**Source priority for shares (try in this order, don't give up before reaching
+the bottom):**
 
 1. **DataRoma current quarter:** `holdings.php?m=<code>` has a `Shares` column.
 2. **DataRoma historic quarter:** check if the page accepts a quarter parameter
@@ -94,10 +141,14 @@ a `~` marker on its weight-based fallback.
 5. **Other priority sources** from README.md: stockzoa, valuesider, GuruFocus,
    WhaleWisdom, HedgeFollow, StockCircle.
 
-For each quarter inside the window, try every source in order until shares is
-filled for every position. Log a warning only if all sources failed; never
-leave the quarter without an attempt at every source. Weight is fetched from
-the primary source as before — only `shares` triggers the multi-source search.
+Weight is fetched from the primary source as before — only `shares` triggers
+the multi-source search.
+
+The `_provenance.sharesSource` field on each investor file records which source
+finally filled shares (the last one tried that returned data). If a different
+quarter inside the window used a different source, just record the *most
+common* one. Never write `null` here — either shares were filled (record source)
+or they weren't (no `sharesSource` field, and the failure goes to the log).
 
 **Cleanup when the window advances:**
 
@@ -167,17 +218,32 @@ means "take the first 20 rows by % of Portfolio."
   later — the app's chain-link math uses "closest available price ≤ asOf"
   and the ~1-month offset stays within 5% precision.
 
-### Phase C — Advance `latestQuarter`
+### Phase C — Update `meta.json` (REQUIRED, not optional)
 
-If every investor successfully reached the new target quarter (or was already
-there) → bump `meta.json.latestQuarter` to the new value.
+When all work in Phase B is done, `meta.json` MUST be rewritten with:
 
-If some investors didn't reach the new target quarter (e.g. DataRoma hasn't
-posted them yet) → do NOT bump `latestQuarter`. Instead, log them and the user
-re-runs later.
+1. **`lastBackfillAt`** = ISO timestamp of the moment this run finished
+   (e.g. `"2026-05-24T00:51:29Z"`). Always set — this is the one timestamp
+   that lets the user/UI tell when the base was last refreshed. Never leave
+   `null` after a successful Phase B.
 
-This guarantees the invariant: **`meta.latestQuarter` == the quarter every
-investor in the base has data for**.
+2. **`latestQuarter`** = newest quarter every investor in the base now covers,
+   following this rule:
+   - If every investor in the work plan reached the new target quarter (or was
+     already there) → bump to the new value.
+   - If some didn't (e.g. DataRoma hasn't posted their 13F yet) → do NOT bump.
+     Log the holdouts to `/tmp/investors-backfill-log.txt` and leave
+     `latestQuarter` at the previous value.
+
+   This preserves the invariant: **`meta.latestQuarter` == the quarter every
+   investor in the base has data for**.
+
+3. Leave other meta fields untouched (`version`, `activityWindowQuarters`,
+   `generatedBy`, `generatedAt`).
+
+Failing to update `meta.lastBackfillAt` is treated as goal-not-done by the
+verify script (`/tmp/verify-backfill.py` checks for non-null
+`lastBackfillAt`).
 
 ---
 
@@ -248,15 +314,50 @@ lq = meta.get("latestQuarter")
 if not lq or not re.match(r"^\d{4}-(03-31|06-30|09-30|12-31)$", lq):
     E(f"meta.latestQuarter invalid: {lq!r}")
 
+# meta.lastBackfillAt MUST be set after a successful run (Phase C)
+if not meta.get("lastBackfillAt"):
+    E("meta.lastBackfillAt is null — Phase C didn't record the run timestamp")
+
 # Every investor's history covers up to latestQuarter (or is intentionally shorter)
+window_n = meta.get("activityWindowQuarters", 6)
 for path in glob.glob(INVESTORS_GLOB):
     with open(path) as f: inv = json.load(f)
-    asofs = [s.get("asOf") for s in (inv.get("history") or [])]
+    iid = inv.get("id")
+    asofs = sorted([s.get("asOf") for s in (inv.get("history") or [])])
     if asofs and max(asofs) < lq:
         # Allow if investor was added mid-stream — index should mark them
-        idx_entry = next((i for i in index.get("investors", []) if i.get("id") == inv.get("id")), None)
+        idx_entry = next((i for i in index.get("investors", []) if i.get("id") == iid), None)
         if not idx_entry or idx_entry.get("historyRange", {}).get("to") != max(asofs):
-            E(f"{inv.get('id')}: history.max ({max(asofs)}) < meta.latestQuarter ({lq})")
+            E(f"{iid}: history.max ({max(asofs)}) < meta.latestQuarter ({lq})")
+
+    # No duplicate between last history snapshot and current holdings (the
+    # idempotency-bug failure mode — same data ends up in both places).
+    if (inv.get("history") and inv.get("holdings")):
+        last_snap = sorted(inv["history"], key=lambda s: s["asOf"])[-1]
+        # Build a comparable signature: ticker → weight, ticker → shares.
+        def sig(holdings):
+            return tuple(sorted((h.get("ticker"), h.get("weight"), h.get("shares"))
+                                for h in holdings))
+        if sig(last_snap["holdings"]) == sig(inv["holdings"]):
+            E(f"{iid}: current holdings duplicate last history snapshot ({last_snap['asOf']}) — "
+              f"either skip the push or fetch a strictly newer quarter")
+
+    # Shares must be filled inside the activity window — for aggregates
+    # (primarySource = 'dataroma-aggregate') shares aren't applicable, skip.
+    idx_entry = next((i for i in index.get("investors", []) if i.get("id") == iid), None)
+    primary = (idx_entry or {}).get("primarySource") or ""
+    if primary.startswith("dataroma-aggregate"):
+        continue
+    # Window = last N history snapshots + current.
+    # If history is shorter than N, the window is just whatever exists.
+    last_window = (inv.get("history") or [])[-window_n + 1:]  # +1 because current counts
+    for snap in last_window:
+        missing = [h["ticker"] for h in snap["holdings"] if "shares" not in h]
+        if missing:
+            E(f"{iid} {snap['asOf']}: missing shares for {len(missing)} holding(s): {missing[:3]}")
+    current_missing = [h["ticker"] for h in (inv.get("holdings") or []) if "shares" not in h]
+    if current_missing:
+        E(f"{iid} current: missing shares for {len(current_missing)} holding(s): {current_missing[:3]}")
 
 if errors:
     print(f"FAIL: {len(errors)} errors")
@@ -269,9 +370,23 @@ print(f"OK: {len(index_ids)} investors, latestQuarter={lq}")
 
 ## Done condition
 
-1. `python3 /tmp/verify-backfill.py` exits 0.
-2. `git status -s public/data/` shows changes only in
-   `investors-index.json`, `investors/*.json`, and `meta.json`.
+1. `python3 /tmp/verify-backfill.py` exits 0. This checks **all** of:
+   - Index ↔ files consistency
+   - Weight sums 99-101 per snapshot
+   - No duplicate `asOf` in history
+   - No duplicate between last history snapshot and current holdings
+     (the idempotency-bug catch)
+   - `meta.latestQuarter` set + valid quarter-end
+   - **`meta.lastBackfillAt` is non-null** (Phase C ran)
+   - Every investor's last `activityWindowQuarters` snapshots have `shares`
+     filled on every holding (except `dataroma-aggregate` investors, where
+     shares aren't applicable)
+2. `git status -s public/data/` shows changes only in `investors-index.json`,
+   `investors/*.json`, and `meta.json`. (No `src/`, no `public/default-data.*`.)
 3. `/tmp/investors-backfill-log.txt` lists per-investor status (OK / SKIPPED /
    FAILED) and any source-fallback events or >5pp diffs.
-4. Print the log path so the user can review.
+4. `/tmp/shares-failures.txt` exists (may be empty). Every (investor, quarter)
+   pair where shares couldn't be filled after exhausting all sources is logged
+   here with a reason. **Empty file = ideal; populated file = the goal still
+   completed but you should review which gaps are acceptable.**
+5. Print all log paths so the user can review.
