@@ -37,16 +37,58 @@ When the user posts a broker screenshot for `myPortfolio`:
 
 ## Source of truth & save behaviour
 
-- `public/default-data.json` is the canonical data file (v9 format on this branch).
-- No localStorage. App reloads from `default-data.json` on every page refresh.
+- `public/default-data.json` is the canonical user-config file (v9 format).
+- The read-only investor base lives in `public/data/*` (`investors-index.json`,
+  `investors/<id>.json`, `prices.json`, `meta.json`) and is maintained by goals.
+- No localStorage. App reloads from `default-data.json` and `public/data/*` on every page refresh.
 - Save button writes in-memory state to `default-data.json` via Vite dev-plugin endpoint.
-- Goal scripts write directly to JSON files; Save button is for user-driven changes.
+- Goals (run via `/goal` — see below) write directly to `public/data/*` JSON files; Save button is for user-driven changes.
 
-## Files to never touch from a Goal / agent
+## Files to never touch from a goal / agent
 
 - `public/default-data.backup-{1,2,3}.json` — app-managed snapshots, not version control.
 - The `color` field on any portfolio — user-curated.
 - The order of portfolios in `selectedInvestors` or any portfolios array — user-curated.
+
+## Goals are run via Claude Code's `/goal` command
+
+This project's maintenance work — fetching DataRoma snapshots, refreshing
+prices, adding new investors — is split into a small set of **goal
+specifications** (`.md` files) under `goals/`. Each one is driven by Claude
+Code's built-in **`/goal`** slash command (introduced in Claude Code 2.1.139,
+May 2026 — [docs](https://code.claude.com/docs/en/goal)).
+
+`/goal` loops over multiple Claude turns until a verifiable completion
+condition holds. A small fast model checks the condition between turns; if
+it doesn't hold, Claude takes another turn. The harness tracks elapsed time,
+turns, and tokens. Runs can last hours or days.
+
+Why this matters for any LLM/agent working in this repo:
+
+- **Don't treat goal files as one-shot prompts.** They're written assuming a
+  multi-turn loop with a completion check. A single `claude -p` call won't
+  iterate to finish — it'll do one turn and stop. Use `/goal` so the harness
+  drives convergence.
+- **Don't invent your own "execute to done" wording.** The `/goal` command
+  already provides the loop. Goal files just describe *what* to do and *when
+  it's done*.
+- **Don't make goal files mutually dependent on conversation context.** The
+  harness passes the goal file's contents verbatim each turn — they must be
+  self-contained.
+
+Invocation form:
+
+```bash
+claude -p --dangerously-skip-permissions "/goal \
+  Follow goals/<FILE>.md with <params>. \
+  Done when <verifiable condition>."
+```
+
+The completion condition is typically "the goal's verify script exits 0",
+e.g. `/tmp/verify-backfill.py exits 0`. Each goal file documents its own
+verify script in the "Done condition" section.
+
+See `goals/README.md` for canonical invocations of each goal.
 
 ## Theme tokens
 
