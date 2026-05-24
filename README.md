@@ -34,15 +34,27 @@ No localStorage. App fetches everything from these JSON files on mount.
 
 ## Working with the project
 
-| Goal | File |
-|---|---|
-| Quarterly refresh of investor holdings + history | `goals/INVESTORS-BACKFILL.md` |
-| Monthly price refresh | `goals/STOCKS-UPDATE.md` |
-| Add a single investor by name | `goals/INVESTORS-ADD.md` |
-| Remove an investor | `scripts/remove-investor.mjs <id>` |
+Maintenance work (fetching DataRoma snapshots, refreshing prices, adding new
+investors) lives in `goals/` — specification files driven by Claude Code's
+built-in **`/goal`** command (Claude Code 2.1.139+, see
+[docs](https://code.claude.com/docs/en/goal)). `/goal` keeps Claude iterating
+across many turns until a verifiable completion condition holds.
 
-See `goals/README.md` for the launch commands. All goals run as autonomous
-Claude Code sessions with `--dangerously-skip-permissions`.
+| Task | Specification | Trigger |
+|---|---|---|
+| Quarterly refresh of investor holdings + history | `goals/INVESTORS-BACKFILL.md` | after each 13F deadline |
+| Monthly price refresh | `goals/STOCKS-UPDATE.md` | monthly between refreshes |
+| Add a single investor by name | `goals/INVESTORS-ADD.md` | on demand |
+| Remove an investor (mechanical, no LLM) | `scripts/remove-investor.mjs <id>` | on demand |
+
+All three goals run via the same invocation shape:
+
+```bash
+claude -p --dangerously-skip-permissions "/goal Follow goals/<FILE>.md ... Done when ..."
+```
+
+See `goals/README.md` for canonical commands per scenario (quarterly bootstrap,
+history expansion, single-investor add, etc).
 
 ## Documentation map
 

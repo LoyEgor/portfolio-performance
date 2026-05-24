@@ -7,6 +7,12 @@ calendar month.
 This goal **only touches prices.** Holdings, history, and investor metadata are
 out of scope (use `INVESTORS-BACKFILL.md` for those).
 
+> **How this file is used.** This is a goal specification consumed by Claude
+> Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
+> looping turns until the **Done condition** at the bottom is satisfied. Don't
+> run this file with plain `claude -p` (single turn) — it won't iterate. See
+> `goals/README.md` for the full `/goal` invocation form.
+
 ---
 
 ## When to run

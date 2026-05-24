@@ -10,6 +10,12 @@ Refresh the investor base. Two main use cases under one goal:
 
 Idempotent: only fetches what's missing unless `--force`.
 
+> **How this file is used.** This is a goal specification consumed by Claude
+> Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
+> looping turns until the **Done condition** at the bottom of this file is
+> satisfied. Don't run this file with plain `claude -p` (single turn) — it
+> won't iterate. See `goals/README.md` for the full `/goal` invocation form.
+
 ---
 
 ## Parameters

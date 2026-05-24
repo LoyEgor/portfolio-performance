@@ -5,6 +5,12 @@ Add a single investor to the base, by name (with optional source hint).
 Picks the most popular match across sources (by AUM), fetches history up to
 `meta.latestQuarter` — never beyond, to keep the base aligned.
 
+> **How this file is used.** This is a goal specification consumed by Claude
+> Code's `/goal` command (introduced in Claude Code 2.1.139). The harness keeps
+> looping turns until the **Done condition** at the bottom is satisfied. Don't
+> run this file with plain `claude -p` (single turn) — it won't iterate. See
+> `goals/README.md` for the full `/goal` invocation form.
+
 ---
 
 ## Parameters
