@@ -879,14 +879,12 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           if (delta === null || delta === undefined) return null;
 
                           // Noise thresholds: real has 1% floor (exact data — small signals are real);
-                          // rough has 25% floor — calibrated empirically against DataRoma's Recent
-                          // Activity column for Buffett (Q4 2025 → Q1 2026) and Li Lu. Below 25% the
-                          // estimate is dominated by monthly-price approximation noise (typical false
-                          // positive: 7-19% range). 25% catches all meaningful trades (BAC -71%,
-                          // CROX +41%, GOOGL +204%, CVX -35%, etc.) while hiding the noise.
+                          // rough has 15% floor — picks up mid-range real trades (Reduce ~11-20%)
+                          // while still hiding most monthly-price approximation noise. Accepts a few
+                          // more false positives in exchange for catching smaller real moves.
                           const abs = Math.abs(delta);
                           const isRough = confidence === 'rough';
-                          if (abs < (isRough ? 25 : 1)) return null;
+                          if (abs < (isRough ? 15 : 1)) return null;
 
                           const cls = isRough
                             ? (delta >= 0 ? 'text-success-faded' : 'text-danger-faded')
@@ -3233,22 +3231,32 @@ export default function PortfolioTracker() {
                 {/* Hero stays on every breakpoint — only its size drops on mobile.
                     The subtitle (long date range + ticker count) is verbose for
                     narrow viewports, so it stays sm:block-only. */}
-                <h1 className="text-xl sm:text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
-                  Performance,
-                  <br />
+                {/* Below sm (≤640px): single-line "Performance, side by side." at 1.7rem.
+                    sm+: keep the two-line stack with em on its own row. */}
+                <h1 className="text-[1.7rem] sm:text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
+                  Performance,{' '}
+                  <br className="hidden sm:inline" />
                   <em style={{ color: 'var(--accent-brand)', fontWeight: 500 }}>side by side.</em>
                 </h1>
                 <div className="hidden sm:block text-body text-tertiary mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
                 </div>
               </div>
-              <div className="flex flex-col items-start md:items-end justify-between gap-2">
+              <div className="flex flex-col items-start min-[990px]:items-end justify-between gap-2">
                 {/* UI scale controls — pin to TOP of the header column (A−/A+ above,
                     main action row at the bottom). justify-between on this column
-                    + items-stretch on the parent does the distribution. On mobile
-                    (when the flex parent wraps and the button block stacks below
-                    the title), items-start aligns everything to the LEFT edge —
-                    matching the title — instead of dangling at the right. */}
+                    + items-stretch on the parent does the distribution.
+
+                    Alignment switches at the SAME viewport width where the parent
+                    flex actually wraps (~990px — title + button block stop fitting
+                    side-by-side). Above that, items-end pushes the buttons to the
+                    right edge of the page, matching where justify-between lands
+                    the block. Below that, the block has already wrapped below the
+                    title and items-start aligns everything to the LEFT — matching
+                    the title — instead of being half-right-aligned in a column
+                    that no longer has a sibling. The breakpoint is NOT Tailwind's
+                    md: (768px) — that would leave a 768–990px window where the
+                    block is below the title yet still right-aligned. */}
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setUiScale(s => Math.max(MIN_SCALE, +(s - STEP).toFixed(2)))}
