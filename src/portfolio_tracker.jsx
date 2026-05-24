@@ -1897,9 +1897,46 @@ const InvestorsMatrix = ({
     width: '1%', whiteSpace: 'nowrap',
   });
 
+  // Sticky bottom rows (CAGR / Sortino / Max DD) — see ETFsMatrix for the
+  // matching pattern. Offsets stack: Max DD bottom-most, Sortino above, CAGR
+  // above that, then the separator strip.
+  const ROW_H = 33;
+  const SEP_H = 6;
+  const stickyRow = (offset, bg) => ({
+    position: 'sticky', bottom: offset, zIndex: 2, background: bg,
+  });
+  const stickyLabel = (offset, active) => ({
+    position: 'sticky', left: 0, bottom: offset, zIndex: 4,
+    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    borderRight: '1px solid var(--border-subtle)',
+    padding: '8px 12px', textAlign: 'left',
+    cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
+    width: '1%', whiteSpace: 'nowrap',
+  });
+
+  // Dynamic max-height: card grows naturally up to (viewport - distance from
+  // top - bottom buffer). When rows exceed that, the inner scroll body takes
+  // over. Recomputed on every viewport resize and on any layout shift above
+  // the card (e.g. header wraps on narrow widths). Single internal scroll.
+  const cardRef = useRef(null);
+  useEffect(() => {
+    const update = () => {
+      const el = cardRef.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + 24}px)`;
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (document.body) ro.observe(document.body);
+    window.addEventListener('resize', update);
+    return () => { ro.disconnect(); window.removeEventListener('resize', update); };
+  }, []);
+
   return (
-    <div className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm">
-      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3">
+    <div ref={cardRef}
+      className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm flex flex-col">
+      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3 flex-shrink-0">
         <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
           Investors · {investorsIndex.length} in base · {[...activeIds].filter(id => investorsIndex.some(i => i.id === id)).length} in portfolio
           <span className="ml-3" style={{ color: 'var(--text-muted)' }}>· base latest: {latestQuarter || '—'}</span>
@@ -1927,7 +1964,10 @@ const InvestorsMatrix = ({
         </div>
       </div>
 
-      <div style={{ overflow: 'auto', maxHeight: '70vh' }}>
+      {/* flex: '0 1 auto' = natural height, shrinks when parent maxHeight clamps.
+          Combined with overflow:auto this gives a single internal scroll only
+          when the table actually exceeds available space. */}
+      <div style={{ overflow: 'auto', flex: '0 1 auto', minHeight: 0 }}>
         <table className="font-mono text-body" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
           <thead>
             <tr>
@@ -2010,23 +2050,434 @@ const InvestorsMatrix = ({
                 {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'period', per.key)))}
               </tr>
             ))}
-            <tr style={{ height: 6 }}><td colSpan={1 + sortedInvestors.length}
-              style={{ background: 'var(--bg-panel)', borderTop: '1px solid var(--border-strong)' }} /></tr>
-            <tr style={{ background: 'var(--row-stripe)' }}>
-              <td onClick={() => onRowClick('cagr')} style={labelCellStyle(isSortRow('cagr'))}>CAGR{sortIndicator('cagr')}</td>
-              {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'cagr')))}
+            {/* Sticky metric footer — Max DD pinned to bottom, Sortino above,
+                CAGR above that, separator stripe on top of the stack. */}
+            <tr style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), height: SEP_H }}>
+              <td colSpan={1 + sortedInvestors.length}
+                style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), borderTop: '1px solid var(--border-strong)', padding: 0 }} />
             </tr>
-            <tr>
-              <td onClick={() => onRowClick('sortino')} style={labelCellStyle(isSortRow('sortino'))}>Sortino{sortIndicator('sortino')}</td>
-              {sortedInvestors.map(p => renderRatioCell(p.id, cellValue(p.id, 'sortino')))}
+            <tr style={stickyRow(ROW_H * 2, 'var(--bg-card-elevated)')}>
+              <td onClick={() => onRowClick('cagr')} style={stickyLabel(ROW_H * 2, isSortRow('cagr'))}>
+                CAGR{sortIndicator('cagr')}
+              </td>
+              {sortedInvestors.map(p => (
+                <td key={p.id} style={{ ...stickyRow(ROW_H * 2, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForDelta(cellValue(p.id, 'cagr')), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtPct(cellValue(p.id, 'cagr'))}
+                  </span>
+                </td>
+              ))}
             </tr>
-            <tr style={{ background: 'var(--row-stripe)' }}>
-              <td onClick={() => onRowClick('maxdd')} style={labelCellStyle(isSortRow('maxdd'))}>Max DD{sortIndicator('maxdd')}</td>
-              {sortedInvestors.map(p => renderPctCell(p.id, cellValue(p.id, 'maxdd')))}
+            <tr style={stickyRow(ROW_H, 'var(--bg-card)')}>
+              <td onClick={() => onRowClick('sortino')} style={stickyLabel(ROW_H, isSortRow('sortino'))}>
+                Sortino{sortIndicator('sortino')}
+              </td>
+              {sortedInvestors.map(p => (
+                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForRatio(cellValue(p.id, 'sortino'), mode !== 'absolute'), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtRatio(cellValue(p.id, 'sortino'))}
+                  </span>
+                </td>
+              ))}
+            </tr>
+            <tr style={stickyRow(0, 'var(--bg-card-elevated)')}>
+              <td onClick={() => onRowClick('maxdd')} style={stickyLabel(0, isSortRow('maxdd'))}>
+                Max DD{sortIndicator('maxdd')}
+              </td>
+              {sortedInvestors.map(p => (
+                <td key={p.id} style={{ ...stickyRow(0, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForDelta(cellValue(p.id, 'maxdd')), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtPct(cellValue(p.id, 'maxdd'))}
+                  </span>
+                </td>
+              ))}
             </tr>
             {sortedInvestors.length === 0 && (
               <tr><td colSpan={1} style={{ padding: 32, textAlign: 'center', color: 'var(--text-muted)' }}>
                 Investor base is empty — run INVESTORS-BACKFILL.
+              </td></tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+
+// ============================================================================
+// ETFs MATRIX — same grid as InvestorsMatrix, but each "item" is a single-ticker
+// ETF instead of a multi-holding investor portfolio. No lazy-fetch of per-item
+// files (the index itself carries enough metadata, and pricing comes from the
+// shared prices.json). Otherwise the rendering, sorting, modes and granularity
+// behaviour are identical — kept as a near-duplicate to avoid one big abstraction
+// while the two surfaces are still settling.
+// ============================================================================
+
+const ETFsMatrix = ({
+  etfsIndex, portfolios, prices, latestQuarter,
+  onToggleVisibility, onEditInvestor,
+}) => {
+  const [mode, setMode] = useState('absolute');
+  const [granularity, setGranularity] = useState('yearly');
+  const [sortRow, setSortRow] = useState({ kind: 'cagr' });
+  const [sortDir, setSortDir] = useState('desc');
+
+  const activeIds = useMemo(() => new Set(portfolios.map(p => p.id)), [portfolios]);
+
+  // Build a portfolio-shaped object for every ETF in the catalog. If the ETF is
+  // already active (user toggled it visible from this matrix or restored from
+  // saved config), reuse that object so customizations like color survive. For
+  // inactive ones, construct a minimal shell whose `computeSeries` will resolve
+  // to the price series of its single 100% ticker.
+  const etfPortfolios = useMemo(() => etfsIndex.map(meta => {
+    const active = portfolios.find(p => p.id === meta.id);
+    if (active) return active;
+    return {
+      id: meta.id,
+      name: meta.ticker,
+      subtitle: meta.name || '',
+      kind: 'etf',
+      // Deterministic per-id color from the shared PALETTE — single source of
+      // truth across investor / ETF / chart line / column dot.
+      color: getInvestorColor(meta.id, null, null),
+      visible: true,
+      holdings: [{ ticker: meta.ticker, weight: 100 }],
+      history: [],
+    };
+  }), [etfsIndex, portfolios]);
+
+  const seriesByEtf = useMemo(() => {
+    const out = {};
+    etfPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
+    return out;
+  }, [etfPortfolios, prices]);
+
+  const voo = portfolios.find(p => p.id === 'voo');
+  const vt  = portfolios.find(p => p.id === 'vt');
+  const benchSeries = useMemo(() => ({
+    voo: voo ? computeSeries(voo, prices) : null,
+    vt:  vt  ? computeSeries(vt,  prices) : null,
+  }), [voo, vt, prices]);
+
+  const periods = useMemo(() => {
+    const allSeries = Object.values(seriesByEtf);
+    if (granularity === 'yearly') {
+      const found = new Set();
+      allSeries.forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 4))); });
+      return [...found].sort().map(y => ({ key: `year-${y}`, kind: 'year', year: parseInt(y), label: y }));
+    }
+    if (granularity === 'monthly') {
+      const found = new Set();
+      allSeries.forEach(s => { (s || []).forEach(d => found.add(d.date.slice(0, 7))); });
+      const MONTH_LABEL = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return [...found].sort().map(s => {
+        const [y, m] = s.split('-').map(Number);
+        return { key: `m-${y}-${m}`, kind: 'month', year: y, month: m, label: `${MONTH_LABEL[m - 1]} ${y}` };
+      });
+    }
+    const found = new Set();
+    allSeries.forEach(s => {
+      (s || []).forEach(d => {
+        const [y, m] = d.date.split('-').map(Number);
+        found.add(`${y}-${Math.ceil(m / 3)}`);
+      });
+    });
+    return [...found].sort((a, b) => {
+      const [ay, aq] = a.split('-').map(Number);
+      const [by, bq] = b.split('-').map(Number);
+      return ay - by || aq - bq;
+    }).map(s => {
+      const [y, q] = s.split('-').map(Number);
+      return { key: `q-${y}-${q}`, kind: 'quarter', year: y, q, label: `${y} Q${q}` };
+    });
+  }, [granularity, seriesByEtf]);
+
+  const computePeriodValue = (s, per) =>
+      per.kind === 'year'    ? annualReturnFromSeries(s, per.year)
+    : per.kind === 'quarter' ? quarterReturnFromSeries(s, per.year, per.q)
+    : per.kind === 'month'   ? monthReturnFromSeries(s, per.year, per.month)
+    : null;
+
+  const absoluteMetrics = useMemo(() => {
+    const out = {};
+    etfPortfolios.forEach(p => {
+      if (!p) return;
+      const s = seriesByEtf[p.id];
+      out[p.id] = {
+        byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(s, per)])),
+        cagr: cagrFromSeries(s),
+        sortino: sortinoFromSeries(s, granularity),
+        maxdd: maxDrawdownFromSeries(s, granularity),
+      };
+    });
+    return out;
+  }, [etfPortfolios, seriesByEtf, periods, granularity]);
+
+  const benchMetrics = useMemo(() => {
+    const bench = mode === 'vt' ? benchSeries.vt : mode === 'voo' ? benchSeries.voo : null;
+    if (!bench) return null;
+    return {
+      byPeriod: Object.fromEntries(periods.map(per => [per.key, computePeriodValue(bench, per)])),
+      cagr: cagrFromSeries(bench),
+      sortino: sortinoFromSeries(bench, granularity),
+      maxdd: maxDrawdownFromSeries(bench, granularity),
+    };
+  }, [mode, benchSeries, periods, granularity]);
+
+  const cellValue = (id, kind, periodKey) => {
+    const abs = absoluteMetrics[id];
+    if (!abs) return null;
+    const absVal = kind === 'period'  ? abs.byPeriod[periodKey]
+                 : kind === 'cagr'    ? abs.cagr
+                 : kind === 'sortino' ? abs.sortino
+                 : kind === 'maxdd'   ? abs.maxdd : null;
+    if (mode === 'absolute' || !benchMetrics) return absVal;
+    const benchVal = kind === 'period'  ? benchMetrics.byPeriod[periodKey]
+                   : kind === 'cagr'    ? benchMetrics.cagr
+                   : kind === 'sortino' ? benchMetrics.sortino
+                   : kind === 'maxdd'   ? benchMetrics.maxdd : null;
+    if (absVal == null || benchVal == null) return null;
+    return absVal - benchVal;
+  };
+
+  const sortedEtfs = useMemo(() => {
+    if (!sortRow) return etfPortfolios.filter(Boolean);
+    const dir = sortDir === 'asc' ? 1 : -1;
+    return etfPortfolios.filter(Boolean).slice().sort((a, b) => {
+      const va = cellValue(a.id, sortRow.kind, sortRow.periodKey);
+      const vb = cellValue(b.id, sortRow.kind, sortRow.periodKey);
+      if (va == null && vb == null) return 0;
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      return (va - vb) * dir;
+    });
+  }, [etfPortfolios, sortRow, sortDir, absoluteMetrics, benchMetrics, mode]);
+
+  const onRowClick = (kind, periodKey) => {
+    if (sortRow?.kind === kind && sortRow?.periodKey === periodKey) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
+    else { setSortRow({ kind, periodKey }); setSortDir('desc'); }
+  };
+
+  const isSortRow = (kind, periodKey) => sortRow?.kind === kind && sortRow?.periodKey === periodKey;
+  const sortIndicator = (kind, periodKey) => isSortRow(kind, periodKey)
+    ? <span style={{ color: 'var(--text-muted)', marginLeft: 4 }}>{sortDir === 'asc' ? '→' : '←'}</span> : null;
+
+  const styleForRatio = (v, isDelta) => {
+    if (v == null) return { color: 'var(--text-muted)', fontWeight: 400 };
+    if (!isDelta) return { color: 'var(--text-primary)', fontWeight: 500 };
+    if (Math.abs(v) < 0.1) return { color: 'var(--text-muted)', fontWeight: 400 };
+    const isPos = v >= 0;
+    return { color: isPos ? 'var(--success)' : 'var(--danger)', fontWeight: Math.abs(v) >= 0.5 ? 700 : 400 };
+  };
+
+  const renderPctCell = (key, v) => (
+    <td key={key} style={{ padding: '8px 10px', textAlign: 'center' }}>
+      <span style={{ ...styleForDelta(v), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>{fmtPct(v)}</span>
+    </td>
+  );
+  const renderRatioCell = (key, v) => (
+    <td key={key} style={{ padding: '8px 10px', textAlign: 'center' }}>
+      <span style={{ ...styleForRatio(v, mode !== 'absolute'), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>{fmtRatio(v)}</span>
+    </td>
+  );
+
+  const labelCellStyle = (active) => ({
+    position: 'sticky', left: 0, zIndex: 1,
+    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    borderRight: '1px solid var(--border-subtle)',
+    padding: '8px 12px', textAlign: 'left',
+    cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
+    width: '1%', whiteSpace: 'nowrap',
+  });
+
+  const activeEtfCount = [...activeIds].filter(id => etfsIndex.some(e => e.id === id)).length;
+
+  // Sticky bottom rows (CAGR / Sortino / Max DD) — pinned to the scroll container's
+  // bottom edge so totals stay visible while the user scrolls through years/quarters.
+  // Stacked offsets: Max DD is bottom-most, Sortino above it, CAGR above that.
+  // The separator strip sits highest in the stack so it visually anchors the trio.
+  const ROW_H = 33;                       // ~match real row height (8px padding + ~17px line)
+  const SEP_H = 6;
+  const stickyRow = (offset, bg) => ({
+    position: 'sticky', bottom: offset, zIndex: 2, background: bg,
+  });
+  const stickyLabel = (offset, active) => ({
+    position: 'sticky', left: 0, bottom: offset, zIndex: 4,
+    background: active ? 'var(--row-selected)' : 'var(--bg-card-elevated)',
+    borderRight: '1px solid var(--border-subtle)',
+    padding: '8px 12px', textAlign: 'left',
+    cursor: 'pointer', userSelect: 'none', color: 'var(--text-secondary)',
+    width: '1%', whiteSpace: 'nowrap',
+  });
+
+  // Dynamic max-height: card grows naturally up to (viewport - distance from
+  // top - bottom buffer). When rows exceed that, the inner scroll body takes
+  // over. Recomputed on every viewport resize and on any layout shift above
+  // the card (e.g. header wraps on narrow widths). Single internal scroll.
+  const cardRef = useRef(null);
+  useEffect(() => {
+    const update = () => {
+      const el = cardRef.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      el.style.maxHeight = `calc(100vh - ${Math.max(0, top) + 24}px)`;
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (document.body) ro.observe(document.body);
+    window.addEventListener('resize', update);
+    return () => { ro.disconnect(); window.removeEventListener('resize', update); };
+  }, []);
+
+  return (
+    <div ref={cardRef}
+      className="surface-card border border-subtle rounded-lg overflow-hidden shadow-sm flex flex-col">
+      <div className="px-5 py-3 border-b border-subtle surface-card-elevated flex items-center justify-between flex-wrap gap-3 flex-shrink-0">
+        <div className="text-micro tracking-[0.2em] uppercase text-secondary font-mono">
+          ETFs · {etfsIndex.length} in base · {activeEtfCount} in portfolio
+        </div>
+        <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
+            {[{ id: 'yearly', label: 'Yearly' }, { id: 'quarterly', label: 'Quarterly' }, { id: 'monthly', label: 'Monthly' }].map(opt => (
+              <button key={opt.id} onClick={() => setGranularity(opt.id)}
+                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                  granularity === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
+                }`}>{opt.label}</button>
+            ))}
+          </div>
+          <div className="flex items-center gap-0.5 surface-panel rounded p-0.5">
+            {[{ id: 'absolute', label: 'Absolute' }, { id: 'vt', label: 'vs VT' }, { id: 'voo', label: 'vs VOO' }].map(opt => (
+              <button key={opt.id} onClick={() => setMode(opt.id)}
+                className={`px-2.5 py-0.5 text-body tracking-[0.05em] uppercase font-mono rounded transition-all ${
+                  mode === opt.id ? 'surface-card-elevated text-primary shadow-sm' : 'text-tertiary hover-text-primary'
+                }`}>{opt.label}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* flex: '0 1 auto' = natural height, shrinks when parent maxHeight clamps.
+          Combined with overflow:auto this gives a single internal scroll only
+          when the table actually exceeds available space. */}
+      <div style={{ overflow: 'auto', flex: '0 1 auto', minHeight: 0 }}>
+        <table className="font-mono text-body" style={{ borderCollapse: 'separate', borderSpacing: 0, width: '100%' }}>
+          <thead>
+            <tr>
+              <th style={{
+                position: 'sticky', left: 0, top: 0, zIndex: 3,
+                background: 'var(--bg-card-elevated)',
+                borderBottom: '1px solid var(--border-strong)',
+                borderRight: '1px solid var(--border-subtle)',
+                padding: '8px 12px', textAlign: 'left',
+                width: '1%', whiteSpace: 'nowrap',
+              }}>
+                <div className="text-micro tracking-[0.15em] uppercase" style={{ color: 'var(--text-tertiary)' }}>Year / Metric</div>
+              </th>
+              {sortedEtfs.map(p => {
+                const inPortfolio = activeIds.has(p.id);
+                const isVisible = inPortfolio && p.visible !== false;
+                const dotColor = getInvestorColor(p.id, inPortfolio ? p : null, null);
+                return (
+                  <th key={p.id} style={{
+                    position: 'sticky', top: 0, zIndex: 2,
+                    background: 'var(--bg-card-elevated)',
+                    borderBottom: '1px solid var(--border-strong)',
+                    padding: '6px 8px',
+                    minWidth: 90, maxWidth: 140,
+                    textAlign: 'center', verticalAlign: 'top',
+                  }}>
+                    <button onClick={() => onToggleVisibility(p.id)}
+                      title={isVisible ? 'Hide chart line' : 'Show chart line'}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        padding: '2px 4px', marginBottom: 4,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                        width: '100%',
+                      }}>
+                      <span style={{
+                        width: 8, height: 8, borderRadius: '50%',
+                        backgroundColor: isVisible ? dotColor : 'transparent',
+                        border: `1.5px solid ${dotColor}`,
+                        opacity: isVisible ? 1 : 0.5,
+                        flexShrink: 0,
+                      }} />
+                      <span style={{ color: isVisible ? 'var(--accent-on-bg)' : 'var(--text-muted)', display: 'inline-flex' }}>
+                        {isVisible ? <Eye size={13} /> : <EyeOff size={13} />}
+                      </span>
+                    </button>
+                    <button onClick={() => onEditInvestor(p)} title={p.subtitle || p.name}
+                      className="text-body"
+                      style={{
+                        color: 'var(--text-primary)', fontWeight: 500,
+                        background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+                        width: '100%', textAlign: 'center',
+                        display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden', textOverflow: 'ellipsis',
+                        whiteSpace: 'normal', wordBreak: 'break-word',
+                        lineHeight: 1.2, maxHeight: '2.4em',
+                      }}>{p.name}</button>
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {periods.map((per, pi) => (
+              <tr key={per.key} style={{ background: pi % 2 === 1 ? 'var(--row-stripe)' : 'transparent' }}>
+                <td onClick={() => onRowClick('period', per.key)} style={labelCellStyle(isSortRow('period', per.key))}>
+                  {per.label}{sortIndicator('period', per.key)}
+                </td>
+                {sortedEtfs.map(p => renderPctCell(p.id, cellValue(p.id, 'period', per.key)))}
+              </tr>
+            ))}
+            {/* Metric rows — stuck to the bottom of the scroll container.
+                Offsets stack: Max DD at 0, Sortino above it, CAGR above that,
+                separator stripe on top. Background is opaque so scrolling
+                periods don't bleed through. */}
+            <tr style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), height: SEP_H }}>
+              <td colSpan={1 + sortedEtfs.length}
+                style={{ ...stickyRow(ROW_H * 3, 'var(--bg-panel)'), borderTop: '1px solid var(--border-strong)', padding: 0 }} />
+            </tr>
+            <tr style={stickyRow(ROW_H * 2, 'var(--bg-card-elevated)')}>
+              <td onClick={() => onRowClick('cagr')} style={stickyLabel(ROW_H * 2, isSortRow('cagr'))}>
+                CAGR{sortIndicator('cagr')}
+              </td>
+              {sortedEtfs.map(p => (
+                <td key={p.id} style={{ ...stickyRow(ROW_H * 2, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForDelta(cellValue(p.id, 'cagr')), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtPct(cellValue(p.id, 'cagr'))}
+                  </span>
+                </td>
+              ))}
+            </tr>
+            <tr style={stickyRow(ROW_H, 'var(--bg-card)')}>
+              <td onClick={() => onRowClick('sortino')} style={stickyLabel(ROW_H, isSortRow('sortino'))}>
+                Sortino{sortIndicator('sortino')}
+              </td>
+              {sortedEtfs.map(p => (
+                <td key={p.id} style={{ ...stickyRow(ROW_H, 'var(--bg-card)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForRatio(cellValue(p.id, 'sortino'), mode !== 'absolute'), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtRatio(cellValue(p.id, 'sortino'))}
+                  </span>
+                </td>
+              ))}
+            </tr>
+            <tr style={stickyRow(0, 'var(--bg-card-elevated)')}>
+              <td onClick={() => onRowClick('maxdd')} style={stickyLabel(0, isSortRow('maxdd'))}>
+                Max DD{sortIndicator('maxdd')}
+              </td>
+              {sortedEtfs.map(p => (
+                <td key={p.id} style={{ ...stickyRow(0, 'var(--bg-card-elevated)'), padding: '8px 10px', textAlign: 'center' }}>
+                  <span style={{ ...styleForDelta(cellValue(p.id, 'maxdd')), display: 'inline-block', textAlign: 'right', fontVariantNumeric: 'tabular-nums', minWidth: 60 }}>
+                    {fmtPct(cellValue(p.id, 'maxdd'))}
+                  </span>
+                </td>
+              ))}
+            </tr>
+            {sortedEtfs.length === 0 && (
+              <tr><td colSpan={1} style={{ padding: 32, textAlign: 'center', color: 'var(--text-muted)' }}>
+                ETF catalog is empty — populate public/data/etfs-index.json.
               </td></tr>
             )}
           </tbody>
@@ -2063,8 +2514,9 @@ export default function PortfolioTracker() {
   const [defaultDataHash, setDefaultDataHash] = useState(null);
   const [saving, setSaving] = useState(false);
   const [disabledHoldings, setDisabledHoldings] = useState({});  // { portfolioId: Set<TICKER> } — transient, not saved
-  const [view, setView] = useState('portfolio');               // 'portfolio' | 'investors'
+  const [view, setView] = useState('portfolio');               // 'portfolio' | 'investors' | 'etfs'
   const [investorsIndex, setInvestorsIndex] = useState([]);    // catalog of every investor in the base
+  const [etfsIndex, setEtfsIndex] = useState([]);              // catalog of every ETF in the base (public/data/etfs-index.json)
   const [latestQuarter, setLatestQuarter] = useState(null);    // from public/data/meta.json
   // Theme: time-of-day-based. Light between 07:00 and 19:00 local time, dark otherwise.
   // Re-checks on window focus and every 15 minutes, so leaving the app open across sunset
@@ -2164,15 +2616,18 @@ export default function PortfolioTracker() {
       }
 
       // ----- v9 split layout -----
-      const [pricesRes, indexRes, metaRes] = await Promise.all([
+      const [pricesRes, indexRes, metaRes, etfsRes] = await Promise.all([
         fetch(base + 'data/prices.json'),
         fetch(base + 'data/investors-index.json'),
         fetch(base + 'data/meta.json'),
+        fetch(base + 'data/etfs-index.json'),
       ]);
       const prices = pricesRes.ok ? await pricesRes.json() : {};
       const index = indexRes.ok ? await indexRes.json() : { investors: [] };
       const meta = metaRes.ok ? await metaRes.json() : {};
+      const etfsCatalog = etfsRes.ok ? await etfsRes.json() : { etfs: [] };
       const indexById = new Map((index.investors || []).map(i => [i.id, i]));
+      const etfsById = new Map((etfsCatalog.etfs || []).map(e => [e.id, e]));
 
       // Per-investor files — fetch in parallel for the currently selected set.
       // Unselected investors aren't loaded here (lazy: load when user adds them via the
@@ -2202,15 +2657,43 @@ export default function PortfolioTracker() {
         } catch { return null; }
       }));
 
+      // ETF entries from selectedEtfs[]. Each becomes a single-ticker "portfolio" with
+      // kind='etf' — the chart treats it like any other portfolio (one line) and the
+      // matrix helpers (computeSeries, annualReturn, …) handle the trivial case where
+      // holdings is a single 100%-weight ticker.
+      const selectedEtfIds = Array.isArray(cfg.selectedEtfs) ? cfg.selectedEtfs : [];
+      const etfPortfolios = selectedEtfIds.map((id) => {
+        const meta = etfsById.get(id);
+        if (!meta) return null;
+        const custom = (cfg.etfCustomization || {})[id] || {};
+        return {
+          id,
+          name: meta.ticker,
+          subtitle: meta.name || '',
+          kind: 'etf',
+          color: custom.color || getInvestorColor(id, null, null),
+          visible: custom.visible !== false,
+          locked: !!custom.locked,
+          holdings: [{ ticker: meta.ticker, weight: 100 }],
+          history: [],
+        };
+      }).filter(Boolean);
+
       // Assemble the legacy `portfolios` array in display order:
       //   benchmarks → myPortfolio → tarasGuk → selected investors (in selectedInvestors[] order)
+      //   → selected ETFs (in selectedEtfs[] order)
       const portfolios = [
         ...(Array.isArray(cfg.benchmarks) ? cfg.benchmarks : []),
         ...(cfg.myPortfolio ? [cfg.myPortfolio] : []),
         ...(cfg.tarasGuk ? [cfg.tarasGuk] : []),
         ...investorFiles.filter(Boolean),
+        ...etfPortfolios,
       ];
-      return { portfolios, prices, investorsIndex: index.investors || [], meta };
+      return {
+        portfolios, prices, meta,
+        investorsIndex: index.investors || [],
+        etfsIndex: etfsCatalog.etfs || [],
+      };
     } catch { return null; }
   };
 
@@ -2252,6 +2735,27 @@ export default function PortfolioTracker() {
     setPortfolios(prev => [...prev, { ...p, visible: true }]);
   };
 
+  // Same as togglePortfolioVisibilityById but for ETFs from the etfsIndex catalog.
+  // ETF "portfolios" are single-ticker (weight 100) shells — no fetch needed beyond
+  // the prices that prices.json already carries; the lookup is the index entry.
+  const toggleEtfVisibilityById = (id) => {
+    const existing = portfolios.find(p => p.id === id);
+    if (existing) {
+      setPortfolios(prev => prev.map(p => p.id === id ? { ...p, visible: !p.visible } : p));
+      return;
+    }
+    const meta = etfsIndex.find(e => e.id === id);
+    if (!meta) return;
+    setPortfolios(prev => [...prev, {
+      id, name: meta.ticker, subtitle: meta.name || '',
+      kind: 'etf',
+      color: getInvestorColor(id, null, null),
+      visible: true, locked: false,
+      holdings: [{ ticker: meta.ticker, weight: 100 }],
+      history: [],
+    }]);
+  };
+
   useEffect(() => {
     (async () => {
       const def = await fetchDefaultData();
@@ -2259,6 +2763,7 @@ export default function PortfolioTracker() {
         setPortfolios(def.portfolios);
         setPrices(def.prices || {});
         setInvestorsIndex(def.investorsIndex || []);
+        setEtfsIndex(def.etfsIndex || []);
         setLatestQuarter(def.meta?.latestQuarter || null);
         setDefaultDataHash(computeHash(def.portfolios));
       } else {
@@ -2286,12 +2791,14 @@ export default function PortfolioTracker() {
       const isBenchmark = (p) => p.kind === 'benchmark';
       const isMine = (p) => p.id === 'mine';
       const isTarasGuk = (p) => p.id === 'youtuber';
-      const isInvestor = (p) => !isBenchmark(p) && !isMine(p) && !isTarasGuk(p);
+      const isEtf = (p) => p.kind === 'etf';
+      const isInvestor = (p) => !isBenchmark(p) && !isMine(p) && !isTarasGuk(p) && !isEtf(p);
 
       const benchmarks = portfolios.filter(isBenchmark);
       const myPortfolio = portfolios.find(isMine) || null;
       const tarasGuk = portfolios.find(isTarasGuk) || null;
       const investors = portfolios.filter(isInvestor);
+      const etfs = portfolios.filter(isEtf);
 
       const selectedInvestors = investors.map(p => p.id);
       const investorCustomization = {};
@@ -2302,6 +2809,11 @@ export default function PortfolioTracker() {
           locked: p.locked,
         };
       }
+      const selectedEtfs = etfs.map(p => p.id);
+      const etfCustomization = {};
+      for (const p of etfs) {
+        etfCustomization[p.id] = { color: p.color, visible: p.visible, locked: p.locked };
+      }
 
       const data = {
         version: 'v9',
@@ -2311,6 +2823,8 @@ export default function PortfolioTracker() {
         tarasGuk,
         selectedInvestors,
         investorCustomization,
+        selectedEtfs,
+        etfCustomization,
       };
 
       const res = await fetch('/api/save-default', {
@@ -2708,7 +3222,7 @@ export default function PortfolioTracker() {
           <div className="border-b border-strong pb-1 mb-1">
             <div className="flex items-center justify-between">
               <div className="text-micro tracking-[0.3em] uppercase font-mono text-secondary">Portfolio Comparator · Vol. 1</div>
-              <div className="text-micro tracking-[0.2em] uppercase font-mono text-tertiary">
+              <div className="hidden sm:block text-micro tracking-[0.2em] uppercase font-mono text-tertiary">
                 {new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
               </div>
             </div>
@@ -2716,12 +3230,15 @@ export default function PortfolioTracker() {
           <div className="border-b-2 border-strong py-3">
             <div className="flex items-stretch justify-between flex-wrap gap-4">
               <div>
-                <h1 className="text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
+                {/* Hero stays on every breakpoint — only its size drops on mobile.
+                    The subtitle (long date range + ticker count) is verbose for
+                    narrow viewports, so it stays sm:block-only. */}
+                <h1 className="text-xl sm:text-4xl md:text-5xl tracking-[-0.025em] font-serif leading-[0.95]" style={{ fontWeight: 400 }}>
                   Performance,
                   <br />
                   <em style={{ color: 'var(--accent-brand)', fontWeight: 500 }}>side by side.</em>
                 </h1>
-                <div className="text-body text-tertiary mt-3 font-mono tracking-tight">
+                <div className="hidden sm:block text-body text-tertiary mt-3 font-mono tracking-tight">
                   {dateRangeText} · base = 100 · {totalLoaded}/{neededTickers.length} tickers loaded
                 </div>
               </div>
@@ -2753,7 +3270,7 @@ export default function PortfolioTracker() {
                       so it mirrors their look (border + surface-card) rather than the soft
                       pill style used for tabs INSIDE cards. */}
                   <div className="flex items-center surface-card border border-strong rounded overflow-hidden">
-                    {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }].map(opt => {
+                    {[{ id: 'portfolio', label: 'Portfolio' }, { id: 'investors', label: 'Investors' }, { id: 'etfs', label: 'ETFs' }].map(opt => {
                       const active = view === opt.id;
                       return (
                         <button key={opt.id} onClick={() => setView(opt.id)}
@@ -2800,6 +3317,15 @@ export default function PortfolioTracker() {
             prices={prices}
             latestQuarter={latestQuarter}
             onToggleVisibility={togglePortfolioVisibilityById}
+            onEditInvestor={setEditing}
+          />
+        ) : view === 'etfs' ? (
+          <ETFsMatrix
+            etfsIndex={etfsIndex}
+            portfolios={portfolios}
+            prices={prices}
+            latestQuarter={latestQuarter}
+            onToggleVisibility={toggleEtfVisibilityById}
             onEditInvestor={setEditing}
           />
         ) : (
@@ -2989,9 +3515,6 @@ export default function PortfolioTracker() {
         </div>
         )}
 
-        <div className="mt-6 text-micro text-tertiary font-mono leading-relaxed max-w-3xl">
-          Bundled data viewer · partial coverage OK · drag portfolios to reorder · not investment advice
-        </div>
       </div>
 
       {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}

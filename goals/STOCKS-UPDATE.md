@@ -55,7 +55,9 @@ Typical cadence:
 The set of tickers to ensure coverage for is the **union** of:
 
 1. Every `ticker` in every `investors/*.json` → `holdings` and `history[*].holdings`.
-2. Every `ticker` in `public/default-data.json` → `myPortfolio.holdings`
+2. Every `ticker` in `public/data/etfs-index.json` → `etfs[].ticker`
+   (each entry is a single-ticker ETF surfaced in the ETF matrix).
+3. Every `ticker` in `public/default-data.json` → `myPortfolio.holdings`
    (the user's own portfolio).
 
 Note: this is **broader** than the old `STOCKS-UPDATE.md` (which only looked at
@@ -123,6 +125,7 @@ from datetime import datetime, timedelta
 PRICES = "public/data/prices.json"
 SNAPSHOT = "/tmp/prices.pre-stocks-update.json"
 INVESTORS_GLOB = "public/data/investors/*.json"
+ETFS_INDEX = "public/data/etfs-index.json"
 USER_CONFIG = "public/default-data.json"
 
 def target_date():
@@ -143,13 +146,18 @@ if not os.path.exists(SNAPSHOT):
 with open(PRICES) as f: data = json.load(f)
 with open(SNAPSHOT) as f: snap = json.load(f)
 
-# Referenced tickers = union of all investor holdings + user portfolio
+# Referenced tickers = union of all investor holdings + ETF catalog + user portfolio
 referenced = set()
 for path in glob.glob(INVESTORS_GLOB):
     with open(path) as f: inv = json.load(f)
     for h in (inv.get("holdings") or []): referenced.add(h["ticker"].upper())
     for s in (inv.get("history") or []):
         for h in s.get("holdings", []): referenced.add(h["ticker"].upper())
+
+if os.path.exists(ETFS_INDEX):
+    with open(ETFS_INDEX) as f: etfs = json.load(f)
+    for e in (etfs.get("etfs") or []):
+        if e.get("ticker"): referenced.add(e["ticker"].upper())
 
 if os.path.exists(USER_CONFIG):
     with open(USER_CONFIG) as f: cfg = json.load(f)

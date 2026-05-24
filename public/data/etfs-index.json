@@ -1,0 +1,20 @@
+{
+  "version": "v1",
+  "etfs": [
+    { "id": "etf-cskr", "ticker": "CSKR", "name": "ARK Israel Innovative Technology",                 "issuer": "ARK",        "assetClass": "Equity / Israel Tech",            "link": "https://stockanalysis.com/etf/cskr/", "tags": ["thematic", "tech"] },
+    { "id": "etf-smh",  "ticker": "SMH",  "name": "VanEck Semiconductor ETF",                          "issuer": "VanEck",     "assetClass": "Equity / Semiconductors",         "link": "https://stockanalysis.com/etf/smh/",  "tags": ["thematic", "tech", "semiconductors"] },
+    { "id": "etf-wtai", "ticker": "WTAI", "name": "WisdomTree Artificial Intelligence & Innovation",   "issuer": "WisdomTree", "assetClass": "Equity / AI",                     "link": "https://stockanalysis.com/etf/wtai/", "tags": ["thematic", "ai"] },
+    { "id": "etf-qqq",  "ticker": "QQQ",  "name": "Invesco QQQ Trust",                                 "issuer": "Invesco",    "assetClass": "Equity / US Large Cap Growth",    "link": "https://stockanalysis.com/etf/qqq/",  "tags": ["broad", "tech-tilt"] },
+    { "id": "etf-vgt",  "ticker": "VGT",  "name": "Vanguard Information Technology ETF",               "issuer": "Vanguard",   "assetClass": "Equity / US Tech Sector",         "link": "https://stockanalysis.com/etf/vgt/",  "tags": ["sector", "tech"] },
+    { "id": "etf-vt",   "ticker": "VT",   "name": "Vanguard Total World Stock ETF",                    "issuer": "Vanguard",   "assetClass": "Equity / Global",                 "link": "https://stockanalysis.com/etf/vt/",   "tags": ["broad", "global"] },
+    { "id": "etf-voo",  "ticker": "VOO",  "name": "Vanguard S&P 500 ETF",                              "issuer": "Vanguard",   "assetClass": "Equity / US Large Cap",           "link": "https://stockanalysis.com/etf/voo/",  "tags": ["broad", "us"] },
+    { "id": "etf-vuke", "ticker": "VUKE", "name": "Vanguard FTSE 100 UCITS ETF",                       "issuer": "Vanguard",   "assetClass": "Equity / UK FTSE 100",            "link": "https://stockanalysis.com/etf/vuke/", "tags": ["broad", "uk", "ucits"] },
+    { "id": "etf-sxrz", "ticker": "SXRZ", "name": "iShares MSCI World Quality Dividend UCITS ETF",     "issuer": "iShares",    "assetClass": "Equity / World Quality Dividend", "link": "https://stockanalysis.com/etf/sxrz/", "tags": ["dividend", "global", "ucits"] },
+    { "id": "etf-dgrw", "ticker": "DGRW", "name": "WisdomTree US Quality Dividend Growth Fund",        "issuer": "WisdomTree", "assetClass": "Equity / US Dividend Growth",     "link": "https://stockanalysis.com/etf/dgrw/", "tags": ["dividend", "growth", "us"] },
+    { "id": "etf-spmo", "ticker": "SPMO", "name": "Invesco S&P 500 Momentum ETF",                      "issuer": "Invesco",    "assetClass": "Equity / US Momentum",            "link": "https://stockanalysis.com/etf/spmo/", "tags": ["factor", "momentum", "us"] },
+    { "id": "etf-dbmf", "ticker": "DBMF", "name": "iMGP DBi Managed Futures Strategy ETF",             "issuer": "iMGP / DBi", "assetClass": "Alternative / Managed Futures",   "link": "https://stockanalysis.com/etf/dbmf/", "tags": ["alternative", "managed-futures"] },
+    { "id": "etf-schd", "ticker": "SCHD", "name": "Schwab US Dividend Equity ETF",                     "issuer": "Schwab",     "assetClass": "Equity / US Dividend",            "link": "https://stockanalysis.com/etf/schd/", "tags": ["dividend", "us"] },
+    { "id": "etf-vtv",  "ticker": "VTV",  "name": "Vanguard Value ETF",                                "issuer": "Vanguard",   "assetClass": "Equity / US Value",               "link": "https://stockanalysis.com/etf/vtv/",  "tags": ["factor", "value", "us"] },
+    { "id": "etf-cta",  "ticker": "CTA",  "name": "Simplify Managed Futures Strategy ETF",             "issuer": "Simplify",   "assetClass": "Alternative / Managed Futures",   "link": "https://stockanalysis.com/etf/cta/",  "tags": ["alternative", "managed-futures"] }
+  ]
+}
