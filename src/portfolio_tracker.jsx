@@ -135,13 +135,43 @@ const computeStaticSeries = (holdings, allPrices) => {
   });
 };
 
-// Chain-linked computation: each snapshot defines a buy-and-hold segment from its asOf to the next
-// snapshot's asOf. On each boundary the running portfolio value carries over into the next snapshot
-// (rebalance with no leakage). `portfolio.holdings` is treated as the most recent snapshot, with an
-// implicit asOf one quarter after the latest history entry.
+// Chain-linked computation: each snapshot defines a buy-and-hold segment from `asOf + FILING_LAG`
+// to the next snapshot's `asOf + FILING_LAG`. The lag models the real 13F window: the holdings
+// become publicly known ~45 days after quarter-end, so a strategy that COPIES the filing can only
+// start holding them from that date. The first segment starts at `asOf[0] + FILING_LAG`, NOT at the
+// earliest available price — that prevents the "free alpha" from retroactively applying holdings
+// before the user could have known them. On each boundary the running portfolio value carries over
+// into the next snapshot (rebalance with no leakage). `portfolio.holdings` is treated as the most
+// recent snapshot, with an implicit asOf one quarter after the latest history entry.
+
+// SEC 13F filing deadline = 45 days after quarter-end. Tweak here if you want a different copy-trade
+// assumption (e.g. 30 days for early filers, 60 days for very conservative).
+const FILING_LAG_DAYS = 45;
+const applyFilingLag = (asOfIso) => {
+  const d = new Date(asOfIso);
+  d.setDate(d.getDate() + FILING_LAG_DAYS);
+  return d.toISOString().slice(0, 10);
+};
+
+// Whether filing-lag applies to this portfolio. Only 13F-derived holdings are
+// public-knowledge-lagged. The user's own portfolio is known instantly; bloggers
+// announce their picks via video/post on their own schedule (treat as instant —
+// the lag would be a separate "publication" lag we don't model right now).
+//
+//   mine, youtuber  → no lag
+//   guru, dataroma-top20  → 13F lag (45d)
+//   benchmark  → goes through computeStaticSeries, this function isn't called
+//   anything else (custom)  → conservative: no lag
+//
+// Keeping this in one place so the rule is easy to audit.
+const usesFilingLag = (portfolio) =>
+  portfolio.kind === 'guru' || portfolio.id === 'dataroma-top20';
+
 const computeSeries = (portfolio, allPrices) => {
   if (!portfolio.holdings?.length) return null;
   if (!portfolio.history?.length) return computeStaticSeries(portfolio.holdings, allPrices);
+  // Per-portfolio lag (no-op for non-13F holders like myPortfolio and the blogger).
+  const lag = usesFilingLag(portfolio) ? applyFilingLag : (iso) => iso;
 
   // Sort history ascending and append current holdings as the last snapshot.
   const sortedHistory = [...portfolio.history].sort((a, b) => a.asOf.localeCompare(b.asOf));
@@ -173,33 +203,37 @@ const computeSeries = (portfolio, allPrices) => {
     return ans >= 0 ? allDates[ans] : null;
   };
 
-  // Drop snapshots that fall ENTIRELY outside the price window (asOf < allDates[0]).
-  // They can't form a valid segment because closestLE(nextSnapshot.asOf) would be null
-  // and the segment would be skipped, leaving the chart starting later than allDates[0].
-  // KEEP the latest such "outside" snapshot as the effective starting holdings — its
-  // composition extends forward through allDates[0] until the first in-range snapshot.
-  // This is the desired "missing data = composition didn't change" behaviour.
+  // SINGLE RULE, no per-portfolio-type special cases:
+  //
+  //   1. Find the earliest snapshot whose lagged asOf is inside the price window.
+  //      Drop everything older (its data can't form a valid segment anyway).
+  //   2. The first kept segment ALWAYS extends back to allDates[0], using that
+  //      snapshot's composition as if it had existed before its asOf too —
+  //      "missing data = composition didn't change". Uniform for all portfolio
+  //      types (mine/youtuber don't have lag so this is a no-op shift; 13F filers
+  //      get ~45 days of "free alpha" at the very start, which is a minor edge
+  //      effect in exchange for every line starting at the same x-coordinate).
+  //   3. Subsequent segments live on closestLE(lag(next.asOf)) boundaries.
+  //      For 13F filers, rebalance happens when the filing becomes public, not
+  //      on quarter-end itself.
   const earliestPriceDate = allDates[0];
-  const firstInRange = snapshots.findIndex(s => s.asOf >= earliestPriceDate);
-  const effectiveSnaps = firstInRange === -1
-    ? [snapshots[snapshots.length - 1]]              // all snapshots predate the price window
-    : firstInRange > 0
-      ? snapshots.slice(firstInRange - 1)            // keep the snapshot just before, drop earlier
-      : snapshots;                                    // all snapshots already in range
+  const firstInRange = snapshots.findIndex(s => lag(s.asOf) >= earliestPriceDate);
+  if (firstInRange === -1) {
+    // All snapshots' lagged asOfs predate the price window — fall back to a
+    // single static composition (the latest known one) across the whole range.
+    return computeStaticSeries(snapshots[snapshots.length - 1].holdings, allPrices);
+  }
+  const effectiveSnaps = snapshots.slice(firstInRange);
 
-  // Build segments. Each segment owns dates [fromDate, nextFromDate) — the boundary belongs to the
-  // next segment so chain-linked rebalance happens cleanly.
-  // The first segment ALWAYS starts at the earliest available price, regardless of where its
-  // snapshot's asOf falls. The first snapshot's holdings apply retrospectively to anything before
-  // their asOf — a fair buy-and-hold approximation, and it keeps history portfolios visually
-  // aligned with non-history ones (which always start at allDates[0]).
   const segs = [];
   for (let i = 0; i < effectiveSnaps.length; i++) {
-    const fromDate = i === 0 ? allDates[0] : closestLE(effectiveSnaps[i].asOf);
+    const fromDate = i === 0
+      ? allDates[0]                                       // backward extrapolation, always
+      : closestLE(lag(effectiveSnaps[i].asOf));
     if (!fromDate) continue;
     let toDate;
     if (i + 1 < effectiveSnaps.length) {
-      toDate = closestLE(effectiveSnaps[i + 1].asOf);
+      toDate = closestLE(lag(effectiveSnaps[i + 1].asOf));
       if (!toDate || toDate <= fromDate) continue;
     } else {
       toDate = allDates[allDates.length - 1];
@@ -1588,20 +1622,14 @@ const ConsensusPanel = ({ portfolios, disabledHoldings, onSetVisibility, onIsola
 
 const annualReturnFromSeries = (series, year) => {
   if (!series?.length) return null;
-  const inYear = series.filter(d => d.date.startsWith(`${year}-`));
-  if (inYear.length < 2) {
-    const yearStart = series.find(d => d.date >= `${year}-01-01`);
-    const yearEndIdx = (() => { let i = -1; series.forEach((d, k) => { if (d.date.startsWith(`${year}-`) || (d.date < `${year + 1}-01-01` && d.date >= `${year}-01-01`)) i = k; }); return i; })();
-    if (!yearStart || yearEndIdx < 0) return null;
-    const yearEnd = series[yearEndIdx];
-    if (yearStart.date === yearEnd.date) return null;
-    if (!yearStart.value) return null;
-    return (yearEnd.value / yearStart.value - 1) * 100;
-  }
-  const first = inYear[0].value;
-  const last  = inYear[inYear.length - 1].value;
-  if (!first) return null;
-  return (last / first - 1) * 100;
+  // Anchor on prev-year-end → this-year-end so the boundary months don't get dropped.
+  // Earliest year has no prior anchor — fall back to first point inside the year
+  // (partial-year return). Current YTD: closestLE returns the latest available point.
+  const start = _closestLEinSeries(series, `${year - 1}-12-31`)
+             ?? series.find(d => d.date.startsWith(`${year}-`));
+  const end = _closestLEinSeries(series, `${year}-12-31`);
+  if (!start || !end || !start.value || start.date >= end.date) return null;
+  return (end.value / start.value - 1) * 100;
 };
 
 // Closest-or-earlier point lookup. Series is assumed sorted by date.
