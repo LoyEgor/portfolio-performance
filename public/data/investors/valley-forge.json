@@ -33,11 +33,656 @@
     },
     {
       "ticker": "INTU",
-      "weight": 2.43,
+      "weight": 2.42,
       "shares": 189072
     }
   ],
   "history": [
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 30.22
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 28.67
+        },
+        {
+          "ticker": "MNST",
+          "weight": 18.49
+        },
+        {
+          "ticker": "INTU",
+          "weight": 6.12
+        },
+        {
+          "ticker": "V",
+          "weight": 5.84
+        },
+        {
+          "ticker": "NKE",
+          "weight": 5.8
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.27
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 30.64
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 29.73
+        },
+        {
+          "ticker": "MNST",
+          "weight": 18.75
+        },
+        {
+          "ticker": "V",
+          "weight": 5.67
+        },
+        {
+          "ticker": "NKE",
+          "weight": 5.43
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.28
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.04
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.45
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 30.41
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 30.34
+        },
+        {
+          "ticker": "MNST",
+          "weight": 18.77
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.52
+        },
+        {
+          "ticker": "V",
+          "weight": 5.47
+        },
+        {
+          "ticker": "NKE",
+          "weight": 5.25
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.0
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 31.01
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 28.95
+        },
+        {
+          "ticker": "MNST",
+          "weight": 18.61
+        },
+        {
+          "ticker": "EFX",
+          "weight": 6.32
+        },
+        {
+          "ticker": "V",
+          "weight": 5.47
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.27
+        },
+        {
+          "ticker": "MA",
+          "weight": 3.11
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "MCO",
+          "weight": 27.39
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 26.13
+        },
+        {
+          "ticker": "MNST",
+          "weight": 17.75
+        },
+        {
+          "ticker": "EFX",
+          "weight": 15.03
+        },
+        {
+          "ticker": "V",
+          "weight": 4.94
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.87
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.78
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 27.04
+        },
+        {
+          "ticker": "MCO",
+          "weight": 26.54
+        },
+        {
+          "ticker": "MNST",
+          "weight": 16.29
+        },
+        {
+          "ticker": "EFX",
+          "weight": 14.89
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.75
+        },
+        {
+          "ticker": "V",
+          "weight": 4.59
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.85
+        },
+        {
+          "ticker": "META",
+          "weight": 1.87
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.17
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 24.14
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 24.11
+        },
+        {
+          "ticker": "MCO",
+          "weight": 23.46
+        },
+        {
+          "ticker": "MNST",
+          "weight": 13.64
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.68
+        },
+        {
+          "ticker": "V",
+          "weight": 4.25
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.67
+        },
+        {
+          "ticker": "META",
+          "weight": 1.9
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 25.5
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 24.19
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.69
+        },
+        {
+          "ticker": "MNST",
+          "weight": 11.88
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.46
+        },
+        {
+          "ticker": "V",
+          "weight": 4.12
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.99
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.59
+        },
+        {
+          "ticker": "META",
+          "weight": 1.38
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 26.61
+        },
+        {
+          "ticker": "FICO",
+          "weight": 23.94
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.71
+        },
+        {
+          "ticker": "MNST",
+          "weight": 10.05
+        },
+        {
+          "ticker": "INTU",
+          "weight": 6.1
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 5.34
+        },
+        {
+          "ticker": "V",
+          "weight": 4.66
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.59
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 24.27
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 23.01
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.45
+        },
+        {
+          "ticker": "V",
+          "weight": 18.85
+        },
+        {
+          "ticker": "INTU",
+          "weight": 6.64
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 4.52
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.26
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 25.14
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 23.08
+        },
+        {
+          "ticker": "MCO",
+          "weight": 19.76
+        },
+        {
+          "ticker": "V",
+          "weight": 19.56
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.95
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 4.23
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.27
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 23.13
+        },
+        {
+          "ticker": "FICO",
+          "weight": 22.65
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.51
+        },
+        {
+          "ticker": "V",
+          "weight": 18.61
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.64
+        },
+        {
+          "ticker": "MA",
+          "weight": 4.68
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.58
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "FICO",
+          "weight": 24.34
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 22.44
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.84
+        },
+        {
+          "ticker": "V",
+          "weight": 17.7
+        },
+        {
+          "ticker": "MA",
+          "weight": 4.94
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.84
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.87
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 23.03
+        },
+        {
+          "ticker": "FICO",
+          "weight": 22.47
+        },
+        {
+          "ticker": "MCO",
+          "weight": 20.42
+        },
+        {
+          "ticker": "V",
+          "weight": 16.7
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.1
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.67
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.62
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 22.0
+        },
+        {
+          "ticker": "MCO",
+          "weight": 19.08
+        },
+        {
+          "ticker": "FICO",
+          "weight": 17.35
+        },
+        {
+          "ticker": "MA",
+          "weight": 15.91
+        },
+        {
+          "ticker": "V",
+          "weight": 11.38
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.18
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 4.01
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.8
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 2.29
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "SPGI",
+          "weight": 24.89
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.57
+        },
+        {
+          "ticker": "MA",
+          "weight": 16.37
+        },
+        {
+          "ticker": "FICO",
+          "weight": 15.76
+        },
+        {
+          "ticker": "V",
+          "weight": 10.51
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.11
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.82
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.46
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 22.5
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 19.77
+        },
+        {
+          "ticker": "FICO",
+          "weight": 16.49
+        },
+        {
+          "ticker": "MCO",
+          "weight": 16.05
+        },
+        {
+          "ticker": "V",
+          "weight": 10.97
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.1
+        },
+        {
+          "ticker": "ADSK",
+          "weight": 3.92
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.75
+        },
+        {
+          "ticker": "AZPN",
+          "weight": 2.45
+        }
+      ]
+    },
     {
       "asOf": "2021-03-31",
       "holdings": [
@@ -51,11 +696,11 @@
         },
         {
           "ticker": "MCO",
-          "weight": 16.37
+          "weight": 16.36
         },
         {
           "ticker": "FICO",
-          "weight": 15.35
+          "weight": 15.36
         },
         {
           "ticker": "V",
@@ -74,7 +719,7 @@
           "weight": 3.33
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 2.65
         }
       ]
@@ -116,7 +761,7 @@
         },
         {
           "ticker": "ADSK",
-          "weight": 2.89
+          "weight": 2.88
         }
       ]
     },
@@ -198,7 +843,7 @@
         },
         {
           "ticker": "ADSK",
-          "weight": 2.71
+          "weight": 2.7
         }
       ]
     },
@@ -238,7 +883,7 @@
           "weight": 3.59
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 2.63
         },
         {
@@ -287,8 +932,8 @@
           "weight": 1.72
         },
         {
-          "ticker": "AZPN-OLD",
-          "weight": 1.45
+          "ticker": "AZPN",
+          "weight": 1.44
         }
       ]
     },
@@ -332,8 +977,8 @@
           "weight": 1.99
         },
         {
-          "ticker": "AZPN-OLD",
-          "weight": 1.97
+          "ticker": "AZPN",
+          "weight": 1.98
         }
       ]
     },
@@ -377,7 +1022,7 @@
           "weight": 1.7
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.46
         }
       ]
@@ -418,7 +1063,7 @@
           "weight": 1.77
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.52
         }
       ]
@@ -451,12 +1096,12 @@
           "weight": 6.91
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.68
         },
         {
           "ticker": "ASML",
-          "weight": 1.54
+          "weight": 1.55
         }
       ]
     },
@@ -488,7 +1133,7 @@
           "weight": 7.1
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 2.06
         },
         {
@@ -525,12 +1170,12 @@
           "weight": 6.75
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.85
         },
         {
           "ticker": "ASML",
-          "weight": 1.36
+          "weight": 1.35
         }
       ]
     },
@@ -562,7 +1207,7 @@
           "weight": 6.94
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.72
         },
         {
@@ -603,7 +1248,7 @@
           "weight": 1.66
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.52
         }
       ]
@@ -640,7 +1285,7 @@
           "weight": 2.33
         },
         {
-          "ticker": "AZPN-OLD",
+          "ticker": "AZPN",
           "weight": 1.57
         }
       ]
@@ -655,7 +1300,7 @@
         },
         {
           "ticker": "SPGI",
-          "weight": 19.56,
+          "weight": 19.57,
           "shares": 1755098
         },
         {
@@ -665,7 +1310,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 13.92,
+          "weight": 13.93,
           "shares": 1314144
         },
         {
@@ -680,7 +1325,7 @@
         },
         {
           "ticker": "ASML",
-          "weight": 1.96,
+          "weight": 1.95,
           "shares": 125627
         }
       ]
@@ -690,48 +1335,38 @@
       "holdings": [
         {
           "ticker": "FICO",
-          "weight": 32.29,
+          "weight": 32.8,
           "shares": 768422
         },
         {
           "ticker": "SPGI",
-          "weight": 20.32,
+          "weight": 20.64,
           "shares": 1755098
         },
         {
           "ticker": "MA",
-          "weight": 18.54,
+          "weight": 18.84,
           "shares": 1484772
         },
         {
           "ticker": "MCO",
-          "weight": 13.94,
+          "weight": 14.17,
           "shares": 1314144
         },
         {
           "ticker": "V",
-          "weight": 7.28,
+          "weight": 7.4,
           "shares": 912017
         },
         {
           "ticker": "INTU",
-          "weight": 4.16,
+          "weight": 4.23,
           "shares": 297360
         },
         {
           "ticker": "ASML",
-          "weight": 1.9,
+          "weight": 1.93,
           "shares": 125627
-        },
-        {
-          "ticker": "EFX",
-          "weight": 0.8,
-          "shares": 144000
-        },
-        {
-          "ticker": "MSCI",
-          "weight": 0.77,
-          "shares": 59700
         }
       ]
     },
@@ -740,48 +1375,38 @@
       "holdings": [
         {
           "ticker": "FICO",
-          "weight": 31.04,
+          "weight": 31.53,
           "shares": 768422
         },
         {
           "ticker": "SPGI",
-          "weight": 20.44,
+          "weight": 20.77,
           "shares": 1755098
         },
         {
           "ticker": "MA",
-          "weight": 18.43,
+          "weight": 18.73,
           "shares": 1484772
         },
         {
           "ticker": "MCO",
-          "weight": 14.56,
+          "weight": 14.79,
           "shares": 1314144
         },
         {
           "ticker": "V",
-          "weight": 7.15,
+          "weight": 7.27,
           "shares": 912017
         },
         {
           "ticker": "INTU",
-          "weight": 4.58,
+          "weight": 4.65,
           "shares": 263312
         },
         {
           "ticker": "ASML",
-          "weight": 2.22,
+          "weight": 2.26,
           "shares": 125627
-        },
-        {
-          "ticker": "EFX",
-          "weight": 0.82,
-          "shares": 144000
-        },
-        {
-          "ticker": "MSCI",
-          "weight": 0.76,
-          "shares": 59700
         }
       ]
     },
@@ -790,48 +1415,38 @@
       "holdings": [
         {
           "ticker": "FICO",
-          "weight": 27.66,
+          "weight": 28.14,
           "shares": 768422
         },
         {
           "ticker": "SPGI",
-          "weight": 20.55,
+          "weight": 20.91,
           "shares": 1755098
         },
         {
           "ticker": "MA",
-          "weight": 20.32,
+          "weight": 20.67,
           "shares": 1484772
         },
         {
           "ticker": "MCO",
-          "weight": 15.06,
+          "weight": 15.32,
           "shares": 1314144
         },
         {
           "ticker": "V",
-          "weight": 7.49,
+          "weight": 7.62,
           "shares": 912017
         },
         {
           "ticker": "INTU",
-          "weight": 4.29,
+          "weight": 4.36,
           "shares": 261097
         },
         {
           "ticker": "ASML",
-          "weight": 2.93,
+          "weight": 2.98,
           "shares": 125627
-        },
-        {
-          "ticker": "EFX",
-          "weight": 0.89,
-          "shares": 144000
-        },
-        {
-          "ticker": "MSCI",
-          "weight": 0.81,
-          "shares": 59700
         }
       ]
     },
@@ -840,58 +1455,49 @@
       "holdings": [
         {
           "ticker": "FICO",
-          "weight": 29.49,
+          "weight": 29.94,
           "shares": 769424
         },
         {
           "ticker": "SPGI",
-          "weight": 20.83,
+          "weight": 21.15,
           "shares": 1758179
         },
         {
           "ticker": "MA",
-          "weight": 19.25,
+          "weight": 19.54,
           "shares": 1487409
         },
         {
           "ticker": "MCO",
-          "weight": 15.25,
+          "weight": 15.49,
           "shares": 1317292
         },
         {
           "ticker": "V",
-          "weight": 7.29,
+          "weight": 7.4,
           "shares": 916410
         },
         {
           "ticker": "INTU",
-          "weight": 3.32,
+          "weight": 3.37,
           "shares": 221236
         },
         {
           "ticker": "ASML",
-          "weight": 3.06,
+          "weight": 3.11,
           "shares": 126242
-        },
-        {
-          "ticker": "MSCI",
-          "weight": 0.79,
-          "shares": 60770
-        },
-        {
-          "ticker": "EFX",
-          "weight": 0.72,
-          "shares": 146352
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T01:50:45Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=VFC",
+    "lastFetchedAt": "2026-05-24T23:43:52Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001697868-valley-forge-capital-management-lp",
     "migratedFromLegacy": true,
     "legacyId": "custom-1777225852884",
-    "sharesSource": "13f.info"
+    "sharesSource": "13f.info",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

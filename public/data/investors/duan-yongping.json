@@ -44,11 +44,426 @@
   ],
   "history": [
     {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 51.08
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 23.27
+        },
+        {
+          "ticker": "META",
+          "weight": 14.09
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.7
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 1.8
+        },
+        {
+          "ticker": "PDD",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 57.26
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 17.29
+        },
+        {
+          "ticker": "META",
+          "weight": 13.72
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.5
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.23
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 54.99
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 13.29
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.91
+        },
+        {
+          "ticker": "META",
+          "weight": 12.28
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.98
+        },
+        {
+          "ticker": "XOM",
+          "weight": 1.4
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 50.05
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 16.17
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.05
+        },
+        {
+          "ticker": "META",
+          "weight": 12.11
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 4.51
+        },
+        {
+          "ticker": "XOM",
+          "weight": 2.11
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 48.81
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 16.08
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 11.09
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.95
+        },
+        {
+          "ticker": "META",
+          "weight": 9.42
+        },
+        {
+          "ticker": "PDD",
+          "weight": 1.85
+        },
+        {
+          "ticker": "XOM",
+          "weight": 1.79
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 59.35
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 11.04
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.29
+        },
+        {
+          "ticker": "DIS",
+          "weight": 6.98
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 6.05
+        },
+        {
+          "ticker": "META",
+          "weight": 5.53
+        },
+        {
+          "ticker": "PDD",
+          "weight": 2.56
+        },
+        {
+          "ticker": "XOM",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 51.78
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 29.9
+        },
+        {
+          "ticker": "DIS",
+          "weight": 4.99
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.98
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.26
+        },
+        {
+          "ticker": "META",
+          "weight": 2.82
+        },
+        {
+          "ticker": "DAL",
+          "weight": 2.27
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 52.61
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 31.12
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 6.27
+        },
+        {
+          "ticker": "DIS",
+          "weight": 4.62
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.11
+        },
+        {
+          "ticker": "BAC",
+          "weight": 2.26
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 54.07
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 30.07
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 7.08
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.83
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.72
+        },
+        {
+          "ticker": "BAC",
+          "weight": 1.93
+        },
+        {
+          "ticker": "YY",
+          "weight": 1.29
+        }
+      ]
+    },
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 61.45
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 28.09
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.26
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.2
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 69.25
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 25.49
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.37
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.89
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 66.22
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 27.12
+        },
+        {
+          "ticker": "BABA",
+          "weight": 4.78
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.88
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 67.65
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 26.72
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.81
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 66
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 25.48
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.12
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.04
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.36
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 67.98
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 21.61
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.64
+        },
+        {
+          "ticker": "BABA",
+          "weight": 3.75
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.02
+        }
+      ]
+    },
+    {
       "asOf": "2022-09-30",
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 73.73
+          "weight": 73.74
         },
         {
           "ticker": "BRK.B",
@@ -73,7 +488,7 @@
         },
         {
           "ticker": "BRK.B",
-          "weight": 18.17
+          "weight": 18.16
         },
         {
           "ticker": "GOOG",
@@ -90,7 +505,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 79.39
+          "weight": 79.4
         },
         {
           "ticker": "BRK.B",
@@ -102,7 +517,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 2.43
+          "weight": 2.42
         }
       ]
     },
@@ -123,7 +538,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 2.0
+          "weight": 1.99
         }
       ]
     },
@@ -132,7 +547,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 79.3
+          "weight": 79.31
         },
         {
           "ticker": "BRK.B",
@@ -144,7 +559,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 2.01
+          "weight": 2
         }
       ]
     },
@@ -161,7 +576,7 @@
         },
         {
           "ticker": "GOOG",
-          "weight": 5.28
+          "weight": 5.29
         },
         {
           "ticker": "BABA",
@@ -216,7 +631,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 74.7
+          "weight": 74.68
         },
         {
           "ticker": "BRK.B",
@@ -236,7 +651,7 @@
         },
         {
           "ticker": "OXY",
-          "weight": 2.88
+          "weight": 2.89
         }
       ]
     },
@@ -245,27 +660,33 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 70.94
+          "weight": 70.94,
+          "shares": 40864577
         },
         {
           "ticker": "BRK.B",
-          "weight": 11.38
+          "weight": 11.38,
+          "shares": 3621100
         },
         {
           "ticker": "GOOG",
-          "weight": 4.97
+          "weight": 4.97,
+          "shares": 3766500
         },
         {
           "ticker": "PDD",
-          "weight": 4.86
+          "weight": 4.86,
+          "shares": 7228700
         },
         {
           "ticker": "OXY",
-          "weight": 4.65
+          "weight": 4.65,
+          "shares": 13577000
         },
         {
           "ticker": "BABA",
-          "weight": 3.2
+          "weight": 3.2,
+          "shares": 5450830
         }
       ]
     },
@@ -274,27 +695,33 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 64.95
+          "weight": 64.96,
+          "shares": 34224181
         },
         {
           "ticker": "BRK.B",
-          "weight": 15.38
+          "weight": 15.39,
+          "shares": 3381300
         },
         {
           "ticker": "PDD",
-          "weight": 7.84
+          "weight": 7.84,
+          "shares": 7753900
         },
         {
           "ticker": "OXY",
-          "weight": 5.84
+          "weight": 5.83,
+          "shares": 13826100
         },
         {
           "ticker": "BABA",
-          "weight": 4.5
+          "weight": 4.5,
+          "shares": 3982130
         },
         {
           "ticker": "GOOG",
-          "weight": 1.49
+          "weight": 1.48,
+          "shares": 1110600
         }
       ]
     },
@@ -303,35 +730,43 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 63.29
+          "weight": 63.29,
+          "shares": 35118607
         },
         {
           "ticker": "BRK.B",
-          "weight": 14.43
+          "weight": 14.43,
+          "shares": 3381300
         },
         {
           "ticker": "PDD",
-          "weight": 7.96
+          "weight": 7.96,
+          "shares": 8662694
         },
         {
           "ticker": "OXY",
-          "weight": 5.01
+          "weight": 5,
+          "shares": 13556100
         },
         {
           "ticker": "BABA",
-          "weight": 3.73
+          "weight": 3.73,
+          "shares": 3746230
         },
         {
           "ticker": "GOOG",
-          "weight": 3.03
+          "weight": 3.03,
+          "shares": 1945400
         },
         {
           "ticker": "NVDA",
-          "weight": 1.34
+          "weight": 1.34,
+          "shares": 964800
         },
         {
           "ticker": "MSFT",
-          "weight": 1.22
+          "weight": 1.22,
+          "shares": 279200
         }
       ]
     },
@@ -340,27 +775,33 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 62.51
+          "weight": 62.5,
+          "shares": 34829107
         },
         {
           "ticker": "BRK.B",
-          "weight": 18.39
+          "weight": 18.39,
+          "shares": 5191300
         },
         {
           "ticker": "PDD",
-          "weight": 7.99
+          "weight": 7.99,
+          "shares": 8574194
         },
         {
           "ticker": "OXY",
-          "weight": 4.51
+          "weight": 4.51,
+          "shares": 13556100
         },
         {
           "ticker": "BABA",
-          "weight": 3.5
+          "weight": 3.5,
+          "shares": 2777330
         },
         {
           "ticker": "GOOG",
-          "weight": 3.1
+          "weight": 3.11,
+          "shares": 1810500
         }
       ]
     },
@@ -369,48 +810,58 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 50.7
+          "weight": 50.71,
+          "shares": 32358507
         },
         {
           "ticker": "BRK.B",
-          "weight": 20.79
+          "weight": 20.79,
+          "shares": 7176196
         },
         {
           "ticker": "NVDA",
-          "weight": 7.78
+          "weight": 7.78,
+          "shares": 7237100
         },
         {
           "ticker": "PDD",
-          "weight": 7.54
+          "weight": 7.54,
+          "shares": 11536694
         },
         {
           "ticker": "GOOG",
-          "weight": 3.36
+          "weight": 3.36,
+          "shares": 1855400
         },
         {
           "ticker": "OXY",
-          "weight": 3.12
+          "weight": 3.12,
+          "shares": 13172600
         },
         {
           "ticker": "MSFT",
-          "weight": 2.4
+          "weight": 2.39,
+          "shares": 859000
         },
         {
           "ticker": "BABA",
-          "weight": 2.17
+          "weight": 2.16,
+          "shares": 2560500
         },
         {
           "ticker": "TSM",
-          "weight": 2.15
+          "weight": 2.14,
+          "shares": 1224384
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:34:42Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=HH",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:07:29Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001759760-h-h-international-investment-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

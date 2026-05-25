@@ -19,11 +19,415 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 33.23
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 24.46
+        },
+        {
+          "ticker": "RACE",
+          "weight": 15.89
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.42
+        },
+        {
+          "ticker": "SRG",
+          "weight": 7.93
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.08
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 28.48
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 21.15
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 16.16
+        },
+        {
+          "ticker": "RACE",
+          "weight": 14.69
+        },
+        {
+          "ticker": "SRG",
+          "weight": 8.9
+        },
+        {
+          "ticker": "AER",
+          "weight": 7.08
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.54
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 26.07
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 24.71
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.9
+        },
+        {
+          "ticker": "RACE",
+          "weight": 10.37
+        },
+        {
+          "ticker": "SRG",
+          "weight": 7.93
+        },
+        {
+          "ticker": "AER",
+          "weight": 7.1
+        },
+        {
+          "ticker": "LUV",
+          "weight": 5.89
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.03
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 31.46
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 27.58
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.39
+        },
+        {
+          "ticker": "AER",
+          "weight": 8.05
+        },
+        {
+          "ticker": "RACE",
+          "weight": 6.69
+        },
+        {
+          "ticker": "SRG",
+          "weight": 6.51
+        },
+        {
+          "ticker": "LUV",
+          "weight": 4.32
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 36.42
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 27.87
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 14.17
+        },
+        {
+          "ticker": "AER",
+          "weight": 9.71
+        },
+        {
+          "ticker": "RACE",
+          "weight": 7.66
+        },
+        {
+          "ticker": "LUV",
+          "weight": 4.17
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 34.45
+        },
+        {
+          "ticker": "GM+B",
+          "weight": 26.13
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 14.88
+        },
+        {
+          "ticker": "AER",
+          "weight": 11.48
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.44
+        },
+        {
+          "ticker": "LUV",
+          "weight": 4.62
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 56.89
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.39
+        },
+        {
+          "ticker": "AER",
+          "weight": 12.97
+        },
+        {
+          "ticker": "RACE",
+          "weight": 10.66
+        },
+        {
+          "ticker": "LUV",
+          "weight": 4.08
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 60.62
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.43
+        },
+        {
+          "ticker": "AER",
+          "weight": 11.01
+        },
+        {
+          "ticker": "RACE",
+          "weight": 10.84
+        },
+        {
+          "ticker": "LUV",
+          "weight": 5.11
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 84.92
+        },
+        {
+          "ticker": "RACE",
+          "weight": 15.08
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 82.06
+        },
+        {
+          "ticker": "RACE",
+          "weight": 17.94
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 91.61
+        },
+        {
+          "ticker": "MU",
+          "weight": 8.39
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 73.48
+        },
+        {
+          "ticker": "MU",
+          "weight": 26.52
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 60.45
+        },
+        {
+          "ticker": "MU",
+          "weight": 23.43
+        },
+        {
+          "ticker": "EAF",
+          "weight": 16.12
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 43.4
+        },
+        {
+          "ticker": "MU",
+          "weight": 29.42
+        },
+        {
+          "ticker": "EAF",
+          "weight": 27.17
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "STLA",
+          "weight": 44.69
+        },
+        {
+          "ticker": "MU",
+          "weight": 36.25
+        },
+        {
+          "ticker": "EAF",
+          "weight": 19.07
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 93.95
+        },
+        {
+          "ticker": "STLA",
+          "weight": 6.05
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 63.48
+        },
+        {
+          "ticker": "SRG",
+          "weight": 36.52
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 57.32
+        },
+        {
+          "ticker": "SRG",
+          "weight": 42.68
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 66.33
+        },
+        {
+          "ticker": "SRG",
+          "weight": 33.67
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 52.24
+          "weight": 52.25
         },
         {
           "ticker": "SRG",
@@ -87,7 +491,7 @@
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 100.0
+          "weight": 100
         }
       ]
     },
@@ -96,7 +500,7 @@
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 100.0
+          "weight": 100
         }
       ]
     },
@@ -105,11 +509,11 @@
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 92.54
+          "weight": 92.53
         },
         {
-          "ticker": "BN",
-          "weight": 7.46
+          "ticker": "BRK.B",
+          "weight": 7.47
         }
       ]
     },
@@ -122,11 +526,11 @@
         },
         {
           "ticker": "BN",
-          "weight": 18.6
+          "weight": 18.59
         },
         {
           "ticker": "BAM",
-          "weight": 4.23
+          "weight": 4.24
         }
       ]
     },
@@ -135,11 +539,11 @@
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 79.24
+          "weight": 79.23
         },
         {
           "ticker": "BN",
-          "weight": 20.76
+          "weight": 20.77
         }
       ]
     },
@@ -151,7 +555,7 @@
           "weight": 81.2
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 18.8
         }
       ]
@@ -164,11 +568,11 @@
           "weight": 67.6
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 24.53
         },
         {
-          "ticker": "ARCH-OLD",
+          "ticker": "ARCH",
           "weight": 7.87
         }
       ]
@@ -181,7 +585,7 @@
           "weight": 53.86
         },
         {
-          "ticker": "ARCH-OLD",
+          "ticker": "ARCH",
           "weight": 15.72
         },
         {
@@ -189,7 +593,7 @@
           "weight": 15.47
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 14.95
         }
       ]
@@ -202,7 +606,7 @@
           "weight": 62.08
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 14.21
         },
         {
@@ -210,7 +614,7 @@
           "weight": 13.25
         },
         {
-          "ticker": "ARCH-OLD",
+          "ticker": "ARCH",
           "weight": 10.46
         }
       ]
@@ -223,7 +627,7 @@
           "weight": 54.09
         },
         {
-          "ticker": "ARCH-OLD",
+          "ticker": "ARCH",
           "weight": 25.66
         },
         {
@@ -231,7 +635,7 @@
           "weight": 12.71
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 7.54
         }
       ]
@@ -244,7 +648,7 @@
           "weight": 45.89
         },
         {
-          "ticker": "CNR",
+          "ticker": "CEIX",
           "weight": 32.66
         },
         {
@@ -252,7 +656,7 @@
           "weight": 18.08
         },
         {
-          "ticker": "ARCH-OLD",
+          "ticker": "ARCH",
           "weight": 1.73
         },
         {
@@ -266,15 +670,18 @@
       "holdings": [
         {
           "ticker": "AMR",
-          "weight": 38.47
+          "weight": 38.47,
+          "shares": 487251
         },
         {
           "ticker": "HCC",
-          "weight": 36.48
+          "weight": 36.48,
+          "shares": 1704670
         },
         {
-          "ticker": "CNR",
-          "weight": 25.04
+          "ticker": "CEIX",
+          "weight": 25.04,
+          "shares": 594950
         }
       ]
     },
@@ -283,19 +690,23 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 36.57
+          "weight": 36.57,
+          "shares": 1799580
         },
         {
           "ticker": "VAL",
-          "weight": 23.87
+          "weight": 23.87,
+          "shares": 1427564
         },
         {
           "ticker": "AMR",
-          "weight": 22.11
+          "weight": 22.11,
+          "shares": 414616
         },
         {
           "ticker": "NE",
-          "weight": 17.45
+          "weight": 17.45,
+          "shares": 1728744
         }
       ]
     },
@@ -304,23 +715,28 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 30.37
+          "weight": 30.37,
+          "shares": 1799745
         },
         {
           "ticker": "VAL",
-          "weight": 29.21
+          "weight": 29.21,
+          "shares": 1883777
         },
         {
           "ticker": "AMR",
-          "weight": 19.06
+          "weight": 19.06,
+          "shares": 460327
         },
         {
           "ticker": "NE",
-          "weight": 16.9
+          "weight": 16.9,
+          "shares": 1728744
         },
         {
           "ticker": "AN",
-          "weight": 4.46
+          "weight": 4.46,
+          "shares": 61000
         }
       ]
     },
@@ -329,23 +745,28 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 34.0
+          "weight": 34,
+          "shares": 1799831
         },
         {
           "ticker": "AMR",
-          "weight": 25.91
+          "weight": 25.91,
+          "shares": 532000
         },
         {
           "ticker": "RIG",
-          "weight": 22.64
+          "weight": 22.64,
+          "shares": 24442332
         },
         {
           "ticker": "VAL",
-          "weight": 15.44
+          "weight": 15.44,
+          "shares": 1066255
         },
         {
           "ticker": "NE",
-          "weight": 2.01
+          "weight": 2.01,
+          "shares": 239000
         }
       ]
     },
@@ -354,28 +775,33 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 39.47
+          "weight": 39.47,
+          "shares": 1799831
         },
         {
           "ticker": "RIG",
-          "weight": 27.78
+          "weight": 27.78,
+          "shares": 27040133
         },
         {
           "ticker": "AMR",
-          "weight": 27.0
+          "weight": 27,
+          "shares": 543000
         },
         {
           "ticker": "VAL",
-          "weight": 5.76
+          "weight": 5.76,
+          "shares": 459098
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:36:50Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=PI",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:31:20Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001549575-dalal-street-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

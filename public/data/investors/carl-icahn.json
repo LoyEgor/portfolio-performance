@@ -3,12 +3,12 @@
   "holdings": [
     {
       "ticker": "IEP",
-      "weight": 50.14,
+      "weight": 50.15,
       "shares": 549400539
     },
     {
       "ticker": "CVI",
-      "weight": 28.96,
+      "weight": 28.97,
       "shares": 71201875
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "ticker": "CTRI",
-      "weight": 5.07,
+      "weight": 5.06,
       "shares": 14336044
     },
     {
@@ -44,15 +44,1103 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 36.9
+        },
+        {
+          "ticker": "AIG",
+          "weight": 11.94
+        },
+        {
+          "ticker": "CVI",
+          "weight": 9.24
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.26
+        },
+        {
+          "ticker": "FDML",
+          "weight": 6.81
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.5
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.35
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.2
+        },
+        {
+          "ticker": "XRX",
+          "weight": 5.12
+        },
+        {
+          "ticker": "NUAN",
+          "weight": 2.79
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.4
+        },
+        {
+          "ticker": "CHK",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 33.99
+        },
+        {
+          "ticker": "AIG",
+          "weight": 12.3
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.3
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.25
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.9
+        },
+        {
+          "ticker": "FDML",
+          "weight": 5.87
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.62
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.07
+        },
+        {
+          "ticker": "XRX",
+          "weight": 4.79
+        },
+        {
+          "ticker": "AGN",
+          "weight": 4.0
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.9
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.39
+        },
+        {
+          "ticker": "NUAN",
+          "weight": 1.72
+        },
+        {
+          "ticker": "CHK",
+          "weight": 1.59
+        },
+        {
+          "ticker": "RIG",
+          "weight": 1.3
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 33.32
+        },
+        {
+          "ticker": "AIG",
+          "weight": 14.05
+        },
+        {
+          "ticker": "LNG",
+          "weight": 7.39
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.2
+        },
+        {
+          "ticker": "FDML",
+          "weight": 6.91
+        },
+        {
+          "ticker": "HLF",
+          "weight": 6.31
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.86
+        },
+        {
+          "ticker": "XRX",
+          "weight": 5.2
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.09
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.7
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.55
+        },
+        {
+          "ticker": "NAV",
+          "weight": 1.93
+        },
+        {
+          "ticker": "NUAN",
+          "weight": 1.48
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 35.76
+        },
+        {
+          "ticker": "AIG",
+          "weight": 13.69
+        },
+        {
+          "ticker": "CVI",
+          "weight": 8.3
+        },
+        {
+          "ticker": "FDML",
+          "weight": 6.56
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.22
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.05
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.52
+        },
+        {
+          "ticker": "HLF",
+          "weight": 4.97
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.97
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.9
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.47
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.34
+        },
+        {
+          "ticker": "NUAN",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 36.32
+        },
+        {
+          "ticker": "AIG",
+          "weight": 14.38
+        },
+        {
+          "ticker": "LNG",
+          "weight": 7.79
+        },
+        {
+          "ticker": "CVI",
+          "weight": 7.21
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 6.85
+        },
+        {
+          "ticker": "HLF",
+          "weight": 6.71
+        },
+        {
+          "ticker": "FCX",
+          "weight": 6.15
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.67
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.59
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.46
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.08
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.68
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.06
+        },
+        {
+          "ticker": "WBT",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 40.03
+        },
+        {
+          "ticker": "AIG",
+          "weight": 13.95
+        },
+        {
+          "ticker": "HLF",
+          "weight": 8.47
+        },
+        {
+          "ticker": "LNG",
+          "weight": 8.26
+        },
+        {
+          "ticker": "CVI",
+          "weight": 8.04
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.71
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.69
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.79
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.36
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.28
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 1.75
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.64
+        },
+        {
+          "ticker": "WBT",
+          "weight": 1.04
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 39.91
+        },
+        {
+          "ticker": "AIG",
+          "weight": 12.51
+        },
+        {
+          "ticker": "CVI",
+          "weight": 8.74
+        },
+        {
+          "ticker": "HLF",
+          "weight": 7.35
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.98
+        },
+        {
+          "ticker": "FCX",
+          "weight": 5.13
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.91
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.49
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 3.1
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 3.03
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.17
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.47
+        },
+        {
+          "ticker": "WBT",
+          "weight": 1.16
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 38.68
+        },
+        {
+          "ticker": "CVI",
+          "weight": 12.25
+        },
+        {
+          "ticker": "AIG",
+          "weight": 11.83
+        },
+        {
+          "ticker": "LNG",
+          "weight": 8.13
+        },
+        {
+          "ticker": "HLF",
+          "weight": 7.16
+        },
+        {
+          "ticker": "FCX",
+          "weight": 6.76
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.32
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.99
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 2.72
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.28
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.48
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.3
+        },
+        {
+          "ticker": "WBT",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 47.26
+        },
+        {
+          "ticker": "HLF",
+          "weight": 11.7
+        },
+        {
+          "ticker": "CVI",
+          "weight": 11.29
+        },
+        {
+          "ticker": "LNG",
+          "weight": 9.17
+        },
+        {
+          "ticker": "FCX",
+          "weight": 4.62
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.05
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.07
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 3.05
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.33
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.94
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.53
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 51.83
+        },
+        {
+          "ticker": "CVI",
+          "weight": 11.55
+        },
+        {
+          "ticker": "HLF",
+          "weight": 8.3
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.77
+        },
+        {
+          "ticker": "FCX",
+          "weight": 3.8
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.76
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.99
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.05
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 1.97
+        },
+        {
+          "ticker": "EGN",
+          "weight": 1.66
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.58
+        },
+        {
+          "ticker": "VMW",
+          "weight": 1.47
+        },
+        {
+          "ticker": "AFSI",
+          "weight": 1.18
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 50.6
+        },
+        {
+          "ticker": "CVI",
+          "weight": 12.0
+        },
+        {
+          "ticker": "HLF",
+          "weight": 8.05
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.81
+        },
+        {
+          "ticker": "DVMT",
+          "weight": 3.59
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.29
+        },
+        {
+          "ticker": "FCX",
+          "weight": 2.92
+        },
+        {
+          "ticker": "EGN",
+          "weight": 2.77
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.7
+        },
+        {
+          "ticker": "ARII",
+          "weight": 2.29
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.0
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.87
+        },
+        {
+          "ticker": "AFSI",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 51.47
+        },
+        {
+          "ticker": "CVI",
+          "weight": 12.62
+        },
+        {
+          "ticker": "HLF",
+          "weight": 10.67
+        },
+        {
+          "ticker": "LNG",
+          "weight": 7.11
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.93
+        },
+        {
+          "ticker": "DELL",
+          "weight": 3.21
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.97
+        },
+        {
+          "ticker": "FCX",
+          "weight": 2.66
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.23
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.05
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 55.67
+        },
+        {
+          "ticker": "CVI",
+          "weight": 12.84
+        },
+        {
+          "ticker": "HLF",
+          "weight": 8.17
+        },
+        {
+          "ticker": "LNG",
+          "weight": 6.58
+        },
+        {
+          "ticker": "CZR",
+          "weight": 3.77
+        },
+        {
+          "ticker": "NWL",
+          "weight": 2.76
+        },
+        {
+          "ticker": "FCX",
+          "weight": 2.5
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.37
+        },
+        {
+          "ticker": "FANG",
+          "weight": 2.31
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 1.84
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 53.21
+        },
+        {
+          "ticker": "CVI",
+          "weight": 14.11
+        },
+        {
+          "ticker": "OXY",
+          "weight": 6.63
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.97
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.86
+        },
+        {
+          "ticker": "CZR",
+          "weight": 4.65
+        },
+        {
+          "ticker": "NWL",
+          "weight": 2.51
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.29
+        },
+        {
+          "ticker": "FCX",
+          "weight": 2.03
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 1.54
+        },
+        {
+          "ticker": "CNDT",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 49.04
+        },
+        {
+          "ticker": "CVI",
+          "weight": 12.55
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.34
+        },
+        {
+          "ticker": "CZR",
+          "weight": 5.33
+        },
+        {
+          "ticker": "LNG",
+          "weight": 4.94
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 4.76
+        },
+        {
+          "ticker": "OXY",
+          "weight": 4.69
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.08
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.81
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.32
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 1.94
+        },
+        {
+          "ticker": "NAV",
+          "weight": 1.88
+        },
+        {
+          "ticker": "FCX",
+          "weight": 1.31
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 47.58
+        },
+        {
+          "ticker": "CVI",
+          "weight": 11.3
+        },
+        {
+          "ticker": "HLF",
+          "weight": 6.59
+        },
+        {
+          "ticker": "CZR",
+          "weight": 6.1
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 5.08
+        },
+        {
+          "ticker": "LNG",
+          "weight": 4.7
+        },
+        {
+          "ticker": "OXY",
+          "weight": 3.65
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.4
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.1
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 2.72
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 2.5
+        },
+        {
+          "ticker": "NAV",
+          "weight": 1.9
+        },
+        {
+          "ticker": "FCX",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 54.32
+        },
+        {
+          "ticker": "CVI",
+          "weight": 6.7
+        },
+        {
+          "ticker": "HPQ",
+          "weight": 6.22
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.85
+        },
+        {
+          "ticker": "OXY",
+          "weight": 5.84
+        },
+        {
+          "ticker": "CZR",
+          "weight": 4.4
+        },
+        {
+          "ticker": "LNG",
+          "weight": 3.84
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.3
+        },
+        {
+          "ticker": "XRX",
+          "weight": 2.53
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 2.46
+        },
+        {
+          "ticker": "HTZGQ",
+          "weight": 1.95
+        },
+        {
+          "ticker": "NAV",
+          "weight": 1.57
+        },
+        {
+          "ticker": "FCX",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 51.89
+        },
+        {
+          "ticker": "OXY",
+          "weight": 8.46
+        },
+        {
+          "ticker": "HLF",
+          "weight": 8.27
+        },
+        {
+          "ticker": "CVI",
+          "weight": 7.47
+        },
+        {
+          "ticker": "CZR",
+          "weight": 7.23
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.25
+        },
+        {
+          "ticker": "NWL",
+          "weight": 3.62
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 3.47
+        },
+        {
+          "ticker": "NAV",
+          "weight": 2.46
+        },
+        {
+          "ticker": "XRX",
+          "weight": 1.87
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 62.21
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.65
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.5
+        },
+        {
+          "ticker": "OXY",
+          "weight": 5.24
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.21
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.43
+        },
+        {
+          "ticker": "NAV",
+          "weight": 4.3
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 3.37
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.04
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "IEP",
+          "weight": 58.69
+        },
+        {
+          "ticker": "OXY",
+          "weight": 8.01
+        },
+        {
+          "ticker": "CVI",
+          "weight": 5.54
+        },
+        {
+          "ticker": "HLF",
+          "weight": 5.15
+        },
+        {
+          "ticker": "LNG",
+          "weight": 5.07
+        },
+        {
+          "ticker": "NWL",
+          "weight": 4.85
+        },
+        {
+          "ticker": "NAV",
+          "weight": 3.84
+        },
+        {
+          "ticker": "CLDR",
+          "weight": 3.8
+        },
+        {
+          "ticker": "XRX",
+          "weight": 3.49
+        },
+        {
+          "ticker": "HRI",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 51.62
+          "weight": 51.63
         },
         {
           "ticker": "OXY",
-          "weight": 9.92
+          "weight": 9.93
         },
         {
           "ticker": "CVI",
@@ -64,7 +1152,7 @@
         },
         {
           "ticker": "LNG",
-          "weight": 5.04
+          "weight": 5.05
         },
         {
           "ticker": "BHC",
@@ -100,7 +1188,7 @@
         },
         {
           "ticker": "CNDT",
-          "weight": 1.11
+          "weight": 1.1
         }
       ]
     },
@@ -109,63 +1197,59 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 54.23
+          "weight": 54.83
         },
         {
           "ticker": "OXY",
-          "weight": 6.37
+          "weight": 6.45
         },
         {
           "ticker": "LNG",
-          "weight": 5.82
+          "weight": 5.88
         },
         {
           "ticker": "CVI",
-          "weight": 5.3
+          "weight": 5.37
         },
         {
           "ticker": "NWL",
-          "weight": 4.98
+          "weight": 5.04
         },
         {
           "ticker": "BHC",
-          "weight": 4.15
+          "weight": 4.2
         },
         {
           "ticker": "CLDR",
-          "weight": 3.45
+          "weight": 3.48
         },
         {
           "ticker": "NAV",
-          "weight": 3.08
+          "weight": 3.12
         },
         {
           "ticker": "XRX",
-          "weight": 3.03
+          "weight": 3.07
         },
         {
           "ticker": "FE",
-          "weight": 2.93
+          "weight": 2.96
         },
         {
           "ticker": "HRI",
-          "weight": 2.09
-        },
-        {
-          "ticker": "DAN",
-          "weight": 1.19
+          "weight": 2.11
         },
         {
           "ticker": "CNDT",
-          "weight": 1.19
+          "weight": 1.2
         },
         {
-          "ticker": "OXY.WS",
-          "weight": 1.12
+          "ticker": "DAN",
+          "weight": 1.2
         },
         {
-          "ticker": "WBT-OLD",
-          "weight": 1.07
+          "ticker": "WBT",
+          "weight": 1.08
         }
       ]
     },
@@ -174,55 +1258,51 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 55.95
+          "weight": 57.59
         },
         {
           "ticker": "LNG",
-          "weight": 7.16
+          "weight": 7.37
         },
         {
           "ticker": "OXY",
-          "weight": 6.03
+          "weight": 6.21
         },
         {
           "ticker": "CVI",
-          "weight": 5.38
+          "weight": 5.53
         },
         {
           "ticker": "NWL",
-          "weight": 4.39
+          "weight": 4.51
         },
         {
           "ticker": "BHC",
-          "weight": 4.31
+          "weight": 4.43
         },
         {
           "ticker": "CLDR",
-          "weight": 3.79
+          "weight": 3.9
         },
         {
           "ticker": "HRI",
-          "weight": 3.33
+          "weight": 3.43
         },
         {
           "ticker": "FE",
-          "weight": 3.06
-        },
-        {
-          "ticker": "XRX",
-          "weight": 2.85
+          "weight": 3.15
         },
         {
           "ticker": "DAN",
-          "weight": 1.44
+          "weight": 1.48
         },
         {
-          "ticker": "WBT-OLD",
-          "weight": 1.17
+          "ticker": "WBT",
+          "weight": 1.21
         },
         {
           "ticker": "CNDT",
-          "weight": 1.14
+          "weight": 1.17
         }
       ]
     },
@@ -231,47 +1311,43 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 59.18
+          "weight": 61.25
         },
         {
           "ticker": "LNG",
-          "weight": 7.62
+          "weight": 7.88
         },
         {
           "ticker": "OXY",
-          "weight": 6.05
+          "weight": 6.27
         },
         {
           "ticker": "CVI",
-          "weight": 5.56
+          "weight": 5.75
         },
         {
           "ticker": "BHC",
-          "weight": 4.45
+          "weight": 4.61
         },
         {
           "ticker": "NWL",
-          "weight": 4.43
+          "weight": 4.59
         },
         {
           "ticker": "FE",
-          "weight": 3.66
-        },
-        {
-          "ticker": "XRX",
-          "weight": 3.37
+          "weight": 3.79
         },
         {
           "ticker": "HRI",
-          "weight": 2.93
+          "weight": 3.03
         },
         {
           "ticker": "DAN",
-          "weight": 1.51
+          "weight": 1.57
         },
         {
-          "ticker": "WBT-OLD",
-          "weight": 1.23
+          "ticker": "WBT",
+          "weight": 1.27
         }
       ]
     },
@@ -280,51 +1356,47 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 62.14
+          "weight": 63.72
         },
         {
           "ticker": "CVI",
-          "weight": 8.47
+          "weight": 8.68
         },
         {
           "ticker": "LNG",
-          "weight": 6.27
+          "weight": 6.43
         },
         {
           "ticker": "FE",
-          "weight": 4.05
+          "weight": 4.15
         },
         {
           "ticker": "BHC",
-          "weight": 3.7
+          "weight": 3.79
         },
         {
           "ticker": "NWL",
-          "weight": 3.3
+          "weight": 3.38
         },
         {
           "ticker": "HRI",
-          "weight": 3.13
+          "weight": 3.21
         },
         {
           "ticker": "XRX",
-          "weight": 3.01
+          "weight": 3.09
         },
         {
-          "ticker": "OXY.WS",
-          "weight": 2.47
-        },
-        {
-          "ticker": "WBT-OLD",
-          "weight": 1.23
+          "ticker": "WBT",
+          "weight": 1.26
         },
         {
           "ticker": "DAN",
-          "weight": 1.17
+          "weight": 1.2
         },
         {
           "ticker": "SWX",
-          "weight": 1.06
+          "weight": 1.08
         }
       ]
     },
@@ -333,47 +1405,43 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 65.86
+          "weight": 67.75
         },
         {
           "ticker": "CVI",
-          "weight": 11.76
+          "weight": 12.09
         },
         {
           "ticker": "LNG",
-          "weight": 3.68
+          "weight": 3.79
         },
         {
           "ticker": "FE",
-          "weight": 3.59
+          "weight": 3.69
         },
         {
           "ticker": "NWL",
-          "weight": 3.1
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 2.79
+          "weight": 3.19
         },
         {
           "ticker": "XRX",
-          "weight": 2.51
+          "weight": 2.58
         },
         {
           "ticker": "SWX",
-          "weight": 2.19
+          "weight": 2.25
         },
         {
           "ticker": "HRI",
-          "weight": 1.79
+          "weight": 1.84
         },
         {
           "ticker": "BHC",
-          "weight": 1.43
+          "weight": 1.47
         },
         {
-          "ticker": "WBT-OLD",
-          "weight": 1.31
+          "ticker": "WBT",
+          "weight": 1.35
         }
       ]
     },
@@ -382,47 +1450,39 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 69.37
+          "weight": 73.6
         },
         {
           "ticker": "CVI",
-          "weight": 9.99
+          "weight": 10.6
         },
         {
           "ticker": "FE",
-          "weight": 3.4
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 3.09
-        },
-        {
-          "ticker": "TWTR-OLD",
-          "weight": 2.66
+          "weight": 3.6
         },
         {
           "ticker": "SWX",
-          "weight": 2.23
+          "weight": 2.37
         },
         {
           "ticker": "NWL",
-          "weight": 2.22
+          "weight": 2.36
         },
         {
           "ticker": "XRX",
-          "weight": 2.17
+          "weight": 2.3
         },
         {
           "ticker": "HRI",
-          "weight": 2.02
+          "weight": 2.15
         },
         {
           "ticker": "LNG",
-          "weight": 1.7
+          "weight": 1.8
         },
         {
           "ticker": "BHC",
-          "weight": 1.16
+          "weight": 1.23
         }
       ]
     },
@@ -431,39 +1491,35 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 72.54
+          "weight": 74.97
         },
         {
           "ticker": "CVI",
-          "weight": 10.66
+          "weight": 11.01
         },
         {
           "ticker": "FE",
-          "weight": 3.8
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 3.23
+          "weight": 3.92
         },
         {
           "ticker": "XRX",
-          "weight": 2.39
+          "weight": 2.47
         },
         {
           "ticker": "HRI",
-          "weight": 2.33
+          "weight": 2.4
         },
         {
           "ticker": "NWL",
-          "weight": 2.07
+          "weight": 2.13
         },
         {
           "ticker": "SWX",
-          "weight": 1.95
+          "weight": 2.02
         },
         {
           "ticker": "BHC",
-          "weight": 1.04
+          "weight": 1.08
         }
       ]
     },
@@ -472,35 +1528,31 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 73.45
+          "weight": 75.88
         },
         {
           "ticker": "CVI",
-          "weight": 11.05
+          "weight": 11.42
         },
         {
           "ticker": "FE",
-          "weight": 3.6
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 3.2
+          "weight": 3.72
         },
         {
           "ticker": "SWX",
-          "weight": 3.11
+          "weight": 3.21
         },
         {
           "ticker": "XRX",
-          "weight": 2.49
+          "weight": 2.58
         },
         {
           "ticker": "NWL",
-          "weight": 1.76
+          "weight": 1.82
         },
         {
           "ticker": "BHC",
-          "weight": 1.33
+          "weight": 1.38
         }
       ]
     },
@@ -509,39 +1561,35 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 64.79
+          "weight": 67.56
         },
         {
           "ticker": "CVI",
-          "weight": 14.24
+          "weight": 14.84
         },
         {
           "ticker": "SWX",
-          "weight": 4.61
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 4.1
+          "weight": 4.8
         },
         {
           "ticker": "FE",
-          "weight": 3.66
+          "weight": 3.81
         },
         {
           "ticker": "XRX",
-          "weight": 3.4
+          "weight": 3.55
         },
         {
           "ticker": "BHC",
-          "weight": 1.85
+          "weight": 1.93
         },
         {
           "ticker": "NWL",
-          "weight": 1.74
+          "weight": 1.82
         },
         {
           "ticker": "DAN",
-          "weight": 1.62
+          "weight": 1.69
         }
       ]
     },
@@ -550,35 +1598,31 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 59.33
+          "weight": 63.18
         },
         {
           "ticker": "CVI",
-          "weight": 19.41
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 6.09
+          "weight": 20.66
         },
         {
           "ticker": "SWX",
-          "weight": 5.69
+          "weight": 6.06
         },
         {
           "ticker": "FE",
-          "weight": 4.12
+          "weight": 4.38
         },
         {
           "ticker": "BHC",
-          "weight": 2.44
+          "weight": 2.6
         },
         {
           "ticker": "DAN",
-          "weight": 1.79
+          "weight": 1.91
         },
         {
           "ticker": "CNDT",
-          "weight": 1.14
+          "weight": 1.21
         }
       ]
     },
@@ -587,35 +1631,31 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 60.07
+          "weight": 63.97
         },
         {
           "ticker": "CVI",
-          "weight": 19.2
+          "weight": 20.44
         },
         {
           "ticker": "SWX",
-          "weight": 6.63
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 6.1
+          "weight": 7.06
         },
         {
           "ticker": "BHC",
-          "weight": 2.64
+          "weight": 2.82
         },
         {
           "ticker": "FE",
-          "weight": 2.05
+          "weight": 2.18
         },
         {
           "ticker": "DAN",
-          "weight": 1.98
+          "weight": 2.11
         },
         {
           "ticker": "CNDT",
-          "weight": 1.33
+          "weight": 1.41
         }
       ]
     },
@@ -624,43 +1664,39 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 53.83
+          "weight": 57.34
         },
         {
           "ticker": "CVI",
-          "weight": 20.46
+          "weight": 21.79
         },
         {
           "ticker": "SWX",
-          "weight": 7.22
-        },
-        {
-          "ticker": "OXY.WS",
-          "weight": 6.11
+          "weight": 7.69
         },
         {
           "ticker": "BHC",
-          "weight": 3.17
+          "weight": 3.38
         },
         {
           "ticker": "IFF",
-          "weight": 2.78
+          "weight": 2.95
         },
         {
           "ticker": "UAN",
-          "weight": 2.63
+          "weight": 2.8
         },
         {
           "ticker": "DAN",
-          "weight": 1.56
+          "weight": 1.66
         },
         {
           "ticker": "JBLU",
-          "weight": 1.13
+          "weight": 1.21
         },
         {
           "ticker": "CNDT",
-          "weight": 1.11
+          "weight": 1.18
         }
       ]
     },
@@ -669,35 +1705,31 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 64.18
+          "weight": 64.86
         },
         {
           "ticker": "CVI",
-          "weight": 17.12
+          "weight": 17.29
         },
         {
           "ticker": "SWX",
-          "weight": 7.43
+          "weight": 7.51
         },
         {
           "ticker": "IFF",
-          "weight": 3.42
+          "weight": 3.46
         },
         {
           "ticker": "UAN",
-          "weight": 2.83
+          "weight": 2.85
         },
         {
           "ticker": "BHC",
-          "weight": 2.32
+          "weight": 2.34
         },
         {
           "ticker": "DAN",
-          "weight": 1.66
-        },
-        {
-          "ticker": "JBLU",
-          "weight": 1.04
+          "weight": 1.68
         }
       ]
     },
@@ -714,7 +1746,7 @@
         },
         {
           "ticker": "SWX",
-          "weight": 8.43
+          "weight": 8.44
         },
         {
           "ticker": "IFF",
@@ -726,7 +1758,7 @@
         },
         {
           "ticker": "UAN",
-          "weight": 2.72
+          "weight": 2.71
         },
         {
           "ticker": "DAN",
@@ -751,43 +1783,53 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 53.96
+          "weight": 53.97,
+          "shares": 450788170
         },
         {
           "ticker": "CVI",
-          "weight": 17.25
+          "weight": 17.26,
+          "shares": 66692381
         },
         {
           "ticker": "SWX",
-          "weight": 9.41
+          "weight": 9.4,
+          "shares": 9632604
         },
         {
           "ticker": "IFF",
-          "weight": 4.38
+          "weight": 4.38,
+          "shares": 3750000
         },
         {
           "ticker": "UAN",
-          "weight": 4.27
+          "weight": 4.26,
+          "shares": 4066192
         },
         {
           "ticker": "BHC",
-          "weight": 3.86
+          "weight": 3.86,
+          "shares": 34721118
         },
         {
           "ticker": "DAN",
-          "weight": 2.28
+          "weight": 2.28,
+          "shares": 14286505
         },
         {
           "ticker": "JBLU",
-          "weight": 1.92
+          "weight": 1.92,
+          "shares": 17727029
         },
         {
           "ticker": "AEP",
-          "weight": 1.54
+          "weight": 1.53,
+          "shares": 1205300
         },
         {
           "ticker": "CZR",
-          "weight": 1.13
+          "weight": 1.13,
+          "shares": 2440109
         }
       ]
     },
@@ -796,39 +1838,48 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 56.24
+          "weight": 56.24,
+          "shares": 450788170
         },
         {
           "ticker": "CVI",
-          "weight": 18.31
+          "weight": 18.31,
+          "shares": 68534270
         },
         {
           "ticker": "SWX",
-          "weight": 7.44
+          "weight": 7.45,
+          "shares": 7532604
         },
         {
           "ticker": "UAN",
-          "weight": 4.25
+          "weight": 4.24,
+          "shares": 4099155
         },
         {
           "ticker": "IFF",
-          "weight": 4.01
+          "weight": 4.01,
+          "shares": 3750000
         },
         {
           "ticker": "BHC",
-          "weight": 3.09
+          "weight": 3.09,
+          "shares": 34721118
         },
         {
           "ticker": "DAN",
-          "weight": 2.62
+          "weight": 2.62,
+          "shares": 14286505
         },
         {
           "ticker": "JBLU",
-          "weight": 2.23
+          "weight": 2.23,
+          "shares": 33621735
         },
         {
           "ticker": "AEP",
-          "weight": 1.81
+          "weight": 1.81,
+          "shares": 1205300
         }
       ]
     },
@@ -837,39 +1888,48 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 51.56
+          "weight": 51.56,
+          "shares": 494783619
         },
         {
           "ticker": "CVI",
-          "weight": 24.49
+          "weight": 24.49,
+          "shares": 70418471
         },
         {
           "ticker": "SWX",
-          "weight": 7.26
+          "weight": 7.26,
+          "shares": 7532604
         },
         {
           "ticker": "UAN",
-          "weight": 4.79
+          "weight": 4.79,
+          "shares": 4164274
         },
         {
           "ticker": "IFF",
-          "weight": 3.58
+          "weight": 3.57,
+          "shares": 3750000
         },
         {
           "ticker": "BHC",
-          "weight": 2.99
+          "weight": 3.0,
+          "shares": 34721118
         },
         {
           "ticker": "CTRI",
-          "weight": 1.86
+          "weight": 1.86,
+          "shares": 6403877
         },
         {
           "ticker": "JBLU",
-          "weight": 1.84
+          "weight": 1.84,
+          "shares": 33621735
         },
         {
           "ticker": "AEP",
-          "weight": 1.62
+          "weight": 1.62,
+          "shares": 1205300
         }
       ]
     },
@@ -878,39 +1938,48 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 48.87
+          "weight": 48.87,
+          "shares": 518932944
         },
         {
           "ticker": "CVI",
-          "weight": 28.73
+          "weight": 28.73,
+          "shares": 70418471
         },
         {
           "ticker": "SWX",
-          "weight": 5.29
+          "weight": 5.29,
+          "shares": 6032604
         },
         {
           "ticker": "UAN",
-          "weight": 4.2
+          "weight": 4.2,
+          "shares": 4164274
         },
         {
           "ticker": "SATS",
-          "weight": 3.72
+          "weight": 3.72,
+          "shares": 4354542
         },
         {
           "ticker": "IFF",
-          "weight": 3.27
+          "weight": 3.27,
+          "shares": 4750000
         },
         {
           "ticker": "CTRI",
-          "weight": 2.57
+          "weight": 2.57,
+          "shares": 10847672
         },
         {
           "ticker": "JBLU",
-          "weight": 1.85
+          "weight": 1.85,
+          "shares": 33621735
         },
         {
           "ticker": "AEP",
-          "weight": 1.51
+          "weight": 1.52,
+          "shares": 1205300
         }
       ]
     },
@@ -919,52 +1988,63 @@
       "holdings": [
         {
           "ticker": "IEP",
-          "weight": 50.23
+          "weight": 50.23,
+          "shares": 549400539
         },
         {
           "ticker": "CVI",
-          "weight": 21.69
+          "weight": 21.69,
+          "shares": 70418471
         },
         {
           "ticker": "SWX",
-          "weight": 5.85
+          "weight": 5.85,
+          "shares": 6032604
         },
         {
           "ticker": "UAN",
-          "weight": 5.16
+          "weight": 5.17,
+          "shares": 4164274
         },
         {
           "ticker": "SATS",
-          "weight": 4.42
+          "weight": 4.42,
+          "shares": 3354542
         },
         {
           "ticker": "CTRI",
-          "weight": 4.39
+          "weight": 4.38,
+          "shares": 14336044
         },
         {
           "ticker": "IFF",
-          "weight": 3.49
+          "weight": 3.49,
+          "shares": 4275000
         },
         {
           "ticker": "JBLU",
-          "weight": 1.85
+          "weight": 1.85,
+          "shares": 33621735
         },
         {
           "ticker": "AEP",
-          "weight": 1.69
+          "weight": 1.68,
+          "shares": 1205300
         },
         {
           "ticker": "MNRO",
-          "weight": 1.24
+          "weight": 1.23,
+          "shares": 5078573
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:33:26Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=ic",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-24T23:53:08Z",
+    "lastFetchedFrom": "https://13f.info/manager/0000921669-icahn-carl-c",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

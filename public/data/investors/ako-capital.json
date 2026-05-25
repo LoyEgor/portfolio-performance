@@ -3,7 +3,7 @@
   "holdings": [
     {
       "ticker": "ALC",
-      "weight": 13.91,
+      "weight": 13.9,
       "shares": 9324656
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "ticker": "ADI",
-      "weight": 6.54,
+      "weight": 6.55,
       "shares": 1029523
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "ticker": "GE",
-      "weight": 5.66,
+      "weight": 5.65,
       "shares": 996847
     },
     {
@@ -64,7 +64,7 @@
     {
       "ticker": "BKNG",
       "weight": 4.2,
-      "shares": 1248075
+      "shares": 49923
     },
     {
       "ticker": "SUNB",
@@ -73,7 +73,7 @@
     },
     {
       "ticker": "FICO",
-      "weight": 2.72,
+      "weight": 2.71,
       "shares": 127212
     },
     {
@@ -98,108 +98,1561 @@
     },
     {
       "ticker": "APD",
-      "weight": 1.36,
+      "weight": 1.35,
       "shares": 233356
     },
     {
       "ticker": "CSL",
-      "weight": 1.35,
+      "weight": 1.34,
       "shares": 201377
     },
     {
       "ticker": "LIN",
-      "weight": 1.34,
+      "weight": 1.33,
       "shares": 134631
     },
     {
       "ticker": "CRM",
-      "weight": 1.33,
+      "weight": 1.32,
       "shares": 354805
     }
   ],
   "history": [
     {
-      "asOf": "2021-03-31",
+      "asOf": "2016-12-31",
       "holdings": [
         {
-          "ticker": "LIN",
-          "weight": 16.06
-        },
-        {
-          "ticker": "BKNG",
-          "weight": 8.66
-        },
-        {
-          "ticker": "EBAY",
-          "weight": 7.75
-        },
-        {
-          "ticker": "ALC",
-          "weight": 5.97
-        },
-        {
-          "ticker": "GOOG",
-          "weight": 5.89
+          "ticker": "RACE",
+          "weight": 31.06
         },
         {
           "ticker": "V",
-          "weight": 5.66
-        },
-        {
-          "ticker": "EL",
-          "weight": 5.58
-        },
-        {
-          "ticker": "OTIS",
-          "weight": 5.13
-        },
-        {
-          "ticker": "TMO",
-          "weight": 4.55
+          "weight": 6.85
         },
         {
           "ticker": "ALLE",
+          "weight": 6.07
+        },
+        {
+          "ticker": "FICO",
+          "weight": 5.46
+        },
+        {
+          "ticker": "MAR",
+          "weight": 5.14
+        },
+        {
+          "ticker": "CL",
+          "weight": 4.9
+        },
+        {
+          "ticker": "PX",
+          "weight": 4.41
+        },
+        {
+          "ticker": "CTSH",
           "weight": 4.39
         },
         {
-          "ticker": "NKE",
-          "weight": 4.31
+          "ticker": "EL",
+          "weight": 4.2
         },
         {
-          "ticker": "ADBE",
-          "weight": 4.13
+          "ticker": "USB",
+          "weight": 4.14
+        },
+        {
+          "ticker": "CLB",
+          "weight": 4.01
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.71
+        },
+        {
+          "ticker": "NKE",
+          "weight": 3.69
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.57
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.41
+        },
+        {
+          "ticker": "MON",
+          "weight": 2.84
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 2.15
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 35.95
+        },
+        {
+          "ticker": "V",
+          "weight": 6.1
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.83
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.75
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.3
+        },
+        {
+          "ticker": "EL",
+          "weight": 4.01
+        },
+        {
+          "ticker": "PX",
+          "weight": 3.87
+        },
+        {
+          "ticker": "NKE",
+          "weight": 3.63
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.6
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.6
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.44
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.38
+        },
+        {
+          "ticker": "CL",
+          "weight": 3.33
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 3.32
+        },
+        {
+          "ticker": "CLB",
+          "weight": 3.13
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 2.91
+        },
+        {
+          "ticker": "MON",
+          "weight": 2.48
+        },
+        {
+          "ticker": "HOG",
+          "weight": 2.37
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 36.41
+        },
+        {
+          "ticker": "V",
+          "weight": 5.96
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.84
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.05
+        },
+        {
+          "ticker": "USB",
+          "weight": 4.67
+        },
+        {
+          "ticker": "PX",
+          "weight": 4.58
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.51
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.46
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.36
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.23
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.19
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.78
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.52
+        },
+        {
+          "ticker": "CL",
+          "weight": 3.34
+        },
+        {
+          "ticker": "CLB",
+          "weight": 2.81
+        },
+        {
+          "ticker": "MON",
+          "weight": 2.29
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 37.31
+        },
+        {
+          "ticker": "V",
+          "weight": 6.44
+        },
+        {
+          "ticker": "EL",
+          "weight": 6.29
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.32
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.91
+        },
+        {
+          "ticker": "PX",
+          "weight": 4.89
+        },
+        {
+          "ticker": "USB",
+          "weight": 4.88
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.54
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.46
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.2
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.09
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.46
+        },
+        {
+          "ticker": "CL",
+          "weight": 3.1
+        },
+        {
+          "ticker": "MON",
+          "weight": 2.46
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.06
+        },
+        {
+          "ticker": "ECL",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 33.71
+        },
+        {
+          "ticker": "EL",
+          "weight": 6.45
+        },
+        {
+          "ticker": "V",
+          "weight": 5.46
+        },
+        {
+          "ticker": "PX",
+          "weight": 5.1
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.84
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.62
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.61
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.21
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.2
+        },
+        {
+          "ticker": "USB",
+          "weight": 4.08
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.58
+        },
+        {
+          "ticker": "CL",
+          "weight": 3.56
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.37
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.3
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.24
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.33
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.14
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 28.17
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 14.6
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.56
+        },
+        {
+          "ticker": "V",
+          "weight": 4.8
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.34
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.1
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.06
+        },
+        {
+          "ticker": "PX",
+          "weight": 3.99
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.66
+        },
+        {
+          "ticker": "FICO",
+          "weight": 3.52
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.4
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.22
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.21
+        },
+        {
+          "ticker": "CL",
+          "weight": 2.93
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 2.9
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.81
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 2.64
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.08
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 26.86
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 12.52
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.54
+        },
+        {
+          "ticker": "V",
+          "weight": 5.3
+        },
+        {
+          "ticker": "PX",
+          "weight": 4.37
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.23
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.05
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 4.02
+        },
+        {
+          "ticker": "NKE",
+          "weight": 3.9
+        },
+        {
+          "ticker": "RTX",
+          "weight": 3.82
+        },
+        {
+          "ticker": "MAR",
+          "weight": 3.78
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.67
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.44
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 2.93
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.71
+        },
+        {
+          "ticker": "CL",
+          "weight": 2.64
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.47
+        },
+        {
+          "ticker": "EW",
+          "weight": 1.92
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 1.84
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 23.54
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 10.74
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.65
+        },
+        {
+          "ticker": "V",
+          "weight": 5.24
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.11
+        },
+        {
+          "ticker": "RTX",
+          "weight": 4.93
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.69
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.68
+        },
+        {
+          "ticker": "PX",
+          "weight": 4.54
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.44
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.94
+        },
+        {
+          "ticker": "AXP",
+          "weight": 3.79
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.7
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.24
+        },
+        {
+          "ticker": "CL",
+          "weight": 3
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.62
+        },
+        {
+          "ticker": "CTSH",
+          "weight": 2.12
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 2.11
+        },
+        {
+          "ticker": "EW",
+          "weight": 1.94
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 13.74
+        },
+        {
+          "ticker": "LIN",
+          "weight": 13.59
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 10.2
+        },
+        {
+          "ticker": "EL",
+          "weight": 6.18
+        },
+        {
+          "ticker": "V",
+          "weight": 5.38
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.25
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.99
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.47
+        },
+        {
+          "ticker": "RTX",
+          "weight": 4.38
+        },
+        {
+          "ticker": "AXP",
+          "weight": 4.34
+        },
+        {
+          "ticker": "CME",
+          "weight": 4.22
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.19
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.12
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 4.08
         },
         {
           "ticker": "PG",
-          "weight": 3.48
+          "weight": 3.32
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 2.99
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.62
+        },
+        {
+          "ticker": "EW",
+          "weight": 1.93
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 12.9
+        },
+        {
+          "ticker": "LIN",
+          "weight": 10.73
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 7.23
+        },
+        {
+          "ticker": "EL",
+          "weight": 6
+        },
+        {
+          "ticker": "V",
+          "weight": 5.7
+        },
+        {
+          "ticker": "RTX",
+          "weight": 5.42
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 5.19
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.98
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.85
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.81
+        },
+        {
+          "ticker": "AXP",
+          "weight": 4.72
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.58
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.34
+        },
+        {
+          "ticker": "PG",
+          "weight": 3.79
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 3.44
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.01
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.84
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.83
+        },
+        {
+          "ticker": "EW",
+          "weight": 2.65
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "RACE",
+          "weight": 12.44
+        },
+        {
+          "ticker": "LIN",
+          "weight": 10.11
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 6.8
+        },
+        {
+          "ticker": "V",
+          "weight": 5.63
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.5
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.01
+        },
+        {
+          "ticker": "AXP",
+          "weight": 4.73
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 4.72
+        },
+        {
+          "ticker": "CME",
+          "weight": 4.66
+        },
+        {
+          "ticker": "MAR",
+          "weight": 4.45
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.29
+        },
+        {
+          "ticker": "RTX",
+          "weight": 4.16
+        },
+        {
+          "ticker": "FICO",
+          "weight": 4.06
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 3.88
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.86
+        },
+        {
+          "ticker": "PG",
+          "weight": 3.71
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.6
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.44
+        },
+        {
+          "ticker": "EW",
+          "weight": 2.7
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.25
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 12.59
+        },
+        {
+          "ticker": "RACE",
+          "weight": 9.61
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 5.93
+        },
+        {
+          "ticker": "NKE",
+          "weight": 5.57
+        },
+        {
+          "ticker": "V",
+          "weight": 5.15
+        },
+        {
+          "ticker": "RTX",
+          "weight": 5.12
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.74
+        },
+        {
+          "ticker": "EL",
+          "weight": 4.73
+        },
+        {
+          "ticker": "PG",
+          "weight": 4.67
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.39
+        },
+        {
+          "ticker": "AXP",
+          "weight": 4.2
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 4.19
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 3.9
+        },
+        {
+          "ticker": "MAR",
+          "weight": 3.8
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.64
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.59
+        },
+        {
+          "ticker": "EW",
+          "weight": 3.45
+        },
+        {
+          "ticker": "FICO",
+          "weight": 3.13
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 2.31
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.28
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 12.04
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.75
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 6.22
+        },
+        {
+          "ticker": "RTX",
+          "weight": 5.96
+        },
+        {
+          "ticker": "NKE",
+          "weight": 5.55
+        },
+        {
+          "ticker": "V",
+          "weight": 5.52
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 5.26
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.24
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 4.74
+        },
+        {
+          "ticker": "PG",
+          "weight": 4.32
+        },
+        {
+          "ticker": "EL",
+          "weight": 4.17
+        },
+        {
+          "ticker": "EW",
+          "weight": 4.16
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 3.92
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.44
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.42
+        },
+        {
+          "ticker": "AXP",
+          "weight": 3.39
+        },
+        {
+          "ticker": "FICO",
+          "weight": 3.3
+        },
+        {
+          "ticker": "CME",
+          "weight": 3.18
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.13
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.44
+        },
+        {
+          "ticker": "CHKP",
+          "weight": 1.87
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 13.97
+        },
+        {
+          "ticker": "RACE",
+          "weight": 8.33
+        },
+        {
+          "ticker": "V",
+          "weight": 6.09
+        },
+        {
+          "ticker": "RTX",
+          "weight": 5.93
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 5.62
+        },
+        {
+          "ticker": "PG",
+          "weight": 4.82
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.97
+        },
+        {
+          "ticker": "EL",
+          "weight": 3.9
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.87
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 3.59
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 3.58
         },
         {
           "ticker": "ZTS",
           "weight": 3.4
         },
         {
-          "ticker": "RACE",
-          "weight": 3.17
+          "ticker": "CHKP",
+          "weight": 3.3
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.04
+        },
+        {
+          "ticker": "EW",
+          "weight": 3
+        },
+        {
+          "ticker": "AXP",
+          "weight": 2.75
+        },
+        {
+          "ticker": "CME",
+          "weight": 2.72
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.66
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.6
         },
         {
           "ticker": "MCO",
-          "weight": 3.06
-        },
-        {
-          "ticker": "ICE",
-          "weight": 2.9
-        },
-        {
-          "ticker": "LYFT",
-          "weight": 2.17
-        },
-        {
-          "ticker": "MAR",
-          "weight": 1.89
+          "weight": 2.39
         },
         {
           "ticker": "FICO",
-          "weight": 1.85
+          "weight": 2.32
+        },
+        {
+          "ticker": "MAR",
+          "weight": 2.3
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 2.28
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.18
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 1.4
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 15.39
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.78
+        },
+        {
+          "ticker": "V",
+          "weight": 6.97
+        },
+        {
+          "ticker": "RACE",
+          "weight": 5.67
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 5.34
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.29
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.59
+        },
+        {
+          "ticker": "PG",
+          "weight": 3.95
+        },
+        {
+          "ticker": "GRFS",
+          "weight": 3.93
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.56
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.48
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.47
+        },
+        {
+          "ticker": "CHKP",
+          "weight": 3.25
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.21
+        },
+        {
+          "ticker": "NKE",
+          "weight": 3.06
+        },
+        {
+          "ticker": "MAR",
+          "weight": 3.01
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 2.94
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.82
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 2.79
+        },
+        {
+          "ticker": "FICO",
+          "weight": 2.71
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.58
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 2.4
+        },
+        {
+          "ticker": "CME",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 13.85
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.42
+        },
+        {
+          "ticker": "V",
+          "weight": 6.6
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.58
+        },
+        {
+          "ticker": "RACE",
+          "weight": 5.23
+        },
+        {
+          "ticker": "PG",
+          "weight": 4.71
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.67
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 4.46
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.37
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 4.03
+        },
+        {
+          "ticker": "CHKP",
+          "weight": 3.61
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.47
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 3.2
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 3.14
+        },
+        {
+          "ticker": "MAR",
+          "weight": 3.12
+        },
+        {
+          "ticker": "TMO",
+          "weight": 3.03
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 2.89
+        },
+        {
+          "ticker": "ALC",
+          "weight": 2.88
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.84
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.61
+        },
+        {
+          "ticker": "FICO",
+          "weight": 2.42
+        },
+        {
+          "ticker": "ICE",
+          "weight": 2.32
+        },
+        {
+          "ticker": "UAA",
+          "weight": 1.79
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 1.76
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 12.63
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 8
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.23
+        },
+        {
+          "ticker": "V",
+          "weight": 6.69
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.49
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 4.92
+        },
+        {
+          "ticker": "NKE",
+          "weight": 4.7
+        },
+        {
+          "ticker": "RACE",
+          "weight": 4.39
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 4.12
+        },
+        {
+          "ticker": "PG",
+          "weight": 4.02
+        },
+        {
+          "ticker": "ALC",
+          "weight": 3.85
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.44
+        },
+        {
+          "ticker": "MAR",
+          "weight": 3.36
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 3.25
+        },
+        {
+          "ticker": "TMO",
+          "weight": 3.23
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.02
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 2.72
+        },
+        {
+          "ticker": "ICE",
+          "weight": 2.63
+        },
+        {
+          "ticker": "FICO",
+          "weight": 2.48
+        },
+        {
+          "ticker": "CHKP",
+          "weight": 2.46
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.23
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 2.12
+        },
+        {
+          "ticker": "UAA",
+          "weight": 1.72
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 1.32
+        }
+      ]
+    },
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "LIN",
+          "weight": 14.69
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 7.92
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.09
+        },
+        {
+          "ticker": "ALC",
+          "weight": 5.46
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 5.39
+        },
+        {
+          "ticker": "V",
+          "weight": 5.18
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.11
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 4.7
+        },
+        {
+          "ticker": "TMO",
+          "weight": 4.17
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 4.01
+        },
+        {
+          "ticker": "NKE",
+          "weight": 3.95
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.78
+        },
+        {
+          "ticker": "PG",
+          "weight": 3.18
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 3.11
+        },
+        {
+          "ticker": "RACE",
+          "weight": 2.9
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.8
+        },
+        {
+          "ticker": "ICE",
+          "weight": 2.65
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 1.99
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.73
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.7
+        },
+        {
+          "ticker": "UAA",
+          "weight": 1.68
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 1.59
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.55
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.53
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 1.12
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.03
         }
       ]
     },
@@ -208,83 +1661,103 @@
       "holdings": [
         {
           "ticker": "LIN",
-          "weight": 14.62
+          "weight": 13.68
         },
         {
           "ticker": "BKNG",
-          "weight": 6.46
+          "weight": 6.04
         },
         {
           "ticker": "GOOG",
-          "weight": 6.42
+          "weight": 6.01
         },
         {
           "ticker": "EBAY",
-          "weight": 6.12
+          "weight": 5.72
         },
         {
           "ticker": "TMO",
-          "weight": 6.02
+          "weight": 5.63
         },
         {
           "ticker": "NKE",
-          "weight": 5.98
+          "weight": 5.59
         },
         {
           "ticker": "V",
-          "weight": 5.62
+          "weight": 5.26
         },
         {
           "ticker": "ZTS",
-          "weight": 5.49
+          "weight": 5.14
         },
         {
           "ticker": "EL",
-          "weight": 5.37
+          "weight": 5.02
         },
         {
           "ticker": "ALC",
-          "weight": 5.09
+          "weight": 4.75
         },
         {
           "ticker": "OTIS",
-          "weight": 4.91
+          "weight": 4.6
         },
         {
           "ticker": "MCO",
-          "weight": 4.18
+          "weight": 3.92
         },
         {
           "ticker": "EFX",
-          "weight": 3.96
+          "weight": 3.7
         },
         {
           "ticker": "ADBE",
-          "weight": 3.35
+          "weight": 3.14
         },
         {
           "ticker": "ALLE",
-          "weight": 3.29
+          "weight": 3.08
         },
         {
           "ticker": "PG",
-          "weight": 3.12
+          "weight": 2.91
         },
         {
           "ticker": "DEO",
-          "weight": 2.98
+          "weight": 2.79
         },
         {
           "ticker": "ICE",
-          "weight": 2.77
+          "weight": 2.59
         },
         {
           "ticker": "RACE",
-          "weight": 2.67
+          "weight": 2.49
         },
         {
           "ticker": "FICO",
-          "weight": 1.57
+          "weight": 1.47
+        },
+        {
+          "ticker": "PINS",
+          "weight": 1.39
+        },
+        {
+          "ticker": "LYFT",
+          "weight": 1.34
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.32
+        },
+        {
+          "ticker": "ABEV",
+          "weight": 1.29
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.14
         }
       ]
     },
@@ -293,83 +1766,99 @@
       "holdings": [
         {
           "ticker": "LIN",
-          "weight": 12.38
+          "weight": 11.74
         },
         {
           "ticker": "BKNG",
-          "weight": 10.03
+          "weight": 9.51
         },
         {
           "ticker": "ACN",
-          "weight": 7.93
+          "weight": 7.51
         },
         {
           "ticker": "TMO",
-          "weight": 7.19
+          "weight": 6.82
         },
         {
           "ticker": "GOOG",
-          "weight": 6.36
+          "weight": 6.03
         },
         {
           "ticker": "EBAY",
-          "weight": 5.65
+          "weight": 5.36
         },
         {
           "ticker": "ALC",
-          "weight": 4.95
+          "weight": 4.69
         },
         {
           "ticker": "ZTS",
-          "weight": 4.62
+          "weight": 4.38
         },
         {
           "ticker": "OTIS",
-          "weight": 4.35
+          "weight": 4.12
         },
         {
           "ticker": "EFX",
-          "weight": 4.31
+          "weight": 4.09
         },
         {
           "ticker": "NKE",
-          "weight": 4.27
+          "weight": 4.04
         },
         {
           "ticker": "EL",
-          "weight": 3.98
+          "weight": 3.77
         },
         {
           "ticker": "MCO",
-          "weight": 3.72
+          "weight": 3.53
         },
         {
           "ticker": "ICE",
-          "weight": 3.59
+          "weight": 3.4
         },
         {
           "ticker": "V",
-          "weight": 3.16
+          "weight": 2.99
         },
         {
           "ticker": "DEO",
-          "weight": 3.04
+          "weight": 2.89
         },
         {
           "ticker": "PG",
-          "weight": 3.0
+          "weight": 2.85
         },
         {
           "ticker": "ALLE",
-          "weight": 2.9
+          "weight": 2.75
         },
         {
           "ticker": "ADBE",
-          "weight": 2.29
+          "weight": 2.17
         },
         {
           "ticker": "RACE",
-          "weight": 2.28
+          "weight": 2.16
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.9
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.24
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.06
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.02
         }
       ]
     },
@@ -378,83 +1867,99 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 12.8
+          "weight": 12.23
         },
         {
           "ticker": "ACN",
-          "weight": 10.45
+          "weight": 9.99
         },
         {
           "ticker": "LIN",
-          "weight": 10.15
+          "weight": 9.7
         },
         {
           "ticker": "TMO",
-          "weight": 8.36
+          "weight": 7.99
         },
         {
           "ticker": "ICE",
-          "weight": 5.34
+          "weight": 5.1
         },
         {
           "ticker": "EFX",
-          "weight": 4.9
+          "weight": 4.68
         },
         {
           "ticker": "EL",
-          "weight": 4.82
+          "weight": 4.61
         },
         {
           "ticker": "ALC",
-          "weight": 4.76
+          "weight": 4.55
         },
         {
           "ticker": "GOOG",
-          "weight": 4.74
+          "weight": 4.53
         },
         {
           "ticker": "ZTS",
-          "weight": 4.46
+          "weight": 4.26
         },
         {
           "ticker": "PG",
-          "weight": 4.17
+          "weight": 3.99
         },
         {
           "ticker": "NKE",
-          "weight": 4.04
+          "weight": 3.86
         },
         {
           "ticker": "DEO",
-          "weight": 3.9
+          "weight": 3.73
         },
         {
           "ticker": "EBAY",
-          "weight": 3.34
+          "weight": 3.19
         },
         {
           "ticker": "OTIS",
-          "weight": 3.31
+          "weight": 3.16
         },
         {
           "ticker": "MCO",
-          "weight": 2.85
+          "weight": 2.72
         },
         {
           "ticker": "RACE",
-          "weight": 2.5
+          "weight": 2.39
         },
         {
           "ticker": "ADBE",
-          "weight": 2.17
+          "weight": 2.07
         },
         {
           "ticker": "ALLE",
-          "weight": 1.56
+          "weight": 1.49
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 1.4
+          "ticker": "ANSS",
+          "weight": 1.34
+        },
+        {
+          "ticker": "V",
+          "weight": 1.22
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.07
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.07
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.07
         }
       ]
     },
@@ -463,83 +1968,103 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 10.77
+          "weight": 9.82
         },
         {
           "ticker": "ACN",
-          "weight": 9.11
+          "weight": 8.31
         },
         {
           "ticker": "TMO",
-          "weight": 8.43
+          "weight": 7.69
         },
         {
           "ticker": "LIN",
-          "weight": 7.57
+          "weight": 6.9
         },
         {
           "ticker": "GOOG",
-          "weight": 5.85
+          "weight": 5.33
         },
         {
           "ticker": "EFX",
-          "weight": 5.78
+          "weight": 5.27
         },
         {
           "ticker": "ICE",
-          "weight": 5.74
+          "weight": 5.23
         },
         {
           "ticker": "ALC",
-          "weight": 5.05
+          "weight": 4.6
         },
         {
           "ticker": "NKE",
-          "weight": 4.38
+          "weight": 3.99
         },
         {
           "ticker": "EL",
-          "weight": 4.17
+          "weight": 3.8
         },
         {
           "ticker": "DEO",
-          "weight": 4.05
+          "weight": 3.69
         },
         {
           "ticker": "ADBE",
-          "weight": 3.97
+          "weight": 3.62
         },
         {
           "ticker": "ZTS",
-          "weight": 3.88
-        },
-        {
-          "ticker": "PG",
-          "weight": 3.55
-        },
-        {
-          "ticker": "OTIS",
           "weight": 3.54
         },
         {
+          "ticker": "PG",
+          "weight": 3.24
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 3.23
+        },
+        {
           "ticker": "V",
-          "weight": 3.44
+          "weight": 3.14
         },
         {
           "ticker": "EBAY",
-          "weight": 3.26
+          "weight": 2.97
         },
         {
           "ticker": "MCO",
-          "weight": 2.65
+          "weight": 2.42
         },
         {
           "ticker": "RACE",
-          "weight": 2.48
+          "weight": 2.26
         },
         {
           "ticker": "ALLE",
-          "weight": 2.33
+          "weight": 2.12
+        },
+        {
+          "ticker": "DG",
+          "weight": 2.07
+        },
+        {
+          "ticker": "FICO",
+          "weight": 1.95
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.79
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.73
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.28
         }
       ]
     },
@@ -548,83 +2073,103 @@
       "holdings": [
         {
           "ticker": "TMO",
-          "weight": 9.9
+          "weight": 9.23
         },
         {
           "ticker": "ACN",
-          "weight": 9.55
+          "weight": 8.91
         },
         {
           "ticker": "BKNG",
-          "weight": 9.07
+          "weight": 8.46
         },
         {
           "ticker": "V",
-          "weight": 7.16
+          "weight": 6.68
         },
         {
           "ticker": "EFX",
-          "weight": 6.1
+          "weight": 5.69
         },
         {
           "ticker": "ICE",
-          "weight": 5.81
+          "weight": 5.42
         },
         {
           "ticker": "EL",
-          "weight": 4.96
+          "weight": 4.63
         },
         {
           "ticker": "ALC",
-          "weight": 4.92
+          "weight": 4.59
         },
         {
           "ticker": "DG",
-          "weight": 4.79
+          "weight": 4.47
         },
         {
           "ticker": "LIN",
-          "weight": 4.62
+          "weight": 4.31
         },
         {
           "ticker": "DEO",
-          "weight": 4.46
+          "weight": 4.16
         },
         {
           "ticker": "ADBE",
-          "weight": 4.2
+          "weight": 3.92
         },
         {
           "ticker": "ZTS",
-          "weight": 3.77
+          "weight": 3.52
         },
         {
           "ticker": "OTIS",
-          "weight": 3.71
+          "weight": 3.46
         },
         {
           "ticker": "ALLE",
-          "weight": 3.63
+          "weight": 3.39
         },
         {
           "ticker": "FICO",
-          "weight": 2.96
+          "weight": 2.76
         },
         {
           "ticker": "NKE",
-          "weight": 2.94
+          "weight": 2.74
         },
         {
           "ticker": "RACE",
-          "weight": 2.63
+          "weight": 2.45
         },
         {
           "ticker": "PG",
-          "weight": 2.59
+          "weight": 2.42
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 2.2
+          "ticker": "ANSS",
+          "weight": 2.05
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.67
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 1.37
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.3
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 1.25
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.14
         }
       ]
     },
@@ -633,83 +2178,95 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 10.53
+          "weight": 10.03
         },
         {
           "ticker": "ACN",
-          "weight": 8.73
+          "weight": 8.32
         },
         {
           "ticker": "TMO",
-          "weight": 8.18
+          "weight": 7.8
         },
         {
           "ticker": "V",
-          "weight": 7.58
+          "weight": 7.22
         },
         {
           "ticker": "ICE",
-          "weight": 6.87
+          "weight": 6.55
         },
         {
           "ticker": "EFX",
-          "weight": 6.11
+          "weight": 5.82
         },
         {
           "ticker": "ALC",
-          "weight": 5.88
+          "weight": 5.61
         },
         {
           "ticker": "GOOG",
-          "weight": 5.36
+          "weight": 5.1
         },
         {
           "ticker": "DG",
-          "weight": 4.95
+          "weight": 4.72
         },
         {
           "ticker": "EL",
-          "weight": 4.36
+          "weight": 4.15
         },
         {
           "ticker": "ALLE",
-          "weight": 4.21
+          "weight": 4.02
         },
         {
           "ticker": "LIN",
-          "weight": 4.17
+          "weight": 3.97
         },
         {
           "ticker": "ADBE",
-          "weight": 3.8
+          "weight": 3.62
         },
         {
           "ticker": "OTIS",
-          "weight": 3.27
+          "weight": 3.11
         },
         {
           "ticker": "ZTS",
-          "weight": 3.19
+          "weight": 3.04
         },
         {
           "ticker": "RACE",
-          "weight": 3.18
+          "weight": 3.03
         },
         {
           "ticker": "FICO",
-          "weight": 2.85
+          "weight": 2.71
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 2.38
+          "ticker": "ANSS",
+          "weight": 2.27
         },
         {
           "ticker": "PG",
-          "weight": 2.34
+          "weight": 2.23
         },
         {
           "ticker": "NKE",
-          "weight": 2.06
+          "weight": 1.96
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 1.92
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.6
+        },
+        {
+          "ticker": "INTU",
+          "weight": 1.2
         }
       ]
     },
@@ -718,83 +2275,87 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 12.54
+          "weight": 12.34
         },
         {
           "ticker": "ACN",
-          "weight": 8.57
+          "weight": 8.43
         },
         {
           "ticker": "V",
-          "weight": 7.71
+          "weight": 7.58
         },
         {
           "ticker": "ICE",
-          "weight": 7.49
+          "weight": 7.37
         },
         {
           "ticker": "ALC",
-          "weight": 6.45
+          "weight": 6.34
         },
         {
           "ticker": "TMO",
-          "weight": 5.96
+          "weight": 5.86
         },
         {
           "ticker": "GOOG",
-          "weight": 5.21
+          "weight": 5.12
         },
         {
           "ticker": "LIN",
-          "weight": 4.68
+          "weight": 4.6
         },
         {
           "ticker": "ALLE",
-          "weight": 4.55
+          "weight": 4.48
         },
         {
           "ticker": "FICO",
-          "weight": 3.91
-        },
-        {
-          "ticker": "EFX",
-          "weight": 3.91
-        },
-        {
-          "ticker": "DG",
           "weight": 3.85
         },
         {
+          "ticker": "EFX",
+          "weight": 3.85
+        },
+        {
+          "ticker": "DG",
+          "weight": 3.79
+        },
+        {
           "ticker": "ADBE",
-          "weight": 3.7
+          "weight": 3.65
         },
         {
           "ticker": "OTIS",
-          "weight": 3.7
+          "weight": 3.64
         },
         {
           "ticker": "EL",
-          "weight": 3.63
+          "weight": 3.57
         },
         {
           "ticker": "RACE",
-          "weight": 3.4
+          "weight": 3.35
         },
         {
           "ticker": "MSFT",
-          "weight": 3.32
+          "weight": 3.27
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 2.68
+          "ticker": "ANSS",
+          "weight": 2.63
         },
         {
           "ticker": "PG",
-          "weight": 2.6
+          "weight": 2.56
         },
         {
           "ticker": "INTU",
-          "weight": 2.12
+          "weight": 2.08
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.62
         }
       ]
     },
@@ -803,83 +2364,99 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 14.71
+          "weight": 13.94
         },
         {
           "ticker": "ACN",
-          "weight": 8.59
+          "weight": 8.14
         },
         {
           "ticker": "ALC",
-          "weight": 7.49
+          "weight": 7.1
         },
         {
           "ticker": "V",
-          "weight": 7.37
+          "weight": 6.98
         },
         {
           "ticker": "ICE",
-          "weight": 7.0
+          "weight": 6.63
         },
         {
           "ticker": "MSFT",
-          "weight": 6.09
+          "weight": 5.77
         },
         {
           "ticker": "TMO",
-          "weight": 5.69
-        },
-        {
-          "ticker": "LIN",
           "weight": 5.39
         },
         {
+          "ticker": "LIN",
+          "weight": 5.11
+        },
+        {
           "ticker": "FICO",
-          "weight": 4.22
+          "weight": 4
         },
         {
           "ticker": "RACE",
-          "weight": 4.1
+          "weight": 3.88
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 4.01
+          "ticker": "ANSS",
+          "weight": 3.8
         },
         {
           "ticker": "ALLE",
-          "weight": 3.96
+          "weight": 3.75
         },
         {
           "ticker": "OTIS",
-          "weight": 3.66
+          "weight": 3.47
         },
         {
           "ticker": "DG",
-          "weight": 3.46
+          "weight": 3.28
         },
         {
           "ticker": "INTU",
-          "weight": 2.88
+          "weight": 2.73
         },
         {
           "ticker": "EFX",
-          "weight": 2.66
+          "weight": 2.52
         },
         {
           "ticker": "EL",
-          "weight": 2.41
+          "weight": 2.28
         },
         {
           "ticker": "PG",
-          "weight": 2.34
+          "weight": 2.22
         },
         {
           "ticker": "MCO",
-          "weight": 2.01
+          "weight": 1.9
         },
         {
           "ticker": "CPRT",
-          "weight": 1.95
+          "weight": 1.85
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.6
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.27
+        },
+        {
+          "ticker": "URI",
+          "weight": 1.21
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 1.16
         }
       ]
     },
@@ -888,83 +2465,99 @@
       "holdings": [
         {
           "ticker": "BKNG",
-          "weight": 9.08
+          "weight": 8.6
         },
         {
           "ticker": "ACN",
-          "weight": 8.94
+          "weight": 8.47
         },
         {
           "ticker": "ALC",
-          "weight": 8.58
+          "weight": 8.13
         },
         {
           "ticker": "LIN",
-          "weight": 7.58
+          "weight": 7.18
         },
         {
           "ticker": "ICE",
-          "weight": 7.52
+          "weight": 7.12
         },
         {
           "ticker": "V",
-          "weight": 7.33
+          "weight": 6.94
         },
         {
           "ticker": "MSFT",
-          "weight": 5.85
+          "weight": 5.54
         },
         {
           "ticker": "RACE",
-          "weight": 4.83
+          "weight": 4.58
         },
         {
           "ticker": "FICO",
-          "weight": 4.62
+          "weight": 4.38
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 4.39
+          "ticker": "ANSS",
+          "weight": 4.16
         },
         {
           "ticker": "ALLE",
-          "weight": 4.23
+          "weight": 4.01
         },
         {
           "ticker": "MCO",
-          "weight": 4.14
+          "weight": 3.92
         },
         {
           "ticker": "OTIS",
-          "weight": 3.67
+          "weight": 3.48
         },
         {
           "ticker": "CPRT",
-          "weight": 3.65
+          "weight": 3.46
         },
         {
           "ticker": "INTU",
-          "weight": 3.45
+          "weight": 3.27
         },
         {
           "ticker": "EFX",
-          "weight": 2.93
+          "weight": 2.78
         },
         {
           "ticker": "TMO",
-          "weight": 2.88
+          "weight": 2.73
         },
         {
           "ticker": "PG",
-          "weight": 2.28
+          "weight": 2.16
         },
         {
-          "ticker": "MRSH",
-          "weight": 2.15
+          "ticker": "MMC",
+          "weight": 2.04
         },
         {
           "ticker": "URI",
-          "weight": 1.88
+          "weight": 1.78
+        },
+        {
+          "ticker": "EL",
+          "weight": 1.75
+        },
+        {
+          "ticker": "MAR",
+          "weight": 1.26
+        },
+        {
+          "ticker": "DG",
+          "weight": 1.16
+        },
+        {
+          "ticker": "ZTS",
+          "weight": 1.14
         }
       ]
     },
@@ -973,83 +2566,107 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 9.21
+          "weight": 8.3
         },
         {
           "ticker": "ACN",
-          "weight": 8.12
+          "weight": 7.32
         },
         {
           "ticker": "V",
-          "weight": 7.97
+          "weight": 7.18
         },
         {
           "ticker": "BKNG",
-          "weight": 7.38
+          "weight": 6.66
         },
         {
           "ticker": "ICE",
-          "weight": 7.36
+          "weight": 6.63
         },
         {
           "ticker": "MSFT",
-          "weight": 5.66
+          "weight": 5.1
         },
         {
           "ticker": "FICO",
-          "weight": 5.56
+          "weight": 5.02
         },
         {
           "ticker": "INTU",
-          "weight": 5.4
+          "weight": 4.87
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 4.82
+          "ticker": "ANSS",
+          "weight": 4.34
         },
         {
           "ticker": "CPRT",
-          "weight": 4.36
+          "weight": 3.94
         },
         {
           "ticker": "RACE",
-          "weight": 4.36
-        },
-        {
-          "ticker": "MCO",
-          "weight": 4.22
-        },
-        {
-          "ticker": "LIN",
-          "weight": 4.07
-        },
-        {
-          "ticker": "GE",
           "weight": 3.93
         },
         {
+          "ticker": "MCO",
+          "weight": 3.8
+        },
+        {
+          "ticker": "LIN",
+          "weight": 3.67
+        },
+        {
+          "ticker": "GE",
+          "weight": 3.54
+        },
+        {
           "ticker": "OTIS",
-          "weight": 3.23
+          "weight": 2.92
         },
         {
           "ticker": "TMO",
-          "weight": 3.12
+          "weight": 2.82
         },
         {
           "ticker": "ZTS",
-          "weight": 3.09
+          "weight": 2.78
         },
         {
-          "ticker": "MRSH",
-          "weight": 3.04
+          "ticker": "MMC",
+          "weight": 2.75
         },
         {
           "ticker": "CDNS",
-          "weight": 2.64
+          "weight": 2.38
         },
         {
           "ticker": "PG",
-          "weight": 2.45
+          "weight": 2.21
+        },
+        {
+          "ticker": "WAT",
+          "weight": 2.13
+        },
+        {
+          "ticker": "ALLE",
+          "weight": 2.12
+        },
+        {
+          "ticker": "URI",
+          "weight": 1.9
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.54
+        },
+        {
+          "ticker": "EL",
+          "weight": 1.1
+        },
+        {
+          "ticker": "WMG",
+          "weight": 1.05
         }
       ]
     },
@@ -1058,83 +2675,107 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 8.35
+          "weight": 7.48
         },
         {
           "ticker": "V",
-          "weight": 6.96
+          "weight": 6.23
         },
         {
           "ticker": "MSFT",
-          "weight": 6.8
+          "weight": 6.09
         },
         {
           "ticker": "ACN",
-          "weight": 6.76
+          "weight": 6.06
         },
         {
           "ticker": "BKNG",
-          "weight": 6.67
+          "weight": 5.98
         },
         {
           "ticker": "ICE",
-          "weight": 6.66
+          "weight": 5.97
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 5.72
+          "ticker": "ANSS",
+          "weight": 5.12
         },
         {
           "ticker": "FICO",
-          "weight": 5.27
+          "weight": 4.72
         },
         {
           "ticker": "GE",
-          "weight": 5.09
+          "weight": 4.56
         },
         {
           "ticker": "INTU",
-          "weight": 5.06
+          "weight": 4.53
         },
         {
           "ticker": "MCO",
-          "weight": 4.51
+          "weight": 4.04
         },
         {
           "ticker": "EL",
-          "weight": 4.43
+          "weight": 3.97
         },
         {
           "ticker": "WAT",
-          "weight": 4.12
+          "weight": 3.69
         },
         {
           "ticker": "ZTS",
-          "weight": 3.93
+          "weight": 3.52
         },
         {
           "ticker": "RACE",
-          "weight": 3.81
+          "weight": 3.42
         },
         {
-          "ticker": "MRSH",
-          "weight": 3.63
+          "ticker": "MMC",
+          "weight": 3.25
         },
         {
           "ticker": "LIN",
-          "weight": 3.61
+          "weight": 3.24
         },
         {
           "ticker": "NKE",
-          "weight": 3.28
+          "weight": 2.94
         },
         {
           "ticker": "EFX",
-          "weight": 2.68
+          "weight": 2.39
         },
         {
           "ticker": "CDNS",
-          "weight": 2.66
+          "weight": 2.38
+        },
+        {
+          "ticker": "URI",
+          "weight": 2.11
+        },
+        {
+          "ticker": "WMG",
+          "weight": 1.94
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 1.91
+        },
+        {
+          "ticker": "PG",
+          "weight": 1.67
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.51
+        },
+        {
+          "ticker": "TMO",
+          "weight": 1.26
         }
       ]
     },
@@ -1143,83 +2784,107 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 8.68
+          "weight": 7.72
         },
         {
           "ticker": "MSFT",
-          "weight": 7.58
-        },
-        {
-          "ticker": "GE",
-          "weight": 6.96
-        },
-        {
-          "ticker": "EL",
           "weight": 6.73
         },
         {
+          "ticker": "GE",
+          "weight": 6.18
+        },
+        {
+          "ticker": "EL",
+          "weight": 5.97
+        },
+        {
           "ticker": "ICE",
-          "weight": 5.89
+          "weight": 5.23
         },
         {
           "ticker": "V",
-          "weight": 5.7
+          "weight": 5.07
         },
         {
           "ticker": "INTU",
-          "weight": 5.46
+          "weight": 4.86
         },
         {
           "ticker": "FICO",
-          "weight": 5.01
+          "weight": 4.46
         },
         {
           "ticker": "BKNG",
-          "weight": 5.0
+          "weight": 4.45
         },
         {
           "ticker": "RACE",
-          "weight": 4.83
+          "weight": 4.29
         },
         {
           "ticker": "ZTS",
-          "weight": 4.73
+          "weight": 4.2
         },
         {
           "ticker": "WAT",
-          "weight": 4.65
+          "weight": 4.13
         },
         {
           "ticker": "MCO",
-          "weight": 4.51
+          "weight": 4.01
         },
         {
           "ticker": "TMO",
-          "weight": 4.31
+          "weight": 3.82
         },
         {
-          "ticker": "MRSH",
-          "weight": 4.23
+          "ticker": "MMC",
+          "weight": 3.76
         },
         {
           "ticker": "MSCI",
-          "weight": 3.98
+          "weight": 3.53
         },
         {
           "ticker": "WMG",
-          "weight": 3.47
+          "weight": 3.08
         },
         {
           "ticker": "EFX",
-          "weight": 2.86
+          "weight": 2.54
         },
         {
           "ticker": "ACN",
-          "weight": 2.79
+          "weight": 2.48
         },
         {
           "ticker": "PG",
-          "weight": 2.65
+          "weight": 2.35
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 2.32
+        },
+        {
+          "ticker": "LIN",
+          "weight": 2.29
+        },
+        {
+          "ticker": "ADI",
+          "weight": 2.05
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.01
+        },
+        {
+          "ticker": "CDNS",
+          "weight": 1.38
+        },
+        {
+          "ticker": "OTIS",
+          "weight": 1.08
         }
       ]
     },
@@ -1228,83 +2893,103 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 8.64
+          "weight": 7.81
         },
         {
           "ticker": "MSFT",
-          "weight": 8.23
+          "weight": 7.44
         },
         {
           "ticker": "FICO",
-          "weight": 7.19
+          "weight": 6.5
         },
         {
           "ticker": "GE",
-          "weight": 6.88
+          "weight": 6.23
         },
         {
           "ticker": "INTU",
-          "weight": 5.94
+          "weight": 5.37
         },
         {
           "ticker": "ACN",
-          "weight": 5.63
+          "weight": 5.09
         },
         {
           "ticker": "ICE",
-          "weight": 5.55
+          "weight": 5.03
         },
         {
           "ticker": "V",
-          "weight": 5.31
+          "weight": 4.8
         },
         {
           "ticker": "BKNG",
-          "weight": 5.19
+          "weight": 4.69
         },
         {
           "ticker": "MCO",
-          "weight": 4.78
+          "weight": 4.32
         },
         {
-          "ticker": "MRSH",
-          "weight": 4.77
+          "ticker": "MMC",
+          "weight": 4.31
         },
         {
           "ticker": "TMO",
-          "weight": 4.4
+          "weight": 3.99
         },
         {
           "ticker": "RACE",
-          "weight": 4.19
+          "weight": 3.79
         },
         {
           "ticker": "ZTS",
-          "weight": 3.94
+          "weight": 3.56
         },
         {
           "ticker": "WAT",
-          "weight": 3.87
+          "weight": 3.5
         },
         {
           "ticker": "WMG",
-          "weight": 3.47
+          "weight": 3.14
         },
         {
           "ticker": "MSCI",
-          "weight": 3.38
+          "weight": 3.06
         },
         {
           "ticker": "ADI",
-          "weight": 3.22
+          "weight": 2.91
         },
         {
           "ticker": "AMZN",
-          "weight": 2.75
+          "weight": 2.49
         },
         {
           "ticker": "PG",
-          "weight": 2.65
+          "weight": 2.41
+        },
+        {
+          "ticker": "EFX",
+          "weight": 2.32
+        },
+        {
+          "ticker": "LIN",
+          "weight": 2.14
+        },
+        {
+          "ticker": "EL",
+          "weight": 2.06
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.76
+        },
+        {
+          "ticker": "CDNS",
+          "weight": 1.28
         }
       ]
     },
@@ -1313,83 +2998,95 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 8.58
+          "weight": 8.08
         },
         {
           "ticker": "MSFT",
-          "weight": 7.6
+          "weight": 7.15
         },
         {
           "ticker": "GE",
-          "weight": 6.97
+          "weight": 6.56
         },
         {
           "ticker": "V",
-          "weight": 6.87
+          "weight": 6.46
         },
         {
           "ticker": "ICE",
-          "weight": 6.68
+          "weight": 6.28
         },
         {
-          "ticker": "MRSH",
-          "weight": 6.14
+          "ticker": "MMC",
+          "weight": 5.78
         },
         {
           "ticker": "FICO",
-          "weight": 6.03
+          "weight": 5.67
         },
         {
           "ticker": "ACN",
-          "weight": 5.79
+          "weight": 5.45
         },
         {
           "ticker": "INTU",
-          "weight": 4.75
+          "weight": 4.47
         },
         {
           "ticker": "MCO",
-          "weight": 4.53
+          "weight": 4.26
         },
         {
           "ticker": "BKNG",
-          "weight": 4.44
+          "weight": 4.18
         },
         {
           "ticker": "RACE",
-          "weight": 4.25
+          "weight": 4
         },
         {
           "ticker": "ZTS",
-          "weight": 4.07
+          "weight": 3.83
         },
         {
           "ticker": "WAT",
-          "weight": 3.97
+          "weight": 3.73
         },
         {
           "ticker": "AMZN",
-          "weight": 3.86
+          "weight": 3.64
         },
         {
           "ticker": "TMO",
-          "weight": 3.65
+          "weight": 3.44
         },
         {
           "ticker": "ADI",
-          "weight": 3.61
+          "weight": 3.4
         },
         {
           "ticker": "WMG",
-          "weight": 3.0
+          "weight": 2.82
         },
         {
           "ticker": "CPRT",
-          "weight": 2.65
+          "weight": 2.49
         },
         {
           "ticker": "PG",
-          "weight": 2.56
+          "weight": 2.41
+        },
+        {
+          "ticker": "LIN",
+          "weight": 2.21
+        },
+        {
+          "ticker": "EFX",
+          "weight": 2.12
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 1.58
         }
       ]
     },
@@ -1398,83 +3095,113 @@
       "holdings": [
         {
           "ticker": "V",
-          "weight": 8.19
+          "weight": 7.89,
+          "shares": 1757145
         },
         {
           "ticker": "ALC",
-          "weight": 7.36
+          "weight": 7.09,
+          "shares": 5876280
         },
         {
           "ticker": "MSFT",
-          "weight": 7.11
+          "weight": 6.85,
+          "shares": 1142735
         },
         {
           "ticker": "ACN",
-          "weight": 6.81
+          "weight": 6.56,
+          "shares": 1311465
         },
         {
           "ticker": "GE",
-          "weight": 6.63
+          "weight": 6.38,
+          "shares": 2693057
         },
         {
-          "ticker": "MRSH",
-          "weight": 6.46
+          "ticker": "MMC",
+          "weight": 6.23,
+          "shares": 2062828
         },
         {
           "ticker": "ICE",
-          "weight": 5.73
+          "weight": 5.52,
+          "shares": 2605657
         },
         {
           "ticker": "INTU",
-          "weight": 5.51
+          "weight": 5.31,
+          "shares": 594479
         },
         {
           "ticker": "BKNG",
-          "weight": 5.32
+          "weight": 5.12,
+          "shares": 72470
         },
         {
           "ticker": "MCO",
-          "weight": 4.56
+          "weight": 4.4,
+          "shares": 653387
         },
         {
           "ticker": "AMZN",
-          "weight": 4.56
+          "weight": 4.39,
+          "shares": 1408315
         },
         {
           "ticker": "WAT",
-          "weight": 4.46
+          "weight": 4.3,
+          "shares": 815379
         },
         {
           "ticker": "FICO",
-          "weight": 4.37
+          "weight": 4.2,
+          "shares": 148602
         },
         {
           "ticker": "RACE",
-          "weight": 3.9
+          "weight": 3.75,
+          "shares": 619722
         },
         {
           "ticker": "CPRT",
-          "weight": 3.72
+          "weight": 3.58,
+          "shares": 4391462
         },
         {
           "ticker": "ADI",
-          "weight": 3.66
+          "weight": 3.52,
+          "shares": 1167224
         },
         {
           "ticker": "ZTS",
-          "weight": 3.62
+          "weight": 3.49,
+          "shares": 1505938
         },
         {
           "ticker": "PG",
-          "weight": 2.9
+          "weight": 2.79,
+          "shares": 1172423
         },
         {
           "ticker": "EFX",
-          "weight": 2.73
+          "weight": 2.63,
+          "shares": 726246
         },
         {
           "ticker": "TMO",
-          "weight": 2.41
+          "weight": 2.32,
+          "shares": 313784
+        },
+        {
+          "ticker": "WMG",
+          "weight": 1.9,
+          "shares": 4323994
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 1.78,
+          "shares": 208903
         }
       ]
     },
@@ -1483,83 +3210,108 @@
       "holdings": [
         {
           "ticker": "ALC",
-          "weight": 9.03
+          "weight": 8.91,
+          "shares": 7115571
         },
         {
           "ticker": "V",
-          "weight": 8.35
+          "weight": 8.24,
+          "shares": 1775973
         },
         {
           "ticker": "FLUT",
-          "weight": 7.67
+          "weight": 7.57,
+          "shares": 2590673
         },
         {
-          "ticker": "MRSH",
-          "weight": 6.95
+          "ticker": "MMC",
+          "weight": 6.86,
+          "shares": 2121730
         },
         {
           "ticker": "GE",
-          "weight": 6.62
+          "weight": 6.54,
+          "shares": 2466267
         },
         {
           "ticker": "MSFT",
-          "weight": 6.3
+          "weight": 6.22,
+          "shares": 1250718
         },
         {
           "ticker": "ICE",
-          "weight": 5.28
+          "weight": 5.21,
+          "shares": 2282427
         },
         {
           "ticker": "ACN",
-          "weight": 5.18
+          "weight": 5.12,
+          "shares": 1238638
         },
         {
           "ticker": "MCO",
-          "weight": 5.17
+          "weight": 5.1,
+          "shares": 826734
         },
         {
           "ticker": "INTU",
-          "weight": 4.58
+          "weight": 4.52,
+          "shares": 555811
         },
         {
           "ticker": "BKNG",
-          "weight": 4.46
+          "weight": 4.4,
+          "shares": 72052
         },
         {
           "ticker": "WAT",
-          "weight": 4.38
+          "weight": 4.33,
+          "shares": 887215
         },
         {
           "ticker": "CPRT",
-          "weight": 3.86
+          "weight": 3.81,
+          "shares": 5081145
         },
         {
           "ticker": "FICO",
-          "weight": 3.72
+          "weight": 3.68,
+          "shares": 150660
         },
         {
           "ticker": "AMZN",
-          "weight": 3.67
+          "weight": 3.62,
+          "shares": 1437908
         },
         {
           "ticker": "ZTS",
-          "weight": 3.37
+          "weight": 3.32,
+          "shares": 1523960
         },
         {
           "ticker": "ADI",
-          "weight": 3.36
+          "weight": 3.32,
+          "shares": 1243847
         },
         {
           "ticker": "RACE",
-          "weight": 3.34
+          "weight": 3.29,
+          "shares": 585118
         },
         {
           "ticker": "EFX",
-          "weight": 2.49
+          "weight": 2.46,
+          "shares": 762905
         },
         {
           "ticker": "TMO",
-          "weight": 2.22
+          "weight": 2.19,
+          "shares": 332845
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.28,
+          "shares": 359908
         }
       ]
     },
@@ -1568,79 +3320,98 @@
       "holdings": [
         {
           "ticker": "FLUT",
-          "weight": 10.91
+          "weight": 10.91,
+          "shares": 2973210
         },
         {
           "ticker": "ALC",
-          "weight": 8.77
+          "weight": 8.77,
+          "shares": 7713406
         },
         {
           "ticker": "MSFT",
-          "weight": 8.15
+          "weight": 8.14,
+          "shares": 1272557
         },
         {
           "ticker": "V",
-          "weight": 7.5
+          "weight": 7.51,
+          "shares": 1643373
         },
         {
           "ticker": "INTU",
-          "weight": 6.85
+          "weight": 6.85,
+          "shares": 675783
         },
         {
           "ticker": "GE",
-          "weight": 6.83
+          "weight": 6.83,
+          "shares": 2063006
         },
         {
           "ticker": "MCO",
-          "weight": 5.34
+          "weight": 5.34,
+          "shares": 827554
         },
         {
           "ticker": "ICE",
-          "weight": 5.17
+          "weight": 5.17,
+          "shares": 2191657
         },
         {
           "ticker": "BKNG",
-          "weight": 5.15
+          "weight": 5.15,
+          "shares": 69107
         },
         {
-          "ticker": "MRSH",
-          "weight": 5.02
+          "ticker": "MMC",
+          "weight": 5.01,
+          "shares": 1782200
         },
         {
           "ticker": "AMZN",
-          "weight": 4.12
+          "weight": 4.12,
+          "shares": 1460648
         },
         {
           "ticker": "RACE",
-          "weight": 4.08
+          "weight": 4.07,
+          "shares": 646106
         },
         {
           "ticker": "ADI",
-          "weight": 3.88
+          "weight": 3.88,
+          "shares": 1267990
         },
         {
           "ticker": "FICO",
-          "weight": 3.61
+          "weight": 3.61,
+          "shares": 153273
         },
         {
           "ticker": "WAT",
-          "weight": 3.54
+          "weight": 3.54,
+          "shares": 787346
         },
         {
           "ticker": "CPRT",
-          "weight": 3.37
+          "weight": 3.37,
+          "shares": 5340975
         },
         {
           "ticker": "EFX",
-          "weight": 3.04
+          "weight": 3.04,
+          "shares": 911820
         },
         {
           "ticker": "ZTS",
-          "weight": 3.03
+          "weight": 3.03,
+          "shares": 1510926
         },
         {
           "ticker": "CRM",
-          "weight": 1.64
+          "weight": 1.65,
+          "shares": 469254
         }
       ]
     },
@@ -1649,79 +3420,98 @@
       "holdings": [
         {
           "ticker": "FLUT",
-          "weight": 11.6
+          "weight": 11.6,
+          "shares": 3120116
         },
         {
           "ticker": "ALC",
-          "weight": 8.64
+          "weight": 8.64,
+          "shares": 7974364
         },
         {
           "ticker": "MSFT",
-          "weight": 8.06
+          "weight": 8.06,
+          "shares": 1068996
         },
         {
           "ticker": "V",
-          "weight": 7.88
+          "weight": 7.88,
+          "shares": 1584857
         },
         {
           "ticker": "INTU",
-          "weight": 6.71
+          "weight": 6.71,
+          "shares": 674425
         },
         {
           "ticker": "GE",
-          "weight": 5.79
+          "weight": 5.78,
+          "shares": 1320876
         },
         {
           "ticker": "AMZN",
-          "weight": 5.78
+          "weight": 5.78,
+          "shares": 1808033
         },
         {
           "ticker": "MCO",
-          "weight": 5.33
+          "weight": 5.32,
+          "shares": 767143
         },
         {
-          "ticker": "MRSH",
-          "weight": 5.28
+          "ticker": "MMC",
+          "weight": 5.28,
+          "shares": 1799753
         },
         {
           "ticker": "ICE",
-          "weight": 5.11
+          "weight": 5.11,
+          "shares": 2084001
         },
         {
           "ticker": "BKNG",
-          "weight": 5.08
+          "weight": 5.08,
+          "shares": 64618
         },
         {
           "ticker": "RACE",
-          "weight": 4.46
+          "weight": 4.46,
+          "shares": 632960
         },
         {
           "ticker": "ADI",
-          "weight": 4.37
+          "weight": 4.38,
+          "shares": 1223147
         },
         {
           "ticker": "CPRT",
-          "weight": 3.62
+          "weight": 3.62,
+          "shares": 5527245
         },
         {
           "ticker": "WAT",
-          "weight": 3.52
+          "weight": 3.52,
+          "shares": 806948
         },
         {
           "ticker": "EFX",
-          "weight": 3.5
+          "weight": 3.5,
+          "shares": 938348
         },
         {
           "ticker": "FICO",
-          "weight": 2.69
+          "weight": 2.69,
+          "shares": 123646
         },
         {
           "ticker": "ZTS",
-          "weight": 1.45
+          "weight": 1.46,
+          "shares": 683704
         },
         {
           "ticker": "CRM",
-          "weight": 1.13
+          "weight": 1.13,
+          "shares": 326128
         }
       ]
     },
@@ -1730,92 +3520,113 @@
       "holdings": [
         {
           "ticker": "FLUT",
-          "weight": 10.3
+          "weight": 10.3,
+          "shares": 3109426
         },
         {
           "ticker": "ALC",
-          "weight": 9.37
+          "weight": 9.37,
+          "shares": 7686700
         },
         {
           "ticker": "V",
-          "weight": 7.75
+          "weight": 7.75,
+          "shares": 1437967
         },
         {
           "ticker": "MSFT",
-          "weight": 7.59
+          "weight": 7.59,
+          "shares": 1020715
         },
         {
           "ticker": "AMZN",
-          "weight": 6.17
+          "weight": 6.17,
+          "shares": 1737603
         },
         {
           "ticker": "MCO",
-          "weight": 5.78
+          "weight": 5.78,
+          "shares": 736568
         },
         {
           "ticker": "RACE",
-          "weight": 5.4
+          "weight": 5.4,
+          "shares": 944867
         },
         {
           "ticker": "GE",
-          "weight": 5.25
+          "weight": 5.25,
+          "shares": 1109389
         },
         {
           "ticker": "ADI",
-          "weight": 5.2
+          "weight": 5.2,
+          "shares": 1248009
         },
         {
           "ticker": "ICE",
-          "weight": 5.19
+          "weight": 5.19,
+          "shares": 2084185
         },
         {
           "ticker": "WAT",
-          "weight": 4.4
+          "weight": 4.4,
+          "shares": 753455
         },
         {
-          "ticker": "MRSH",
-          "weight": 4.23
+          "ticker": "MMC",
+          "weight": 4.23,
+          "shares": 1484860
         },
         {
           "ticker": "CSCO",
-          "weight": 3.69
+          "weight": 3.69,
+          "shares": 3113706
         },
         {
           "ticker": "CPRT",
-          "weight": 3.61
+          "weight": 3.62,
+          "shares": 6010134
         },
         {
           "ticker": "BKNG",
-          "weight": 3.52
+          "weight": 3.52,
+          "shares": 42801
         },
         {
           "ticker": "CP",
-          "weight": 3.35
+          "weight": 3.35,
+          "shares": 2957361
         },
         {
           "ticker": "FICO",
-          "weight": 2.93
+          "weight": 2.93,
+          "shares": 112785
         },
         {
           "ticker": "EFX",
-          "weight": 2.55
+          "weight": 2.55,
+          "shares": 765955
         },
         {
           "ticker": "INTU",
-          "weight": 2.43
+          "weight": 2.43,
+          "shares": 238876
         },
         {
           "ticker": "CRM",
-          "weight": 1.27
+          "weight": 1.27,
+          "shares": 312608
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:32:44Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AKO",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-24T23:46:06Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001376879-ako-capital-llp",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

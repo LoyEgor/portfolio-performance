@@ -328,19 +328,23 @@
       "holdings": [
         {
           "ticker": "BRK.A",
-          "weight": 75.42
+          "weight": 75.42,
+          "shares": 349
         },
         {
           "ticker": "SGOV",
-          "weight": 18.5
+          "weight": 18.5,
+          "shares": 581100
         },
         {
           "ticker": "PDD",
-          "weight": 4.0
+          "weight": 4.0,
+          "shares": 130000
         },
         {
           "ticker": "SWBI",
-          "weight": 2.08
+          "weight": 2.08,
+          "shares": 648956
         }
       ]
     },
@@ -349,19 +353,23 @@
       "holdings": [
         {
           "ticker": "BRK.A",
-          "weight": 53.45
+          "weight": 53.45,
+          "shares": 145
         },
         {
           "ticker": "SGOV",
-          "weight": 27.0
+          "weight": 27.0,
+          "shares": 581100
         },
         {
           "ticker": "PDD",
-          "weight": 16.76
+          "weight": 16.76,
+          "shares": 306751
         },
         {
           "ticker": "SWBI",
-          "weight": 2.79
+          "weight": 2.79,
+          "shares": 648956
         }
       ]
     },
@@ -370,23 +378,28 @@
       "holdings": [
         {
           "ticker": "BRK.A",
-          "weight": 34.28
+          "weight": 34.28,
+          "shares": 145
         },
         {
           "ticker": "SGOV",
-          "weight": 18.49
+          "weight": 18.49,
+          "shares": 566000
         },
         {
           "ticker": "CROX",
-          "weight": 17.45
+          "weight": 17.45,
+          "shares": 531108
         },
         {
           "ticker": "PYPL",
-          "weight": 15.68
+          "weight": 15.68,
+          "shares": 650447
         },
         {
           "ticker": "PDD",
-          "weight": 14.09
+          "weight": 14.09,
+          "shares": 415004
         }
       ]
     },
@@ -395,27 +408,33 @@
       "holdings": [
         {
           "ticker": "BRK.A",
-          "weight": 33.92
+          "weight": 33.92,
+          "shares": 145
         },
         {
           "ticker": "SGOV",
-          "weight": 17.68
+          "weight": 17.68,
+          "shares": 566000
         },
         {
           "ticker": "PDD",
-          "weight": 17.01
+          "weight": 17.01,
+          "shares": 415004
         },
         {
           "ticker": "CROX",
-          "weight": 16.38
+          "weight": 16.38,
+          "shares": 632250
         },
         {
           "ticker": "PYPL",
-          "weight": 13.53
+          "weight": 13.53,
+          "shares": 650447
         },
         {
           "ticker": "FISV",
-          "weight": 1.48
+          "weight": 1.48,
+          "shares": 37000
         }
       ]
     },
@@ -424,32 +443,38 @@
       "holdings": [
         {
           "ticker": "BRK.A",
-          "weight": 36.38
+          "weight": 36.38,
+          "shares": 145
         },
         {
           "ticker": "SGOV",
-          "weight": 18.88
+          "weight": 18.88,
+          "shares": 566000
         },
         {
           "ticker": "CROX",
-          "weight": 16.9
+          "weight": 16.9,
+          "shares": 594570
         },
         {
           "ticker": "PDD",
-          "weight": 15.64
+          "weight": 15.64,
+          "shares": 415004
         },
         {
           "ticker": "PYPL",
-          "weight": 12.2
+          "weight": 12.2,
+          "shares": 628907
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:37:01Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=PC",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:32:31Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001419050-punch-card-capital-l-p",
+    "sharesSource": "dataroma-hist.php",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

@@ -18,12 +18,12 @@
     },
     {
       "ticker": "CAT",
-      "weight": 14.73,
+      "weight": 14.72,
       "shares": 6353614
     },
     {
       "ticker": "DE",
-      "weight": 6.56,
+      "weight": 6.55,
       "shares": 3557378
     },
     {
@@ -48,11 +48,1043 @@
     },
     {
       "ticker": "WCN",
-      "weight": 1.09,
+      "weight": 1.08,
       "shares": 2039175
     }
   ],
   "history": [
+    {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 58.39
+        },
+        {
+          "ticker": "WM",
+          "weight": 6.52
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.34
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.11
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.71
+        },
+        {
+          "ticker": "KOF",
+          "weight": 3.06
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.92
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.89
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.83
+        },
+        {
+          "ticker": "TV",
+          "weight": 2.75
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.74
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.74
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 56.43
+        },
+        {
+          "ticker": "WM",
+          "weight": 7.48
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.12
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.17
+        },
+        {
+          "ticker": "WMT",
+          "weight": 5.13
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.27
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.13
+        },
+        {
+          "ticker": "KOF",
+          "weight": 3.12
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.95
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.78
+        },
+        {
+          "ticker": "TV",
+          "weight": 2.66
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.75
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 59.27
+        },
+        {
+          "ticker": "WM",
+          "weight": 6.56
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.18
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.52
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.62
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.93
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.92
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.77
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.73
+        },
+        {
+          "ticker": "KOF",
+          "weight": 2.57
+        },
+        {
+          "ticker": "TV",
+          "weight": 2.39
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.55
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 60.39
+        },
+        {
+          "ticker": "WM",
+          "weight": 7.06
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.17
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.58
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.29
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.01
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.77
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.73
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.47
+        },
+        {
+          "ticker": "KOF",
+          "weight": 2.11
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.88
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.54
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 57.88
+        },
+        {
+          "ticker": "WM",
+          "weight": 7.33
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.83
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.64
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.51
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.19
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.95
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.72
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.62
+        },
+        {
+          "ticker": "KOF",
+          "weight": 2.4
+        },
+        {
+          "ticker": "TV",
+          "weight": 2.36
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 44.11
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 19.36
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.09
+        },
+        {
+          "ticker": "WM",
+          "weight": 6
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.31
+        },
+        {
+          "ticker": "WMT",
+          "weight": 3.85
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.88
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.54
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.34
+        },
+        {
+          "ticker": "KOF",
+          "weight": 2.31
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.2
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.81
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 49.46
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 16.41
+        },
+        {
+          "ticker": "WM",
+          "weight": 5.74
+        },
+        {
+          "ticker": "CNI",
+          "weight": 5.58
+        },
+        {
+          "ticker": "CAT",
+          "weight": 5.53
+        },
+        {
+          "ticker": "WMT",
+          "weight": 3.57
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.68
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.21
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.14
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.1
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.89
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.64
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 48.71
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.87
+        },
+        {
+          "ticker": "CAT",
+          "weight": 6.86
+        },
+        {
+          "ticker": "WM",
+          "weight": 6.22
+        },
+        {
+          "ticker": "CNI",
+          "weight": 5.46
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.43
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.92
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.29
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.26
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.08
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.67
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.22
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 48.86
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 15.27
+        },
+        {
+          "ticker": "CAT",
+          "weight": 6.94
+        },
+        {
+          "ticker": "WM",
+          "weight": 6.56
+        },
+        {
+          "ticker": "CNI",
+          "weight": 5.24
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.32
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.04
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.5
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.44
+        },
+        {
+          "ticker": "UPS",
+          "weight": 1.98
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.73
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 46.25
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 14.6
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.07
+        },
+        {
+          "ticker": "WM",
+          "weight": 7.01
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.48
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.6
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.18
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.83
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.66
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.22
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.62
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.48
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 52.58
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.86
+        },
+        {
+          "ticker": "CAT",
+          "weight": 6.79
+        },
+        {
+          "ticker": "WM",
+          "weight": 6.66
+        },
+        {
+          "ticker": "CNI",
+          "weight": 6.08
+        },
+        {
+          "ticker": "WMT",
+          "weight": 4.31
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.88
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.71
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.35
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.09
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.51
+        },
+        {
+          "ticker": "TV",
+          "weight": 1.18
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 54.24
+        },
+        {
+          "ticker": "WM",
+          "weight": 7.72
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 7.56
+        },
+        {
+          "ticker": "CAT",
+          "weight": 6.66
+        },
+        {
+          "ticker": "CNI",
+          "weight": 5.91
+        },
+        {
+          "ticker": "WMT",
+          "weight": 5.03
+        },
+        {
+          "ticker": "ECL",
+          "weight": 2.99
+        },
+        {
+          "ticker": "CCI",
+          "weight": 2.7
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.27
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.05
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.76
+        },
+        {
+          "ticker": "WBA",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 51.16
+        },
+        {
+          "ticker": "WM",
+          "weight": 9.47
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.49
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.46
+        },
+        {
+          "ticker": "WMT",
+          "weight": 5.53
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.61
+        },
+        {
+          "ticker": "ECL",
+          "weight": 3.77
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.34
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.68
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.47
+        },
+        {
+          "ticker": "KOF",
+          "weight": 2.01
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 51.48
+        },
+        {
+          "ticker": "WM",
+          "weight": 11.03
+        },
+        {
+          "ticker": "CNI",
+          "weight": 8.13
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.87
+        },
+        {
+          "ticker": "WMT",
+          "weight": 6.58
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.42
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.57
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.55
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.4
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.98
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 54.73
+        },
+        {
+          "ticker": "WM",
+          "weight": 10.27
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.37
+        },
+        {
+          "ticker": "CAT",
+          "weight": 6.82
+        },
+        {
+          "ticker": "WMT",
+          "weight": 6.6
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.14
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.55
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.6
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.11
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.81
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 53.87
+        },
+        {
+          "ticker": "WM",
+          "weight": 10.12
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.92
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.38
+        },
+        {
+          "ticker": "WMT",
+          "weight": 6.57
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.02
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.61
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.52
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.18
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.8
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 49.22
+        },
+        {
+          "ticker": "WM",
+          "weight": 10.34
+        },
+        {
+          "ticker": "CNI",
+          "weight": 7.97
+        },
+        {
+          "ticker": "WMT",
+          "weight": 7.9
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.83
+        },
+        {
+          "ticker": "CCI",
+          "weight": 4.62
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.08
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.53
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.2
+        },
+        {
+          "ticker": "SDGR",
+          "weight": 1.8
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 41.39
+        },
+        {
+          "ticker": "WM",
+          "weight": 11.47
+        },
+        {
+          "ticker": "CNI",
+          "weight": 8.81
+        },
+        {
+          "ticker": "CAT",
+          "weight": 8.28
+        },
+        {
+          "ticker": "WMT",
+          "weight": 8.07
+        },
+        {
+          "ticker": "CCI",
+          "weight": 5.18
+        },
+        {
+          "ticker": "ECL",
+          "weight": 5.05
+        },
+        {
+          "ticker": "SDGR",
+          "weight": 3.71
+        },
+        {
+          "ticker": "UPS",
+          "weight": 2.92
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.46
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.58
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 47.17
+        },
+        {
+          "ticker": "WM",
+          "weight": 9.92
+        },
+        {
+          "ticker": "CNI",
+          "weight": 8.58
+        },
+        {
+          "ticker": "CAT",
+          "weight": 7.9
+        },
+        {
+          "ticker": "WMT",
+          "weight": 7.63
+        },
+        {
+          "ticker": "CCI",
+          "weight": 4.18
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.1
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.58
+        },
+        {
+          "ticker": "UPS",
+          "weight": 3.55
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.19
+        },
+        {
+          "ticker": "SDGR",
+          "weight": 1.11
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 44.93
+        },
+        {
+          "ticker": "WM",
+          "weight": 10.11
+        },
+        {
+          "ticker": "CAT",
+          "weight": 9.43
+        },
+        {
+          "ticker": "CNI",
+          "weight": 8.58
+        },
+        {
+          "ticker": "WMT",
+          "weight": 7.7
+        },
+        {
+          "ticker": "ECL",
+          "weight": 4.35
+        },
+        {
+          "ticker": "CCI",
+          "weight": 3.91
+        },
+        {
+          "ticker": "FDX",
+          "weight": 3.61
+        },
+        {
+          "ticker": "UPS",
+          "weight": 3.51
+        },
+        {
+          "ticker": "SDGR",
+          "weight": 2.54
+        },
+        {
+          "ticker": "KOF",
+          "weight": 1.32
+        }
+      ]
+    },
     {
       "asOf": "2021-03-31",
       "holdings": [
@@ -62,7 +1094,7 @@
         },
         {
           "ticker": "WM",
-          "weight": 11.61
+          "weight": 11.62
         },
         {
           "ticker": "CAT",
@@ -70,7 +1102,7 @@
         },
         {
           "ticker": "CNI",
-          "weight": 7.8
+          "weight": 7.79
         },
         {
           "ticker": "WMT",
@@ -102,7 +1134,7 @@
         },
         {
           "ticker": "CPNG",
-          "weight": 1.37
+          "weight": 1.36
         }
       ]
     },
@@ -151,7 +1183,7 @@
         },
         {
           "ticker": "KOF",
-          "weight": 1.39
+          "weight": 1.38
         },
         {
           "ticker": "TV",
@@ -159,7 +1191,7 @@
         },
         {
           "ticker": "CPNG",
-          "weight": 1.0
+          "weight": 1.01
         }
       ]
     },
@@ -168,7 +1200,7 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 46.67
+          "weight": 46.68
         },
         {
           "ticker": "WM",
@@ -204,7 +1236,7 @@
         },
         {
           "ticker": "UPS",
-          "weight": 1.83
+          "weight": 1.84
         },
         {
           "ticker": "SDGR",
@@ -253,7 +1285,7 @@
         },
         {
           "ticker": "CCI",
-          "weight": 4.29
+          "weight": 4.28
         },
         {
           "ticker": "MSFT",
@@ -277,7 +1309,7 @@
         },
         {
           "ticker": "SDGR",
-          "weight": 1.1
+          "weight": 1.09
         }
       ]
     },
@@ -286,11 +1318,11 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 52.73
+          "weight": 52.74
         },
         {
           "ticker": "WM",
-          "weight": 15.38
+          "weight": 15.39
         },
         {
           "ticker": "CNI",
@@ -298,7 +1330,7 @@
         },
         {
           "ticker": "CAT",
-          "weight": 8.53
+          "weight": 8.54
         },
         {
           "ticker": "ECL",
@@ -306,7 +1338,7 @@
         },
         {
           "ticker": "WMT",
-          "weight": 2.35
+          "weight": 2.34
         },
         {
           "ticker": "DE",
@@ -318,7 +1350,7 @@
         },
         {
           "ticker": "MSFT",
-          "weight": 1.51
+          "weight": 1.52
         },
         {
           "ticker": "CCI",
@@ -326,7 +1358,7 @@
         },
         {
           "ticker": "SDGR",
-          "weight": 1.25
+          "weight": 1.24
         }
       ]
     },
@@ -335,7 +1367,7 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 55.36
+          "weight": 55.35
         },
         {
           "ticker": "WM",
@@ -351,7 +1383,7 @@
         },
         {
           "ticker": "ECL",
-          "weight": 3.93
+          "weight": 3.92
         },
         {
           "ticker": "WMT",
@@ -375,7 +1407,7 @@
         },
         {
           "ticker": "SDGR",
-          "weight": 1.07
+          "weight": 1.08
         }
       ]
     },
@@ -384,11 +1416,11 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 28.05
+          "weight": 28.04
         },
         {
           "ticker": "BRK.B",
-          "weight": 24.3
+          "weight": 24.31
         },
         {
           "ticker": "CNI",
@@ -416,7 +1448,7 @@
         },
         {
           "ticker": "KOF",
-          "weight": 1.12
+          "weight": 1.11
         }
       ]
     },
@@ -449,15 +1481,15 @@
         },
         {
           "ticker": "ECL",
-          "weight": 2.23
+          "weight": 2.22
         },
         {
           "ticker": "WMT",
-          "weight": 1.26
+          "weight": 1.25
         },
         {
           "ticker": "KOF",
-          "weight": 1.23
+          "weight": 1.24
         }
       ]
     },
@@ -470,11 +1502,11 @@
         },
         {
           "ticker": "CNI",
-          "weight": 18.62
+          "weight": 18.63
         },
         {
           "ticker": "BRK.B",
-          "weight": 17.5
+          "weight": 17.51
         },
         {
           "ticker": "WM",
@@ -519,7 +1551,7 @@
         },
         {
           "ticker": "WM",
-          "weight": 15.26
+          "weight": 15.25
         },
         {
           "ticker": "CAT",
@@ -531,7 +1563,7 @@
         },
         {
           "ticker": "ECL",
-          "weight": 2.44
+          "weight": 2.43
         },
         {
           "ticker": "KOF",
@@ -564,7 +1596,7 @@
         },
         {
           "ticker": "CAT",
-          "weight": 5.38
+          "weight": 5.37
         },
         {
           "ticker": "DE",
@@ -572,7 +1604,7 @@
         },
         {
           "ticker": "ECL",
-          "weight": 2.36
+          "weight": 2.37
         },
         {
           "ticker": "KOF",
@@ -584,7 +1616,7 @@
         },
         {
           "ticker": "FDX",
-          "weight": 1.08
+          "weight": 1.09
         }
       ]
     },
@@ -593,7 +1625,7 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 35.6
+          "weight": 35.59
         },
         {
           "ticker": "BRK.B",
@@ -609,7 +1641,7 @@
         },
         {
           "ticker": "CAT",
-          "weight": 5.38
+          "weight": 5.39
         },
         {
           "ticker": "DE",
@@ -617,7 +1649,7 @@
         },
         {
           "ticker": "ECL",
-          "weight": 2.57
+          "weight": 2.56
         },
         {
           "ticker": "KOF",
@@ -634,7 +1666,7 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 34.99
+          "weight": 35
         },
         {
           "ticker": "WM",
@@ -666,7 +1698,7 @@
         },
         {
           "ticker": "WMT",
-          "weight": 1.24
+          "weight": 1.25
         }
       ]
     },
@@ -675,7 +1707,7 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 34.06
+          "weight": 34.07
         },
         {
           "ticker": "BRK.B",
@@ -695,11 +1727,11 @@
         },
         {
           "ticker": "DE",
-          "weight": 2.91
+          "weight": 2.9
         },
         {
           "ticker": "ECL",
-          "weight": 2.72
+          "weight": 2.71
         },
         {
           "ticker": "WMT",
@@ -724,7 +1756,7 @@
         },
         {
           "ticker": "WM",
-          "weight": 15.4
+          "weight": 15.41
         },
         {
           "ticker": "CNI",
@@ -736,11 +1768,11 @@
         },
         {
           "ticker": "DE",
-          "weight": 3.41
+          "weight": 3.42
         },
         {
           "ticker": "ECL",
-          "weight": 3.06
+          "weight": 3.07
         },
         {
           "ticker": "WMT",
@@ -761,43 +1793,53 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 29.7
+          "weight": 29.7,
+          "shares": 28457247
         },
         {
           "ticker": "BRK.B",
-          "weight": 22.05
+          "weight": 22.06,
+          "shares": 19655024
         },
         {
           "ticker": "WM",
-          "weight": 16.1
+          "weight": 16.1,
+          "shares": 32234344
         },
         {
           "ticker": "CNI",
-          "weight": 13.78
+          "weight": 13.78,
+          "shares": 54826786
         },
         {
           "ticker": "CAT",
-          "weight": 6.61
+          "weight": 6.6,
+          "shares": 7353614
         },
         {
           "ticker": "DE",
-          "weight": 3.73
+          "weight": 3.73,
+          "shares": 3557378
         },
         {
           "ticker": "ECL",
-          "weight": 3.03
+          "weight": 3.03,
+          "shares": 5218044
         },
         {
           "ticker": "WMT",
-          "weight": 2.03
+          "weight": 2.03,
+          "shares": 9090477
         },
         {
           "ticker": "FDX",
-          "weight": 1.77
+          "weight": 1.77,
+          "shares": 2534362
         },
         {
           "ticker": "KOF",
-          "weight": 1.2
+          "weight": 1.2,
+          "shares": 6214719
         }
       ]
     },
@@ -806,47 +1848,58 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 26.41
+          "weight": 26.41,
+          "shares": 28457247
         },
         {
           "ticker": "BRK.B",
-          "weight": 22.61
+          "weight": 22.61,
+          "shares": 17172435
         },
         {
           "ticker": "WM",
-          "weight": 18.45
+          "weight": 18.45,
+          "shares": 32234344
         },
         {
           "ticker": "CNI",
-          "weight": 13.21
+          "weight": 13.21,
+          "shares": 54826786
         },
         {
           "ticker": "CAT",
-          "weight": 5.99
+          "weight": 5.99,
+          "shares": 7353614
         },
         {
           "ticker": "DE",
-          "weight": 4.12
+          "weight": 4.13,
+          "shares": 3557378
         },
         {
           "ticker": "ECL",
-          "weight": 3.27
+          "weight": 3.27,
+          "shares": 5218044
         },
         {
           "ticker": "WMT",
-          "weight": 1.97
+          "weight": 1.97,
+          "shares": 9090477
         },
         {
           "ticker": "FDX",
-          "weight": 1.53
+          "weight": 1.53,
+          "shares": 2534362
         },
         {
           "ticker": "KOF",
-          "weight": 1.41
+          "weight": 1.4,
+          "shares": 6214719
         },
         {
           "ticker": "WCN",
-          "weight": 1.03
+          "weight": 1.04,
+          "shares": 2149175
         }
       ]
     },
@@ -855,43 +1908,53 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 28.34
+          "weight": 28.34,
+          "shares": 26191207
         },
         {
           "ticker": "BRK.B",
-          "weight": 25.5
+          "weight": 25.5,
+          "shares": 24123684
         },
         {
           "ticker": "WM",
-          "weight": 16.05
+          "weight": 16.05,
+          "shares": 32234344
         },
         {
           "ticker": "CNI",
-          "weight": 12.41
+          "weight": 12.41,
+          "shares": 54826786
         },
         {
           "ticker": "CAT",
-          "weight": 6.21
+          "weight": 6.21,
+          "shares": 7353614
         },
         {
           "ticker": "DE",
-          "weight": 3.94
+          "weight": 3.94,
+          "shares": 3557378
         },
         {
           "ticker": "ECL",
-          "weight": 3.06
+          "weight": 3.06,
+          "shares": 5218044
         },
         {
           "ticker": "WMT",
-          "weight": 1.93
+          "weight": 1.93,
+          "shares": 9090477
         },
         {
           "ticker": "KOF",
-          "weight": 1.31
+          "weight": 1.31,
+          "shares": 6214719
         },
         {
           "ticker": "FDX",
-          "weight": 1.26
+          "weight": 1.25,
+          "shares": 2534362
         }
       ]
     },
@@ -900,43 +1963,53 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 31.25
+          "weight": 31.25,
+          "shares": 21765224
         },
         {
           "ticker": "WM",
-          "weight": 18.25
+          "weight": 18.25,
+          "shares": 28934344
         },
         {
           "ticker": "CNI",
-          "weight": 13.96
+          "weight": 13.96,
+          "shares": 51826786
         },
         {
           "ticker": "MSFT",
-          "weight": 13.59
+          "weight": 13.6,
+          "shares": 9191207
         },
         {
           "ticker": "CAT",
-          "weight": 8.66
+          "weight": 8.66,
+          "shares": 6353614
         },
         {
           "ticker": "DE",
-          "weight": 4.65
+          "weight": 4.65,
+          "shares": 3557378
         },
         {
           "ticker": "ECL",
-          "weight": 4.09
+          "weight": 4.08,
+          "shares": 5218044
         },
         {
           "ticker": "WMT",
-          "weight": 2.47
+          "weight": 2.47,
+          "shares": 8390477
         },
         {
           "ticker": "FDX",
-          "weight": 1.61
+          "weight": 1.61,
+          "shares": 2384362
         },
         {
           "ticker": "KOF",
-          "weight": 1.47
+          "weight": 1.48,
+          "shares": 6214719
         }
       ]
     },
@@ -945,56 +2018,68 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 28.54
+          "weight": 28.53,
+          "shares": 19406764
         },
         {
           "ticker": "WM",
-          "weight": 18.6
+          "weight": 18.59,
+          "shares": 28934344
         },
         {
           "ticker": "CNI",
-          "weight": 14.99
+          "weight": 14.98,
+          "shares": 51826786
         },
         {
           "ticker": "MSFT",
-          "weight": 10.88
+          "weight": 10.88,
+          "shares": 7691207
         },
         {
           "ticker": "CAT",
-          "weight": 10.64
+          "weight": 10.65,
+          "shares": 6353614
         },
         {
           "ticker": "DE",
-          "weight": 4.84
+          "weight": 4.84,
+          "shares": 3557378
         },
         {
           "ticker": "ECL",
-          "weight": 4.0
+          "weight": 4.01,
+          "shares": 5218044
         },
         {
           "ticker": "WMT",
-          "weight": 2.73
+          "weight": 2.73,
+          "shares": 8390477
         },
         {
           "ticker": "FDX",
-          "weight": 2.02
+          "weight": 2.01,
+          "shares": 2384362
         },
         {
           "ticker": "KOF",
-          "weight": 1.72
+          "weight": 1.72,
+          "shares": 6214719
         },
         {
           "ticker": "WCN",
-          "weight": 1.04
+          "weight": 1.05,
+          "shares": 2039175
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:32:57Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GFT",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-24T23:47:19Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001166559-gates-foundation-trust",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

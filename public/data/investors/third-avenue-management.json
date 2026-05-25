@@ -8,12 +8,12 @@
     },
     {
       "ticker": "VAL",
-      "weight": 9.36,
+      "weight": 9.35,
       "shares": 508186
     },
     {
       "ticker": "BCC",
-      "weight": 8.0,
+      "weight": 8,
       "shares": 562021
     },
     {
@@ -33,12 +33,12 @@
     },
     {
       "ticker": "BN",
-      "weight": 3.65,
+      "weight": 3.66,
       "shares": 481495
     },
     {
       "ticker": "FPH",
-      "weight": 3.5,
+      "weight": 3.51,
       "shares": 3861162
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "ticker": "PHM",
-      "weight": 2.11,
+      "weight": 2.1,
       "shares": 95128
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "ticker": "ECPG",
-      "weight": 1.87,
+      "weight": 1.88,
       "shares": 142512
     },
     {
@@ -93,12 +93,12 @@
     },
     {
       "ticker": "FNF",
-      "weight": 1.69,
+      "weight": 1.68,
       "shares": 193455
     },
     {
       "ticker": "UMBF",
-      "weight": 1.65,
+      "weight": 1.66,
       "shares": 78245
     },
     {
@@ -128,7 +128,7 @@
     },
     {
       "ticker": "TPH",
-      "weight": 1.36,
+      "weight": 1.37,
       "shares": 155855
     },
     {
@@ -143,7 +143,7 @@
     },
     {
       "ticker": "PB",
-      "weight": 1.28,
+      "weight": 1.29,
       "shares": 102168
     },
     {
@@ -157,99 +157,2439 @@
       "shares": 463664
     },
     {
-      "ticker": "OSG",
-      "weight": 1.17,
-      "shares": 1341211
-    },
-    {
       "ticker": "PBF",
       "weight": 1.17,
       "shares": 131050
+    },
+    {
+      "ticker": "AMBC",
+      "weight": 1.17,
+      "shares": 1341211
     }
   ],
   "history": [
+    {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.86
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.87
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 5.7
+        },
+        {
+          "ticker": "MAC",
+          "weight": 5.21
+        },
+        {
+          "ticker": "RYN",
+          "weight": 4.82
+        },
+        {
+          "ticker": "FR",
+          "weight": 4.8
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.31
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.74
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.48
+        },
+        {
+          "ticker": "LOW",
+          "weight": 3.41
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 3.25
+        },
+        {
+          "ticker": "PNC",
+          "weight": 2.88
+        },
+        {
+          "ticker": "WTM",
+          "weight": 2.77
+        },
+        {
+          "ticker": "LEN",
+          "weight": 2.59
+        },
+        {
+          "ticker": "ZION",
+          "weight": 2.5
+        },
+        {
+          "ticker": "SKT",
+          "weight": 2.5
+        },
+        {
+          "ticker": "EQC",
+          "weight": 2.46
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 2.42
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 2.38
+        },
+        {
+          "ticker": "APA",
+          "weight": 2.34
+        },
+        {
+          "ticker": "PPS",
+          "weight": 2.28
+        },
+        {
+          "ticker": "CVA",
+          "weight": 2.27
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.21
+        },
+        {
+          "ticker": "MAS",
+          "weight": 2.14
+        },
+        {
+          "ticker": "BKD",
+          "weight": 1.87
+        },
+        {
+          "ticker": "AXE",
+          "weight": 1.79
+        },
+        {
+          "ticker": "AGCO",
+          "weight": 1.68
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.51
+        },
+        {
+          "ticker": "DVN",
+          "weight": 1.35
+        },
+        {
+          "ticker": "NLOK",
+          "weight": 1.33
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.28
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.92
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.42
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 6.71
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.65
+        },
+        {
+          "ticker": "MAC",
+          "weight": 5
+        },
+        {
+          "ticker": "FR",
+          "weight": 4.77
+        },
+        {
+          "ticker": "CMA",
+          "weight": 4.46
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.43
+        },
+        {
+          "ticker": "VNO",
+          "weight": 4.07
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.19
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.95
+        },
+        {
+          "ticker": "PNC",
+          "weight": 2.9
+        },
+        {
+          "ticker": "ZION",
+          "weight": 2.86
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.78
+        },
+        {
+          "ticker": "LEN",
+          "weight": 2.72
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 2.52
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.48
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 2.37
+        },
+        {
+          "ticker": "AXE",
+          "weight": 2.1
+        },
+        {
+          "ticker": "BKD",
+          "weight": 2.08
+        },
+        {
+          "ticker": "CVA",
+          "weight": 2.02
+        },
+        {
+          "ticker": "DVN",
+          "weight": 2.02
+        },
+        {
+          "ticker": "AGCO",
+          "weight": 1.81
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.7
+        },
+        {
+          "ticker": "APA",
+          "weight": 1.62
+        },
+        {
+          "ticker": "HAR",
+          "weight": 1.6
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.56
+        },
+        {
+          "ticker": "JCI",
+          "weight": 1.48
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.45
+        },
+        {
+          "ticker": "RL",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.95
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.78
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 6.63
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.42
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.6
+        },
+        {
+          "ticker": "CMA",
+          "weight": 4.15
+        },
+        {
+          "ticker": "FR",
+          "weight": 3.61
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.59
+        },
+        {
+          "ticker": "MAC",
+          "weight": 3.56
+        },
+        {
+          "ticker": "ZION",
+          "weight": 3.34
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 3.27
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.25
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.11
+        },
+        {
+          "ticker": "TRC",
+          "weight": 3.1
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.66
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 2.61
+        },
+        {
+          "ticker": "AXE",
+          "weight": 2.59
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.4
+        },
+        {
+          "ticker": "BKD",
+          "weight": 2.38
+        },
+        {
+          "ticker": "LEN",
+          "weight": 2.36
+        },
+        {
+          "ticker": "DVN",
+          "weight": 1.93
+        },
+        {
+          "ticker": "HAR",
+          "weight": 1.9
+        },
+        {
+          "ticker": "JCI",
+          "weight": 1.86
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.65
+        },
+        {
+          "ticker": "RL",
+          "weight": 1.56
+        },
+        {
+          "ticker": "AGCO",
+          "weight": 1.54
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.53
+        },
+        {
+          "ticker": "CVA",
+          "weight": 1.49
+        },
+        {
+          "ticker": "APA",
+          "weight": 1.47
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.45
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 1.27
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.55
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.27
+        },
+        {
+          "ticker": "LEN",
+          "weight": 7.39
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 5.91
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.35
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.86
+        },
+        {
+          "ticker": "PNC",
+          "weight": 4.31
+        },
+        {
+          "ticker": "CMA",
+          "weight": 4.12
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 3.77
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.64
+        },
+        {
+          "ticker": "TRC",
+          "weight": 3.21
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.12
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.95
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.75
+        },
+        {
+          "ticker": "HAR",
+          "weight": 2.56
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 2.41
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.32
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.28
+        },
+        {
+          "ticker": "DVN",
+          "weight": 2.03
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 1.79
+        },
+        {
+          "ticker": "JCI",
+          "weight": 1.72
+        },
+        {
+          "ticker": "AXE",
+          "weight": 1.66
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.57
+        },
+        {
+          "ticker": "CVA",
+          "weight": 1.53
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.52
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.49
+        },
+        {
+          "ticker": "BKD",
+          "weight": 1.47
+        },
+        {
+          "ticker": "RL",
+          "weight": 1.42
+        },
+        {
+          "ticker": "PKY",
+          "weight": 1.35
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 1.35
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.32
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 11.62
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 9.05
+        },
+        {
+          "ticker": "LEN",
+          "weight": 8.74
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 6.12
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.65
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.82
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.88
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.86
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 3.63
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.47
+        },
+        {
+          "ticker": "WTM",
+          "weight": 3.27
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.8
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.76
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.74
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.65
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.04
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 2
+        },
+        {
+          "ticker": "JCI",
+          "weight": 1.86
+        },
+        {
+          "ticker": "DVN",
+          "weight": 1.85
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 1.8
+        },
+        {
+          "ticker": "RL",
+          "weight": 1.7
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.68
+        },
+        {
+          "ticker": "AXE",
+          "weight": 1.62
+        },
+        {
+          "ticker": "BKD",
+          "weight": 1.61
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.59
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.49
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 1.48
+        },
+        {
+          "ticker": "MAC",
+          "weight": 1.44
+        },
+        {
+          "ticker": "CERN",
+          "weight": 1.39
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.61
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 9.43
+        },
+        {
+          "ticker": "LEN",
+          "weight": 8.58
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 6.58
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.42
+        },
+        {
+          "ticker": "BK",
+          "weight": 5.04
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.99
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.91
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 3.83
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.36
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.87
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.56
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.44
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.06
+        },
+        {
+          "ticker": "FPH",
+          "weight": 2.04
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 2.03
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.95
+        },
+        {
+          "ticker": "JCI",
+          "weight": 1.85
+        },
+        {
+          "ticker": "LIVN",
+          "weight": 1.79
+        },
+        {
+          "ticker": "BKD",
+          "weight": 1.7
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.67
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.67
+        },
+        {
+          "ticker": "MAC",
+          "weight": 1.63
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.61
+        },
+        {
+          "ticker": "AXE",
+          "weight": 1.55
+        },
+        {
+          "ticker": "CERN",
+          "weight": 1.53
+        },
+        {
+          "ticker": "RL",
+          "weight": 1.49
+        },
+        {
+          "ticker": "VIAC",
+          "weight": 1.48
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.37
+        },
+        {
+          "ticker": "PKY",
+          "weight": 1.35
+        },
+        {
+          "ticker": "KW",
+          "weight": 1.33
+        },
+        {
+          "ticker": "RS",
+          "weight": 1.28
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 11.21
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 10.38
+        },
+        {
+          "ticker": "LEN",
+          "weight": 8.85
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 7.25
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.68
+        },
+        {
+          "ticker": "BK",
+          "weight": 4.8
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 4.67
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.83
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.78
+        },
+        {
+          "ticker": "FR",
+          "weight": 3.15
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.1
+        },
+        {
+          "ticker": "JCI",
+          "weight": 2.8
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.73
+        },
+        {
+          "ticker": "MAC",
+          "weight": 2.72
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.34
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 2.29
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.22
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.01
+        },
+        {
+          "ticker": "FPH",
+          "weight": 1.97
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.84
+        },
+        {
+          "ticker": "AXE",
+          "weight": 1.75
+        },
+        {
+          "ticker": "CERN",
+          "weight": 1.7
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.63
+        },
+        {
+          "ticker": "RS",
+          "weight": 1.6
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.54
+        },
+        {
+          "ticker": "PKY",
+          "weight": 1.41
+        },
+        {
+          "ticker": "EOG",
+          "weight": 1.41
+        },
+        {
+          "ticker": "DVN",
+          "weight": 1.33
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 11.19
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 11.17
+        },
+        {
+          "ticker": "LEN",
+          "weight": 9.9
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 8.17
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.75
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 4.15
+        },
+        {
+          "ticker": "BK",
+          "weight": 3.49
+        },
+        {
+          "ticker": "MAC",
+          "weight": 3.33
+        },
+        {
+          "ticker": "TRC",
+          "weight": 3.28
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.22
+        },
+        {
+          "ticker": "FR",
+          "weight": 3.17
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.83
+        },
+        {
+          "ticker": "JCI",
+          "weight": 2.79
+        },
+        {
+          "ticker": "PNC",
+          "weight": 2.77
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.63
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.47
+        },
+        {
+          "ticker": "TDW",
+          "weight": 2.44
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 2.25
+        },
+        {
+          "ticker": "FPH",
+          "weight": 2.17
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.03
+        },
+        {
+          "ticker": "RS",
+          "weight": 1.84
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.72
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.7
+        },
+        {
+          "ticker": "EOG",
+          "weight": 1.6
+        },
+        {
+          "ticker": "MAS",
+          "weight": 1.46
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.26
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 11.09
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 10.04
+        },
+        {
+          "ticker": "LEN",
+          "weight": 9.74
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 8.93
+        },
+        {
+          "ticker": "RYN",
+          "weight": 6.76
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 4.72
+        },
+        {
+          "ticker": "MAC",
+          "weight": 4.27
+        },
+        {
+          "ticker": "TDW",
+          "weight": 4
+        },
+        {
+          "ticker": "TRC",
+          "weight": 3.84
+        },
+        {
+          "ticker": "BK",
+          "weight": 3.52
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.51
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.25
+        },
+        {
+          "ticker": "FR",
+          "weight": 3.12
+        },
+        {
+          "ticker": "CVCO",
+          "weight": 2.95
+        },
+        {
+          "ticker": "AKR",
+          "weight": 2.81
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.63
+        },
+        {
+          "ticker": "FPH",
+          "weight": 2.39
+        },
+        {
+          "ticker": "HCC",
+          "weight": 2.23
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.01
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 1.89
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.86
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.76
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.36
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 1.31
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 11.07
+        },
+        {
+          "ticker": "FCE.A",
+          "weight": 9.87
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 9.81
+        },
+        {
+          "ticker": "LEN",
+          "weight": 8.3
+        },
+        {
+          "ticker": "FPH",
+          "weight": 5.88
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.52
+        },
+        {
+          "ticker": "MAC",
+          "weight": 5.41
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.18
+        },
+        {
+          "ticker": "TDW",
+          "weight": 3.93
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 3.72
+        },
+        {
+          "ticker": "VNO",
+          "weight": 3.71
+        },
+        {
+          "ticker": "FR",
+          "weight": 3.42
+        },
+        {
+          "ticker": "AKR",
+          "weight": 3.01
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.94
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 2.82
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.76
+        },
+        {
+          "ticker": "TRC",
+          "weight": 2.7
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.54
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.95
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 1.87
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.79
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.57
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "BRK.B",
+          "weight": 11.88
+        },
+        {
+          "ticker": "WY",
+          "weight": 10.14
+        },
+        {
+          "ticker": "LEN",
+          "weight": 8.23
+        },
+        {
+          "ticker": "FPH",
+          "weight": 6.45
+        },
+        {
+          "ticker": "MAC",
+          "weight": 5.88
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.38
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.82
+        },
+        {
+          "ticker": "TDW",
+          "weight": 4.68
+        },
+        {
+          "ticker": "PNC+",
+          "weight": 4.15
+        },
+        {
+          "ticker": "VNO",
+          "weight": 4.09
+        },
+        {
+          "ticker": "LOW",
+          "weight": 3.7
+        },
+        {
+          "ticker": "AKR",
+          "weight": 3.44
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.22
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 3.04
+        },
+        {
+          "ticker": "FR",
+          "weight": 3
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.23
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 2.1
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.02
+        },
+        {
+          "ticker": "ZION",
+          "weight": 1.9
+        },
+        {
+          "ticker": "TRC",
+          "weight": 1.86
+        },
+        {
+          "ticker": "WTM",
+          "weight": 1.8
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 1.56
+        },
+        {
+          "ticker": "HA",
+          "weight": 1.54
+        },
+        {
+          "ticker": "AHL",
+          "weight": 1.44
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.44
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.09
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 9.99
+        },
+        {
+          "ticker": "LEN",
+          "weight": 9.58
+        },
+        {
+          "ticker": "FPH",
+          "weight": 7.62
+        },
+        {
+          "ticker": "MAC",
+          "weight": 6.33
+        },
+        {
+          "ticker": "RYN",
+          "weight": 6.06
+        },
+        {
+          "ticker": "HCC",
+          "weight": 6.06
+        },
+        {
+          "ticker": "VNO",
+          "weight": 4.78
+        },
+        {
+          "ticker": "TDW",
+          "weight": 4.42
+        },
+        {
+          "ticker": "AKR",
+          "weight": 4.01
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 3.73
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.57
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.17
+        },
+        {
+          "ticker": "LOW",
+          "weight": 3.13
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.02
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.95
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 2.65
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 2.13
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.06
+        },
+        {
+          "ticker": "TRC",
+          "weight": 1.78
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.58
+        },
+        {
+          "ticker": "DD",
+          "weight": 1.29
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.3
+        },
+        {
+          "ticker": "FPH",
+          "weight": 9.91
+        },
+        {
+          "ticker": "LEN",
+          "weight": 9.3
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.49
+        },
+        {
+          "ticker": "RYN",
+          "weight": 6.17
+        },
+        {
+          "ticker": "MAC",
+          "weight": 5.35
+        },
+        {
+          "ticker": "TDW",
+          "weight": 5.33
+        },
+        {
+          "ticker": "HCC",
+          "weight": 5.16
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 5.08
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 4.77
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.47
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.27
+        },
+        {
+          "ticker": "AKR",
+          "weight": 3.26
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.2
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.91
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 2.81
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.76
+        },
+        {
+          "ticker": "VNO",
+          "weight": 2.56
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.76
+        },
+        {
+          "ticker": "TRC",
+          "weight": 1.69
+        },
+        {
+          "ticker": "EXP",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 10.66
+        },
+        {
+          "ticker": "FPH",
+          "weight": 8.61
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.68
+        },
+        {
+          "ticker": "LEN",
+          "weight": 6.25
+        },
+        {
+          "ticker": "RYN",
+          "weight": 6.07
+        },
+        {
+          "ticker": "TDW",
+          "weight": 6.03
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 5.06
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 4.82
+        },
+        {
+          "ticker": "MAC",
+          "weight": 4.71
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.55
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.83
+        },
+        {
+          "ticker": "PNC",
+          "weight": 3.6
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.2
+        },
+        {
+          "ticker": "AKR",
+          "weight": 3.1
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 2.8
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.6
+        },
+        {
+          "ticker": "VNO",
+          "weight": 2.52
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.32
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.22
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.85
+        },
+        {
+          "ticker": "MHK",
+          "weight": 1.79
+        },
+        {
+          "ticker": "TRC",
+          "weight": 1.61
+        },
+        {
+          "ticker": "EXP",
+          "weight": 1.61
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.35
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 9.36
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.88
+        },
+        {
+          "ticker": "FPH",
+          "weight": 8.74
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 5.98
+        },
+        {
+          "ticker": "LEN",
+          "weight": 5.57
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.5
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 5.42
+        },
+        {
+          "ticker": "TDW",
+          "weight": 4.37
+        },
+        {
+          "ticker": "VNO",
+          "weight": 4.18
+        },
+        {
+          "ticker": "PNC",
+          "weight": 4.01
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.93
+        },
+        {
+          "ticker": "MAC",
+          "weight": 3.73
+        },
+        {
+          "ticker": "HCC",
+          "weight": 3.65
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.11
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.83
+        },
+        {
+          "ticker": "AKR",
+          "weight": 2.82
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.64
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.52
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.41
+        },
+        {
+          "ticker": "MHK",
+          "weight": 1.92
+        },
+        {
+          "ticker": "EXP",
+          "weight": 1.67
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.59
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.45
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.27
+        },
+        {
+          "ticker": "TRC",
+          "weight": 1.23
+        },
+        {
+          "ticker": "CUBI",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "FPH",
+          "weight": 9.54
+        },
+        {
+          "ticker": "WY",
+          "weight": 9.36
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.28
+        },
+        {
+          "ticker": "TDW",
+          "weight": 6.22
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 5.92
+        },
+        {
+          "ticker": "LEN",
+          "weight": 5.79
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 5.71
+        },
+        {
+          "ticker": "RYN",
+          "weight": 4.92
+        },
+        {
+          "ticker": "VNO",
+          "weight": 4.52
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.43
+        },
+        {
+          "ticker": "MAC",
+          "weight": 4.34
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.76
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.53
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.79
+        },
+        {
+          "ticker": "FR",
+          "weight": 2.74
+        },
+        {
+          "ticker": "AKR",
+          "weight": 2.65
+        },
+        {
+          "ticker": "PNC",
+          "weight": 2.55
+        },
+        {
+          "ticker": "MHK",
+          "weight": 2.35
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 2.06
+        },
+        {
+          "ticker": "EXP",
+          "weight": 1.88
+        },
+        {
+          "ticker": "HHC",
+          "weight": 1.68
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.57
+        },
+        {
+          "ticker": "CUBI",
+          "weight": 1.57
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.46
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.39
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "FPH",
+          "weight": 10.45
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.42
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 6.94
+        },
+        {
+          "ticker": "VNO",
+          "weight": 6.55
+        },
+        {
+          "ticker": "WY",
+          "weight": 5.51
+        },
+        {
+          "ticker": "PLD",
+          "weight": 5.25
+        },
+        {
+          "ticker": "RYN",
+          "weight": 5.1
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 5.08
+        },
+        {
+          "ticker": "LEN",
+          "weight": 4.17
+        },
+        {
+          "ticker": "ESS",
+          "weight": 3.81
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.78
+        },
+        {
+          "ticker": "PSA",
+          "weight": 3.57
+        },
+        {
+          "ticker": "TDW",
+          "weight": 3.47
+        },
+        {
+          "ticker": "HCC",
+          "weight": 3.47
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.58
+        },
+        {
+          "ticker": "EXP",
+          "weight": 2.53
+        },
+        {
+          "ticker": "MHK",
+          "weight": 2.25
+        },
+        {
+          "ticker": "HA",
+          "weight": 2.25
+        },
+        {
+          "ticker": "ORI",
+          "weight": 2.15
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.95
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.78
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.78
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.63
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 1.57
+        },
+        {
+          "ticker": "FDX",
+          "weight": 1.53
+        },
+        {
+          "ticker": "CMA",
+          "weight": 1.23
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "FPH",
+          "weight": 8.33
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.62
+        },
+        {
+          "ticker": "WY",
+          "weight": 6.51
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 6.31
+        },
+        {
+          "ticker": "VNO",
+          "weight": 6.27
+        },
+        {
+          "ticker": "PLD",
+          "weight": 5.7
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 5.38
+        },
+        {
+          "ticker": "RYN",
+          "weight": 4.63
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.6
+        },
+        {
+          "ticker": "LOW",
+          "weight": 3.82
+        },
+        {
+          "ticker": "ESS",
+          "weight": 3.68
+        },
+        {
+          "ticker": "LEN",
+          "weight": 3.6
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.08
+        },
+        {
+          "ticker": "ORI",
+          "weight": 3.05
+        },
+        {
+          "ticker": "EXP",
+          "weight": 2.78
+        },
+        {
+          "ticker": "HA",
+          "weight": 2.73
+        },
+        {
+          "ticker": "TDW",
+          "weight": 2.59
+        },
+        {
+          "ticker": "MHK",
+          "weight": 2.58
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.18
+        },
+        {
+          "ticker": "AMH",
+          "weight": 1.81
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.78
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.77
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.73
+        },
+        {
+          "ticker": "FDX",
+          "weight": 1.68
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 1.64
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.5
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.4
+        },
+        {
+          "ticker": "PSA",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "WY",
+          "weight": 7.79
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 7.42
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 7.1
+        },
+        {
+          "ticker": "FPH",
+          "weight": 6.94
+        },
+        {
+          "ticker": "PLD",
+          "weight": 5.71
+        },
+        {
+          "ticker": "VNO",
+          "weight": 5.21
+        },
+        {
+          "ticker": "RYN",
+          "weight": 4.58
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 4.52
+        },
+        {
+          "ticker": "LEN",
+          "weight": 4.34
+        },
+        {
+          "ticker": "LOW",
+          "weight": 4.34
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.12
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 3.36
+        },
+        {
+          "ticker": "TDW",
+          "weight": 3.14
+        },
+        {
+          "ticker": "ORI",
+          "weight": 3.07
+        },
+        {
+          "ticker": "EXP",
+          "weight": 2.75
+        },
+        {
+          "ticker": "HA",
+          "weight": 2.42
+        },
+        {
+          "ticker": "CMA",
+          "weight": 2.42
+        },
+        {
+          "ticker": "MHK",
+          "weight": 2.33
+        },
+        {
+          "ticker": "AMH",
+          "weight": 2.13
+        },
+        {
+          "ticker": "FDX",
+          "weight": 2.06
+        },
+        {
+          "ticker": "ESS",
+          "weight": 2.05
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.83
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.7
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.64
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 1.58
+        },
+        {
+          "ticker": "KFY",
+          "weight": 1.54
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.39
+        },
+        {
+          "ticker": "CTB",
+          "weight": 1.3
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.21
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "FPH",
+          "weight": 7.81
+        },
+        {
+          "ticker": "WY",
+          "weight": 7.28
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 6.75
+        },
+        {
+          "ticker": "PLD",
+          "weight": 5.09
+        },
+        {
+          "ticker": "LEN.B",
+          "weight": 4.78
+        },
+        {
+          "ticker": "RYN",
+          "weight": 4.67
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 4.53
+        },
+        {
+          "ticker": "HCC",
+          "weight": 4.21
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 4
+        },
+        {
+          "ticker": "LOW",
+          "weight": 3.93
+        },
+        {
+          "ticker": "ORI",
+          "weight": 3.55
+        },
+        {
+          "ticker": "TDW",
+          "weight": 3.53
+        },
+        {
+          "ticker": "CMA",
+          "weight": 3.37
+        },
+        {
+          "ticker": "EXP",
+          "weight": 3.06
+        },
+        {
+          "ticker": "MHK",
+          "weight": 3.03
+        },
+        {
+          "ticker": "HA",
+          "weight": 2.92
+        },
+        {
+          "ticker": "KFY",
+          "weight": 2.53
+        },
+        {
+          "ticker": "AMH",
+          "weight": 2.52
+        },
+        {
+          "ticker": "LAZ",
+          "weight": 2.52
+        },
+        {
+          "ticker": "LEN",
+          "weight": 1.97
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 1.94
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.91
+        },
+        {
+          "ticker": "CTB",
+          "weight": 1.66
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.65
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.64
+        },
+        {
+          "ticker": "VNO",
+          "weight": 1.44
+        },
+        {
+          "ticker": "ESS",
+          "weight": 1.43
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.33
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.24
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.23
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.22
+        }
+      ]
+    },
     {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "FPH",
-          "weight": 12.57
+          "weight": 10.3
         },
         {
           "ticker": "LEN.B",
-          "weight": 7.36
+          "weight": 6.03
         },
         {
-          "ticker": "BN",
-          "weight": 7.21
+          "ticker": "BRK.B",
+          "weight": 5.9
         },
         {
           "ticker": "TDW",
-          "weight": 5.92
+          "weight": 4.85
         },
         {
           "ticker": "WY",
-          "weight": 5.64
+          "weight": 4.62
         },
         {
           "ticker": "PLD",
-          "weight": 5.36
-        },
-        {
-          "ticker": "HA-OLD",
-          "weight": 5.08
+          "weight": 4.39
         },
         {
           "ticker": "RYN",
-          "weight": 5.08
+          "weight": 4.16
+        },
+        {
+          "ticker": "HA",
+          "weight": 4.16
         },
         {
           "ticker": "UHAL",
-          "weight": 4.99
+          "weight": 4.09
         },
         {
           "ticker": "CMA",
-          "weight": 4.96
+          "weight": 4.07
         },
         {
           "ticker": "LOW",
-          "weight": 4.61
+          "weight": 3.78
         },
         {
           "ticker": "JBGS",
-          "weight": 4.56
+          "weight": 3.74
         },
         {
           "ticker": "ORI",
-          "weight": 4.52
+          "weight": 3.7
         },
         {
           "ticker": "HCC",
-          "weight": 4.4
+          "weight": 3.61
         },
         {
           "ticker": "MHK",
-          "weight": 3.44
+          "weight": 2.82
         },
         {
           "ticker": "EXP",
-          "weight": 3.21
+          "weight": 2.63
         },
         {
           "ticker": "AMH",
-          "weight": 3.0
+          "weight": 2.46
         },
         {
           "ticker": "LAZ",
-          "weight": 2.97
+          "weight": 2.44
         },
         {
           "ticker": "CTB",
-          "weight": 2.62
+          "weight": 2.15
         },
         {
           "ticker": "UMBF",
-          "weight": 2.5
+          "weight": 2.05
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 2.02
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.93
+        },
+        {
+          "ticker": "LEN",
+          "weight": 1.83
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.61
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.46
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.43
+        },
+        {
+          "ticker": "VNO",
+          "weight": 1.43
+        },
+        {
+          "ticker": "ESS",
+          "weight": 1.33
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.31
+        },
+        {
+          "ticker": "SRG",
+          "weight": 1.25
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.21
         }
       ]
     },
@@ -258,83 +2598,127 @@
       "holdings": [
         {
           "ticker": "FPH",
-          "weight": 13.11
+          "weight": 11
         },
         {
-          "ticker": "BN",
-          "weight": 7.78
+          "ticker": "BRK.B",
+          "weight": 6.53
         },
         {
           "ticker": "LEN.B",
-          "weight": 7.19
-        },
-        {
-          "ticker": "PLD",
-          "weight": 5.6
+          "weight": 6.03
         },
         {
           "ticker": "TDW",
-          "weight": 5.6
+          "weight": 4.7
+        },
+        {
+          "ticker": "PLD",
+          "weight": 4.69
         },
         {
           "ticker": "HCC",
-          "weight": 5.43
+          "weight": 4.55
         },
         {
           "ticker": "RYN",
-          "weight": 5.41
+          "weight": 4.54
         },
         {
           "ticker": "WY",
-          "weight": 5.21
+          "weight": 4.37
         },
         {
           "ticker": "ORI",
-          "weight": 5.06
+          "weight": 4.25
         },
         {
           "ticker": "CMA",
-          "weight": 4.85
+          "weight": 4.07
         },
         {
           "ticker": "UHAL",
-          "weight": 4.62
+          "weight": 3.87
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 4.44
+          "ticker": "HA",
+          "weight": 3.72
         },
         {
           "ticker": "LOW",
-          "weight": 4.19
+          "weight": 3.52
         },
         {
           "ticker": "JBGS",
-          "weight": 4.04
+          "weight": 3.39
         },
         {
           "ticker": "AMH",
-          "weight": 3.6
+          "weight": 3.02
         },
         {
           "ticker": "MHK",
-          "weight": 3.37
+          "weight": 2.83
         },
         {
           "ticker": "LAZ",
-          "weight": 3.06
+          "weight": 2.56
         },
         {
           "ticker": "CBRE",
-          "weight": 2.6
+          "weight": 2.18
         },
         {
           "ticker": "UMBF",
-          "weight": 2.49
+          "weight": 2.09
         },
         {
           "ticker": "TPHS",
-          "weight": 2.35
+          "weight": 1.97
+        },
+        {
+          "ticker": "EXP",
+          "weight": 1.9
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.69
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.63
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.44
+        },
+        {
+          "ticker": "VNO",
+          "weight": 1.42
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.41
+        },
+        {
+          "ticker": "ESS",
+          "weight": 1.4
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.39
+        },
+        {
+          "ticker": "LEN",
+          "weight": 1.34
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.3
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.19
         }
       ]
     },
@@ -343,83 +2727,127 @@
       "holdings": [
         {
           "ticker": "FPH",
-          "weight": 12.78
+          "weight": 10.73
         },
         {
-          "ticker": "BN",
-          "weight": 8.13
+          "ticker": "BRK.B",
+          "weight": 6.83
         },
         {
           "ticker": "HCC",
-          "weight": 7.39
+          "weight": 6.2
         },
         {
           "ticker": "LEN.B",
-          "weight": 6.89
+          "weight": 5.79
         },
         {
           "ticker": "PLD",
-          "weight": 5.87
+          "weight": 4.94
         },
         {
           "ticker": "CMA",
-          "weight": 5.49
+          "weight": 4.61
         },
         {
           "ticker": "WY",
-          "weight": 5.41
+          "weight": 4.55
         },
         {
           "ticker": "RYN",
-          "weight": 5.4
+          "weight": 4.53
         },
         {
           "ticker": "TDW",
-          "weight": 5.19
+          "weight": 4.36
         },
         {
           "ticker": "UHAL",
-          "weight": 5.03
+          "weight": 4.23
         },
         {
           "ticker": "ORI",
-          "weight": 4.71
+          "weight": 3.96
         },
         {
           "ticker": "LOW",
-          "weight": 4.35
+          "weight": 3.66
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 3.95
+          "ticker": "HA",
+          "weight": 3.32
         },
         {
           "ticker": "AMH",
-          "weight": 3.53
+          "weight": 2.97
         },
         {
           "ticker": "LAZ",
-          "weight": 3.09
+          "weight": 2.6
         },
         {
           "ticker": "CBRE",
-          "weight": 2.98
+          "weight": 2.51
         },
         {
           "ticker": "JBGS",
-          "weight": 2.86
+          "weight": 2.41
         },
         {
           "ticker": "UMBF",
-          "weight": 2.59
-        },
-        {
-          "ticker": "TPHS",
           "weight": 2.18
         },
         {
+          "ticker": "TPHS",
+          "weight": 1.84
+        },
+        {
           "ticker": "MHK",
-          "weight": 2.17
+          "weight": 1.82
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.77
+        },
+        {
+          "ticker": "VAL",
+          "weight": 1.67
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.63
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.55
+        },
+        {
+          "ticker": "ESS",
+          "weight": 1.49
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.49
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.48
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.31
+        },
+        {
+          "ticker": "VNO",
+          "weight": 1.25
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.18
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.15
         }
       ]
     },
@@ -428,83 +2856,127 @@
       "holdings": [
         {
           "ticker": "FPH",
-          "weight": 10.16
+          "weight": 8.53
         },
         {
           "ticker": "HCC",
-          "weight": 8.54
+          "weight": 7.16
         },
         {
           "ticker": "LEN.B",
-          "weight": 8.13
+          "weight": 6.83
         },
         {
-          "ticker": "BN",
-          "weight": 7.66
+          "ticker": "BRK.B",
+          "weight": 6.43
         },
         {
           "ticker": "PLD",
-          "weight": 7.53
+          "weight": 6.33
         },
         {
           "ticker": "CMA",
-          "weight": 5.75
+          "weight": 4.83
         },
         {
           "ticker": "WY",
-          "weight": 5.67
+          "weight": 4.75
         },
         {
           "ticker": "RYN",
-          "weight": 5.49
+          "weight": 4.61
         },
         {
           "ticker": "UHAL",
-          "weight": 5.41
+          "weight": 4.54
         },
         {
           "ticker": "LOW",
-          "weight": 5.3
+          "weight": 4.45
         },
         {
           "ticker": "TDW",
-          "weight": 3.98
+          "weight": 3.34
         },
         {
           "ticker": "AMH",
-          "weight": 3.9
+          "weight": 3.27
         },
         {
           "ticker": "ORI",
-          "weight": 3.68
+          "weight": 3.09
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 3.22
+          "ticker": "HA",
+          "weight": 2.7
         },
         {
           "ticker": "CBRE",
-          "weight": 3.17
+          "weight": 2.66
         },
         {
           "ticker": "LAZ",
-          "weight": 2.87
-        },
-        {
-          "ticker": "IVT",
-          "weight": 2.45
+          "weight": 2.4
         },
         {
           "ticker": "UMBF",
-          "weight": 2.45
+          "weight": 2.05
+        },
+        {
+          "ticker": "IVT",
+          "weight": 2.05
         },
         {
           "ticker": "FR",
-          "weight": 2.35
+          "weight": 1.98
         },
         {
           "ticker": "FNF",
-          "weight": 2.31
+          "weight": 1.94
+        },
+        {
+          "ticker": "TPHS",
+          "weight": 1.79
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.67
+        },
+        {
+          "ticker": "VAL",
+          "weight": 1.67
+        },
+        {
+          "ticker": "ESS",
+          "weight": 1.57
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.54
+        },
+        {
+          "ticker": "JBGS",
+          "weight": 1.46
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.37
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.32
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.28
+        },
+        {
+          "ticker": "APTS",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.17
         }
       ]
     },
@@ -513,83 +2985,119 @@
       "holdings": [
         {
           "ticker": "FPH",
-          "weight": 9.6
+          "weight": 8.32
         },
         {
           "ticker": "HCC",
-          "weight": 8.88
+          "weight": 7.7
         },
         {
           "ticker": "TDW",
-          "weight": 8.22
+          "weight": 7.13
         },
         {
           "ticker": "PLD",
-          "weight": 7.02
+          "weight": 6.09
         },
         {
-          "ticker": "BN",
-          "weight": 6.93
+          "ticker": "BRK.B",
+          "weight": 6
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.82
+          "weight": 5.05
         },
         {
           "ticker": "RYN",
-          "weight": 5.62
+          "weight": 4.88
         },
         {
           "ticker": "CMA",
-          "weight": 5.37
-        },
-        {
-          "ticker": "WY",
-          "weight": 5.22
-        },
-        {
-          "ticker": "UHAL",
-          "weight": 4.69
-        },
-        {
-          "ticker": "IVT",
           "weight": 4.66
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 4.32
+          "ticker": "WY",
+          "weight": 4.52
+        },
+        {
+          "ticker": "UHAL",
+          "weight": 4.06
+        },
+        {
+          "ticker": "IVT",
+          "weight": 4.04
+        },
+        {
+          "ticker": "HA",
+          "weight": 3.74
         },
         {
           "ticker": "ORI",
-          "weight": 3.94
+          "weight": 3.42
         },
         {
           "ticker": "LOW",
-          "weight": 3.69
+          "weight": 3.19
         },
         {
           "ticker": "AMH",
-          "weight": 3.58
+          "weight": 3.11
         },
         {
           "ticker": "VAL",
-          "weight": 2.99
+          "weight": 2.59
         },
         {
           "ticker": "CBRE",
-          "weight": 2.69
+          "weight": 2.33
         },
         {
           "ticker": "LAZ",
-          "weight": 2.29
+          "weight": 1.99
         },
         {
           "ticker": "UMBF",
-          "weight": 2.25
+          "weight": 1.95
         },
         {
           "ticker": "TPHS",
-          "weight": 2.23
+          "weight": 1.93
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.91
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.88
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.53
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.49
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.48
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.37
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.24
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.17
         }
       ]
     },
@@ -598,83 +3106,127 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 10.75
+          "weight": 8.92
         },
         {
           "ticker": "HCC",
-          "weight": 10.33
+          "weight": 8.57
         },
         {
           "ticker": "FPH",
-          "weight": 7.23
+          "weight": 5.99
         },
         {
-          "ticker": "BN",
-          "weight": 6.12
+          "ticker": "BRK.B",
+          "weight": 5.07
         },
         {
           "ticker": "CMA",
-          "weight": 5.89
+          "weight": 4.88
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.71
+          "weight": 4.73
         },
         {
           "ticker": "PLD",
-          "weight": 5.15
+          "weight": 4.28
         },
         {
           "ticker": "RYN",
-          "weight": 4.81
+          "weight": 3.99
         },
         {
           "ticker": "IVT",
-          "weight": 4.58
+          "weight": 3.8
         },
         {
           "ticker": "ORI",
-          "weight": 4.55
+          "weight": 3.78
         },
         {
           "ticker": "UHAL",
-          "weight": 4.39
+          "weight": 3.64
         },
         {
           "ticker": "WY",
-          "weight": 4.34
+          "weight": 3.6
         },
         {
           "ticker": "AMH",
-          "weight": 3.75
+          "weight": 3.11
         },
         {
           "ticker": "DHI",
-          "weight": 3.67
+          "weight": 3.05
         },
         {
           "ticker": "LOW",
-          "weight": 3.57
+          "weight": 2.97
         },
         {
           "ticker": "VAL",
-          "weight": 3.32
+          "weight": 2.75
         },
         {
           "ticker": "CBRE",
-          "weight": 3.29
+          "weight": 2.73
         },
         {
           "ticker": "LAZ",
-          "weight": 3.14
+          "weight": 2.6
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 2.72
+          "ticker": "HA",
+          "weight": 2.25
         },
         {
           "ticker": "UMBF",
-          "weight": 2.69
+          "weight": 2.23
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.85
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.82
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.79
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.78
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.59
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.52
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.5
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.41
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.4
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.22
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.18
         }
       ]
     },
@@ -683,83 +3235,131 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 12.17
+          "weight": 9.93
         },
         {
           "ticker": "HCC",
-          "weight": 10.44
+          "weight": 8.52
         },
         {
           "ticker": "LEN.B",
-          "weight": 6.26
+          "weight": 5.11
         },
         {
-          "ticker": "BN",
-          "weight": 5.82
+          "ticker": "BRK.B",
+          "weight": 4.75
         },
         {
           "ticker": "CMA",
-          "weight": 5.77
+          "weight": 4.71
         },
         {
           "ticker": "UHAL",
-          "weight": 5.05
+          "weight": 4.12
         },
         {
           "ticker": "PLD",
-          "weight": 4.81
-        },
-        {
-          "ticker": "ORI",
-          "weight": 4.68
-        },
-        {
-          "ticker": "VAL",
-          "weight": 4.24
-        },
-        {
-          "ticker": "IVT",
-          "weight": 4.13
-        },
-        {
-          "ticker": "DHI",
-          "weight": 4.03
-        },
-        {
-          "ticker": "WY",
-          "weight": 4.03
-        },
-        {
-          "ticker": "RYN",
-          "weight": 4.01
-        },
-        {
-          "ticker": "LAZ",
           "weight": 3.92
         },
         {
+          "ticker": "ORI",
+          "weight": 3.82
+        },
+        {
+          "ticker": "VAL",
+          "weight": 3.45
+        },
+        {
+          "ticker": "IVT",
+          "weight": 3.37
+        },
+        {
+          "ticker": "WY",
+          "weight": 3.29
+        },
+        {
+          "ticker": "DHI",
+          "weight": 3.29
+        },
+        {
+          "ticker": "RYN",
+          "weight": 3.27
+        },
+        {
+          "ticker": "LAZ",
+          "weight": 3.2
+        },
+        {
           "ticker": "LOW",
-          "weight": 3.8
+          "weight": 3.1
         },
         {
           "ticker": "FPH",
-          "weight": 3.76
+          "weight": 3.07
         },
         {
           "ticker": "AMH",
-          "weight": 3.75
+          "weight": 3.06
         },
         {
           "ticker": "CBRE",
-          "weight": 3.26
+          "weight": 2.66
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 3.16
+          "ticker": "HA",
+          "weight": 2.58
         },
         {
           "ticker": "UMBF",
-          "weight": 2.91
+          "weight": 2.37
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.87
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.85
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.73
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.59
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.58
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.53
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.52
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.48
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.45
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.43
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.21
+        },
+        {
+          "ticker": "EME",
+          "weight": 1.15
         }
       ]
     },
@@ -768,83 +3368,135 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 15.75
+          "weight": 12.85
         },
         {
           "ticker": "HCC",
-          "weight": 10.42
+          "weight": 8.5
         },
         {
           "ticker": "DB",
-          "weight": 7.71
+          "weight": 6.29
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.79
+          "weight": 4.72
         },
         {
           "ticker": "CMA",
-          "weight": 4.79
+          "weight": 3.91
         },
         {
           "ticker": "VAL",
-          "weight": 4.79
+          "weight": 3.91
         },
         {
           "ticker": "ORI",
-          "weight": 4.78
+          "weight": 3.9
         },
         {
           "ticker": "PLD",
-          "weight": 4.55
+          "weight": 3.71
         },
         {
           "ticker": "DHI",
-          "weight": 4.42
+          "weight": 3.61
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.06
+          "weight": 3.31
         },
         {
           "ticker": "IVT",
-          "weight": 3.87
+          "weight": 3.16
         },
         {
           "ticker": "BN",
-          "weight": 3.87
+          "weight": 3.15
         },
         {
           "ticker": "LAZ",
-          "weight": 3.73
+          "weight": 3.05
         },
         {
           "ticker": "WY",
-          "weight": 3.65
+          "weight": 2.98
         },
         {
           "ticker": "RYN",
-          "weight": 3.57
+          "weight": 2.91
         },
         {
           "ticker": "CBRE",
-          "weight": 3.28
+          "weight": 2.68
         },
         {
           "ticker": "AMH",
-          "weight": 2.94
+          "weight": 2.4
         },
         {
           "ticker": "LOW",
-          "weight": 2.92
+          "weight": 2.39
         },
         {
           "ticker": "FPH",
-          "weight": 2.58
+          "weight": 2.1
         },
         {
           "ticker": "UMBF",
-          "weight": 2.54
+          "weight": 2.07
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.79
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.7
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.66
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.46
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.45
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.43
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.36
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.31
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.29
+        },
+        {
+          "ticker": "HA",
+          "weight": 1.28
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.28
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.22
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.18
         }
       ]
     },
@@ -853,83 +3505,143 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 14.5
+          "weight": 11.51
         },
         {
           "ticker": "HCC",
-          "weight": 11.65
+          "weight": 9.24
         },
         {
           "ticker": "DB",
-          "weight": 7.22
+          "weight": 5.73
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.76
+          "weight": 4.58
         },
         {
-          "ticker": "PLD",
-          "weight": 4.96
+          "ticker": "PRA",
+          "weight": 3.93
         },
         {
           "ticker": "CMA",
-          "weight": 4.92
-        },
-        {
-          "ticker": "ORI",
-          "weight": 4.92
-        },
-        {
-          "ticker": "VAL",
-          "weight": 4.75
-        },
-        {
-          "ticker": "DHI",
-          "weight": 4.6
-        },
-        {
-          "ticker": "LAZ",
-          "weight": 4.28
-        },
-        {
-          "ticker": "BN",
-          "weight": 4.01
-        },
-        {
-          "ticker": "UHAL.B",
-          "weight": 3.83
-        },
-        {
-          "ticker": "RYN",
-          "weight": 3.51
-        },
-        {
-          "ticker": "WY",
-          "weight": 3.45
-        },
-        {
-          "ticker": "HA-OLD",
-          "weight": 3.37
-        },
-        {
-          "ticker": "CBRE",
-          "weight": 3.11
-        },
-        {
-          "ticker": "IVT",
-          "weight": 3.0
-        },
-        {
-          "ticker": "LOW",
-          "weight": 2.93
-        },
-        {
-          "ticker": "AMH",
-          "weight": 2.64
+          "weight": 3.91
         },
         {
           "ticker": "MYRG",
-          "weight": 2.6
+          "weight": 3.9
+        },
+        {
+          "ticker": "VAL",
+          "weight": 3.77
+        },
+        {
+          "ticker": "DHI",
+          "weight": 3.65
+        },
+        {
+          "ticker": "LAZ",
+          "weight": 3.4
+        },
+        {
+          "ticker": "BN",
+          "weight": 3.18
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 3.04
+        },
+        {
+          "ticker": "PB",
+          "weight": 2.78
+        },
+        {
+          "ticker": "WY",
+          "weight": 2.74
+        },
+        {
+          "ticker": "HA",
+          "weight": 2.67
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 2.47
+        },
+        {
+          "ticker": "IVT",
+          "weight": 2.38
+        },
+        {
+          "ticker": "LOW",
+          "weight": 2.33
+        },
+        {
+          "ticker": "AMH",
+          "weight": 2.1
+        },
+        {
+          "ticker": "MSGE",
+          "weight": 2.06
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.66
+        },
+        {
+          "ticker": "ROIC",
+          "weight": 1.65
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.62
+        },
+        {
+          "ticker": "FPH",
+          "weight": 1.57
+        },
+        {
+          "ticker": "PCH",
+          "weight": 1.54
+        },
+        {
+          "ticker": "JLL",
+          "weight": 1.4
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.37
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.33
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.31
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.3
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.26
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.23
+        },
+        {
+          "ticker": "PLD",
+          "weight": 1.18
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.13
+        },
+        {
+          "ticker": "ALG",
+          "weight": 1.1
         }
       ]
     },
@@ -938,83 +3650,127 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 13.82
+          "weight": 11.51
         },
         {
           "ticker": "HCC",
-          "weight": 11.88
+          "weight": 9.9
         },
         {
           "ticker": "DB",
-          "weight": 7.26
+          "weight": 6.04
         },
         {
           "ticker": "VAL",
-          "weight": 5.99
+          "weight": 4.99
         },
         {
           "ticker": "CMA",
-          "weight": 5.53
+          "weight": 4.6
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.47
+          "weight": 4.56
         },
         {
           "ticker": "ORI",
-          "weight": 4.77
+          "weight": 3.98
         },
         {
           "ticker": "DHI",
-          "weight": 4.58
+          "weight": 3.81
         },
         {
           "ticker": "PLD",
-          "weight": 4.19
+          "weight": 3.49
         },
         {
           "ticker": "LAZ",
-          "weight": 4.0
+          "weight": 3.33
         },
         {
           "ticker": "BN",
-          "weight": 3.97
-        },
-        {
-          "ticker": "HA-OLD",
-          "weight": 3.82
-        },
-        {
-          "ticker": "WY",
-          "weight": 3.68
-        },
-        {
-          "ticker": "UHAL.B",
-          "weight": 3.59
-        },
-        {
-          "ticker": "CBRE",
           "weight": 3.31
         },
         {
-          "ticker": "RYN",
+          "ticker": "HA",
           "weight": 3.18
         },
         {
+          "ticker": "WY",
+          "weight": 3.07
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 2.99
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 2.76
+        },
+        {
+          "ticker": "RYN",
+          "weight": 2.65
+        },
+        {
           "ticker": "LOW",
-          "weight": 2.93
+          "weight": 2.43
         },
         {
           "ticker": "AMH",
-          "weight": 2.86
+          "weight": 2.38
         },
         {
           "ticker": "JLL",
-          "weight": 2.63
+          "weight": 2.19
         },
         {
           "ticker": "MYRG",
-          "weight": 2.54
+          "weight": 2.11
+        },
+        {
+          "ticker": "FPH",
+          "weight": 2.05
+        },
+        {
+          "ticker": "IVT",
+          "weight": 1.89
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.72
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.57
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.57
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.38
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.36
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.33
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.31
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.27
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.26
         }
       ]
     },
@@ -1023,83 +3779,139 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 15.33
+          "weight": 12.15
         },
         {
           "ticker": "TDW",
-          "weight": 13.86
+          "weight": 10.98
         },
         {
           "ticker": "VAL",
-          "weight": 7.59
+          "weight": 6.01
         },
         {
           "ticker": "DB",
-          "weight": 6.46
+          "weight": 5.12
         },
         {
           "ticker": "ORI",
-          "weight": 5.34
+          "weight": 4.23
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.09
+          "weight": 4.03
         },
         {
           "ticker": "CMA",
-          "weight": 4.61
+          "weight": 3.65
         },
         {
           "ticker": "DHI",
-          "weight": 4.1
+          "weight": 3.25
         },
         {
           "ticker": "LAZ",
-          "weight": 4.04
+          "weight": 3.2
         },
         {
           "ticker": "BN",
-          "weight": 3.96
+          "weight": 3.13
         },
         {
           "ticker": "UHAL.B",
-          "weight": 3.94
+          "weight": 3.12
         },
         {
           "ticker": "PLD",
-          "weight": 3.26
+          "weight": 2.58
         },
         {
           "ticker": "WY",
-          "weight": 3.15
+          "weight": 2.49
         },
         {
           "ticker": "CBRE",
-          "weight": 3.14
+          "weight": 2.49
         },
         {
           "ticker": "AMH",
-          "weight": 2.85
+          "weight": 2.26
         },
         {
           "ticker": "LOW",
-          "weight": 2.81
+          "weight": 2.22
         },
         {
           "ticker": "RYN",
-          "weight": 2.8
+          "weight": 2.22
         },
         {
           "ticker": "MYRG",
-          "weight": 2.61
+          "weight": 2.07
         },
         {
           "ticker": "FPH",
-          "weight": 2.57
+          "weight": 2.04
         },
         {
           "ticker": "JLL",
-          "weight": 2.47
+          "weight": 1.96
+        },
+        {
+          "ticker": "IVT",
+          "weight": 1.93
+        },
+        {
+          "ticker": "HA",
+          "weight": 1.91
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.72
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.65
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.57
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.51
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.41
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.34
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.33
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.31
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.29
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.19
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.13
         }
       ]
     },
@@ -1108,83 +3920,151 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 13.76
+          "weight": 10.63
         },
         {
           "ticker": "TDW",
-          "weight": 11.83
+          "weight": 9.14
         },
         {
           "ticker": "DB",
-          "weight": 7.91
+          "weight": 6.12
         },
         {
           "ticker": "VAL",
-          "weight": 6.72
+          "weight": 5.19
         },
         {
           "ticker": "CMA",
-          "weight": 6.19
+          "weight": 4.79
         },
         {
           "ticker": "ORI",
-          "weight": 5.67
+          "weight": 4.38
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.42
+          "weight": 4.19
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.83
+          "weight": 3.74
         },
         {
           "ticker": "BN",
-          "weight": 4.57
+          "weight": 3.53
         },
         {
           "ticker": "DHI",
-          "weight": 4.36
+          "weight": 3.37
         },
         {
           "ticker": "CBRE",
-          "weight": 3.95
+          "weight": 3.06
         },
         {
           "ticker": "PLD",
-          "weight": 3.62
+          "weight": 2.79
         },
         {
           "ticker": "WY",
-          "weight": 3.0
+          "weight": 2.32
         },
         {
           "ticker": "UMBF",
-          "weight": 2.91
+          "weight": 2.25
         },
         {
           "ticker": "AMH",
-          "weight": 2.84
+          "weight": 2.19
         },
         {
-          "ticker": "HA-OLD",
-          "weight": 2.7
+          "ticker": "HA",
+          "weight": 2.09
         },
         {
           "ticker": "RYN",
-          "weight": 2.64
+          "weight": 2.04
         },
         {
           "ticker": "IVT",
-          "weight": 2.46
+          "weight": 1.9
         },
         {
           "ticker": "FPH",
-          "weight": 2.36
+          "weight": 1.82
+        },
+        {
+          "ticker": "JLL",
+          "weight": 1.77
         },
         {
           "ticker": "MYRG",
-          "weight": 2.29
+          "weight": 1.77
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.56
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.5
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.47
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.44
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.43
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.42
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.4
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.27
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.24
+        },
+        {
+          "ticker": "SUI",
+          "weight": 1.22
+        },
+        {
+          "ticker": "ALG",
+          "weight": 1.21
+        },
+        {
+          "ticker": "LOW",
+          "weight": 1.19
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.18
+        },
+        {
+          "ticker": "WASH",
+          "weight": 1.16
+        },
+        {
+          "ticker": "ITIC",
+          "weight": 1.14
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.1
         }
       ]
     },
@@ -1193,83 +4073,147 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 10.68
+          "weight": 8.34
         },
         {
           "ticker": "HCC",
-          "weight": 10.51
+          "weight": 8.21
         },
         {
           "ticker": "DB",
-          "weight": 8.87
+          "weight": 6.93
         },
         {
           "ticker": "VAL",
-          "weight": 7.16
+          "weight": 5.59
         },
         {
           "ticker": "CMA",
-          "weight": 5.93
+          "weight": 4.63
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.85
+          "weight": 4.56
         },
         {
           "ticker": "ORI",
-          "weight": 5.76
+          "weight": 4.5
         },
         {
           "ticker": "LAZ",
-          "weight": 5.22
+          "weight": 4.08
         },
         {
           "ticker": "BN",
-          "weight": 4.6
+          "weight": 3.59
         },
         {
           "ticker": "DHI",
-          "weight": 4.59
+          "weight": 3.58
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.44
+          "weight": 3.47
         },
         {
           "ticker": "CBRE",
-          "weight": 4.02
+          "weight": 3.13
         },
         {
           "ticker": "PLD",
-          "weight": 3.45
+          "weight": 2.69
         },
         {
           "ticker": "WY",
-          "weight": 3.01
+          "weight": 2.36
         },
         {
           "ticker": "UMBF",
-          "weight": 2.94
+          "weight": 2.3
         },
         {
           "ticker": "AMH",
-          "weight": 2.83
+          "weight": 2.21
         },
         {
           "ticker": "MYRG",
-          "weight": 2.71
+          "weight": 2.12
         },
         {
           "ticker": "RYN",
-          "weight": 2.56
+          "weight": 2
         },
         {
           "ticker": "SUI",
-          "weight": 2.54
+          "weight": 1.98
         },
         {
           "ticker": "FPH",
-          "weight": 2.34
+          "weight": 1.83
+        },
+        {
+          "ticker": "JLL",
+          "weight": 1.79
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.75
+        },
+        {
+          "ticker": "HA",
+          "weight": 1.62
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.44
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.39
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.38
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.37
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.37
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.33
+        },
+        {
+          "ticker": "ALG",
+          "weight": 1.29
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.22
+        },
+        {
+          "ticker": "LOW",
+          "weight": 1.22
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.22
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.19
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.18
+        },
+        {
+          "ticker": "ITIC",
+          "weight": 1.13
         }
       ]
     },
@@ -1278,83 +4222,139 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 11.55
+          "weight": 9.38
         },
         {
           "ticker": "HCC",
-          "weight": 11.41
+          "weight": 9.27
         },
         {
           "ticker": "DB",
-          "weight": 9.43
+          "weight": 7.66
         },
         {
           "ticker": "VAL",
-          "weight": 7.44
+          "weight": 6.05
         },
         {
           "ticker": "ORI",
-          "weight": 6.09
+          "weight": 4.94
         },
         {
           "ticker": "CMA",
-          "weight": 5.78
+          "weight": 4.7
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.36
+          "weight": 4.36
         },
         {
           "ticker": "LAZ",
-          "weight": 5.0
-        },
-        {
-          "ticker": "BN",
-          "weight": 4.78
-        },
-        {
-          "ticker": "UHAL.B",
           "weight": 4.06
         },
         {
+          "ticker": "BN",
+          "weight": 3.89
+        },
+        {
+          "ticker": "UHAL.B",
+          "weight": 3.3
+        },
+        {
           "ticker": "CBRE",
-          "weight": 3.87
+          "weight": 3.15
         },
         {
           "ticker": "DHI",
-          "weight": 3.55
+          "weight": 2.89
         },
         {
           "ticker": "PLD",
-          "weight": 3.44
+          "weight": 2.8
         },
         {
           "ticker": "SUI",
-          "weight": 3.09
+          "weight": 2.51
         },
         {
           "ticker": "UMBF",
-          "weight": 2.97
+          "weight": 2.41
         },
         {
           "ticker": "AMH",
-          "weight": 2.83
-        },
-        {
-          "ticker": "JLL",
-          "weight": 2.54
-        },
-        {
-          "ticker": "WY",
-          "weight": 2.33
-        },
-        {
-          "ticker": "FPH",
           "weight": 2.3
         },
         {
+          "ticker": "JLL",
+          "weight": 2.06
+        },
+        {
+          "ticker": "WY",
+          "weight": 1.89
+        },
+        {
+          "ticker": "FPH",
+          "weight": 1.87
+        },
+        {
           "ticker": "MYRG",
-          "weight": 2.19
+          "weight": 1.78
+        },
+        {
+          "ticker": "RYN",
+          "weight": 1.77
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.44
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.43
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.39
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.38
+        },
+        {
+          "ticker": "ITIC",
+          "weight": 1.36
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.35
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.33
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.31
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.27
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.25
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.2
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.13
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.13
         }
       ]
     },
@@ -1363,83 +4363,151 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 11.79
+          "weight": 9.08
         },
         {
           "ticker": "DB",
-          "weight": 9.99
+          "weight": 7.69
         },
         {
           "ticker": "TDW",
-          "weight": 8.02
+          "weight": 6.17
         },
         {
           "ticker": "CMA",
-          "weight": 6.61
+          "weight": 5.09
         },
         {
           "ticker": "LEN.B",
-          "weight": 6.49
+          "weight": 5
         },
         {
           "ticker": "BN",
-          "weight": 5.61
+          "weight": 4.32
         },
         {
           "ticker": "VAL",
-          "weight": 5.59
+          "weight": 4.3
         },
         {
           "ticker": "CBRE",
-          "weight": 5.28
+          "weight": 4.07
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.75
+          "weight": 3.66
         },
         {
           "ticker": "LAZ",
-          "weight": 4.24
+          "weight": 3.26
         },
         {
           "ticker": "ORI",
-          "weight": 4.19
+          "weight": 3.23
         },
         {
           "ticker": "PLD",
-          "weight": 3.77
+          "weight": 2.91
         },
         {
           "ticker": "DHI",
-          "weight": 3.49
+          "weight": 2.68
         },
         {
           "ticker": "SUI",
-          "weight": 3.38
+          "weight": 2.6
         },
         {
           "ticker": "JLL",
-          "weight": 3.25
+          "weight": 2.5
         },
         {
           "ticker": "FPH",
-          "weight": 3.19
+          "weight": 2.45
         },
         {
           "ticker": "AMH",
-          "weight": 2.87
+          "weight": 2.2
         },
         {
           "ticker": "UMBF",
-          "weight": 2.71
+          "weight": 2.08
         },
         {
           "ticker": "WY",
-          "weight": 2.43
+          "weight": 1.86
         },
         {
           "ticker": "RYN",
-          "weight": 2.36
+          "weight": 1.81
+        },
+        {
+          "ticker": "HBB",
+          "weight": 1.72
+        },
+        {
+          "ticker": "ITIC",
+          "weight": 1.61
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.57
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.44
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.35
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.33
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.32
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.31
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.31
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.31
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.26
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.26
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.25
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.24
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.13
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.12
         }
       ]
     },
@@ -1448,83 +4516,193 @@
       "holdings": [
         {
           "ticker": "DB",
-          "weight": 10.51
+          "weight": 7.88,
+          "shares": 2186504
         },
         {
           "ticker": "TDW",
-          "weight": 8.98
+          "weight": 6.73,
+          "shares": 588179
         },
         {
           "ticker": "HCC",
-          "weight": 8.9
+          "weight": 6.66,
+          "shares": 587445
         },
         {
           "ticker": "CBRE",
-          "weight": 6.37
+          "weight": 4.78,
+          "shares": 174018
         },
         {
           "ticker": "BN",
-          "weight": 6.27
+          "weight": 4.7,
+          "shares": 391478
         },
         {
           "ticker": "LEN.B",
-          "weight": 5.97
+          "weight": 4.47,
+          "shares": 161781
         },
         {
           "ticker": "VAL",
-          "weight": 5.26
+          "weight": 3.95,
+          "shares": 426608
         },
         {
           "ticker": "CMA",
-          "weight": 5.22
+          "weight": 3.92,
+          "shares": 302881
         },
         {
           "ticker": "ORI",
-          "weight": 4.7
+          "weight": 3.52,
+          "shares": 465478
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.47
+          "weight": 3.35,
+          "shares": 249865
         },
         {
           "ticker": "FPH",
-          "weight": 4.36
+          "weight": 3.26,
+          "shares": 4125911
         },
         {
           "ticker": "PLD",
-          "weight": 3.81
+          "weight": 2.85,
+          "shares": 128943
         },
         {
           "ticker": "SUI",
-          "weight": 3.71
+          "weight": 2.78,
+          "shares": 108137
         },
         {
           "ticker": "JLL",
-          "weight": 3.68
+          "weight": 2.75,
+          "shares": 51990
         },
         {
           "ticker": "AMH",
-          "weight": 3.36
+          "weight": 2.51,
+          "shares": 321221
         },
         {
           "ticker": "UMBF",
-          "weight": 3.23
+          "weight": 2.43,
+          "shares": 102796
         },
         {
           "ticker": "DHI",
-          "weight": 3.07
+          "weight": 2.3,
+          "shares": 78745
         },
         {
           "ticker": "MYRG",
-          "weight": 3.03
+          "weight": 2.26,
+          "shares": 72797
         },
         {
           "ticker": "ITIC",
-          "weight": 2.58
+          "weight": 1.94,
+          "shares": 39139
         },
         {
           "ticker": "PRA",
-          "weight": 2.51
+          "weight": 1.88,
+          "shares": 563988
+        },
+        {
+          "ticker": "RYN",
+          "weight": 1.72,
+          "shares": 315800
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.71,
+          "shares": 171022
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.65,
+          "shares": 157130
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.62,
+          "shares": 252952
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.61,
+          "shares": 102168
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.5,
+          "shares": 132103
+        },
+        {
+          "ticker": "SUPN",
+          "weight": 1.43,
+          "shares": 189493
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.4,
+          "shares": 164438
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.39,
+          "shares": 118656
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.39,
+          "shares": 209426
+        },
+        {
+          "ticker": "WY",
+          "weight": 1.3,
+          "shares": 220849
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.25,
+          "shares": 789447
+        },
+        {
+          "ticker": "ALG",
+          "weight": 1.24,
+          "shares": 31880
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.22,
+          "shares": 203401
+        },
+        {
+          "ticker": "SEB",
+          "weight": 1.19,
+          "shares": 2334
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.18,
+          "shares": 155830
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.17,
+          "shares": 79623
+        },
+        {
+          "ticker": "ICFI",
+          "weight": 1.1,
+          "shares": 44188
         }
       ]
     },
@@ -1533,83 +4711,178 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 9.96
+          "weight": 7.76,
+          "shares": 809258
         },
         {
           "ticker": "DB",
-          "weight": 9.93
+          "weight": 7.74,
+          "shares": 1447570
         },
         {
           "ticker": "HCC",
-          "weight": 8.52
+          "weight": 6.64,
+          "shares": 613206
         },
         {
           "ticker": "VAL",
-          "weight": 6.52
+          "weight": 5.08,
+          "shares": 569839
         },
         {
           "ticker": "FPH",
-          "weight": 6.42
+          "weight": 5,
+          "shares": 4125911
         },
         {
           "ticker": "CBRE",
-          "weight": 6.29
+          "weight": 4.9,
+          "shares": 165109
         },
         {
           "ticker": "BN",
-          "weight": 5.78
+          "weight": 4.5,
+          "shares": 378249
         },
         {
           "ticker": "CMA",
-          "weight": 5.21
+          "weight": 4.06,
+          "shares": 302904
         },
         {
           "ticker": "LEN.B",
-          "weight": 4.69
+          "weight": 3.66,
+          "shares": 147770
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.31
+          "weight": 3.36,
+          "shares": 249865
         },
         {
           "ticker": "PLD",
-          "weight": 4.21
+          "weight": 3.28,
+          "shares": 129162
         },
         {
           "ticker": "ORI",
-          "weight": 3.85
+          "weight": 2.99,
+          "shares": 336388
         },
         {
           "ticker": "PRA",
-          "weight": 3.83
+          "weight": 2.99,
+          "shares": 563988
         },
         {
           "ticker": "JLL",
-          "weight": 3.75
+          "weight": 2.93,
+          "shares": 51990
         },
         {
           "ticker": "SUI",
-          "weight": 3.4
+          "weight": 2.65,
+          "shares": 90715
         },
         {
           "ticker": "UMBF",
-          "weight": 3.02
+          "weight": 2.36,
+          "shares": 102796
         },
         {
           "ticker": "DHI",
-          "weight": 2.92
+          "weight": 2.27,
+          "shares": 78745
         },
         {
           "ticker": "ITIC",
-          "weight": 2.73
+          "weight": 2.13,
+          "shares": 38919
         },
         {
           "ticker": "MYRG",
-          "weight": 2.4
+          "weight": 1.87,
+          "shares": 72797
         },
         {
           "ticker": "FNF",
-          "weight": 2.25
+          "weight": 1.75,
+          "shares": 118656
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.65,
+          "shares": 102168
+        },
+        {
+          "ticker": "AMH",
+          "weight": 1.65,
+          "shares": 192560
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.65,
+          "shares": 134558
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.64,
+          "shares": 252952
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.64,
+          "shares": 164438
+        },
+        {
+          "ticker": "RYN",
+          "weight": 1.64,
+          "shares": 258499
+        },
+        {
+          "ticker": "PHM",
+          "weight": 1.49,
+          "shares": 63800
+        },
+        {
+          "ticker": "WY",
+          "weight": 1.47,
+          "shares": 220849
+        },
+        {
+          "ticker": "BAM",
+          "weight": 1.45,
+          "shares": 132103
+        },
+        {
+          "ticker": "SUPN",
+          "weight": 1.41,
+          "shares": 189493
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.38,
+          "shares": 203401
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.38,
+          "shares": 209426
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.33,
+          "shares": 171022
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.18,
+          "shares": 789447
+        },
+        {
+          "ticker": "CET",
+          "weight": 1.13,
+          "shares": 111210
         }
       ]
     },
@@ -1618,83 +4891,178 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 11.88
+          "weight": 9.34,
+          "shares": 875157
         },
         {
           "ticker": "DB",
-          "weight": 8.87
+          "weight": 6.99,
+          "shares": 1021558
         },
         {
           "ticker": "HCC",
-          "weight": 8.64
+          "weight": 6.81,
+          "shares": 641684
         },
         {
           "ticker": "VAL",
-          "weight": 7.26
+          "weight": 5.71,
+          "shares": 585921
         },
         {
           "ticker": "BN",
-          "weight": 6.87
+          "weight": 5.41,
+          "shares": 378249
         },
         {
           "ticker": "CBRE",
-          "weight": 6.79
+          "weight": 5.34,
+          "shares": 164710
         },
         {
           "ticker": "FPH",
-          "weight": 6.68
+          "weight": 5.25,
+          "shares": 4125911
         },
         {
           "ticker": "LEN.B",
-          "weight": 4.58
+          "weight": 3.61,
+          "shares": 148033
         },
         {
           "ticker": "PLD",
-          "weight": 4.49
+          "weight": 3.54,
+          "shares": 145522
         },
         {
           "ticker": "UHAL.B",
-          "weight": 4.15
+          "weight": 3.27,
+          "shares": 259510
         },
         {
           "ticker": "JLL",
-          "weight": 3.89
+          "weight": 3.06,
+          "shares": 51690
         },
         {
           "ticker": "SUI",
-          "weight": 3.62
+          "weight": 2.85,
+          "shares": 97210
         },
         {
           "ticker": "UMBF",
-          "weight": 3.18
+          "weight": 2.5,
+          "shares": 102763
         },
         {
           "ticker": "PHM",
-          "weight": 3.01
+          "weight": 2.37,
+          "shares": 96931
         },
         {
           "ticker": "CMA",
-          "weight": 3.01
+          "weight": 2.36,
+          "shares": 171210
         },
         {
           "ticker": "DHI",
-          "weight": 2.97
+          "weight": 2.33,
+          "shares": 78189
         },
         {
           "ticker": "MYRG",
-          "weight": 2.91
+          "weight": 2.29,
+          "shares": 54595
         },
         {
           "ticker": "PRA",
-          "weight": 2.58
+          "weight": 2.03,
+          "shares": 384640
         },
         {
           "ticker": "BATRA",
-          "weight": 2.38
+          "weight": 1.87,
+          "shares": 164438
         },
         {
           "ticker": "ITIC",
-          "weight": 2.23
+          "weight": 1.75,
+          "shares": 35752
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.66,
+          "shares": 102168
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.66,
+          "shares": 89535
+        },
+        {
+          "ticker": "AMH",
+          "weight": 1.59,
+          "shares": 191066
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.54,
+          "shares": 118656
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.53,
+          "shares": 171022
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.48,
+          "shares": 132663
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.43,
+          "shares": 209426
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.43,
+          "shares": 789447
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.39,
+          "shares": 203401
+        },
+        {
+          "ticker": "SUPN",
+          "weight": 1.38,
+          "shares": 189493
+        },
+        {
+          "ticker": "RYN",
+          "weight": 1.33,
+          "shares": 258129
+        },
+        {
+          "ticker": "FRPH",
+          "weight": 1.32,
+          "shares": 211440
+        },
+        {
+          "ticker": "WY",
+          "weight": 1.31,
+          "shares": 220849
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.15,
+          "shares": 155830
+        },
+        {
+          "ticker": "CET",
+          "weight": 1.13,
+          "shares": 101812
         }
       ]
     },
@@ -1703,83 +5071,173 @@
       "holdings": [
         {
           "ticker": "TDW",
-          "weight": 12.49
+          "weight": 10.1,
+          "shares": 874667
         },
         {
           "ticker": "HCC",
-          "weight": 11.02
+          "weight": 8.92,
+          "shares": 641916
         },
         {
           "ticker": "VAL",
-          "weight": 7.81
+          "weight": 6.32,
+          "shares": 585602
         },
         {
           "ticker": "BN",
-          "weight": 6.69
+          "weight": 5.41,
+          "shares": 378249
         },
         {
           "ticker": "FPH",
-          "weight": 6.56
+          "weight": 5.32,
+          "shares": 4113917
         },
         {
           "ticker": "CBRE",
-          "weight": 6.31
+          "weight": 5.1,
+          "shares": 154672
         },
         {
           "ticker": "BCC",
-          "weight": 5.52
+          "weight": 4.46,
+          "shares": 273705
         },
         {
           "ticker": "LEN.B",
-          "weight": 4.7
+          "weight": 3.8,
+          "shares": 147843
         },
         {
           "ticker": "PLD",
-          "weight": 4.41
+          "weight": 3.57,
+          "shares": 145394
         },
         {
           "ticker": "ROG",
-          "weight": 4.25
+          "weight": 3.44,
+          "shares": 199368
         },
         {
           "ticker": "JLL",
-          "weight": 4.0
+          "weight": 3.24,
+          "shares": 51619
         },
         {
           "ticker": "DHI",
-          "weight": 3.51
+          "weight": 2.84,
+          "shares": 78078
         },
         {
           "ticker": "UHAL.B",
-          "weight": 3.46
+          "weight": 2.8,
+          "shares": 259225
         },
         {
           "ticker": "PHM",
-          "weight": 3.39
+          "weight": 2.74,
+          "shares": 96766
         },
         {
           "ticker": "SUI",
-          "weight": 3.23
+          "weight": 2.62,
+          "shares": 96786
         },
         {
           "ticker": "UMBF",
-          "weight": 3.01
+          "weight": 2.43,
+          "shares": 97518
         },
         {
           "ticker": "CMA",
-          "weight": 2.82
+          "weight": 2.28,
+          "shares": 156314
         },
         {
           "ticker": "SUPN",
-          "weight": 2.37
+          "weight": 1.92,
+          "shares": 189493
         },
         {
           "ticker": "PRA",
-          "weight": 2.28
+          "weight": 1.84,
+          "shares": 364013
         },
         {
           "ticker": "SKY",
-          "weight": 2.16
+          "weight": 1.75,
+          "shares": 106409
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.56,
+          "shares": 164438
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.51,
+          "shares": 35554
+        },
+        {
+          "ticker": "FNF",
+          "weight": 1.51,
+          "shares": 118656
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.51,
+          "shares": 203401
+        },
+        {
+          "ticker": "KALU",
+          "weight": 1.48,
+          "shares": 89535
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.46,
+          "shares": 171022
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.44,
+          "shares": 102168
+        },
+        {
+          "ticker": "AMH",
+          "weight": 1.32,
+          "shares": 191066
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.29,
+          "shares": 789447
+        },
+        {
+          "ticker": "ITIC",
+          "weight": 1.24,
+          "shares": 21883
+        },
+        {
+          "ticker": "RYN",
+          "weight": 1.24,
+          "shares": 218052
+        },
+        {
+          "ticker": "SBSI",
+          "weight": 1.23,
+          "shares": 209426
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.17,
+          "shares": 106342
+        },
+        {
+          "ticker": "TPH",
+          "weight": 1.13,
+          "shares": 155855
         }
       ]
     },
@@ -1788,92 +5246,168 @@
       "holdings": [
         {
           "ticker": "HCC",
-          "weight": 13.16
+          "weight": 10.83,
+          "shares": 583320
         },
         {
           "ticker": "TDW",
-          "weight": 11.28
+          "weight": 9.29,
+          "shares": 873071
         },
         {
           "ticker": "BCC",
-          "weight": 8.1
+          "weight": 6.67,
+          "shares": 429999
         },
         {
           "ticker": "VAL",
-          "weight": 7.53
+          "weight": 6.2,
+          "shares": 584373
         },
         {
           "ticker": "BN",
-          "weight": 6.43
+          "weight": 5.3,
+          "shares": 548119
         },
         {
           "ticker": "CBRE",
-          "weight": 6.04
+          "weight": 4.97,
+          "shares": 146835
         },
         {
           "ticker": "FPH",
-          "weight": 5.88
+          "weight": 4.84,
+          "shares": 4113917
         },
         {
           "ticker": "PLD",
-          "weight": 4.74
+          "weight": 3.91,
+          "shares": 145451
         },
         {
           "ticker": "ROG",
-          "weight": 4.67
+          "weight": 3.85,
+          "shares": 199474
         },
         {
           "ticker": "LEN.B",
-          "weight": 3.6
+          "weight": 2.96,
+          "shares": 148008
         },
         {
           "ticker": "DB",
-          "weight": 3.32
+          "weight": 2.74,
+          "shares": 337193
         },
         {
           "ticker": "UHAL.B",
-          "weight": 3.1
+          "weight": 2.55,
+          "shares": 259246
         },
         {
           "ticker": "SUI",
-          "weight": 3.07
+          "weight": 2.53,
+          "shares": 96922
         },
         {
           "ticker": "PHM",
-          "weight": 3.03
+          "weight": 2.49,
+          "shares": 100684
         },
         {
           "ticker": "JLL",
-          "weight": 2.96
+          "weight": 2.43,
+          "shares": 34351
         },
         {
           "ticker": "DHI",
-          "weight": 2.89
+          "weight": 2.37,
+          "shares": 78194
         },
         {
           "ticker": "FNF",
-          "weight": 2.87
+          "weight": 2.36,
+          "shares": 205320
         },
         {
           "ticker": "KALU",
-          "weight": 2.51
-        },
-        {
-          "ticker": "COLL",
-          "weight": 2.41
+          "weight": 2.06,
+          "shares": 85363
         },
         {
           "ticker": "SUPN",
-          "weight": 2.41
+          "weight": 1.98,
+          "shares": 189493
+        },
+        {
+          "ticker": "COLL",
+          "weight": 1.98,
+          "shares": 203401
+        },
+        {
+          "ticker": "ECPG",
+          "weight": 1.96,
+          "shares": 171022
+        },
+        {
+          "ticker": "UMBF",
+          "weight": 1.9,
+          "shares": 78245
+        },
+        {
+          "ticker": "SKY",
+          "weight": 1.89,
+          "shares": 106409
+        },
+        {
+          "ticker": "AMH",
+          "weight": 1.88,
+          "shares": 278512
+        },
+        {
+          "ticker": "MYRG",
+          "weight": 1.64,
+          "shares": 35554
+        },
+        {
+          "ticker": "PRA",
+          "weight": 1.49,
+          "shares": 292990
+        },
+        {
+          "ticker": "PB",
+          "weight": 1.49,
+          "shares": 102168
+        },
+        {
+          "ticker": "BATRA",
+          "weight": 1.47,
+          "shares": 164438
+        },
+        {
+          "ticker": "LXU",
+          "weight": 1.41,
+          "shares": 789447
+        },
+        {
+          "ticker": "AMBC",
+          "weight": 1.28,
+          "shares": 782093
+        },
+        {
+          "ticker": "FR",
+          "weight": 1.26,
+          "shares": 104728
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:38:09Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=TA",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:44:46Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001099281-third-avenue-management-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

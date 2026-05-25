@@ -8,7 +8,7 @@
     },
     {
       "ticker": "TDG",
-      "weight": 25.65,
+      "weight": 25.64,
       "shares": 909168
     },
     {
@@ -28,21 +28,653 @@
     },
     {
       "ticker": "V",
-      "weight": 3.66,
+      "weight": 3.67,
       "shares": 498677
     }
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 29.81
+        },
+        {
+          "ticker": "LBRDA",
+          "weight": 20.9
+        },
+        {
+          "ticker": "LBTYK",
+          "weight": 19.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.6
+        },
+        {
+          "ticker": "MA",
+          "weight": 7.07
+        },
+        {
+          "ticker": "V",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 22.77
+        },
+        {
+          "ticker": "TDG",
+          "weight": 21.05
+        },
+        {
+          "ticker": "LBTYK",
+          "weight": 18.37
+        },
+        {
+          "ticker": "MCO",
+          "weight": 16.9
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 8.3
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.46
+        },
+        {
+          "ticker": "V",
+          "weight": 3.81
+        },
+        {
+          "ticker": "LILAK",
+          "weight": 2.35
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.56
+        },
+        {
+          "ticker": "TDG",
+          "weight": 20.22
+        },
+        {
+          "ticker": "MCO",
+          "weight": 16.64
+        },
+        {
+          "ticker": "LBTYK",
+          "weight": 16.62
+        },
+        {
+          "ticker": "WAB",
+          "weight": 10.92
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.54
+        },
+        {
+          "ticker": "V",
+          "weight": 3.72
+        },
+        {
+          "ticker": "LILAK",
+          "weight": 1.78
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 21.58
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 20.32
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.9
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 14.22
+        },
+        {
+          "ticker": "LBTYK",
+          "weight": 11.25
+        },
+        {
+          "ticker": "WAB",
+          "weight": 8.39
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.11
+        },
+        {
+          "ticker": "V",
+          "weight": 3.23
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "BKNG",
+          "weight": 20.96
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 18.72
+        },
+        {
+          "ticker": "MCO",
+          "weight": 17.99
+        },
+        {
+          "ticker": "TDG",
+          "weight": 17.5
+        },
+        {
+          "ticker": "WAB",
+          "weight": 7.94
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.64
+        },
+        {
+          "ticker": "LBTYK",
+          "weight": 6.52
+        },
+        {
+          "ticker": "V",
+          "weight": 3.72
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 21.67
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 20.92
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 19.48
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.55
+        },
+        {
+          "ticker": "WAB",
+          "weight": 8.85
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.81
+        },
+        {
+          "ticker": "V",
+          "weight": 3.73
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 24.17
+        },
+        {
+          "ticker": "MCO",
+          "weight": 22.03
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 21.26
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 12.36
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.22
+        },
+        {
+          "ticker": "WAB",
+          "weight": 7.6
+        },
+        {
+          "ticker": "V",
+          "weight": 4.35
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "BKNG",
+          "weight": 21.52
+        },
+        {
+          "ticker": "TDG",
+          "weight": 20.91
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 19.33
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.75
+        },
+        {
+          "ticker": "MA",
+          "weight": 7.92
+        },
+        {
+          "ticker": "WAB",
+          "weight": 7.34
+        },
+        {
+          "ticker": "V",
+          "weight": 4.23
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "BKNG",
+          "weight": 24.33
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 21
+        },
+        {
+          "ticker": "TDG",
+          "weight": 18.77
+        },
+        {
+          "ticker": "MCO",
+          "weight": 17.85
+        },
+        {
+          "ticker": "MA",
+          "weight": 7.98
+        },
+        {
+          "ticker": "WAB",
+          "weight": 6.21
+        },
+        {
+          "ticker": "V",
+          "weight": 3.87
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "BKNG",
+          "weight": 21.69
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 20.81
+        },
+        {
+          "ticker": "TDG",
+          "weight": 19.07
+        },
+        {
+          "ticker": "MCO",
+          "weight": 17.05
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.42
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.09
+        },
+        {
+          "ticker": "V",
+          "weight": 3.87
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 22.95
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 21.88
+        },
+        {
+          "ticker": "TDG",
+          "weight": 18.28
+        },
+        {
+          "ticker": "MCO",
+          "weight": 14.85
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 10.01
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.14
+        },
+        {
+          "ticker": "V",
+          "weight": 3.89
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 29.16
+        },
+        {
+          "ticker": "TDG",
+          "weight": 26
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.84
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 12.65
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.91
+        },
+        {
+          "ticker": "V",
+          "weight": 4.44
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 28.35
+        },
+        {
+          "ticker": "TDG",
+          "weight": 27.72
+        },
+        {
+          "ticker": "MCO",
+          "weight": 19.45
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 11.39
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.88
+        },
+        {
+          "ticker": "V",
+          "weight": 4.19
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 32.53
+        },
+        {
+          "ticker": "TDG",
+          "weight": 25.29
+        },
+        {
+          "ticker": "MCO",
+          "weight": 19.05
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 9.84
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.06
+        },
+        {
+          "ticker": "V",
+          "weight": 4.23
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 38.63
+        },
+        {
+          "ticker": "TDG",
+          "weight": 26.39
+        },
+        {
+          "ticker": "MCO",
+          "weight": 18.64
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.34
+        },
+        {
+          "ticker": "V",
+          "weight": 3.75
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.24
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 32.45
+        },
+        {
+          "ticker": "TDG",
+          "weight": 20.26
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 19.06
+        },
+        {
+          "ticker": "MCO",
+          "weight": 15.42
+        },
+        {
+          "ticker": "MA",
+          "weight": 7.33
+        },
+        {
+          "ticker": "V",
+          "weight": 2.92
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 2.55
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 30.35
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 21.47
+        },
+        {
+          "ticker": "TDG",
+          "weight": 20.54
+        },
+        {
+          "ticker": "MCO",
+          "weight": 19.95
+        },
+        {
+          "ticker": "MA",
+          "weight": 5.55
+        },
+        {
+          "ticker": "V",
+          "weight": 2.13
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 30.13
+        },
+        {
+          "ticker": "TDG",
+          "weight": 27.04
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 26.21
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.37
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.25
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 32.28
+        },
+        {
+          "ticker": "TDG",
+          "weight": 27.47
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 24.97
+        },
+        {
+          "ticker": "MCO",
+          "weight": 9.1
+        },
+        {
+          "ticker": "MA",
+          "weight": 6.18
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "TDG",
+          "weight": 26.62
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 24.83
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 23.52
+        },
+        {
+          "ticker": "META",
+          "weight": 19.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.78
+        },
+        {
+          "ticker": "MA",
+          "weight": 2.64
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "GOOGL",
-          "weight": 25.09
+          "weight": 25.1
         },
         {
           "ticker": "META",
-          "weight": 24.39
+          "weight": 24.4
         },
         {
           "ticker": "CHTR",
@@ -58,7 +690,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 2.4
+          "weight": 2.39
         }
       ]
     },
@@ -71,19 +703,19 @@
         },
         {
           "ticker": "TDG",
-          "weight": 22.53
+          "weight": 22.52
         },
         {
           "ticker": "GOOGL",
-          "weight": 21.64
+          "weight": 21.63
         },
         {
           "ticker": "META",
-          "weight": 21.53
+          "weight": 21.52
         },
         {
           "ticker": "MSFT",
-          "weight": 6.17
+          "weight": 6.18
         },
         {
           "ticker": "MCO",
@@ -91,7 +723,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 1.77
+          "weight": 1.78
         }
       ]
     },
@@ -124,7 +756,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 1.19
+          "weight": 1.18
         }
       ]
     },
@@ -161,7 +793,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 1.26
+          "weight": 1.27
         }
       ]
     },
@@ -174,11 +806,11 @@
         },
         {
           "ticker": "TDG",
-          "weight": 23.75
+          "weight": 23.76
         },
         {
           "ticker": "MSFT",
-          "weight": 20.85
+          "weight": 20.84
         },
         {
           "ticker": "AMZN",
@@ -198,7 +830,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 1.08
+          "weight": 1.07
         }
       ]
     },
@@ -235,7 +867,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 1.04
+          "weight": 1.03
         }
       ]
     },
@@ -346,7 +978,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 2.2
+          "weight": 2.19
         }
       ]
     },
@@ -383,7 +1015,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 2.19
+          "weight": 2.18
         }
       ]
     },
@@ -420,7 +1052,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 2.72
+          "weight": 2.73
         }
       ]
     },
@@ -494,7 +1126,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 2.75
+          "weight": 2.76
         }
       ]
     },
@@ -511,7 +1143,7 @@
         },
         {
           "ticker": "AMZN",
-          "weight": 16.44
+          "weight": 16.43
         },
         {
           "ticker": "GOOGL",
@@ -527,7 +1159,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 2.42
+          "weight": 2.43
         },
         {
           "ticker": "FICO",
@@ -540,11 +1172,11 @@
       "holdings": [
         {
           "ticker": "TDG",
-          "weight": 29.47
+          "weight": 29.48
         },
         {
           "ticker": "AMZN",
-          "weight": 19.84
+          "weight": 19.83
         },
         {
           "ticker": "MSFT",
@@ -568,7 +1200,7 @@
         },
         {
           "ticker": "FICO",
-          "weight": 1.34
+          "weight": 1.33
         }
       ]
     },
@@ -582,12 +1214,12 @@
         },
         {
           "ticker": "AMZN",
-          "weight": 23.54,
+          "weight": 23.55,
           "shares": 5278320
         },
         {
           "ticker": "MSFT",
-          "weight": 16.22,
+          "weight": 16.21,
           "shares": 1891641
         },
         {
@@ -597,12 +1229,12 @@
         },
         {
           "ticker": "MCO",
-          "weight": 9.16,
+          "weight": 9.15,
           "shares": 950905
         },
         {
           "ticker": "MA",
-          "weight": 6.27,
+          "weight": 6.28,
           "shares": 586254
         },
         {
@@ -617,17 +1249,17 @@
       "holdings": [
         {
           "ticker": "TDG",
-          "weight": 27.28,
+          "weight": 27.26,
           "shares": 979950
         },
         {
           "ticker": "AMZN",
-          "weight": 19.9,
+          "weight": 19.91,
           "shares": 5202415
         },
         {
           "ticker": "MSFT",
-          "weight": 19.46,
+          "weight": 19.47,
           "shares": 2578649
         },
         {
@@ -637,7 +1269,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 8.9,
+          "weight": 8.91,
           "shares": 950905
         },
         {
@@ -654,11 +1286,6 @@
           "ticker": "HLT",
           "weight": 1.25,
           "shares": 273957
-        },
-        {
-          "ticker": "FICO",
-          "weight": 0.02,
-          "shares": 670
         }
       ]
     },
@@ -687,7 +1314,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 6.01,
+          "weight": 6.02,
           "shares": 586254
         },
         {
@@ -704,11 +1331,6 @@
           "ticker": "HLT",
           "weight": 2.65,
           "shares": 544596
-        },
-        {
-          "ticker": "FICO",
-          "weight": 0.02,
-          "shares": 670
         }
       ]
     },
@@ -722,7 +1344,7 @@
         },
         {
           "ticker": "MSFT",
-          "weight": 24.33,
+          "weight": 24.34,
           "shares": 2569267
         },
         {
@@ -737,7 +1359,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 6.07,
+          "weight": 6.08,
           "shares": 584086
         },
         {
@@ -754,11 +1376,6 @@
           "ticker": "GOOGL",
           "weight": 1.53,
           "shares": 344391
-        },
-        {
-          "ticker": "FICO",
-          "weight": 0.02,
-          "shares": 667
         }
       ]
     },
@@ -767,7 +1384,7 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 33.09,
+          "weight": 33.1,
           "shares": 7314534
         },
         {
@@ -810,10 +1427,11 @@
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T01:50:45Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AR",
+    "lastFetchedAt": "2026-05-24T23:41:40Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001631014-altarock-partners-lp",
     "migratedFromLegacy": true,
     "legacyId": "custom-1777227848490",
-    "sharesSource": "13f.info"
+    "sharesSource": "13f.info",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

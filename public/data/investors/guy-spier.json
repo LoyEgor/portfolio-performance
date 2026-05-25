@@ -43,47 +43,43 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 18.93
+          "weight": 19.13
         },
         {
           "ticker": "BAC",
-          "weight": 15.65
+          "weight": 15.81
         },
         {
           "ticker": "AXP",
-          "weight": 15.65
+          "weight": 15.81
         },
         {
           "ticker": "MA",
-          "weight": 12.33
+          "weight": 12.46
         },
         {
           "ticker": "MU",
-          "weight": 9.3
+          "weight": 9.4
         },
         {
           "ticker": "RACE",
-          "weight": 8.81
+          "weight": 8.9
         },
         {
           "ticker": "BRK.A",
-          "weight": 6.1
+          "weight": 6.16
         },
         {
           "ticker": "SRG",
-          "weight": 4.83
+          "weight": 4.88
         },
         {
           "ticker": "MCO",
-          "weight": 4.25
+          "weight": 4.29
         },
         {
           "ticker": "WFC",
-          "weight": 3.13
-        },
-        {
-          "ticker": "TWTR-OLD",
-          "weight": 1.01
+          "weight": 3.16
         }
       ]
     },
@@ -116,7 +112,7 @@
         },
         {
           "ticker": "BRK.A",
-          "weight": 6.0
+          "weight": 6
         },
         {
           "ticker": "BABA",
@@ -369,7 +365,7 @@
         },
         {
           "ticker": "RACE",
-          "weight": 9.24
+          "weight": 9.23
         },
         {
           "ticker": "BRK.A",
@@ -377,7 +373,7 @@
         },
         {
           "ticker": "MU",
-          "weight": 6.16
+          "weight": 6.15
         },
         {
           "ticker": "MCO",
@@ -414,7 +410,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 12.4
+          "weight": 12.39
         },
         {
           "ticker": "RACE",
@@ -434,7 +430,7 @@
         },
         {
           "ticker": "SRG",
-          "weight": 3.2
+          "weight": 3.21
         },
         {
           "ticker": "BABA",
@@ -451,7 +447,7 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 22.64
+          "weight": 22.65
         },
         {
           "ticker": "AXP",
@@ -459,7 +455,7 @@
         },
         {
           "ticker": "MA",
-          "weight": 12.47
+          "weight": 12.46
         },
         {
           "ticker": "BAC",
@@ -471,11 +467,11 @@
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.28
+          "weight": 7.29
         },
         {
           "ticker": "MU",
-          "weight": 6.29
+          "weight": 6.3
         },
         {
           "ticker": "MCO",
@@ -487,11 +483,11 @@
         },
         {
           "ticker": "SRG",
-          "weight": 2.06
+          "weight": 2.05
         },
         {
           "ticker": "DJCO",
-          "weight": 1.7
+          "weight": 1.71
         }
       ]
     },
@@ -508,7 +504,7 @@
         },
         {
           "ticker": "RACE",
-          "weight": 12.57
+          "weight": 12.58
         },
         {
           "ticker": "MA",
@@ -516,11 +512,11 @@
         },
         {
           "ticker": "BAC",
-          "weight": 10.59
+          "weight": 10.6
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.48
+          "weight": 7.47
         },
         {
           "ticker": "MU",
@@ -536,7 +532,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 1.91
+          "weight": 1.9
         },
         {
           "ticker": "DJCO",
@@ -622,7 +618,7 @@
         },
         {
           "ticker": "MU",
-          "weight": 7.53
+          "weight": 7.54
         },
         {
           "ticker": "BRK.A",
@@ -671,11 +667,11 @@
         },
         {
           "ticker": "MU",
-          "weight": 9.08
+          "weight": 9.09
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.34
+          "weight": 7.33
         },
         {
           "ticker": "MCO",
@@ -700,7 +696,7 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 22.27
+          "weight": 22.28
         },
         {
           "ticker": "AXP",
@@ -724,7 +720,7 @@
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.16
+          "weight": 7.15
         },
         {
           "ticker": "MCO",
@@ -740,7 +736,7 @@
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.14
+          "weight": 1.13
         }
       ]
     },
@@ -753,7 +749,7 @@
         },
         {
           "ticker": "AXP",
-          "weight": 20.51
+          "weight": 20.52
         },
         {
           "ticker": "MA",
@@ -768,11 +764,11 @@
           "weight": 10.1
         },
         {
-          "ticker": "BRK.A",
+          "ticker": "MU",
           "weight": 7.47
         },
         {
-          "ticker": "MU",
+          "ticker": "BRK.A",
           "weight": 7.47
         },
         {
@@ -794,47 +790,58 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 22.54
+          "weight": 22.54,
+          "shares": 140600
         },
         {
           "ticker": "AXP",
-          "weight": 22.04
+          "weight": 22.04,
+          "shares": 210000
         },
         {
           "ticker": "MA",
-          "weight": 12.25
+          "weight": 12.24,
+          "shares": 65750
         },
         {
           "ticker": "BAC",
-          "weight": 11.93
+          "weight": 11.93,
+          "shares": 767845
         },
         {
           "ticker": "RACE",
-          "weight": 8.75
+          "weight": 8.75,
+          "shares": 60000
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.22
+          "weight": 7.22,
+          "shares": 30
         },
         {
           "ticker": "MU",
-          "weight": 5.95
+          "weight": 5.95,
+          "shares": 200000
         },
         {
           "ticker": "MCO",
-          "weight": 4.52
+          "weight": 4.52,
+          "shares": 27000
         },
         {
           "ticker": "DJCO",
-          "weight": 2.31
+          "weight": 2.31,
+          "shares": 11500
         },
         {
           "ticker": "BABA",
-          "weight": 1.42
+          "weight": 1.42,
+          "shares": 47500
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.07
+          "weight": 1.07,
+          "shares": 16000
         }
       ]
     },
@@ -843,43 +850,53 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 26.02
+          "weight": 26.02,
+          "shares": 140600
         },
         {
           "ticker": "AXP",
-          "weight": 19.63
+          "weight": 19.64,
+          "shares": 210000
         },
         {
           "ticker": "MA",
-          "weight": 12.52
+          "weight": 12.52,
+          "shares": 65750
         },
         {
           "ticker": "BAC",
-          "weight": 11.13
+          "weight": 11.14,
+          "shares": 767845
         },
         {
           "ticker": "BRK.A",
-          "weight": 8.33
+          "weight": 8.32,
+          "shares": 30
         },
         {
           "ticker": "RACE",
-          "weight": 8.17
+          "weight": 8.18,
+          "shares": 60000
         },
         {
           "ticker": "MU",
-          "weight": 6.04
+          "weight": 6.04,
+          "shares": 200000
         },
         {
           "ticker": "MCO",
-          "weight": 4.37
+          "weight": 4.37,
+          "shares": 27000
         },
         {
           "ticker": "BABA",
-          "weight": 2.18
+          "weight": 2.18,
+          "shares": 47500
         },
         {
           "ticker": "DJCO",
-          "weight": 1.59
+          "weight": 1.59,
+          "shares": 11500
         }
       ]
     },
@@ -888,43 +905,53 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 22.47
+          "weight": 22.48,
+          "shares": 140600
         },
         {
           "ticker": "AXP",
-          "weight": 22.05
+          "weight": 22.05,
+          "shares": 210000
         },
         {
           "ticker": "MA",
-          "weight": 12.15
+          "weight": 12.16,
+          "shares": 65750
         },
         {
           "ticker": "BAC",
-          "weight": 11.96
+          "weight": 11.96,
+          "shares": 767845
         },
         {
           "ticker": "RACE",
-          "weight": 8.22
+          "weight": 8.22,
+          "shares": 60000
         },
         {
           "ticker": "MU",
-          "weight": 8.12
+          "weight": 8.11,
+          "shares": 200000
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.2
+          "weight": 7.2,
+          "shares": 30
         },
         {
           "ticker": "MCO",
-          "weight": 4.46
+          "weight": 4.46,
+          "shares": 27000
         },
         {
           "ticker": "BABA",
-          "weight": 1.77
+          "weight": 1.77,
+          "shares": 47500
         },
         {
           "ticker": "DJCO",
-          "weight": 1.6
+          "weight": 1.6,
+          "shares": 11500
         }
       ]
     },
@@ -933,47 +960,58 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 22.58
+          "weight": 22.58,
+          "shares": 140600
         },
         {
           "ticker": "AXP",
-          "weight": 22.28
+          "weight": 22.28,
+          "shares": 210000
         },
         {
           "ticker": "BAC",
-          "weight": 12.65
+          "weight": 12.65,
+          "shares": 767845
         },
         {
           "ticker": "MA",
-          "weight": 11.94
+          "weight": 11.95,
+          "shares": 65750
         },
         {
           "ticker": "RACE",
-          "weight": 9.26
+          "weight": 9.26,
+          "shares": 60000
         },
         {
           "ticker": "BRK.A",
-          "weight": 7.23
+          "weight": 7.23,
+          "shares": 30
         },
         {
           "ticker": "MU",
-          "weight": 4.28
+          "weight": 4.28,
+          "shares": 80000
         },
         {
           "ticker": "MCO",
-          "weight": 4.11
+          "weight": 4.11,
+          "shares": 27000
         },
         {
           "ticker": "BABA",
-          "weight": 2.72
+          "weight": 2.71,
+          "shares": 47500
         },
         {
           "ticker": "DJCO",
-          "weight": 1.71
+          "weight": 1.71,
+          "shares": 11500
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.25
+          "weight": 1.24,
+          "shares": 16000
         }
       ]
     },
@@ -982,40 +1020,48 @@
       "holdings": [
         {
           "ticker": "BRK.B",
-          "weight": 33.25
+          "weight": 33.25,
+          "shares": 97600
         },
         {
           "ticker": "AXP",
-          "weight": 16.3
+          "weight": 16.3,
+          "shares": 65000
         },
         {
           "ticker": "MA",
-          "weight": 15.48
+          "weight": 15.48,
+          "shares": 40000
         },
         {
           "ticker": "BRK.A",
-          "weight": 15.35
+          "weight": 15.35,
+          "shares": 30
         },
         {
           "ticker": "MCO",
-          "weight": 9.35
+          "weight": 9.35,
+          "shares": 27000
         },
         {
           "ticker": "RACE",
-          "weight": 6.48
+          "weight": 6.48,
+          "shares": 30000
         },
         {
           "ticker": "DJCO",
-          "weight": 3.8
+          "weight": 3.8,
+          "shares": 11500
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:35:29Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=aq",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:15:48Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001953324-aquamarine-zurich-ag",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

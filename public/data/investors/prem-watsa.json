@@ -2,8 +2,8 @@
   "id": "prem-watsa",
   "holdings": [
     {
-      "ticker": "ORLA",
-      "weight": 26.29,
+      "ticker": "OLA.TO",
+      "weight": 26.28,
       "shares": 31817229
     },
     {
@@ -42,7 +42,7 @@
       "shares": 34980220
     },
     {
-      "ticker": "ATS",
+      "ticker": "ATS.TO",
       "weight": 3.63,
       "shares": 2486400
     },
@@ -89,10 +89,738 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 35.86
+        },
+        {
+          "ticker": "IBM",
+          "weight": 19.53
+        },
+        {
+          "ticker": "KW",
+          "weight": 18.56
+        },
+        {
+          "ticker": "RFP",
+          "weight": 15.12
+        },
+        {
+          "ticker": "OSTK",
+          "weight": 4.34
+        },
+        {
+          "ticker": "XCOO",
+          "weight": 2.39
+        },
+        {
+          "ticker": "PTVCB",
+          "weight": 2.26
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.95
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 31.85
+        },
+        {
+          "ticker": "IBM",
+          "weight": 21.03
+        },
+        {
+          "ticker": "KW",
+          "weight": 17.27
+        },
+        {
+          "ticker": "RFP",
+          "weight": 16.44
+        },
+        {
+          "ticker": "OSTK",
+          "weight": 5.21
+        },
+        {
+          "ticker": "XCOO",
+          "weight": 3.38
+        },
+        {
+          "ticker": "PTVCB",
+          "weight": 2.43
+        },
+        {
+          "ticker": "HP",
+          "weight": 2.39
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 35.17
+        },
+        {
+          "ticker": "IBM",
+          "weight": 20.43
+        },
+        {
+          "ticker": "KW",
+          "weight": 19.05
+        },
+        {
+          "ticker": "RFP",
+          "weight": 13.61
+        },
+        {
+          "ticker": "OSTK",
+          "weight": 4.6
+        },
+        {
+          "ticker": "XCOO",
+          "weight": 2.58
+        },
+        {
+          "ticker": "PTVCB",
+          "weight": 2.34
+        },
+        {
+          "ticker": "HP",
+          "weight": 2.22
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 29.01
+        },
+        {
+          "ticker": "KW",
+          "weight": 22.74
+        },
+        {
+          "ticker": "IBM",
+          "weight": 20.4
+        },
+        {
+          "ticker": "RFP",
+          "weight": 14.75
+        },
+        {
+          "ticker": "OSTK",
+          "weight": 5.03
+        },
+        {
+          "ticker": "HP",
+          "weight": 2.44
+        },
+        {
+          "ticker": "XCOO",
+          "weight": 2.17
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.89
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.57
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 30.29
+        },
+        {
+          "ticker": "KW",
+          "weight": 22.86
+        },
+        {
+          "ticker": "IBM",
+          "weight": 19.86
+        },
+        {
+          "ticker": "RFP",
+          "weight": 13.81
+        },
+        {
+          "ticker": "USG",
+          "weight": 4.08
+        },
+        {
+          "ticker": "IPI",
+          "weight": 2.39
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.95
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.76
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.58
+        },
+        {
+          "ticker": "XCOO",
+          "weight": 1.43
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 42.8
+        },
+        {
+          "ticker": "KW",
+          "weight": 21.5
+        },
+        {
+          "ticker": "RFP",
+          "weight": 12.2
+        },
+        {
+          "ticker": "IBM",
+          "weight": 9.35
+        },
+        {
+          "ticker": "USG",
+          "weight": 4.08
+        },
+        {
+          "ticker": "IPI",
+          "weight": 3.44
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.95
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.84
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.75
+        },
+        {
+          "ticker": "PKX",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 45.37
+        },
+        {
+          "ticker": "KW",
+          "weight": 19.83
+        },
+        {
+          "ticker": "RFP",
+          "weight": 13.28
+        },
+        {
+          "ticker": "IPI",
+          "weight": 6.31
+        },
+        {
+          "ticker": "USG",
+          "weight": 4.35
+        },
+        {
+          "ticker": "IBM",
+          "weight": 3.55
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.71
+        },
+        {
+          "ticker": "ALR",
+          "weight": 1.62
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.59
+        },
+        {
+          "ticker": "CBI",
+          "weight": 1.24
+        },
+        {
+          "ticker": "PKX",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 39.16
+        },
+        {
+          "ticker": "RFP",
+          "weight": 25.2
+        },
+        {
+          "ticker": "KW",
+          "weight": 16.03
+        },
+        {
+          "ticker": "IPI",
+          "weight": 5.94
+        },
+        {
+          "ticker": "USG",
+          "weight": 4.43
+        },
+        {
+          "ticker": "IBM",
+          "weight": 3.06
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.78
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.7
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.59
+        },
+        {
+          "ticker": "PKX",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 43.41
+        },
+        {
+          "ticker": "RFP",
+          "weight": 20.37
+        },
+        {
+          "ticker": "KW",
+          "weight": 18.73
+        },
+        {
+          "ticker": "USG",
+          "weight": 5
+        },
+        {
+          "ticker": "IPI",
+          "weight": 4.89
+        },
+        {
+          "ticker": "IBM",
+          "weight": 3.29
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 2.45
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.85
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 39.43
+        },
+        {
+          "ticker": "RFP",
+          "weight": 27.54
+        },
+        {
+          "ticker": "KW",
+          "weight": 24.66
+        },
+        {
+          "ticker": "IBM",
+          "weight": 3.25
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 3.2
+        },
+        {
+          "ticker": "HP",
+          "weight": 1.92
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 33.7
+        },
+        {
+          "ticker": "RFP",
+          "weight": 25.1
+        },
+        {
+          "ticker": "ATCO",
+          "weight": 20.4
+        },
+        {
+          "ticker": "KW",
+          "weight": 18.17
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 2.64
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "BB",
+          "weight": 28.43
+        },
+        {
+          "ticker": "ATCO",
+          "weight": 25.92
+        },
+        {
+          "ticker": "RFP",
+          "weight": 20.75
+        },
+        {
+          "ticker": "KW",
+          "weight": 20.74
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 2.54
+        },
+        {
+          "ticker": "JNJ",
+          "weight": 1.62
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 39.54
+        },
+        {
+          "ticker": "BB",
+          "weight": 27.79
+        },
+        {
+          "ticker": "KW",
+          "weight": 16.8
+        },
+        {
+          "ticker": "RFP",
+          "weight": 14.21
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.67
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 46.52
+        },
+        {
+          "ticker": "BB",
+          "weight": 21.43
+        },
+        {
+          "ticker": "KW",
+          "weight": 16.83
+        },
+        {
+          "ticker": "RFP",
+          "weight": 13.51
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.71
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 53.59
+        },
+        {
+          "ticker": "KW",
+          "weight": 19.09
+        },
+        {
+          "ticker": "BB",
+          "weight": 16.01
+        },
+        {
+          "ticker": "RFP",
+          "weight": 9.39
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.93
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 59.17
+        },
+        {
+          "ticker": "BB",
+          "weight": 16.2
+        },
+        {
+          "ticker": "KW",
+          "weight": 16.02
+        },
+        {
+          "ticker": "RFP",
+          "weight": 6.93
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.68
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 59.31
+        },
+        {
+          "ticker": "BB",
+          "weight": 14.71
+        },
+        {
+          "ticker": "KW",
+          "weight": 13.7
+        },
+        {
+          "ticker": "RFP",
+          "weight": 2.96
+        },
+        {
+          "ticker": "CCAP",
+          "weight": 2.82
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.27
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.72
+        },
+        {
+          "ticker": "BEN",
+          "weight": 1.28
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 53
+        },
+        {
+          "ticker": "BB",
+          "weight": 15.77
+        },
+        {
+          "ticker": "KW",
+          "weight": 14.05
+        },
+        {
+          "ticker": "RFP",
+          "weight": 4.45
+        },
+        {
+          "ticker": "CCAP",
+          "weight": 3.33
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.5
+        },
+        {
+          "ticker": "MCFT",
+          "weight": 2.46
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.64
+        },
+        {
+          "ticker": "BEN",
+          "weight": 1.45
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.35
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 55.18
+        },
+        {
+          "ticker": "BB",
+          "weight": 13.28
+        },
+        {
+          "ticker": "KW",
+          "weight": 12
+        },
+        {
+          "ticker": "RFP",
+          "weight": 8.48
+        },
+        {
+          "ticker": "CCAP",
+          "weight": 3
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.04
+        },
+        {
+          "ticker": "MCFT",
+          "weight": 2.03
+        },
+        {
+          "ticker": "LUMN",
+          "weight": 1.48
+        },
+        {
+          "ticker": "BEN",
+          "weight": 1.26
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "ATCO",
+          "weight": 53.01
+        },
+        {
+          "ticker": "BB",
+          "weight": 15.22
+        },
+        {
+          "ticker": "KW",
+          "weight": 11.71
+        },
+        {
+          "ticker": "RFP",
+          "weight": 9.82
+        },
+        {
+          "ticker": "CCAP",
+          "weight": 2.72
+        },
+        {
+          "ticker": "MU",
+          "weight": 2.59
+        },
+        {
+          "ticker": "MCFT",
+          "weight": 2.28
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.44
+        },
+        {
+          "ticker": "BEN",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
+          "ticker": "ATCO",
           "weight": 52.54
         },
         {
@@ -100,7 +828,7 @@
           "weight": 15.14
         },
         {
-          "ticker": "RFP-OLD",
+          "ticker": "RFP",
           "weight": 12.9
         },
         {
@@ -109,7 +837,7 @@
         },
         {
           "ticker": "CCAP",
-          "weight": 2.5
+          "weight": 2.49
         },
         {
           "ticker": "MU",
@@ -117,7 +845,7 @@
         },
         {
           "ticker": "MCFT",
-          "weight": 1.72
+          "weight": 1.73
         },
         {
           "ticker": "GOOGL",
@@ -133,7 +861,7 @@
       "asOf": "2021-06-30",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
+          "ticker": "ATCO",
           "weight": 50.22
         },
         {
@@ -141,7 +869,7 @@
           "weight": 20.15
         },
         {
-          "ticker": "RFP-OLD",
+          "ticker": "RFP",
           "weight": 13.15
         },
         {
@@ -170,32 +898,36 @@
       "asOf": "2021-09-30",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
-          "weight": 54.6
+          "ticker": "ATCO",
+          "weight": 53.38
         },
         {
           "ticker": "BB",
-          "weight": 16.33
+          "weight": 17.2
         },
         {
-          "ticker": "RFP-OLD",
-          "weight": 13.07
+          "ticker": "RFP",
+          "weight": 11.47
         },
         {
           "ticker": "KW",
-          "weight": 10.02
+          "weight": 10.4
         },
         {
           "ticker": "CCAP",
-          "weight": 2.6
+          "weight": 2.79
         },
         {
           "ticker": "MU",
-          "weight": 1.76
+          "weight": 1.89
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.61
+          "weight": 1.73
+        },
+        {
+          "ticker": "BEN",
+          "weight": 1.15
         }
       ]
     },
@@ -203,20 +935,20 @@
       "asOf": "2021-12-31",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
+          "ticker": "ATCO",
           "weight": 49.85
         },
         {
-          "ticker": "RFP-OLD",
-          "weight": 16.38
+          "ticker": "RFP",
+          "weight": 16.37
         },
         {
           "ticker": "BB",
-          "weight": 15.38
+          "weight": 15.37
         },
         {
           "ticker": "KW",
-          "weight": 11.2
+          "weight": 11.19
         },
         {
           "ticker": "MU",
@@ -224,15 +956,15 @@
         },
         {
           "ticker": "CCAP",
-          "weight": 2.06
+          "weight": 2.07
         },
         {
           "ticker": "GOOGL",
-          "weight": 1.7
+          "weight": 1.71
         },
         {
           "ticker": "BEN",
-          "weight": 1.17
+          "weight": 1.18
         }
       ]
     },
@@ -240,11 +972,11 @@
       "asOf": "2022-03-31",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
-          "weight": 54.77
+          "ticker": "ATCO",
+          "weight": 54.78
         },
         {
-          "ticker": "RFP-OLD",
+          "ticker": "RFP",
           "weight": 14.71
         },
         {
@@ -253,7 +985,7 @@
         },
         {
           "ticker": "KW",
-          "weight": 12.13
+          "weight": 12.12
         },
         {
           "ticker": "MU",
@@ -273,11 +1005,11 @@
       "asOf": "2022-06-30",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
-          "weight": 51.66
+          "ticker": "ATCO",
+          "weight": 51.65
         },
         {
-          "ticker": "RFP-OLD",
+          "ticker": "RFP",
           "weight": 15.03
         },
         {
@@ -286,7 +1018,7 @@
         },
         {
           "ticker": "BB",
-          "weight": 9.72
+          "weight": 9.71
         },
         {
           "ticker": "BAC",
@@ -314,7 +1046,7 @@
         },
         {
           "ticker": "CCAP",
-          "weight": 1.32
+          "weight": 1.33
         },
         {
           "ticker": "BABA",
@@ -326,12 +1058,12 @@
       "asOf": "2022-09-30",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
+          "ticker": "ATCO",
           "weight": 54.61
         },
         {
-          "ticker": "RFP-OLD",
-          "weight": 19.14
+          "ticker": "RFP",
+          "weight": 19.13
         },
         {
           "ticker": "BB",
@@ -351,7 +1083,7 @@
         },
         {
           "ticker": "OXY",
-          "weight": 1.78
+          "weight": 1.77
         },
         {
           "ticker": "CVX",
@@ -367,11 +1099,11 @@
       "asOf": "2022-12-31",
       "holdings": [
         {
-          "ticker": "ATCO-OLD",
+          "ticker": "ATCO",
           "weight": 56.89
         },
         {
-          "ticker": "RFP-OLD",
+          "ticker": "RFP",
           "weight": 19.56
         },
         {
@@ -380,7 +1112,7 @@
         },
         {
           "ticker": "MU",
-          "weight": 5.14
+          "weight": 5.13
         },
         {
           "ticker": "BB",
@@ -396,10 +1128,10 @@
         },
         {
           "ticker": "CVX",
-          "weight": 1.68
+          "weight": 1.67
         },
         {
-          "ticker": "ORLA",
+          "ticker": "OLA.TO",
           "weight": 1.27
         }
       ]
@@ -409,71 +1141,63 @@
       "holdings": [
         {
           "ticker": "MU",
-          "weight": 17.71
+          "weight": 18.14
         },
         {
           "ticker": "KW",
-          "weight": 16.89
+          "weight": 17.3
         },
         {
           "ticker": "BB",
-          "weight": 16.29
+          "weight": 16.69
         },
         {
           "ticker": "OXY",
-          "weight": 14.46
+          "weight": 14.81
         },
         {
           "ticker": "BAC",
-          "weight": 7.43
+          "weight": 7.61
         },
         {
-          "ticker": "ORLA",
-          "weight": 5.5
+          "ticker": "OLA.TO",
+          "weight": 5.63
         },
         {
           "ticker": "CVX",
-          "weight": 3.91
+          "weight": 4.01
         },
         {
           "ticker": "GOOGL",
-          "weight": 2.66
+          "weight": 2.73
         },
         {
           "ticker": "BABA",
-          "weight": 2.29
+          "weight": 2.34
         },
         {
           "ticker": "CCAP",
-          "weight": 2.18
+          "weight": 2.23
         },
         {
           "ticker": "BEN",
-          "weight": 2.06
+          "weight": 2.11
         },
         {
           "ticker": "INTC",
-          "weight": 1.88
+          "weight": 1.92
         },
         {
           "ticker": "HP",
-          "weight": 1.51
+          "weight": 1.55
         },
         {
           "ticker": "PFE",
-          "weight": 1.44
+          "weight": 1.47
         },
         {
           "ticker": "MRK",
-          "weight": 1.41
-        },
-        {
-          "ticker": "GE",
-          "weight": 1.27
-        },
-        {
-          "ticker": "BNS",
-          "weight": 1.11
+          "weight": 1.44
         }
       ]
     },
@@ -482,59 +1206,55 @@
       "holdings": [
         {
           "ticker": "OXY",
-          "weight": 25.35
+          "weight": 25.66
         },
         {
           "ticker": "BB",
-          "weight": 18.5
+          "weight": 18.73
         },
         {
           "ticker": "MU",
-          "weight": 17.56
+          "weight": 17.77
         },
         {
           "ticker": "KW",
-          "weight": 15.56
+          "weight": 15.75
         },
         {
-          "ticker": "ORLA",
-          "weight": 5.94
+          "ticker": "OLA.TO",
+          "weight": 6.01
         },
         {
           "ticker": "GOOGL",
-          "weight": 2.87
+          "weight": 2.9
         },
         {
           "ticker": "VOO",
-          "weight": 2.45
+          "weight": 2.48
         },
         {
           "ticker": "CCAP",
-          "weight": 2.27
+          "weight": 2.29
         },
         {
           "ticker": "BEN",
-          "weight": 1.91
+          "weight": 1.94
         },
         {
           "ticker": "INTC",
-          "weight": 1.8
+          "weight": 1.82
         },
         {
           "ticker": "BABA",
-          "weight": 1.74
+          "weight": 1.77
         },
         {
           "ticker": "MRK",
-          "weight": 1.43
+          "weight": 1.45
         },
         {
           "ticker": "HP",
-          "weight": 1.41
-        },
-        {
-          "ticker": "PFE",
-          "weight": 1.21
+          "weight": 1.43
         }
       ]
     },
@@ -543,59 +1263,47 @@
       "holdings": [
         {
           "ticker": "OXY",
-          "weight": 27.66
+          "weight": 28.65
         },
         {
           "ticker": "MU",
-          "weight": 18.84
+          "weight": 19.52
         },
         {
           "ticker": "BB",
-          "weight": 15.61
+          "weight": 16.17
         },
         {
           "ticker": "KW",
-          "weight": 13.9
+          "weight": 14.4
         },
         {
-          "ticker": "ORLA",
-          "weight": 7.81
+          "ticker": "OLA.TO",
+          "weight": 8.08
         },
         {
           "ticker": "GOOGL",
-          "weight": 3.1
+          "weight": 3.21
         },
         {
           "ticker": "CCAP",
-          "weight": 2.54
+          "weight": 2.62
         },
         {
           "ticker": "INTC",
-          "weight": 1.89
+          "weight": 1.96
         },
         {
           "ticker": "BABA",
-          "weight": 1.8
+          "weight": 1.86
         },
         {
           "ticker": "BEN",
-          "weight": 1.75
+          "weight": 1.8
         },
         {
           "ticker": "HP",
-          "weight": 1.66
-        },
-        {
-          "ticker": "MRK",
-          "weight": 1.26
-        },
-        {
-          "ticker": "VOO",
-          "weight": 1.12
-        },
-        {
-          "ticker": "PFE",
-          "weight": 1.08
+          "weight": 1.72
         }
       ]
     },
@@ -616,10 +1324,10 @@
         },
         {
           "ticker": "KW",
-          "weight": 12.41
+          "weight": 12.4
         },
         {
-          "ticker": "ORLA",
+          "ticker": "OLA.TO",
           "weight": 9.17
         },
         {
@@ -628,7 +1336,7 @@
         },
         {
           "ticker": "CCAP",
-          "weight": 2.73
+          "weight": 2.74
         },
         {
           "ticker": "BEN",
@@ -636,7 +1344,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 1.7
+          "weight": 1.71
         },
         {
           "ticker": "HP",
@@ -648,7 +1356,7 @@
         },
         {
           "ticker": "VOO",
-          "weight": 1.32
+          "weight": 1.31
         }
       ]
     },
@@ -660,12 +1368,12 @@
           "weight": 33.93
         },
         {
-          "ticker": "ORLA",
-          "weight": 18.18
+          "ticker": "OLA.TO",
+          "weight": 18.19
         },
         {
           "ticker": "BB",
-          "weight": 11.1
+          "weight": 11.11
         },
         {
           "ticker": "KW",
@@ -697,7 +1405,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 1.83
+          "weight": 1.84
         },
         {
           "ticker": "GM",
@@ -722,15 +1430,15 @@
       "holdings": [
         {
           "ticker": "OXY",
-          "weight": 33.94
+          "weight": 33.95
         },
         {
-          "ticker": "ORLA",
+          "ticker": "OLA.TO",
           "weight": 19.08
         },
         {
           "ticker": "KW",
-          "weight": 11.59
+          "weight": 11.58
         },
         {
           "ticker": "BB",
@@ -742,7 +1450,7 @@
         },
         {
           "ticker": "VOO",
-          "weight": 4.26
+          "weight": 4.25
         },
         {
           "ticker": "UAA",
@@ -750,11 +1458,11 @@
         },
         {
           "ticker": "TSM",
-          "weight": 2.2
+          "weight": 2.21
         },
         {
           "ticker": "BEN",
-          "weight": 2.0
+          "weight": 2
         },
         {
           "ticker": "MRK",
@@ -762,7 +1470,7 @@
         },
         {
           "ticker": "BABA",
-          "weight": 1.88
+          "weight": 1.89
         },
         {
           "ticker": "HP",
@@ -770,11 +1478,11 @@
         },
         {
           "ticker": "GM",
-          "weight": 1.57
+          "weight": 1.56
         },
         {
           "ticker": "BNS",
-          "weight": 1.19
+          "weight": 1.18
         },
         {
           "ticker": "PFE",
@@ -790,12 +1498,12 @@
           "weight": 29.47
         },
         {
-          "ticker": "ORLA",
-          "weight": 21.46
+          "ticker": "OLA.TO",
+          "weight": 21.45
         },
         {
           "ticker": "KW",
-          "weight": 13.99
+          "weight": 13.98
         },
         {
           "ticker": "BB",
@@ -807,7 +1515,7 @@
         },
         {
           "ticker": "GOOGL",
-          "weight": 4.32
+          "weight": 4.33
         },
         {
           "ticker": "KHC",
@@ -819,11 +1527,11 @@
         },
         {
           "ticker": "MRK",
-          "weight": 1.87
+          "weight": 1.86
         },
         {
           "ticker": "HP",
-          "weight": 1.61
+          "weight": 1.6
         },
         {
           "ticker": "GM",
@@ -831,11 +1539,11 @@
         },
         {
           "ticker": "BNS",
-          "weight": 1.49
+          "weight": 1.5
         },
         {
           "ticker": "PFE",
-          "weight": 1.26
+          "weight": 1.27
         },
         {
           "ticker": "JNJ",
@@ -847,68 +1555,84 @@
       "asOf": "2024-12-31",
       "holdings": [
         {
-          "ticker": "ORLA",
-          "weight": 20.48
+          "ticker": "OLA.TO",
+          "weight": 20.48,
+          "shares": 56817229
         },
         {
           "ticker": "OXY",
-          "weight": 19.59
+          "weight": 19.6,
+          "shares": 6020418
         },
         {
           "ticker": "BB",
-          "weight": 11.64
+          "weight": 11.64,
+          "shares": 46724700
         },
         {
           "ticker": "KW",
-          "weight": 8.78
+          "weight": 8.78,
+          "shares": 13322009
         },
         {
           "ticker": "CVS",
-          "weight": 8.02
+          "weight": 8.02,
+          "shares": 2712000
         },
         {
           "ticker": "KHC",
-          "weight": 6.71
+          "weight": 6.7,
+          "shares": 3314000
         },
         {
-          "ticker": "ATS",
-          "weight": 4.87
+          "ticker": "ATS.TO",
+          "weight": 4.87,
+          "shares": 2486400
         },
         {
           "ticker": "TAP",
-          "weight": 4.48
+          "weight": 4.48,
+          "shares": 1186500
         },
         {
           "ticker": "CLF",
-          "weight": 3.65
+          "weight": 3.65,
+          "shares": 5899273
         },
         {
           "ticker": "UAA",
-          "weight": 3.45
+          "weight": 3.44,
+          "shares": 6311800
         },
         {
           "ticker": "TSM",
-          "weight": 1.85
+          "weight": 1.84,
+          "shares": 141700
         },
         {
           "ticker": "HP",
-          "weight": 1.63
+          "weight": 1.63,
+          "shares": 774105
         },
         {
           "ticker": "GM",
-          "weight": 1.32
+          "weight": 1.32,
+          "shares": 375965
         },
         {
           "ticker": "BNS",
-          "weight": 1.27
+          "weight": 1.27,
+          "shares": 359100
         },
         {
           "ticker": "PFE",
-          "weight": 1.14
+          "weight": 1.14,
+          "shares": 650900
         },
         {
           "ticker": "MRK",
-          "weight": 1.14
+          "weight": 1.13,
+          "shares": 172900
         }
       ]
     },
@@ -916,52 +1640,64 @@
       "asOf": "2025-03-31",
       "holdings": [
         {
-          "ticker": "ORLA",
-          "weight": 30.27
+          "ticker": "OLA.TO",
+          "weight": 30.26,
+          "shares": 56817229
         },
         {
           "ticker": "OXY",
-          "weight": 17.08
+          "weight": 17.08,
+          "shares": 6020418
         },
         {
           "ticker": "CVS",
-          "weight": 10.55
+          "weight": 10.55,
+          "shares": 2712000
         },
         {
           "ticker": "BB",
-          "weight": 10.09
+          "weight": 10.09,
+          "shares": 46724700
         },
         {
           "ticker": "CLF",
-          "weight": 7.04
+          "weight": 7.03,
+          "shares": 14899273
         },
         {
           "ticker": "KW",
-          "weight": 6.63
+          "weight": 6.63,
+          "shares": 13322009
         },
         {
           "ticker": "KHC",
-          "weight": 5.87
+          "weight": 5.87,
+          "shares": 3359000
         },
         {
           "ticker": "TAP",
-          "weight": 4.22
+          "weight": 4.22,
+          "shares": 1206500
         },
         {
-          "ticker": "ATS",
-          "weight": 3.49
+          "ticker": "ATS.TO",
+          "weight": 3.49,
+          "shares": 2486400
         },
         {
           "ticker": "UAA",
-          "weight": 2.26
+          "weight": 2.26,
+          "shares": 6311800
         },
         {
           "ticker": "TSM",
-          "weight": 1.35
+          "weight": 1.35,
+          "shares": 141700
         },
         {
           "ticker": "HP",
-          "weight": 1.17
+          "weight": 1.16,
+          "shares": 774105
         }
       ]
     },
@@ -969,56 +1705,69 @@
       "asOf": "2025-06-30",
       "holdings": [
         {
-          "ticker": "ORLA",
-          "weight": 31.43
+          "ticker": "OLA.TO",
+          "weight": 31.43,
+          "shares": 56817229
         },
         {
           "ticker": "OXY",
-          "weight": 14.28
+          "weight": 14.27,
+          "shares": 6050418
         },
         {
           "ticker": "CVS",
-          "weight": 10.5
+          "weight": 10.5,
+          "shares": 2712000
         },
         {
           "ticker": "BB",
-          "weight": 10.49
+          "weight": 10.49,
+          "shares": 40784700
         },
         {
           "ticker": "KHC",
-          "weight": 7.09
+          "weight": 7.08,
+          "shares": 4884000
         },
         {
           "ticker": "CLF",
-          "weight": 6.36
+          "weight": 6.36,
+          "shares": 14899273
         },
         {
           "ticker": "KW",
-          "weight": 5.08
+          "weight": 5.08,
+          "shares": 13322009
         },
         {
-          "ticker": "ATS",
-          "weight": 4.45
+          "ticker": "ATS.TO",
+          "weight": 4.44,
+          "shares": 2486400
         },
         {
           "ticker": "TAP",
-          "weight": 3.29
+          "weight": 3.29,
+          "shares": 1218500
         },
         {
           "ticker": "UAA",
-          "weight": 2.42
+          "weight": 2.42,
+          "shares": 6311800
         },
         {
           "ticker": "VOO",
-          "weight": 2.32
+          "weight": 2.33,
+          "shares": 72900
         },
         {
           "ticker": "TSM",
-          "weight": 1.19
+          "weight": 1.19,
+          "shares": 93700
         },
         {
           "ticker": "BNS",
-          "weight": 1.11
+          "weight": 1.11,
+          "shares": 359100
         }
       ]
     },
@@ -1026,68 +1775,84 @@
       "asOf": "2025-09-30",
       "holdings": [
         {
-          "ticker": "ORLA",
-          "weight": 30.37
+          "ticker": "OLA.TO",
+          "weight": 30.38,
+          "shares": 56817229
         },
         {
           "ticker": "OXY",
-          "weight": 14.23
+          "weight": 14.23,
+          "shares": 6050418
         },
         {
           "ticker": "CVS",
-          "weight": 10.17
+          "weight": 10.17,
+          "shares": 2712000
         },
         {
           "ticker": "CLF",
-          "weight": 9.04
+          "weight": 9.05,
+          "shares": 14899273
         },
         {
           "ticker": "BB",
-          "weight": 8.58
+          "weight": 8.58,
+          "shares": 35395320
         },
         {
           "ticker": "KHC",
-          "weight": 6.63
+          "weight": 6.63,
+          "shares": 5119000
         },
         {
           "ticker": "KW",
-          "weight": 5.52
+          "weight": 5.52,
+          "shares": 13322009
         },
         {
-          "ticker": "ATS",
-          "weight": 3.19
+          "ticker": "ATS.TO",
+          "weight": 3.19,
+          "shares": 2486400
         },
         {
           "ticker": "TAP",
-          "weight": 2.91
+          "weight": 2.9,
+          "shares": 1290071
         },
         {
           "ticker": "VOO",
-          "weight": 1.78
+          "weight": 1.77,
+          "shares": 58248
         },
         {
           "ticker": "UAA",
-          "weight": 1.57
+          "weight": 1.57,
+          "shares": 6311800
         },
         {
           "ticker": "TSM",
-          "weight": 1.3
+          "weight": 1.3,
+          "shares": 93700
         },
         {
           "ticker": "HP",
-          "weight": 1.29
+          "weight": 1.29,
+          "shares": 1174105
         },
         {
           "ticker": "BNS",
-          "weight": 1.15
+          "weight": 1.15,
+          "shares": 359100
         },
         {
           "ticker": "GM",
-          "weight": 1.14
+          "weight": 1.14,
+          "shares": 375965
         },
         {
           "ticker": "PFE",
-          "weight": 1.13
+          "weight": 1.13,
+          "shares": 890900
         }
       ]
     },
@@ -1095,81 +1860,99 @@
       "asOf": "2025-12-31",
       "holdings": [
         {
-          "ticker": "ORLA",
-          "weight": 20.83
+          "ticker": "OLA.TO",
+          "weight": 20.84,
+          "shares": 31817229
         },
         {
           "ticker": "OXY",
-          "weight": 12.23
+          "weight": 12.23,
+          "shares": 6050418
         },
         {
           "ticker": "CVS",
-          "weight": 10.59
+          "weight": 10.59,
+          "shares": 2712000
         },
         {
           "ticker": "UAA",
-          "weight": 10.26
+          "weight": 10.26,
+          "shares": 41958923
         },
         {
           "ticker": "CLF",
-          "weight": 9.72
+          "weight": 9.73,
+          "shares": 14899273
         },
         {
           "ticker": "BB",
-          "weight": 6.51
+          "weight": 6.5,
+          "shares": 34980220
         },
         {
           "ticker": "KW",
-          "weight": 6.33
+          "weight": 6.34,
+          "shares": 13322009
         },
         {
           "ticker": "KHC",
-          "weight": 6.11
+          "weight": 6.1,
+          "shares": 5119000
         },
         {
-          "ticker": "ATS",
-          "weight": 3.36
+          "ticker": "ATS.TO",
+          "weight": 3.36,
+          "shares": 2486400
         },
         {
           "ticker": "TAP",
-          "weight": 3.07
+          "weight": 3.07,
+          "shares": 1338500
         },
         {
           "ticker": "UA",
-          "weight": 2.23
+          "weight": 2.23,
+          "shares": 9457355
         },
         {
           "ticker": "VOO",
-          "weight": 1.79
+          "weight": 1.8,
+          "shares": 58248
         },
         {
           "ticker": "HP",
-          "weight": 1.66
+          "weight": 1.66,
+          "shares": 1174105
         },
         {
           "ticker": "GM",
-          "weight": 1.51
+          "weight": 1.5,
+          "shares": 375965
         },
         {
           "ticker": "TSM",
-          "weight": 1.4
+          "weight": 1.4,
+          "shares": 93700
         },
         {
           "ticker": "BNS",
-          "weight": 1.3
+          "weight": 1.3,
+          "shares": 359100
         },
         {
           "ticker": "PFE",
-          "weight": 1.09
+          "weight": 1.09,
+          "shares": 890900
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:37:18Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=FFH",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:35:55Z",
+    "lastFetchedFrom": "https://13f.info/manager/0000915191-fairfax-financial-holdings-ltd-can",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

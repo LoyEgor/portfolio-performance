@@ -63,6 +63,12 @@ Typical cadence:
 - A datapoint for year `Y` lives only in `prices/<Y>.json` — never split a
   ticker's `Y-MM-01` keys across files.
 - `meta.priceYears` must match the year files on disk after the run.
+- **Concurrency:** up to 3 ticker fetches in parallel **iff they target
+  different domains** (e.g., one stockanalysis.com + one Yahoo + one Google).
+  Same-domain requests stay serial with 1-2s pacing. The primary source
+  (stockanalysis.com) handles most of the work, so realistic parallelism
+  comes from interleaving fallback domains for stale-after-primary-failed
+  tickers. See `goals/README.md → Concurrency`.
 - No git commits, no PRs.
 
 ---

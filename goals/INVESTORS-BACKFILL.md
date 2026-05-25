@@ -48,6 +48,17 @@ case, runs after a 13F deadline).
   source code, vite config, package.json.
 - Save snapshot before first mutation: `tar -cf /tmp/investors-base.pre-backfill.tar public/data/investors-index.json public/data/investors/ public/data/meta.json`.
 - Polite pacing: 1-2s between requests to the same domain. Retry 3× on 429/503.
+- **Concurrency:** up to 3 investors in parallel **iff each maps to a different
+  primary source** (e.g., one DataRoma + one 13F.info + one Web Archive). All
+  same-source work stays serial. See `goals/README.md → Concurrency`.
+- **Ticker hygiene** (see `goals/README.md → Ticker hygiene` — non-negotiable):
+  - Normalize `BRK-B` → `BRK.B` (DOT separator for dual-class) before writing.
+  - Drop tickers matching `-OLD$` / `Q-OLD$` — parser-internal markers, never
+    enter the data. Log each drop to `/tmp/investors-backfill-log.txt`.
+  - Don't switch established positions between US listing (`BN`, `CP`, `ENB`,
+    `BAM`, `FNV`, `IMO`, `NTR`, `OVV`, `WPM`, …) and foreign variants (`.TO`,
+    `.L`, `.MX`, `.SW`, `.DE`, `.MI`). If the pre-run file has the US form,
+    keep US form when re-fetching.
 - No git commits, no PRs.
 
 ---
@@ -180,6 +191,23 @@ For each investor in the work plan:
    - Renormalize the kept weights to sum to 100 (mirrors existing convention).
    - Dual-class shares (BRK.A/BRK.B, GOOG/GOOGL, etc.) stay separate — display
      merging is the app's job.
+   - **Normalize tickers before writing** (see `goals/README.md → Ticker hygiene`):
+     ```
+     # DOT separator for dual-class
+     ticker = re.sub(r'^([A-Z]+)-([A-Z])$', r'\1.\2', ticker)
+
+     # Drop parser-internal markers
+     if re.search(r'-OLD$', ticker):
+         log_drop(investor, quarter, ticker); continue
+
+     # Preserve established US listing — don't switch to .TO/.L/.MX/etc.
+     existing_ticker_for_position = lookup_by_company_in_prior_holdings(...)
+     if existing_ticker_for_position and ticker != existing_ticker_for_position:
+         if (existing has no dot suffix) and (ticker has .TO/.L/.MX/.SW/.DE/.MI):
+             ticker = existing_ticker_for_position  # keep US form
+     ```
+   - Log each ticker drop and each US-preservation override to
+     `/tmp/investors-backfill-log.txt`.
 5. Update `investors/<id>.json`:
    - Append new `history` entries (sorted ascending by `asOf`).
    - Replace `holdings` with the newest quarter's data.
@@ -238,7 +266,14 @@ When all work in Phase B is done, `meta.json` MUST be rewritten with:
    This preserves the invariant: **`meta.latestQuarter` == the quarter every
    investor in the base has data for**.
 
-3. Leave other meta fields untouched (`version`, `activityWindowQuarters`,
+3. **`oldestHistoryAsOf`** = `min(asOf)` across every snapshot in every
+   investor file (`history[].asOf` union, restricted to investors whose
+   primarySource is NOT `dataroma-aggregate`). Recompute and write
+   unconditionally after Phase B — even on a no-op run, this guarantees
+   meta and disk stay in sync. The field is the contract that `INVESTORS-ADD`
+   reads to default-match base depth.
+
+4. Leave other meta fields untouched (`version`, `activityWindowQuarters`,
    `generatedBy`, `generatedAt`).
 
 Failing to update `meta.lastBackfillAt` is treated as goal-not-done by the
@@ -287,7 +322,18 @@ for path in glob.glob(INVESTORS_GLOB):
 if index_ids != file_ids:
     E(f"index/files mismatch — in index only: {index_ids - file_ids}; on disk only: {file_ids - index_ids}")
 
-# Every investor file: structure + weights
+# Every investor file: structure + weights + ticker hygiene
+DASH_DUAL = re.compile(r"^[A-Z]+-[A-Z]$")     # BRK-B style — should be BRK.B
+OLD_MARKER = re.compile(r"-OLD$")             # parser-internal leak
+
+def check_holdings(iid, tag, holdings):
+    for x in holdings:
+        t = x.get("ticker") or ""
+        if DASH_DUAL.match(t):
+            E(f"{iid} {tag}: dash-separator dual-class {t!r} — must be DOT (see ticker hygiene)")
+        if OLD_MARKER.search(t):
+            E(f"{iid} {tag}: leaked -OLD parser marker {t!r}")
+
 for path in glob.glob(INVESTORS_GLOB):
     with open(path) as f: inv = json.load(f)
     iid = inv.get("id")
@@ -305,6 +351,8 @@ for path in glob.glob(INVESTORS_GLOB):
         sw = sum((x.get("weight") or 0) for x in s.get("holdings", []))
         if not (95 <= sw <= 101):
             E(f"{iid} {s['asOf']}: weights sum {sw:.2f}")
+        check_holdings(iid, s["asOf"], s.get("holdings", []))
+    check_holdings(iid, "current", h)
     for x in h:
         if (x.get("weight") or 0) < 0.95:
             E(f"{iid}: holding {x.get('ticker')} weight {x.get('weight')} below 1.0 threshold")
@@ -317,6 +365,22 @@ if not lq or not re.match(r"^\d{4}-(03-31|06-30|09-30|12-31)$", lq):
 # meta.lastBackfillAt MUST be set after a successful run (Phase C)
 if not meta.get("lastBackfillAt"):
     E("meta.lastBackfillAt is null — Phase C didn't record the run timestamp")
+
+# meta.oldestHistoryAsOf must match min(asOf) across all non-aggregate investors
+non_agg_asofs = []
+for path in glob.glob(INVESTORS_GLOB):
+    iid = os.path.basename(path)[:-5]
+    idx_entry = next((i for i in index["investors"] if i.get("id") == iid), {})
+    if (idx_entry.get("primarySource") or "").startswith("dataroma-aggregate"):
+        continue
+    with open(path) as f: inv = json.load(f)
+    for s in (inv.get("history") or []):
+        if s.get("asOf"): non_agg_asofs.append(s["asOf"])
+if non_agg_asofs:
+    actual_oldest = min(non_agg_asofs)
+    declared = meta.get("oldestHistoryAsOf")
+    if declared != actual_oldest:
+        E(f"meta.oldestHistoryAsOf={declared!r} doesn't match disk min={actual_oldest!r} — Phase C step 3 drifted")
 
 # Every investor's history covers up to latestQuarter (or is intentionally shorter)
 window_n = meta.get("activityWindowQuarters", 6)
@@ -381,6 +445,10 @@ print(f"OK: {len(index_ids)} investors, latestQuarter={lq}")
    - Every investor's last `activityWindowQuarters` snapshots have `shares`
      filled on every holding (except `dataroma-aggregate` investors, where
      shares aren't applicable)
+   - **Ticker hygiene**: no `BRK-B`-style dash-separator dual-class tickers,
+     no `-OLD` parser markers anywhere in `holdings[]` or `history[].holdings[]`
+   - **`meta.oldestHistoryAsOf` matches disk**: equal to `min(asOf)` across all
+     non-aggregate investors. Phase C step 3 must keep this in sync.
 2. `git status -s public/data/` shows changes only in `investors-index.json`,
    `investors/*.json`, and `meta.json`. (No `src/`, no `public/default-data.*`.)
 3. `/tmp/investors-backfill-log.txt` lists per-investor status (OK / SKIPPED /

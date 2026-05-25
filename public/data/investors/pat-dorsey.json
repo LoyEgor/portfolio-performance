@@ -54,10 +54,723 @@
     {
       "ticker": "BKNG",
       "weight": 5.51,
-      "shares": 411100
+      "shares": 16444
     }
   ],
   "history": [
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 20.12
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 19.53
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 16.2
+        },
+        {
+          "ticker": "ROP",
+          "weight": 15.79
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 15.01
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 13.35
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 18.36
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 12.54
+        },
+        {
+          "ticker": "DG",
+          "weight": 10.98
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 10.89
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.82
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 10.73
+        },
+        {
+          "ticker": "ROP",
+          "weight": 10.54
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 9.41
+        },
+        {
+          "ticker": "WK",
+          "weight": 5.72
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 18.72
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 11.41
+        },
+        {
+          "ticker": "YELP",
+          "weight": 10.37
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.83
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 9.58
+        },
+        {
+          "ticker": "DG",
+          "weight": 9.42
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 8.89
+        },
+        {
+          "ticker": "ROP",
+          "weight": 8.51
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 7.5
+        },
+        {
+          "ticker": "WK",
+          "weight": 5.77
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 19.57
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 10.9
+        },
+        {
+          "ticker": "WK",
+          "weight": 10.3
+        },
+        {
+          "ticker": "DG",
+          "weight": 9.78
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.59
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 8.28
+        },
+        {
+          "ticker": "ROP",
+          "weight": 8.26
+        },
+        {
+          "ticker": "YELP",
+          "weight": 7.83
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 7.77
+        },
+        {
+          "ticker": "CHGG",
+          "weight": 7.73
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 23.55
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 11.66
+        },
+        {
+          "ticker": "CHGG",
+          "weight": 10.6
+        },
+        {
+          "ticker": "DG",
+          "weight": 9.79
+        },
+        {
+          "ticker": "WK",
+          "weight": 9.21
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.12
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.67
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 7.5
+        },
+        {
+          "ticker": "YELP",
+          "weight": 6.61
+        },
+        {
+          "ticker": "SITE",
+          "weight": 4.29
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 23.9
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 12.33
+        },
+        {
+          "ticker": "SITE",
+          "weight": 10.82
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.31
+        },
+        {
+          "ticker": "DG",
+          "weight": 9.88
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 9.68
+        },
+        {
+          "ticker": "WK",
+          "weight": 8.05
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 7.99
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.05
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 21.68
+        },
+        {
+          "ticker": "DG",
+          "weight": 12.12
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.02
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.5
+        },
+        {
+          "ticker": "SITE",
+          "weight": 9.21
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.49
+        },
+        {
+          "ticker": "TTD",
+          "weight": 7.1
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 7.08
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 6.93
+        },
+        {
+          "ticker": "WK",
+          "weight": 4.5
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 3.37
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 18.58
+        },
+        {
+          "ticker": "DG",
+          "weight": 10.13
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.36
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9
+        },
+        {
+          "ticker": "TTD",
+          "weight": 8.77
+        },
+        {
+          "ticker": "WIX",
+          "weight": 8.24
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.98
+        },
+        {
+          "ticker": "WK",
+          "weight": 6.95
+        },
+        {
+          "ticker": "SITE",
+          "weight": 6.84
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 6.22
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 6.06
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 2.86
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 23.38
+        },
+        {
+          "ticker": "WIX",
+          "weight": 15
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.17
+        },
+        {
+          "ticker": "TTD",
+          "weight": 10.89
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.89
+        },
+        {
+          "ticker": "DG",
+          "weight": 7.28
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 6.25
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 6.16
+        },
+        {
+          "ticker": "ROP",
+          "weight": 4.39
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 3.23
+        },
+        {
+          "ticker": "WK",
+          "weight": 2.37
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 20.43
+        },
+        {
+          "ticker": "WIX",
+          "weight": 19.09
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 13.14
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.67
+        },
+        {
+          "ticker": "DESP",
+          "weight": 8.7
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 8.13
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.99
+        },
+        {
+          "ticker": "TTD",
+          "weight": 7.73
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 4.13
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 25.74
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.23
+        },
+        {
+          "ticker": "DESP",
+          "weight": 11.71
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.7
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 9.76
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 9.24
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 6.95
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 5.03
+        },
+        {
+          "ticker": "TTD",
+          "weight": 4.63
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 24.23
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.45
+        },
+        {
+          "ticker": "DESP",
+          "weight": 12.92
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 12.31
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.52
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 9.31
+        },
+        {
+          "ticker": "CMPR",
+          "weight": 6.9
+        },
+        {
+          "ticker": "AYX",
+          "weight": 6.37
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 22
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.15
+        },
+        {
+          "ticker": "DESP",
+          "weight": 16.12
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 11.64
+        },
+        {
+          "ticker": "AYX",
+          "weight": 11.44
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 11.26
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 8.07
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 3.31
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 29.3
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.25
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 15.79
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 12.51
+        },
+        {
+          "ticker": "DESP",
+          "weight": 9.69
+        },
+        {
+          "ticker": "AYX",
+          "weight": 9.41
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.04
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 25.06
+        },
+        {
+          "ticker": "SMAR",
+          "weight": 14.34
+        },
+        {
+          "ticker": "WIX",
+          "weight": 13.96
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.19
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 9.42
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.47
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 6.87
+        },
+        {
+          "ticker": "AYX",
+          "weight": 6.02
+        },
+        {
+          "ticker": "DESP",
+          "weight": 5.68
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 24.99
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.45
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.85
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 10.84
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 9.01
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.88
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 7.14
+        },
+        {
+          "ticker": "SMAR",
+          "weight": 6.92
+        },
+        {
+          "ticker": "DESP",
+          "weight": 4.23
+        },
+        {
+          "ticker": "AYX",
+          "weight": 1.68
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "META",
+          "weight": 21.84
+        },
+        {
+          "ticker": "WIX",
+          "weight": 16.37
+        },
+        {
+          "ticker": "SMAR",
+          "weight": 11.67
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 10.84
+        },
+        {
+          "ticker": "EBAY",
+          "weight": 10.2
+        },
+        {
+          "ticker": "UPWK",
+          "weight": 8.52
+        },
+        {
+          "ticker": "PYPL",
+          "weight": 7.85
+        },
+        {
+          "ticker": "DESP",
+          "weight": 7.13
+        },
+        {
+          "ticker": "ROKU",
+          "weight": 5.59
+        }
+      ]
+    },
     {
       "asOf": "2021-03-31",
       "holdings": [
@@ -66,7 +779,7 @@
           "weight": 22.99
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 18.19
         },
         {
@@ -90,7 +803,7 @@
           "weight": 6.98
         },
         {
-          "ticker": "DESP-OLD",
+          "ticker": "DESP",
           "weight": 6.61
         }
       ]
@@ -103,7 +816,7 @@
           "weight": 17.74
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 17.46
         },
         {
@@ -131,7 +844,7 @@
           "weight": 4.67
         },
         {
-          "ticker": "DESP-OLD",
+          "ticker": "DESP",
           "weight": 3.31
         }
       ]
@@ -144,7 +857,7 @@
           "weight": 17.05
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 16.66
         },
         {
@@ -172,7 +885,7 @@
           "weight": 5.8
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 5.13
         }
       ]
@@ -185,7 +898,7 @@
           "weight": 19.99
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 18.54
         },
         {
@@ -209,11 +922,11 @@
           "weight": 6.18
         },
         {
-          "ticker": "POSH-OLD",
+          "ticker": "POSH",
           "weight": 4.8
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 4.65
         },
         {
@@ -230,7 +943,7 @@
           "weight": 16.19
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 15.87
         },
         {
@@ -258,11 +971,11 @@
           "weight": 6.34
         },
         {
-          "ticker": "POSH-OLD",
+          "ticker": "POSH",
           "weight": 5.11
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 3.96
         },
         {
@@ -287,7 +1000,7 @@
           "weight": 14.58
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 13.49
         },
         {
@@ -307,11 +1020,11 @@
           "weight": 6.45
         },
         {
-          "ticker": "POSH-OLD",
+          "ticker": "POSH",
           "weight": 5.98
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 5.57
         }
       ]
@@ -324,7 +1037,7 @@
           "weight": 18.71
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 15.05
         },
         {
@@ -336,7 +1049,7 @@
           "weight": 10.21
         },
         {
-          "ticker": "POSH-OLD",
+          "ticker": "POSH",
           "weight": 9.46
         },
         {
@@ -352,7 +1065,7 @@
           "weight": 6.94
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 4.92
         },
         {
@@ -365,7 +1078,7 @@
       "asOf": "2022-12-31",
       "holdings": [
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 22.01
         },
         {
@@ -393,7 +1106,7 @@
           "weight": 7.36
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 4.2
         },
         {
@@ -410,7 +1123,7 @@
           "weight": 22.98
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 19.71
         },
         {
@@ -434,7 +1147,7 @@
           "weight": 6.19
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 3.82
         },
         {
@@ -451,7 +1164,7 @@
           "weight": 23.8
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 16.62
         },
         {
@@ -479,7 +1192,7 @@
           "weight": 5.73
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 3.83
         },
         {
@@ -504,7 +1217,7 @@
           "weight": 14.74
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 14.23
         },
         {
@@ -528,7 +1241,7 @@
           "weight": 3.77
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 3.31
         }
       ]
@@ -541,7 +1254,7 @@
           "weight": 17.57
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 15.65
         },
         {
@@ -569,7 +1282,7 @@
           "weight": 5.35
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 4.85
         }
       ]
@@ -590,7 +1303,7 @@
           "weight": 12.07
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 11.24
         },
         {
@@ -610,7 +1323,7 @@
           "weight": 8.53
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 5.87
         },
         {
@@ -627,7 +1340,7 @@
           "weight": 14.4
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 13.03
         },
         {
@@ -659,7 +1372,7 @@
           "weight": 6.97
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 5.68
         },
         {
@@ -677,7 +1390,7 @@
         },
         {
           "ticker": "AZO",
-          "weight": 10.0
+          "weight": 10
         },
         {
           "ticker": "WIX",
@@ -696,7 +1409,7 @@
           "weight": 8.92
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 8.91
         },
         {
@@ -712,7 +1425,7 @@
           "weight": 6.19
         },
         {
-          "ticker": "SEMR-OLD",
+          "ticker": "SEMR",
           "weight": 3.58
         },
         {
@@ -726,47 +1439,58 @@
       "holdings": [
         {
           "ticker": "WIX",
-          "weight": 12.8
+          "weight": 12.8,
+          "shares": 578741
         },
         {
           "ticker": "META",
-          "weight": 12.57
+          "weight": 12.57,
+          "shares": 208247
         },
         {
           "ticker": "GOOG",
-          "weight": 12.55
+          "weight": 12.55,
+          "shares": 639218
         },
         {
           "ticker": "AZO",
-          "weight": 12.4
+          "weight": 12.4,
+          "shares": 37570
         },
         {
           "ticker": "PYPL",
-          "weight": 11.45
+          "weight": 11.45,
+          "shares": 1301183
         },
         {
           "ticker": "DHR",
-          "weight": 9.34
+          "weight": 9.34,
+          "shares": 394791
         },
         {
-          "ticker": "SMAR-OLD",
-          "weight": 8.36
+          "ticker": "SMAR",
+          "weight": 8.36,
+          "shares": 1447727
         },
         {
           "ticker": "SPT",
-          "weight": 7.3
+          "weight": 7.3,
+          "shares": 2306149
         },
         {
           "ticker": "HRI",
-          "weight": 5.33
+          "weight": 5.33,
+          "shares": 272903
         },
         {
           "ticker": "UPWK",
-          "weight": 5.13
+          "weight": 5.13,
+          "shares": 3045142
         },
         {
-          "ticker": "SEMR-OLD",
-          "weight": 2.77
+          "ticker": "SEMR",
+          "weight": 2.77,
+          "shares": 2258481
         }
       ]
     },
@@ -775,47 +1499,58 @@
       "holdings": [
         {
           "ticker": "AZO",
-          "weight": 15.17
+          "weight": 15.17,
+          "shares": 37543
         },
         {
           "ticker": "META",
-          "weight": 15.09
+          "weight": 15.09,
+          "shares": 247057
         },
         {
           "ticker": "DHR",
-          "weight": 15.02
+          "weight": 15.02,
+          "shares": 691304
         },
         {
           "ticker": "AER",
-          "weight": 12.33
+          "weight": 12.33,
+          "shares": 1138542
         },
         {
           "ticker": "GOOG",
-          "weight": 10.58
+          "weight": 10.58,
+          "shares": 638751
         },
         {
           "ticker": "BKNG",
-          "weight": 7.8
+          "weight": 7.8,
+          "shares": 15969
         },
         {
           "ticker": "PYPL",
-          "weight": 5.93
+          "weight": 5.93,
+          "shares": 858231
         },
         {
           "ticker": "WIX",
-          "weight": 5.53
+          "weight": 5.53,
+          "shares": 319382
         },
         {
           "ticker": "SPT",
-          "weight": 5.37
+          "weight": 5.37,
+          "shares": 2304414
         },
         {
           "ticker": "ASML",
-          "weight": 4.96
+          "weight": 4.96,
+          "shares": 70571
         },
         {
-          "ticker": "SEMR-OLD",
-          "weight": 2.23
+          "ticker": "SEMR",
+          "weight": 2.23,
+          "shares": 2256733
         }
       ]
     },
@@ -824,43 +1559,53 @@
       "holdings": [
         {
           "ticker": "DHR",
-          "weight": 16.42
+          "weight": 16.42,
+          "shares": 926992
         },
         {
           "ticker": "META",
-          "weight": 16.22
+          "weight": 16.22,
+          "shares": 245108
         },
         {
           "ticker": "AER",
-          "weight": 14.28
+          "weight": 14.28,
+          "shares": 1361118
         },
         {
           "ticker": "AZO",
-          "weight": 11.87
+          "weight": 11.87,
+          "shares": 35667
         },
         {
           "ticker": "GOOG",
-          "weight": 10.53
+          "weight": 10.53,
+          "shares": 661990
         },
         {
           "ticker": "ASML",
-          "weight": 10.06
+          "weight": 10.06,
+          "shares": 139989
         },
         {
           "ticker": "BKNG",
-          "weight": 9.49
+          "weight": 9.49,
+          "shares": 18290
         },
         {
           "ticker": "ENOV",
-          "weight": 7.18
+          "weight": 7.18,
+          "shares": 2553180
         },
         {
           "ticker": "WIX",
-          "weight": 2.09
+          "weight": 2.09,
+          "shares": 146777
         },
         {
-          "ticker": "SEMR-OLD",
-          "weight": 1.85
+          "ticker": "SEMR",
+          "weight": 1.85,
+          "shares": 2284578
         }
       ]
     },
@@ -869,39 +1614,48 @@
       "holdings": [
         {
           "ticker": "DHR",
-          "weight": 15.34
+          "weight": 15.34,
+          "shares": 860850
         },
         {
           "ticker": "ASML",
-          "weight": 15.07
+          "weight": 15.07,
+          "shares": 173226
         },
         {
           "ticker": "AER",
-          "weight": 13.75
+          "weight": 13.75,
+          "shares": 1263998
         },
         {
           "ticker": "META",
-          "weight": 12.69
+          "weight": 12.69,
+          "shares": 192224
         },
         {
           "ticker": "AZO",
-          "weight": 11.52
+          "weight": 11.52,
+          "shares": 29878
         },
         {
           "ticker": "GOOG",
-          "weight": 9.4
+          "weight": 9.4,
+          "shares": 429318
         },
         {
           "ticker": "BKNG",
-          "weight": 8.24
+          "weight": 8.24,
+          "shares": 16975
         },
         {
           "ticker": "RPRX",
-          "weight": 7.45
+          "weight": 7.45,
+          "shares": 2350449
         },
         {
           "ticker": "ENOV",
-          "weight": 6.54
+          "weight": 6.54,
+          "shares": 2399322
         }
       ]
     },
@@ -910,52 +1664,63 @@
       "holdings": [
         {
           "ticker": "ASML",
-          "weight": 17.89
+          "weight": 17.89,
+          "shares": 192343
         },
         {
           "ticker": "DHR",
-          "weight": 16.47
+          "weight": 16.47,
+          "shares": 827520
         },
         {
           "ticker": "AER",
-          "weight": 15.18
+          "weight": 15.18,
+          "shares": 1215059
         },
         {
           "ticker": "META",
-          "weight": 9.21
+          "weight": 9.21,
+          "shares": 160450
         },
         {
           "ticker": "BKNG",
-          "weight": 7.6
+          "weight": 7.6,
+          "shares": 16317
         },
         {
           "ticker": "RPRX",
-          "weight": 7.59
+          "weight": 7.59,
+          "shares": 2259469
         },
         {
           "ticker": "LYV",
-          "weight": 7.47
+          "weight": 7.47,
+          "shares": 602973
         },
         {
           "ticker": "AZO",
-          "weight": 7.41
+          "weight": 7.41,
+          "shares": 25121
         },
         {
           "ticker": "GOOG",
-          "weight": 5.92
+          "weight": 5.92,
+          "shares": 216906
         },
         {
           "ticker": "ENOV",
-          "weight": 5.28
+          "weight": 5.28,
+          "shares": 2279200
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:37:06Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=DA",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:33:36Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001671657-dorsey-asset-management-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

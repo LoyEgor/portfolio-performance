@@ -18,7 +18,7 @@
     },
     {
       "ticker": "APG",
-      "weight": 6.42,
+      "weight": 6.43,
       "shares": 14775236
     },
     {
@@ -44,7 +44,7 @@
     {
       "ticker": "CVNA",
       "weight": 3.36,
-      "shares": 4978705
+      "shares": 995741
     },
     {
       "ticker": "CLH",
@@ -53,7 +53,7 @@
     },
     {
       "ticker": "ULS",
-      "weight": 3.02,
+      "weight": 3.03,
       "shares": 3291516
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "ticker": "FOUR",
-      "weight": 2.9,
+      "weight": 2.89,
       "shares": 6165793
     },
     {
@@ -73,12 +73,12 @@
     },
     {
       "ticker": "AFRM",
-      "weight": 2.77,
+      "weight": 2.78,
       "shares": 5649434
     },
     {
       "ticker": "IWM",
-      "weight": 2.73,
+      "weight": 2.74,
       "shares": 1027614
     },
     {
@@ -144,87 +144,1764 @@
   ],
   "history": [
     {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "SPY",
+          "weight": 77.84
+        },
+        {
+          "ticker": "IWM",
+          "weight": 15.56
+        },
+        {
+          "ticker": "XP",
+          "weight": 6.6
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "SPY",
+          "weight": 48.79
+        },
+        {
+          "ticker": "IWM",
+          "weight": 11.77
+        },
+        {
+          "ticker": "ROP",
+          "weight": 3.54
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.24
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 3.17
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 2.59
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.56
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.41
+        },
+        {
+          "ticker": "BFAM",
+          "weight": 2.4
+        },
+        {
+          "ticker": "XP",
+          "weight": 2.31
+        },
+        {
+          "ticker": "MTN",
+          "weight": 1.97
+        },
+        {
+          "ticker": "COUP",
+          "weight": 1.93
+        },
+        {
+          "ticker": "FSV",
+          "weight": 1.65
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 1.61
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.44
+        },
+        {
+          "ticker": "GFL",
+          "weight": 1.43
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.31
+        },
+        {
+          "ticker": "IDXX",
+          "weight": 1.25
+        },
+        {
+          "ticker": "TRU",
+          "weight": 1.19
+        },
+        {
+          "ticker": "CARG",
+          "weight": 1.16
+        },
+        {
+          "ticker": "BKI",
+          "weight": 1.16
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "BFAM",
+          "weight": 6.58
+        },
+        {
+          "ticker": "IAC",
+          "weight": 6.33
+        },
+        {
+          "ticker": "WIX",
+          "weight": 6.01
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 5.03
+        },
+        {
+          "ticker": "FSV",
+          "weight": 3.86
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.72
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3.69
+        },
+        {
+          "ticker": "BKI",
+          "weight": 3.69
+        },
+        {
+          "ticker": "COUP",
+          "weight": 3.65
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 3.64
+        },
+        {
+          "ticker": "VRM",
+          "weight": 3.61
+        },
+        {
+          "ticker": "INTU",
+          "weight": 3.5
+        },
+        {
+          "ticker": "ROP",
+          "weight": 3.34
+        },
+        {
+          "ticker": "XP",
+          "weight": 3.33
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 2.98
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 2.92
+        },
+        {
+          "ticker": "RH",
+          "weight": 2.71
+        },
+        {
+          "ticker": "LII",
+          "weight": 2.7
+        },
+        {
+          "ticker": "SAM",
+          "weight": 2.6
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 2.58
+        },
+        {
+          "ticker": "WCN",
+          "weight": 2.36
+        },
+        {
+          "ticker": "CARG",
+          "weight": 2.22
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 2.22
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.99
+        },
+        {
+          "ticker": "IDXX",
+          "weight": 1.98
+        },
+        {
+          "ticker": "RBC",
+          "weight": 1.84
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.71
+        },
+        {
+          "ticker": "MTN",
+          "weight": 1.57
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 1.56
+        },
+        {
+          "ticker": "EXAS",
+          "weight": 1.34
+        },
+        {
+          "ticker": "FTCH",
+          "weight": 1.3
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.22
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.13
+        },
+        {
+          "ticker": "BURL",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "BFAM",
+          "weight": 6.63
+        },
+        {
+          "ticker": "RH",
+          "weight": 5.49
+        },
+        {
+          "ticker": "SAM",
+          "weight": 5.19
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 4.81
+        },
+        {
+          "ticker": "FSV",
+          "weight": 4.74
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 4.64
+        },
+        {
+          "ticker": "BKI",
+          "weight": 4.42
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.61
+        },
+        {
+          "ticker": "INTU",
+          "weight": 3.6
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 3.49
+        },
+        {
+          "ticker": "COUP",
+          "weight": 3.45
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3.33
+        },
+        {
+          "ticker": "STNE",
+          "weight": 3.3
+        },
+        {
+          "ticker": "WIX",
+          "weight": 3.18
+        },
+        {
+          "ticker": "ROP",
+          "weight": 3.03
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 2.68
+        },
+        {
+          "ticker": "VRM",
+          "weight": 2.57
+        },
+        {
+          "ticker": "WCN",
+          "weight": 2.36
+        },
+        {
+          "ticker": "XP",
+          "weight": 2.23
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 2.15
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.85
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.85
+        },
+        {
+          "ticker": "IAC",
+          "weight": 1.85
+        },
+        {
+          "ticker": "IDXX",
+          "weight": 1.79
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.74
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 1.73
+        },
+        {
+          "ticker": "LII",
+          "weight": 1.63
+        },
+        {
+          "ticker": "FTCH",
+          "weight": 1.59
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 1.52
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 1.5
+        },
+        {
+          "ticker": "RBC",
+          "weight": 1.5
+        },
+        {
+          "ticker": "DNB",
+          "weight": 1.48
+        },
+        {
+          "ticker": "CARG",
+          "weight": 1.39
+        },
+        {
+          "ticker": "MTN",
+          "weight": 1.24
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.21
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "RDFN",
+          "weight": 5.91
+        },
+        {
+          "ticker": "SAM",
+          "weight": 5.53
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 4.69
+        },
+        {
+          "ticker": "BKI",
+          "weight": 4.5
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.32
+        },
+        {
+          "ticker": "STNE",
+          "weight": 4.23
+        },
+        {
+          "ticker": "DASH",
+          "weight": 4.14
+        },
+        {
+          "ticker": "RH",
+          "weight": 4.06
+        },
+        {
+          "ticker": "FSV",
+          "weight": 3.99
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3.79
+        },
+        {
+          "ticker": "IAC",
+          "weight": 3.74
+        },
+        {
+          "ticker": "BFAM",
+          "weight": 3.71
+        },
+        {
+          "ticker": "COUP",
+          "weight": 3.7
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 3.04
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 3.01
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 2.86
+        },
+        {
+          "ticker": "WST",
+          "weight": 2.63
+        },
+        {
+          "ticker": "ROP",
+          "weight": 2.32
+        },
+        {
+          "ticker": "IR",
+          "weight": 2.15
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.13
+        },
+        {
+          "ticker": "VRM",
+          "weight": 2.12
+        },
+        {
+          "ticker": "FTCH",
+          "weight": 1.99
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.93
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.72
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.68
+        },
+        {
+          "ticker": "RBC",
+          "weight": 1.67
+        },
+        {
+          "ticker": "BURL",
+          "weight": 1.6
+        },
+        {
+          "ticker": "SNOW",
+          "weight": 1.58
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 1.55
+        },
+        {
+          "ticker": "GFL",
+          "weight": 1.5
+        },
+        {
+          "ticker": "CARG",
+          "weight": 1.47
+        },
+        {
+          "ticker": "DNB",
+          "weight": 1.43
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.43
+        },
+        {
+          "ticker": "WIX",
+          "weight": 1.4
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.36
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "SAM",
+          "weight": 6.82
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 5.36
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 5.2
+        },
+        {
+          "ticker": "RH",
+          "weight": 5.07
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 4.98
+        },
+        {
+          "ticker": "BKI",
+          "weight": 4.92
+        },
+        {
+          "ticker": "INTU",
+          "weight": 4.82
+        },
+        {
+          "ticker": "FSV",
+          "weight": 4.43
+        },
+        {
+          "ticker": "DASH",
+          "weight": 3.85
+        },
+        {
+          "ticker": "IAC",
+          "weight": 3.84
+        },
+        {
+          "ticker": "VRM",
+          "weight": 3.5
+        },
+        {
+          "ticker": "IR",
+          "weight": 3.27
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3.1
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 3.06
+        },
+        {
+          "ticker": "STNE",
+          "weight": 3.02
+        },
+        {
+          "ticker": "AFRM",
+          "weight": 2.98
+        },
+        {
+          "ticker": "WST",
+          "weight": 2.56
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 2.4
+        },
+        {
+          "ticker": "BFAM",
+          "weight": 2.38
+        },
+        {
+          "ticker": "COUP",
+          "weight": 2.36
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.22
+        },
+        {
+          "ticker": "BURL",
+          "weight": 2.21
+        },
+        {
+          "ticker": "ROP",
+          "weight": 2.19
+        },
+        {
+          "ticker": "WIX",
+          "weight": 2.06
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 1.94
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.78
+        },
+        {
+          "ticker": "GFL",
+          "weight": 1.76
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.46
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 1.32
+        },
+        {
+          "ticker": "RBC",
+          "weight": 1.32
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.29
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.27
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "SHOP",
+          "weight": 7.34
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.89
+        },
+        {
+          "ticker": "SAM",
+          "weight": 5.04
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 5.02
+        },
+        {
+          "ticker": "RH",
+          "weight": 4.99
+        },
+        {
+          "ticker": "DASH",
+          "weight": 4.9
+        },
+        {
+          "ticker": "FSV",
+          "weight": 4.84
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 4.82
+        },
+        {
+          "ticker": "BKI",
+          "weight": 4.64
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 4.1
+        },
+        {
+          "ticker": "IR",
+          "weight": 3.16
+        },
+        {
+          "ticker": "ROP",
+          "weight": 3.12
+        },
+        {
+          "ticker": "COUP",
+          "weight": 3.1
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3
+        },
+        {
+          "ticker": "WST",
+          "weight": 2.95
+        },
+        {
+          "ticker": "YOU",
+          "weight": 2.85
+        },
+        {
+          "ticker": "AFRM",
+          "weight": 2.71
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 2.34
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.21
+        },
+        {
+          "ticker": "VRM",
+          "weight": 2.19
+        },
+        {
+          "ticker": "IAC",
+          "weight": 2.18
+        },
+        {
+          "ticker": "AGL",
+          "weight": 2.11
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 2.06
+        },
+        {
+          "ticker": "SOFI",
+          "weight": 2
+        },
+        {
+          "ticker": "WIX",
+          "weight": 1.93
+        },
+        {
+          "ticker": "BURL",
+          "weight": 1.8
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.64
+        },
+        {
+          "ticker": "MTN",
+          "weight": 1.57
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 1.52
+        },
+        {
+          "ticker": "ABNB",
+          "weight": 1.46
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.27
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "SHOP",
+          "weight": 6.32
+        },
+        {
+          "ticker": "INTU",
+          "weight": 5.96
+        },
+        {
+          "ticker": "FSV",
+          "weight": 5.12
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 4.86
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 4.7
+        },
+        {
+          "ticker": "RH",
+          "weight": 4.56
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 3.89
+        },
+        {
+          "ticker": "DASH",
+          "weight": 3.84
+        },
+        {
+          "ticker": "BKI",
+          "weight": 3.74
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 3.63
+        },
+        {
+          "ticker": "MTN",
+          "weight": 3.3
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.17
+        },
+        {
+          "ticker": "KWR",
+          "weight": 3.09
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 3.07
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 3.04
+        },
+        {
+          "ticker": "ROP",
+          "weight": 2.98
+        },
+        {
+          "ticker": "YOU",
+          "weight": 2.97
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 2.8
+        },
+        {
+          "ticker": "RBC",
+          "weight": 2.6
+        },
+        {
+          "ticker": "AFRM",
+          "weight": 2.5
+        },
+        {
+          "ticker": "IR",
+          "weight": 2.37
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.11
+        },
+        {
+          "ticker": "COUP",
+          "weight": 2.06
+        },
+        {
+          "ticker": "SAM",
+          "weight": 2.05
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 2.05
+        },
+        {
+          "ticker": "CFX",
+          "weight": 1.92
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.88
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.65
+        },
+        {
+          "ticker": "IAC",
+          "weight": 1.65
+        },
+        {
+          "ticker": "ONON",
+          "weight": 1.63
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.53
+        },
+        {
+          "ticker": "TOST",
+          "weight": 1.5
+        },
+        {
+          "ticker": "AGL",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "INTU",
+          "weight": 7.25
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 5.76
+        },
+        {
+          "ticker": "FSV",
+          "weight": 5.33
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 5.32
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 5.05
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 4.51
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 4.17
+        },
+        {
+          "ticker": "MTN",
+          "weight": 4.04
+        },
+        {
+          "ticker": "ROP",
+          "weight": 3.91
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.47
+        },
+        {
+          "ticker": "RH",
+          "weight": 3.05
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 2.94
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.91
+        },
+        {
+          "ticker": "BKI",
+          "weight": 2.88
+        },
+        {
+          "ticker": "IR",
+          "weight": 2.87
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 2.86
+        },
+        {
+          "ticker": "CDAY",
+          "weight": 2.69
+        },
+        {
+          "ticker": "DASH",
+          "weight": 2.49
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 2.4
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 2.36
+        },
+        {
+          "ticker": "YOU",
+          "weight": 2.31
+        },
+        {
+          "ticker": "RBC",
+          "weight": 2.18
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 1.85
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.71
+        },
+        {
+          "ticker": "PTON",
+          "weight": 1.67
+        },
+        {
+          "ticker": "ONON",
+          "weight": 1.62
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.55
+        },
+        {
+          "ticker": "SAM",
+          "weight": 1.28
+        },
+        {
+          "ticker": "AFRM",
+          "weight": 1.25
+        },
+        {
+          "ticker": "BURL",
+          "weight": 1.23
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.23
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.2
+        },
+        {
+          "ticker": "IAC",
+          "weight": 1.19
+        },
+        {
+          "ticker": "CFX",
+          "weight": 1.17
+        },
+        {
+          "ticker": "COUP",
+          "weight": 1.15
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "INTU",
+          "weight": 6.69
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.45
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 6.38
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 5.95
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 4.9
+        },
+        {
+          "ticker": "FSV",
+          "weight": 4.81
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 4.25
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 3.76
+        },
+        {
+          "ticker": "RBC",
+          "weight": 3.04
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 3.02
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.01
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 2.94
+        },
+        {
+          "ticker": "YOU",
+          "weight": 2.83
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 2.78
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 2.75
+        },
+        {
+          "ticker": "ONON",
+          "weight": 2.72
+        },
+        {
+          "ticker": "IR",
+          "weight": 2.43
+        },
+        {
+          "ticker": "WCN",
+          "weight": 2.41
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.39
+        },
+        {
+          "ticker": "BKI",
+          "weight": 2.36
+        },
+        {
+          "ticker": "RH",
+          "weight": 2.16
+        },
+        {
+          "ticker": "MOH",
+          "weight": 2.1
+        },
+        {
+          "ticker": "SPY",
+          "weight": 2.03
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 1.85
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.84
+        },
+        {
+          "ticker": "CFX",
+          "weight": 1.65
+        },
+        {
+          "ticker": "MTN",
+          "weight": 1.62
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.48
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.45
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 1.4
+        },
+        {
+          "ticker": "TDY",
+          "weight": 1.37
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.33
+        },
+        {
+          "ticker": "RDFN",
+          "weight": 1.32
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.27
+        },
+        {
+          "ticker": "COUP",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "MSCI",
+          "weight": 8
+        },
+        {
+          "ticker": "INTU",
+          "weight": 7.71
+        },
+        {
+          "ticker": "ROP",
+          "weight": 7.42
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 6.25
+        },
+        {
+          "ticker": "FSV",
+          "weight": 5.71
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 5.14
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 4.26
+        },
+        {
+          "ticker": "RBC",
+          "weight": 4.16
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.87
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 3.86
+        },
+        {
+          "ticker": "MOH",
+          "weight": 3.31
+        },
+        {
+          "ticker": "WCN",
+          "weight": 3.08
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 3.05
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 2.98
+        },
+        {
+          "ticker": "YOU",
+          "weight": 2.95
+        },
+        {
+          "ticker": "IR",
+          "weight": 2.49
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.48
+        },
+        {
+          "ticker": "TDY",
+          "weight": 2.31
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 2.17
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 2.16
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 2.15
+        },
+        {
+          "ticker": "AGL",
+          "weight": 1.98
+        },
+        {
+          "ticker": "ONON",
+          "weight": 1.6
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.5
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.48
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.46
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 1.35
+        },
+        {
+          "ticker": "TOST",
+          "weight": 1.32
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.29
+        },
+        {
+          "ticker": "BKI",
+          "weight": 1.25
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "MSCI",
+          "weight": 8.22
+        },
+        {
+          "ticker": "INTU",
+          "weight": 7.92
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 7.1
+        },
+        {
+          "ticker": "ROP",
+          "weight": 6.99
+        },
+        {
+          "ticker": "FSV",
+          "weight": 5.58
+        },
+        {
+          "ticker": "MOH",
+          "weight": 4.47
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 4.31
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 4.3
+        },
+        {
+          "ticker": "RBC",
+          "weight": 4.24
+        },
+        {
+          "ticker": "WST",
+          "weight": 3.48
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 3.48
+        },
+        {
+          "ticker": "WCN",
+          "weight": 3.45
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 3.25
+        },
+        {
+          "ticker": "YOU",
+          "weight": 3.15
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 2.97
+        },
+        {
+          "ticker": "TOST",
+          "weight": 2.95
+        },
+        {
+          "ticker": "AGL",
+          "weight": 2.65
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 2.37
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.29
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.23
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.95
+        },
+        {
+          "ticker": "ONON",
+          "weight": 1.6
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.59
+        },
+        {
+          "ticker": "TDY",
+          "weight": 1.54
+        },
+        {
+          "ticker": "CFLT",
+          "weight": 1.5
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 1.48
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.39
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.2
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.18
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "ROP",
+          "weight": 8.25
+        },
+        {
+          "ticker": "INTU",
+          "weight": 7.73
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 7.24
+        },
+        {
+          "ticker": "FSV",
+          "weight": 5.55
+        },
+        {
+          "ticker": "MOH",
+          "weight": 4.64
+        },
+        {
+          "ticker": "RBC",
+          "weight": 4.41
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 3.96
+        },
+        {
+          "ticker": "TEAM",
+          "weight": 3.95
+        },
+        {
+          "ticker": "YOU",
+          "weight": 3.57
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 3.35
+        },
+        {
+          "ticker": "WCN",
+          "weight": 3.31
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 3.23
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 3.13
+        },
+        {
+          "ticker": "ABCM",
+          "weight": 3.08
+        },
+        {
+          "ticker": "WST",
+          "weight": 2.97
+        },
+        {
+          "ticker": "FOUR",
+          "weight": 2.9
+        },
+        {
+          "ticker": "KWR",
+          "weight": 2.44
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 2.33
+        },
+        {
+          "ticker": "TDY",
+          "weight": 2.25
+        },
+        {
+          "ticker": "TTC",
+          "weight": 2.24
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 2.06
+        },
+        {
+          "ticker": "TOST",
+          "weight": 2.02
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 1.85
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.81
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.79
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 1.67
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 1.65
+        },
+        {
+          "ticker": "AGL",
+          "weight": 1.62
+        },
+        {
+          "ticker": "EYE",
+          "weight": 1.35
+        },
+        {
+          "ticker": "ONON",
+          "weight": 1.35
+        },
+        {
+          "ticker": "HUM",
+          "weight": 1.19
+        },
+        {
+          "ticker": "CHE",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
       "asOf": "2023-03-31",
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 8.96
+          "weight": 7.62
         },
         {
           "ticker": "ROP",
-          "weight": 8.92
+          "weight": 7.59
         },
         {
           "ticker": "MSCI",
-          "weight": 8.28
+          "weight": 7.04
         },
         {
           "ticker": "DUOL",
-          "weight": 7.13
+          "weight": 6.06
         },
         {
           "ticker": "FSV",
-          "weight": 6.63
+          "weight": 5.64
         },
         {
           "ticker": "RBC",
-          "weight": 5.59
+          "weight": 4.76
         },
         {
           "ticker": "WST",
-          "weight": 5.17
+          "weight": 4.4
         },
         {
           "ticker": "HUBS",
-          "weight": 5.09
+          "weight": 4.33
         },
         {
           "ticker": "TEAM",
-          "weight": 4.44
+          "weight": 3.78
         },
         {
           "ticker": "JBHT",
-          "weight": 4.42
+          "weight": 3.75
         },
         {
           "ticker": "MOH",
-          "weight": 4.37
+          "weight": 3.71
         },
         {
           "ticker": "BKNG",
-          "weight": 4.34
-        },
-        {
-          "ticker": "FOUR",
-          "weight": 3.9
-        },
-        {
-          "ticker": "DSGX",
-          "weight": 3.7
-        },
-        {
-          "ticker": "WCN",
           "weight": 3.69
         },
         {
+          "ticker": "FOUR",
+          "weight": 3.33
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 3.15
+        },
+        {
+          "ticker": "WCN",
+          "weight": 3.14
+        },
+        {
           "ticker": "YOU",
-          "weight": 3.61
+          "weight": 3.07
         },
         {
           "ticker": "TDY",
-          "weight": 3.24
+          "weight": 2.75
         },
         {
           "ticker": "KWR",
-          "weight": 2.96
+          "weight": 2.52
         },
         {
-          "ticker": "ABCM-OLD",
-          "weight": 2.83
+          "ticker": "ABCM",
+          "weight": 2.4
         },
         {
           "ticker": "TTC",
-          "weight": 2.73
+          "weight": 2.32
+        },
+        {
+          "ticker": "TOST",
+          "weight": 2.15
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 1.92
+        },
+        {
+          "ticker": "ENOV",
+          "weight": 1.48
+        },
+        {
+          "ticker": "CHE",
+          "weight": 1.47
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.44
+        },
+        {
+          "ticker": "BFAM",
+          "weight": 1.42
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.39
+        },
+        {
+          "ticker": "AGL",
+          "weight": 1.34
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.19
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.15
         }
       ]
     },
@@ -233,83 +1910,135 @@
       "holdings": [
         {
           "ticker": "ROP",
-          "weight": 9.86
+          "weight": 7.87
         },
         {
           "ticker": "INTU",
-          "weight": 8.03
+          "weight": 6.41
         },
         {
           "ticker": "DUOL",
-          "weight": 7.22
+          "weight": 5.77
         },
         {
           "ticker": "FSV",
-          "weight": 6.25
+          "weight": 5
         },
         {
           "ticker": "HUBS",
-          "weight": 6.24
+          "weight": 4.98
         },
         {
           "ticker": "WST",
-          "weight": 5.95
+          "weight": 4.75
         },
         {
           "ticker": "JBHT",
-          "weight": 5.87
+          "weight": 4.68
         },
         {
           "ticker": "RBC",
-          "weight": 5.82
+          "weight": 4.65
         },
         {
           "ticker": "MOH",
-          "weight": 5.2
+          "weight": 4.16
         },
         {
           "ticker": "BKNG",
-          "weight": 4.89
+          "weight": 3.91
         },
         {
-          "ticker": "ABCM-OLD",
-          "weight": 4.28
+          "ticker": "ABCM",
+          "weight": 3.42
         },
         {
           "ticker": "MSCI",
-          "weight": 3.87
+          "weight": 3.09
         },
         {
           "ticker": "WCN",
-          "weight": 3.84
+          "weight": 3.06
         },
         {
           "ticker": "TEAM",
-          "weight": 3.63
+          "weight": 2.9
         },
         {
           "ticker": "DSGX",
-          "weight": 3.44
+          "weight": 2.75
         },
         {
           "ticker": "TOST",
-          "weight": 3.27
+          "weight": 2.62
         },
         {
           "ticker": "YOU",
-          "weight": 3.23
+          "weight": 2.58
         },
         {
           "ticker": "FOUR",
-          "weight": 3.05
+          "weight": 2.44
         },
         {
           "ticker": "BFAM",
-          "weight": 3.04
+          "weight": 2.43
         },
         {
           "ticker": "CHE",
-          "weight": 3.01
+          "weight": 2.41
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 2.35
+        },
+        {
+          "ticker": "TDY",
+          "weight": 2.28
+        },
+        {
+          "ticker": "TTC",
+          "weight": 2.12
+        },
+        {
+          "ticker": "KWR",
+          "weight": 1.72
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.57
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.54
+        },
+        {
+          "ticker": "DDOG",
+          "weight": 1.41
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.25
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.23
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 1.18
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.18
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 1.15
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.15
         }
       ]
     },
@@ -318,83 +2047,135 @@
       "holdings": [
         {
           "ticker": "ROP",
-          "weight": 9.79
+          "weight": 8.07
         },
         {
           "ticker": "INTU",
-          "weight": 8.68
+          "weight": 7.15
         },
         {
           "ticker": "DUOL",
-          "weight": 7.67
+          "weight": 6.31
         },
         {
           "ticker": "RBC",
-          "weight": 6.47
+          "weight": 5.32
         },
         {
           "ticker": "JBHT",
-          "weight": 6.26
+          "weight": 5.15
         },
         {
           "ticker": "HUBS",
-          "weight": 6.18
+          "weight": 5.09
         },
         {
           "ticker": "MOH",
-          "weight": 6.17
+          "weight": 5.08
         },
         {
           "ticker": "WST",
-          "weight": 5.42
+          "weight": 4.46
         },
         {
           "ticker": "BKNG",
-          "weight": 5.38
+          "weight": 4.43
         },
         {
           "ticker": "FSV",
-          "weight": 5.26
+          "weight": 4.33
         },
         {
           "ticker": "BFAM",
-          "weight": 4.34
+          "weight": 3.58
         },
         {
           "ticker": "TEAM",
-          "weight": 4.15
+          "weight": 3.42
         },
         {
           "ticker": "MSCI",
-          "weight": 3.6
+          "weight": 2.96
         },
         {
           "ticker": "WCN",
-          "weight": 3.56
+          "weight": 2.93
         },
         {
           "ticker": "DSGX",
-          "weight": 3.12
+          "weight": 2.56
         },
         {
           "ticker": "CHE",
-          "weight": 3.01
+          "weight": 2.48
         },
         {
           "ticker": "TOST",
-          "weight": 2.87
+          "weight": 2.36
         },
         {
           "ticker": "TDY",
-          "weight": 2.8
+          "weight": 2.31
         },
         {
           "ticker": "FOUR",
-          "weight": 2.77
+          "weight": 2.28
         },
         {
           "ticker": "PRVA",
-          "weight": 2.51
+          "weight": 2.07
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 1.79
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.65
+        },
+        {
+          "ticker": "YOU",
+          "weight": 1.57
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 1.56
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.37
+        },
+        {
+          "ticker": "IT",
+          "weight": 1.35
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.26
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.22
+        },
+        {
+          "ticker": "CWAN",
+          "weight": 1.22
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.2
+        },
+        {
+          "ticker": "XP",
+          "weight": 1.16
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 1.16
+        },
+        {
+          "ticker": "ROL",
+          "weight": 1.13
         }
       ]
     },
@@ -403,83 +2184,135 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 9.56
+          "weight": 7.85
         },
         {
           "ticker": "DUOL",
-          "weight": 7.71
+          "weight": 6.34
         },
         {
           "ticker": "RBC",
-          "weight": 7.56
+          "weight": 6.21
         },
         {
           "ticker": "ROP",
-          "weight": 7.28
+          "weight": 5.98
         },
         {
           "ticker": "JBHT",
-          "weight": 7.06
+          "weight": 5.8
         },
         {
           "ticker": "HUBS",
-          "weight": 6.96
+          "weight": 5.71
         },
         {
           "ticker": "TEAM",
-          "weight": 5.66
+          "weight": 4.66
         },
         {
           "ticker": "BFAM",
-          "weight": 5.33
+          "weight": 4.38
         },
         {
           "ticker": "BKNG",
-          "weight": 5.12
+          "weight": 4.2
         },
         {
           "ticker": "FSV",
-          "weight": 4.92
+          "weight": 4.05
         },
         {
           "ticker": "MOH",
-          "weight": 4.57
+          "weight": 3.75
         },
         {
           "ticker": "WST",
-          "weight": 4.27
+          "weight": 3.51
         },
         {
           "ticker": "FOUR",
-          "weight": 3.78
+          "weight": 3.1
         },
         {
           "ticker": "MSCI",
-          "weight": 3.52
+          "weight": 2.89
         },
         {
           "ticker": "DSGX",
-          "weight": 3.45
+          "weight": 2.83
         },
         {
           "ticker": "CHE",
-          "weight": 3.14
+          "weight": 2.58
         },
         {
           "ticker": "TDY",
-          "weight": 2.72
+          "weight": 2.24
         },
         {
           "ticker": "TOST",
-          "weight": 2.64
+          "weight": 2.17
         },
         {
           "ticker": "BIRK",
-          "weight": 2.41
+          "weight": 1.98
         },
         {
           "ticker": "SSNC",
-          "weight": 2.32
+          "weight": 1.91
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 1.83
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 1.58
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.54
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 1.53
+        },
+        {
+          "ticker": "CIGI",
+          "weight": 1.46
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.39
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.31
+        },
+        {
+          "ticker": "IWM",
+          "weight": 1.27
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.21
+        },
+        {
+          "ticker": "IT",
+          "weight": 1.21
+        },
+        {
+          "ticker": "ROL",
+          "weight": 1.19
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.18
+        },
+        {
+          "ticker": "YOU",
+          "weight": 1.18
         }
       ]
     },
@@ -488,83 +2321,131 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 9.79
+          "weight": 8.04
         },
         {
           "ticker": "DUOL",
-          "weight": 7.24
+          "weight": 5.94
         },
         {
           "ticker": "HUBS",
-          "weight": 7.23
+          "weight": 5.93
         },
         {
           "ticker": "ROP",
-          "weight": 7.08
+          "weight": 5.81
         },
         {
           "ticker": "JBHT",
-          "weight": 6.78
+          "weight": 5.57
         },
         {
           "ticker": "RBC",
-          "weight": 6.69
+          "weight": 5.5
         },
         {
           "ticker": "BFAM",
-          "weight": 5.99
+          "weight": 4.91
         },
         {
           "ticker": "FSV",
-          "weight": 5.32
+          "weight": 4.37
         },
         {
           "ticker": "BKNG",
-          "weight": 4.81
+          "weight": 3.96
         },
         {
           "ticker": "WST",
-          "weight": 4.31
+          "weight": 3.54
         },
         {
           "ticker": "TEAM",
-          "weight": 4.29
+          "weight": 3.53
         },
         {
           "ticker": "TOST",
-          "weight": 4.2
+          "weight": 3.45
         },
         {
           "ticker": "CHE",
-          "weight": 3.87
+          "weight": 3.17
         },
         {
           "ticker": "MOH",
-          "weight": 3.76
+          "weight": 3.09
         },
         {
           "ticker": "DSGX",
-          "weight": 3.52
+          "weight": 2.89
         },
         {
           "ticker": "FOUR",
-          "weight": 3.33
+          "weight": 2.73
         },
         {
           "ticker": "MSCI",
-          "weight": 3.31
+          "weight": 2.72
         },
         {
           "ticker": "SSNC",
-          "weight": 3.22
+          "weight": 2.65
         },
         {
           "ticker": "CPRT",
-          "weight": 2.67
+          "weight": 2.2
         },
         {
           "ticker": "CIGI",
-          "weight": 2.6
+          "weight": 2.14
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.96
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 1.89
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 1.88
+        },
+        {
+          "ticker": "BIRK",
+          "weight": 1.66
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 1.54
+        },
+        {
+          "ticker": "CPNG",
+          "weight": 1.43
+        },
+        {
+          "ticker": "ROL",
+          "weight": 1.38
+        },
+        {
+          "ticker": "PTC",
+          "weight": 1.28
+        },
+        {
+          "ticker": "IR",
+          "weight": 1.24
+        },
+        {
+          "ticker": "SGRY",
+          "weight": 1.24
+        },
+        {
+          "ticker": "GGG",
+          "weight": 1.19
+        },
+        {
+          "ticker": "WCN",
+          "weight": 1.18
         }
       ]
     },
@@ -573,83 +2454,143 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 10.65
+          "weight": 8.27
         },
         {
           "ticker": "ROP",
-          "weight": 8.19
+          "weight": 6.36
         },
         {
           "ticker": "RBC",
-          "weight": 7.39
+          "weight": 5.74
         },
         {
           "ticker": "DUOL",
-          "weight": 7.03
+          "weight": 5.46
         },
         {
           "ticker": "BFAM",
-          "weight": 6.86
+          "weight": 5.33
         },
         {
           "ticker": "FSV",
-          "weight": 6.16
+          "weight": 4.79
         },
         {
           "ticker": "BKNG",
-          "weight": 5.91
+          "weight": 4.59
         },
         {
           "ticker": "HUBS",
-          "weight": 5.54
+          "weight": 4.29
         },
         {
           "ticker": "CPNG",
-          "weight": 5.4
+          "weight": 4.19
         },
         {
           "ticker": "TOST",
-          "weight": 5.35
+          "weight": 4.16
         },
         {
           "ticker": "FOUR",
-          "weight": 4.17
+          "weight": 3.24
         },
         {
           "ticker": "WST",
-          "weight": 3.92
+          "weight": 3.05
         },
         {
           "ticker": "DSGX",
-          "weight": 3.83
+          "weight": 2.97
         },
         {
           "ticker": "CHE",
-          "weight": 3.42
+          "weight": 2.65
         },
         {
           "ticker": "CPRT",
-          "weight": 3.01
+          "weight": 2.34
         },
         {
           "ticker": "TEAM",
-          "weight": 2.82
+          "weight": 2.18
         },
         {
           "ticker": "CIGI",
-          "weight": 2.73
+          "weight": 2.12
         },
         {
           "ticker": "SSNC",
-          "weight": 2.66
+          "weight": 2.07
         },
         {
           "ticker": "RH",
-          "weight": 2.48
+          "weight": 1.92
         },
         {
           "ticker": "VEEV",
-          "weight": 2.47
+          "weight": 1.91
+        },
+        {
+          "ticker": "MNDY",
+          "weight": 1.84
+        },
+        {
+          "ticker": "MOH",
+          "weight": 1.72
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 1.66
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 1.64
+        },
+        {
+          "ticker": "TTC",
+          "weight": 1.56
+        },
+        {
+          "ticker": "JBHT",
+          "weight": 1.56
+        },
+        {
+          "ticker": "DOCS",
+          "weight": 1.55
+        },
+        {
+          "ticker": "BIRK",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ROL",
+          "weight": 1.48
+        },
+        {
+          "ticker": "ENTG",
+          "weight": 1.46
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 1.4
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 1.36
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.33
+        },
+        {
+          "ticker": "PTC",
+          "weight": 1.15
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 1.14
         }
       ]
     },
@@ -658,83 +2599,131 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 8.75
+          "weight": 7.06
         },
         {
           "ticker": "DUOL",
-          "weight": 8.55
+          "weight": 6.9
         },
         {
           "ticker": "RBC",
-          "weight": 7.74
+          "weight": 6.24
         },
         {
           "ticker": "ROP",
-          "weight": 6.28
+          "weight": 5.06
         },
         {
           "ticker": "CPNG",
-          "weight": 6.2
+          "weight": 5
         },
         {
           "ticker": "FSV",
-          "weight": 6.17
+          "weight": 4.98
         },
         {
           "ticker": "BFAM",
-          "weight": 6.03
+          "weight": 4.87
         },
         {
           "ticker": "HUBS",
-          "weight": 5.43
+          "weight": 4.38
         },
         {
           "ticker": "FOUR",
-          "weight": 5.4
+          "weight": 4.36
         },
         {
           "ticker": "BKNG",
-          "weight": 5.16
+          "weight": 4.16
         },
         {
           "ticker": "TOST",
-          "weight": 4.61
+          "weight": 3.72
         },
         {
           "ticker": "CIGI",
-          "weight": 3.86
+          "weight": 3.11
         },
         {
           "ticker": "MOH",
-          "weight": 3.61
+          "weight": 2.92
         },
         {
           "ticker": "DSGX",
-          "weight": 3.56
+          "weight": 2.87
         },
         {
           "ticker": "CVNA",
-          "weight": 3.56
+          "weight": 2.87
         },
         {
           "ticker": "DOCS",
-          "weight": 3.41
+          "weight": 2.75
         },
         {
           "ticker": "WST",
-          "weight": 3.25
+          "weight": 2.63
         },
         {
           "ticker": "MNDY",
-          "weight": 3.02
+          "weight": 2.44
         },
         {
           "ticker": "ONON",
-          "weight": 2.82
+          "weight": 2.27
+        },
+        {
+          "ticker": "VEEV",
+          "weight": 2.11
         },
         {
           "ticker": "IWM",
-          "weight": 2.61
+          "weight": 2.11
+        },
+        {
+          "ticker": "SSNC",
+          "weight": 1.95
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 1.93
+        },
+        {
+          "ticker": "RH",
+          "weight": 1.8
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.79
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 1.67
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 1.63
+        },
+        {
+          "ticker": "ENTG",
+          "weight": 1.58
+        },
+        {
+          "ticker": "SHOP",
+          "weight": 1.37
+        },
+        {
+          "ticker": "BIRK",
+          "weight": 1.17
+        },
+        {
+          "ticker": "ACHC",
+          "weight": 1.15
+        },
+        {
+          "ticker": "SG",
+          "weight": 1.15
         }
       ]
     },
@@ -743,83 +2732,158 @@
       "holdings": [
         {
           "ticker": "RBC",
-          "weight": 8.62
+          "weight": 7.1,
+          "shares": 2631346
         },
         {
           "ticker": "DUOL",
-          "weight": 8.23
+          "weight": 6.78,
+          "shares": 2319294
         },
         {
           "ticker": "HUBS",
-          "weight": 7.37
+          "weight": 6.06,
+          "shares": 965324
         },
         {
           "ticker": "CPNG",
-          "weight": 6.89
+          "weight": 5.67,
+          "shares": 28636287
         },
         {
           "ticker": "TOST",
-          "weight": 6.16
+          "weight": 5.07,
+          "shares": 15444158
         },
         {
           "ticker": "FOUR",
-          "weight": 5.83
+          "weight": 4.8,
+          "shares": 5130841
         },
         {
           "ticker": "INTU",
-          "weight": 5.79
+          "weight": 4.76,
+          "shares": 840533
         },
         {
           "ticker": "BKNG",
-          "weight": 5.13
+          "weight": 4.22,
+          "shares": 94296
         },
         {
           "ticker": "FSV",
-          "weight": 5.1
+          "weight": 4.2,
+          "shares": 2574268
         },
         {
           "ticker": "CVNA",
-          "weight": 4.83
+          "weight": 3.97,
+          "shares": 2168232
         },
         {
           "ticker": "SHOP",
-          "weight": 4.61
+          "weight": 3.79,
+          "shares": 3950348
         },
         {
           "ticker": "TEAM",
-          "weight": 4.2
+          "weight": 3.46,
+          "shares": 1575546
         },
         {
           "ticker": "CIGI",
-          "weight": 3.93
+          "weight": 3.24,
+          "shares": 2644327
         },
         {
           "ticker": "AFRM",
-          "weight": 3.91
+          "weight": 3.22,
+          "shares": 5858283
         },
         {
           "ticker": "ROP",
-          "weight": 3.65
+          "weight": 3.01,
+          "shares": 641644
         },
         {
           "ticker": "DSGX",
-          "weight": 3.63
+          "weight": 2.99,
+          "shares": 2915564
         },
         {
           "ticker": "AYI",
-          "weight": 3.48
+          "weight": 2.87,
+          "shares": 1088477
         },
         {
           "ticker": "ONON",
-          "weight": 3.29
+          "weight": 2.71,
+          "shares": 5481302
         },
         {
           "ticker": "RBLX",
-          "weight": 2.7
+          "weight": 2.22,
+          "shares": 4261329
         },
         {
           "ticker": "RH",
-          "weight": 2.66
+          "weight": 2.19,
+          "shares": 616931
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 2.02,
+          "shares": 11487843
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.97,
+          "shares": 9017825
+        },
+        {
+          "ticker": "WST",
+          "weight": 1.88,
+          "shares": 637398
+        },
+        {
+          "ticker": "ENTG",
+          "weight": 1.82,
+          "shares": 2033219
+        },
+        {
+          "ticker": "IWM",
+          "weight": 1.71,
+          "shares": 860027
+        },
+        {
+          "ticker": "APG",
+          "weight": 1.62,
+          "shares": 5007539
+        },
+        {
+          "ticker": "ODFL",
+          "weight": 1.58,
+          "shares": 996514
+        },
+        {
+          "ticker": "DOCS",
+          "weight": 1.39,
+          "shares": 2889675
+        },
+        {
+          "ticker": "BFAM",
+          "weight": 1.31,
+          "shares": 1306714
+        },
+        {
+          "ticker": "MOH",
+          "weight": 1.26,
+          "shares": 478706
+        },
+        {
+          "ticker": "CPRT",
+          "weight": 1.11,
+          "shares": 2143957
         }
       ]
     },
@@ -828,83 +2892,168 @@
       "holdings": [
         {
           "ticker": "RBC",
-          "weight": 10.61
+          "weight": 8.36,
+          "shares": 2631346
         },
         {
           "ticker": "DUOL",
-          "weight": 6.59
+          "weight": 5.2,
+          "shares": 1694283
         },
         {
           "ticker": "CPNG",
-          "weight": 6.32
+          "weight": 4.98,
+          "shares": 23009002
         },
         {
           "ticker": "HUBS",
-          "weight": 6.07
+          "weight": 4.78,
+          "shares": 847463
         },
         {
           "ticker": "FOUR",
-          "weight": 6.06
+          "weight": 4.78,
+          "shares": 5919793
         },
         {
           "ticker": "INTU",
-          "weight": 5.37
+          "weight": 4.23,
+          "shares": 697567
         },
         {
           "ticker": "BKNG",
-          "weight": 5.36
+          "weight": 4.23,
+          "shares": 92883
         },
         {
           "ticker": "SHOP",
-          "weight": 5.12
+          "weight": 4.03,
+          "shares": 4275819
         },
         {
           "ticker": "CVNA",
-          "weight": 5.06
+          "weight": 3.99,
+          "shares": 1932972
         },
         {
           "ticker": "CIGI",
-          "weight": 4.51
+          "weight": 3.56,
+          "shares": 2972757
         },
         {
           "ticker": "TOST",
-          "weight": 4.5
+          "weight": 3.55,
+          "shares": 10836694
         },
         {
           "ticker": "FSV",
-          "weight": 4.49
+          "weight": 3.54,
+          "shares": 2156713
         },
         {
           "ticker": "WST",
-          "weight": 4.42
+          "weight": 3.48,
+          "shares": 1573119
         },
         {
           "ticker": "ROP",
-          "weight": 4.18
+          "weight": 3.29,
+          "shares": 564799
         },
         {
           "ticker": "APG",
-          "weight": 4.0
+          "weight": 3.15,
+          "shares": 8911171
         },
         {
           "ticker": "AFRM",
-          "weight": 3.73
+          "weight": 2.94,
+          "shares": 6580882
         },
         {
           "ticker": "AYI",
-          "weight": 3.63
+          "weight": 2.86,
+          "shares": 1098485
         },
         {
           "ticker": "DSGX",
-          "weight": 3.56
+          "weight": 2.81,
+          "shares": 2818757
         },
         {
           "ticker": "PRVA",
-          "weight": 3.22
+          "weight": 2.55,
+          "shares": 11487843
         },
         {
           "ticker": "ENTG",
-          "weight": 3.2
+          "weight": 2.52,
+          "shares": 2914417
+        },
+        {
+          "ticker": "IWM",
+          "weight": 2.49,
+          "shares": 1263352
+        },
+        {
+          "ticker": "XPO",
+          "weight": 2.13,
+          "shares": 2005297
+        },
+        {
+          "ticker": "RBLX",
+          "weight": 2,
+          "shares": 3466575
+        },
+        {
+          "ticker": "DASH",
+          "weight": 1.85,
+          "shares": 1026649
+        },
+        {
+          "ticker": "MASI",
+          "weight": 1.85,
+          "shares": 1125619
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.84,
+          "shares": 10212383
+        },
+        {
+          "ticker": "MOH",
+          "weight": 1.76,
+          "shares": 541605
+        },
+        {
+          "ticker": "IDXX",
+          "weight": 1.51,
+          "shares": 364757
+        },
+        {
+          "ticker": "OPCH",
+          "weight": 1.21,
+          "shares": 3516589
+        },
+        {
+          "ticker": "FERG",
+          "weight": 1.16,
+          "shares": 730754
+        },
+        {
+          "ticker": "ESAB",
+          "weight": 1.13,
+          "shares": 979119
+        },
+        {
+          "ticker": "SG",
+          "weight": 1.12,
+          "shares": 4525109
+        },
+        {
+          "ticker": "MELI",
+          "weight": 1.12,
+          "shares": 57958
         }
       ]
     },
@@ -913,83 +3062,163 @@
       "holdings": [
         {
           "ticker": "RBC",
-          "weight": 9.99
+          "weight": 7.9,
+          "shares": 2521043
         },
         {
           "ticker": "CPNG",
-          "weight": 7.62
+          "weight": 6.04,
+          "shares": 24743982
         },
         {
           "ticker": "FOUR",
-          "weight": 6.79
+          "weight": 5.38,
+          "shares": 6665443
         },
         {
           "ticker": "INTU",
-          "weight": 6.35
+          "weight": 5.02,
+          "shares": 782292
         },
         {
           "ticker": "IWM",
-          "weight": 5.76
+          "weight": 4.56,
+          "shares": 2596668
         },
         {
           "ticker": "APG",
-          "weight": 5.58
+          "weight": 4.42,
+          "shares": 10623568
         },
         {
           "ticker": "SHOP",
-          "weight": 5.39
+          "weight": 4.27,
+          "shares": 4543835
         },
         {
           "ticker": "AFRM",
-          "weight": 5.26
+          "weight": 4.16,
+          "shares": 7389337
         },
         {
           "ticker": "RBLX",
-          "weight": 4.97
+          "weight": 3.93,
+          "shares": 4588728
         },
         {
           "ticker": "CIGI",
-          "weight": 4.86
-        },
-        {
-          "ticker": "TOST",
-          "weight": 4.67
+          "weight": 3.85,
+          "shares": 3625501
         },
         {
           "ticker": "XPO",
-          "weight": 4.67
+          "weight": 3.7,
+          "shares": 3595056
+        },
+        {
+          "ticker": "TOST",
+          "weight": 3.7,
+          "shares": 10245724
         },
         {
           "ticker": "DUOL",
-          "weight": 4.53
+          "weight": 3.58,
+          "shares": 1073356
         },
         {
           "ticker": "MELI",
-          "weight": 3.98
+          "weight": 3.15,
+          "shares": 147984
         },
         {
           "ticker": "AYI",
-          "weight": 3.83
+          "weight": 3.04,
+          "shares": 1249899
         },
         {
           "ticker": "FSV",
-          "weight": 3.53
+          "weight": 2.79,
+          "shares": 1963565
         },
         {
           "ticker": "HUBS",
-          "weight": 3.44
+          "weight": 2.72,
+          "shares": 600539
         },
         {
           "ticker": "CVNA",
-          "weight": 3.1
+          "weight": 2.45,
+          "shares": 892477
         },
         {
           "ticker": "VEEV",
-          "weight": 2.89
+          "weight": 2.29,
+          "shares": 976981
         },
         {
           "ticker": "OPCH",
-          "weight": 2.76
+          "weight": 2.18,
+          "shares": 8237577
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 2.15,
+          "shares": 11487843
+        },
+        {
+          "ticker": "DASH",
+          "weight": 2.06,
+          "shares": 1026649
+        },
+        {
+          "ticker": "ENTG",
+          "weight": 2.01,
+          "shares": 3055914
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 1.87,
+          "shares": 2253704
+        },
+        {
+          "ticker": "WST",
+          "weight": 1.85,
+          "shares": 1040648
+        },
+        {
+          "ticker": "BKNG",
+          "weight": 1.76,
+          "shares": 37306
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.71,
+          "shares": 9597808
+        },
+        {
+          "ticker": "YOU",
+          "weight": 1.69,
+          "shares": 7490351
+        },
+        {
+          "ticker": "MASI",
+          "weight": 1.59,
+          "shares": 1163898
+        },
+        {
+          "ticker": "ROP",
+          "weight": 1.52,
+          "shares": 329709
+        },
+        {
+          "ticker": "ESAB",
+          "weight": 1.36,
+          "shares": 1385176
+        },
+        {
+          "ticker": "MOH",
+          "weight": 1.3,
+          "shares": 535967
         }
       ]
     },
@@ -998,83 +3227,178 @@
       "holdings": [
         {
           "ticker": "RBC",
-          "weight": 10.39
+          "weight": 7.74,
+          "shares": 2521043
         },
         {
           "ticker": "CPNG",
-          "weight": 8.45
+          "weight": 6.29,
+          "shares": 24833189
         },
         {
           "ticker": "SHOP",
-          "weight": 7.13
+          "weight": 5.31,
+          "shares": 4543835
         },
         {
           "ticker": "CIGI",
-          "weight": 6.1
+          "weight": 4.55,
+          "shares": 3699124
         },
         {
           "ticker": "XPO",
-          "weight": 5.91
+          "weight": 4.4,
+          "shares": 4331280
         },
         {
           "ticker": "APG",
-          "weight": 5.4
+          "weight": 4.03,
+          "shares": 14898178
         },
         {
           "ticker": "RBLX",
-          "weight": 5.16
+          "weight": 3.85,
+          "shares": 3529982
         },
         {
           "ticker": "AYI",
-          "weight": 4.96
+          "weight": 3.69,
+          "shares": 1363619
         },
         {
           "ticker": "AFRM",
-          "weight": 4.83
+          "weight": 3.6,
+          "shares": 6268515
         },
         {
           "ticker": "DASH",
-          "weight": 4.8
+          "weight": 3.58,
+          "shares": 1671659
         },
         {
           "ticker": "FOUR",
-          "weight": 4.6
+          "weight": 3.43,
+          "shares": 5626484
         },
         {
           "ticker": "MELI",
-          "weight": 4.33
+          "weight": 3.22,
+          "shares": 175436
         },
         {
           "ticker": "VEEV",
-          "weight": 3.96
+          "weight": 2.95,
+          "shares": 1258853
         },
         {
           "ticker": "FSV",
-          "weight": 3.86
+          "weight": 2.87,
+          "shares": 2216720
         },
         {
           "ticker": "ENTG",
-          "weight": 3.68
+          "weight": 2.74,
+          "shares": 3765035
         },
         {
           "ticker": "CVNA",
-          "weight": 3.55
+          "weight": 2.65,
+          "shares": 892477
         },
         {
           "ticker": "FLUT",
-          "weight": 3.33
+          "weight": 2.49,
+          "shares": 1243988
         },
         {
           "ticker": "WST",
-          "weight": 3.25
-        },
-        {
-          "ticker": "INTU",
-          "weight": 3.15
+          "weight": 2.42,
+          "shares": 1172583
         },
         {
           "ticker": "BKNG",
-          "weight": 3.15
+          "weight": 2.35,
+          "shares": 55319
+        },
+        {
+          "ticker": "INTU",
+          "weight": 2.35,
+          "shares": 437256
+        },
+        {
+          "ticker": "PRVA",
+          "weight": 2.29,
+          "shares": 11691685
+        },
+        {
+          "ticker": "DUOL",
+          "weight": 2.21,
+          "shares": 874919
+        },
+        {
+          "ticker": "FIG",
+          "weight": 2.19,
+          "shares": 5369380
+        },
+        {
+          "ticker": "FERG",
+          "weight": 1.92,
+          "shares": 1088970
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.9,
+          "shares": 8752607
+        },
+        {
+          "ticker": "TOST",
+          "weight": 1.83,
+          "shares": 6360898
+        },
+        {
+          "ticker": "ESAB",
+          "weight": 1.71,
+          "shares": 1945854
+        },
+        {
+          "ticker": "RKT",
+          "weight": 1.68,
+          "shares": 10991236
+        },
+        {
+          "ticker": "YOU",
+          "weight": 1.67,
+          "shares": 6366367
+        },
+        {
+          "ticker": "CBZ",
+          "weight": 1.64,
+          "shares": 3925067
+        },
+        {
+          "ticker": "OPCH",
+          "weight": 1.62,
+          "shares": 7431769
+        },
+        {
+          "ticker": "WIX",
+          "weight": 1.44,
+          "shares": 1031844
+        },
+        {
+          "ticker": "HUBS",
+          "weight": 1.2,
+          "shares": 326711
+        },
+        {
+          "ticker": "VSEC",
+          "weight": 1.13,
+          "shares": 865017
+        },
+        {
+          "ticker": "APP",
+          "weight": 1.06,
+          "shares": 187836
         }
       ]
     },
@@ -1083,92 +3407,163 @@
       "holdings": [
         {
           "ticker": "RBC",
-          "weight": 12.28
+          "weight": 10.55,
+          "shares": 2344911
         },
         {
           "ticker": "DASH",
-          "weight": 9.47
+          "weight": 8.13,
+          "shares": 3578745
         },
         {
           "ticker": "MELI",
-          "weight": 7.25
+          "weight": 6.22,
+          "shares": 307932
         },
         {
           "ticker": "CPNG",
-          "weight": 6.74
+          "weight": 5.79,
+          "shares": 24452985
         },
         {
           "ticker": "APG",
-          "weight": 6.72
+          "weight": 5.77,
+          "shares": 15017378
         },
         {
           "ticker": "XPO",
-          "weight": 6.27
+          "weight": 5.39,
+          "shares": 3949100
         },
         {
           "ticker": "CIGI",
-          "weight": 5.79
+          "weight": 4.97,
+          "shares": 3369760
         },
         {
           "ticker": "FOUR",
-          "weight": 4.86
+          "weight": 4.17,
+          "shares": 6606969
         },
         {
           "ticker": "CVNA",
-          "weight": 4.56
+          "weight": 3.92,
+          "shares": 925045
         },
         {
           "ticker": "FERG",
-          "weight": 4.06
+          "weight": 3.49,
+          "shares": 1561342
         },
         {
           "ticker": "RKT",
-          "weight": 3.95
+          "weight": 3.39,
+          "shares": 17470197
         },
         {
           "ticker": "SHOP",
-          "weight": 3.84
+          "weight": 3.3,
+          "shares": 2043219
         },
         {
           "ticker": "AYI",
-          "weight": 3.43
+          "weight": 2.95,
+          "shares": 815322
         },
         {
           "ticker": "MDLN",
-          "weight": 3.38
+          "weight": 2.91,
+          "shares": 6900000
         },
         {
           "ticker": "PRVA",
-          "weight": 3.35
+          "weight": 2.88,
+          "shares": 12087843
         },
         {
           "ticker": "OPCH",
-          "weight": 3.35
+          "weight": 2.87,
+          "shares": 8991254
         },
         {
           "ticker": "AFRM",
-          "weight": 3.2
+          "weight": 2.75,
+          "shares": 3681173
         },
         {
           "ticker": "Q",
-          "weight": 2.67
+          "weight": 2.29,
+          "shares": 2800861
         },
         {
           "ticker": "VEEV",
-          "weight": 2.48
+          "weight": 2.13,
+          "shares": 951896
         },
         {
           "ticker": "ULS",
-          "weight": 2.36
+          "weight": 2.03,
+          "shares": 2563523
+        },
+        {
+          "ticker": "CLH",
+          "weight": 1.96,
+          "shares": 834763
+        },
+        {
+          "ticker": "WRBY",
+          "weight": 1.6,
+          "shares": 7310605
+        },
+        {
+          "ticker": "VSEC",
+          "weight": 1.52,
+          "shares": 879228
+        },
+        {
+          "ticker": "DSGX",
+          "weight": 1.5,
+          "shares": 1710202
+        },
+        {
+          "ticker": "SRAD",
+          "weight": 1.42,
+          "shares": 5956331
+        },
+        {
+          "ticker": "TWLO",
+          "weight": 1.37,
+          "shares": 962089
+        },
+        {
+          "ticker": "TECH",
+          "weight": 1.23,
+          "shares": 2088891
+        },
+        {
+          "ticker": "YOU",
+          "weight": 1.22,
+          "shares": 3461549
+        },
+        {
+          "ticker": "GSHD",
+          "weight": 1.16,
+          "shares": 1562969
+        },
+        {
+          "ticker": "APP",
+          "weight": 1.1,
+          "shares": 163405
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:35:40Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=DCP",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:17:41Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001798849-durable-capital-partners-lp",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

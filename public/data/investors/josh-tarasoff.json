@@ -52,7 +52,7 @@
       "asOf": "2021-03-31",
       "holdings": [
         {
-          "ticker": "BN",
+          "ticker": "BRK.B",
           "weight": 18.4
         },
         {
@@ -94,43 +94,39 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 16.47
+          "weight": 17.84
         },
         {
           "ticker": "TRUP",
-          "weight": 14.25
+          "weight": 15.44
         },
         {
           "ticker": "BN",
-          "weight": 11.93
+          "weight": 12.92
         },
         {
           "ticker": "SPOT",
-          "weight": 11.9
+          "weight": 12.89
         },
         {
           "ticker": "HUBS",
-          "weight": 10.16
+          "weight": 11.01
         },
         {
           "ticker": "AMZN",
-          "weight": 9.76
-        },
-        {
-          "ticker": "TWTR-OLD",
-          "weight": 7.68
+          "weight": 10.57
         },
         {
           "ticker": "NFLX",
-          "weight": 6.89
+          "weight": 7.46
         },
         {
           "ticker": "GOOGL",
-          "weight": 6.58
+          "weight": 7.13
         },
         {
           "ticker": "WORK",
-          "weight": 4.38
+          "weight": 4.74
         }
       ]
     },
@@ -139,39 +135,35 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 22.16
+          "weight": 24.21
         },
         {
           "ticker": "BN",
-          "weight": 15.23
+          "weight": 16.64
         },
         {
           "ticker": "SPOT",
-          "weight": 10.58
+          "weight": 11.56
         },
         {
           "ticker": "TRUP",
-          "weight": 10.47
+          "weight": 11.44
         },
         {
           "ticker": "AMZN",
-          "weight": 10.13
+          "weight": 11.07
         },
         {
           "ticker": "NFLX",
-          "weight": 8.66
-        },
-        {
-          "ticker": "TWTR-OLD",
-          "weight": 8.47
+          "weight": 9.46
         },
         {
           "ticker": "GOOGL",
-          "weight": 7.83
+          "weight": 8.55
         },
         {
           "ticker": "HUBS",
-          "weight": 6.47
+          "weight": 7.07
         }
       ]
     },
@@ -400,7 +392,7 @@
         },
         {
           "ticker": "TRUP",
-          "weight": 2.0
+          "weight": 2
         }
       ]
     },
@@ -943,10 +935,11 @@
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T01:50:45Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=GBP",
+    "lastFetchedAt": "2026-05-24T23:40:30Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001413048-greenlea-lane-capital-partners-lp",
     "migratedFromLegacy": true,
     "legacyId": "custom-1777150376264",
-    "sharesSource": "13f.info"
+    "sharesSource": "13f.info",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

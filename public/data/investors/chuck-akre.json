@@ -8,7 +8,7 @@
     },
     {
       "ticker": "BN",
-      "weight": 11.38,
+      "weight": 11.37,
       "shares": 17027077
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "ticker": "ORLY",
-      "weight": 5.93,
+      "weight": 5.92,
       "shares": 3885813
     },
     {
@@ -57,7 +57,7 @@
       "shares": 2034473
     },
     {
-      "ticker": "CCC",
+      "ticker": "CCCS",
       "weight": 3.12,
       "shares": 31513070
     },
@@ -74,19 +74,1523 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.92
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.9
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.59
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.35
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 7.44
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.16
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 5.09
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 4.88
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.75
+        },
+        {
+          "ticker": "CFX",
+          "weight": 4.69
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 4.45
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.02
+        },
+        {
+          "ticker": "V",
+          "weight": 3.77
+        },
+        {
+          "ticker": "DHR",
+          "weight": 3.06
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 2.34
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 2.32
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.01
+        },
+        {
+          "ticker": "UI",
+          "weight": 1.92
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.18
+        },
+        {
+          "ticker": "AMT.B",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 14.33
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.6
+        },
+        {
+          "ticker": "MA",
+          "weight": 8.81
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.41
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 7.92
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.67
+        },
+        {
+          "ticker": "V",
+          "weight": 5.54
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.22
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.75
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 4.72
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 4.33
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.21
+        },
+        {
+          "ticker": "CFX",
+          "weight": 3.52
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.4
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 2.4
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.35
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.85
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 1.77
+        },
+        {
+          "ticker": "AMT.B",
+          "weight": 1.12
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 14.1
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.46
+        },
+        {
+          "ticker": "MKL",
+          "weight": 9.44
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.64
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 6.52
+        },
+        {
+          "ticker": "V",
+          "weight": 5.9
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.62
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.22
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.71
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 4.57
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 4.15
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.13
+        },
+        {
+          "ticker": "CFX",
+          "weight": 3.79
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.83
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 2.49
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.32
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.06
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.82
+        },
+        {
+          "ticker": "AMT.B",
+          "weight": 1.11
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.48
+        },
+        {
+          "ticker": "MA",
+          "weight": 9.24
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.85
+        },
+        {
+          "ticker": "MCO",
+          "weight": 8.36
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.32
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 6.15
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 5.45
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.44
+        },
+        {
+          "ticker": "V",
+          "weight": 5.38
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.85
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 4.37
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.99
+        },
+        {
+          "ticker": "CFX",
+          "weight": 3.21
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.95
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.46
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.45
+        },
+        {
+          "ticker": "DG",
+          "weight": 2.12
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 2.07
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.66
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.84
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.82
+        },
+        {
+          "ticker": "MA",
+          "weight": 10.19
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.53
+        },
+        {
+          "ticker": "V",
+          "weight": 7.39
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.6
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.49
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.19
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.05
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.7
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 3.79
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.57
+        },
+        {
+          "ticker": "CFX",
+          "weight": 3.14
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.41
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.29
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 1.96
+        },
+        {
+          "ticker": "DG",
+          "weight": 1.78
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 1.77
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.42
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 14.88
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.45
+        },
+        {
+          "ticker": "MA",
+          "weight": 10.72
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.32
+        },
+        {
+          "ticker": "V",
+          "weight": 7.57
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.99
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.59
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.49
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.38
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.78
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 4.31
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.63
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.31
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.3
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.11
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 1.93
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.12
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 1.09
+        },
+        {
+          "ticker": "AMT.B",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.93
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.88
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.29
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.23
+        },
+        {
+          "ticker": "V",
+          "weight": 7.72
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 6.3
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.12
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.87
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.68
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.33
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.82
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.22
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.25
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.17
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.13
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 1.7
+        },
+        {
+          "ticker": "MNRO",
+          "weight": 1.35
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.78
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.94
+        },
+        {
+          "ticker": "MA",
+          "weight": 11.47
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.33
+        },
+        {
+          "ticker": "V",
+          "weight": 7.93
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 7.39
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.48
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.73
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.73
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.7
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 4.13
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.52
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.71
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.19
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.16
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.73
+        },
+        {
+          "ticker": "MA",
+          "weight": 12.48
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.28
+        },
+        {
+          "ticker": "MKL",
+          "weight": 8.04
+        },
+        {
+          "ticker": "V",
+          "weight": 7.83
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.27
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 6.15
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.85
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.64
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.28
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 3.96
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.58
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.47
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.37
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.17
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 1.6
+        },
+        {
+          "ticker": "KKR",
+          "weight": 1.3
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 13.51
+        },
+        {
+          "ticker": "AMT",
+          "weight": 13.15
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.5
+        },
+        {
+          "ticker": "V",
+          "weight": 8.35
+        },
+        {
+          "ticker": "MKL",
+          "weight": 7.18
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.66
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.55
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.52
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.25
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.94
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.53
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 3.52
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.21
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.93
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.11
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.1
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.15
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.25
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.33
+        },
+        {
+          "ticker": "V",
+          "weight": 8.75
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.82
+        },
+        {
+          "ticker": "MKL",
+          "weight": 7.28
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.51
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 4.95
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.72
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.68
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.66
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.25
+        },
+        {
+          "ticker": "UI",
+          "weight": 3.16
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 2.91
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.15
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 1.87
+        },
+        {
+          "ticker": "FOCS",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 14.59
+        },
+        {
+          "ticker": "MA",
+          "weight": 13.12
+        },
+        {
+          "ticker": "MCO",
+          "weight": 10.39
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 8.48
+        },
+        {
+          "ticker": "V",
+          "weight": 8.42
+        },
+        {
+          "ticker": "MKL",
+          "weight": 6.95
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 6
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.45
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.21
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.73
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.62
+        },
+        {
+          "ticker": "UI",
+          "weight": 3.48
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.24
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.23
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 2.14
+        },
+        {
+          "ticker": "ESGR",
+          "weight": 1.96
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 15.35
+        },
+        {
+          "ticker": "MA",
+          "weight": 13.6
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.15
+        },
+        {
+          "ticker": "V",
+          "weight": 8.27
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.94
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.81
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.79
+        },
+        {
+          "ticker": "MKL",
+          "weight": 5.54
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.34
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.6
+        },
+        {
+          "ticker": "UI",
+          "weight": 4.35
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.67
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.25
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.37
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 1.82
+        },
+        {
+          "ticker": "FOCS",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 15.19
+        },
+        {
+          "ticker": "MA",
+          "weight": 14.57
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.48
+        },
+        {
+          "ticker": "V",
+          "weight": 8.77
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.21
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.94
+        },
+        {
+          "ticker": "MKL",
+          "weight": 5.78
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.73
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.65
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.46
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.85
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.33
+        },
+        {
+          "ticker": "UI",
+          "weight": 2.87
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.45
+        },
+        {
+          "ticker": "AMTD",
+          "weight": 1.73
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 15.97
+        },
+        {
+          "ticker": "MA",
+          "weight": 14.54
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.69
+        },
+        {
+          "ticker": "V",
+          "weight": 8.45
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.56
+        },
+        {
+          "ticker": "MKL",
+          "weight": 6.09
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.97
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 5.83
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.62
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.56
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 4.04
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.44
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.84
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.4
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 15.5
+        },
+        {
+          "ticker": "MA",
+          "weight": 14.92
+        },
+        {
+          "ticker": "MCO",
+          "weight": 12.66
+        },
+        {
+          "ticker": "V",
+          "weight": 8.62
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 7.76
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.57
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.55
+        },
+        {
+          "ticker": "MKL",
+          "weight": 5.5
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.21
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 4.49
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.56
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.49
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.39
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.38
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 1.4
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 15.1
+        },
+        {
+          "ticker": "MA",
+          "weight": 13.76
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.74
+        },
+        {
+          "ticker": "V",
+          "weight": 8.32
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 6.55
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 5.46
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.23
+        },
+        {
+          "ticker": "MKL",
+          "weight": 4.54
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.34
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.57
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.36
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 3.29
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.28
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.13
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 2.53
+        },
+        {
+          "ticker": "LYV",
+          "weight": 2.45
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.26
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "AMT",
+          "weight": 13.94
+        },
+        {
+          "ticker": "MA",
+          "weight": 13.33
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.86
+        },
+        {
+          "ticker": "V",
+          "weight": 7.76
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 5.95
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.63
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.59
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.2
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.16
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.8
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.48
+        },
+        {
+          "ticker": "MKL",
+          "weight": 3.47
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 3.23
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.19
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 2.9
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.24
+        },
+        {
+          "ticker": "LYV",
+          "weight": 1.9
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.36
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.25
+        },
+        {
+          "ticker": "AMT",
+          "weight": 12.18
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.7
+        },
+        {
+          "ticker": "V",
+          "weight": 7.51
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 6.08
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 5.83
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 5.63
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.42
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.93
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 4.01
+        },
+        {
+          "ticker": "KKR",
+          "weight": 3.62
+        },
+        {
+          "ticker": "MKL",
+          "weight": 3.31
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.25
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.21
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 2.96
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.55
+        },
+        {
+          "ticker": "LYV",
+          "weight": 2.11
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.43
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "MA",
+          "weight": 14.32
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.16
+        },
+        {
+          "ticker": "AMT",
+          "weight": 10.92
+        },
+        {
+          "ticker": "V",
+          "weight": 7.83
+        },
+        {
+          "ticker": "CSGP",
+          "weight": 6.09
+        },
+        {
+          "ticker": "ORLY",
+          "weight": 5.68
+        },
+        {
+          "ticker": "ROP",
+          "weight": 5.63
+        },
+        {
+          "ticker": "KMX",
+          "weight": 4.82
+        },
+        {
+          "ticker": "SBAC",
+          "weight": 4.75
+        },
+        {
+          "ticker": "KKR",
+          "weight": 4.07
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.89
+        },
+        {
+          "ticker": "BRK.B",
+          "weight": 3.67
+        },
+        {
+          "ticker": "VRSK",
+          "weight": 3.47
+        },
+        {
+          "ticker": "DLTR",
+          "weight": 3.34
+        },
+        {
+          "ticker": "LYV",
+          "weight": 2.74
+        },
+        {
+          "ticker": "DHR",
+          "weight": 2.51
+        },
+        {
+          "ticker": "MKL",
+          "weight": 2.19
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ALRM",
+          "weight": 1.4
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 14.38
-        },
-        {
-          "ticker": "MCO",
-          "weight": 11.57
+          "weight": 14.36
         },
         {
           "ticker": "AMT",
-          "weight": 11.55
+          "weight": 11.7
+        },
+        {
+          "ticker": "MCO",
+          "weight": 11.54
         },
         {
           "ticker": "V",
@@ -94,11 +1598,11 @@
         },
         {
           "ticker": "KMX",
-          "weight": 6.5
+          "weight": 6.48
         },
         {
           "ticker": "CSGP",
-          "weight": 5.53
+          "weight": 5.52
         },
         {
           "ticker": "ORLY",
@@ -106,27 +1610,27 @@
         },
         {
           "ticker": "ADBE",
-          "weight": 5.01
+          "weight": 5
         },
         {
           "ticker": "KKR",
-          "weight": 4.96
+          "weight": 4.94
         },
         {
           "ticker": "ROP",
-          "weight": 4.82
+          "weight": 4.81
         },
         {
           "ticker": "SBAC",
-          "weight": 4.37
+          "weight": 4.36
         },
         {
-          "ticker": "BN",
+          "ticker": "BRK.B",
           "weight": 3.99
         },
         {
           "ticker": "LYV",
-          "weight": 3.19
+          "weight": 3.18
         },
         {
           "ticker": "VRSK",
@@ -134,19 +1638,19 @@
         },
         {
           "ticker": "DLTR",
-          "weight": 2.83
+          "weight": 2.82
         },
         {
           "ticker": "DHR",
-          "weight": 2.57
+          "weight": 2.56
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 1.43
+          "ticker": "ANSS",
+          "weight": 1.42
         },
         {
           "ticker": "ALRM",
-          "weight": 1.17
+          "weight": 1.18
         }
       ]
     },
@@ -155,7 +1659,7 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 13.34
+          "weight": 13.35
         },
         {
           "ticker": "MCO",
@@ -171,7 +1675,7 @@
         },
         {
           "ticker": "KMX",
-          "weight": 5.73
+          "weight": 5.72
         },
         {
           "ticker": "ADBE",
@@ -179,7 +1683,7 @@
         },
         {
           "ticker": "ORLY",
-          "weight": 5.57
+          "weight": 5.58
         },
         {
           "ticker": "KKR",
@@ -198,8 +1702,8 @@
           "weight": 4.26
         },
         {
-          "ticker": "BN",
-          "weight": 4.17
+          "ticker": "BRK.B",
+          "weight": 4.14
         },
         {
           "ticker": "SBAC",
@@ -215,10 +1719,10 @@
         },
         {
           "ticker": "DLTR",
-          "weight": 2.23
+          "weight": 2.22
         },
         {
-          "ticker": "ANSS-OLD",
+          "ticker": "ANSS",
           "weight": 1.32
         },
         {
@@ -252,11 +1756,11 @@
         },
         {
           "ticker": "KMX",
-          "weight": 5.7
+          "weight": 5.71
         },
         {
           "ticker": "KKR",
-          "weight": 5.62
+          "weight": 5.63
         },
         {
           "ticker": "ADBE",
@@ -268,19 +1772,19 @@
         },
         {
           "ticker": "CRM",
-          "weight": 4.77
+          "weight": 4.76
         },
         {
           "ticker": "ROP",
-          "weight": 4.66
+          "weight": 4.65
         },
         {
-          "ticker": "BN",
+          "ticker": "BRK.B",
           "weight": 4.41
         },
         {
           "ticker": "SBAC",
-          "weight": 4.0
+          "weight": 4
         },
         {
           "ticker": "DHR",
@@ -295,7 +1799,7 @@
           "weight": 2.15
         },
         {
-          "ticker": "ANSS-OLD",
+          "ticker": "ANSS",
           "weight": 1.3
         }
       ]
@@ -305,71 +1809,79 @@
       "holdings": [
         {
           "ticker": "MCO",
-          "weight": 12.96
+          "weight": 12.46
         },
         {
           "ticker": "MA",
-          "weight": 12.43
+          "weight": 11.95
         },
         {
           "ticker": "AMT",
-          "weight": 12.11
+          "weight": 11.63
         },
         {
           "ticker": "V",
-          "weight": 6.72
+          "weight": 6.45
         },
         {
           "ticker": "ORLY",
-          "weight": 6.58
+          "weight": 6.33
         },
         {
           "ticker": "KKR",
-          "weight": 6.48
+          "weight": 6.23
         },
         {
           "ticker": "KMX",
-          "weight": 5.61
+          "weight": 5.39
         },
         {
           "ticker": "ADBE",
-          "weight": 5.12
+          "weight": 4.92
         },
         {
           "ticker": "ROP",
-          "weight": 4.83
+          "weight": 4.64
         },
         {
-          "ticker": "BN",
-          "weight": 4.68
+          "ticker": "BRK.B",
+          "weight": 4.5
         },
         {
           "ticker": "CSGP",
-          "weight": 4.56
+          "weight": 4.38
         },
         {
           "ticker": "CRM",
-          "weight": 4.2
+          "weight": 4.04
         },
         {
           "ticker": "SBAC",
-          "weight": 3.55
+          "weight": 3.42
         },
         {
           "ticker": "VRSK",
-          "weight": 3.31
+          "weight": 3.17
         },
         {
           "ticker": "DHR",
-          "weight": 3.22
+          "weight": 3.09
+        },
+        {
+          "ticker": "AMT",
+          "weight": 2.35
         },
         {
           "ticker": "DLTR",
-          "weight": 2.2
+          "weight": 2.11
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 1.44
+          "ticker": "MA",
+          "weight": 1.54
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.39
         }
       ]
     },
@@ -378,63 +1890,67 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 14.66
+          "weight": 14.44
         },
         {
           "ticker": "MCO",
-          "weight": 13.38
+          "weight": 13.18
         },
         {
           "ticker": "AMT",
-          "weight": 12.32
+          "weight": 12.13
         },
         {
           "ticker": "V",
-          "weight": 8.15
+          "weight": 8.03
         },
         {
           "ticker": "ORLY",
-          "weight": 7.57
+          "weight": 7.45
         },
         {
           "ticker": "KKR",
-          "weight": 6.09
+          "weight": 6
         },
         {
           "ticker": "ROP",
-          "weight": 5.5
+          "weight": 5.41
         },
         {
-          "ticker": "BN",
-          "weight": 5.2
+          "ticker": "BRK.B",
+          "weight": 5.12
         },
         {
           "ticker": "ADBE",
-          "weight": 5.0
+          "weight": 4.93
         },
         {
           "ticker": "KMX",
-          "weight": 4.96
+          "weight": 4.89
         },
         {
           "ticker": "CSGP",
-          "weight": 4.51
+          "weight": 4.44
         },
         {
           "ticker": "CRM",
-          "weight": 4.22
+          "weight": 4.16
         },
         {
           "ticker": "VRSK",
-          "weight": 3.67
+          "weight": 3.62
         },
         {
           "ticker": "DHR",
-          "weight": 3.4
+          "weight": 3.35
         },
         {
-          "ticker": "ANSS-OLD",
-          "weight": 1.36
+          "ticker": "MA",
+          "weight": 1.51
+        },
+        {
+          "ticker": "ANSS",
+          "weight": 1.34
         }
       ]
     },
@@ -459,7 +1975,7 @@
         },
         {
           "ticker": "ORLY",
-          "weight": 8.04
+          "weight": 8.03
         },
         {
           "ticker": "KKR",
@@ -478,7 +1994,7 @@
           "weight": 4.92
         },
         {
-          "ticker": "BN",
+          "ticker": "BRK.B",
           "weight": 4.79
         },
         {
@@ -487,7 +2003,7 @@
         },
         {
           "ticker": "CSGP",
-          "weight": 3.47
+          "weight": 3.48
         },
         {
           "ticker": "VRSK",
@@ -495,11 +2011,11 @@
         },
         {
           "ticker": "DHR",
-          "weight": 3.39
+          "weight": 3.4
         },
         {
           "ticker": "SNOW",
-          "weight": 1.12
+          "weight": 1.13
         }
       ]
     },
@@ -508,7 +2024,7 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 14.91
+          "weight": 14.92
         },
         {
           "ticker": "AMT",
@@ -520,7 +2036,7 @@
         },
         {
           "ticker": "ORLY",
-          "weight": 9.21
+          "weight": 9.22
         },
         {
           "ticker": "V",
@@ -535,7 +2051,7 @@
           "weight": 5.3
         },
         {
-          "ticker": "BN",
+          "ticker": "BRK.B",
           "weight": 4.87
         },
         {
@@ -544,7 +2060,7 @@
         },
         {
           "ticker": "KMX",
-          "weight": 4.33
+          "weight": 4.32
         },
         {
           "ticker": "ADBE",
@@ -597,7 +2113,7 @@
         },
         {
           "ticker": "KKR",
-          "weight": 6.45
+          "weight": 6.46
         },
         {
           "ticker": "CSGP",
@@ -617,7 +2133,7 @@
         },
         {
           "ticker": "KMX",
-          "weight": 2.96
+          "weight": 2.97
         }
       ]
     },
@@ -638,7 +2154,7 @@
         },
         {
           "ticker": "V",
-          "weight": 9.86
+          "weight": 9.85
         },
         {
           "ticker": "ORLY",
@@ -658,7 +2174,7 @@
         },
         {
           "ticker": "CSGP",
-          "weight": 4.34
+          "weight": 4.35
         },
         {
           "ticker": "ADBE",
@@ -666,11 +2182,11 @@
         },
         {
           "ticker": "DHR",
-          "weight": 4.0
+          "weight": 4
         },
         {
           "ticker": "KMX",
-          "weight": 1.76
+          "weight": 1.77
         },
         {
           "ticker": "BAM",
@@ -691,7 +2207,7 @@
         },
         {
           "ticker": "AMT",
-          "weight": 11.0
+          "weight": 11
         },
         {
           "ticker": "V",
@@ -707,11 +2223,11 @@
         },
         {
           "ticker": "ROP",
-          "weight": 6.7
+          "weight": 6.69
         },
         {
           "ticker": "CSGP",
-          "weight": 5.33
+          "weight": 5.32
         },
         {
           "ticker": "BN",
@@ -740,51 +2256,55 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 21.48
+          "weight": 20.31
         },
         {
           "ticker": "MCO",
-          "weight": 14.94
+          "weight": 14.12
         },
         {
           "ticker": "AMT",
-          "weight": 10.32
+          "weight": 9.76
         },
         {
           "ticker": "V",
-          "weight": 10.24
+          "weight": 9.68
         },
         {
           "ticker": "KKR",
-          "weight": 9.66
+          "weight": 9.13
         },
         {
           "ticker": "ORLY",
-          "weight": 8.9
+          "weight": 8.41
         },
         {
           "ticker": "ROP",
-          "weight": 7.07
+          "weight": 6.69
+        },
+        {
+          "ticker": "MA",
+          "weight": 5.47
         },
         {
           "ticker": "BN",
-          "weight": 5.26
+          "weight": 4.97
         },
         {
           "ticker": "CSGP",
-          "weight": 5.17
+          "weight": 4.89
         },
         {
           "ticker": "DHR",
-          "weight": 4.08
+          "weight": 3.86
         },
         {
           "ticker": "KMX",
-          "weight": 1.8
+          "weight": 1.7
         },
         {
           "ticker": "BAM",
-          "weight": 1.07
+          "weight": 1.01
         }
       ]
     },
@@ -817,7 +2337,7 @@
         },
         {
           "ticker": "ROP",
-          "weight": 7.3
+          "weight": 7.31
         },
         {
           "ticker": "BN",
@@ -829,7 +2349,7 @@
         },
         {
           "ticker": "DHR",
-          "weight": 3.51
+          "weight": 3.5
         },
         {
           "ticker": "KMX",
@@ -837,7 +2357,7 @@
         },
         {
           "ticker": "BAM",
-          "weight": 1.19
+          "weight": 1.18
         }
       ]
     },
@@ -878,7 +2398,7 @@
         },
         {
           "ticker": "CSGP",
-          "weight": 5.91
+          "weight": 5.92
         },
         {
           "ticker": "DHR",
@@ -923,7 +2443,7 @@
         },
         {
           "ticker": "V",
-          "weight": 7.75
+          "weight": 7.74
         },
         {
           "ticker": "BN",
@@ -935,11 +2455,11 @@
         },
         {
           "ticker": "DHR",
-          "weight": 4.0
+          "weight": 4
         },
         {
           "ticker": "KMX",
-          "weight": 1.41
+          "weight": 1.42
         },
         {
           "ticker": "ABNB",
@@ -956,7 +2476,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 13.6
+          "weight": 13.61
         },
         {
           "ticker": "KKR",
@@ -964,7 +2484,7 @@
         },
         {
           "ticker": "AMT",
-          "weight": 12.0
+          "weight": 12
         },
         {
           "ticker": "ORLY",
@@ -992,7 +2512,7 @@
         },
         {
           "ticker": "ABNB",
-          "weight": 2.87
+          "weight": 2.86
         }
       ]
     },
@@ -1001,51 +2521,63 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 17.05
+          "weight": 17.05,
+          "shares": 3703739
         },
         {
           "ticker": "KKR",
-          "weight": 13.3
+          "weight": 13.29,
+          "shares": 10283564
         },
         {
           "ticker": "MCO",
-          "weight": 12.74
+          "weight": 12.74,
+          "shares": 3078927
         },
         {
           "ticker": "BN",
-          "weight": 9.53
+          "weight": 9.52,
+          "shares": 18969179
         },
         {
           "ticker": "ORLY",
-          "weight": 9.28
+          "weight": 9.28,
+          "shares": 895280
         },
         {
           "ticker": "V",
-          "weight": 9.03
+          "weight": 9.04,
+          "shares": 3271740
         },
         {
           "ticker": "AMT",
-          "weight": 8.82
+          "weight": 8.82,
+          "shares": 5503413
         },
         {
           "ticker": "ROP",
-          "weight": 6.73
+          "weight": 6.73,
+          "shares": 1481929
         },
         {
           "ticker": "CSGP",
-          "weight": 5.83
+          "weight": 5.83,
+          "shares": 9313880
         },
         {
           "ticker": "DHR",
-          "weight": 3.57
+          "weight": 3.56,
+          "shares": 1775400
         },
         {
           "ticker": "ABNB",
-          "weight": 3.04
+          "weight": 3.04,
+          "shares": 2649398
         },
         {
-          "ticker": "CCC",
-          "weight": 1.09
+          "ticker": "CCCS",
+          "weight": 1.1,
+          "shares": 10681398
         }
       ]
     },
@@ -1054,51 +2586,63 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 17.69
+          "weight": 17.69,
+          "shares": 3331076
         },
         {
           "ticker": "ORLY",
-          "weight": 11.99
+          "weight": 11.99,
+          "shares": 863910
         },
         {
           "ticker": "MCO",
-          "weight": 10.98
+          "weight": 10.99,
+          "shares": 2435458
         },
         {
           "ticker": "V",
-          "weight": 10.78
+          "weight": 10.78,
+          "shares": 3175240
         },
         {
           "ticker": "KKR",
-          "weight": 9.91
+          "weight": 9.91,
+          "shares": 8847564
         },
         {
           "ticker": "BN",
-          "weight": 9.69
+          "weight": 9.7,
+          "shares": 19094021
         },
         {
           "ticker": "ROP",
-          "weight": 8.28
+          "weight": 8.28,
+          "shares": 1449188
         },
         {
           "ticker": "CSGP",
-          "weight": 7.14
+          "weight": 7.15,
+          "shares": 9313592
         },
         {
           "ticker": "AMT",
-          "weight": 5.46
+          "weight": 5.46,
+          "shares": 2589192
         },
         {
           "ticker": "DHR",
-          "weight": 3.53
+          "weight": 3.53,
+          "shares": 1775400
         },
         {
           "ticker": "ABNB",
-          "weight": 3.38
+          "weight": 3.38,
+          "shares": 2917733
         },
         {
-          "ticker": "CCC",
-          "weight": 1.16
+          "ticker": "CCCS",
+          "weight": 1.15,
+          "shares": 13190384
         }
       ]
     },
@@ -1107,51 +2651,63 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 18.4
+          "weight": 18.4,
+          "shares": 3295286
         },
         {
           "ticker": "BN",
-          "weight": 11.81
+          "weight": 11.81,
+          "shares": 19219290
         },
         {
           "ticker": "KKR",
-          "weight": 11.7
+          "weight": 11.69,
+          "shares": 8847564
         },
         {
           "ticker": "MCO",
-          "weight": 11.49
+          "weight": 11.49,
+          "shares": 2305424
         },
         {
           "ticker": "V",
-          "weight": 11.2
+          "weight": 11.2,
+          "shares": 3175240
         },
         {
           "ticker": "ORLY",
-          "weight": 8.43
+          "weight": 8.43,
+          "shares": 9410714
         },
         {
           "ticker": "ROP",
-          "weight": 8.11
+          "weight": 8.11,
+          "shares": 1439468
         },
         {
           "ticker": "CSGP",
-          "weight": 7.44
+          "weight": 7.44,
+          "shares": 9309232
         },
         {
           "ticker": "ABNB",
-          "weight": 4.56
+          "weight": 4.57,
+          "shares": 3473243
         },
         {
           "ticker": "DHR",
-          "weight": 3.48
+          "weight": 3.48,
+          "shares": 1775400
         },
         {
           "ticker": "AMT",
-          "weight": 2.01
+          "weight": 2.01,
+          "shares": 915249
         },
         {
-          "ticker": "CCC",
-          "weight": 1.38
+          "ticker": "CCCS",
+          "weight": 1.38,
+          "shares": 14770128
         }
       ]
     },
@@ -1160,55 +2716,68 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 18.15
+          "weight": 18.16,
+          "shares": 3155594
         },
         {
           "ticker": "BN",
-          "weight": 13.33
+          "weight": 13.33,
+          "shares": 19215941
         },
         {
           "ticker": "KKR",
-          "weight": 11.46
+          "weight": 11.46,
+          "shares": 8713264
         },
         {
           "ticker": "V",
-          "weight": 10.27
+          "weight": 10.27,
+          "shares": 2973760
         },
         {
           "ticker": "MCO",
-          "weight": 10.22
+          "weight": 10.21,
+          "shares": 2118949
         },
         {
           "ticker": "ORLY",
-          "weight": 9.4
+          "weight": 9.39,
+          "shares": 8612428
         },
         {
           "ticker": "CSGP",
-          "weight": 7.95
+          "weight": 7.94,
+          "shares": 9306485
         },
         {
           "ticker": "ROP",
-          "weight": 5.83
+          "weight": 5.84,
+          "shares": 1156673
         },
         {
           "ticker": "ABNB",
-          "weight": 4.26
+          "weight": 4.27,
+          "shares": 3473243
         },
         {
           "ticker": "FICO",
-          "weight": 3.95
+          "weight": 3.95,
+          "shares": 260849
         },
         {
           "ticker": "CPRT",
-          "weight": 1.93
+          "weight": 1.93,
+          "shares": 4236760
         },
         {
           "ticker": "DHR",
-          "weight": 1.76
+          "weight": 1.75,
+          "shares": 874831
         },
         {
-          "ticker": "CCC",
-          "weight": 1.5
+          "ticker": "CCCS",
+          "weight": 1.5,
+          "shares": 16270128
         }
       ]
     },
@@ -1217,60 +2786,73 @@
       "holdings": [
         {
           "ticker": "MA",
-          "weight": 19.06
+          "weight": 19.06,
+          "shares": 3005280
         },
         {
           "ticker": "BN",
-          "weight": 13.69
+          "weight": 13.68,
+          "shares": 26843633
         },
         {
           "ticker": "KKR",
-          "weight": 11.48
+          "weight": 11.48,
+          "shares": 8106049
         },
         {
           "ticker": "V",
-          "weight": 10.42
+          "weight": 10.43,
+          "shares": 2676628
         },
         {
           "ticker": "MCO",
-          "weight": 9.85
+          "weight": 9.85,
+          "shares": 1735231
         },
         {
           "ticker": "CSGP",
-          "weight": 7.18
+          "weight": 7.18,
+          "shares": 9617805
         },
         {
           "ticker": "ORLY",
-          "weight": 6.81
+          "weight": 6.81,
+          "shares": 6719819
         },
         {
           "ticker": "ROP",
-          "weight": 5.46
+          "weight": 5.46,
+          "shares": 1105153
         },
         {
           "ticker": "ABNB",
-          "weight": 5.24
+          "weight": 5.24,
+          "shares": 3473243
         },
         {
           "ticker": "FICO",
-          "weight": 5.21
+          "weight": 5.21,
+          "shares": 277445
         },
         {
           "ticker": "CPRT",
-          "weight": 3.42
+          "weight": 3.42,
+          "shares": 7867967
         },
         {
-          "ticker": "CCC",
-          "weight": 2.19
+          "ticker": "CCCS",
+          "weight": 2.19,
+          "shares": 24836984
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:33:51Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=AC",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-24T23:57:48Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001112520-akre-capital-management-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

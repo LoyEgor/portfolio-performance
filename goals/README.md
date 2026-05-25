@@ -16,7 +16,12 @@ investor's id from `selectedInvestors`).
   - `investors-index.json` — 80-investor catalog (id, name, AUM, link, tags, history range)
   - `investors/<id>.json` — per-investor holdings + history
   - `prices/<YYYY>.json` — ticker prices, split by year (range in `meta.priceYears`)
-  - `meta.json` — global `latestQuarter`, `priceYears: {from,to}`, last-fetched timestamps
+  - `meta.json` — global contract for the base:
+    - `latestQuarter` — every investor has data through this quarter
+    - `oldestHistoryAsOf` — earliest `asOf` across the base (depth target for `INVESTORS-ADD`)
+    - `priceYears: {from, to}` — range of `prices/<YYYY>.json` files on disk
+    - `activityWindowQuarters` — rolling window for `shares` fields
+    - `lastBackfillAt`, `lastStocksUpdateAt` — diagnostic timestamps
 - **User config** — `public/default-data.json` — `selectedInvestors[]`, color/visibility
   customization, myPortfolio. Goals NEVER write here (except `scripts/remove-investor.mjs`
   which prunes deleted investor IDs from the selection).
@@ -54,8 +59,88 @@ subsequent updates use the same one (stability over re-discovery).
   - `public/default-data.backup-*.json` (app-managed snapshots)
 - **NEVER** push to remote, **NEVER** open PRs, **NEVER** create commits without explicit user permission.
 - Always write a `/tmp/<goal-name>.pre-run.tar` snapshot of `public/data/` before the first mutation, so failed runs can be inspected/rolled back.
-- Use polite pacing for outbound HTTP (1-2s between requests to the same domain) to avoid rate-limits.
+- Use polite pacing for outbound HTTP (1-2s between requests to the **same domain**) to avoid rate-limits.
 - Retry with exponential backoff on 429/503 (3 tries max). Skip with logged warning on persistent failure.
+
+## Concurrency
+
+Goals MAY process up to **3 work-units concurrently**, but **only across different
+source domains**. Same-domain requests stay strictly serial with 1-2s pacing.
+
+Concrete: if processing 76 investors and source distribution is 60 DataRoma /
+10 13F.info / 6 Web Archive, the LLM can run 3 fetches in parallel — one per
+source. It MUST NOT issue 3 parallel DataRoma requests; that breaks the
+pacing contract. When all 3 slots are DataRoma-bound, fall back to serial.
+
+This is implementable inside one Claude turn (parallel WebFetch tool calls)
+provided each call targets a distinct host. Shared writes (`investors-index.json`,
+`meta.json`) happen only **after** all concurrent fetches in the batch
+complete — never partially mid-batch.
+
+## Ticker hygiene (applies to every goal that writes holdings)
+
+Any goal that produces `{ ticker, weight, ... }` entries in `holdings[]` or
+`history[].holdings[]` MUST follow these rules. Verify scripts enforce them.
+
+### 1. Dual-class separator: DOT, not DASH
+
+13F.info and SEC EDGAR return `BRK-B`, `BRK-A`, `BF-B`, `BIO-B`, etc.
+DataRoma returns `BRK.B`, `BRK.A`, `BF.B`. **Our base uses the DOT form** —
+prices in `public/data/prices/<YYYY>.json` are keyed with DOT, and the React
+app's `normalizeTicker` strips suffixes from DOT form.
+
+Before writing, normalize every ticker matching `^([A-Z]+)-([A-Z])$` (root +
+single-letter class) to `\1.\2`. Example: `BRK-B` → `BRK.B`, `BRK-A` → `BRK.A`.
+
+### 2. No `-OLD` / `Q-OLD` / `MQ-OLD` suffix tickers
+
+Sources sometimes return parser-internal markers like `ANSS-OLD`, `CFLT-OLD`,
+`TWTR-OLD`, `DNMRQ-OLD`, `Y-OLD` for positions that had a corporate action
+(rename, M&A, delisting). These are scratch-pad symbols and **must not enter
+the data**.
+
+When you encounter a ticker matching `-OLD$` (or `Q-OLD$` for bankruptcies):
+- Drop the position entirely from that snapshot.
+- Log to `/tmp/<goal>-log.txt`: `(investor, quarter, dropped-OLD-ticker)`.
+- Do NOT try to map to the "new" ticker — that's source-fidelity territory,
+  out of scope here.
+
+### 3. No cross-listing switches for established positions
+
+Companies dual-listed in US + Canada (Brookfield: `BN` + `BN.TO`; Brookfield
+Asset Mgmt: `BAM` + `BAM.TO`; Canadian Pacific: `CP` + `CP.TO`; Enbridge:
+`ENB` + `ENB.TO`; Franco-Nevada: `FNV` + `FNV.TO`; Imperial Oil: `IMO` +
+`IMO.TO`; Nutrien: `NTR` + `NTR.TO`; Wheaton Precious: `WPM` + `WPM.TO`;
+Ovintiv: `OVV` + `OVV.TO`; Suncor: `SU` + `SU.TO`; TC Energy: `TRP` +
+`TRP.TO`; Manulife: `MFC` + `MFC.TO`; Royal Bank: `RY` + `RY.TO`; etc.)
+have different price series. Switching ticker forms invalidates historical
+price coverage.
+
+**Rule:** if an investor's existing file already has a position under the US
+ticker (`BN`, `CP`, `ENB`, …), and a fresh fetch tries to record the same
+company under the Canadian (`.TO`) ticker, **preserve the US ticker**. The
+same applies in reverse: don't switch from `.TO` to US for a fund that has
+established positions on the Canadian listing.
+
+For investors **new** to the base where no prior ticker exists for the
+company, accept whatever the source returned (US-first preferred when both
+forms appear in the source).
+
+Same logic applies to `.L` (London), `.MX` (Mexico), `.SW` (Swiss), `.DE`
+(Germany), `.MI` (Milan) suffixes — never switch an established US-listing
+position to a foreign-exchange variant. Foreign-only positions (e.g.
+`FLTR.L` for a UK manager who never had US listing) stay as-is.
+
+### 4. Verify enforcement
+
+Each goal's verify script MUST fail (exit 1) if any holding violates these
+rules. Pattern checks:
+- `re.match(r'^[A-Z]+-[A-Z]$', ticker)` → dash-separator violation
+- `re.search(r'-OLD$', ticker)` → leaked parser marker
+- Cross-listing regression is harder to enforce mechanically — verify against
+  the pre-run snapshot: any ticker that changed form between snapshot and
+  result is a flag (informational warning, not hard failure, since some
+  changes are legitimate corporate actions).
 
 ## Running — the `/goal` command
 

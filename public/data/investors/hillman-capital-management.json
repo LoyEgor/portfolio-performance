@@ -28,22 +28,22 @@
     },
     {
       "ticker": "PFE",
-      "weight": 3.81,
+      "weight": 3.82,
       "shares": 187937
     },
     {
       "ticker": "ZBH",
-      "weight": 3.65,
+      "weight": 3.64,
       "shares": 55700
     },
     {
       "ticker": "CVS",
-      "weight": 3.5,
+      "weight": 3.51,
       "shares": 67462
     },
     {
       "ticker": "BF.B",
-      "weight": 3.38,
+      "weight": 3.37,
       "shares": 176437
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "ticker": "BA",
-      "weight": 3.22,
+      "weight": 3.21,
       "shares": 22326
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "ticker": "ADBE",
-      "weight": 2.84,
+      "weight": 2.85,
       "shares": 16200
     },
     {
@@ -143,12 +143,12 @@
     },
     {
       "ticker": "DIS",
-      "weight": 1.72,
+      "weight": 1.71,
       "shares": 24599
     },
     {
       "ticker": "ORCL",
-      "weight": 1.72,
+      "weight": 1.71,
       "shares": 16109
     },
     {
@@ -163,7 +163,7 @@
     },
     {
       "ticker": "BDX",
-      "weight": 1.61,
+      "weight": 1.62,
       "shares": 14209
     },
     {
@@ -173,23 +173,23 @@
     },
     {
       "ticker": "HSY",
-      "weight": 1.59,
+      "weight": 1.6,
       "shares": 10608
     },
     {
       "ticker": "UPS",
-      "weight": 1.58,
+      "weight": 1.59,
       "shares": 22316
-    },
-    {
-      "ticker": "CRM",
-      "weight": 1.48,
-      "shares": 10956
     },
     {
       "ticker": "DEO",
       "weight": 1.48,
       "shares": 27507
+    },
+    {
+      "ticker": "CRM",
+      "weight": 1.48,
+      "shares": 10956
     },
     {
       "ticker": "UNH",
@@ -199,87 +199,2584 @@
   ],
   "history": [
     {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "JWN",
+          "weight": 4.27
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.13
+        },
+        {
+          "ticker": "BMY",
+          "weight": 4.07
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.93
+        },
+        {
+          "ticker": "T",
+          "weight": 3.88
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.87
+        },
+        {
+          "ticker": "K",
+          "weight": 3.79
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.73
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.73
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.71
+        },
+        {
+          "ticker": "SRCL",
+          "weight": 3.65
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.64
+        },
+        {
+          "ticker": "GS",
+          "weight": 3.51
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.46
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.45
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.38
+        },
+        {
+          "ticker": "BAC",
+          "weight": 3.35
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.35
+        },
+        {
+          "ticker": "MCD",
+          "weight": 2.45
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.43
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.4
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.37
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.36
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.32
+        },
+        {
+          "ticker": "IBM",
+          "weight": 2.28
+        },
+        {
+          "ticker": "GIS",
+          "weight": 2.28
+        },
+        {
+          "ticker": "DD",
+          "weight": 2.19
+        },
+        {
+          "ticker": "MDT",
+          "weight": 2.19
+        },
+        {
+          "ticker": "LH",
+          "weight": 2
+        },
+        {
+          "ticker": "META",
+          "weight": 1.92
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.82
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 1.61
+        },
+        {
+          "ticker": "GE",
+          "weight": 1.41
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 5.12
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 5.03
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.8
+        },
+        {
+          "ticker": "BMY",
+          "weight": 4.6
+        },
+        {
+          "ticker": "K",
+          "weight": 4.41
+        },
+        {
+          "ticker": "SRCL",
+          "weight": 4.1
+        },
+        {
+          "ticker": "CVS",
+          "weight": 4.09
+        },
+        {
+          "ticker": "T",
+          "weight": 3.96
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.92
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.82
+        },
+        {
+          "ticker": "GS",
+          "weight": 3.14
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.11
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.03
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.94
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.89
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.88
+        },
+        {
+          "ticker": "DD",
+          "weight": 2.85
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.84
+        },
+        {
+          "ticker": "XOM",
+          "weight": 2.82
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.81
+        },
+        {
+          "ticker": "RTN",
+          "weight": 2.79
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.73
+        },
+        {
+          "ticker": "MCD",
+          "weight": 2.7
+        },
+        {
+          "ticker": "BAC",
+          "weight": 2.7
+        },
+        {
+          "ticker": "SPG",
+          "weight": 2.56
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.49
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.33
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.2
+        },
+        {
+          "ticker": "META",
+          "weight": 2.04
+        },
+        {
+          "ticker": "AMGN",
+          "weight": 1.75
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.51
+        },
+        {
+          "ticker": "PAA",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "AMZN",
+          "weight": 5.42
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 4.68
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.87
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.81
+        },
+        {
+          "ticker": "K",
+          "weight": 3.71
+        },
+        {
+          "ticker": "T",
+          "weight": 3.69
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.65
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.64
+        },
+        {
+          "ticker": "SRCL",
+          "weight": 3.58
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.57
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.44
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.4
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.25
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.2
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.12
+        },
+        {
+          "ticker": "GS",
+          "weight": 3.05
+        },
+        {
+          "ticker": "BAC",
+          "weight": 3.05
+        },
+        {
+          "ticker": "WFC",
+          "weight": 2.68
+        },
+        {
+          "ticker": "XOM",
+          "weight": 2.63
+        },
+        {
+          "ticker": "PAA",
+          "weight": 2.63
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.36
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.33
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.32
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.32
+        },
+        {
+          "ticker": "MCD",
+          "weight": 2.29
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.25
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.23
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.2
+        },
+        {
+          "ticker": "JPM",
+          "weight": 2.18
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.16
+        },
+        {
+          "ticker": "META",
+          "weight": 2.08
+        },
+        {
+          "ticker": "GE",
+          "weight": 1.87
+        },
+        {
+          "ticker": "JWN",
+          "weight": 1.8
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 4.52
+        },
+        {
+          "ticker": "INTC",
+          "weight": 4.16
+        },
+        {
+          "ticker": "CMP",
+          "weight": 4.03
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.96
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.88
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.59
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.55
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.52
+        },
+        {
+          "ticker": "K",
+          "weight": 3.49
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.49
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.44
+        },
+        {
+          "ticker": "T",
+          "weight": 3.38
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.37
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.29
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.2
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.09
+        },
+        {
+          "ticker": "BAC",
+          "weight": 3.02
+        },
+        {
+          "ticker": "JWN",
+          "weight": 3
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3
+        },
+        {
+          "ticker": "GS",
+          "weight": 3
+        },
+        {
+          "ticker": "CSCO",
+          "weight": 2.72
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.6
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.54
+        },
+        {
+          "ticker": "GE",
+          "weight": 2.43
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.4
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.37
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.34
+        },
+        {
+          "ticker": "META",
+          "weight": 2.31
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.27
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.2
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.18
+        },
+        {
+          "ticker": "JPM",
+          "weight": 2.16
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.52
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "JWN",
+          "weight": 6.05
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.88
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.72
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.69
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.68
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.67
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.6
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.58
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.45
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.33
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.32
+        },
+        {
+          "ticker": "GE",
+          "weight": 3.27
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.27
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.18
+        },
+        {
+          "ticker": "GS",
+          "weight": 3.14
+        },
+        {
+          "ticker": "T",
+          "weight": 3.03
+        },
+        {
+          "ticker": "K",
+          "weight": 2.99
+        },
+        {
+          "ticker": "BAC",
+          "weight": 2.98
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.9
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.71
+        },
+        {
+          "ticker": "JPM",
+          "weight": 2.69
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.68
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.67
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.48
+        },
+        {
+          "ticker": "CSCO",
+          "weight": 2.43
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.27
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.22
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.22
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.15
+        },
+        {
+          "ticker": "META",
+          "weight": 1.89
+        },
+        {
+          "ticker": "BDX",
+          "weight": 1.86
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.47
+        }
+      ]
+    },
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "WFC",
+          "weight": 4.01
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.9
+        },
+        {
+          "ticker": "K",
+          "weight": 3.82
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.82
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.8
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.69
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.62
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.58
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.51
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.47
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.47
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.42
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.4
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.4
+        },
+        {
+          "ticker": "T",
+          "weight": 3.35
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.35
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.29
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.18
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.93
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.8
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.75
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.75
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.72
+        },
+        {
+          "ticker": "META",
+          "weight": 2.69
+        },
+        {
+          "ticker": "CSCO",
+          "weight": 2.62
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.62
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.52
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.38
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.33
+        },
+        {
+          "ticker": "MMP",
+          "weight": 2.27
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.16
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.31
+        },
+        {
+          "ticker": "LMT",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "WFC",
+          "weight": 4.07
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 4.01
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.89
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.86
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.82
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.68
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.66
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.63
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.62
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.55
+        },
+        {
+          "ticker": "T",
+          "weight": 3.5
+        },
+        {
+          "ticker": "K",
+          "weight": 3.47
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.47
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.16
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.1
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.08
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.08
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.95
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.9
+        },
+        {
+          "ticker": "DISCA",
+          "weight": 2.82
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.79
+        },
+        {
+          "ticker": "META",
+          "weight": 2.79
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.77
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.59
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.44
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.42
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.38
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.37
+        },
+        {
+          "ticker": "CSCO",
+          "weight": 2.36
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.26
+        },
+        {
+          "ticker": "MMP",
+          "weight": 2.24
+        },
+        {
+          "ticker": "LH",
+          "weight": 2.04
+        },
+        {
+          "ticker": "EMR",
+          "weight": 1.23
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "WFC",
+          "weight": 4.04
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.76
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.72
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.72
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.71
+        },
+        {
+          "ticker": "K",
+          "weight": 3.68
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.52
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.51
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.5
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.47
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.44
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.38
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.33
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.33
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.26
+        },
+        {
+          "ticker": "T",
+          "weight": 3.2
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.19
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.99
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.95
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.93
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.78
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.74
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.74
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.74
+        },
+        {
+          "ticker": "META",
+          "weight": 2.65
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.59
+        },
+        {
+          "ticker": "MMP",
+          "weight": 2.51
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.48
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.44
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.41
+        },
+        {
+          "ticker": "DISCA",
+          "weight": 2.3
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "SPG",
+          "weight": 4.16
+        },
+        {
+          "ticker": "CVS",
+          "weight": 4.01
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.91
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.75
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.67
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.64
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.55
+        },
+        {
+          "ticker": "K",
+          "weight": 3.5
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.43
+        },
+        {
+          "ticker": "XOM",
+          "weight": 3.39
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.27
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.18
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.14
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 3.1
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.05
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.98
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.97
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.9
+        },
+        {
+          "ticker": "PAA",
+          "weight": 2.88
+        },
+        {
+          "ticker": "T",
+          "weight": 2.79
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.7
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.55
+        },
+        {
+          "ticker": "META",
+          "weight": 2.55
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.55
+        },
+        {
+          "ticker": "GD",
+          "weight": 2.51
+        },
+        {
+          "ticker": "MMP",
+          "weight": 2.47
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.38
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.37
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.33
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.33
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.31
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.15
+        },
+        {
+          "ticker": "DISCA",
+          "weight": 2.07
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.51
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 3.5
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.36
+        },
+        {
+          "ticker": "K",
+          "weight": 3.28
+        },
+        {
+          "ticker": "BMY",
+          "weight": 3.25
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.24
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.23
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.21
+        },
+        {
+          "ticker": "ASML",
+          "weight": 3.19
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.19
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.18
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.16
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.14
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.08
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.06
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.04
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.94
+        },
+        {
+          "ticker": "BA",
+          "weight": 2.92
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.88
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.75
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.72
+        },
+        {
+          "ticker": "T",
+          "weight": 2.7
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.67
+        },
+        {
+          "ticker": "META",
+          "weight": 2.5
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.44
+        },
+        {
+          "ticker": "MMP",
+          "weight": 2.42
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.41
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.39
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.39
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.35
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.33
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.32
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.31
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.23
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.19
+        },
+        {
+          "ticker": "DISCA",
+          "weight": 2.03
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.97
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "K",
+          "weight": 4.19
+        },
+        {
+          "ticker": "T",
+          "weight": 3.93
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.9
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.87
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.48
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.47
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.39
+        },
+        {
+          "ticker": "MRK",
+          "weight": 3.36
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.3
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.3
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.2
+        },
+        {
+          "ticker": "PAA",
+          "weight": 3.2
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.87
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.85
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.85
+        },
+        {
+          "ticker": "DD",
+          "weight": 2.83
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.67
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.67
+        },
+        {
+          "ticker": "SPG",
+          "weight": 2.66
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.62
+        },
+        {
+          "ticker": "WBD",
+          "weight": 2.52
+        },
+        {
+          "ticker": "BA",
+          "weight": 2.52
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.51
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.5
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.49
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.48
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.4
+        },
+        {
+          "ticker": "META",
+          "weight": 2.38
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.36
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.31
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.26
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.24
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.17
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.15
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.1
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "CVS",
+          "weight": 3.93
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.91
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.63
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.62
+        },
+        {
+          "ticker": "K",
+          "weight": 3.57
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.52
+        },
+        {
+          "ticker": "T",
+          "weight": 3.32
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.29
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.1
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.09
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.07
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3
+        },
+        {
+          "ticker": "DD",
+          "weight": 2.97
+        },
+        {
+          "ticker": "SPG",
+          "weight": 2.92
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.88
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.81
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.77
+        },
+        {
+          "ticker": "WBD",
+          "weight": 2.69
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.68
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.63
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.62
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.58
+        },
+        {
+          "ticker": "BA",
+          "weight": 2.58
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.54
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.54
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.5
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.5
+        },
+        {
+          "ticker": "MRK",
+          "weight": 2.46
+        },
+        {
+          "ticker": "META",
+          "weight": 2.3
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.29
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.29
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.25
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.13
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.99
+        },
+        {
+          "ticker": "JWN",
+          "weight": 1.97
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "BUD",
+          "weight": 3.77
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.71
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.71
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.7
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.63
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.54
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.48
+        },
+        {
+          "ticker": "K",
+          "weight": 3.45
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.41
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.4
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.37
+        },
+        {
+          "ticker": "T",
+          "weight": 3.27
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.26
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.03
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.91
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.84
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.84
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.76
+        },
+        {
+          "ticker": "WBD",
+          "weight": 2.74
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.73
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.53
+        },
+        {
+          "ticker": "RTX",
+          "weight": 2.5
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.46
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.44
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.38
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.37
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.33
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.22
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.19
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.16
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.11
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 2.05
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.99
+        },
+        {
+          "ticker": "META",
+          "weight": 1.95
+        },
+        {
+          "ticker": "JWN",
+          "weight": 1.71
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "BUD",
+          "weight": 4
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.99
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.61
+        },
+        {
+          "ticker": "ASML",
+          "weight": 3.45
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.45
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.37
+        },
+        {
+          "ticker": "WBD",
+          "weight": 3.3
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.3
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.26
+        },
+        {
+          "ticker": "T",
+          "weight": 3.26
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.25
+        },
+        {
+          "ticker": "CRM",
+          "weight": 3.24
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.23
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.22
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.21
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.21
+        },
+        {
+          "ticker": "K",
+          "weight": 3.12
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.11
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.85
+        },
+        {
+          "ticker": "CMP",
+          "weight": 2.82
+        },
+        {
+          "ticker": "CVS",
+          "weight": 2.8
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.56
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.54
+        },
+        {
+          "ticker": "META",
+          "weight": 2.51
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.46
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.45
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.44
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.39
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.37
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.29
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.11
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.1
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.95
+        },
+        {
+          "ticker": "JWN",
+          "weight": 1.72
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 4.36
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.73
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.66
+        },
+        {
+          "ticker": "ASML",
+          "weight": 3.43
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.42
+        },
+        {
+          "ticker": "EPD",
+          "weight": 3.27
+        },
+        {
+          "ticker": "WBD",
+          "weight": 3.18
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 3.17
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.13
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.11
+        },
+        {
+          "ticker": "META",
+          "weight": 3.1
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.06
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.06
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.03
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.02
+        },
+        {
+          "ticker": "CMP",
+          "weight": 3.01
+        },
+        {
+          "ticker": "K",
+          "weight": 2.94
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.94
+        },
+        {
+          "ticker": "KHC",
+          "weight": 2.88
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 2.82
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.57
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.55
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.52
+        },
+        {
+          "ticker": "T",
+          "weight": 2.48
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.46
+        },
+        {
+          "ticker": "CVS",
+          "weight": 2.42
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.38
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.34
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.27
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.24
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.19
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.13
+        },
+        {
+          "ticker": "IFF",
+          "weight": 2.13
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.93
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.92
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 4.15
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.5
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.43
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.39
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.35
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.33
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.32
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.3
+        },
+        {
+          "ticker": "BAX",
+          "weight": 3.29
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.28
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.25
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.13
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.12
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 3.08
+        },
+        {
+          "ticker": "WBD",
+          "weight": 3.06
+        },
+        {
+          "ticker": "T",
+          "weight": 3.05
+        },
+        {
+          "ticker": "SPG",
+          "weight": 3.04
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.02
+        },
+        {
+          "ticker": "ASML",
+          "weight": 2.92
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.91
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.89
+        },
+        {
+          "ticker": "K",
+          "weight": 2.73
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.65
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.57
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.45
+        },
+        {
+          "ticker": "META",
+          "weight": 2.45
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.37
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.31
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.26
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.19
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.18
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.12
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.07
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.05
+        },
+        {
+          "ticker": "JWN",
+          "weight": 1.78
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "SPG",
+          "weight": 3.59
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 3.45
+        },
+        {
+          "ticker": "ASML",
+          "weight": 3.35
+        },
+        {
+          "ticker": "BA",
+          "weight": 3.29
+        },
+        {
+          "ticker": "INTC",
+          "weight": 3.28
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.25
+        },
+        {
+          "ticker": "CVS",
+          "weight": 3.19
+        },
+        {
+          "ticker": "AMZN",
+          "weight": 3.18
+        },
+        {
+          "ticker": "IFF",
+          "weight": 3.17
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.17
+        },
+        {
+          "ticker": "KHC",
+          "weight": 3.09
+        },
+        {
+          "ticker": "GSK",
+          "weight": 3.07
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.04
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.99
+        },
+        {
+          "ticker": "BAX",
+          "weight": 2.97
+        },
+        {
+          "ticker": "T",
+          "weight": 2.88
+        },
+        {
+          "ticker": "BUD",
+          "weight": 2.83
+        },
+        {
+          "ticker": "WBD",
+          "weight": 2.74
+        },
+        {
+          "ticker": "K",
+          "weight": 2.7
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.59
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.54
+        },
+        {
+          "ticker": "LRCX",
+          "weight": 2.52
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.52
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.4
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.38
+        },
+        {
+          "ticker": "META",
+          "weight": 2.31
+        },
+        {
+          "ticker": "EL",
+          "weight": 2.29
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.18
+        },
+        {
+          "ticker": "KMX",
+          "weight": 2.16
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.12
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.11
+        },
+        {
+          "ticker": "TROW",
+          "weight": 1.98
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 1.97
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.95
+        },
+        {
+          "ticker": "PFE",
+          "weight": 1.92
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.9
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.87
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.06
+        }
+      ]
+    },
+    {
       "asOf": "2024-03-31",
       "holdings": [
         {
           "ticker": "TSM",
-          "weight": 5.8
+          "weight": 3.56
         },
         {
           "ticker": "MSFT",
-          "weight": 5.77
+          "weight": 3.55
         },
         {
           "ticker": "WFC",
-          "weight": 5.74
+          "weight": 3.53
         },
         {
           "ticker": "AMZN",
-          "weight": 5.7
+          "weight": 3.5
         },
         {
           "ticker": "KMX",
-          "weight": 5.34
+          "weight": 3.28
         },
         {
           "ticker": "GSK",
-          "weight": 5.34
+          "weight": 3.28
         },
         {
           "ticker": "DD",
-          "weight": 5.32
+          "weight": 3.27
         },
         {
           "ticker": "SPG",
-          "weight": 5.15
+          "weight": 3.17
         },
         {
           "ticker": "IFF",
-          "weight": 5.02
+          "weight": 3.09
         },
         {
           "ticker": "BAX",
-          "weight": 4.99
-        },
-        {
-          "ticker": "K-OLD",
-          "weight": 4.84
+          "weight": 3.06
         },
         {
           "ticker": "CVS",
-          "weight": 4.84
+          "weight": 2.98
+        },
+        {
+          "ticker": "K",
+          "weight": 2.97
         },
         {
           "ticker": "INTC",
-          "weight": 4.82
+          "weight": 2.96
         },
         {
           "ticker": "T",
-          "weight": 4.79
+          "weight": 2.95
         },
         {
           "ticker": "BUD",
-          "weight": 4.66
+          "weight": 2.86
         },
         {
           "ticker": "KHC",
-          "weight": 4.62
+          "weight": 2.85
         },
         {
           "ticker": "BA",
-          "weight": 4.49
+          "weight": 2.76
         },
         {
           "ticker": "CRM",
-          "weight": 4.31
+          "weight": 2.65
         },
         {
-          "ticker": "JWN-OLD",
-          "weight": 4.26
+          "ticker": "JWN",
+          "weight": 2.62
         },
         {
           "ticker": "WBD",
-          "weight": 4.19
+          "weight": 2.58
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.56
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.56
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.53
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.4
+        },
+        {
+          "ticker": "EL",
+          "weight": 2.34
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.24
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.22
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.2
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 2.12
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.11
+        },
+        {
+          "ticker": "CPB",
+          "weight": 2.11
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.11
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.1
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.04
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 2.01
+        },
+        {
+          "ticker": "NKE",
+          "weight": 1.94
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.91
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.04
         }
       ]
     },
@@ -288,83 +2785,159 @@
       "holdings": [
         {
           "ticker": "MSFT",
-          "weight": 6.32
+          "weight": 3.81
         },
         {
           "ticker": "AMZN",
-          "weight": 5.73
+          "weight": 3.45
         },
         {
           "ticker": "IFF",
-          "weight": 5.71
+          "weight": 3.45
         },
         {
           "ticker": "WFC",
-          "weight": 5.71
+          "weight": 3.44
         },
         {
           "ticker": "SPG",
-          "weight": 5.58
+          "weight": 3.36
         },
         {
           "ticker": "DD",
-          "weight": 5.41
+          "weight": 3.26
         },
         {
           "ticker": "T",
-          "weight": 5.22
+          "weight": 3.15
         },
         {
           "ticker": "WBD",
-          "weight": 5.14
+          "weight": 3.1
         },
         {
           "ticker": "KMX",
-          "weight": 5.02
+          "weight": 3.03
         },
         {
           "ticker": "BIIB",
-          "weight": 4.97
+          "weight": 3
         },
         {
-          "ticker": "K-OLD",
-          "weight": 4.93
+          "ticker": "K",
+          "weight": 2.98
         },
         {
           "ticker": "BA",
-          "weight": 4.77
+          "weight": 2.87
         },
         {
           "ticker": "ADBE",
-          "weight": 4.65
+          "weight": 2.8
         },
         {
           "ticker": "KHC",
-          "weight": 4.56
+          "weight": 2.75
         },
         {
           "ticker": "BUD",
-          "weight": 4.55
+          "weight": 2.74
         },
         {
           "ticker": "GSK",
-          "weight": 4.48
+          "weight": 2.7
         },
         {
           "ticker": "BAX",
-          "weight": 4.39
+          "weight": 2.66
         },
         {
           "ticker": "CVS",
-          "weight": 4.38
+          "weight": 2.64
         },
         {
           "ticker": "EL",
-          "weight": 4.36
+          "weight": 2.63
         },
         {
           "ticker": "INTC",
-          "weight": 4.14
+          "weight": 2.5
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.42
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.4
+        },
+        {
+          "ticker": "CPB",
+          "weight": 2.34
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.34
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.33
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.33
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.33
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.21
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.18
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.13
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.11
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 2.1
+        },
+        {
+          "ticker": "WU",
+          "weight": 2.01
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.96
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.95
+        },
+        {
+          "ticker": "ZBH",
+          "weight": 1.81
+        },
+        {
+          "ticker": "NKE",
+          "weight": 1.71
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.03
         }
       ]
     },
@@ -373,83 +2946,155 @@
       "holdings": [
         {
           "ticker": "IFF",
-          "weight": 6.0
+          "weight": 3.7
         },
         {
           "ticker": "MSFT",
-          "weight": 5.8
+          "weight": 3.58
         },
         {
           "ticker": "T",
-          "weight": 5.79
+          "weight": 3.56
         },
         {
           "ticker": "DD",
-          "weight": 5.75
+          "weight": 3.54
         },
         {
           "ticker": "SPG",
-          "weight": 5.45
+          "weight": 3.36
         },
         {
           "ticker": "WBD",
-          "weight": 5.34
+          "weight": 3.29
         },
         {
           "ticker": "AMZN",
-          "weight": 5.29
+          "weight": 3.26
         },
         {
           "ticker": "WFC",
-          "weight": 5.19
+          "weight": 3.2
         },
         {
           "ticker": "KMX",
-          "weight": 5.09
+          "weight": 3.13
         },
         {
           "ticker": "BUD",
-          "weight": 4.99
+          "weight": 3.08
         },
         {
           "ticker": "ZBH",
-          "weight": 4.97
+          "weight": 3.06
         },
         {
           "ticker": "BAX",
-          "weight": 4.82
+          "weight": 2.97
         },
         {
           "ticker": "KHC",
-          "weight": 4.8
+          "weight": 2.96
         },
         {
           "ticker": "BMY",
-          "weight": 4.74
+          "weight": 2.92
         },
         {
           "ticker": "EL",
-          "weight": 4.66
+          "weight": 2.86
         },
         {
           "ticker": "GSK",
-          "weight": 4.59
+          "weight": 2.83
         },
         {
           "ticker": "CVS",
-          "weight": 4.36
+          "weight": 2.68
         },
         {
           "ticker": "USB",
-          "weight": 4.24
+          "weight": 2.61
         },
         {
           "ticker": "BA",
-          "weight": 4.12
+          "weight": 2.54
         },
         {
           "ticker": "CPB",
-          "weight": 4.02
+          "weight": 2.47
+        },
+        {
+          "ticker": "NKE",
+          "weight": 2.47
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 2.4
+        },
+        {
+          "ticker": "PFE",
+          "weight": 2.35
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.3
+        },
+        {
+          "ticker": "JWN",
+          "weight": 2.28
+        },
+        {
+          "ticker": "NUE",
+          "weight": 2.27
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.27
+        },
+        {
+          "ticker": "EMR",
+          "weight": 2.26
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.23
+        },
+        {
+          "ticker": "INTC",
+          "weight": 2.22
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 2.19
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.13
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 2.08
+        },
+        {
+          "ticker": "CRM",
+          "weight": 2.04
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.01
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.91
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.8
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.22
         }
       ]
     },
@@ -458,83 +3103,193 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 6.35
+          "weight": 4.08,
+          "shares": 48661
         },
         {
           "ticker": "T",
-          "weight": 6.09
+          "weight": 3.92,
+          "shares": 450176
         },
         {
           "ticker": "BA",
-          "weight": 6.01
+          "weight": 3.86,
+          "shares": 57098
         },
         {
           "ticker": "WBD",
-          "weight": 5.81
+          "weight": 3.73,
+          "shares": 922574
         },
         {
           "ticker": "KMX",
-          "weight": 5.53
+          "weight": 3.56,
+          "shares": 113869
         },
         {
           "ticker": "MSFT",
-          "weight": 5.39
+          "weight": 3.46,
+          "shares": 21487
         },
         {
           "ticker": "ASML",
-          "weight": 5.24
+          "weight": 3.37,
+          "shares": 12718
         },
         {
           "ticker": "NKE",
-          "weight": 5.1
+          "weight": 3.28,
+          "shares": 113255
         },
         {
           "ticker": "DD",
-          "weight": 5.08
+          "weight": 3.26,
+          "shares": 111900
         },
         {
           "ticker": "PFE",
-          "weight": 5.05
+          "weight": 3.24,
+          "shares": 319969
         },
         {
           "ticker": "ZBH",
-          "weight": 4.96
+          "weight": 3.19,
+          "shares": 78939
         },
         {
           "ticker": "IFF",
-          "weight": 4.96
+          "weight": 3.18,
+          "shares": 98540
         },
         {
           "ticker": "EL",
-          "weight": 4.67
+          "weight": 3,
+          "shares": 104638
         },
         {
           "ticker": "GSK",
-          "weight": 4.65
+          "weight": 2.99,
+          "shares": 231151
         },
         {
           "ticker": "KHC",
-          "weight": 4.52
+          "weight": 2.9,
+          "shares": 247316
         },
         {
           "ticker": "DIS",
-          "weight": 4.51
+          "weight": 2.9,
+          "shares": 68065
         },
         {
           "ticker": "CRM",
-          "weight": 4.2
+          "weight": 2.7,
+          "shares": 21157
         },
         {
           "ticker": "GOOGL",
-          "weight": 4.07
+          "weight": 2.61,
+          "shares": 36104
         },
         {
           "ticker": "BIIB",
-          "weight": 3.91
+          "weight": 2.52,
+          "shares": 43066
         },
         {
           "ticker": "DEO",
-          "weight": 3.88
+          "weight": 2.5,
+          "shares": 51395
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.48,
+          "shares": 114671
+        },
+        {
+          "ticker": "BUD",
+          "weight": 2.3,
+          "shares": 120423
+        },
+        {
+          "ticker": "BAX",
+          "weight": 2.27,
+          "shares": 204071
+        },
+        {
+          "ticker": "TROW",
+          "weight": 2.26,
+          "shares": 52391
+        },
+        {
+          "ticker": "CPB",
+          "weight": 2.26,
+          "shares": 141340
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.16,
+          "shares": 118317
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.15,
+          "shares": 140965
+        },
+        {
+          "ticker": "BDX",
+          "weight": 2.14,
+          "shares": 24704
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 2.14,
+          "shares": 148923
+        },
+        {
+          "ticker": "BF.B",
+          "weight": 2.12,
+          "shares": 146173
+        },
+        {
+          "ticker": "CVS",
+          "weight": 2.05,
+          "shares": 119636
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.03,
+          "shares": 191415
+        },
+        {
+          "ticker": "NUE",
+          "weight": 1.88,
+          "shares": 42140
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.82,
+          "shares": 450149
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.74,
+          "shares": 10240
+        },
+        {
+          "ticker": "INTC",
+          "weight": 1.4,
+          "shares": 183000
+        },
+        {
+          "ticker": "SPY",
+          "weight": 1.4,
+          "shares": 6236
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.11,
+          "shares": 11413
         }
       ]
     },
@@ -543,83 +3298,198 @@
       "holdings": [
         {
           "ticker": "T",
-          "weight": 5.93
+          "weight": 3.78,
+          "shares": 263773
         },
         {
           "ticker": "WBD",
-          "weight": 5.61
+          "weight": 3.57,
+          "shares": 658034
         },
         {
           "ticker": "CVS",
-          "weight": 5.41
+          "weight": 3.45,
+          "shares": 100450
         },
         {
           "ticker": "ZBH",
-          "weight": 5.27
+          "weight": 3.36,
+          "shares": 58557
         },
         {
           "ticker": "KMX",
-          "weight": 5.2
+          "weight": 3.32,
+          "shares": 84101
         },
         {
           "ticker": "BF.B",
-          "weight": 5.14
+          "weight": 3.27,
+          "shares": 190279
         },
         {
           "ticker": "BA",
-          "weight": 5.09
-        },
-        {
-          "ticker": "BUD",
-          "weight": 5.09
+          "weight": 3.24,
+          "shares": 37538
         },
         {
           "ticker": "GSK",
-          "weight": 5.09
+          "weight": 3.24,
+          "shares": 165143
+        },
+        {
+          "ticker": "BUD",
+          "weight": 3.24,
+          "shares": 103850
         },
         {
           "ticker": "EL",
-          "weight": 4.99
-        },
-        {
-          "ticker": "DD",
-          "weight": 4.98
+          "weight": 3.18,
+          "shares": 95274
         },
         {
           "ticker": "IFF",
-          "weight": 4.98
+          "weight": 3.17,
+          "shares": 80773
+        },
+        {
+          "ticker": "DD",
+          "weight": 3.17,
+          "shares": 83743
         },
         {
           "ticker": "KHC",
-          "weight": 4.96
+          "weight": 3.16,
+          "shares": 204998
         },
         {
           "ticker": "BAX",
-          "weight": 4.96
+          "weight": 3.15,
+          "shares": 182012
         },
         {
           "ticker": "ASML",
-          "weight": 4.88
+          "weight": 3.11,
+          "shares": 9277
         },
         {
           "ticker": "PFE",
-          "weight": 4.86
+          "weight": 3.1,
+          "shares": 241581
         },
         {
           "ticker": "MSFT",
-          "weight": 4.81
+          "weight": 3.07,
+          "shares": 16145
         },
         {
           "ticker": "BIIB",
-          "weight": 4.78
+          "weight": 3.05,
+          "shares": 44025
         },
         {
           "ticker": "NKE",
-          "weight": 4.68
+          "weight": 2.99,
+          "shares": 93011
         },
         {
           "ticker": "CPB",
-          "weight": 3.3
+          "weight": 2.1,
+          "shares": 103772
+        },
+        {
+          "ticker": "VZ",
+          "weight": 2.09,
+          "shares": 90959
+        },
+        {
+          "ticker": "STZ",
+          "weight": 2.04,
+          "shares": 21968
+        },
+        {
+          "ticker": "CAG",
+          "weight": 2.04,
+          "shares": 151149
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 2.03,
+          "shares": 108575
+        },
+        {
+          "ticker": "DIS",
+          "weight": 2.01,
+          "shares": 40310
+        },
+        {
+          "ticker": "BMY",
+          "weight": 2.01,
+          "shares": 65019
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.98,
+          "shares": 92723
+        },
+        {
+          "ticker": "WU",
+          "weight": 1.98,
+          "shares": 369190
+        },
+        {
+          "ticker": "BDX",
+          "weight": 1.97,
+          "shares": 17023
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.97,
+          "shares": 37199
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.95,
+          "shares": 14333
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.92,
+          "shares": 9905
+        },
+        {
+          "ticker": "TROW",
+          "weight": 1.9,
+          "shares": 40921
+        },
+        {
+          "ticker": "HSY",
+          "weight": 1.89,
+          "shares": 21808
+        },
+        {
+          "ticker": "MCHP",
+          "weight": 1.87,
+          "shares": 76353
+        },
+        {
+          "ticker": "NUE",
+          "weight": 1.87,
+          "shares": 30665
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.75,
+          "shares": 22308
+        },
+        {
+          "ticker": "AMD",
+          "weight": 1.66,
+          "shares": 31987
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.35,
+          "shares": 10989
         }
       ]
     },
@@ -627,84 +3497,204 @@
       "asOf": "2025-06-30",
       "holdings": [
         {
-          "ticker": "WBD",
-          "weight": 5.88
+          "ticker": "T",
+          "weight": 3.8,
+          "shares": 235864
         },
         {
-          "ticker": "T",
-          "weight": 5.88
+          "ticker": "WBD",
+          "weight": 3.8,
+          "shares": 595547
         },
         {
           "ticker": "BA",
-          "weight": 5.7
+          "weight": 3.68,
+          "shares": 31577
         },
         {
           "ticker": "EL",
-          "weight": 5.69
+          "weight": 3.67,
+          "shares": 81599
         },
         {
           "ticker": "MSFT",
-          "weight": 5.61
+          "weight": 3.62,
+          "shares": 13095
         },
         {
           "ticker": "NKE",
-          "weight": 5.56
+          "weight": 3.59,
+          "shares": 90843
         },
         {
           "ticker": "CVS",
-          "weight": 5.53
+          "weight": 3.57,
+          "shares": 92997
         },
         {
           "ticker": "ASML",
-          "weight": 5.32
+          "weight": 3.44,
+          "shares": 7716
         },
         {
           "ticker": "BUD",
-          "weight": 5.17
+          "weight": 3.33,
+          "shares": 87093
         },
         {
           "ticker": "GSK",
-          "weight": 5.05
+          "weight": 3.26,
+          "shares": 152599
         },
         {
           "ticker": "PFE",
-          "weight": 4.9
+          "weight": 3.16,
+          "shares": 234628
         },
         {
           "ticker": "DD",
-          "weight": 4.86
+          "weight": 3.14,
+          "shares": 82222
         },
         {
           "ticker": "IFF",
-          "weight": 4.74
+          "weight": 3.06,
+          "shares": 74680
         },
         {
           "ticker": "KHC",
-          "weight": 4.66
+          "weight": 3.01,
+          "shares": 209731
         },
         {
           "ticker": "BAX",
-          "weight": 4.66
+          "weight": 3.01,
+          "shares": 178429
         },
         {
           "ticker": "KMX",
-          "weight": 4.61
+          "weight": 2.98,
+          "shares": 79610
         },
         {
           "ticker": "BIIB",
-          "weight": 4.55
+          "weight": 2.93,
+          "shares": 41972
         },
         {
           "ticker": "ZBH",
-          "weight": 4.38
+          "weight": 2.82,
+          "shares": 55598
         },
         {
           "ticker": "BF.B",
-          "weight": 4.08
+          "weight": 2.63,
+          "shares": 175788
         },
         {
           "ticker": "TROW",
-          "weight": 3.19
+          "weight": 2.06,
+          "shares": 38294
+        },
+        {
+          "ticker": "TSM",
+          "weight": 2.03,
+          "shares": 16099
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.98,
+          "shares": 28762
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 1.97,
+          "shares": 99263
+        },
+        {
+          "ticker": "MCHP",
+          "weight": 1.94,
+          "shares": 49536
+        },
+        {
+          "ticker": "NUE",
+          "weight": 1.93,
+          "shares": 26829
+        },
+        {
+          "ticker": "VZ",
+          "weight": 1.91,
+          "shares": 79527
+        },
+        {
+          "ticker": "AMD",
+          "weight": 1.91,
+          "shares": 24163
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.89,
+          "shares": 75220
+        },
+        {
+          "ticker": "BMY",
+          "weight": 1.85,
+          "shares": 71815
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.84,
+          "shares": 12148
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.79,
+          "shares": 8328
+        },
+        {
+          "ticker": "HSY",
+          "weight": 1.72,
+          "shares": 18608
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.69,
+          "shares": 17208
+        },
+        {
+          "ticker": "STZ",
+          "weight": 1.66,
+          "shares": 18310
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.65,
+          "shares": 29355
+        },
+        {
+          "ticker": "BDX",
+          "weight": 1.61,
+          "shares": 16823
+        },
+        {
+          "ticker": "CPB",
+          "weight": 1.61,
+          "shares": 94210
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.6,
+          "shares": 140744
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.6,
+          "shares": 11079
+        },
+        {
+          "ticker": "EFA",
+          "weight": 1.27,
+          "shares": 25585
         }
       ]
     },
@@ -713,83 +3703,203 @@
       "holdings": [
         {
           "ticker": "ASML",
-          "weight": 5.98
+          "weight": 3.92,
+          "shares": 6768
         },
         {
           "ticker": "WBD",
-          "weight": 5.9
+          "weight": 3.87,
+          "shares": 330727
         },
         {
           "ticker": "EL",
-          "weight": 5.68
+          "weight": 3.73,
+          "shares": 70688
         },
         {
           "ticker": "CVS",
-          "weight": 5.66
+          "weight": 3.72,
+          "shares": 82359
         },
         {
           "ticker": "BA",
-          "weight": 5.62
+          "weight": 3.68,
+          "shares": 28492
         },
         {
           "ticker": "GSK",
-          "weight": 5.59
+          "weight": 3.66,
+          "shares": 141779
         },
         {
           "ticker": "MSFT",
-          "weight": 5.43
+          "weight": 3.55,
+          "shares": 11470
         },
         {
           "ticker": "DD",
-          "weight": 5.07
+          "weight": 3.32,
+          "shares": 71174
         },
         {
           "ticker": "PFE",
-          "weight": 5.04
+          "weight": 3.3,
+          "shares": 216552
         },
         {
           "ticker": "KHC",
-          "weight": 5.02
+          "weight": 3.29,
+          "shares": 211151
         },
         {
           "ticker": "CPB",
-          "weight": 4.99
+          "weight": 3.27,
+          "shares": 173034
         },
         {
           "ticker": "BUD",
-          "weight": 4.94
-        },
-        {
-          "ticker": "BIIB",
-          "weight": 4.91
+          "weight": 3.24,
+          "shares": 90738
         },
         {
           "ticker": "BAX",
-          "weight": 4.91
+          "weight": 3.22,
+          "shares": 236603
+        },
+        {
+          "ticker": "BIIB",
+          "weight": 3.21,
+          "shares": 38354
         },
         {
           "ticker": "ZBH",
-          "weight": 4.75
+          "weight": 3.11,
+          "shares": 52815
         },
         {
           "ticker": "NKE",
-          "weight": 4.72
+          "weight": 3.09,
+          "shares": 74155
         },
         {
           "ticker": "BF.B",
-          "weight": 4.66
+          "weight": 3.05,
+          "shares": 188254
         },
         {
           "ticker": "IFF",
-          "weight": 4.46
+          "weight": 2.92,
+          "shares": 79264
         },
         {
           "ticker": "KMX",
-          "weight": 3.75
+          "weight": 2.46,
+          "shares": 91489
         },
         {
           "ticker": "VZ",
-          "weight": 2.92
+          "weight": 1.91,
+          "shares": 72697
+        },
+        {
+          "ticker": "BDX",
+          "weight": 1.88,
+          "shares": 16814
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.88,
+          "shares": 27452
+        },
+        {
+          "ticker": "BMY",
+          "weight": 1.87,
+          "shares": 69440
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.87,
+          "shares": 11175
+        },
+        {
+          "ticker": "TROW",
+          "weight": 1.82,
+          "shares": 29708
+        },
+        {
+          "ticker": "NUE",
+          "weight": 1.82,
+          "shares": 22486
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.8,
+          "shares": 62293
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.78,
+          "shares": 8443
+        },
+        {
+          "ticker": "FISV",
+          "weight": 1.77,
+          "shares": 22900
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.75,
+          "shares": 12371
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 1.75,
+          "shares": 92994
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.7,
+          "shares": 29842
+        },
+        {
+          "ticker": "UNH",
+          "weight": 1.69,
+          "shares": 8181
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.68,
+          "shares": 10925
+        },
+        {
+          "ticker": "HSY",
+          "weight": 1.65,
+          "shares": 14708
+        },
+        {
+          "ticker": "WST",
+          "weight": 1.61,
+          "shares": 10273
+        },
+        {
+          "ticker": "UPS",
+          "weight": 1.59,
+          "shares": 31884
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.59,
+          "shares": 144696
+        },
+        {
+          "ticker": "STZ",
+          "weight": 1.52,
+          "shares": 18803
+        },
+        {
+          "ticker": "EFA",
+          "weight": 1.44,
+          "shares": 25824
         }
       ]
     },
@@ -798,92 +3908,218 @@
       "holdings": [
         {
           "ticker": "WBD",
-          "weight": 6.27
+          "weight": 4.03,
+          "shares": 214600
         },
         {
           "ticker": "ASML",
-          "weight": 5.98
+          "weight": 3.84,
+          "shares": 5510
         },
         {
           "ticker": "EL",
-          "weight": 5.81
+          "weight": 3.74,
+          "shares": 54803
         },
         {
           "ticker": "CVS",
-          "weight": 5.77
+          "weight": 3.7,
+          "shares": 71685
         },
         {
           "ticker": "GSK",
-          "weight": 5.69
+          "weight": 3.65,
+          "shares": 114336
         },
         {
           "ticker": "BA",
-          "weight": 5.59
+          "weight": 3.59,
+          "shares": 25427
         },
         {
           "ticker": "BIIB",
-          "weight": 5.44
+          "weight": 3.5,
+          "shares": 30516
         },
         {
           "ticker": "DD",
-          "weight": 5.43
+          "weight": 3.49,
+          "shares": 133248
         },
         {
           "ticker": "BUD",
-          "weight": 5.36
+          "weight": 3.44,
+          "shares": 82631
         },
         {
           "ticker": "IFF",
-          "weight": 5.19
+          "weight": 3.33,
+          "shares": 76031
         },
         {
           "ticker": "MSFT",
-          "weight": 5.19
+          "weight": 3.33,
+          "shares": 10585
         },
         {
           "ticker": "SPY",
-          "weight": 4.61
+          "weight": 2.96,
+          "shares": 6676
         },
         {
           "ticker": "PFE",
-          "weight": 4.43
+          "weight": 2.84,
+          "shares": 175304
         },
         {
           "ticker": "NKE",
-          "weight": 4.4
-        },
-        {
-          "ticker": "KHC",
-          "weight": 4.35
+          "weight": 2.83,
+          "shares": 68140
         },
         {
           "ticker": "KMX",
-          "weight": 4.35
+          "weight": 2.79,
+          "shares": 111088
+        },
+        {
+          "ticker": "KHC",
+          "weight": 2.79,
+          "shares": 176807
         },
         {
           "ticker": "ZBH",
-          "weight": 4.19
+          "weight": 2.69,
+          "shares": 45969
         },
         {
           "ticker": "BAX",
-          "weight": 4.09
+          "weight": 2.63,
+          "shares": 211541
         },
         {
           "ticker": "CPB",
-          "weight": 3.98
+          "weight": 2.55,
+          "shares": 140684
         },
         {
           "ticker": "BF.B",
-          "weight": 3.91
+          "weight": 2.51,
+          "shares": 148052
+        },
+        {
+          "ticker": "BMY",
+          "weight": 1.89,
+          "shares": 53966
+        },
+        {
+          "ticker": "TSM",
+          "weight": 1.87,
+          "shares": 9444
+        },
+        {
+          "ticker": "USB",
+          "weight": 1.85,
+          "shares": 53293
+        },
+        {
+          "ticker": "AKAM",
+          "weight": 1.82,
+          "shares": 31999
+        },
+        {
+          "ticker": "DIS",
+          "weight": 1.82,
+          "shares": 24539
+        },
+        {
+          "ticker": "BDX",
+          "weight": 1.8,
+          "shares": 14230
+        },
+        {
+          "ticker": "CRM",
+          "weight": 1.79,
+          "shares": 10397
+        },
+        {
+          "ticker": "EFA",
+          "weight": 1.78,
+          "shares": 28562
+        },
+        {
+          "ticker": "CMCSA",
+          "weight": 1.77,
+          "shares": 90861
+        },
+        {
+          "ticker": "VZ",
+          "weight": 1.73,
+          "shares": 65177
+        },
+        {
+          "ticker": "TROW",
+          "weight": 1.71,
+          "shares": 25695
+        },
+        {
+          "ticker": "FISV",
+          "weight": 1.68,
+          "shares": 38376
+        },
+        {
+          "ticker": "ADBE",
+          "weight": 1.66,
+          "shares": 7269
+        },
+        {
+          "ticker": "UNH",
+          "weight": 1.65,
+          "shares": 7681
+        },
+        {
+          "ticker": "STZ",
+          "weight": 1.62,
+          "shares": 18020
+        },
+        {
+          "ticker": "WST",
+          "weight": 1.59,
+          "shares": 8906
+        },
+        {
+          "ticker": "UPS",
+          "weight": 1.59,
+          "shares": 24616
+        },
+        {
+          "ticker": "HSY",
+          "weight": 1.58,
+          "shares": 13308
+        },
+        {
+          "ticker": "CAG",
+          "weight": 1.57,
+          "shares": 138945
+        },
+        {
+          "ticker": "EFX",
+          "weight": 1.56,
+          "shares": 11079
+        },
+        {
+          "ticker": "DEO",
+          "weight": 1.44,
+          "shares": 25705
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:35:45Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=HCM",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:18:26Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001314620-hillman-capital-management-inc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

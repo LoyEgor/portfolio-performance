@@ -28,7 +28,7 @@
     },
     {
       "ticker": "PTLO",
-      "weight": 6.0,
+      "weight": 6,
       "shares": 3442990
     },
     {
@@ -38,32 +38,904 @@
     },
     {
       "ticker": "BRCC",
-      "weight": 3.57,
+      "weight": 3.56,
       "shares": 13935560
     }
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "OUTR",
+          "weight": 31.32
+        },
+        {
+          "ticker": "BHE",
+          "weight": 19.49
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 16.07
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 7.88
+        },
+        {
+          "ticker": "MED",
+          "weight": 7.75
+        },
+        {
+          "ticker": "MX",
+          "weight": 7.3
+        },
+        {
+          "ticker": "TRS",
+          "weight": 4.14
+        },
+        {
+          "ticker": "IWM",
+          "weight": 2.19
+        },
+        {
+          "ticker": "BDSI",
+          "weight": 2.11
+        },
+        {
+          "ticker": "LBYYQ",
+          "weight": 1.75
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "OUTR",
+          "weight": 36.1
+        },
+        {
+          "ticker": "BHE",
+          "weight": 18.16
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 13.55
+        },
+        {
+          "ticker": "MED",
+          "weight": 8.67
+        },
+        {
+          "ticker": "MX",
+          "weight": 7.71
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 6.66
+        },
+        {
+          "ticker": "TRS",
+          "weight": 4.32
+        },
+        {
+          "ticker": "LBYYQ",
+          "weight": 1.65
+        },
+        {
+          "ticker": "IWM",
+          "weight": 1.61
+        },
+        {
+          "ticker": "BDSI",
+          "weight": 1.57
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "BHE",
+          "weight": 22.38
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 17.63
+        },
+        {
+          "ticker": "STKL",
+          "weight": 16.76
+        },
+        {
+          "ticker": "MX",
+          "weight": 11.87
+        },
+        {
+          "ticker": "MED",
+          "weight": 10.29
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 8.39
+        },
+        {
+          "ticker": "SCOR",
+          "weight": 2.62
+        },
+        {
+          "ticker": "TRS",
+          "weight": 2.41
+        },
+        {
+          "ticker": "IWM",
+          "weight": 2.32
+        },
+        {
+          "ticker": "BDSI",
+          "weight": 1.87
+        },
+        {
+          "ticker": "RI",
+          "weight": 1.87
+        },
+        {
+          "ticker": "LBYYQ",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "BHE",
+          "weight": 24.57
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 17.51
+        },
+        {
+          "ticker": "STKL",
+          "weight": 15.24
+        },
+        {
+          "ticker": "MED",
+          "weight": 10.67
+        },
+        {
+          "ticker": "RCII",
+          "weight": 8.59
+        },
+        {
+          "ticker": "MX",
+          "weight": 7.93
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 7.57
+        },
+        {
+          "ticker": "TRS",
+          "weight": 2.35
+        },
+        {
+          "ticker": "RI",
+          "weight": 2.17
+        },
+        {
+          "ticker": "PRXL",
+          "weight": 2.01
+        },
+        {
+          "ticker": "IWM",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "RCII",
+          "weight": 25.37
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 15.07
+        },
+        {
+          "ticker": "STKL",
+          "weight": 14.95
+        },
+        {
+          "ticker": "MED",
+          "weight": 11.15
+        },
+        {
+          "ticker": "MX",
+          "weight": 9.81
+        },
+        {
+          "ticker": "BHE",
+          "weight": 8.96
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 7.77
+        },
+        {
+          "ticker": "NATI",
+          "weight": 2.17
+        },
+        {
+          "ticker": "RI",
+          "weight": 1.81
+        },
+        {
+          "ticker": "TRS",
+          "weight": 1.79
+        },
+        {
+          "ticker": "AJRD",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 48.73
+        },
+        {
+          "ticker": "RCII",
+          "weight": 16.43
+        },
+        {
+          "ticker": "STKL",
+          "weight": 10.76
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 7.35
+        },
+        {
+          "ticker": "MED",
+          "weight": 5.11
+        },
+        {
+          "ticker": "BHE",
+          "weight": 4.65
+        },
+        {
+          "ticker": "MX",
+          "weight": 3.53
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 3.45
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 55.41
+        },
+        {
+          "ticker": "RCII",
+          "weight": 13.41
+        },
+        {
+          "ticker": "STKL",
+          "weight": 7.64
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 6.52
+        },
+        {
+          "ticker": "MED",
+          "weight": 6.1
+        },
+        {
+          "ticker": "BHE",
+          "weight": 3.42
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 3.18
+        },
+        {
+          "ticker": "MX",
+          "weight": 2.19
+        },
+        {
+          "ticker": "BSFT",
+          "weight": 1.07
+        },
+        {
+          "ticker": "THC",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 58.03
+        },
+        {
+          "ticker": "RCII",
+          "weight": 13.18
+        },
+        {
+          "ticker": "STKL",
+          "weight": 6.92
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 5.21
+        },
+        {
+          "ticker": "BHE",
+          "weight": 3.66
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 3.02
+        },
+        {
+          "ticker": "CLS",
+          "weight": 2.52
+        },
+        {
+          "ticker": "MED",
+          "weight": 2.44
+        },
+        {
+          "ticker": "MX",
+          "weight": 1.95
+        },
+        {
+          "ticker": "NCR",
+          "weight": 1.58
+        },
+        {
+          "ticker": "BW",
+          "weight": 1.48
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 52.23
+        },
+        {
+          "ticker": "RCII",
+          "weight": 10.74
+        },
+        {
+          "ticker": "STKL",
+          "weight": 6.64
+        },
+        {
+          "ticker": "APOG",
+          "weight": 6
+        },
+        {
+          "ticker": "FNSR",
+          "weight": 5.56
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 4.74
+        },
+        {
+          "ticker": "BHE",
+          "weight": 4.52
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 3.37
+        },
+        {
+          "ticker": "CLS",
+          "weight": 2.37
+        },
+        {
+          "ticker": "MX",
+          "weight": 1.57
+        },
+        {
+          "ticker": "PETX",
+          "weight": 1.22
+        },
+        {
+          "ticker": "NCR",
+          "weight": 1.05
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 45.14
+        },
+        {
+          "ticker": "RCII",
+          "weight": 17.03
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.25
+        },
+        {
+          "ticker": "STKL",
+          "weight": 7.42
+        },
+        {
+          "ticker": "BHE",
+          "weight": 5.13
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 4.37
+        },
+        {
+          "ticker": "JMBA",
+          "weight": 3.89
+        },
+        {
+          "ticker": "CLS",
+          "weight": 2.53
+        },
+        {
+          "ticker": "BW",
+          "weight": 1.48
+        },
+        {
+          "ticker": "NCR",
+          "weight": 1.37
+        },
+        {
+          "ticker": "PETX",
+          "weight": 1.31
+        },
+        {
+          "ticker": "UEIC",
+          "weight": 1.07
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 46.63
+        },
+        {
+          "ticker": "RCII",
+          "weight": 9.53
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.01
+        },
+        {
+          "ticker": "BHE",
+          "weight": 7.76
+        },
+        {
+          "ticker": "STKL",
+          "weight": 7.37
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 4.6
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.48
+        },
+        {
+          "ticker": "PETX",
+          "weight": 3.47
+        },
+        {
+          "ticker": "ANIK",
+          "weight": 2.39
+        },
+        {
+          "ticker": "CLS",
+          "weight": 2.29
+        },
+        {
+          "ticker": "GRPN",
+          "weight": 1.39
+        },
+        {
+          "ticker": "UEIC",
+          "weight": 1.1
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 35.46
+        },
+        {
+          "ticker": "RCII",
+          "weight": 16.42
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.59
+        },
+        {
+          "ticker": "BHE",
+          "weight": 9.01
+        },
+        {
+          "ticker": "STKL",
+          "weight": 5.05
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.72
+        },
+        {
+          "ticker": "DFRG",
+          "weight": 4.52
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 4.52
+        },
+        {
+          "ticker": "PETX",
+          "weight": 4.06
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 2.77
+        },
+        {
+          "ticker": "ANIK",
+          "weight": 2.4
+        },
+        {
+          "ticker": "GRPN",
+          "weight": 1.49
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 55.56
+        },
+        {
+          "ticker": "RCII",
+          "weight": 15.86
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.03
+        },
+        {
+          "ticker": "STKL",
+          "weight": 4.31
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.19
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 3.35
+        },
+        {
+          "ticker": "DFRG",
+          "weight": 3.04
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 2.14
+        },
+        {
+          "ticker": "BHE",
+          "weight": 1.29
+        },
+        {
+          "ticker": "PETX",
+          "weight": 1.24
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 56.8
+        },
+        {
+          "ticker": "RCII",
+          "weight": 17.49
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.03
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.12
+        },
+        {
+          "ticker": "STKL",
+          "weight": 3.54
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 3.47
+        },
+        {
+          "ticker": "DFRG",
+          "weight": 3.26
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 2.29
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 62.43
+        },
+        {
+          "ticker": "RCII",
+          "weight": 18.98
+        },
+        {
+          "ticker": "APOG",
+          "weight": 9.09
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.69
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 2.65
+        },
+        {
+          "ticker": "STKL",
+          "weight": 2.17
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 57.65
+        },
+        {
+          "ticker": "RCII",
+          "weight": 16.22
+        },
+        {
+          "ticker": "MED",
+          "weight": 13.4
+        },
+        {
+          "ticker": "APOG",
+          "weight": 5.31
+        },
+        {
+          "ticker": "NCR",
+          "weight": 2.87
+        },
+        {
+          "ticker": "STKL",
+          "weight": 2.3
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 2.26
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 72.01
+        },
+        {
+          "ticker": "RCII",
+          "weight": 9.93
+        },
+        {
+          "ticker": "MED",
+          "weight": 9.55
+        },
+        {
+          "ticker": "APOG",
+          "weight": 2.7
+        },
+        {
+          "ticker": "TIVO",
+          "weight": 2.35
+        },
+        {
+          "ticker": "STKL",
+          "weight": 1.98
+        },
+        {
+          "ticker": "NCR",
+          "weight": 1.49
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 55.15
+        },
+        {
+          "ticker": "MED",
+          "weight": 17.62
+        },
+        {
+          "ticker": "RCII",
+          "weight": 16.23
+        },
+        {
+          "ticker": "STKL",
+          "weight": 5
+        },
+        {
+          "ticker": "JACK",
+          "weight": 2.86
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 1.57
+        },
+        {
+          "ticker": "NCR",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 57.13
+        },
+        {
+          "ticker": "EVH",
+          "weight": 11.05
+        },
+        {
+          "ticker": "RCII",
+          "weight": 9.08
+        },
+        {
+          "ticker": "STKL",
+          "weight": 7.59
+        },
+        {
+          "ticker": "NCR",
+          "weight": 4.81
+        },
+        {
+          "ticker": "MED",
+          "weight": 4.58
+        },
+        {
+          "ticker": "JACK",
+          "weight": 2.92
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 1.55
+        },
+        {
+          "ticker": "MX",
+          "weight": 1.3
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "HAIN",
+          "weight": 53.4
+        },
+        {
+          "ticker": "EVH",
+          "weight": 11.4
+        },
+        {
+          "ticker": "STKL",
+          "weight": 9.54
+        },
+        {
+          "ticker": "RCII",
+          "weight": 9.29
+        },
+        {
+          "ticker": "NCR",
+          "weight": 6.67
+        },
+        {
+          "ticker": "GIL",
+          "weight": 3.58
+        },
+        {
+          "ticker": "QUOT",
+          "weight": 3.33
+        },
+        {
+          "ticker": "MGLN",
+          "weight": 2.79
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "HAIN",
-          "weight": 50.47
+          "weight": 50.46
         },
         {
           "ticker": "EVH",
           "weight": 12.5
         },
         {
-          "ticker": "UPBD",
-          "weight": 12.17
+          "ticker": "RCII",
+          "weight": 12.18
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 10.5
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 6.47
         },
         {
@@ -71,7 +943,7 @@
           "weight": 3.41
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 2.25
         },
         {
@@ -85,35 +957,35 @@
       "holdings": [
         {
           "ticker": "HAIN",
-          "weight": 50.03
+          "weight": 50.02
         },
         {
           "ticker": "EVH",
           "weight": 14.08
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 9.74
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 9.38
         },
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 6.14
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 4.83
         },
         {
           "ticker": "GIL",
-          "weight": 4.43
+          "weight": 4.42
         },
         {
-          "ticker": "QUOT-OLD",
-          "weight": 1.39
+          "ticker": "QUOT",
+          "weight": 1.38
         }
       ]
     },
@@ -122,26 +994,26 @@
       "holdings": [
         {
           "ticker": "HAIN",
-          "weight": 49.38
+          "weight": 49.39
         },
         {
           "ticker": "EVH",
           "weight": 17.66
         },
         {
-          "ticker": "UPBD",
-          "weight": 9.55
+          "ticker": "RCII",
+          "weight": 9.56
         },
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 8.29
         },
         {
-          "ticker": "STKL-OLD",
-          "weight": 6.34
+          "ticker": "STKL",
+          "weight": 6.33
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 4.73
         },
         {
@@ -158,15 +1030,15 @@
           "weight": 26.76
         },
         {
-          "ticker": "NEWR-OLD",
-          "weight": 21.68
+          "ticker": "NEWR",
+          "weight": 21.67
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 13.98
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 11.93
         },
         {
@@ -174,15 +1046,15 @@
           "weight": 9.83
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 8.44
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 5.6
         },
         {
-          "ticker": "BRCC",
+          "ticker": "SBEA",
           "weight": 1.8
         }
       ]
@@ -199,15 +1071,15 @@
           "weight": 23.37
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 18.12
         },
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 6.77
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 6.01
         },
         {
@@ -215,11 +1087,11 @@
           "weight": 4.29
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 3.95
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 3.63
         }
       ]
@@ -232,11 +1104,11 @@
           "weight": 29.02
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 21.27
         },
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 18.68
         },
         {
@@ -244,15 +1116,15 @@
           "weight": 13.94
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 7.28
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 7.03
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 2.78
         }
       ]
@@ -261,7 +1133,7 @@
       "asOf": "2022-09-30",
       "holdings": [
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 27.57
         },
         {
@@ -269,7 +1141,7 @@
           "weight": 20.25
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 16.74
         },
         {
@@ -277,11 +1149,11 @@
           "weight": 15.93
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 8.88
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 3.58
         },
         {
@@ -289,7 +1161,7 @@
           "weight": 2.92
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 2.79
         },
         {
@@ -302,11 +1174,11 @@
       "asOf": "2022-12-31",
       "holdings": [
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 25.03
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 20.91
         },
         {
@@ -314,7 +1186,7 @@
           "weight": 13.87
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 13.82
         },
         {
@@ -326,11 +1198,11 @@
           "weight": 6.81
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 4.73
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 1.54
         }
       ]
@@ -339,19 +1211,19 @@
       "asOf": "2023-03-31",
       "holdings": [
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 21.59
         },
         {
-          "ticker": "NCR-OLD",
-          "weight": 17.78
+          "ticker": "NCR",
+          "weight": 17.77
         },
         {
           "ticker": "SHAK",
           "weight": 13.67
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 13.56
         },
         {
@@ -363,11 +1235,11 @@
           "weight": 9.84
         },
         {
-          "ticker": "STKL-OLD",
+          "ticker": "STKL",
           "weight": 6.53
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 3.81
         },
         {
@@ -384,15 +1256,15 @@
           "weight": 20.98
         },
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 19.15
         },
         {
-          "ticker": "NEWR-OLD",
+          "ticker": "NEWR",
           "weight": 18.93
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 17.37
         },
         {
@@ -404,7 +1276,7 @@
           "weight": 7.66
         },
         {
-          "ticker": "QUOT-OLD",
+          "ticker": "QUOT",
           "weight": 4.17
         },
         {
@@ -417,11 +1289,11 @@
       "asOf": "2023-09-30",
       "holdings": [
         {
-          "ticker": "NCR-OLD",
+          "ticker": "NCR",
           "weight": 24.67
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 19.69
         },
         {
@@ -441,7 +1313,7 @@
           "weight": 8.15
         },
         {
-          "ticker": "PRMW-OLD",
+          "ticker": "PRMW",
           "weight": 2.21
         }
       ]
@@ -462,11 +1334,11 @@
           "weight": 14.71
         },
         {
-          "ticker": "VYX",
+          "ticker": "NCR",
           "weight": 12.43
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 11.93
         },
         {
@@ -478,11 +1350,11 @@
           "weight": 7.72
         },
         {
-          "ticker": "BRCC",
+          "ticker": "NVRO",
           "weight": 6.83
         },
         {
-          "ticker": "NVRO-OLD",
+          "ticker": "BRCC",
           "weight": 6.83
         }
       ]
@@ -503,11 +1375,11 @@
           "weight": 13.06
         },
         {
-          "ticker": "VYX",
+          "ticker": "NCR",
           "weight": 11.94
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 9.5
         },
         {
@@ -527,11 +1399,11 @@
           "weight": 4.57
         },
         {
-          "ticker": "NVRO-OLD",
+          "ticker": "NVRO",
           "weight": 4.41
         },
         {
-          "ticker": "ENV-OLD",
+          "ticker": "ENV",
           "weight": 1.12
         }
       ]
@@ -548,8 +1420,8 @@
           "weight": 13.46
         },
         {
-          "ticker": "VYX",
-          "weight": 13.29
+          "ticker": "NCR",
+          "weight": 13.3
         },
         {
           "ticker": "VFC",
@@ -560,11 +1432,11 @@
           "weight": 11.61
         },
         {
-          "ticker": "ENV-OLD",
+          "ticker": "ENV",
           "weight": 7.42
         },
         {
-          "ticker": "UPBD",
+          "ticker": "RCII",
           "weight": 6.14
         },
         {
@@ -572,7 +1444,7 @@
           "weight": 5.74
         },
         {
-          "ticker": "SMAR-OLD",
+          "ticker": "SMAR",
           "weight": 5.07
         },
         {
@@ -584,7 +1456,7 @@
           "weight": 4.11
         },
         {
-          "ticker": "NVRO-OLD",
+          "ticker": "NVRO",
           "weight": 2.72
         }
       ]
@@ -601,7 +1473,7 @@
           "weight": 17.28
         },
         {
-          "ticker": "VYX",
+          "ticker": "NCR",
           "weight": 15.78
         },
         {
@@ -625,7 +1497,7 @@
           "weight": 5.45
         },
         {
-          "ticker": "NVRO-OLD",
+          "ticker": "NVRO",
           "weight": 2.21
         }
       ]
@@ -635,35 +1507,43 @@
       "holdings": [
         {
           "ticker": "VFC",
-          "weight": 23.57
+          "weight": 23.57,
+          "shares": 5341368
         },
         {
-          "ticker": "VYX",
-          "weight": 16.42
+          "ticker": "NCR",
+          "weight": 16.42,
+          "shares": 5771033
         },
         {
           "ticker": "NATL",
-          "weight": 15.39
+          "weight": 15.39,
+          "shares": 2206041
         },
         {
           "ticker": "EVH",
-          "weight": 12.5
+          "weight": 12.5,
+          "shares": 5404768
         },
         {
           "ticker": "PTLO",
-          "weight": 11.82
+          "weight": 11.82,
+          "shares": 6114956
         },
         {
           "ticker": "BRCC",
-          "weight": 8.82
+          "weight": 8.82,
+          "shares": 13535560
         },
         {
           "ticker": "GTLS",
-          "weight": 8.82
+          "weight": 8.82,
+          "shares": 224796
         },
         {
           "ticker": "PRAA",
-          "weight": 2.66
+          "weight": 2.66,
+          "shares": 619945
         }
       ]
     },
@@ -672,39 +1552,48 @@
       "holdings": [
         {
           "ticker": "VFC",
-          "weight": 21.7
+          "weight": 21.7,
+          "shares": 5484368
         },
         {
           "ticker": "PTLO",
-          "weight": 16.61
+          "weight": 16.61,
+          "shares": 5479771
         },
         {
           "ticker": "GTLS",
-          "weight": 13.58
+          "weight": 13.58,
+          "shares": 368996
         },
         {
           "ticker": "YETI",
-          "weight": 13.03
+          "weight": 13.03,
+          "shares": 1543518
         },
         {
           "ticker": "EVH",
-          "weight": 12.51
+          "weight": 12.5,
+          "shares": 5179468
         },
         {
           "ticker": "GXO",
-          "weight": 9.09
+          "weight": 9.09,
+          "shares": 912000
         },
         {
           "ticker": "BRCC",
-          "weight": 7.21
+          "weight": 7.21,
+          "shares": 13535560
         },
         {
           "ticker": "NATL",
-          "weight": 5.21
+          "weight": 5.21,
+          "shares": 774261
         },
         {
-          "ticker": "VYX",
-          "weight": 1.07
+          "ticker": "NCR",
+          "weight": 1.07,
+          "shares": 431679
         }
       ]
     },
@@ -713,31 +1602,38 @@
       "holdings": [
         {
           "ticker": "YETI",
-          "weight": 19.06
+          "weight": 19.06,
+          "shares": 2162518
         },
         {
           "ticker": "EVH",
-          "weight": 18.43
+          "weight": 18.43,
+          "shares": 5854468
         },
         {
           "ticker": "VFC",
-          "weight": 17.8
+          "weight": 17.8,
+          "shares": 5417368
         },
         {
           "ticker": "PTLO",
-          "weight": 15.77
+          "weight": 15.77,
+          "shares": 4831911
         },
         {
           "ticker": "GXO",
-          "weight": 12.22
+          "weight": 12.22,
+          "shares": 897000
         },
         {
           "ticker": "FRPT",
-          "weight": 11.77
+          "weight": 11.77,
+          "shares": 619130
         },
         {
           "ticker": "BRCC",
-          "weight": 4.96
+          "weight": 4.96,
+          "shares": 13535560
         }
       ]
     },
@@ -746,39 +1642,48 @@
       "holdings": [
         {
           "ticker": "VFC",
-          "weight": 20.75
+          "weight": 20.75,
+          "shares": 5862368
         },
         {
           "ticker": "YETI",
-          "weight": 17.66
+          "weight": 17.66,
+          "shares": 2169551
         },
         {
           "ticker": "GXO",
-          "weight": 12.7
+          "weight": 12.7,
+          "shares": 978477
         },
         {
           "ticker": "EVH",
-          "weight": 11.75
+          "weight": 11.75,
+          "shares": 5663912
         },
         {
           "ticker": "CGNX",
-          "weight": 9.5
+          "weight": 9.5,
+          "shares": 855000
         },
         {
           "ticker": "FRPT",
-          "weight": 8.37
+          "weight": 8.37,
+          "shares": 619130
         },
         {
           "ticker": "PTLO",
-          "weight": 8.02
+          "weight": 8.02,
+          "shares": 5069301
         },
         {
           "ticker": "BL",
-          "weight": 5.91
+          "weight": 5.91,
+          "shares": 453794
         },
         {
           "ticker": "BRCC",
-          "weight": 5.33
+          "weight": 5.33,
+          "shares": 13935560
         }
       ]
     },
@@ -787,48 +1692,58 @@
       "holdings": [
         {
           "ticker": "VFC",
-          "weight": 24.47
+          "weight": 24.47,
+          "shares": 5306548
         },
         {
           "ticker": "YETI",
-          "weight": 22.9
+          "weight": 22.9,
+          "shares": 2032695
         },
         {
           "ticker": "BL",
-          "weight": 15.28
+          "weight": 15.28,
+          "shares": 1083619
         },
         {
           "ticker": "GXO",
-          "weight": 11.14
+          "weight": 11.14,
+          "shares": 829769
         },
         {
           "ticker": "CGNX",
-          "weight": 8.56
+          "weight": 8.56,
+          "shares": 933000
         },
         {
           "ticker": "FRPT",
-          "weight": 6.23
+          "weight": 6.23,
+          "shares": 401130
         },
         {
           "ticker": "EVH",
-          "weight": 5.68
+          "weight": 5.68,
+          "shares": 5563912
         },
         {
           "ticker": "BRCC",
-          "weight": 3.95
+          "weight": 3.95,
+          "shares": 13935560
         },
         {
           "ticker": "PTLO",
-          "weight": 1.78
+          "weight": 1.78,
+          "shares": 1534990
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:35:16Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=ENG",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:14:36Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001559771-engaged-capital-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

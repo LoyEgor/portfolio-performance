@@ -64,6 +64,223 @@
   ],
   "history": [
     {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "IAC",
+          "weight": 47.8
+        },
+        {
+          "ticker": "JD",
+          "weight": 28.64
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 23.56
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "IAC",
+          "weight": 33.35
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 32.01
+        },
+        {
+          "ticker": "SE",
+          "weight": 18.23
+        },
+        {
+          "ticker": "JD",
+          "weight": 16.4
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "CVNA",
+          "weight": 27.76
+        },
+        {
+          "ticker": "IAC",
+          "weight": 27.1
+        },
+        {
+          "ticker": "SE",
+          "weight": 25.64
+        },
+        {
+          "ticker": "JD",
+          "weight": 9.93
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 9.56
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "SE",
+          "weight": 28.77
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 26.08
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 19.32
+        },
+        {
+          "ticker": "IAC",
+          "weight": 14.78
+        },
+        {
+          "ticker": "JD",
+          "weight": 11.06
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "SE",
+          "weight": 39.96
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 23.64
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 15.46
+        },
+        {
+          "ticker": "IAC",
+          "weight": 11.71
+        },
+        {
+          "ticker": "JD",
+          "weight": 9.23
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "SE",
+          "weight": 45.06
+        },
+        {
+          "ticker": "IAC",
+          "weight": 23.82
+        },
+        {
+          "ticker": "JD",
+          "weight": 12.84
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 11.37
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 6.91
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "IAC",
+          "weight": 29.77
+        },
+        {
+          "ticker": "SE",
+          "weight": 25.24
+        },
+        {
+          "ticker": "SQ",
+          "weight": 19.16
+        },
+        {
+          "ticker": "JD",
+          "weight": 11.38
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 8.34
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 6.11
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "SE",
+          "weight": 37.67
+        },
+        {
+          "ticker": "IAC",
+          "weight": 20.1
+        },
+        {
+          "ticker": "SQ",
+          "weight": 18.6
+        },
+        {
+          "ticker": "MTCH",
+          "weight": 17.52
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 6.12
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "SE",
+          "weight": 35.33
+        },
+        {
+          "ticker": "IAC",
+          "weight": 27.38
+        },
+        {
+          "ticker": "MTCH",
+          "weight": 16.53
+        },
+        {
+          "ticker": "SQ",
+          "weight": 15.29
+        },
+        {
+          "ticker": "ANGI",
+          "weight": 5.47
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
@@ -75,7 +292,7 @@
           "weight": 30.39
         },
         {
-          "ticker": "XYZ",
+          "ticker": "SQ",
           "weight": 16.2
         },
         {
@@ -100,11 +317,11 @@
           "weight": 27.78
         },
         {
-          "ticker": "XYZ",
+          "ticker": "SQ",
           "weight": 15.41
         },
         {
-          "ticker": "VMEO-OLD",
+          "ticker": "VMEO",
           "weight": 12.67
         },
         {
@@ -129,11 +346,11 @@
           "weight": 30.86
         },
         {
-          "ticker": "XYZ",
+          "ticker": "SQ",
           "weight": 15.27
         },
         {
-          "ticker": "VMEO-OLD",
+          "ticker": "VMEO",
           "weight": 9.05
         },
         {
@@ -154,7 +371,7 @@
           "weight": 25.65
         },
         {
-          "ticker": "XYZ",
+          "ticker": "SQ",
           "weight": 8.83
         },
         {
@@ -189,7 +406,7 @@
       "holdings": [
         {
           "ticker": "IAC",
-          "weight": 41.27
+          "weight": 41.28
         },
         {
           "ticker": "SE",
@@ -362,7 +579,7 @@
         },
         {
           "ticker": "INTU",
-          "weight": 13.0
+          "weight": 13
         },
         {
           "ticker": "BLND",
@@ -531,47 +748,58 @@
       "holdings": [
         {
           "ticker": "FOUR",
-          "weight": 13.33
+          "weight": 13.33,
+          "shares": 969748
         },
         {
           "ticker": "PCOR",
-          "weight": 11.88
+          "weight": 11.88,
+          "shares": 1197199
         },
         {
           "ticker": "MNDY",
-          "weight": 11.81
+          "weight": 11.81,
+          "shares": 378712
         },
         {
           "ticker": "NCNO",
-          "weight": 11.69
+          "weight": 11.69,
+          "shares": 2628856
         },
         {
           "ticker": "HLT",
-          "weight": 10.29
+          "weight": 10.29,
+          "shares": 314437
         },
         {
           "ticker": "CSGP",
-          "weight": 8.63
+          "weight": 8.63,
+          "shares": 909803
         },
         {
           "ticker": "IAC",
-          "weight": 8.52
+          "weight": 8.52,
+          "shares": 1490081
         },
         {
           "ticker": "BRZE",
-          "weight": 8.32
+          "weight": 8.32,
+          "shares": 1500413
         },
         {
           "ticker": "INTU",
-          "weight": 7.14
+          "weight": 7.14,
+          "shares": 85728
         },
         {
           "ticker": "SE",
-          "weight": 4.43
+          "weight": 4.43,
+          "shares": 315538
         },
         {
           "ticker": "BLND",
-          "weight": 3.95
+          "weight": 3.95,
+          "shares": 7079165
         }
       ]
     },
@@ -580,43 +808,53 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 14.08
+          "weight": 14.08,
+          "shares": 166936
         },
         {
           "ticker": "NCNO",
-          "weight": 13.78
+          "weight": 13.79,
+          "shares": 3651918
         },
         {
           "ticker": "PCOR",
-          "weight": 13.04
+          "weight": 13.04,
+          "shares": 1437331
         },
         {
           "ticker": "MNDY",
-          "weight": 12.65
+          "weight": 12.65,
+          "shares": 378711
         },
         {
           "ticker": "CSGP",
-          "weight": 12.5
+          "weight": 12.5,
+          "shares": 1148302
         },
         {
           "ticker": "BRZE",
-          "weight": 11.77
+          "weight": 11.77,
+          "shares": 2373386
         },
         {
           "ticker": "FOUR",
-          "weight": 10.09
+          "weight": 10.09,
+          "shares": 898874
         },
         {
           "ticker": "HLT",
-          "weight": 5.62
+          "weight": 5.62,
+          "shares": 179612
         },
         {
           "ticker": "BLND",
-          "weight": 4.1
+          "weight": 4.1,
+          "shares": 8911039
         },
         {
           "ticker": "VERX",
-          "weight": 2.36
+          "weight": 2.36,
+          "shares": 490162
         }
       ]
     },
@@ -625,43 +863,53 @@
       "holdings": [
         {
           "ticker": "INTU",
-          "weight": 13.8
+          "weight": 13.8,
+          "shares": 138823
         },
         {
           "ticker": "CSGP",
-          "weight": 13.76
+          "weight": 13.76,
+          "shares": 1356060
         },
         {
           "ticker": "PCOR",
-          "weight": 13.48
+          "weight": 13.48,
+          "shares": 1561613
         },
         {
           "ticker": "OKTA",
-          "weight": 12.04
+          "weight": 12.04,
+          "shares": 954293
         },
         {
           "ticker": "MNDY",
-          "weight": 11.16
+          "weight": 11.16,
+          "shares": 281212
         },
         {
           "ticker": "NCNO",
-          "weight": 10.19
+          "weight": 10.19,
+          "shares": 2887766
         },
         {
           "ticker": "FOUR",
-          "weight": 9.74
+          "weight": 9.74,
+          "shares": 778722
         },
         {
           "ticker": "BRZE",
-          "weight": 8.94
+          "weight": 8.94,
+          "shares": 2519600
         },
         {
           "ticker": "BLND",
-          "weight": 3.71
+          "weight": 3.71,
+          "shares": 8911039
         },
         {
           "ticker": "VERX",
-          "weight": 3.18
+          "weight": 3.18,
+          "shares": 712445
         }
       ]
     },
@@ -670,47 +918,58 @@
       "holdings": [
         {
           "ticker": "FOUR",
-          "weight": 14.4
+          "weight": 14.4,
+          "shares": 1251374
         },
         {
           "ticker": "OKTA",
-          "weight": 13.5
+          "weight": 13.5,
+          "shares": 990486
         },
         {
           "ticker": "PCOR",
-          "weight": 11.69
+          "weight": 11.69,
+          "shares": 1077913
         },
         {
           "ticker": "INTU",
-          "weight": 11.61
+          "weight": 11.61,
+          "shares": 114369
         },
         {
           "ticker": "CSGP",
-          "weight": 11.24
+          "weight": 11.24,
+          "shares": 896034
         },
         {
           "ticker": "MNDY",
-          "weight": 10.78
+          "weight": 10.78,
+          "shares": 374221
         },
         {
           "ticker": "BRZE",
-          "weight": 7.82
+          "weight": 7.82,
+          "shares": 1848244
         },
         {
           "ticker": "NCNO",
-          "weight": 6.26
+          "weight": 6.26,
+          "shares": 1553659
         },
         {
           "ticker": "BLND",
-          "weight": 5.34
+          "weight": 5.34,
+          "shares": 9840605
         },
         {
           "ticker": "VERX",
-          "weight": 3.99
+          "weight": 3.99,
+          "shares": 1081446
         },
         {
           "ticker": "FWONK",
-          "weight": 3.38
+          "weight": 3.38,
+          "shares": 217523
         }
       ]
     },
@@ -719,56 +978,68 @@
       "holdings": [
         {
           "ticker": "OKTA",
-          "weight": 14.38
+          "weight": 14.38,
+          "shares": 883441
         },
         {
           "ticker": "FOUR",
-          "weight": 13.62
+          "weight": 13.62,
+          "shares": 1148861
         },
         {
           "ticker": "CSGP",
-          "weight": 12.12
+          "weight": 12.12,
+          "shares": 957557
         },
         {
           "ticker": "BABA",
-          "weight": 10.44
+          "weight": 10.44,
+          "shares": 378155
         },
         {
           "ticker": "BRZE",
-          "weight": 9.51
+          "weight": 9.51,
+          "shares": 1473005
         },
         {
           "ticker": "PCOR",
-          "weight": 9.33
+          "weight": 9.33,
+          "shares": 681536
         },
         {
           "ticker": "MNDY",
-          "weight": 7.06
+          "weight": 7.06,
+          "shares": 253959
         },
         {
           "ticker": "FWONK",
-          "weight": 6.9
+          "weight": 6.9,
+          "shares": 371829
         },
         {
           "ticker": "INTU",
-          "weight": 6.33
+          "weight": 6.33,
+          "shares": 50721
         },
         {
           "ticker": "BLND",
-          "weight": 5.17
+          "weight": 5.17,
+          "shares": 9024099
         },
         {
           "ticker": "AMZN",
-          "weight": 5.15
+          "weight": 5.15,
+          "shares": 118438
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:34:32Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=SP",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:05:13Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001766908-shawspring-partners-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

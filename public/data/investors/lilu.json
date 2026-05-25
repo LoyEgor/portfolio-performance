@@ -33,7 +33,7 @@
     },
     {
       "ticker": "OXY",
-      "weight": 3.02,
+      "weight": 3.01,
       "shares": 1466500
     },
     {
@@ -47,22 +47,235 @@
       "shares": 6590836
     },
     {
+      "ticker": "SPGI",
+      "weight": 1.63,
+      "shares": 121463
+    },
+    {
       "ticker": "HRB",
       "weight": 1.63,
       "shares": 1626906
     },
     {
       "ticker": "MCO",
-      "weight": 1.63,
+      "weight": 1.62,
       "shares": 117784
-    },
-    {
-      "ticker": "SPGI",
-      "weight": 1.63,
-      "shares": 121463
     }
   ],
   "history": [
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "SINA",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "SINA",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "SINA",
+          "weight": 76.24
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 17.79
+        },
+        {
+          "ticker": "WB",
+          "weight": 5.97
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "SINA",
+          "weight": 75.42
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 18.08
+        },
+        {
+          "ticker": "WB",
+          "weight": 6.5
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "SINA",
+          "weight": 73.42
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 19.01
+        },
+        {
+          "ticker": "WB",
+          "weight": 7.57
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 56.89
+        },
+        {
+          "ticker": "SINA",
+          "weight": 31.89
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 7.57
+        },
+        {
+          "ticker": "WB",
+          "weight": 3.65
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 87.47
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 12.53
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "BABA",
+          "weight": 86.82
+        },
+        {
+          "ticker": "BIDU",
+          "weight": 13.18
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 58.44
+        },
+        {
+          "ticker": "BAC",
+          "weight": 36.79
+        },
+        {
+          "ticker": "BABA",
+          "weight": 4.77
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 47.99
+        },
+        {
+          "ticker": "BAC",
+          "weight": 27.59
+        },
+        {
+          "ticker": "META",
+          "weight": 13
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 11.42
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 41.09
+        },
+        {
+          "ticker": "META",
+          "weight": 26.58
+        },
+        {
+          "ticker": "BAC",
+          "weight": 22.7
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 9.63
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "MU",
+          "weight": 47.52
+        },
+        {
+          "ticker": "BAC",
+          "weight": 20.63
+        },
+        {
+          "ticker": "META",
+          "weight": 14.45
+        },
+        {
+          "ticker": "GOOG",
+          "weight": 8.29
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 5.55
+        },
+        {
+          "ticker": "PDD",
+          "weight": 3.55
+        }
+      ]
+    },
     {
       "asOf": "2021-03-31",
       "holdings": [
@@ -117,7 +330,7 @@
         },
         {
           "ticker": "PDD",
-          "weight": 2.24
+          "weight": 2.25
         }
       ]
     },
@@ -146,11 +359,11 @@
         },
         {
           "ticker": "AAPL",
-          "weight": 5.0
+          "weight": 5
         },
         {
           "ticker": "PDD",
-          "weight": 1.54
+          "weight": 1.53
         }
       ]
     },
@@ -266,7 +479,7 @@
         },
         {
           "ticker": "GOOGL",
-          "weight": 5.19
+          "weight": 5.2
         }
       ]
     },
@@ -295,7 +508,7 @@
         },
         {
           "ticker": "AAPL",
-          "weight": 5.13
+          "weight": 5.12
         }
       ]
     },
@@ -386,7 +599,7 @@
         },
         {
           "ticker": "AAPL",
-          "weight": 7.14
+          "weight": 7.15
         }
       ]
     },
@@ -415,7 +628,7 @@
         },
         {
           "ticker": "AAPL",
-          "weight": 7.11
+          "weight": 7.1
         }
       ]
     },
@@ -444,7 +657,7 @@
         },
         {
           "ticker": "AAPL",
-          "weight": 5.77
+          "weight": 5.76
         }
       ]
     },
@@ -477,7 +690,7 @@
         },
         {
           "ticker": "OXY",
-          "weight": 3.6
+          "weight": 3.61
         }
       ]
     },
@@ -514,7 +727,7 @@
         },
         {
           "ticker": "SOC",
-          "weight": 1.29
+          "weight": 1.28
         }
       ]
     },
@@ -613,48 +826,43 @@
       "holdings": [
         {
           "ticker": "BAC",
-          "weight": 18.35,
+          "weight": 18.51,
           "shares": 10431387
         },
         {
           "ticker": "PDD",
-          "weight": 17.93,
+          "weight": 18.09,
           "shares": 4608000
         },
         {
           "ticker": "GOOGL",
-          "weight": 16.67,
+          "weight": 16.81,
           "shares": 2543300
         },
         {
           "ticker": "BRK.B",
-          "weight": 16.22,
+          "weight": 16.35,
           "shares": 897749
         },
         {
           "ticker": "GOOG",
-          "weight": 16.17,
+          "weight": 16.31,
           "shares": 2451300
         },
         {
           "ticker": "EWBC",
-          "weight": 10.43,
+          "weight": 10.51,
           "shares": 2776351
         },
         {
           "ticker": "OXY",
-          "weight": 2.29,
+          "weight": 2.31,
           "shares": 1466500
         },
         {
           "ticker": "SOC",
-          "weight": 1.1,
+          "weight": 1.11,
           "shares": 1343000
-        },
-        {
-          "ticker": "AAPL",
-          "weight": 0.84,
-          "shares": 110600
         }
       ]
     },
@@ -663,48 +871,38 @@
       "holdings": [
         {
           "ticker": "GOOGL",
-          "weight": 19.14,
+          "weight": 19.45,
           "shares": 2543300
         },
         {
           "ticker": "PDD",
-          "weight": 18.85,
+          "weight": 19.16,
           "shares": 4608000
         },
         {
           "ticker": "GOOG",
-          "weight": 18.48,
+          "weight": 18.78,
           "shares": 2451300
         },
         {
           "ticker": "BAC",
-          "weight": 16.66,
+          "weight": 16.93,
           "shares": 10431387
         },
         {
           "ticker": "BRK.B",
-          "weight": 13.97,
+          "weight": 14.2,
           "shares": 897749
         },
         {
           "ticker": "EWBC",
-          "weight": 9.15,
+          "weight": 9.3,
           "shares": 2776351
         },
         {
           "ticker": "OXY",
-          "weight": 2.15,
+          "weight": 2.18,
           "shares": 1466500
-        },
-        {
-          "ticker": "AAPL",
-          "weight": 0.87,
-          "shares": 110600
-        },
-        {
-          "ticker": "SOC",
-          "weight": 0.73,
-          "shares": 1343000
         }
       ]
     },
@@ -712,58 +910,54 @@
       "asOf": "2025-12-31",
       "holdings": [
         {
-          "ticker": "GOOGL",
-          "weight": 22.31,
-          "shares": 2451300
-        },
-        {
           "ticker": "GOOG",
-          "weight": 21.55,
+          "weight": 22.49,
           "shares": 2543300
         },
         {
+          "ticker": "GOOGL",
+          "weight": 21.74,
+          "shares": 2451300
+        },
+        {
           "ticker": "BAC",
-          "weight": 16.08,
+          "weight": 16.21,
           "shares": 10431387
         },
         {
           "ticker": "PDD",
-          "weight": 14.64,
+          "weight": 14.76,
           "shares": 4608000
         },
         {
           "ticker": "BRK.B",
-          "weight": 12.64,
+          "weight": 12.75,
           "shares": 897749
         },
         {
           "ticker": "EWBC",
-          "weight": 8.74,
+          "weight": 8.82,
           "shares": 2776351
         },
         {
           "ticker": "OXY",
-          "weight": 1.69,
+          "weight": 1.7,
           "shares": 1466500
         },
         {
           "ticker": "CROX",
-          "weight": 1.51,
+          "weight": 1.52,
           "shares": 628159
-        },
-        {
-          "ticker": "AAPL",
-          "weight": 0.84,
-          "shares": 110600
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T01:50:45Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=HC",
+    "lastFetchedAt": "2026-05-24T23:36:13Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001709323-himalaya-capital-management-llc",
     "migratedFromLegacy": true,
-    "sharesSource": "13f.info"
+    "sharesSource": "13f.info",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

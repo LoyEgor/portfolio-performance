@@ -18,12 +18,12 @@
     },
     {
       "ticker": "BLK",
-      "weight": 9.3,
+      "weight": 9.31,
       "shares": 546100
     },
     {
       "ticker": "META",
-      "weight": 9.28,
+      "weight": 9.29,
       "shares": 915674
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "ticker": "TOST",
-      "weight": 6.05,
+      "weight": 6.06,
       "shares": 12895438
     },
     {
@@ -84,6 +84,986 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 31.22
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 13.32
+        },
+        {
+          "ticker": "BHI",
+          "weight": 10.17
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 9.47
+        },
+        {
+          "ticker": "WTW",
+          "weight": 9.1
+        },
+        {
+          "ticker": "MSI",
+          "weight": 6.21
+        },
+        {
+          "ticker": "ALSN",
+          "weight": 5.15
+        },
+        {
+          "ticker": "AWI",
+          "weight": 4.44
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.94
+        },
+        {
+          "ticker": "MSCI",
+          "weight": 3
+        },
+        {
+          "ticker": "AGU",
+          "weight": 2.79
+        },
+        {
+          "ticker": "BFH",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 26.91
+        },
+        {
+          "ticker": "BHI",
+          "weight": 16.3
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 11.98
+        },
+        {
+          "ticker": "WTW",
+          "weight": 9.36
+        },
+        {
+          "ticker": "MS",
+          "weight": 9.17
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 8.1
+        },
+        {
+          "ticker": "BFH",
+          "weight": 5.98
+        },
+        {
+          "ticker": "ALSN",
+          "weight": 5.01
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.35
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.8
+        },
+        {
+          "ticker": "TRN",
+          "weight": 1.03
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 19.51
+        },
+        {
+          "ticker": "BHI",
+          "weight": 13.23
+        },
+        {
+          "ticker": "MS",
+          "weight": 11.78
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 10.92
+        },
+        {
+          "ticker": "WTW",
+          "weight": 9.44
+        },
+        {
+          "ticker": "BFH",
+          "weight": 9.41
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 8.49
+        },
+        {
+          "ticker": "ALSN",
+          "weight": 4.81
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.33
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.23
+        },
+        {
+          "ticker": "STX",
+          "weight": 3.22
+        },
+        {
+          "ticker": "TRN",
+          "weight": 2.63
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "MSFT",
+          "weight": 19.95
+        },
+        {
+          "ticker": "BHI",
+          "weight": 14.8
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 12.08
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 10.96
+        },
+        {
+          "ticker": "BFH",
+          "weight": 9.96
+        },
+        {
+          "ticker": "MS",
+          "weight": 9.45
+        },
+        {
+          "ticker": "WTW",
+          "weight": 8.24
+        },
+        {
+          "ticker": "TRN",
+          "weight": 3.59
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.2
+        },
+        {
+          "ticker": "STX",
+          "weight": 3.03
+        },
+        {
+          "ticker": "ALSN",
+          "weight": 2.95
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.81
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "BHI",
+          "weight": 15.96
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 14.4
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 12.87
+        },
+        {
+          "ticker": "BFH",
+          "weight": 12.43
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 12.37
+        },
+        {
+          "ticker": "WTW",
+          "weight": 9.01
+        },
+        {
+          "ticker": "MS",
+          "weight": 6.51
+        },
+        {
+          "ticker": "BIVV",
+          "weight": 3.92
+        },
+        {
+          "ticker": "STX",
+          "weight": 3.72
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.6
+        },
+        {
+          "ticker": "TRN",
+          "weight": 3.51
+        },
+        {
+          "ticker": "BHC",
+          "weight": 1.69
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "BHI",
+          "weight": 15.62
+        },
+        {
+          "ticker": "BFH",
+          "weight": 13.77
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 13.56
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 11.42
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 10.07
+        },
+        {
+          "ticker": "WTW",
+          "weight": 8.77
+        },
+        {
+          "ticker": "MS",
+          "weight": 7.27
+        },
+        {
+          "ticker": "STX",
+          "weight": 4.89
+        },
+        {
+          "ticker": "TRN",
+          "weight": 3.99
+        },
+        {
+          "ticker": "BIVV",
+          "weight": 3.93
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.86
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.84
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "TFCF",
+          "weight": 13.99
+        },
+        {
+          "ticker": "BFH",
+          "weight": 13.24
+        },
+        {
+          "ticker": "BKR",
+          "weight": 11.7
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 11.13
+        },
+        {
+          "ticker": "KKR",
+          "weight": 9.42
+        },
+        {
+          "ticker": "MS",
+          "weight": 8.76
+        },
+        {
+          "ticker": "STX",
+          "weight": 7.24
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.83
+        },
+        {
+          "ticker": "TRN",
+          "weight": 5.6
+        },
+        {
+          "ticker": "AWI",
+          "weight": 4.8
+        },
+        {
+          "ticker": "WTW",
+          "weight": 4.67
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.62
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "TFCF",
+          "weight": 18.89
+        },
+        {
+          "ticker": "BFH",
+          "weight": 15.46
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 11.2
+        },
+        {
+          "ticker": "KKR",
+          "weight": 10.44
+        },
+        {
+          "ticker": "MS",
+          "weight": 9.78
+        },
+        {
+          "ticker": "STX",
+          "weight": 9.32
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 8
+        },
+        {
+          "ticker": "TRN",
+          "weight": 7.24
+        },
+        {
+          "ticker": "AWI",
+          "weight": 5.78
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.88
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "TFCF",
+          "weight": 19.73
+        },
+        {
+          "ticker": "STX",
+          "weight": 12.78
+        },
+        {
+          "ticker": "BFH",
+          "weight": 12.73
+        },
+        {
+          "ticker": "C",
+          "weight": 11.12
+        },
+        {
+          "ticker": "KKR",
+          "weight": 10.26
+        },
+        {
+          "ticker": "MS",
+          "weight": 9.86
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 9.57
+        },
+        {
+          "ticker": "TRN",
+          "weight": 7.11
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.92
+        },
+        {
+          "ticker": "BHC",
+          "weight": 2.92
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 15.5
+        },
+        {
+          "ticker": "BFH",
+          "weight": 13.05
+        },
+        {
+          "ticker": "TFCF",
+          "weight": 12.98
+        },
+        {
+          "ticker": "STX",
+          "weight": 11.64
+        },
+        {
+          "ticker": "KKR",
+          "weight": 11.36
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 8.75
+        },
+        {
+          "ticker": "MS",
+          "weight": 8.16
+        },
+        {
+          "ticker": "TRN",
+          "weight": 6.75
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.99
+        },
+        {
+          "ticker": "SLM",
+          "weight": 3.96
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.86
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 19.16
+        },
+        {
+          "ticker": "BFH",
+          "weight": 14.63
+        },
+        {
+          "ticker": "KKR",
+          "weight": 13.8
+        },
+        {
+          "ticker": "STX",
+          "weight": 12.73
+        },
+        {
+          "ticker": "MS",
+          "weight": 9.87
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 8.95
+        },
+        {
+          "ticker": "TRN",
+          "weight": 7.99
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.71
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.45
+        },
+        {
+          "ticker": "AWI",
+          "weight": 3.7
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 21.19
+        },
+        {
+          "ticker": "STX",
+          "weight": 13.6
+        },
+        {
+          "ticker": "MS",
+          "weight": 13.42
+        },
+        {
+          "ticker": "KKR",
+          "weight": 12.85
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 10.3
+        },
+        {
+          "ticker": "BFH",
+          "weight": 10.09
+        },
+        {
+          "ticker": "TRN",
+          "weight": 5.82
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.3
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.2
+        },
+        {
+          "ticker": "ACA",
+          "weight": 2.55
+        },
+        {
+          "ticker": "AWI",
+          "weight": 1.69
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 22.49
+        },
+        {
+          "ticker": "STX",
+          "weight": 16.21
+        },
+        {
+          "ticker": "KKR",
+          "weight": 13.65
+        },
+        {
+          "ticker": "MS",
+          "weight": 12.69
+        },
+        {
+          "ticker": "BFH",
+          "weight": 10.45
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 7.5
+        },
+        {
+          "ticker": "TRN",
+          "weight": 5.46
+        },
+        {
+          "ticker": "BHC",
+          "weight": 5.11
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.45
+        },
+        {
+          "ticker": "ACA",
+          "weight": 2.01
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 25.17
+        },
+        {
+          "ticker": "STX",
+          "weight": 16.95
+        },
+        {
+          "ticker": "KKR",
+          "weight": 14.61
+        },
+        {
+          "ticker": "MS",
+          "weight": 13.1
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 7.74
+        },
+        {
+          "ticker": "BFH",
+          "weight": 5.92
+        },
+        {
+          "ticker": "TRN",
+          "weight": 5.18
+        },
+        {
+          "ticker": "BHC",
+          "weight": 5.16
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.34
+        },
+        {
+          "ticker": "ACA",
+          "weight": 1.82
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 22.57
+        },
+        {
+          "ticker": "STX",
+          "weight": 19.79
+        },
+        {
+          "ticker": "KKR",
+          "weight": 15.06
+        },
+        {
+          "ticker": "MS",
+          "weight": 11.07
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 6.32
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 5.88
+        },
+        {
+          "ticker": "BFH",
+          "weight": 5.54
+        },
+        {
+          "ticker": "TRN",
+          "weight": 5.18
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.57
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.03
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "C",
+          "weight": 24.26
+        },
+        {
+          "ticker": "STX",
+          "weight": 21.1
+        },
+        {
+          "ticker": "KKR",
+          "weight": 15.01
+        },
+        {
+          "ticker": "MS",
+          "weight": 8.62
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 7.04
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 6.63
+        },
+        {
+          "ticker": "TRN",
+          "weight": 6.19
+        },
+        {
+          "ticker": "BHC",
+          "weight": 6.03
+        },
+        {
+          "ticker": "SLM",
+          "weight": 3.92
+        },
+        {
+          "ticker": "STRA",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "STX",
+          "weight": 24.44
+        },
+        {
+          "ticker": "C",
+          "weight": 18.07
+        },
+        {
+          "ticker": "KKR",
+          "weight": 16.76
+        },
+        {
+          "ticker": "MS",
+          "weight": 7.69
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 7.01
+        },
+        {
+          "ticker": "TRN",
+          "weight": 6.89
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 6.12
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.41
+        },
+        {
+          "ticker": "SLM",
+          "weight": 3.69
+        },
+        {
+          "ticker": "HE",
+          "weight": 2.22
+        },
+        {
+          "ticker": "STRA",
+          "weight": 1.44
+        },
+        {
+          "ticker": "AOS",
+          "weight": 1.26
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "STX",
+          "weight": 18.16
+        },
+        {
+          "ticker": "KKR",
+          "weight": 16.52
+        },
+        {
+          "ticker": "C",
+          "weight": 16.42
+        },
+        {
+          "ticker": "NKLA",
+          "weight": 9.37
+        },
+        {
+          "ticker": "MS",
+          "weight": 8.18
+        },
+        {
+          "ticker": "TRN",
+          "weight": 6.83
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 6.71
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 5.5
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.9
+        },
+        {
+          "ticker": "SLM",
+          "weight": 2.7
+        },
+        {
+          "ticker": "EVA",
+          "weight": 2.07
+        },
+        {
+          "ticker": "HE",
+          "weight": 1.39
+        },
+        {
+          "ticker": "AOS",
+          "weight": 1.17
+        },
+        {
+          "ticker": "STRA",
+          "weight": 1.08
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "STX",
+          "weight": 21.97
+        },
+        {
+          "ticker": "KKR",
+          "weight": 21.84
+        },
+        {
+          "ticker": "C",
+          "weight": 16.46
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 8.44
+        },
+        {
+          "ticker": "MS",
+          "weight": 7.86
+        },
+        {
+          "ticker": "TRN",
+          "weight": 7.44
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 6.79
+        },
+        {
+          "ticker": "BHC",
+          "weight": 3.94
+        },
+        {
+          "ticker": "SLM",
+          "weight": 3.69
+        },
+        {
+          "ticker": "AOS",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "STX",
+          "weight": 21.95
+        },
+        {
+          "ticker": "C",
+          "weight": 19.52
+        },
+        {
+          "ticker": "KKR",
+          "weight": 18.05
+        },
+        {
+          "ticker": "LKQ",
+          "weight": 8.9
+        },
+        {
+          "ticker": "TRN",
+          "weight": 8.35
+        },
+        {
+          "ticker": "CBRE",
+          "weight": 7.52
+        },
+        {
+          "ticker": "MS",
+          "weight": 6.65
+        },
+        {
+          "ticker": "SLM",
+          "weight": 4.69
+        },
+        {
+          "ticker": "BHC",
+          "weight": 4.37
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
@@ -96,7 +1076,7 @@
         },
         {
           "ticker": "KKR",
-          "weight": 18.12
+          "weight": 18.11
         },
         {
           "ticker": "LKQ",
@@ -104,11 +1084,11 @@
         },
         {
           "ticker": "CBRE",
-          "weight": 9.51
+          "weight": 9.5
         },
         {
           "ticker": "TRN",
-          "weight": 7.72
+          "weight": 7.73
         },
         {
           "ticker": "BHC",
@@ -116,11 +1096,11 @@
         },
         {
           "ticker": "SLM",
-          "weight": 5.54
+          "weight": 5.55
         },
         {
           "ticker": "NSIT",
-          "weight": 1.24
+          "weight": 1.23
         },
         {
           "ticker": "FISV",
@@ -133,47 +1113,43 @@
       "holdings": [
         {
           "ticker": "KKR",
-          "weight": 18.03
+          "weight": 19.46
         },
         {
           "ticker": "STX",
-          "weight": 17.08
+          "weight": 18.44
         },
         {
           "ticker": "C",
-          "weight": 16.41
+          "weight": 17.71
         },
         {
           "ticker": "LKQ",
-          "weight": 11.85
+          "weight": 12.8
         },
         {
           "ticker": "CBRE",
-          "weight": 9.81
-        },
-        {
-          "ticker": "FISV",
-          "weight": 7.36
+          "weight": 10.59
         },
         {
           "ticker": "BHC",
-          "weight": 5.88
+          "weight": 6.35
         },
         {
           "ticker": "SLM",
-          "weight": 4.82
+          "weight": 5.2
         },
         {
           "ticker": "TRN",
-          "weight": 4.51
+          "weight": 4.87
         },
         {
           "ticker": "NSIT",
-          "weight": 3.18
+          "weight": 3.43
         },
         {
           "ticker": "BLD",
-          "weight": 1.06
+          "weight": 1.15
         }
       ]
     },
@@ -190,7 +1166,7 @@
         },
         {
           "ticker": "FISV",
-          "weight": 13.88
+          "weight": 13.89
         },
         {
           "ticker": "LKQ",
@@ -218,7 +1194,7 @@
         },
         {
           "ticker": "SLM",
-          "weight": 3.49
+          "weight": 3.48
         }
       ]
     },
@@ -231,15 +1207,15 @@
         },
         {
           "ticker": "KKR",
-          "weight": 18.62
+          "weight": 18.61
         },
         {
           "ticker": "FISV",
-          "weight": 15.32
+          "weight": 15.33
         },
         {
           "ticker": "LKQ",
-          "weight": 11.93
+          "weight": 11.94
         },
         {
           "ticker": "CBRE",
@@ -263,7 +1239,7 @@
         },
         {
           "ticker": "TRN",
-          "weight": 1.33
+          "weight": 1.32
         }
       ]
     },
@@ -271,16 +1247,16 @@
       "asOf": "2022-03-31",
       "holdings": [
         {
-          "ticker": "KKR",
-          "weight": 18.36
-        },
-        {
           "ticker": "FISV",
           "weight": 18.36
         },
         {
+          "ticker": "KKR",
+          "weight": 18.36
+        },
+        {
           "ticker": "STX",
-          "weight": 16.79
+          "weight": 16.78
         },
         {
           "ticker": "CBRE",
@@ -300,7 +1276,7 @@
         },
         {
           "ticker": "BHC",
-          "weight": 4.59
+          "weight": 4.58
         },
         {
           "ticker": "SLM",
@@ -366,7 +1342,7 @@
         },
         {
           "ticker": "KKR",
-          "weight": 19.44
+          "weight": 19.45
         },
         {
           "ticker": "STX",
@@ -374,7 +1350,7 @@
         },
         {
           "ticker": "CBRE",
-          "weight": 10.65
+          "weight": 10.66
         },
         {
           "ticker": "LKQ",
@@ -411,11 +1387,11 @@
         },
         {
           "ticker": "CBRE",
-          "weight": 13.46
+          "weight": 13.45
         },
         {
           "ticker": "STX",
-          "weight": 13.39
+          "weight": 13.38
         },
         {
           "ticker": "NSIT",
@@ -423,7 +1399,7 @@
         },
         {
           "ticker": "NYT",
-          "weight": 8.38
+          "weight": 8.39
         },
         {
           "ticker": "LKQ",
@@ -440,7 +1416,7 @@
       "holdings": [
         {
           "ticker": "FISV",
-          "weight": 21.52
+          "weight": 21.51
         },
         {
           "ticker": "KKR",
@@ -477,7 +1453,7 @@
       "holdings": [
         {
           "ticker": "FISV",
-          "weight": 22.93
+          "weight": 22.92
         },
         {
           "ticker": "KKR",
@@ -505,7 +1481,7 @@
         },
         {
           "ticker": "SPOT",
-          "weight": 4.5
+          "weight": 4.51
         }
       ]
     },
@@ -526,7 +1502,7 @@
         },
         {
           "ticker": "NSIT",
-          "weight": 14.97
+          "weight": 14.96
         },
         {
           "ticker": "STX",
@@ -534,7 +1510,7 @@
         },
         {
           "ticker": "CBRE",
-          "weight": 7.8
+          "weight": 7.81
         },
         {
           "ticker": "NYT",
@@ -542,11 +1518,11 @@
         },
         {
           "ticker": "SPOT",
-          "weight": 4.43
+          "weight": 4.42
         },
         {
           "ticker": "ILMN",
-          "weight": 1.62
+          "weight": 1.63
         },
         {
           "ticker": "RBLX",
@@ -563,7 +1539,7 @@
         },
         {
           "ticker": "NSIT",
-          "weight": 16.37
+          "weight": 16.38
         },
         {
           "ticker": "EXPE",
@@ -575,7 +1551,7 @@
         },
         {
           "ticker": "KKR",
-          "weight": 10.1
+          "weight": 10.11
         },
         {
           "ticker": "DIS",
@@ -587,7 +1563,7 @@
         },
         {
           "ticker": "SPOT",
-          "weight": 3.95
+          "weight": 3.96
         },
         {
           "ticker": "NYT",
@@ -595,7 +1571,7 @@
         },
         {
           "ticker": "PAYC",
-          "weight": 2.58
+          "weight": 2.57
         },
         {
           "ticker": "RBLX",
@@ -632,7 +1608,7 @@
         },
         {
           "ticker": "SPOT",
-          "weight": 4.81
+          "weight": 4.8
         },
         {
           "ticker": "KKR",
@@ -644,7 +1620,7 @@
         },
         {
           "ticker": "RBLX",
-          "weight": 1.94
+          "weight": 1.95
         },
         {
           "ticker": "FLUT",
@@ -702,43 +1678,39 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 24.68
+          "weight": 27.45
         },
         {
           "ticker": "NSIT",
-          "weight": 20.15
+          "weight": 22.42
         },
         {
           "ticker": "DIS",
-          "weight": 16.55
+          "weight": 18.4
         },
         {
           "ticker": "RBLX",
-          "weight": 10.34
-        },
-        {
-          "ticker": "TOST",
-          "weight": 10.1
+          "weight": 11.5
         },
         {
           "ticker": "EXPE",
-          "weight": 8.89
+          "weight": 9.89
         },
         {
           "ticker": "META",
-          "weight": 2.79
+          "weight": 3.1
         },
         {
           "ticker": "LYV",
-          "weight": 2.56
+          "weight": 2.85
         },
         {
           "ticker": "V",
-          "weight": 2.37
+          "weight": 2.63
         },
         {
           "ticker": "LLYVK",
-          "weight": 1.58
+          "weight": 1.76
         }
       ]
     },
@@ -747,51 +1719,63 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 22.08
+          "weight": 22.08,
+          "shares": 2898509
         },
         {
           "ticker": "DIS",
-          "weight": 16.66
+          "weight": 16.66,
+          "shares": 6566031
         },
         {
           "ticker": "NSIT",
-          "weight": 14.08
+          "weight": 14.08,
+          "shares": 4061739
         },
         {
           "ticker": "RBLX",
-          "weight": 13.36
+          "weight": 13.36,
+          "shares": 10135921
         },
         {
           "ticker": "EXPE",
-          "weight": 8.56
+          "weight": 8.56,
+          "shares": 2017406
         },
         {
           "ticker": "TOST",
-          "weight": 7.1
+          "weight": 7.1,
+          "shares": 8548600
         },
         {
           "ticker": "LLYVK",
-          "weight": 4.91
+          "weight": 4.91,
+          "shares": 3168788
         },
         {
           "ticker": "LYV",
-          "weight": 3.13
+          "weight": 3.13,
+          "shares": 1061466
         },
         {
           "ticker": "META",
-          "weight": 2.82
+          "weight": 2.82,
+          "shares": 211500
         },
         {
           "ticker": "V",
-          "weight": 2.69
+          "weight": 2.69,
+          "shares": 373600
         },
         {
           "ticker": "AMZN",
-          "weight": 2.68
+          "weight": 2.68,
+          "shares": 536900
         },
         {
           "ticker": "LLYVA",
-          "weight": 1.92
+          "weight": 1.92,
+          "shares": 1268448
         }
       ]
     },
@@ -800,55 +1784,68 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 17.11
+          "weight": 17.11,
+          "shares": 2898509
         },
         {
           "ticker": "DIS",
-          "weight": 14.26
+          "weight": 14.25,
+          "shares": 6566031
         },
         {
           "ticker": "NSIT",
-          "weight": 13.4
+          "weight": 13.4,
+          "shares": 4061739
         },
         {
           "ticker": "META",
-          "weight": 12.87
+          "weight": 12.87,
+          "shares": 1014874
         },
         {
           "ticker": "RBLX",
-          "weight": 11.24
+          "weight": 11.24,
+          "shares": 8764921
         },
         {
           "ticker": "V",
-          "weight": 10.12
+          "weight": 10.12,
+          "shares": 1312950
         },
         {
           "ticker": "LLYVK",
-          "weight": 5.85
+          "weight": 5.85,
+          "shares": 3903888
         },
         {
           "ticker": "EXPE",
-          "weight": 4.13
+          "weight": 4.13,
+          "shares": 1117156
         },
         {
           "ticker": "LYV",
-          "weight": 2.54
+          "weight": 2.54,
+          "shares": 885266
         },
         {
           "ticker": "LLYVA",
-          "weight": 2.45
+          "weight": 2.45,
+          "shares": 1658648
         },
         {
           "ticker": "AMZN",
-          "weight": 2.36
+          "weight": 2.36,
+          "shares": 563100
         },
         {
           "ticker": "TOST",
-          "weight": 1.89
+          "weight": 1.89,
+          "shares": 2597200
         },
         {
           "ticker": "RKT",
-          "weight": 1.78
+          "weight": 1.79,
+          "shares": 6728509
         }
       ]
     },
@@ -857,67 +1854,83 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 15.37
+          "weight": 15.38,
+          "shares": 3872500
         },
         {
           "ticker": "CRM",
-          "weight": 14.31
+          "weight": 14.31,
+          "shares": 2898509
         },
         {
           "ticker": "DIS",
-          "weight": 11.42
+          "weight": 11.42,
+          "shares": 5087631
         },
         {
           "ticker": "RBLX",
-          "weight": 9.01
+          "weight": 9.01,
+          "shares": 4732021
         },
         {
           "ticker": "META",
-          "weight": 8.33
+          "weight": 8.33,
+          "shares": 623374
         },
         {
           "ticker": "V",
-          "weight": 8.0
+          "weight": 8,
+          "shares": 1244950
         },
         {
           "ticker": "NSIT",
-          "weight": 7.15
+          "weight": 7.15,
+          "shares": 2861739
         },
         {
           "ticker": "LLYVK",
-          "weight": 5.87
+          "weight": 5.86,
+          "shares": 3991888
         },
         {
           "ticker": "SSD",
-          "weight": 3.95
+          "weight": 3.95,
+          "shares": 1406105
         },
         {
           "ticker": "RKT",
-          "weight": 3.88
+          "weight": 3.88,
+          "shares": 15125609
         },
         {
           "ticker": "MDB",
-          "weight": 2.62
+          "weight": 2.62,
+          "shares": 690500
         },
         {
           "ticker": "LLYVA",
-          "weight": 2.55
+          "weight": 2.55,
+          "shares": 1773148
         },
         {
-          "ticker": "COOP-OLD",
-          "weight": 2.44
+          "ticker": "COOP",
+          "weight": 2.44,
+          "shares": 904800
         },
         {
           "ticker": "LYV",
-          "weight": 2.42
+          "weight": 2.42,
+          "shares": 885266
         },
         {
           "ticker": "CBRE",
-          "weight": 1.49
+          "weight": 1.49,
+          "shares": 589391
         },
         {
           "ticker": "RDFN",
-          "weight": 1.18
+          "weight": 1.18,
+          "shares": 5805600
         }
       ]
     },
@@ -926,63 +1939,78 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 13.04
+          "weight": 13.04,
+          "shares": 3500500
         },
         {
           "ticker": "CRM",
-          "weight": 11.66
+          "weight": 11.66,
+          "shares": 2898509
         },
         {
           "ticker": "RBLX",
-          "weight": 10.07
+          "weight": 10.07,
+          "shares": 4283221
         },
         {
           "ticker": "META",
-          "weight": 9.58
+          "weight": 9.58,
+          "shares": 768674
         },
         {
           "ticker": "V",
-          "weight": 9.07
+          "weight": 9.07,
+          "shares": 1565850
         },
         {
           "ticker": "DIS",
-          "weight": 8.53
+          "weight": 8.53,
+          "shares": 4391931
         },
         {
           "ticker": "RKT",
-          "weight": 8.35
+          "weight": 8.35,
+          "shares": 25395627
         },
         {
           "ticker": "MDB",
-          "weight": 6.23
+          "weight": 6.23,
+          "shares": 2118200
         },
         {
           "ticker": "LLYVK",
-          "weight": 5.79
+          "weight": 5.79,
+          "shares": 3515888
         },
         {
           "ticker": "NSIT",
-          "weight": 4.37
+          "weight": 4.37,
+          "shares": 2271739
         },
         {
           "ticker": "SSD",
-          "weight": 3.43
+          "weight": 3.43,
+          "shares": 1207942
         },
         {
-          "ticker": "COOP-OLD",
-          "weight": 3.24
+          "ticker": "COOP",
+          "weight": 3.24,
+          "shares": 904800
         },
         {
           "ticker": "LLYVA",
-          "weight": 2.75
+          "weight": 2.75,
+          "shares": 1719548
         },
         {
           "ticker": "TOST",
-          "weight": 2.1
+          "weight": 2.1,
+          "shares": 3397200
         },
         {
           "ticker": "LYV",
-          "weight": 1.78
+          "weight": 1.78,
+          "shares": 640866
         }
       ]
     },
@@ -991,72 +2019,88 @@
       "holdings": [
         {
           "ticker": "CRM",
-          "weight": 11.35
+          "weight": 11.35,
+          "shares": 2994509
         },
         {
           "ticker": "AMZN",
-          "weight": 11.21
+          "weight": 11.21,
+          "shares": 3394300
         },
         {
           "ticker": "RKT",
-          "weight": 10.91
+          "weight": 10.91,
+          "shares": 39380652
         },
         {
           "ticker": "BLK",
-          "weight": 10.65
+          "weight": 10.65,
+          "shares": 695000
         },
         {
           "ticker": "META",
-          "weight": 9.9
+          "weight": 9.9,
+          "shares": 1047974
         },
         {
           "ticker": "V",
-          "weight": 8.63
+          "weight": 8.62,
+          "shares": 1718250
         },
         {
           "ticker": "MDB",
-          "weight": 8.45
+          "weight": 8.45,
+          "shares": 1406800
         },
         {
           "ticker": "RBLX",
-          "weight": 6.93
+          "weight": 6.93,
+          "shares": 5975821
         },
         {
           "ticker": "DIS",
-          "weight": 5.01
+          "weight": 5.01,
+          "shares": 3077931
         },
         {
           "ticker": "LLYVK",
-          "weight": 4.29
+          "weight": 4.29,
+          "shares": 3603988
         },
         {
           "ticker": "TOST",
-          "weight": 4.07
+          "weight": 4.07,
+          "shares": 8015277
         },
         {
           "ticker": "SSD",
-          "weight": 3.4
+          "weight": 3.4,
+          "shares": 1472142
         },
         {
           "ticker": "LLYVA",
-          "weight": 2.1
+          "weight": 2.1,
+          "shares": 1799319
         },
         {
           "ticker": "LYV",
-          "weight": 1.68
+          "weight": 1.68,
+          "shares": 823066
         },
         {
           "ticker": "NSIT",
-          "weight": 1.42
+          "weight": 1.42,
+          "shares": 1216592
         }
       ]
     }
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T22:38:28Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=VA",
-    "sharesSource": "dataroma",
-    "discoveredVia": "managers.php"
+    "lastFetchedAt": "2026-05-25T00:48:13Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001418814-valueact-holdings-l-p",
+    "sharesSource": "13f.info",
+    "discoveredVia": "managers.php",
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }

@@ -3,7 +3,7 @@
   "holdings": [
     {
       "ticker": "AAPL",
-      "weight": 22.9,
+      "weight": 22.91,
       "shares": 227917808
     },
     {
@@ -23,12 +23,12 @@
     },
     {
       "ticker": "CVX",
-      "weight": 6.92,
+      "weight": 6.91,
       "shares": 84375856
     },
     {
       "ticker": "OXY",
-      "weight": 6.83,
+      "weight": 6.82,
       "shares": 264941431
     },
     {
@@ -58,7 +58,7 @@
     },
     {
       "ticker": "KR",
-      "weight": 1.44,
+      "weight": 1.43,
       "shares": 50000000
     },
     {
@@ -74,15 +74,1399 @@
   ],
   "history": [
     {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 22.22
+        },
+        {
+          "ticker": "WFC",
+          "weight": 20.15
+        },
+        {
+          "ticker": "KO",
+          "weight": 16.12
+        },
+        {
+          "ticker": "IBM",
+          "weight": 10.69
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.09
+        },
+        {
+          "ticker": "PSX",
+          "weight": 5.68
+        },
+        {
+          "ticker": "WMT",
+          "weight": 3.29
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.0
+        },
+        {
+          "ticker": "DVA",
+          "weight": 2.46
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.07
+        },
+        {
+          "ticker": "LBRDA",
+          "weight": 1.82
+        },
+        {
+          "ticker": "DE",
+          "weight": 1.56
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.49
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 24.52
+        },
+        {
+          "ticker": "WFC",
+          "weight": 19.32
+        },
+        {
+          "ticker": "KO",
+          "weight": 15.43
+        },
+        {
+          "ticker": "IBM",
+          "weight": 10.49
+        },
+        {
+          "ticker": "AXP",
+          "weight": 7.84
+        },
+        {
+          "ticker": "PSX",
+          "weight": 5.32
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.92
+        },
+        {
+          "ticker": "DVA",
+          "weight": 2.54
+        },
+        {
+          "ticker": "WMT",
+          "weight": 2.5
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.97
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.82
+        },
+        {
+          "ticker": "DE",
+          "weight": 1.51
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.39
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 1.24
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 25.41
+        },
+        {
+          "ticker": "WFC",
+          "weight": 18.52
+        },
+        {
+          "ticker": "KO",
+          "weight": 14.76
+        },
+        {
+          "ticker": "IBM",
+          "weight": 11.25
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.46
+        },
+        {
+          "ticker": "PSX",
+          "weight": 5.67
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.18
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.33
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.22
+        },
+        {
+          "ticker": "DVA",
+          "weight": 2.22
+        },
+        {
+          "ticker": "DE",
+          "weight": 1.57
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.54
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 1.5
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 21.0
+        },
+        {
+          "ticker": "WFC",
+          "weight": 19.53
+        },
+        {
+          "ticker": "KO",
+          "weight": 12.25
+        },
+        {
+          "ticker": "IBM",
+          "weight": 9.96
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.3
+        },
+        {
+          "ticker": "PSX",
+          "weight": 5.15
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 4.91
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.23
+        },
+        {
+          "ticker": "DAL",
+          "weight": 2.18
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.01
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.94
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.83
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.72
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.59
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.57
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.56
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.29
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 20.0
+        },
+        {
+          "ticker": "WFC",
+          "weight": 18.06
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 12.57
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.48
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.11
+        },
+        {
+          "ticker": "IBM",
+          "weight": 7.61
+        },
+        {
+          "ticker": "PSX",
+          "weight": 4.32
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.96
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.09
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.87
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.77
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.73
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.71
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.7
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.41
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.38
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "KHC",
+          "weight": 18.75
+        },
+        {
+          "ticker": "WFC",
+          "weight": 17.43
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 12.6
+        },
+        {
+          "ticker": "KO",
+          "weight": 12.06
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.59
+        },
+        {
+          "ticker": "IBM",
+          "weight": 5.59
+        },
+        {
+          "ticker": "PSX",
+          "weight": 4.49
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.97
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 2.14
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.02
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.99
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.92
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.72
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.68
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.63
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.59
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.43
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.41
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "WFC",
+          "weight": 15.83
+        },
+        {
+          "ticker": "KHC",
+          "weight": 15.61
+        },
+        {
+          "ticker": "AAPL",
+          "weight": 12.78
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.13
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.64
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.48
+        },
+        {
+          "ticker": "PSX",
+          "weight": 4.57
+        },
+        {
+          "ticker": "IBM",
+          "weight": 3.32
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.82
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.12
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.91
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.65
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.65
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.61
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.58
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.5
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.42
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.38
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 16.15
+        },
+        {
+          "ticker": "WFC",
+          "weight": 16.05
+        },
+        {
+          "ticker": "KHC",
+          "weight": 14.61
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.57
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.59
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.69
+        },
+        {
+          "ticker": "PSX",
+          "weight": 4.71
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.69
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.1
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.89
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.8
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.72
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.65
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.61
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.61
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.38
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.18
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 23.3
+        },
+        {
+          "ticker": "WFC",
+          "weight": 13.87
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.81
+        },
+        {
+          "ticker": "KHC",
+          "weight": 11.76
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.07
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.2
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.66
+        },
+        {
+          "ticker": "PSX",
+          "weight": 2.54
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.31
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.86
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.7
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.6
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.58
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.48
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.47
+        },
+        {
+          "ticker": "AAL",
+          "weight": 1.39
+        },
+        {
+          "ticker": "MON",
+          "weight": 1.28
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 26.47
+        },
+        {
+          "ticker": "WFC",
+          "weight": 14.22
+        },
+        {
+          "ticker": "KHC",
+          "weight": 11.61
+        },
+        {
+          "ticker": "BAC",
+          "weight": 10.86
+        },
+        {
+          "ticker": "KO",
+          "weight": 9.96
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.43
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.86
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.39
+        },
+        {
+          "ticker": "PSX",
+          "weight": 2.21
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.98
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.79
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.66
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.63
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.52
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.25
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 29.04
+        },
+        {
+          "ticker": "BAC",
+          "weight": 13.17
+        },
+        {
+          "ticker": "WFC",
+          "weight": 11.85
+        },
+        {
+          "ticker": "KO",
+          "weight": 9.41
+        },
+        {
+          "ticker": "KHC",
+          "weight": 9.14
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.23
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.36
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.1
+        },
+        {
+          "ticker": "GS",
+          "weight": 2.1
+        },
+        {
+          "ticker": "JPM",
+          "weight": 2.05
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.02
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.93
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.78
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.41
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.22
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.18
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 23.77
+        },
+        {
+          "ticker": "BAC",
+          "weight": 13.33
+        },
+        {
+          "ticker": "WFC",
+          "weight": 11.87
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.43
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.72
+        },
+        {
+          "ticker": "KHC",
+          "weight": 8.46
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.57
+        },
+        {
+          "ticker": "JPM",
+          "weight": 2.95
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.3
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.09
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.97
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.85
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.54
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.46
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.21
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.2
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.16
+        },
+        {
+          "ticker": "UAL",
+          "weight": 1.11
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 26.97
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.07
+        },
+        {
+          "ticker": "WFC",
+          "weight": 11.26
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.66
+        },
+        {
+          "ticker": "AXP",
+          "weight": 9.43
+        },
+        {
+          "ticker": "KHC",
+          "weight": 6.05
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.54
+        },
+        {
+          "ticker": "JPM",
+          "weight": 3.43
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.54
+        },
+        {
+          "ticker": "BK",
+          "weight": 2.32
+        },
+        {
+          "ticker": "DAL",
+          "weight": 2.08
+        },
+        {
+          "ticker": "GS",
+          "weight": 2.0
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.58
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.53
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.34
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.19
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 26.39
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.37
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.88
+        },
+        {
+          "ticker": "WFC",
+          "weight": 10.36
+        },
+        {
+          "ticker": "AXP",
+          "weight": 10.0
+        },
+        {
+          "ticker": "KHC",
+          "weight": 5.4
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.71
+        },
+        {
+          "ticker": "JPM",
+          "weight": 3.55
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.57
+        },
+        {
+          "ticker": "DAL",
+          "weight": 2.15
+        },
+        {
+          "ticker": "GS",
+          "weight": 2.01
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.91
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.49
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.46
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.45
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.16
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.15
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 28.71
+        },
+        {
+          "ticker": "BAC",
+          "weight": 13.94
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.22
+        },
+        {
+          "ticker": "WFC",
+          "weight": 9.83
+        },
+        {
+          "ticker": "AXP",
+          "weight": 9.24
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.69
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.78
+        },
+        {
+          "ticker": "JPM",
+          "weight": 3.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.6
+        },
+        {
+          "ticker": "DAL",
+          "weight": 2.1
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.96
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.89
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.49
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.4
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.26
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.15
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 32.72
+        },
+        {
+          "ticker": "BAC",
+          "weight": 14.81
+        },
+        {
+          "ticker": "KO",
+          "weight": 10.06
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.58
+        },
+        {
+          "ticker": "WFC",
+          "weight": 7.9
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.76
+        },
+        {
+          "ticker": "JPM",
+          "weight": 3.77
+        },
+        {
+          "ticker": "USB",
+          "weight": 3.57
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.66
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.88
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.82
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.32
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.32
+        },
+        {
+          "ticker": "GS",
+          "weight": 1.25
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.25
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.2
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 39.16
+        },
+        {
+          "ticker": "BAC",
+          "weight": 12.34
+        },
+        {
+          "ticker": "KO",
+          "weight": 11.12
+        },
+        {
+          "ticker": "AXP",
+          "weight": 8.15
+        },
+        {
+          "ticker": "WFC",
+          "weight": 5.83
+        },
+        {
+          "ticker": "KHC",
+          "weight": 5.06
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.28
+        },
+        {
+          "ticker": "JPM",
+          "weight": 3.26
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.87
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.82
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.69
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.49
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.45
+        },
+        {
+          "ticker": "DAL",
+          "weight": 1.29
+        },
+        {
+          "ticker": "LUV",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 48.34
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.87
+        },
+        {
+          "ticker": "KO",
+          "weight": 9.66
+        },
+        {
+          "ticker": "AXP",
+          "weight": 7.8
+        },
+        {
+          "ticker": "KHC",
+          "weight": 5.61
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.66
+        },
+        {
+          "ticker": "WFC",
+          "weight": 3.29
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.63
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.63
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.51
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.44
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.43
+        },
+        {
+          "ticker": "JPM",
+          "weight": 1.13
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 52.81
+        },
+        {
+          "ticker": "BAC",
+          "weight": 11.75
+        },
+        {
+          "ticker": "KO",
+          "weight": 9.54
+        },
+        {
+          "ticker": "AXP",
+          "weight": 7.34
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.71
+        },
+        {
+          "ticker": "MCO",
+          "weight": 3.45
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.28
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.57
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.49
+        },
+        {
+          "ticker": "WFC",
+          "weight": 1.45
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.27
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.2
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "AAPL",
+          "weight": 48.02
+        },
+        {
+          "ticker": "BAC",
+          "weight": 12.49
+        },
+        {
+          "ticker": "KO",
+          "weight": 8.95
+        },
+        {
+          "ticker": "AXP",
+          "weight": 7.48
+        },
+        {
+          "ticker": "KHC",
+          "weight": 4.6
+        },
+        {
+          "ticker": "VZ",
+          "weight": 3.52
+        },
+        {
+          "ticker": "MCO",
+          "weight": 2.92
+        },
+        {
+          "ticker": "USB",
+          "weight": 2.49
+        },
+        {
+          "ticker": "DVA",
+          "weight": 1.73
+        },
+        {
+          "ticker": "CVX",
+          "weight": 1.67
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 1.41
+        },
+        {
+          "ticker": "BK",
+          "weight": 1.25
+        },
+        {
+          "ticker": "GM",
+          "weight": 1.23
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.13
+        },
+        {
+          "ticker": "ABBV",
+          "weight": 1.12
+        }
+      ]
+    },
+    {
       "asOf": "2021-03-31",
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 44.96
+          "weight": 44.94
         },
         {
           "ticker": "BAC",
-          "weight": 16.2
+          "weight": 16.21
         },
         {
           "ticker": "AXP",
@@ -90,7 +1474,7 @@
         },
         {
           "ticker": "KO",
-          "weight": 8.75
+          "weight": 8.74
         },
         {
           "ticker": "KHC",
@@ -114,10 +1498,10 @@
         },
         {
           "ticker": "GM",
-          "weight": 1.59
+          "weight": 1.6
         },
         {
-          "ticker": "BNY",
+          "ticker": "BK",
           "weight": 1.42
         },
         {
@@ -131,55 +1515,51 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 45.56
+          "weight": 46.08
         },
         {
           "ticker": "BAC",
-          "weight": 15.62
+          "weight": 15.79
         },
         {
           "ticker": "AXP",
-          "weight": 9.4
+          "weight": 9.5
         },
         {
           "ticker": "KO",
-          "weight": 8.12
+          "weight": 8.21
         },
         {
           "ticker": "KHC",
-          "weight": 4.98
+          "weight": 5.04
         },
         {
           "ticker": "MCO",
-          "weight": 3.35
+          "weight": 3.39
         },
         {
           "ticker": "VZ",
-          "weight": 3.34
+          "weight": 3.38
         },
         {
           "ticker": "USB",
-          "weight": 2.76
+          "weight": 2.78
         },
         {
           "ticker": "DVA",
-          "weight": 1.63
+          "weight": 1.65
         },
         {
           "ticker": "CHTR",
+          "weight": 1.43
+        },
+        {
+          "ticker": "BK",
           "weight": 1.41
         },
         {
-          "ticker": "BNY",
-          "weight": 1.4
-        },
-        {
           "ticker": "GM",
-          "weight": 1.33
-        },
-        {
-          "ticker": "VRSN",
-          "weight": 1.1
+          "weight": 1.35
         }
       ]
     },
@@ -200,7 +1580,7 @@
         },
         {
           "ticker": "KO",
-          "weight": 7.89
+          "weight": 7.9
         },
         {
           "ticker": "KHC",
@@ -212,7 +1592,7 @@
         },
         {
           "ticker": "VZ",
-          "weight": 3.22
+          "weight": 3.23
         },
         {
           "ticker": "USB",
@@ -223,7 +1603,7 @@
           "weight": 1.58
         },
         {
-          "ticker": "BNY",
+          "ticker": "BK",
           "weight": 1.41
         },
         {
@@ -253,11 +1633,11 @@
         },
         {
           "ticker": "KO",
-          "weight": 7.8
+          "weight": 7.79
         },
         {
           "ticker": "KHC",
-          "weight": 3.84
+          "weight": 3.85
         },
         {
           "ticker": "MCO",
@@ -265,7 +1645,7 @@
         },
         {
           "ticker": "VZ",
-          "weight": 2.71
+          "weight": 2.72
         },
         {
           "ticker": "USB",
@@ -276,7 +1656,7 @@
           "weight": 1.48
         },
         {
-          "ticker": "BNY",
+          "ticker": "BK",
           "weight": 1.38
         },
         {
@@ -285,7 +1665,7 @@
         },
         {
           "ticker": "GM",
-          "weight": 1.15
+          "weight": 1.16
         }
       ]
     },
@@ -294,7 +1674,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 47.89
+          "weight": 47.88
         },
         {
           "ticker": "BAC",
@@ -334,11 +1714,11 @@
         },
         {
           "ticker": "DVA",
-          "weight": 1.25
+          "weight": 1.26
         },
         {
           "ticker": "HPQ",
-          "weight": 1.16
+          "weight": 1.17
         }
       ]
     },
@@ -347,7 +1727,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 45.45
+          "weight": 45.46
         },
         {
           "ticker": "BAC",
@@ -375,7 +1755,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 2.5
+          "weight": 2.49
         },
         {
           "ticker": "USB",
@@ -383,15 +1763,15 @@
         },
         {
           "ticker": "ATVI",
-          "weight": 1.97
+          "weight": 1.98
         },
         {
           "ticker": "HPQ",
           "weight": 1.27
         },
         {
-          "ticker": "BNY",
-          "weight": 1.13
+          "ticker": "BK",
+          "weight": 1.12
         }
       ]
     },
@@ -400,7 +1780,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 46.8
+          "weight": 46.79
         },
         {
           "ticker": "BAC",
@@ -408,7 +1788,7 @@
         },
         {
           "ticker": "CVX",
-          "weight": 8.98
+          "weight": 8.99
         },
         {
           "ticker": "KO",
@@ -420,7 +1800,7 @@
         },
         {
           "ticker": "OXY",
-          "weight": 4.51
+          "weight": 4.52
         },
         {
           "ticker": "KHC",
@@ -465,7 +1845,7 @@
         },
         {
           "ticker": "KO",
-          "weight": 9.67
+          "weight": 9.66
         },
         {
           "ticker": "AXP",
@@ -473,7 +1853,7 @@
         },
         {
           "ticker": "KHC",
-          "weight": 5.03
+          "weight": 5.04
         },
         {
           "ticker": "OXY",
@@ -494,7 +1874,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 51.53
+          "weight": 51.51
         },
         {
           "ticker": "BAC",
@@ -506,11 +1886,11 @@
         },
         {
           "ticker": "KO",
-          "weight": 8.46
+          "weight": 8.47
         },
         {
           "ticker": "CVX",
-          "weight": 7.38
+          "weight": 7.37
         },
         {
           "ticker": "OXY",
@@ -518,11 +1898,11 @@
         },
         {
           "ticker": "KHC",
-          "weight": 4.29
+          "weight": 4.3
         },
         {
           "ticker": "MCO",
-          "weight": 2.57
+          "weight": 2.58
         },
         {
           "ticker": "ATVI",
@@ -547,7 +1927,7 @@
         },
         {
           "ticker": "AXP",
-          "weight": 8.32
+          "weight": 8.31
         },
         {
           "ticker": "KO",
@@ -555,11 +1935,11 @@
         },
         {
           "ticker": "CVX",
-          "weight": 6.09
+          "weight": 6.1
         },
         {
           "ticker": "OXY",
-          "weight": 4.14
+          "weight": 4.15
         },
         {
           "ticker": "KHC",
@@ -592,7 +1972,7 @@
         },
         {
           "ticker": "AXP",
-          "weight": 7.92
+          "weight": 7.93
         },
         {
           "ticker": "KO",
@@ -600,7 +1980,7 @@
         },
         {
           "ticker": "CVX",
-          "weight": 6.51
+          "weight": 6.52
         },
         {
           "ticker": "OXY",
@@ -612,11 +1992,11 @@
         },
         {
           "ticker": "MCO",
-          "weight": 2.74
+          "weight": 2.73
         },
         {
           "ticker": "DVA",
-          "weight": 1.19
+          "weight": 1.2
         }
       ]
     },
@@ -625,43 +2005,39 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 53.74
+          "weight": 54.5
         },
         {
           "ticker": "BAC",
-          "weight": 10.72
+          "weight": 10.87
         },
         {
           "ticker": "AXP",
-          "weight": 8.75
+          "weight": 8.88
         },
         {
           "ticker": "KO",
-          "weight": 7.27
+          "weight": 7.37
         },
         {
           "ticker": "CVX",
-          "weight": 5.79
+          "weight": 5.88
         },
         {
           "ticker": "OXY",
-          "weight": 4.49
+          "weight": 4.55
         },
         {
           "ticker": "KHC",
-          "weight": 3.71
+          "weight": 3.76
         },
         {
           "ticker": "MCO",
-          "weight": 2.97
-        },
-        {
-          "ticker": "CB",
-          "weight": 1.4
+          "weight": 3.01
         },
         {
           "ticker": "DVA",
-          "weight": 1.16
+          "weight": 1.18
         }
       ]
     },
@@ -678,7 +2054,7 @@
         },
         {
           "ticker": "AXP",
-          "weight": 11.29
+          "weight": 11.28
         },
         {
           "ticker": "KO",
@@ -694,7 +2070,7 @@
         },
         {
           "ticker": "KHC",
-          "weight": 3.92
+          "weight": 3.93
         },
         {
           "ticker": "MCO",
@@ -735,7 +2111,7 @@
         },
         {
           "ticker": "CVX",
-          "weight": 7.23
+          "weight": 7.22
         },
         {
           "ticker": "OXY",
@@ -751,7 +2127,7 @@
         },
         {
           "ticker": "CB",
-          "weight": 2.68
+          "weight": 2.69
         },
         {
           "ticker": "DVA",
@@ -759,7 +2135,7 @@
         },
         {
           "ticker": "C",
-          "weight": 1.36
+          "weight": 1.37
         }
       ]
     },
@@ -768,7 +2144,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 28.5
+          "weight": 28.51
         },
         {
           "ticker": "AXP",
@@ -776,7 +2152,7 @@
         },
         {
           "ticker": "BAC",
-          "weight": 12.9
+          "weight": 12.91
         },
         {
           "ticker": "KO",
@@ -784,7 +2160,7 @@
         },
         {
           "ticker": "CVX",
-          "weight": 7.13
+          "weight": 7.12
         },
         {
           "ticker": "OXY",
@@ -792,7 +2168,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 4.78
+          "weight": 4.77
         },
         {
           "ticker": "KHC",
@@ -821,7 +2197,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 30.28,
+          "weight": 30.27,
           "shares": 300000000
         },
         {
@@ -851,7 +2227,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 4.7,
+          "weight": 4.71,
           "shares": 24669778
         },
         {
@@ -866,7 +2242,7 @@
         },
         {
           "ticker": "DVA",
-          "weight": 2.17,
+          "weight": 2.18,
           "shares": 36095570
         },
         {
@@ -891,7 +2267,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 27.47,
+          "weight": 27.46,
           "shares": 300000000
         },
         {
@@ -940,14 +2316,14 @@
           "shares": 35142479
         },
         {
-          "ticker": "VRSN",
-          "weight": 1.39,
-          "shares": 13289880
-        },
-        {
           "ticker": "KR",
           "weight": 1.39,
           "shares": 50000000
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.39,
+          "shares": 13289880
         },
         {
           "ticker": "V",
@@ -991,7 +2367,7 @@
         },
         {
           "ticker": "MCO",
-          "weight": 5.21,
+          "weight": 5.2,
           "shares": 24669778
         },
         {
@@ -1021,12 +2397,12 @@
         },
         {
           "ticker": "KR",
-          "weight": 1.5,
+          "weight": 1.51,
           "shares": 50000000
         },
         {
           "ticker": "V",
-          "weight": 1.23,
+          "weight": 1.24,
           "shares": 8297460
         },
         {
@@ -1041,17 +2417,17 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 24.74,
+          "weight": 24.75,
           "shares": 238212764
         },
         {
           "ticker": "AXP",
-          "weight": 20.55,
+          "weight": 20.54,
           "shares": 151610700
         },
         {
           "ticker": "BAC",
-          "weight": 11.95,
+          "weight": 11.96,
           "shares": 568070012
         },
         {
@@ -1066,7 +2442,7 @@
         },
         {
           "ticker": "OXY",
-          "weight": 5.1,
+          "weight": 5.11,
           "shares": 264941431
         },
         {
@@ -1091,12 +2467,12 @@
         },
         {
           "ticker": "DVA",
-          "weight": 1.75,
+          "weight": 1.74,
           "shares": 32160579
         },
         {
           "ticker": "KR",
-          "weight": 1.37,
+          "weight": 1.38,
           "shares": 50000000
         },
         {
@@ -1116,7 +2492,7 @@
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 24.62,
+          "weight": 24.63,
           "shares": 227917808
         },
         {
@@ -1136,7 +2512,7 @@
         },
         {
           "ticker": "CVX",
-          "weight": 7.89,
+          "weight": 7.88,
           "shares": 130156362
         },
         {
@@ -1166,7 +2542,7 @@
         },
         {
           "ticker": "DVA",
-          "weight": 1.44,
+          "weight": 1.43,
           "shares": 31759065
         },
         {
@@ -1176,7 +2552,7 @@
         },
         {
           "ticker": "V",
-          "weight": 1.15,
+          "weight": 1.16,
           "shares": 8297460
         }
       ]
@@ -1184,10 +2560,10 @@
   ],
   "_provenance": {
     "primarySource": "dataroma",
-    "lastFetchedAt": "2026-05-24T00:51:29Z",
-    "lastFetchedFrom": "https://www.dataroma.com/m/holdings.php?m=BRK",
+    "lastFetchedAt": "2026-05-24T23:38:27Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001067983-berkshire-hathaway-inc",
     "sharesSource": "13f.info",
     "migratedFromLegacy": false,
-    "backfillRun": "INVESTORS-BACKFILL --years=max"
+    "backfillRun": "INVESTORS-BACKFILL --years=10 --force"
   }
 }
