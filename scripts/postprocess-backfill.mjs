@@ -110,6 +110,10 @@ const FOREIGN_TO_US = {
   'BKAA.SG':     'BRK.B',       // Berkshire — Stuttgart code; institutional positions
                                 // are almost always Class B. Conservative best-guess
                                 // — flag in review log for double-check.
+
+  // From dataroma-top20 Web Archive captures (2016-2018 era top-20 aggregates):
+  'ABI.BR':      'BUD',         // Anheuser-Busch InBev Brussels → NYSE ADR
+  'BATS.L':      'BTI',         // British American Tobacco London → NYSE ADR
 };
 
 // Tickers that are NOT mapped (foreign-only, unclear, or non-existent on US

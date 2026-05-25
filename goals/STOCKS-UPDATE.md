@@ -102,6 +102,46 @@ The set of tickers to ensure coverage for is the **union** of:
    Investing.com. Sleep 1–2s between requests to the same domain. Retry 3×
    with exponential backoff on 429/503. Adjusted Close only.
 
+   **Crypto exception.** For tickers matching `-USD$` (e.g., `BTC-USD`,
+   `ETH-USD`) OR tagged `crypto` in `etfs-index.json`: skip stockanalysis.com
+   (no crypto coverage under `/stocks/` or `/etf/` paths) and go directly to:
+   - **Yahoo Finance:** `https://finance.yahoo.com/quote/{ticker}/history?interval=1mo`
+     — returns monthly closes since the asset existed (BTC-USD: 2014-09+).
+   - **Fallback** if Yahoo fails: CoinGecko free API,
+     `https://api.coingecko.com/api/v3/coins/{slug}/market_chart?vs_currency=usd&days=max&interval=daily`
+     (slug = `bitcoin`, `ethereum`, etc.; pick monthly first-of-month closes
+     from the daily series).
+   These tickers are stored in `prices/<YYYY>.json` the same way as stocks
+   (`"BTC-USD": { "2024-01-01": 42500, ... }`).
+
+3.5 **Delisted-ticker fallback via Wayback Machine.** When all sources in
+   step 3 return no data for a ticker, the ticker is likely **delisted,
+   acquired, or renamed** (AET → CVS, AGN → ABBV, AGU → NTR, TWTR → private,
+   AABA → liquidated, ADS → BFH, ABC → COR, etc.). These tickers still appear
+   in historical 13F holdings and need historical prices, but no current API
+   has them. Use Wayback Machine of the original primary source:
+
+   ```
+   For ticker T that failed step 3:
+     1. List Wayback captures via CDX API:
+        https://web.archive.org/cdx/search/cdx?url=stockanalysis.com/stocks/{lower}/history/&output=json&fl=timestamp,statuscode&filter=statuscode:200
+     2. Pick a capture from MID-LIFE of the ticker (median between earliestAsOf
+        of any holding referencing T and the last-traded date — typically a date
+        when the page would have shown a long history table).
+     3. Fetch https://web.archive.org/web/{TIMESTAMP}/https://stockanalysis.com/stocks/{lower}/history/
+     4. Parse the historical-prices table the same way as live fetches.
+     5. Extract Adjusted Close monthly closes covering the full required range.
+     6. Write to prices/<Y>.json with note `recovered-from-archive` in goal log.
+     7. If CDX returns no 200-status captures for that path → also try
+        Yahoo Finance archived pages (web.archive.org of finance.yahoo.com/quote/{T}/history).
+     8. Still nothing → log `delisted-no-archive` and skip.
+   ```
+
+   Polite pacing on web.archive.org: same 1-2s rule, since it's a separate
+   domain. Concurrency: up to 3 archive fetches in parallel (different
+   tickers, all going to web.archive.org host counts as same domain — so
+   serialize within Wayback).
+
 4. **Write by year.** Bucket all `(ticker, YYYY-MM-01, price)` triples by year.
    For each affected year, load `prices/<Y>.json` (or start with `{}` if new),
    merge in updates, sort tickers alphabetically and dates newest-first, write

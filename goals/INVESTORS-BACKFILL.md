@@ -234,17 +234,53 @@ means "take the first 20 rows by % of Portfolio."
 - Dual-class shares stay separate (no merging).
 - Historical aggregate snapshots are **not** available on DataRoma directly —
   the page only shows current state. To populate `history` for previous
-  quarters, the goal should use Web Archive captures of the same URL,
-  picked near each 13F deadline (`+0 to +60 days` from the quarter-end):
-    - `2026-Q1` (asOf `2026-03-31`) → archive capture between 2026-05-15 and 2026-07-15
-    - `2025-Q4` (asOf `2025-12-31`) → archive capture between 2026-02-14 and 2026-04-14
-    - etc.
-  If a quarter has no archive capture in the window, widen by ±30 days. If
-  still missing, skip that snapshot and log it (don't fail the whole run).
-- Always write the canonical quarter-end `asOf` (`YYYY-03-31` / `06-30` /
-  `09-30` / `12-31`), even if the actual archive capture is from a few weeks
-  later — the app's chain-link math uses "closest available price ≤ asOf"
-  and the ~1-month offset stays within 5% precision.
+  quarters, use Web Archive captures of the same URL.
+
+**Capture selection algorithm — do this, not the old ±30-day heuristic:**
+
+1. **Inventory every existing capture** via Wayback CDX API:
+   ```
+   GET https://web.archive.org/cdx/search/cdx
+     ?url=dataroma.com/m/g/portfolio.php
+     &output=json
+     &fl=timestamp,statuscode
+     &filter=statuscode:200
+     &from=20150101&to=20261231
+   ```
+   This returns the full list of `[timestamp, 200]` pairs for the page — once
+   per goal run, ~30-100 entries total. Cache it; do not re-fetch per quarter.
+
+2. **For each target quarter `Q` (asOf = quarter-end date):**
+   - Define `filing_deadline(Q)` = quarter-end + 45 days (the SEC 13F deadline:
+     May 15 / Aug 14 / Nov 14 / Feb 14).
+   - Define `valid_window(Q)` = `[filing_deadline(Q), filing_deadline(Q+1)]`.
+     This is the window where the DataRoma page reflects Q's data (after all
+     Q filings are processed) and NOT yet Q+1's data.
+   - Pick the **earliest** capture timestamp `T` from the CDX inventory such
+     that `filing_deadline(Q) <= T < filing_deadline(Q+1)`. Earliest because
+     it's closest to when the data was "fresh".
+   - If no capture exists in `valid_window(Q)`, widen lower bound by 30 days
+     (accept captures up to 30 days before deadline; DataRoma sometimes
+     pre-publishes). If still nothing, log `(Q, no-capture-in-filing-window)`
+     to `/tmp/investors-backfill-log.txt` and skip — that's a genuine gap.
+
+3. **Fetch the chosen capture:**
+   ```
+   GET https://web.archive.org/web/{T}/https://www.dataroma.com/m/g/portfolio.php
+   ```
+   Parse the same way as a live fetch (top-N rows by % of Portfolio).
+
+4. **Write the canonical quarter-end `asOf`** (`YYYY-03-31` / `06-30` / `09-30`
+   / `12-31`), even if the actual capture is some days after the deadline.
+   Chain-link math uses "closest available price ≤ asOf" and the offset
+   stays within 5% precision.
+
+**Why this is better than the old heuristic:** the old `±30 days from deadline`
+rule missed real captures (e.g., for 2018-Q3 the only valid capture was
+2019-02-28, ~108 days after the 2018-11-14 filing deadline — within the
+filing_window but outside the ±30 widen). The new algorithm enumerates the
+truth (what captures actually exist) and assigns them by filing-window
+semantics, not by arbitrary distance.
 
 ### Phase C — Update `meta.json` (REQUIRED, not optional)
 
