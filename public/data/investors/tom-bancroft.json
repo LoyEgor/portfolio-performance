@@ -1,0 +1,1677 @@
+{
+  "id": "tom-bancroft",
+  "holdings": [
+    {
+      "ticker": "CHTR",
+      "weight": 26.88,
+      "shares": 164000
+    },
+    {
+      "ticker": "DPZ",
+      "weight": 12.11,
+      "shares": 37000
+    },
+    {
+      "ticker": "LAMR",
+      "weight": 11.93,
+      "shares": 120000
+    },
+    {
+      "ticker": "BBWI",
+      "weight": 11.58,
+      "shares": 734355
+    },
+    {
+      "ticker": "CDW",
+      "weight": 10.7,
+      "shares": 100000
+    },
+    {
+      "ticker": "BELFB",
+      "weight": 7.33,
+      "shares": 55000
+    },
+    {
+      "ticker": "FLUT",
+      "weight": 6.99,
+      "shares": 41422
+    },
+    {
+      "ticker": "LMB",
+      "weight": 6.25,
+      "shares": 102239
+    },
+    {
+      "ticker": "WHD",
+      "weight": 5.07,
+      "shares": 141286
+    },
+    {
+      "ticker": "SVV",
+      "weight": 1.17,
+      "shares": 159110
+    }
+  ],
+  "history": [
+    {
+      "asOf": "2016-03-31",
+      "holdings": [
+        {
+          "ticker": "IRM",
+          "weight": 22.94
+        },
+        {
+          "ticker": "CDW",
+          "weight": 21.45
+        },
+        {
+          "ticker": "VMI",
+          "weight": 18.48
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 15.76
+        },
+        {
+          "ticker": "CVA",
+          "weight": 8.21
+        },
+        {
+          "ticker": "MMS",
+          "weight": 5.13
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 4.4
+        },
+        {
+          "ticker": "LVNTA",
+          "weight": 3.63
+        }
+      ]
+    },
+    {
+      "asOf": "2016-06-30",
+      "holdings": [
+        {
+          "ticker": "IRM",
+          "weight": 17.48
+        },
+        {
+          "ticker": "CDW",
+          "weight": 16.21
+        },
+        {
+          "ticker": "VMI",
+          "weight": 16.11
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 13.8
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 12.25
+        },
+        {
+          "ticker": "COMM",
+          "weight": 8.52
+        },
+        {
+          "ticker": "CACC",
+          "weight": 6.77
+        },
+        {
+          "ticker": "MMS",
+          "weight": 4.36
+        },
+        {
+          "ticker": "LVNTA",
+          "weight": 2.78
+        },
+        {
+          "ticker": "VRSN",
+          "weight": 1.7
+        }
+      ]
+    },
+    {
+      "asOf": "2016-09-30",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 21.39
+        },
+        {
+          "ticker": "VMI",
+          "weight": 16.21
+        },
+        {
+          "ticker": "CDW",
+          "weight": 15.25
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 14.92
+        },
+        {
+          "ticker": "IRM",
+          "weight": 11.42
+        },
+        {
+          "ticker": "COMM",
+          "weight": 10.72
+        },
+        {
+          "ticker": "CACC",
+          "weight": 5.67
+        },
+        {
+          "ticker": "LVNTA",
+          "weight": 3.01
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.42
+        }
+      ]
+    },
+    {
+      "asOf": "2016-12-31",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 21.59
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 18.38
+        },
+        {
+          "ticker": "CDW",
+          "weight": 17.36
+        },
+        {
+          "ticker": "VMI",
+          "weight": 16.96
+        },
+        {
+          "ticker": "COMM",
+          "weight": 13.24
+        },
+        {
+          "ticker": "IRM",
+          "weight": 9.88
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.4
+        },
+        {
+          "ticker": "LEXEA",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2017-03-31",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 25.92
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 19.15
+        },
+        {
+          "ticker": "CDW",
+          "weight": 18.84
+        },
+        {
+          "ticker": "COMM",
+          "weight": 14.55
+        },
+        {
+          "ticker": "IRM",
+          "weight": 10.63
+        },
+        {
+          "ticker": "VMI",
+          "weight": 8.03
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.52
+        },
+        {
+          "ticker": "LEXEA",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2017-06-30",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 29.21
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 19.27
+        },
+        {
+          "ticker": "CDW",
+          "weight": 18.76
+        },
+        {
+          "ticker": "COMM",
+          "weight": 12.18
+        },
+        {
+          "ticker": "IRM",
+          "weight": 10.51
+        },
+        {
+          "ticker": "VMI",
+          "weight": 7.1
+        },
+        {
+          "ticker": "LEXEA",
+          "weight": 1.55
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.42
+        }
+      ]
+    },
+    {
+      "asOf": "2017-09-30",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 27.58
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 20.46
+        },
+        {
+          "ticker": "CDW",
+          "weight": 19.46
+        },
+        {
+          "ticker": "COMM",
+          "weight": 12.0
+        },
+        {
+          "ticker": "IRM",
+          "weight": 11.69
+        },
+        {
+          "ticker": "VMI",
+          "weight": 7.37
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.44
+        }
+      ]
+    },
+    {
+      "asOf": "2017-12-31",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 23.36
+        },
+        {
+          "ticker": "CDW",
+          "weight": 21.0
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 20.04
+        },
+        {
+          "ticker": "IRM",
+          "weight": 10.22
+        },
+        {
+          "ticker": "VMI",
+          "weight": 7.92
+        },
+        {
+          "ticker": "COMM",
+          "weight": 7.85
+        },
+        {
+          "ticker": "LB",
+          "weight": 6.85
+        },
+        {
+          "ticker": "MMS",
+          "weight": 1.61
+        },
+        {
+          "ticker": "CACC",
+          "weight": 1.14
+        }
+      ]
+    },
+    {
+      "asOf": "2018-03-31",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 20.78
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 17.94
+        },
+        {
+          "ticker": "CDW",
+          "weight": 15.61
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 13.21
+        },
+        {
+          "ticker": "LB",
+          "weight": 12.56
+        },
+        {
+          "ticker": "IRM",
+          "weight": 7.78
+        },
+        {
+          "ticker": "COMM",
+          "weight": 7.13
+        },
+        {
+          "ticker": "VMI",
+          "weight": 3.42
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.56
+        }
+      ]
+    },
+    {
+      "asOf": "2018-06-30",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 18.11
+        },
+        {
+          "ticker": "LB",
+          "weight": 16.33
+        },
+        {
+          "ticker": "CDW",
+          "weight": 14.91
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 14.19
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 13.82
+        },
+        {
+          "ticker": "IRM",
+          "weight": 8.43
+        },
+        {
+          "ticker": "COMM",
+          "weight": 7.0
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 6.02
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.2
+        }
+      ]
+    },
+    {
+      "asOf": "2018-09-30",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 17.87
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 16.22
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 15.86
+        },
+        {
+          "ticker": "CDW",
+          "weight": 14.85
+        },
+        {
+          "ticker": "LB",
+          "weight": 13.59
+        },
+        {
+          "ticker": "IRM",
+          "weight": 7.52
+        },
+        {
+          "ticker": "COMM",
+          "weight": 6.67
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 6.06
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.35
+        }
+      ]
+    },
+    {
+      "asOf": "2018-12-31",
+      "holdings": [
+        {
+          "ticker": "QRTEA",
+          "weight": 20.56
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 16.49
+        },
+        {
+          "ticker": "CDW",
+          "weight": 15.62
+        },
+        {
+          "ticker": "LB",
+          "weight": 14.07
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 13.53
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 11.53
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.78
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.43
+        }
+      ]
+    },
+    {
+      "asOf": "2019-03-31",
+      "holdings": [
+        {
+          "ticker": "ZBRA",
+          "weight": 18.97
+        },
+        {
+          "ticker": "CDW",
+          "weight": 16.24
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 15.03
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 14.71
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 13.66
+        },
+        {
+          "ticker": "LB",
+          "weight": 13.21
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.59
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2019-06-30",
+      "holdings": [
+        {
+          "ticker": "ZBRA",
+          "weight": 18.09
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 17.94
+        },
+        {
+          "ticker": "CDW",
+          "weight": 17.84
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 12.58
+        },
+        {
+          "ticker": "LB",
+          "weight": 12.17
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 10.25
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.13
+        },
+        {
+          "ticker": "FOXA",
+          "weight": 1.52
+        },
+        {
+          "ticker": "CAAP",
+          "weight": 1.48
+        }
+      ]
+    },
+    {
+      "asOf": "2019-09-30",
+      "holdings": [
+        {
+          "ticker": "CDW",
+          "weight": 20.65
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 18.79
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 18.58
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 13.24
+        },
+        {
+          "ticker": "LB",
+          "weight": 9.88
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 8.9
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.59
+        },
+        {
+          "ticker": "FOXA",
+          "weight": 1.37
+        }
+      ]
+    },
+    {
+      "asOf": "2019-12-31",
+      "holdings": [
+        {
+          "ticker": "ZBRA",
+          "weight": 21.74
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 21.31
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 14.32
+        },
+        {
+          "ticker": "CDW",
+          "weight": 13.75
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 10.52
+        },
+        {
+          "ticker": "LB",
+          "weight": 8.66
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.17
+        },
+        {
+          "ticker": "FOXA",
+          "weight": 1.52
+        }
+      ]
+    },
+    {
+      "asOf": "2020-03-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 21.44
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 17.86
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 15.31
+        },
+        {
+          "ticker": "CDW",
+          "weight": 10.26
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 10.02
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.96
+        },
+        {
+          "ticker": "LB",
+          "weight": 6.97
+        },
+        {
+          "ticker": "CDK",
+          "weight": 5.18
+        },
+        {
+          "ticker": "IAA",
+          "weight": 4.01
+        }
+      ]
+    },
+    {
+      "asOf": "2020-06-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 23.92
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 15.1
+        },
+        {
+          "ticker": "KMX",
+          "weight": 12.37
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 11.97
+        },
+        {
+          "ticker": "CDW",
+          "weight": 10.61
+        },
+        {
+          "ticker": "LB",
+          "weight": 8.74
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 8.72
+        },
+        {
+          "ticker": "CDK",
+          "weight": 8.57
+        }
+      ]
+    },
+    {
+      "asOf": "2020-09-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 24.49
+        },
+        {
+          "ticker": "LB",
+          "weight": 16.5
+        },
+        {
+          "ticker": "GLIBA",
+          "weight": 12.25
+        },
+        {
+          "ticker": "KMX",
+          "weight": 11.28
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 10.13
+        },
+        {
+          "ticker": "CDW",
+          "weight": 9.69
+        },
+        {
+          "ticker": "CDK",
+          "weight": 8.01
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 7.64
+        }
+      ]
+    },
+    {
+      "asOf": "2020-12-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 34.11
+        },
+        {
+          "ticker": "LB",
+          "weight": 16.1
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 12.92
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 9.71
+        },
+        {
+          "ticker": "KMX",
+          "weight": 9.68
+        },
+        {
+          "ticker": "CDW",
+          "weight": 8.92
+        },
+        {
+          "ticker": "CDK",
+          "weight": 8.56
+        }
+      ]
+    },
+    {
+      "asOf": "2021-03-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 29.68
+        },
+        {
+          "ticker": "LB",
+          "weight": 17.93
+        },
+        {
+          "ticker": "KMX",
+          "weight": 12.47
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 11.25
+        },
+        {
+          "ticker": "CDW",
+          "weight": 10.3
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 10.19
+        },
+        {
+          "ticker": "CDK",
+          "weight": 8.19
+        }
+      ]
+    },
+    {
+      "asOf": "2021-06-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 32.26
+        },
+        {
+          "ticker": "LB",
+          "weight": 19.63
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 11.54
+        },
+        {
+          "ticker": "KMX",
+          "weight": 11.41
+        },
+        {
+          "ticker": "CDW",
+          "weight": 10.2
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 7.88
+        },
+        {
+          "ticker": "CDK",
+          "weight": 7.08
+        }
+      ]
+    },
+    {
+      "asOf": "2021-09-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 33.86
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 18.12
+        },
+        {
+          "ticker": "KMX",
+          "weight": 11.93
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 11.85
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.21
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 6.47
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 4.0
+        },
+        {
+          "ticker": "PGR",
+          "weight": 1.46
+        },
+        {
+          "ticker": "WHD",
+          "weight": 1.09
+        }
+      ]
+    },
+    {
+      "asOf": "2021-12-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 28.84
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 15.04
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.51
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 11.36
+        },
+        {
+          "ticker": "KMX",
+          "weight": 11.08
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 9.88
+        },
+        {
+          "ticker": "PGR",
+          "weight": 8.44
+        },
+        {
+          "ticker": "VSCO",
+          "weight": 2.68
+        },
+        {
+          "ticker": "QRTEA",
+          "weight": 1.16
+        }
+      ]
+    },
+    {
+      "asOf": "2022-03-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 30.32
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 24.19
+        },
+        {
+          "ticker": "CDW",
+          "weight": 12.59
+        },
+        {
+          "ticker": "PGR",
+          "weight": 11.74
+        },
+        {
+          "ticker": "KMX",
+          "weight": 10.27
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 9.89
+        },
+        {
+          "ticker": "HEI.A",
+          "weight": 1.01
+        }
+      ]
+    },
+    {
+      "asOf": "2022-06-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 25.4
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 20.39
+        },
+        {
+          "ticker": "KMX",
+          "weight": 12.53
+        },
+        {
+          "ticker": "PGR",
+          "weight": 11.73
+        },
+        {
+          "ticker": "CDW",
+          "weight": 10.87
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 9.39
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 6.89
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 2.8
+        }
+      ]
+    },
+    {
+      "asOf": "2022-09-30",
+      "holdings": [
+        {
+          "ticker": "ATVI",
+          "weight": 19.27
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 17.94
+        },
+        {
+          "ticker": "PGR",
+          "weight": 12.97
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 12.57
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.93
+        },
+        {
+          "ticker": "KMX",
+          "weight": 10.12
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 6.81
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 6.15
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 1.23
+        },
+        {
+          "ticker": "HEI.A",
+          "weight": 1.01
+        }
+      ]
+    },
+    {
+      "asOf": "2022-12-31",
+      "holdings": [
+        {
+          "ticker": "ATVI",
+          "weight": 18.06
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 16.86
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 14.79
+        },
+        {
+          "ticker": "PGR",
+          "weight": 13.17
+        },
+        {
+          "ticker": "CDW",
+          "weight": 12.4
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.49
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 7.04
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 6.04
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 1.82
+        },
+        {
+          "ticker": "FRC",
+          "weight": 1.34
+        }
+      ]
+    },
+    {
+      "asOf": "2023-03-31",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 17.84
+        },
+        {
+          "ticker": "PGR",
+          "weight": 14.35
+        },
+        {
+          "ticker": "CDW",
+          "weight": 13.37
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 12.7
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 11.49
+        },
+        {
+          "ticker": "KMX",
+          "weight": 8.85
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 7.41
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 7.37
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 6.62
+        }
+      ]
+    },
+    {
+      "asOf": "2023-06-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 18.46
+        },
+        {
+          "ticker": "PGR",
+          "weight": 14.02
+        },
+        {
+          "ticker": "CDW",
+          "weight": 13.28
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 13.2
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 12.43
+        },
+        {
+          "ticker": "KMX",
+          "weight": 12.17
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 7.72
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 7.14
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 1.58
+        }
+      ]
+    },
+    {
+      "asOf": "2023-09-30",
+      "holdings": [
+        {
+          "ticker": "LBRDK",
+          "weight": 20.69
+        },
+        {
+          "ticker": "PGR",
+          "weight": 14.51
+        },
+        {
+          "ticker": "CDW",
+          "weight": 14.36
+        },
+        {
+          "ticker": "ATVI",
+          "weight": 11.93
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 11.02
+        },
+        {
+          "ticker": "KMX",
+          "weight": 10.11
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 8.24
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 7.89
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 1.25
+        }
+      ]
+    },
+    {
+      "asOf": "2023-12-31",
+      "holdings": [
+        {
+          "ticker": "PGR",
+          "weight": 16.76
+        },
+        {
+          "ticker": "CDW",
+          "weight": 16.35
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 15.36
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 12.06
+        },
+        {
+          "ticker": "KMX",
+          "weight": 11.09
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 9.94
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.68
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 8.3
+        },
+        {
+          "ticker": "ZBRA",
+          "weight": 1.46
+        }
+      ]
+    },
+    {
+      "asOf": "2024-03-31",
+      "holdings": [
+        {
+          "ticker": "PGR",
+          "weight": 18.68
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 15.04
+        },
+        {
+          "ticker": "CDW",
+          "weight": 13.78
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 13.45
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 13.36
+        },
+        {
+          "ticker": "KMX",
+          "weight": 12.41
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 10.32
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.95
+        }
+      ]
+    },
+    {
+      "asOf": "2024-06-30",
+      "holdings": [
+        {
+          "ticker": "PGR",
+          "weight": 19.62
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 14.47
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 13.99
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 12.28
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.75
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 11.22
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.72
+        },
+        {
+          "ticker": "SVV",
+          "weight": 3.56
+        },
+        {
+          "ticker": "WHD",
+          "weight": 3.42
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.97
+        }
+      ]
+    },
+    {
+      "asOf": "2024-09-30",
+      "holdings": [
+        {
+          "ticker": "PGR",
+          "weight": 19.72,
+          "shares": 603603
+        },
+        {
+          "ticker": "CHTR",
+          "weight": 14.96,
+          "shares": 358681
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 12.36,
+          "shares": 718898
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.2,
+          "shares": 384560
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 9.46,
+          "shares": 2302706
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.81,
+          "shares": 159129
+        },
+        {
+          "ticker": "KMX",
+          "weight": 6.72,
+          "shares": 674134
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 6.09,
+          "shares": 199320
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 3.87,
+          "shares": 389316
+        },
+        {
+          "ticker": "WHD",
+          "weight": 3.69,
+          "shares": 480974
+        },
+        {
+          "ticker": "SVV",
+          "weight": 3.1,
+          "shares": 2289930
+        }
+      ]
+    },
+    {
+      "asOf": "2024-12-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 21.97,
+          "shares": 373191
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 15.07,
+          "shares": 2262506
+        },
+        {
+          "ticker": "PGR",
+          "weight": 13.55,
+          "shares": 329243
+        },
+        {
+          "ticker": "CDW",
+          "weight": 11.44,
+          "shares": 382798
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 11.09,
+          "shares": 530483
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 8.81,
+          "shares": 198435
+        },
+        {
+          "ticker": "KMX",
+          "weight": 7.86,
+          "shares": 559384
+        },
+        {
+          "ticker": "WHD",
+          "weight": 4.43,
+          "shares": 441964
+        },
+        {
+          "ticker": "SVV",
+          "weight": 3.62,
+          "shares": 2053930
+        },
+        {
+          "ticker": "LBRDK",
+          "weight": 2.15,
+          "shares": 1244270
+        }
+      ]
+    },
+    {
+      "asOf": "2025-03-31",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 24.8,
+          "shares": 200162
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 16.71,
+          "shares": 1639039
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 10.03,
+          "shares": 64964
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 8.58,
+          "shares": 224260
+        },
+        {
+          "ticker": "CDW",
+          "weight": 8.37,
+          "shares": 155305
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 7.93,
+          "shares": 106422
+        },
+        {
+          "ticker": "KMX",
+          "weight": 7.13,
+          "shares": 272203
+        },
+        {
+          "ticker": "BELFB",
+          "weight": 6.19,
+          "shares": 245999
+        },
+        {
+          "ticker": "PGR",
+          "weight": 4.12,
+          "shares": 43323
+        },
+        {
+          "ticker": "WHD",
+          "weight": 3.65,
+          "shares": 237030
+        },
+        {
+          "ticker": "SVV",
+          "weight": 2.5,
+          "shares": 1078437
+        }
+      ]
+    },
+    {
+      "asOf": "2025-06-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 24.96,
+          "shares": 200162
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 16.81,
+          "shares": 1839039
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 9.28,
+          "shares": 106422
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.93,
+          "shares": 64964
+        },
+        {
+          "ticker": "CDW",
+          "weight": 8.46,
+          "shares": 155305
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 8.3,
+          "shares": 224260
+        },
+        {
+          "ticker": "BELFB",
+          "weight": 7.33,
+          "shares": 245999
+        },
+        {
+          "ticker": "KMX",
+          "weight": 5.58,
+          "shares": 272203
+        },
+        {
+          "ticker": "WHD",
+          "weight": 4.76,
+          "shares": 357030
+        },
+        {
+          "ticker": "SVV",
+          "weight": 3.36,
+          "shares": 1078437
+        },
+        {
+          "ticker": "LMB",
+          "weight": 2.23,
+          "shares": 52239
+        }
+      ]
+    },
+    {
+      "asOf": "2025-09-30",
+      "holdings": [
+        {
+          "ticker": "CHTR",
+          "weight": 23.29,
+          "shares": 164000
+        },
+        {
+          "ticker": "BBWI",
+          "weight": 18.22,
+          "shares": 1370000
+        },
+        {
+          "ticker": "LAMR",
+          "weight": 10.74,
+          "shares": 170000
+        },
+        {
+          "ticker": "FLUT",
+          "weight": 10.68,
+          "shares": 81422
+        },
+        {
+          "ticker": "DPZ",
+          "weight": 8.25,
+          "shares": 37000
+        },
+        {
+          "ticker": "CDW",
+          "weight": 8.22,
+          "shares": 100000
+        },
+        {
+          "ticker": "BELFB",
+          "weight": 7.28,
+          "shares": 100000
+        },
+        {
+          "ticker": "WHD",
+          "weight": 5.37,
+          "shares": 263409
+        },
+        {
+          "ticker": "SVV",
+          "weight": 5.34,
+          "shares": 780000
+        },
+        {
+          "ticker": "LMB",
+          "weight": 2.62,
+          "shares": 52239
+        }
+      ]
+    }
+  ],
+  "_provenance": {
+    "primarySource": "dataroma",
+    "lastFetchedAt": "2026-05-25T02:03:07Z",
+    "lastFetchedFrom": "https://13f.info/manager/0001540866-makaira-partners-llc",
+    "sharesSource": "13f.info",
+    "discoveredVia": "dataroma:MP",
+    "addRun": "INVESTORS-ADD --name='Tom Bancroft' --source-hint=dataroma/MP --years=10"
+  }
+}

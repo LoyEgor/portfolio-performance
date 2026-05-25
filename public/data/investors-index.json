@@ -188,7 +188,7 @@
         "aggregate"
       ],
       "historyRange": {
-        "from": "2021-03-31",
+        "from": "2016-06-30",
         "to": "2025-12-31"
       },
       "currentHoldingsCount": 20
@@ -966,6 +966,25 @@
       "fund": "Maverick Capital"
     },
     {
+      "id": "leon-cooperman",
+      "name": "Leon Cooperman",
+      "subtitle": "Leon Cooperman \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "oa"
+      },
+      "link": "https://www.dataroma.com/m/holdings.php?m=oa",
+      "aum": null,
+      "country": null,
+      "tags": [],
+      "historyRange": {
+        "from": "2016-03-31",
+        "to": "2025-12-31"
+      },
+      "currentHoldingsCount": 24
+    },
+    {
       "id": "lindsell-train",
       "name": "Lindsell Train",
       "subtitle": "Lindsell Train \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
@@ -1493,6 +1512,89 @@
         "to": "2025-12-31"
       },
       "currentHoldingsCount": 34
+    },
+    {
+      "id": "tom-bancroft",
+      "dataromaCode": "MP",
+      "sourceCodes": {
+        "dataroma": "MP",
+        "13f.info": "0001540866-makaira-partners-llc"
+      },
+      "primarySource": "dataroma",
+      "name": "Tom Bancroft",
+      "fund": "Makaira Partners",
+      "aum": 127893000,
+      "country": "US",
+      "link": "https://www.dataroma.com/m/holdings.php?m=MP",
+      "tags": [],
+      "historyRange": {
+        "from": "2016-03-31",
+        "to": "2025-09-30"
+      },
+      "currentHoldingsCount": 10
+    },
+    {
+      "id": "thomas-russo",
+      "name": "Thomas Russo",
+      "subtitle": "Thomas Russo \u00b7 DataRoma \u00b7 Q1 2026 (41q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "GR"
+      },
+      "dataromaCode": "GR",
+      "link": "https://www.dataroma.com/m/holdings.php?m=GR",
+      "fund": "Gardner Russo & Quinn",
+      "aum": 8496284000,
+      "country": "US",
+      "tags": [],
+      "historyRange": {
+        "from": "2016-03-31",
+        "to": "2025-12-31"
+      },
+      "currentHoldingsCount": 15
+    },
+    {
+      "id": "thomas-gayner",
+      "name": "Thomas Gayner",
+      "subtitle": "Thomas Gayner \u00b7 DataRoma \u00b7 Q1 2026 (21q chain-linked)",
+      "kind": "guru",
+      "primarySource": "dataroma",
+      "sourceCodes": {
+        "dataroma": "MKL",
+        "13f.info": "0001096343-markel-group-inc"
+      },
+      "dataromaCode": "MKL",
+      "link": "https://www.dataroma.com/m/holdings.php?m=MKL",
+      "aum": null,
+      "country": null,
+      "fund": "Markel Group Inc.",
+      "tags": [],
+      "historyRange": {
+        "from": "2016-03-31",
+        "to": "2025-12-31"
+      },
+      "currentHoldingsCount": 31
+    },
+    {
+      "id": "torray-funds",
+      "dataromaCode": "T",
+      "sourceCodes": {
+        "13f-info": "0000098758-torray-investment-partners-llc",
+        "dataroma": "T"
+      },
+      "primarySource": "13f-info",
+      "name": "Torray Funds",
+      "fund": "Torray Investment Partners LLC",
+      "aum": 638142000,
+      "country": "US",
+      "link": "https://13f.info/manager/0000098758-torray-investment-partners-llc",
+      "tags": [],
+      "historyRange": {
+        "from": "2016-03-31",
+        "to": "2025-12-31"
+      },
+      "currentHoldingsCount": 29
     }
   ]
 }
