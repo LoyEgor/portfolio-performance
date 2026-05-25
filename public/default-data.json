@@ -1,11 +1,11 @@
 {
   "version": "v9",
-  "exportedAt": "2026-05-21T21:27:33.971Z",
+  "exportedAt": "2026-05-25T18:47:12.728Z",
   "benchmarks": [
     {
       "id": "voo",
       "name": "VOO",
-      "subtitle": "S&P 500 \u2014 US large cap",
+      "subtitle": "S&P 500 — US large cap",
       "kind": "benchmark",
       "color": "#aeb3bc",
       "visible": false,
@@ -20,7 +20,7 @@
     {
       "id": "vt",
       "name": "VT",
-      "subtitle": "Total World \u2014 global equity",
+      "subtitle": "Total World — global equity",
       "kind": "benchmark",
       "color": "#475569",
       "visible": false,
@@ -255,14 +255,14 @@
   },
   "selectedInvestors": [
     "lilu",
-    "greenhaven",
     "buffett",
+    "duan-yongping",
+    "howard-marks",
+    "greenhaven",
     "robert-vinall",
     "chris-hohn",
     "josh-tarasoff",
     "altarock",
-    "david-abrams",
-    "valley-forge",
     "dataroma-top20"
   ],
   "investorCustomization": {
@@ -271,19 +271,29 @@
       "visible": true,
       "locked": false
     },
-    "greenhaven": {
-      "color": "#ff6d1f",
-      "visible": true,
-      "locked": false
-    },
     "buffett": {
       "color": "#dd8d31",
       "visible": true,
       "locked": false
     },
+    "duan-yongping": {
+      "color": "#2563eb",
+      "visible": true,
+      "locked": false
+    },
+    "howard-marks": {
+      "color": "#97db06",
+      "visible": true,
+      "locked": false
+    },
+    "greenhaven": {
+      "color": "#ff6d1f",
+      "visible": false,
+      "locked": false
+    },
     "robert-vinall": {
       "color": "#00b38f",
-      "visible": true,
+      "visible": false,
       "locked": false
     },
     "chris-hohn": {
@@ -301,20 +311,12 @@
       "visible": false,
       "locked": false
     },
-    "david-abrams": {
-      "color": "#34c200",
-      "visible": false,
-      "locked": false
-    },
-    "valley-forge": {
-      "color": "#db2777",
-      "visible": false,
-      "locked": false
-    },
     "dataroma-top20": {
       "color": "#c1cccd",
       "visible": true,
       "locked": false
     }
-  }
+  },
+  "selectedEtfs": [],
+  "etfCustomization": {}
 }

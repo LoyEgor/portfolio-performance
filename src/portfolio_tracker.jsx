@@ -167,7 +167,15 @@ const applyFilingLag = (asOfIso) => {
 const usesFilingLag = (portfolio) =>
   portfolio.kind === 'guru' || portfolio.id === 'dataroma-top20';
 
-const computeSeries = (portfolio, allPrices) => {
+// `extrapolate` (default true) controls what happens outside the actual snapshot window:
+//   - true  → backward extrapolation: first segment runs from allDates[0] using earliest known
+//             composition; forward extrapolation: last segment runs to allDates[allDates.length-1]
+//             carrying the latest known composition. Used by the chart so lines don't gap.
+//   - false → strict: first segment starts at lag(earliest snapshot's asOf), last segment ends at
+//             lag(currentAsOf) (the publication date of the latest snapshot). Anything outside the
+//             actual snapshot window is treated as "no data" — no carry, no fill. Used by the
+//             investors / ETF tables, where "no data = no number" is the correct semantics.
+const computeSeries = (portfolio, allPrices, { extrapolate = true } = {}) => {
   if (!portfolio.holdings?.length) return null;
   if (!portfolio.history?.length) return computeStaticSeries(portfolio.holdings, allPrices);
   // Per-portfolio lag (no-op for non-13F holders like myPortfolio and the blogger).
@@ -227,8 +235,10 @@ const computeSeries = (portfolio, allPrices) => {
 
   const segs = [];
   for (let i = 0; i < effectiveSnaps.length; i++) {
-    const fromDate = i === 0
-      ? allDates[0]                                       // backward extrapolation, always
+    // First segment: backward-extrapolate to allDates[0] when extrapolating; otherwise
+    // start at the first snapshot's publication date.
+    const fromDate = (i === 0 && extrapolate)
+      ? allDates[0]
       : closestLE(lag(effectiveSnaps[i].asOf));
     if (!fromDate) continue;
     let toDate;
@@ -236,7 +246,21 @@ const computeSeries = (portfolio, allPrices) => {
       toDate = closestLE(lag(effectiveSnaps[i + 1].asOf));
       if (!toDate || toDate <= fromDate) continue;
     } else {
-      toDate = allDates[allDates.length - 1];
+      // Last segment. With extrapolation: carry the latest composition forward to the end
+      // of the price window. Without: end at the implicit publication date of the current
+      // holdings (snapshot's asOf + lag), which is where genuine data stops.
+      toDate = extrapolate
+        ? allDates[allDates.length - 1]
+        : closestLE(lag(effectiveSnaps[i].asOf));
+      if (!toDate) continue;
+      // NOTE: deliberately NOT skipping when toDate === fromDate. That happens when the
+      // current snapshot's effective publication date hits the very last available price
+      // — common with 13F filers near the right edge. A single-point segment is fine; the
+      // segDates filter below picks up the one date and the chart line reaches the edge.
+      // Skipping here was a regression: it left guru lines truncated ~45 days before the
+      // last price tick. Only a literal `toDate < fromDate` (price gap before publication)
+      // is truly degenerate; equal is OK.
+      if (toDate < fromDate) continue;
     }
     segs.push({ holdings: effectiveSnaps[i].holdings, fromDate, toDate, isLast: i === effectiveSnaps.length - 1 });
   }
@@ -1998,17 +2022,19 @@ const InvestorsMatrix = ({
     };
   }), [investorsIndex, portfolios, extraInvestors]);
 
+  // Tables use STRICT series (no extrapolation) — "no data = no number". The chart
+  // uses extrapolated series so lines don't gap visually; tables don't get that latitude.
   const rawSeriesByInvestor = useMemo(() => {
     const out = {};
-    investorPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
+    investorPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices, { extrapolate: false }); });
     return out;
   }, [investorPortfolios, prices]);
 
   const voo = portfolios.find(p => p.id === 'voo');
   const vt  = portfolios.find(p => p.id === 'vt');
   const rawBenchSeries = useMemo(() => ({
-    voo: voo ? computeSeries(voo, prices) : null,
-    vt:  vt  ? computeSeries(vt,  prices) : null,
+    voo: voo ? computeSeries(voo, prices, { extrapolate: false }) : null,
+    vt:  vt  ? computeSeries(vt,  prices, { extrapolate: false }) : null,
   }), [voo, vt, prices]);
 
   // Year range for the date picker — derived from the raw (unfiltered) data so
@@ -2523,17 +2549,19 @@ const ETFsMatrix = ({
     };
   }), [etfsIndex, portfolios]);
 
+  // Strict series for the ETF table — see comment on the investor matrix for the
+  // reasoning. "No data = no number"; the chart can extrapolate but the table cannot.
   const rawSeriesByEtf = useMemo(() => {
     const out = {};
-    etfPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices); });
+    etfPortfolios.forEach(p => { if (p) out[p.id] = computeSeries(p, prices, { extrapolate: false }); });
     return out;
   }, [etfPortfolios, prices]);
 
   const voo = portfolios.find(p => p.id === 'voo');
   const vt  = portfolios.find(p => p.id === 'vt');
   const rawBenchSeries = useMemo(() => ({
-    voo: voo ? computeSeries(voo, prices) : null,
-    vt:  vt  ? computeSeries(vt,  prices) : null,
+    voo: voo ? computeSeries(voo, prices, { extrapolate: false }) : null,
+    vt:  vt  ? computeSeries(vt,  prices, { extrapolate: false }) : null,
   }), [voo, vt, prices]);
 
   const yearRange = useMemo(() => {

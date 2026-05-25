@@ -90,12 +90,28 @@ The set of tickers to ensure coverage for is the **union** of:
    `priceMap[ticker][date]`. Note `min(keys)`/`max(keys)` per ticker. Compute
    target last date from "today". Compute the referenced-ticker set.
 
-2. **Decide work.** `earliestAsOf = min(asOf across all investors' history)`.
-   If no investor files exist, fall back to `today - 24 months`.
-   - Tickers with no entry → fetch monthly from `earliestAsOf` to target.
-   - Tickers stale (`max(keys) < target`) → fetch the missing months only.
-   - Tickers with `min(keys) > earliestAsOf` → backfill the earlier months too
-     (happens when a BACKFILL extended history beyond current price coverage).
+2. **Decide work.** `earliestAsOf = meta.oldestHistoryAsOf` (or, if absent,
+   `min(asOf across all investors' history)`). If no investor files exist,
+   fall back to `today - 24 months`.
+
+   **Per-ticker work, evaluated INDEPENDENTLY (not short-circuited):**
+
+   For every referenced ticker `T` compute:
+   - `forwardGap`  = `max(priceMap[T].keys) < target`           ← need new months
+   - `backwardGap` = `min(priceMap[T].keys) > earliestAsOf`     ← need earlier months
+   - `missing`     = `T not in priceMap`                         ← never fetched
+
+   **All three cases must be checked for every ticker on every run.** `forwardGap`
+   and `backwardGap` are independent conditions — both can be true simultaneously
+   (newly-added ticker whose prices were never fetched, or existing ticker after
+   `oldestHistoryAsOf` was deepened by a BACKFILL run). Both must trigger a
+   fetch when true; do NOT short-circuit on `max(keys) >= target` and skip the
+   backward check.
+
+   For each true condition, fetch the exact missing month range:
+   - `missing` → fetch `[earliestAsOf, target]`
+   - `forwardGap` → fetch `(max(priceMap[T].keys), target]`
+   - `backwardGap` → fetch `[earliestAsOf, min(priceMap[T].keys))`
 
 3. **Fetch (paced).** Primary: `https://stockanalysis.com/stocks/<lower>/history/`
    (or `/etf/<lower>/history/` for ETFs). Fallback: Yahoo, Google, MarketWatch,
@@ -111,8 +127,16 @@ The set of tickers to ensure coverage for is the **union** of:
      `https://api.coingecko.com/api/v3/coins/{slug}/market_chart?vs_currency=usd&days=max&interval=daily`
      (slug = `bitcoin`, `ethereum`, etc.; pick monthly first-of-month closes
      from the daily series).
-   These tickers are stored in `prices/<YYYY>.json` the same way as stocks
-   (`"BTC-USD": { "2024-01-01": 42500, ... }`).
+
+   **CLIP the response.** These endpoints return the full available history
+   in one blob. Before writing to `prices/<Y>.json`, filter the returned
+   points to `[earliestAsOf, target]` — same window as stocks would have
+   been fetched for. Writing pre-`earliestAsOf` months breaks coverage
+   symmetry with stocks and inflates the file. Crypto must NOT be wider
+   than the rest of the base.
+
+   Storage shape: `"BTC-USD": { "2024-01-01": 42500, ... }` in
+   `prices/<YYYY>.json`, identical to stocks.
 
 3.5 **Delisted-ticker fallback via Wayback Machine.** When all sources in
    step 3 return no data for a ticker, the ticker is likely **delisted,
@@ -238,10 +262,38 @@ for t, px in data.items():
     for k, v in px.items():
         if v is None or v <= 0 or v != v: E(f"price-bad: {t}/{k} = {v}")
 
+earliest_asof = meta.get("oldestHistoryAsOf")  # e.g., "2016-03-31"
+earliest_month = earliest_asof[:7] + "-01" if earliest_asof else None
+
 for t in sorted(referenced):
     if t not in data: E(f"price: missing for referenced ticker {t}"); continue
-    last = max(data[t].keys()) if data[t] else None
+    keys = sorted(data[t].keys())
+    last = keys[-1] if keys else None
     if not last or last < TARGET: E(f"price-stale: {t} latest is {last}, target {TARGET}")
+    # Backward-gap check: every referenced ticker must have prices reaching
+    # back to meta.oldestHistoryAsOf (within a 3-month tolerance for IPOs).
+    # Catches the case where BACKFILL deepened the base but STOCKS-UPDATE
+    # only looked forward.
+    if earliest_month and keys:
+        first = keys[0]
+        if first > earliest_month:
+            # Allow up to 3 months tolerance for IPOs etc. — but log all
+            from datetime import date
+            f_y, f_m = int(first[:4]), int(first[5:7])
+            e_y, e_m = int(earliest_month[:4]), int(earliest_month[5:7])
+            months_short = (f_y - e_y) * 12 + (f_m - e_m)
+            if months_short > 3:
+                E(f"price-backward-gap: {t} starts at {first}, expected by {earliest_month} ({months_short} months short — goal didn't run backward-fill rule)")
+
+# Clip-window check: crypto tickers shouldn't extend BEFORE earliestAsOf either
+# (the spec mandates clipping the bulk Yahoo/CoinGecko response).
+if earliest_month:
+    for t in data:
+        if t.endswith("-USD"):
+            for k in data[t]:
+                if k < earliest_month:
+                    E(f"price-over-fetch: {t}/{k} is before earliestAsOf={earliest_month} — crypto response wasn't clipped")
+                    break
 
 for t, px in data.items():
     dates = sorted(px.keys())

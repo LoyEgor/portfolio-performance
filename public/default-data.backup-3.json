@@ -1,11 +1,11 @@
 {
   "version": "v8",
-  "exportedAt": "2026-04-26T20:20:13.275Z",
+  "exportedAt": "2026-04-26T21:10:06.184Z",
   "portfolios": [
     {
       "id": "voo",
       "name": "VOO",
-      "subtitle": "S&P 500 — US large cap",
+      "subtitle": "S&P 500 \u2014 US large cap",
       "kind": "benchmark",
       "color": "#aeb3bc",
       "visible": false,
@@ -20,7 +20,7 @@
     {
       "id": "vt",
       "name": "VT",
-      "subtitle": "Total World — global equity",
+      "subtitle": "Total World \u2014 global equity",
       "kind": "benchmark",
       "color": "#475569",
       "visible": false,
@@ -86,47 +86,59 @@
     {
       "id": "lilu",
       "name": "Li Lu",
-      "subtitle": "Li Lu · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Li Lu \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "guru",
-      "color": "#a14535",
+      "color": "#ae1919",
       "visible": true,
       "locked": false,
       "holdings": [
         {
           "ticker": "GOOGL",
-          "weight": 22.31
+          "weight": 23.12
         },
         {
           "ticker": "GOOG",
-          "weight": 21.55
-        },
-        {
-          "ticker": "BAC",
-          "weight": 16.08
+          "weight": 22.23
         },
         {
           "ticker": "PDD",
-          "weight": 14.64
+          "weight": 14.89
         },
         {
           "ticker": "BRK.B",
-          "weight": 12.64
+          "weight": 13.6
         },
         {
           "ticker": "EWBC",
-          "weight": 8.74
+          "weight": 9.37
+        },
+        {
+          "ticker": "BAC",
+          "weight": 4.62
         },
         {
           "ticker": "OXY",
-          "weight": 1.69
+          "weight": 3.02
         },
         {
           "ticker": "CROX",
-          "weight": 1.51
+          "weight": 2.33
         },
         {
-          "ticker": "AAPL",
-          "weight": 0.84
+          "ticker": "TME",
+          "weight": 1.93
+        },
+        {
+          "ticker": "HRB",
+          "weight": 1.63
+        },
+        {
+          "ticker": "MCO",
+          "weight": 1.63
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 1.63
         }
       ],
       "history": [
@@ -248,6 +260,47 @@
               "weight": 0.73
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "GOOGL",
+              "weight": 22.31
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 21.55
+            },
+            {
+              "ticker": "BAC",
+              "weight": 16.08
+            },
+            {
+              "ticker": "PDD",
+              "weight": 14.64
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 12.64
+            },
+            {
+              "ticker": "EWBC",
+              "weight": 8.74
+            },
+            {
+              "ticker": "OXY",
+              "weight": 1.69
+            },
+            {
+              "ticker": "CROX",
+              "weight": 1.51
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 0.84
+            }
+          ]
         }
       ]
     },
@@ -320,12 +373,67 @@
           "ticker": "SPOT",
           "weight": 1.2
         }
+      ],
+      "history": [
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 26.69
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 23.97
+            },
+            {
+              "ticker": "UBER",
+              "weight": 7.71
+            },
+            {
+              "ticker": "NVDA",
+              "weight": 8.05
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 7.9
+            },
+            {
+              "ticker": "DUOL",
+              "weight": 5.82
+            },
+            {
+              "ticker": "ASML",
+              "weight": 5.28
+            },
+            {
+              "ticker": "V",
+              "weight": 5.15
+            },
+            {
+              "ticker": "TSM",
+              "weight": 3.33
+            },
+            {
+              "ticker": "FICO",
+              "weight": 3.17
+            },
+            {
+              "ticker": "MELI",
+              "weight": 2.55
+            },
+            {
+              "ticker": "NFLX",
+              "weight": 0.38
+            }
+          ]
+        }
       ]
     },
     {
       "id": "custom-1777150247501",
       "name": "Greenhaven",
-      "subtitle": "Greenhaven · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Greenhaven \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#ff6d1f",
       "visible": true,
@@ -333,83 +441,67 @@
       "holdings": [
         {
           "ticker": "GM",
-          "weight": 20.05
+          "weight": 15.53
         },
         {
           "ticker": "LEN",
-          "weight": 16.86
+          "weight": 15.37
         },
         {
           "ticker": "TOL",
-          "weight": 12.31
+          "weight": 12.82
         },
         {
           "ticker": "PHM",
-          "weight": 10.55
+          "weight": 10.76
         },
         {
           "ticker": "DHI",
-          "weight": 8.15
+          "weight": 7.92
         },
         {
           "ticker": "OSK",
-          "weight": 5.14
-        },
-        {
-          "ticker": "AVTR",
-          "weight": 3.82
+          "weight": 6.2
         },
         {
           "ticker": "ARW",
-          "weight": 3.4
-        },
-        {
-          "ticker": "BAX",
-          "weight": 3.32
-        },
-        {
-          "ticker": "LEA",
-          "weight": 3.31
+          "weight": 4.53
         },
         {
           "ticker": "AVT",
-          "weight": 3.07
+          "weight": 4.02
+        },
+        {
+          "ticker": "BAX",
+          "weight": 4.0
         },
         {
           "ticker": "SLB",
-          "weight": 2.91
+          "weight": 3.99
         },
         {
-          "ticker": "MRP",
-          "weight": 2.24
+          "ticker": "ICLR",
+          "weight": 3.69
         },
         {
-          "ticker": "MTH",
-          "weight": 1.56
+          "ticker": "LEA",
+          "weight": 3.42
+        },
+        {
+          "ticker": "AVTR",
+          "weight": 2.95
         },
         {
           "ticker": "NOV",
-          "weight": 1.46
+          "weight": 1.8
         },
         {
           "ticker": "VBIL",
-          "weight": 0.94
+          "weight": 1.51
         },
         {
-          "ticker": "LEN.B",
-          "weight": 0.56
-        },
-        {
-          "ticker": "TFX",
-          "weight": 0.24
-        },
-        {
-          "ticker": "C",
-          "weight": 0.06
-        },
-        {
-          "ticker": "RHI",
-          "weight": 0.05
+          "ticker": "MTH",
+          "weight": 1.49
         }
       ],
       "history": [
@@ -667,97 +759,158 @@
               "weight": 0.05
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "GM",
+              "weight": 20.05
+            },
+            {
+              "ticker": "LEN",
+              "weight": 16.86
+            },
+            {
+              "ticker": "TOL",
+              "weight": 12.31
+            },
+            {
+              "ticker": "PHM",
+              "weight": 10.55
+            },
+            {
+              "ticker": "DHI",
+              "weight": 8.15
+            },
+            {
+              "ticker": "OSK",
+              "weight": 5.14
+            },
+            {
+              "ticker": "AVTR",
+              "weight": 3.82
+            },
+            {
+              "ticker": "ARW",
+              "weight": 3.4
+            },
+            {
+              "ticker": "BAX",
+              "weight": 3.32
+            },
+            {
+              "ticker": "LEA",
+              "weight": 3.31
+            },
+            {
+              "ticker": "AVT",
+              "weight": 3.07
+            },
+            {
+              "ticker": "SLB",
+              "weight": 2.91
+            },
+            {
+              "ticker": "MRP",
+              "weight": 2.24
+            },
+            {
+              "ticker": "MTH",
+              "weight": 1.56
+            },
+            {
+              "ticker": "NOV",
+              "weight": 1.46
+            },
+            {
+              "ticker": "VBIL",
+              "weight": 0.94
+            },
+            {
+              "ticker": "LEN.B",
+              "weight": 0.56
+            },
+            {
+              "ticker": "TFX",
+              "weight": 0.24
+            },
+            {
+              "ticker": "C",
+              "weight": 0.06
+            },
+            {
+              "ticker": "RHI",
+              "weight": 0.05
+            }
+          ]
         }
       ]
     },
     {
       "id": "buffett",
       "name": "Buffett",
-      "subtitle": "Buffett · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Buffett \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "guru",
-      "color": "#dd9831",
+      "color": "#dd8d31",
       "visible": true,
       "locked": false,
       "holdings": [
         {
           "ticker": "AAPL",
-          "weight": 23.37
+          "weight": 22.91
         },
         {
           "ticker": "AXP",
-          "weight": 21.15
-        },
-        {
-          "ticker": "BAC",
-          "weight": 10.73
+          "weight": 18.16
         },
         {
           "ticker": "KO",
-          "weight": 10.54
+          "weight": 12.05
+        },
+        {
+          "ticker": "BAC",
+          "weight": 9.92
         },
         {
           "ticker": "CVX",
-          "weight": 7.48
-        },
-        {
-          "ticker": "MCO",
-          "weight": 4.76
+          "weight": 6.92
         },
         {
           "ticker": "OXY",
-          "weight": 4.1
-        },
-        {
-          "ticker": "CB",
-          "weight": 4.03
-        },
-        {
-          "ticker": "KHC",
-          "weight": 2.98
+          "weight": 6.83
         },
         {
           "ticker": "GOOGL",
-          "weight": 2.11
+          "weight": 6.18
+        },
+        {
+          "ticker": "CB",
+          "weight": 4.42
+        },
+        {
+          "ticker": "MCO",
+          "weight": 4.26
+        },
+        {
+          "ticker": "KHC",
+          "weight": 2.9
         },
         {
           "ticker": "DVA",
-          "weight": 1.36
+          "weight": 1.83
         },
         {
           "ticker": "KR",
-          "weight": 1.18
-        },
-        {
-          "ticker": "V",
-          "weight": 1.1
+          "weight": 1.44
         },
         {
           "ticker": "SIRI",
-          "weight": 0.94
+          "weight": 1.14
         },
         {
-          "ticker": "MA",
-          "weight": 0.86
-        },
-        {
-          "ticker": "VRSN",
-          "weight": 0.83
-        },
-        {
-          "ticker": "STZ",
-          "weight": 0.67
-        },
-        {
-          "ticker": "COF",
-          "weight": 0.65
-        },
-        {
-          "ticker": "UNH",
-          "weight": 0.63
-        },
-        {
-          "ticker": "DPZ",
-          "weight": 0.53
+          "ticker": "DAL",
+          "weight": 1.04
         }
       ],
       "history": [
@@ -1015,65 +1168,134 @@
               "weight": 0.59
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "AAPL",
+              "weight": 23.37
+            },
+            {
+              "ticker": "AXP",
+              "weight": 21.15
+            },
+            {
+              "ticker": "BAC",
+              "weight": 10.73
+            },
+            {
+              "ticker": "KO",
+              "weight": 10.54
+            },
+            {
+              "ticker": "CVX",
+              "weight": 7.48
+            },
+            {
+              "ticker": "MCO",
+              "weight": 4.76
+            },
+            {
+              "ticker": "OXY",
+              "weight": 4.1
+            },
+            {
+              "ticker": "CB",
+              "weight": 4.03
+            },
+            {
+              "ticker": "KHC",
+              "weight": 2.98
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 2.11
+            },
+            {
+              "ticker": "DVA",
+              "weight": 1.36
+            },
+            {
+              "ticker": "KR",
+              "weight": 1.18
+            },
+            {
+              "ticker": "V",
+              "weight": 1.1
+            },
+            {
+              "ticker": "SIRI",
+              "weight": 0.94
+            },
+            {
+              "ticker": "MA",
+              "weight": 0.86
+            },
+            {
+              "ticker": "VRSN",
+              "weight": 0.83
+            },
+            {
+              "ticker": "STZ",
+              "weight": 0.67
+            },
+            {
+              "ticker": "COF",
+              "weight": 0.65
+            },
+            {
+              "ticker": "UNH",
+              "weight": 0.63
+            },
+            {
+              "ticker": "DPZ",
+              "weight": 0.53
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777225955634",
       "name": "Robert Vinall",
-      "subtitle": "Robert Vinall · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Robert Vinall \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#01b759",
-      "visible": true,
+      "visible": false,
       "locked": false,
       "holdings": [
         {
           "ticker": "CVNA",
-          "weight": 29.8
+          "weight": 31.83
         },
         {
           "ticker": "META",
-          "weight": 20.95
+          "weight": 22.31
         },
         {
           "ticker": "CACC",
-          "weight": 13.47
+          "weight": 14.11
         },
         {
           "ticker": "IBKR",
-          "weight": 11.27
-        },
-        {
-          "ticker": "WIX",
-          "weight": 7.62
+          "weight": 13.69
         },
         {
           "ticker": "HTHT",
-          "weight": 6.61
+          "weight": 7.52
         },
         {
           "ticker": "YUMC",
-          "weight": 4.94
-        },
-        {
-          "ticker": "GOOGL",
-          "weight": 2.37
+          "weight": 5.5
         },
         {
           "ticker": "MSFT",
-          "weight": 1.29
+          "weight": 2.52
         },
         {
-          "ticker": "CRM",
-          "weight": 0.68
-        },
-        {
-          "ticker": "DE",
-          "weight": 0.54
-        },
-        {
-          "ticker": "PAYC",
-          "weight": 0.46
+          "ticker": "GOOGL",
+          "weight": 2.52
         }
       ],
       "history": [
@@ -1235,53 +1457,110 @@
               "weight": 0.42
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "CVNA",
+              "weight": 29.8
+            },
+            {
+              "ticker": "META",
+              "weight": 20.95
+            },
+            {
+              "ticker": "CACC",
+              "weight": 13.47
+            },
+            {
+              "ticker": "IBKR",
+              "weight": 11.27
+            },
+            {
+              "ticker": "WIX",
+              "weight": 7.62
+            },
+            {
+              "ticker": "HTHT",
+              "weight": 6.61
+            },
+            {
+              "ticker": "YUMC",
+              "weight": 4.94
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 2.37
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 1.29
+            },
+            {
+              "ticker": "CRM",
+              "weight": 0.68
+            },
+            {
+              "ticker": "DE",
+              "weight": 0.54
+            },
+            {
+              "ticker": "PAYC",
+              "weight": 0.46
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777150124526",
       "name": "Chris Hohn",
-      "subtitle": "Chris Hohn · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Chris Hohn \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#085faf",
-      "visible": true,
+      "visible": false,
       "locked": false,
       "holdings": [
         {
           "ticker": "GE",
-          "weight": 27.29
+          "weight": 29.85
         },
         {
           "ticker": "V",
-          "weight": 18.12
-        },
-        {
-          "ticker": "MSFT",
-          "weight": 15.13
+          "weight": 20.39
         },
         {
           "ticker": "MCO",
-          "weight": 12.67
+          "weight": 13.84
         },
         {
           "ticker": "SPGI",
-          "weight": 11.48
+          "weight": 13.22
         },
         {
           "ticker": "CP",
-          "weight": 6.54
+          "weight": 8.1
         },
         {
           "ticker": "GOOG",
-          "weight": 4.44
+          "weight": 5.62
         },
         {
           "ticker": "FER",
-          "weight": 2.51
+          "weight": 2.94
         },
         {
           "ticker": "CNI",
-          "weight": 1.82
+          "weight": 2.24
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 2.24
+        },
+        {
+          "ticker": "GOOGL",
+          "weight": 1.56
         }
       ],
       "history": [
@@ -1415,13 +1694,54 @@
               "weight": 2.11
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "GE",
+              "weight": 27.29
+            },
+            {
+              "ticker": "V",
+              "weight": 18.12
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 15.13
+            },
+            {
+              "ticker": "MCO",
+              "weight": 12.67
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 11.48
+            },
+            {
+              "ticker": "CP",
+              "weight": 6.54
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 4.44
+            },
+            {
+              "ticker": "FER",
+              "weight": 2.51
+            },
+            {
+              "ticker": "CNI",
+              "weight": 1.82
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777150376264",
       "name": "Josh Tarasoff",
-      "subtitle": "Josh Tarasoff · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Josh Tarasoff \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#24c2a2",
       "visible": true,
@@ -1429,35 +1749,39 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 21.3
+          "weight": 18.91
         },
         {
           "ticker": "BN",
-          "weight": 18.93
+          "weight": 16.37
         },
         {
           "ticker": "BRK.A",
-          "weight": 14.76
+          "weight": 13.14
         },
         {
           "ticker": "MKL",
-          "weight": 14.37
+          "weight": 12.54
+        },
+        {
+          "ticker": "SGOV",
+          "weight": 11.2
         },
         {
           "ticker": "GOOGL",
-          "weight": 9.24
+          "weight": 8.36
         },
         {
-          "ticker": "TRUP",
-          "weight": 8.47
+          "ticker": "NFLX",
+          "weight": 7.8
         },
         {
           "ticker": "TSLA",
-          "weight": 8.15
+          "weight": 5.91
         },
         {
-          "ticker": "BUR",
-          "weight": 4.78
+          "ticker": "TRUP",
+          "weight": 5.77
         }
       ],
       "history": [
@@ -1571,13 +1895,50 @@
               "weight": 5.75
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 21.3
+            },
+            {
+              "ticker": "BN",
+              "weight": 18.93
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 14.76
+            },
+            {
+              "ticker": "MKL",
+              "weight": 14.37
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 9.24
+            },
+            {
+              "ticker": "TRUP",
+              "weight": 8.47
+            },
+            {
+              "ticker": "TSLA",
+              "weight": 8.15
+            },
+            {
+              "ticker": "BUR",
+              "weight": 4.78
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777227848490",
       "name": "AltaRock",
-      "subtitle": "AltaRock · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "AltaRock \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#2563eb",
       "visible": false,
@@ -1585,35 +1946,27 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 33.09
+          "weight": 38.36
         },
         {
           "ticker": "TDG",
-          "weight": 25.28
+          "weight": 25.65
         },
         {
           "ticker": "MSFT",
-          "weight": 19.75
+          "weight": 16.82
         },
         {
           "ticker": "MCO",
-          "weight": 8.16
+          "weight": 9.15
         },
         {
           "ticker": "MA",
-          "weight": 6.07
+          "weight": 6.36
         },
         {
           "ticker": "V",
-          "weight": 3.55
-        },
-        {
-          "ticker": "HLT",
-          "weight": 3.06
-        },
-        {
-          "ticker": "GOOGL",
-          "weight": 1.04
+          "weight": 3.66
         }
       ],
       "history": [
@@ -1739,13 +2092,50 @@
               "weight": 0.02
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 33.09
+            },
+            {
+              "ticker": "TDG",
+              "weight": 25.28
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 19.75
+            },
+            {
+              "ticker": "MCO",
+              "weight": 8.16
+            },
+            {
+              "ticker": "MA",
+              "weight": 6.07
+            },
+            {
+              "ticker": "V",
+              "weight": 3.55
+            },
+            {
+              "ticker": "HLT",
+              "weight": 3.06
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 1.04
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777228154883",
       "name": "David Abrams",
-      "subtitle": "David Abrams · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "David Abrams \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#121eca",
       "visible": false,
@@ -1753,51 +2143,39 @@
       "holdings": [
         {
           "ticker": "LOAR",
-          "weight": 38.43
+          "weight": 39.65
         },
         {
           "ticker": "LAD",
-          "weight": 14.59
+          "weight": 13.43
         },
         {
           "ticker": "GOOGL",
-          "weight": 10.57
+          "weight": 11.59
         },
         {
           "ticker": "SGI",
-          "weight": 9.13
+          "weight": 9.25
         },
         {
           "ticker": "ABG",
-          "weight": 8.83
+          "weight": 9.09
         },
         {
           "ticker": "CPNG",
-          "weight": 5.41
+          "weight": 5.31
         },
         {
           "ticker": "WTW",
-          "weight": 4.17
+          "weight": 4.53
         },
         {
           "ticker": "META",
-          "weight": 3.78
+          "weight": 4.02
         },
         {
           "ticker": "UHAL.B",
-          "weight": 2.68
-        },
-        {
-          "ticker": "ET",
-          "weight": 1.78
-        },
-        {
-          "ticker": "NUVB",
-          "weight": 0.6
-        },
-        {
-          "ticker": "UHAL",
-          "weight": 0.03
+          "weight": 3.13
         }
       ],
       "history": [
@@ -1971,13 +2349,66 @@
               "weight": 0.03
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "LOAR",
+              "weight": 38.43
+            },
+            {
+              "ticker": "LAD",
+              "weight": 14.59
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 10.57
+            },
+            {
+              "ticker": "SGI",
+              "weight": 9.13
+            },
+            {
+              "ticker": "ABG",
+              "weight": 8.83
+            },
+            {
+              "ticker": "CPNG",
+              "weight": 5.41
+            },
+            {
+              "ticker": "WTW",
+              "weight": 4.17
+            },
+            {
+              "ticker": "META",
+              "weight": 3.78
+            },
+            {
+              "ticker": "UHAL.B",
+              "weight": 2.68
+            },
+            {
+              "ticker": "ET",
+              "weight": 1.78
+            },
+            {
+              "ticker": "NUVB",
+              "weight": 0.6
+            },
+            {
+              "ticker": "UHAL",
+              "weight": 0.03
+            }
+          ]
         }
       ]
     },
     {
       "id": "custom-1777225852884",
       "name": "Valley Forge Capital Management",
-      "subtitle": "Valley Forge Capital Management · DataRoma · Q4 2025 (4q chain-linked)",
+      "subtitle": "Valley Forge Capital Management \u00b7 DataRoma \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#db2777",
       "visible": false,
@@ -1985,39 +2416,31 @@
       "holdings": [
         {
           "ticker": "FICO",
-          "weight": 29.49
+          "weight": 24.33
         },
         {
           "ticker": "SPGI",
-          "weight": 20.83
+          "weight": 22.15
         },
         {
           "ticker": "MA",
-          "weight": 19.25
+          "weight": 22.02
         },
         {
           "ticker": "MCO",
-          "weight": 15.25
-        },
-        {
-          "ticker": "V",
-          "weight": 7.29
-        },
-        {
-          "ticker": "INTU",
-          "weight": 3.32
+          "weight": 17.02
         },
         {
           "ticker": "ASML",
-          "weight": 3.06
+          "weight": 6.69
         },
         {
-          "ticker": "MSCI",
-          "weight": 0.79
+          "ticker": "V",
+          "weight": 5.36
         },
         {
-          "ticker": "EFX",
-          "weight": 0.72
+          "ticker": "INTU",
+          "weight": 2.43
         }
       ],
       "history": [
@@ -2143,13 +2566,54 @@
               "weight": 0.81
             }
           ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "FICO",
+              "weight": 29.49
+            },
+            {
+              "ticker": "SPGI",
+              "weight": 20.83
+            },
+            {
+              "ticker": "MA",
+              "weight": 19.25
+            },
+            {
+              "ticker": "MCO",
+              "weight": 15.25
+            },
+            {
+              "ticker": "V",
+              "weight": 7.29
+            },
+            {
+              "ticker": "INTU",
+              "weight": 3.32
+            },
+            {
+              "ticker": "ASML",
+              "weight": 3.06
+            },
+            {
+              "ticker": "MSCI",
+              "weight": 0.79
+            },
+            {
+              "ticker": "EFX",
+              "weight": 0.72
+            }
+          ]
         }
       ]
     },
     {
-      "id": "dataroma-top14",
-      "name": "Dataroma Top 15",
-      "subtitle": "Guru consensus",
+      "id": "dataroma-top20",
+      "name": "DataRoma Top 20",
+      "subtitle": "DataRoma consensus \u00b7 Top 20 \u00b7 Q1 2026 (5q chain-linked)",
       "kind": "custom",
       "color": "#c1cccd",
       "visible": true,
@@ -2157,165 +2621,562 @@
       "holdings": [
         {
           "ticker": "AMZN",
-          "weight": 12.97
+          "weight": 11.18
         },
         {
-          "ticker": "MSFT",
-          "weight": 11.82
+          "ticker": "GOOG",
+          "weight": 8.01
         },
         {
           "ticker": "GOOGL",
-          "weight": 9.68
+          "weight": 7.53
         },
         {
           "ticker": "BRK.B",
-          "weight": 9.34
+          "weight": 7.03
+        },
+        {
+          "ticker": "MSFT",
+          "weight": 6.62
+        },
+        {
+          "ticker": "BRK.A",
+          "weight": 6.35
         },
         {
           "ticker": "META",
-          "weight": 7.91
-        },
-        {
-          "ticker": "CVNA",
-          "weight": 7.48
+          "weight": 6.07
         },
         {
           "ticker": "V",
-          "weight": 7.2
+          "weight": 5.76
+        },
+        {
+          "ticker": "CVNA",
+          "weight": 5.64
         },
         {
           "ticker": "AAPL",
-          "weight": 6.43
+          "weight": 4.93
         },
         {
           "ticker": "MA",
-          "weight": 5.62
+          "weight": 4.82
+        },
+        {
+          "ticker": "JOE",
+          "weight": 3.61
         },
         {
           "ticker": "MCO",
-          "weight": 4.29
+          "weight": 3.51
+        },
+        {
+          "ticker": "TSM",
+          "weight": 3.12
         },
         {
           "ticker": "GE",
-          "weight": 3.86
-        },
-        {
-          "ticker": "COF",
-          "weight": 3.53
-        },
-        {
-          "ticker": "TDG",
-          "weight": 3.53
+          "weight": 3.0
         },
         {
           "ticker": "NVDA",
-          "weight": 3.43
+          "weight": 2.67
+        },
+        {
+          "ticker": "TDG",
+          "weight": 2.64
+        },
+        {
+          "ticker": "BN",
+          "weight": 2.62
         },
         {
           "ticker": "IBKR",
-          "weight": 2.91
+          "weight": 2.44
+        },
+        {
+          "ticker": "SPGI",
+          "weight": 2.45
+        }
+      ],
+      "history": [
+        {
+          "asOf": "2025-03-31",
+          "holdings": [
+            {
+              "ticker": "MSFT",
+              "weight": 9.16
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 7.91
+            },
+            {
+              "ticker": "META",
+              "weight": 7.74
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 7.12
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 7.0
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 6.33
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 5.88
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 5.65
+            },
+            {
+              "ticker": "CVNA",
+              "weight": 5.49
+            },
+            {
+              "ticker": "V",
+              "weight": 5.07
+            },
+            {
+              "ticker": "EL",
+              "weight": 4.89
+            },
+            {
+              "ticker": "MA",
+              "weight": 4.03
+            },
+            {
+              "ticker": "JOE",
+              "weight": 3.71
+            },
+            {
+              "ticker": "MCO",
+              "weight": 3.36
+            },
+            {
+              "ticker": "BAC",
+              "weight": 3.21
+            },
+            {
+              "ticker": "TDG",
+              "weight": 2.85
+            },
+            {
+              "ticker": "BN",
+              "weight": 2.7
+            },
+            {
+              "ticker": "CHTR",
+              "weight": 2.64
+            },
+            {
+              "ticker": "GE",
+              "weight": 2.63
+            },
+            {
+              "ticker": "C",
+              "weight": 2.63
+            }
+          ]
+        },
+        {
+          "asOf": "2025-06-30",
+          "holdings": [
+            {
+              "ticker": "MSFT",
+              "weight": 10.67
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 8.62
+            },
+            {
+              "ticker": "META",
+              "weight": 8.28
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 6.44
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 6.43
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 6.22
+            },
+            {
+              "ticker": "CVNA",
+              "weight": 5.7
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 5.58
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 5.5
+            },
+            {
+              "ticker": "V",
+              "weight": 4.83
+            },
+            {
+              "ticker": "MA",
+              "weight": 4.03
+            },
+            {
+              "ticker": "JOE",
+              "weight": 3.8
+            },
+            {
+              "ticker": "MCO",
+              "weight": 3.43
+            },
+            {
+              "ticker": "COF",
+              "weight": 3.36
+            },
+            {
+              "ticker": "BAC",
+              "weight": 3.11
+            },
+            {
+              "ticker": "GE",
+              "weight": 3.07
+            },
+            {
+              "ticker": "DIS",
+              "weight": 2.88
+            },
+            {
+              "ticker": "C",
+              "weight": 2.83
+            },
+            {
+              "ticker": "TSM",
+              "weight": 2.7
+            },
+            {
+              "ticker": "TDG",
+              "weight": 2.52
+            }
+          ]
+        },
+        {
+          "asOf": "2025-09-30",
+          "holdings": [
+            {
+              "ticker": "MSFT",
+              "weight": 10.09
+            },
+            {
+              "ticker": "AMZN",
+              "weight": 8.48
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 7.52
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 6.84
+            },
+            {
+              "ticker": "META",
+              "weight": 6.83
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 6.75
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 6.01
+            },
+            {
+              "ticker": "CVNA",
+              "weight": 5.83
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 5.64
+            },
+            {
+              "ticker": "V",
+              "weight": 5.08
+            },
+            {
+              "ticker": "MA",
+              "weight": 4.08
+            },
+            {
+              "ticker": "JOE",
+              "weight": 3.76
+            },
+            {
+              "ticker": "BN",
+              "weight": 3.37
+            },
+            {
+              "ticker": "GE",
+              "weight": 3.07
+            },
+            {
+              "ticker": "MCO",
+              "weight": 3.01
+            },
+            {
+              "ticker": "BAC",
+              "weight": 2.83
+            },
+            {
+              "ticker": "TSM",
+              "weight": 2.82
+            },
+            {
+              "ticker": "COF",
+              "weight": 2.82
+            },
+            {
+              "ticker": "PDD",
+              "weight": 2.63
+            },
+            {
+              "ticker": "DIS",
+              "weight": 2.54
+            }
+          ]
+        },
+        {
+          "asOf": "2025-12-31",
+          "holdings": [
+            {
+              "ticker": "AMZN",
+              "weight": 9.65
+            },
+            {
+              "ticker": "MSFT",
+              "weight": 8.76
+            },
+            {
+              "ticker": "GOOG",
+              "weight": 8.35
+            },
+            {
+              "ticker": "GOOGL",
+              "weight": 7.26
+            },
+            {
+              "ticker": "BRK.B",
+              "weight": 7.0
+            },
+            {
+              "ticker": "BRK.A",
+              "weight": 6.21
+            },
+            {
+              "ticker": "META",
+              "weight": 6.02
+            },
+            {
+              "ticker": "CVNA",
+              "weight": 5.8
+            },
+            {
+              "ticker": "V",
+              "weight": 5.34
+            },
+            {
+              "ticker": "AAPL",
+              "weight": 5.03
+            },
+            {
+              "ticker": "MA",
+              "weight": 4.19
+            },
+            {
+              "ticker": "JOE",
+              "weight": 3.72
+            },
+            {
+              "ticker": "MCO",
+              "weight": 3.34
+            },
+            {
+              "ticker": "BN",
+              "weight": 3.24
+            },
+            {
+              "ticker": "GE",
+              "weight": 3.0
+            },
+            {
+              "ticker": "TSM",
+              "weight": 2.94
+            },
+            {
+              "ticker": "COF",
+              "weight": 2.72
+            },
+            {
+              "ticker": "NVDA",
+              "weight": 2.68
+            },
+            {
+              "ticker": "TDG",
+              "weight": 2.48
+            },
+            {
+              "ticker": "IEP",
+              "weight": 2.27
+            }
+          ]
         }
       ]
     }
   ],
   "prices": {
     "VT": {
-      "2026-04-01": 139.34,
-      "2026-03-01": 145.47,
-      "2026-02-01": 145.18,
-      "2026-01-01": 142.26,
-      "2025-12-01": 140.17,
-      "2025-11-01": 141.1,
-      "2025-10-01": 137.66,
-      "2025-09-01": 132.31,
-      "2025-08-01": 129.08,
-      "2025-07-01": 128.28,
-      "2025-06-01": 123.21,
-      "2025-05-01": 117.67
+      "2026-04-01": 139.69,
+      "2026-03-01": 146.95,
+      "2026-02-01": 146.15,
+      "2026-01-01": 142.1,
+      "2025-12-01": 140.22,
+      "2025-11-01": 140.76,
+      "2025-10-01": 138.51,
+      "2025-09-01": 132.81,
+      "2025-08-01": 128.41,
+      "2025-07-01": 128.53,
+      "2025-06-01": 124.19,
+      "2025-05-01": 117.02,
+      "2025-04-01": 116.33,
+      "2025-03-01": 119.29,
+      "2025-02-01": 120.12,
+      "2025-01-01": 117.24,
+      "2026-05-01": 151.44
     },
     "VOO": {
-      "2026-04-01": 601.06,
-      "2026-03-01": 624.19,
-      "2026-02-01": 634.18,
-      "2026-01-01": 630.64,
-      "2025-12-01": 624.17,
-      "2025-11-01": 630.42,
-      "2025-10-01": 609.7,
-      "2025-09-01": 586.06,
-      "2025-08-01": 575.73,
-      "2025-07-01": 566.56,
-      "2025-06-01": 540.25,
-      "2025-05-01": 515.13
+      "2026-04-01": 602.3,
+      "2026-03-01": 631.28,
+      "2026-02-01": 639.68,
+      "2026-01-01": 628.3,
+      "2025-12-01": 625.52,
+      "2025-11-01": 628.27,
+      "2025-10-01": 614.57,
+      "2025-09-01": 588.71,
+      "2025-08-01": 571.45,
+      "2025-07-01": 567.77,
+      "2025-06-01": 544.91,
+      "2025-05-01": 513.35,
+      "2025-04-01": 515.8,
+      "2025-03-01": 536.92,
+      "2025-02-01": 549.7,
+      "2025-01-01": 537.46,
+      "2026-05-01": 662.52
     },
     "AAPL": {
-      "2026-04-01": 254.08,
-      "2026-03-01": 262.41,
-      "2026-02-01": 260.03,
-      "2026-01-01": 272.26,
-      "2025-12-01": 278.01,
-      "2025-11-01": 270.42,
-      "2025-10-01": 255.04,
-      "2025-09-01": 229.25,
-      "2025-08-01": 210.87,
-      "2025-07-01": 206.67,
-      "2025-06-01": 200.28,
-      "2025-05-01": 209.08
+      "2026-04-01": 255.63,
+      "2026-03-01": 264.72,
+      "2026-02-01": 270.01,
+      "2026-01-01": 271.01,
+      "2025-12-01": 283.1,
+      "2025-11-01": 269.05,
+      "2025-10-01": 255.45,
+      "2025-09-01": 229.72,
+      "2025-08-01": 202.38,
+      "2025-07-01": 207.82,
+      "2025-06-01": 201.7,
+      "2025-05-01": 213.32,
+      "2025-04-01": 223.19,
+      "2025-03-01": 238.03,
+      "2025-02-01": 228.01,
+      "2025-01-01": 243.85,
+      "2026-05-01": 280.14
     },
     "AMZN": {
-      "2026-04-01": 210.44,
-      "2026-03-01": 204.55,
-      "2026-02-01": 238.31,
-      "2026-01-01": 231.34,
-      "2025-12-01": 233.22,
-      "2025-11-01": 255.36,
-      "2025-10-01": 217.36,
-      "2025-09-01": 223.52,
-      "2025-08-01": 217.21,
-      "2025-07-01": 219.5,
-      "2025-06-01": 204.98,
-      "2025-05-01": 190.63
+      "2026-04-01": 210.57,
+      "2026-03-01": 208.39,
+      "2026-02-01": 242.96,
+      "2026-01-01": 226.5,
+      "2025-12-01": 233.88,
+      "2025-11-01": 254.0,
+      "2025-10-01": 220.63,
+      "2025-09-01": 225.34,
+      "2025-08-01": 214.75,
+      "2025-07-01": 220.46,
+      "2025-06-01": 206.65,
+      "2025-05-01": 190.2,
+      "2025-04-01": 192.17,
+      "2025-03-01": 205.02,
+      "2025-02-01": 237.42,
+      "2025-01-01": 220.22,
+      "2026-05-01": 268.26
     },
     "ASML": {
-      "2026-04-01": 1345.64,
-      "2026-03-01": 1417.75,
-      "2026-02-01": 1397.24,
-      "2026-01-01": 1133.76,
-      "2025-12-01": 1056.03,
-      "2025-11-01": 1063.02,
-      "2025-10-01": 965.61,
-      "2025-09-01": 717.21,
-      "2025-08-01": 690,
-      "2025-07-01": 788.05,
-      "2025-06-01": 733.29,
-      "2025-05-01": 675.15
+      "2026-04-01": 1359.76,
+      "2026-03-01": 1423.54,
+      "2026-02-01": 1441.39,
+      "2026-01-01": 1163.78,
+      "2025-12-01": 1087.99,
+      "2025-11-01": 1066.82,
+      "2025-10-01": 1003.27,
+      "2025-09-01": 725.85,
+      "2025-08-01": 689.82,
+      "2025-07-01": 790.47,
+      "2025-06-01": 746.53,
+      "2025-05-01": 666.72,
+      "2025-04-01": 667.34,
+      "2025-03-01": 699.86,
+      "2025-02-01": 731.055,
+      "2025-01-01": 700.42,
+      "2026-05-01": 1427.02
     },
     "AXP": {
-      "2026-04-01": 306.77,
-      "2026-03-01": 303.2,
-      "2026-02-01": 350.35,
-      "2026-01-01": 369.5,
-      "2025-12-01": 363.86,
-      "2025-11-01": 361,
-      "2025-10-01": 331,
-      "2025-09-01": 326.66,
-      "2025-08-01": 294.03,
-      "2025-07-01": 316.93,
-      "2025-06-01": 292.35,
-      "2025-05-01": 268
+      "2026-04-01": 301.45,
+      "2026-03-01": 307.43,
+      "2026-02-01": 352.83,
+      "2026-01-01": 372.73,
+      "2025-12-01": 360.31,
+      "2025-11-01": 361.62,
+      "2025-10-01": 328.56,
+      "2025-09-01": 331.18,
+      "2025-08-01": 294.27,
+      "2025-07-01": 322.53,
+      "2025-06-01": 295.33,
+      "2025-05-01": 268.54,
+      "2025-04-01": 270.48,
+      "2025-03-01": 295.49,
+      "2025-02-01": 316.53,
+      "2025-01-01": 298.43,
+      "2026-05-01": 319.68
     },
     "BAC": {
-      "2026-04-01": 49.7,
-      "2026-03-01": 48.78,
-      "2026-02-01": 53.2,
-      "2026-01-01": 55.03,
-      "2025-12-01": 53.5,
-      "2025-11-01": 53.26,
-      "2025-10-01": 51.3,
-      "2025-09-01": 50.22,
-      "2025-08-01": 46.36,
-      "2025-07-01": 47.02,
-      "2025-06-01": 43.88,
-      "2025-05-01": 39.82
+      "2026-04-01": 49.27,
+      "2026-03-01": 49.81,
+      "2026-02-01": 54.03,
+      "2026-01-01": 55.95,
+      "2025-12-01": 53.24,
+      "2025-11-01": 53.56,
+      "2025-10-01": 50.68,
+      "2025-09-01": 50.42,
+      "2025-08-01": 45.66,
+      "2025-07-01": 48.15,
+      "2025-06-01": 44.08,
+      "2025-05-01": 40.17,
+      "2025-04-01": 41.49,
+      "2025-03-01": 45.56,
+      "2025-02-01": 46.21,
+      "2025-01-01": 44.29,
+      "2026-05-01": 53.24
     },
     "BF.A": {
       "2026-04-01": 26.57,
@@ -2329,7 +3190,8 @@
       "2025-08-01": 28.79,
       "2025-07-01": 27.38,
       "2025-06-01": 32.85,
-      "2025-05-01": 34.38
+      "2025-05-01": 34.38,
+      "2026-05-01": 26.18
     },
     "BF.B": {
       "2026-04-01": 26.27,
@@ -2343,63 +3205,84 @@
       "2025-08-01": 29.1,
       "2025-07-01": 26.91,
       "2025-06-01": 33.11,
-      "2025-05-01": 34.74
+      "2025-05-01": 34.74,
+      "2026-05-01": 25.55
     },
     "BRK.B": {
-      "2026-04-01": 478.98,
-      "2026-03-01": 495.23,
-      "2026-02-01": 481.3,
-      "2026-01-01": 500.96,
-      "2025-12-01": 513.65,
-      "2025-11-01": 479.51,
-      "2025-10-01": 502.5,
-      "2025-09-01": 504.24,
-      "2025-08-01": 473.47,
-      "2025-07-01": 485.78,
-      "2025-06-01": 501.7,
-      "2025-05-01": 531
+      "2026-04-01": 478.5,
+      "2026-03-01": 480.17,
+      "2026-02-01": 487.29,
+      "2026-01-01": 496.85,
+      "2025-12-01": 508.55,
+      "2025-11-01": 475.68,
+      "2025-10-01": 498.2,
+      "2025-09-01": 501.14,
+      "2025-08-01": 472.84,
+      "2025-07-01": 489.61,
+      "2025-06-01": 502.81,
+      "2025-05-01": 530.23,
+      "2025-04-01": 532.99,
+      "2025-03-01": 510.08,
+      "2025-02-01": 464.61,
+      "2025-01-01": 451.1,
+      "2026-05-01": 473.01
     },
     "CVX": {
-      "2026-04-01": 201.99,
-      "2026-03-01": 190.33,
-      "2026-02-01": 173.44,
-      "2026-01-01": 152.17,
-      "2025-12-01": 151.75,
-      "2025-11-01": 157.41,
-      "2025-10-01": 154.83,
-      "2025-09-01": 160.48,
-      "2025-08-01": 152.55,
-      "2025-07-01": 143.34,
-      "2025-06-01": 138.49,
-      "2025-05-01": 135.42
+      "2026-04-01": 197.41,
+      "2026-03-01": 189.6,
+      "2026-02-01": 174.03,
+      "2026-01-01": 155.9,
+      "2025-12-01": 152.54,
+      "2025-11-01": 154.04,
+      "2025-10-01": 154.58,
+      "2025-09-01": 161.83,
+      "2025-08-01": 151.4,
+      "2025-07-01": 145.57,
+      "2025-06-01": 137.84,
+      "2025-05-01": 136.26,
+      "2025-04-01": 168.51,
+      "2025-03-01": 153.09,
+      "2025-02-01": 149.34,
+      "2025-01-01": 146.71,
+      "2026-05-01": 190.63
     },
     "DIS": {
-      "2026-04-01": 97.26,
-      "2026-03-01": 104.61,
-      "2026-02-01": 104.01,
-      "2026-01-01": 113.44,
-      "2025-12-01": 104.92,
-      "2025-11-01": 112.55,
-      "2025-10-01": 114.08,
-      "2025-09-01": 117.02,
-      "2025-08-01": 117.59,
-      "2025-07-01": 123.5,
-      "2025-06-01": 112.68,
-      "2025-05-01": 91.27
+      "2026-04-01": 96.56,
+      "2026-03-01": 104.33,
+      "2026-02-01": 104.45,
+      "2026-01-01": 111.85,
+      "2025-12-01": 106.77,
+      "2025-11-01": 112.12,
+      "2025-10-01": 112.95,
+      "2025-09-01": 118.27,
+      "2025-08-01": 116.59,
+      "2025-07-01": 123.49,
+      "2025-06-01": 112.95,
+      "2025-05-01": 90.81,
+      "2025-04-01": 97.68,
+      "2025-03-01": 112.79,
+      "2025-02-01": 114.0,
+      "2025-01-01": 110.82,
+      "2026-05-01": 103.08
     },
     "DUOL": {
-      "2026-04-01": 98.76,
-      "2026-03-01": 98.4,
-      "2026-02-01": 133.88,
-      "2026-01-01": 176.73,
-      "2025-12-01": 189.53,
-      "2025-11-01": 278.82,
-      "2025-10-01": 320.57,
-      "2025-09-01": 291.25,
-      "2025-08-01": 342.23,
-      "2025-07-01": 409.24,
-      "2025-06-01": 519.76,
-      "2025-05-01": 396.18
+      "2026-04-01": 96.19,
+      "2026-03-01": 100.82,
+      "2026-02-01": 131.93,
+      "2026-01-01": 176.48,
+      "2025-12-01": 185.45,
+      "2025-11-01": 264.93,
+      "2025-10-01": 303.72,
+      "2025-09-01": 289.98,
+      "2025-08-01": 338.99,
+      "2025-07-01": 403.06,
+      "2025-06-01": 526.85,
+      "2025-05-01": 400.0,
+      "2025-04-01": 327.38,
+      "2025-03-01": 295.23,
+      "2025-02-01": 364.44,
+      "2025-01-01": 325.88,
+      "2026-05-01": 111.25
     },
     "EBAY": {
       "2026-04-01": 91.91,
@@ -2413,91 +3296,122 @@
       "2025-08-01": 89.18,
       "2025-07-01": 74.79,
       "2025-06-01": 72.84,
-      "2025-05-01": 70.05
+      "2025-05-01": 70.05,
+      "2026-05-01": 104.07
     },
     "EWBC": {
-      "2026-04-01": 107.57,
-      "2026-03-01": 108.91,
-      "2026-02-01": 113.41,
-      "2026-01-01": 112.41,
-      "2025-12-01": 106.41,
-      "2025-11-01": 100.48,
-      "2025-10-01": 106.11,
-      "2025-09-01": 103.48,
-      "2025-08-01": 98.25,
-      "2025-07-01": 100.46,
-      "2025-06-01": 90.97,
-      "2025-05-01": 85.55
+      "2026-04-01": 109.33,
+      "2026-03-01": 110.91,
+      "2026-02-01": 114.63,
+      "2026-01-01": 115.06,
+      "2025-12-01": 107.54,
+      "2025-11-01": 100.42,
+      "2025-10-01": 105.71,
+      "2025-09-01": 105.7,
+      "2025-08-01": 98.8,
+      "2025-07-01": 104.81,
+      "2025-06-01": 90.48,
+      "2025-05-01": 86.87,
+      "2025-04-01": 88.72,
+      "2025-03-01": 93.62,
+      "2025-02-01": 100.13,
+      "2025-01-01": 94.47,
+      "2026-05-01": 125.82
     },
     "FICO": {
-      "2026-04-01": 1059.12,
-      "2026-03-01": 1380.14,
-      "2026-02-01": 1464.33,
-      "2026-01-01": 1691.03,
-      "2025-12-01": 1781.97,
-      "2025-11-01": 1653,
-      "2025-10-01": 1506.31,
-      "2025-09-01": 1505,
-      "2025-08-01": 1425,
-      "2025-07-01": 1806.42,
-      "2025-06-01": 1708.71,
-      "2025-05-01": 1999.63
+      "2026-04-01": 1061.99,
+      "2026-03-01": 1407.54,
+      "2026-02-01": 1450.91,
+      "2026-01-01": 1643.27,
+      "2025-12-01": 1768.68,
+      "2025-11-01": 1650.51,
+      "2025-10-01": 1512.71,
+      "2025-09-01": 1504.88,
+      "2025-08-01": 1381.07,
+      "2025-07-01": 1843.18,
+      "2025-06-01": 1748.26,
+      "2025-05-01": 2001.68,
+      "2025-04-01": 1868.47,
+      "2025-03-01": 1864.88,
+      "2025-02-01": 1827.96,
+      "2025-01-01": 1995.92,
+      "2026-05-01": 1035.5
     },
     "GOOG": {
-      "2026-04-01": 289.98,
-      "2026-03-01": 302.97,
-      "2026-02-01": 336.55,
-      "2026-01-01": 317.59,
-      "2025-12-01": 317.48,
-      "2025-11-01": 282.42,
-      "2025-10-01": 241.18,
-      "2025-09-01": 208.99,
-      "2025-08-01": 189.78,
-      "2025-07-01": 176.81,
-      "2025-06-01": 169.01,
-      "2025-05-01": 162.52
+      "2026-04-01": 294.9,
+      "2026-03-01": 306.36,
+      "2026-02-01": 344.9,
+      "2026-01-01": 315.32,
+      "2025-12-01": 315.12,
+      "2025-11-01": 284.12,
+      "2025-10-01": 245.54,
+      "2025-09-01": 211.99,
+      "2025-08-01": 189.95,
+      "2025-07-01": 176.91,
+      "2025-06-01": 170.37,
+      "2025-05-01": 162.79,
+      "2025-04-01": 158.88,
+      "2025-03-01": 168.66,
+      "2025-02-01": 202.64,
+      "2025-01-01": 190.63,
+      "2026-05-01": 383.22
     },
     "GOOGL": {
-      "2026-04-01": 289.98,
-      "2026-03-01": 302.97,
-      "2026-02-01": 336.55,
-      "2026-01-01": 317.59,
-      "2025-12-01": 317.48,
-      "2025-11-01": 282.42,
-      "2025-10-01": 241.18,
-      "2025-09-01": 208.99,
-      "2025-08-01": 189.78,
-      "2025-07-01": 176.81,
-      "2025-06-01": 169.01,
-      "2025-05-01": 162.52
+      "2026-04-01": 297.39,
+      "2026-03-01": 306.52,
+      "2026-02-01": 343.69,
+      "2026-01-01": 315.15,
+      "2025-12-01": 314.89,
+      "2025-11-01": 283.72,
+      "2025-10-01": 244.9,
+      "2025-09-01": 211.35,
+      "2025-08-01": 189.13,
+      "2025-07-01": 175.84,
+      "2025-06-01": 169.03,
+      "2025-05-01": 161.3,
+      "2025-04-01": 157.07,
+      "2025-03-01": 167.01,
+      "2025-02-01": 201.23,
+      "2025-01-01": 189.43,
+      "2026-05-01": 385.69
     },
     "INTU": {
-      "2026-04-01": 431.26,
-      "2026-03-01": 402.45,
-      "2026-02-01": 500.41,
-      "2026-01-01": 660.6,
-      "2025-12-01": 629.11,
-      "2025-11-01": 669.27,
-      "2025-10-01": 679.84,
-      "2025-09-01": 655.26,
-      "2025-08-01": 786.14,
-      "2025-07-01": 788.7,
-      "2025-06-01": 750.55,
-      "2025-05-01": 624.5
+      "2026-04-01": 425.87,
+      "2026-03-01": 419.06,
+      "2026-02-01": 487.12,
+      "2026-01-01": 629.46,
+      "2025-12-01": 631.62,
+      "2025-11-01": 676.19,
+      "2025-10-01": 679.5,
+      "2025-09-01": 661.99,
+      "2025-08-01": 776.15,
+      "2025-07-01": 779.61,
+      "2025-06-01": 764.99,
+      "2025-05-01": 623.19,
+      "2025-04-01": 613.78,
+      "2025-03-01": 601.09,
+      "2025-02-01": 600.76,
+      "2025-01-01": 622.79,
+      "2026-05-01": 399.04
     },
     "KO": {
-      "2026-04-01": 76.15,
-      "2026-03-01": 81.25,
-      "2026-02-01": 75.01,
-      "2026-01-01": 69.85,
-      "2025-12-01": 72.6,
-      "2025-11-01": 68.8,
-      "2025-10-01": 66.51,
-      "2025-09-01": 68.96,
-      "2025-08-01": 68.6,
-      "2025-07-01": 70.99,
-      "2025-06-01": 72.03,
-      "2025-05-01": 72
+      "2026-04-01": 76.08,
+      "2026-03-01": 80.22,
+      "2026-02-01": 75.33,
+      "2026-01-01": 69.12,
+      "2025-12-01": 71.95,
+      "2025-11-01": 67.97,
+      "2025-10-01": 66.78,
+      "2025-09-01": 69.06,
+      "2025-08-01": 68.86,
+      "2025-07-01": 71.67,
+      "2025-06-01": 72.0,
+      "2025-05-01": 71.29,
+      "2025-04-01": 71.87,
+      "2025-03-01": 72.32,
+      "2025-02-01": 63.35,
+      "2025-01-01": 61.84,
+      "2026-05-01": 78.58
     },
     "MANU": {
       "2026-04-01": 16.97,
@@ -2511,7 +3425,8 @@
       "2025-08-01": 17.41,
       "2025-07-01": 17.62,
       "2025-06-01": 14.22,
-      "2025-05-01": 13.77
+      "2025-05-01": 13.77,
+      "2026-05-01": 18.54
     },
     "MDLZ": {
       "2026-04-01": 57.62,
@@ -2525,91 +3440,122 @@
       "2025-08-01": 65.37,
       "2025-07-01": 67.55,
       "2025-06-01": 67.17,
-      "2025-05-01": 67.21
+      "2025-05-01": 67.21,
+      "2026-05-01": 61.37
     },
     "MELI": {
-      "2026-04-01": 1740.16,
-      "2026-03-01": 1700.15,
-      "2026-02-01": 2134.51,
-      "2026-01-01": 2027.55,
-      "2025-12-01": 2060,
-      "2025-11-01": 2331.2,
-      "2025-10-01": 2344.29,
-      "2025-09-01": 2424.55,
-      "2025-08-01": 2379.99,
-      "2025-07-01": 2645.22,
-      "2025-06-01": 2563,
-      "2025-05-01": 2337.86
+      "2026-04-01": 1718.97,
+      "2026-03-01": 1777.0,
+      "2026-02-01": 2147.22,
+      "2026-01-01": 1973.7,
+      "2025-12-01": 2064.55,
+      "2025-11-01": 2316.4,
+      "2025-10-01": 2176.91,
+      "2025-09-01": 2379.76,
+      "2025-08-01": 2375.92,
+      "2025-07-01": 2501.4,
+      "2025-06-01": 2593.44,
+      "2025-05-01": 2294.52,
+      "2025-04-01": 1915.0,
+      "2025-03-01": 2070.41,
+      "2025-02-01": 1908.9,
+      "2025-01-01": 1765.0,
+      "2026-05-01": 1850.05
     },
     "META": {
-      "2026-04-01": 580.13,
-      "2026-03-01": 637.16,
-      "2026-02-01": 714.6,
-      "2026-01-01": 662.73,
-      "2025-12-01": 639.55,
-      "2025-11-01": 656,
-      "2025-10-01": 721.49,
-      "2025-09-01": 726.04,
-      "2025-08-01": 760.73,
-      "2025-07-01": 736.88,
-      "2025-06-01": 644.39,
-      "2025-05-01": 592.08
+      "2026-04-01": 579.23,
+      "2026-03-01": 653.56,
+      "2026-02-01": 706.41,
+      "2026-01-01": 650.41,
+      "2025-12-01": 640.87,
+      "2025-11-01": 637.71,
+      "2025-10-01": 717.34,
+      "2025-09-01": 735.11,
+      "2025-08-01": 750.01,
+      "2025-07-01": 719.22,
+      "2025-06-01": 670.9,
+      "2025-05-01": 572.21,
+      "2025-04-01": 586.0,
+      "2025-03-01": 655.05,
+      "2025-02-01": 697.46,
+      "2025-01-01": 599.24,
+      "2026-05-01": 608.745
     },
     "MSFT": {
-      "2026-04-01": 373.49,
-      "2026-03-01": 392.86,
-      "2026-02-01": 430.24,
-      "2026-01-01": 484.39,
-      "2025-12-01": 488.44,
-      "2025-11-01": 519.81,
-      "2025-10-01": 514.8,
-      "2025-09-01": 500.47,
-      "2025-08-01": 535,
-      "2025-07-01": 496.47,
-      "2025-06-01": 457.14,
-      "2025-05-01": 431.11
+      "2026-04-01": 369.37,
+      "2026-03-01": 398.55,
+      "2026-02-01": 423.37,
+      "2026-01-01": 472.94,
+      "2025-12-01": 486.74,
+      "2025-11-01": 517.03,
+      "2025-10-01": 519.71,
+      "2025-09-01": 505.12,
+      "2025-08-01": 524.11,
+      "2025-07-01": 492.05,
+      "2025-06-01": 461.97,
+      "2025-05-01": 425.4,
+      "2025-04-01": 382.19,
+      "2025-03-01": 388.49,
+      "2025-02-01": 410.92,
+      "2025-01-01": 418.58,
+      "2026-05-01": 414.44
     },
     "NFLX": {
-      "2026-04-01": 96.47,
-      "2026-03-01": 95.26,
-      "2026-02-01": 83.53,
-      "2026-01-01": 94.13,
-      "2025-12-01": 106.51,
-      "2025-11-01": 113.32,
-      "2025-10-01": 117.55,
-      "2025-09-01": 119.7,
-      "2025-08-01": 116.3,
-      "2025-07-01": 133.82,
-      "2025-06-01": 120.12,
-      "2025-05-01": 112.25
+      "2026-04-01": 95.55,
+      "2026-03-01": 97.09,
+      "2026-02-01": 82.76,
+      "2026-01-01": 90.99,
+      "2025-12-01": 109.13,
+      "2025-11-01": 110.009,
+      "2025-10-01": 117.09,
+      "2025-09-01": 121.411,
+      "2025-08-01": 115.86,
+      "2025-07-01": 129.36,
+      "2025-06-01": 121.898,
+      "2025-05-01": 113.347,
+      "2025-04-01": 92.838,
+      "2025-03-01": 97.37,
+      "2025-02-01": 97.894,
+      "2025-01-01": 88.673,
+      "2026-05-01": 92.06
     },
     "NVDA": {
-      "2026-04-01": 176,
-      "2026-03-01": 175.01,
-      "2026-02-01": 187.2,
-      "2026-01-01": 189.84,
-      "2025-12-01": 174.76,
-      "2025-11-01": 208.08,
-      "2025-10-01": 185.24,
-      "2025-09-01": 170,
-      "2025-08-01": 174.09,
-      "2025-07-01": 156.29,
-      "2025-06-01": 135.49,
-      "2025-05-01": 113.08
+      "2026-04-01": 175.75,
+      "2026-03-01": 182.48,
+      "2026-02-01": 185.61,
+      "2026-01-01": 188.85,
+      "2025-12-01": 179.92,
+      "2025-11-01": 206.88,
+      "2025-10-01": 187.24,
+      "2025-09-01": 170.78,
+      "2025-08-01": 173.72,
+      "2025-07-01": 153.3,
+      "2025-06-01": 137.38,
+      "2025-05-01": 111.61,
+      "2025-04-01": 110.15,
+      "2025-03-01": 114.06,
+      "2025-02-01": 116.66,
+      "2025-01-01": 138.31,
+      "2026-05-01": 198.45
     },
     "OXY": {
-      "2026-04-01": 64.08,
-      "2026-03-01": 56.34,
-      "2026-02-01": 43.86,
-      "2026-01-01": 41.24,
-      "2025-12-01": 41.83,
-      "2025-11-01": 41.05,
-      "2025-10-01": 47.46,
-      "2025-09-01": 47.45,
-      "2025-08-01": 43.59,
-      "2025-07-01": 42.07,
-      "2025-06-01": 41.79,
-      "2025-05-01": 39.32
+      "2026-04-01": 62.23,
+      "2026-03-01": 54.21,
+      "2026-02-01": 43.8,
+      "2026-01-01": 42.38,
+      "2025-12-01": 42.34,
+      "2025-11-01": 40.92,
+      "2025-10-01": 47.72,
+      "2025-09-01": 48.05,
+      "2025-08-01": 43.41,
+      "2025-07-01": 42.86,
+      "2025-06-01": 41.44,
+      "2025-05-01": 40.44,
+      "2025-04-01": 49.19,
+      "2025-03-01": 46.45,
+      "2025-02-01": 46.37,
+      "2025-01-01": 49.81,
+      "2026-05-01": 58.71
     },
     "PEP": {
       "2026-04-01": 153.55,
@@ -2623,7 +3569,8 @@
       "2025-08-01": 139.11,
       "2025-07-01": 132.59,
       "2025-06-01": 130.9,
-      "2025-05-01": 134.47
+      "2025-05-01": 134.47,
+      "2026-05-01": 157.41
     },
     "PYPL": {
       "2026-04-01": 45.29,
@@ -2637,77 +3584,103 @@
       "2025-08-01": 68,
       "2025-07-01": 73.95,
       "2025-06-01": 69.28,
-      "2025-05-01": 65.62
+      "2025-05-01": 65.62,
+      "2026-05-01": 50.44
     },
     "REMEDY.HE": {
-      "2026-04-01": 11.26,
-      "2026-03-01": 14.4,
-      "2026-02-01": 14.78,
-      "2026-01-01": 15.16,
-      "2025-12-01": 14.58,
-      "2025-11-01": 14,
-      "2025-10-01": 15.4,
-      "2025-09-01": 14.28,
-      "2025-08-01": 15.56,
-      "2025-07-01": 14.84,
-      "2025-06-01": 18.96,
-      "2025-05-01": 16.62
+      "2026-04-01": 11.98,
+      "2026-03-01": 14.36,
+      "2026-02-01": 14.76,
+      "2026-01-01": 15.44,
+      "2025-12-01": 13.42,
+      "2025-11-01": 13.18,
+      "2025-10-01": 14.52,
+      "2025-09-01": 14.52,
+      "2025-08-01": 16.18,
+      "2025-07-01": 15.08,
+      "2025-06-01": 18.6,
+      "2025-05-01": 17.3,
+      "2025-04-01": 14.44,
+      "2025-03-01": 13.64,
+      "2025-02-01": 13.24,
+      "2025-01-01": 14.64,
+      "2026-05-01": 12.36
     },
     "SOC": {
-      "2026-04-01": 16.01,
-      "2026-03-01": 8.7,
-      "2026-02-01": 9.19,
-      "2026-01-01": 10.69,
-      "2025-12-01": 4.23,
-      "2025-11-01": 9.89,
-      "2025-10-01": 17.29,
-      "2025-09-01": 26.17,
-      "2025-08-01": 29.79,
+      "2026-04-01": 14.7,
+      "2026-03-01": 8.6,
+      "2026-02-01": 9.01,
+      "2026-01-01": 11.73,
+      "2025-12-01": 4.79,
+      "2025-11-01": 7.27,
+      "2025-10-01": 20.06,
+      "2025-09-01": 23.08,
+      "2025-08-01": 29.62,
       "2025-07-01": 21.5,
-      "2025-06-01": 29.45,
-      "2025-05-01": 18.74
+      "2025-06-01": 29.18,
+      "2025-05-01": 20.01,
+      "2025-04-01": 25.61,
+      "2025-03-01": 26.11,
+      "2025-02-01": 24.78,
+      "2025-01-01": 23.28,
+      "2026-05-01": 14.1
     },
     "SONY": {
-      "2026-04-01": 21.25,
-      "2026-03-01": 22.43,
-      "2026-02-01": 22.09,
-      "2026-01-01": 25.93,
-      "2025-12-01": 28.66,
-      "2025-11-01": 27.97,
-      "2025-10-01": 28.79,
-      "2025-09-01": 26.8,
-      "2025-08-01": 24.32,
-      "2025-07-01": 25.4,
-      "2025-06-01": 26.48,
-      "2025-05-01": 25.56
+      "2026-04-01": 21.12,
+      "2026-03-01": 22.69,
+      "2026-02-01": 22.12,
+      "2026-01-01": 25.88,
+      "2025-12-01": 28.78,
+      "2025-11-01": 27.95,
+      "2025-10-01": 28.74,
+      "2025-09-01": 26.95,
+      "2025-08-01": 24.37,
+      "2025-07-01": 25.47,
+      "2025-06-01": 26.88,
+      "2025-05-01": 25.28,
+      "2025-04-01": 25.17,
+      "2025-03-01": 24.59,
+      "2025-02-01": 21.89,
+      "2025-01-01": 21.09,
+      "2026-05-01": 19.78
     },
     "SPGI": {
-      "2026-04-01": 425.62,
-      "2026-03-01": 433.01,
-      "2026-02-01": 527.79,
-      "2026-01-01": 521.81,
-      "2025-12-01": 495.51,
-      "2025-11-01": 489.72,
-      "2025-10-01": 488.9,
-      "2025-09-01": 543.63,
-      "2025-08-01": 545.01,
-      "2025-07-01": 525.17,
-      "2025-06-01": 509.43,
-      "2025-05-01": 498.9
+      "2026-04-01": 425.17,
+      "2026-03-01": 443.08,
+      "2026-02-01": 527.66,
+      "2026-01-01": 512.66,
+      "2025-12-01": 495.27,
+      "2025-11-01": 497.02,
+      "2025-10-01": 481.67,
+      "2025-09-01": 539.64,
+      "2025-08-01": 545.66,
+      "2025-07-01": 529.32,
+      "2025-06-01": 513.59,
+      "2025-05-01": 498.93,
+      "2025-04-01": 510.78,
+      "2025-03-01": 529.31,
+      "2025-02-01": 518.38,
+      "2025-01-01": 495.5,
+      "2026-05-01": 426.06
     },
     "SPOT": {
-      "2026-04-01": 484.11,
-      "2026-03-01": 505.35,
-      "2026-02-01": 497.02,
-      "2026-01-01": 585.88,
-      "2025-12-01": 594.16,
-      "2025-11-01": 653.15,
-      "2025-10-01": 699.5,
-      "2025-09-01": 669.81,
-      "2025-08-01": 622,
-      "2025-07-01": 766.93,
-      "2025-06-01": 660,
-      "2025-05-01": 606.1
+      "2026-04-01": 470.01,
+      "2026-03-01": 507.28,
+      "2026-02-01": 508.58,
+      "2026-01-01": 575.0,
+      "2025-12-01": 578.89,
+      "2025-11-01": 644.09,
+      "2025-10-01": 700.68,
+      "2025-09-01": 689.62,
+      "2025-08-01": 627.15,
+      "2025-07-01": 722.35,
+      "2025-06-01": 672.0,
+      "2025-05-01": 602.26,
+      "2025-04-01": 551.73,
+      "2025-03-01": 599.86,
+      "2025-02-01": 549.08,
+      "2025-01-01": 457.79,
+      "2026-05-01": 441.51
     },
     "TKO": {
       "2026-04-01": 203.25,
@@ -2721,7 +3694,8 @@
       "2025-08-01": 168.55,
       "2025-07-01": 181.34,
       "2025-06-01": 157.38,
-      "2025-05-01": 163.84
+      "2025-05-01": 163.84,
+      "2026-05-01": 185.95
     },
     "TMO": {
       "2026-04-01": 496.3,
@@ -2735,875 +3709,1185 @@
       "2025-08-01": 461.03,
       "2025-07-01": 406.29,
       "2025-06-01": 400.14,
-      "2025-05-01": 425.86
+      "2025-05-01": 425.86,
+      "2026-05-01": 469.21
     },
     "TSM": {
-      "2026-04-01": 343.9,
-      "2026-03-01": 365.36,
-      "2026-02-01": 330.76,
-      "2026-01-01": 311.98,
-      "2025-12-01": 286.92,
-      "2025-11-01": 302.59,
-      "2025-10-01": 278.44,
-      "2025-09-01": 226.15,
-      "2025-08-01": 235.62,
-      "2025-07-01": 227.43,
-      "2025-06-01": 193.04,
-      "2025-05-01": 172.8
+      "2026-04-01": 341.49,
+      "2026-03-01": 369.11,
+      "2026-02-01": 341.36,
+      "2026-01-01": 319.61,
+      "2025-12-01": 287.68,
+      "2025-11-01": 304.86,
+      "2025-10-01": 288.47,
+      "2025-09-01": 228.39,
+      "2025-08-01": 235.21,
+      "2025-07-01": 224.68,
+      "2025-06-01": 194.84,
+      "2025-05-01": 172.72,
+      "2025-04-01": 168.64,
+      "2025-03-01": 172.97,
+      "2025-02-01": 199.8,
+      "2025-01-01": 201.58,
+      "2026-05-01": 397.67
     },
     "TTWO": {
-      "2026-04-01": 198,
-      "2026-03-01": 209,
-      "2026-02-01": 225.51,
-      "2026-01-01": 257.71,
-      "2025-12-01": 246.07,
-      "2025-11-01": 257.75,
-      "2025-10-01": 256.69,
-      "2025-09-01": 231.16,
-      "2025-08-01": 222.82,
-      "2025-07-01": 242.43,
-      "2025-06-01": 226.1,
-      "2025-05-01": 234.12
+      "2026-04-01": 198.2,
+      "2026-03-01": 213.88,
+      "2026-02-01": 221.81,
+      "2026-01-01": 251.6,
+      "2025-12-01": 249.34,
+      "2025-11-01": 255.65,
+      "2025-10-01": 255.4,
+      "2025-09-01": 240.95,
+      "2025-08-01": 220.58,
+      "2025-07-01": 240.1,
+      "2025-06-01": 227.6,
+      "2025-05-01": 235.17,
+      "2025-04-01": 210.13,
+      "2025-03-01": 208.05,
+      "2025-02-01": 186.07,
+      "2025-01-01": 183.07,
+      "2026-05-01": 216.03
     },
     "UBER": {
-      "2026-04-01": 72.43,
-      "2026-03-01": 73.5,
-      "2026-02-01": 79.8,
-      "2026-01-01": 82.04,
-      "2025-12-01": 86.99,
-      "2025-11-01": 97.66,
-      "2025-10-01": 97.48,
-      "2025-09-01": 92.26,
-      "2025-08-01": 86.51,
-      "2025-07-01": 92.85,
-      "2025-06-01": 84.48,
-      "2025-05-01": 81
+      "2026-04-01": 71.71,
+      "2026-03-01": 75.95,
+      "2026-02-01": 80.84,
+      "2026-01-01": 82.86,
+      "2025-12-01": 86.57,
+      "2025-11-01": 99.72,
+      "2025-10-01": 96.61,
+      "2025-09-01": 92.81,
+      "2025-08-01": 86.91,
+      "2025-07-01": 92.13,
+      "2025-06-01": 83.64,
+      "2025-05-01": 80.89,
+      "2025-04-01": 72.99,
+      "2025-03-01": 74.44,
+      "2025-02-01": 67.29,
+      "2025-01-01": 63.17,
+      "2026-05-01": 75.12
     },
     "V": {
-      "2026-04-01": 305.05,
-      "2026-03-01": 315.5,
-      "2026-02-01": 324.83,
-      "2026-01-01": 349.87,
-      "2025-12-01": 332.94,
-      "2025-11-01": 341,
-      "2025-10-01": 340.31,
-      "2025-09-01": 349.31,
-      "2025-08-01": 344.1,
-      "2025-07-01": 353.82,
-      "2025-06-01": 362.77,
-      "2025-05-01": 345.58
+      "2026-04-01": 298.51,
+      "2026-03-01": 320.51,
+      "2026-02-01": 333.84,
+      "2026-01-01": 346.48,
+      "2025-12-01": 330.39,
+      "2025-11-01": 336.9,
+      "2025-10-01": 347.83,
+      "2025-09-01": 350.07,
+      "2025-08-01": 339.35,
+      "2025-07-01": 355.47,
+      "2025-06-01": 365.32,
+      "2025-05-01": 342.45,
+      "2025-04-01": 346.35,
+      "2025-03-01": 361.82,
+      "2025-02-01": 345.82,
+      "2025-01-01": 314.4,
+      "2026-05-01": 328.03
     },
     "CROX": {
-      "2026-04-01": 83,
-      "2026-03-01": 88,
-      "2026-02-01": 83.99,
-      "2026-01-01": 86,
-      "2025-12-01": 84.98,
-      "2025-11-01": 81.69,
-      "2025-10-01": 84,
-      "2025-09-01": 85.91,
-      "2025-08-01": 97.91,
-      "2025-07-01": 101.31,
-      "2025-06-01": 100.89,
-      "2025-05-01": 96.51
+      "2026-04-01": 83.56,
+      "2026-03-01": 86.85,
+      "2026-02-01": 86.88,
+      "2026-01-01": 86.95,
+      "2025-12-01": 86.63,
+      "2025-11-01": 81.16,
+      "2025-10-01": 85.0,
+      "2025-09-01": 90.37,
+      "2025-08-01": 97.13,
+      "2025-07-01": 107.13,
+      "2025-06-01": 101.42,
+      "2025-05-01": 94.72,
+      "2025-04-01": 109.14,
+      "2025-03-01": 100.38,
+      "2025-02-01": 96.74,
+      "2025-01-01": 110.03,
+      "2026-05-01": 103.88
     },
     "PDD": {
-      "2026-04-01": 102.67,
-      "2026-03-01": 102.46,
-      "2026-02-01": 101.93,
-      "2026-01-01": 116.22,
-      "2025-12-01": 116.41,
-      "2025-11-01": 135.04,
-      "2025-10-01": 133,
-      "2025-09-01": 119.39,
-      "2025-08-01": 111.2,
-      "2025-07-01": 104.45,
-      "2025-06-01": 96.69,
-      "2025-05-01": 106.36
+      "2026-04-01": 101.78,
+      "2026-03-01": 102.82,
+      "2026-02-01": 103.45,
+      "2026-01-01": 115.75,
+      "2025-12-01": 118.27,
+      "2025-11-01": 134.68,
+      "2025-10-01": 134.4,
+      "2025-09-01": 121.69,
+      "2025-08-01": 110.06,
+      "2025-07-01": 105.49,
+      "2025-06-01": 96.44,
+      "2025-05-01": 105.97,
+      "2025-04-01": 122.19,
+      "2025-03-01": 112.6,
+      "2025-02-01": 105.24,
+      "2025-01-01": 96.89,
+      "2026-05-01": 99.72
     },
     "CB": {
-      "2026-04-01": 324.96,
-      "2026-03-01": 341.75,
-      "2026-02-01": 310.91,
-      "2026-01-01": 310.46,
-      "2025-12-01": 296.57,
-      "2025-11-01": 276,
-      "2025-10-01": 281.57,
-      "2025-09-01": 276.64,
-      "2025-08-01": 266.56,
-      "2025-07-01": 289.19,
-      "2025-06-01": 294.73,
-      "2025-05-01": 282.65
+      "2026-04-01": 327.16,
+      "2026-03-01": 342.76,
+      "2026-02-01": 311.25,
+      "2026-01-01": 310.06,
+      "2025-12-01": 293.88,
+      "2025-11-01": 278.25,
+      "2025-10-01": 281.41,
+      "2025-09-01": 276.81,
+      "2025-08-01": 267.4,
+      "2025-07-01": 289.59,
+      "2025-06-01": 299.93,
+      "2025-05-01": 283.29,
+      "2025-04-01": 301.4,
+      "2025-03-01": 289.69,
+      "2025-02-01": 273.93,
+      "2025-01-01": 272.52,
+      "2026-05-01": 326.22
     },
     "DVA": {
-      "2026-04-01": 152.84,
-      "2026-03-01": 155.07,
-      "2026-02-01": 109.06,
-      "2026-01-01": 113.68,
-      "2025-12-01": 119.52,
-      "2025-11-01": 118,
-      "2025-10-01": 132.74,
-      "2025-09-01": 136.46,
-      "2025-08-01": 140.2,
-      "2025-07-01": 142.43,
-      "2025-06-01": 135.67,
-      "2025-05-01": 140.64
+      "2026-04-01": 150.34,
+      "2026-03-01": 153.98,
+      "2026-02-01": 111.19,
+      "2026-01-01": 114.51,
+      "2025-12-01": 119.24,
+      "2025-11-01": 119.05,
+      "2025-10-01": 132.87,
+      "2025-09-01": 136.95,
+      "2025-08-01": 138.48,
+      "2025-07-01": 146.71,
+      "2025-06-01": 134.41,
+      "2025-05-01": 140.44,
+      "2025-04-01": 151.91,
+      "2025-03-01": 143.1,
+      "2025-02-01": 177.06,
+      "2025-01-01": 149.82,
+      "2026-05-01": 151.65
     },
     "KHC": {
-      "2026-04-01": 22.33,
-      "2026-03-01": 24.61,
-      "2026-02-01": 23.74,
-      "2026-01-01": 24.29,
-      "2025-12-01": 25.4,
-      "2025-11-01": 24.68,
-      "2025-10-01": 26.03,
-      "2025-09-01": 27.8,
-      "2025-08-01": 27.7,
-      "2025-07-01": 25.86,
-      "2025-06-01": 26.65,
-      "2025-05-01": 28.9
+      "2026-04-01": 22.27,
+      "2026-03-01": 24.51,
+      "2026-02-01": 23.5,
+      "2026-01-01": 24.39,
+      "2025-12-01": 25.37,
+      "2025-11-01": 24.33,
+      "2025-10-01": 26.28,
+      "2025-09-01": 26.02,
+      "2025-08-01": 27.41,
+      "2025-07-01": 26.61,
+      "2025-06-01": 26.63,
+      "2025-05-01": 28.5,
+      "2025-04-01": 30.34,
+      "2025-03-01": 31.32,
+      "2025-02-01": 29.28,
+      "2025-01-01": 30.77,
+      "2026-05-01": 22.49
     },
     "KR": {
-      "2026-04-01": 71.89,
-      "2026-03-01": 68.12,
-      "2026-02-01": 63.02,
-      "2026-01-01": 62.36,
-      "2025-12-01": 67.28,
-      "2025-11-01": 63.4,
-      "2025-10-01": 67.08,
-      "2025-09-01": 68.14,
-      "2025-08-01": 70.5,
-      "2025-07-01": 72.09,
-      "2025-06-01": 68.1,
-      "2025-05-01": 71.78
+      "2026-04-01": 70.54,
+      "2026-03-01": 69.05,
+      "2026-02-01": 63.06,
+      "2026-01-01": 62.96,
+      "2025-12-01": 67.55,
+      "2025-11-01": 63.44,
+      "2025-10-01": 66.51,
+      "2025-09-01": 68.64,
+      "2025-08-01": 71.36,
+      "2025-07-01": 71.35,
+      "2025-06-01": 68.2,
+      "2025-05-01": 72.18,
+      "2025-04-01": 68.14,
+      "2025-03-01": 62.89,
+      "2025-02-01": 63.33,
+      "2025-01-01": 61.94,
+      "2026-05-01": 67.77
     },
     "MCO": {
-      "2026-04-01": 437.77,
-      "2026-03-01": 469.5,
-      "2026-02-01": 516.15,
-      "2026-01-01": 509.72,
-      "2025-12-01": 487.77,
-      "2025-11-01": 478.95,
-      "2025-10-01": 477.97,
-      "2025-09-01": 503.32,
-      "2025-08-01": 510.19,
-      "2025-07-01": 497.1,
-      "2025-06-01": 475.62,
-      "2025-05-01": 450.71
+      "2026-04-01": 438.78,
+      "2026-03-01": 466.1,
+      "2026-02-01": 517.05,
+      "2026-01-01": 498.98,
+      "2025-12-01": 487.24,
+      "2025-11-01": 485.95,
+      "2025-10-01": 479.82,
+      "2025-09-01": 498.5,
+      "2025-08-01": 501.28,
+      "2025-07-01": 502.48,
+      "2025-06-01": 479.93,
+      "2025-05-01": 451.86,
+      "2025-04-01": 468.78,
+      "2025-03-01": 502.0,
+      "2025-02-01": 496.47,
+      "2025-01-01": 472.84,
+      "2026-05-01": 455.77
     },
     "ARW": {
-      "2026-04-01": 144.5,
-      "2026-03-01": 150.48,
-      "2026-02-01": 131.67,
-      "2026-01-01": 111.19,
-      "2025-12-01": 107.47,
-      "2025-11-01": 110.68,
-      "2025-10-01": 120.68,
-      "2025-09-01": 123.74,
-      "2025-08-01": 114.11,
-      "2025-07-01": 127.19,
-      "2025-06-01": 118.1,
-      "2025-05-01": 117.47
+      "2026-04-01": 146.63,
+      "2026-03-01": 149.96,
+      "2026-02-01": 133.62,
+      "2026-01-01": 113.04,
+      "2025-12-01": 107.75,
+      "2025-11-01": 111.45,
+      "2025-10-01": 121.69,
+      "2025-09-01": 123.58,
+      "2025-08-01": 114.66,
+      "2025-07-01": 129.76,
+      "2025-06-01": 117.51,
+      "2025-05-01": 113.07,
+      "2025-04-01": 103.22,
+      "2025-03-01": 105.63,
+      "2025-02-01": 113.5,
+      "2025-01-01": 111.38,
+      "2026-05-01": 184.52
     },
     "AVT": {
-      "2026-04-01": 61.9,
-      "2026-03-01": 65.07,
-      "2026-02-01": 61.79,
-      "2026-01-01": 48.6,
-      "2025-12-01": 47.39,
-      "2025-11-01": 48.11,
-      "2025-10-01": 52.24,
-      "2025-09-01": 52.49,
-      "2025-08-01": 52.15,
-      "2025-07-01": 52.99,
-      "2025-06-01": 49.89,
-      "2025-05-01": 47.31
+      "2026-04-01": 62.91,
+      "2026-03-01": 64.98,
+      "2026-02-01": 63.31,
+      "2026-01-01": 49.34,
+      "2025-12-01": 47.41,
+      "2025-11-01": 48.15,
+      "2025-10-01": 52.21,
+      "2025-09-01": 52.05,
+      "2025-08-01": 51.87,
+      "2025-07-01": 53.93,
+      "2025-06-01": 49.76,
+      "2025-05-01": 48.82,
+      "2025-04-01": 47.47,
+      "2025-03-01": 49.17,
+      "2025-02-01": 49.75,
+      "2025-01-01": 51.67,
+      "2026-05-01": 80.53
     },
     "AVTR": {
-      "2026-04-01": 7.66,
-      "2026-03-01": 8.8,
-      "2026-02-01": 10.79,
-      "2026-01-01": 11.52,
-      "2025-12-01": 11.67,
-      "2025-11-01": 11.76,
-      "2025-10-01": 12.51,
-      "2025-09-01": 13.3,
-      "2025-08-01": 11.94,
-      "2025-07-01": 13.38,
-      "2025-06-01": 12.73,
-      "2025-05-01": 12.81
+      "2026-04-01": 7.77,
+      "2026-03-01": 8.81,
+      "2026-02-01": 11.07,
+      "2026-01-01": 11.46,
+      "2025-12-01": 11.75,
+      "2025-11-01": 11.68,
+      "2025-10-01": 13.67,
+      "2025-09-01": 13.29,
+      "2025-08-01": 11.36,
+      "2025-07-01": 13.92,
+      "2025-06-01": 12.96,
+      "2025-05-01": 12.96,
+      "2025-04-01": 15.8,
+      "2025-03-01": 15.87,
+      "2025-02-01": 21.87,
+      "2025-01-01": 21.2,
+      "2026-05-01": 7.96
     },
     "BAX": {
-      "2026-04-01": 17,
-      "2026-03-01": 19.88,
-      "2026-02-01": 19.89,
-      "2026-01-01": 19.3,
-      "2025-12-01": 18.62,
-      "2025-11-01": 18.3,
-      "2025-10-01": 22.95,
-      "2025-09-01": 24.41,
-      "2025-08-01": 21.51,
-      "2025-07-01": 30.06,
-      "2025-06-01": 30.34,
-      "2025-05-01": 32.15
+      "2026-04-01": 16.78,
+      "2026-03-01": 19.69,
+      "2026-02-01": 19.87,
+      "2026-01-01": 19.5,
+      "2025-12-01": 19.08,
+      "2025-11-01": 18.21,
+      "2025-10-01": 23.36,
+      "2025-09-01": 24.17,
+      "2025-08-01": 21.96,
+      "2025-07-01": 31.23,
+      "2025-06-01": 29.55,
+      "2025-05-01": 30.67,
+      "2025-04-01": 34.02,
+      "2025-03-01": 34.86,
+      "2025-02-01": 31.64,
+      "2025-01-01": 29.26,
+      "2026-05-01": 17.21
     },
     "BN": {
-      "2026-04-01": 41,
-      "2026-03-01": 42.78,
-      "2026-02-01": 45.31,
-      "2026-01-01": 46.1,
-      "2025-12-01": 46.55,
-      "2025-11-01": 46.01,
-      "2025-10-01": 45.51,
-      "2025-09-01": 43.45,
-      "2025-08-01": 43.86,
-      "2025-07-01": 41.07,
-      "2025-06-01": 38.34,
-      "2025-05-01": 35.91
+      "2026-04-01": 40.74,
+      "2026-03-01": 43.96,
+      "2026-02-01": 46.59,
+      "2026-01-01": 46.63,
+      "2025-12-01": 46.38,
+      "2025-11-01": 45.99,
+      "2025-10-01": 45.253,
+      "2025-09-01": 44.213,
+      "2025-08-01": 43.553,
+      "2025-07-01": 41.32,
+      "2025-06-01": 38.547,
+      "2025-05-01": 36.053,
+      "2025-04-01": 35.867,
+      "2025-03-01": 37.733,
+      "2025-02-01": 39.547,
+      "2025-01-01": 38.367,
+      "2026-05-01": 45.23
     },
     "BRK.A": {
-      "2026-04-01": 478.98,
-      "2026-03-01": 495.23,
-      "2026-02-01": 481.3,
-      "2026-01-01": 500.96,
-      "2025-12-01": 513.65,
-      "2025-11-01": 479.51,
-      "2025-10-01": 502.5,
-      "2025-09-01": 504.24,
-      "2025-08-01": 473.47,
-      "2025-07-01": 485.78,
-      "2025-06-01": 501.7,
-      "2025-05-01": 531
+      "2026-04-01": 716258.0,
+      "2026-03-01": 720000.0,
+      "2026-02-01": 729425.0,
+      "2026-01-01": 744120.0,
+      "2025-12-01": 761160.59,
+      "2025-11-01": 712170.14,
+      "2025-10-01": 745906.2,
+      "2025-09-01": 751128.29,
+      "2025-08-01": 711480.0,
+      "2025-07-01": 733150.0,
+      "2025-06-01": 754740.0,
+      "2025-05-01": 795400.0,
+      "2025-04-01": 800300.0,
+      "2025-03-01": 765160.0,
+      "2025-02-01": 696552.0,
+      "2025-01-01": 675500.0,
+      "2026-05-01": 710300
     },
     "BUR": {
-      "2026-04-01": 4.41,
-      "2026-03-01": 8.2,
-      "2026-02-01": 9.56,
-      "2026-01-01": 8.99,
+      "2026-04-01": 4.25,
+      "2026-03-01": 8.73,
+      "2026-02-01": 9.77,
+      "2026-01-01": 8.75,
       "2025-12-01": 9.37,
-      "2025-11-01": 9.95,
-      "2025-10-01": 11.91,
-      "2025-09-01": 13.65,
-      "2025-08-01": 12.6,
-      "2025-07-01": 13.78,
-      "2025-06-01": 12.76,
-      "2025-05-01": 13.56
+      "2025-11-01": 9.84,
+      "2025-10-01": 11.92,
+      "2025-09-01": 13.81,
+      "2025-08-01": 12.43,
+      "2025-07-01": 13.14,
+      "2025-06-01": 12.7,
+      "2025-05-01": 13.52,
+      "2025-04-01": 13.5,
+      "2025-03-01": 14.29,
+      "2025-02-01": 13.83,
+      "2025-01-01": 12.89,
+      "2026-05-01": 5.2
     },
     "CNI": {
-      "2026-04-01": 103.28,
-      "2026-03-01": 111.2,
-      "2026-02-01": 95.11,
-      "2026-01-01": 98.92,
-      "2025-12-01": 95.74,
-      "2025-11-01": 95.52,
-      "2025-10-01": 94.28,
-      "2025-09-01": 96.3,
-      "2025-08-01": 93.32,
-      "2025-07-01": 103.97,
-      "2025-06-01": 104.9,
-      "2025-05-01": 96.76
+      "2026-04-01": 103.25,
+      "2026-03-01": 113.01,
+      "2026-02-01": 95.68,
+      "2026-01-01": 100.3,
+      "2025-12-01": 95.55,
+      "2025-11-01": 95.62,
+      "2025-10-01": 94.46,
+      "2025-09-01": 96.63,
+      "2025-08-01": 92.86,
+      "2025-07-01": 104.98,
+      "2025-06-01": 104.89,
+      "2025-05-01": 95.62,
+      "2025-04-01": 98.62,
+      "2025-03-01": 98.25,
+      "2025-02-01": 98.72,
+      "2025-01-01": 101.86,
+      "2026-05-01": 111.96
     },
     "CP": {
-      "2026-04-01": 79.34,
-      "2026-03-01": 86.96,
-      "2026-02-01": 73.64,
-      "2026-01-01": 73.83,
-      "2025-12-01": 72.45,
-      "2025-11-01": 71.95,
-      "2025-10-01": 74.59,
-      "2025-09-01": 75.7,
-      "2025-08-01": 73.82,
-      "2025-07-01": 79.27,
-      "2025-06-01": 80.08,
-      "2025-05-01": 73.49
+      "2026-04-01": 78.02,
+      "2026-03-01": 89.39,
+      "2026-02-01": 75.05,
+      "2026-01-01": 74.45,
+      "2025-12-01": 72.36,
+      "2025-11-01": 70.7,
+      "2025-10-01": 74.83,
+      "2025-09-01": 76.43,
+      "2025-08-01": 72.88,
+      "2025-07-01": 80.46,
+      "2025-06-01": 81.37,
+      "2025-05-01": 72.73,
+      "2025-04-01": 71.05,
+      "2025-03-01": 75.82,
+      "2025-02-01": 74.75,
+      "2025-01-01": 73.68,
+      "2026-05-01": 86.22
     },
     "DHI": {
-      "2026-04-01": 136.93,
-      "2026-03-01": 156.88,
-      "2026-02-01": 149.25,
-      "2026-01-01": 144.34,
-      "2025-12-01": 156.59,
-      "2025-11-01": 148.59,
-      "2025-10-01": 169.89,
-      "2025-09-01": 167.68,
-      "2025-08-01": 147.2,
-      "2025-07-01": 128.53,
-      "2025-06-01": 116.99,
-      "2025-05-01": 126.45
+      "2026-04-01": 138.25,
+      "2026-03-01": 154.4,
+      "2026-02-01": 149.77,
+      "2026-01-01": 145.72,
+      "2025-12-01": 157.37,
+      "2025-11-01": 145.06,
+      "2025-10-01": 172.44,
+      "2025-09-01": 170.26,
+      "2025-08-01": 150.3,
+      "2025-07-01": 133.9,
+      "2025-06-01": 116.89,
+      "2025-05-01": 125.55,
+      "2025-04-01": 127.41,
+      "2025-03-01": 125.68,
+      "2025-02-01": 137.46,
+      "2025-01-01": 137.64,
+      "2026-05-01": 149.98
     },
     "FER": {
-      "2026-04-01": 66.25,
-      "2026-03-01": 72.58,
-      "2026-02-01": 68.16,
-      "2026-01-01": 64.82,
-      "2025-12-01": 65.37,
-      "2025-11-01": 61.83,
-      "2025-10-01": 57.67,
-      "2025-09-01": 53.27,
-      "2025-08-01": 51.07,
-      "2025-07-01": 53.43,
-      "2025-06-01": 50.97,
-      "2025-05-01": 50.2
+      "2026-04-01": 67.02,
+      "2026-03-01": 72.93,
+      "2026-02-01": 68.28,
+      "2026-01-01": 64.55,
+      "2025-12-01": 64.81,
+      "2025-11-01": 62.42,
+      "2025-10-01": 58.52,
+      "2025-09-01": 53.65,
+      "2025-08-01": 51.18,
+      "2025-07-01": 53.38,
+      "2025-06-01": 52.09,
+      "2025-05-01": 49.19,
+      "2025-04-01": 45.26,
+      "2025-03-01": 44.45,
+      "2025-02-01": 41.68,
+      "2025-01-01": 41.74,
+      "2026-05-01": 68.98
     },
     "GE": {
-      "2026-04-01": 290.21,
-      "2026-03-01": 341.45,
-      "2026-02-01": 305.6,
-      "2026-01-01": 309.75,
-      "2025-12-01": 295.75,
-      "2025-11-01": 309.1,
-      "2025-10-01": 296.38,
-      "2025-09-01": 273.9,
-      "2025-08-01": 265.53,
-      "2025-07-01": 255.75,
-      "2025-06-01": 245.85,
-      "2025-05-01": 202.25
+      "2026-04-01": 292.68,
+      "2026-03-01": 345.74,
+      "2026-02-01": 308.71,
+      "2026-01-01": 320.75,
+      "2025-12-01": 288.45,
+      "2025-11-01": 308.62,
+      "2025-10-01": 300.88,
+      "2025-09-01": 275.39,
+      "2025-08-01": 269.38,
+      "2025-07-01": 249.02,
+      "2025-06-01": 247.48,
+      "2025-05-01": 203.61,
+      "2025-04-01": 203.79,
+      "2025-03-01": 201.96,
+      "2025-02-01": 204.11,
+      "2025-01-01": 168.59,
+      "2026-05-01": 286.51
     },
     "GM": {
-      "2026-04-01": 75.2,
-      "2026-03-01": 77.36,
-      "2026-02-01": 84.25,
-      "2026-01-01": 81.41,
-      "2025-12-01": 73.09,
-      "2025-11-01": 68.89,
-      "2025-10-01": 60.94,
-      "2025-09-01": 57.54,
-      "2025-08-01": 52.15,
-      "2025-07-01": 48.82,
-      "2025-06-01": 49.1,
-      "2025-05-01": 46.5
+      "2026-04-01": 75.04,
+      "2026-03-01": 77.76,
+      "2026-02-01": 84.27,
+      "2026-01-01": 80.98,
+      "2025-12-01": 72.95,
+      "2025-11-01": 68.22,
+      "2025-10-01": 61.34,
+      "2025-09-01": 58.53,
+      "2025-08-01": 52.53,
+      "2025-07-01": 52.03,
+      "2025-06-01": 47.69,
+      "2025-05-01": 45.05,
+      "2025-04-01": 47.26,
+      "2025-03-01": 47.38,
+      "2025-02-01": 47.9,
+      "2025-01-01": 51.37,
+      "2026-05-01": 75.77
     },
     "ICLR": {
-      "2026-04-01": 110.83,
-      "2026-03-01": 105.81,
-      "2026-02-01": 180.25,
-      "2026-01-01": 183.95,
-      "2025-12-01": 183.8,
-      "2025-11-01": 169.19,
-      "2025-10-01": 174.7,
-      "2025-09-01": 176.65,
-      "2025-08-01": 167.63,
-      "2025-07-01": 144.87,
-      "2025-06-01": 130.14,
-      "2025-05-01": 142.61
+      "2026-04-01": 111.42,
+      "2026-03-01": 108.27,
+      "2026-02-01": 178.59,
+      "2026-01-01": 188.67,
+      "2025-12-01": 179.71,
+      "2025-11-01": 168.79,
+      "2025-10-01": 192.31,
+      "2025-09-01": 177.84,
+      "2025-08-01": 166.44,
+      "2025-07-01": 148.88,
+      "2025-06-01": 128.9,
+      "2025-05-01": 145.21,
+      "2025-04-01": 166.56,
+      "2025-03-01": 184.81,
+      "2025-02-01": 195.51,
+      "2025-01-01": 212.63,
+      "2026-05-01": 112.85
     },
     "LEA": {
-      "2026-04-01": 122.08,
-      "2026-03-01": 128.75,
-      "2026-02-01": 116.54,
-      "2026-01-01": 115.46,
-      "2025-12-01": 107.15,
-      "2025-11-01": 104.32,
-      "2025-10-01": 100.31,
-      "2025-09-01": 108.6,
-      "2025-08-01": 93.45,
-      "2025-07-01": 95.45,
-      "2025-06-01": 89.6,
-      "2025-05-01": 86.21
+      "2026-04-01": 122.06,
+      "2026-03-01": 127.54,
+      "2026-02-01": 118.0,
+      "2026-01-01": 118.61,
+      "2025-12-01": 108.22,
+      "2025-11-01": 108.2,
+      "2025-10-01": 101.25,
+      "2025-09-01": 110.02,
+      "2025-08-01": 93.06,
+      "2025-07-01": 100.65,
+      "2025-06-01": 87.47,
+      "2025-05-01": 85.76,
+      "2025-04-01": 87.53,
+      "2025-03-01": 91.48,
+      "2025-02-01": 90.99,
+      "2025-01-01": 92.77,
+      "2026-05-01": 132.41
     },
     "LEN": {
-      "2026-04-01": 86.88,
-      "2026-03-01": 111.85,
-      "2026-02-01": 108.92,
-      "2026-01-01": 103.01,
-      "2025-12-01": 129.24,
-      "2025-11-01": 122.64,
-      "2025-10-01": 126.5,
-      "2025-09-01": 130.5,
-      "2025-08-01": 114.87,
-      "2025-07-01": 110,
-      "2025-06-01": 105.11,
-      "2025-05-01": 108.82
+      "2026-04-01": 85.44,
+      "2026-03-01": 110.61,
+      "2026-02-01": 108.8,
+      "2026-01-01": 104.22,
+      "2025-12-01": 130.23,
+      "2025-11-01": 120.59,
+      "2025-10-01": 128.21,
+      "2025-09-01": 132.68,
+      "2025-08-01": 115.98,
+      "2025-07-01": 115.49,
+      "2025-06-01": 105.02,
+      "2025-05-01": 108.19,
+      "2025-04-01": 114.51,
+      "2025-03-01": 117.93,
+      "2025-02-01": 126.19,
+      "2025-01-01": 130.077,
+      "2026-05-01": 88.45
     },
     "MKL": {
-      "2026-04-01": 1916.27,
-      "2026-03-01": 2061.01,
-      "2026-02-01": 2030.73,
-      "2026-01-01": 2143.33,
-      "2025-12-01": 2083,
-      "2025-11-01": 1968.43,
-      "2025-10-01": 1913,
-      "2025-09-01": 1948,
-      "2025-08-01": 1991.62,
-      "2025-07-01": 1990.59,
-      "2025-06-01": 1935.4,
-      "2025-05-01": 1802.71
+      "2026-04-01": 1902.58,
+      "2026-03-01": 2080.8,
+      "2026-02-01": 2033.99,
+      "2026-01-01": 2130.36,
+      "2025-12-01": 2073.62,
+      "2025-11-01": 1955.11,
+      "2025-10-01": 1885.43,
+      "2025-09-01": 1948.01,
+      "2025-08-01": 1929.87,
+      "2025-07-01": 1994.21,
+      "2025-06-01": 1959.46,
+      "2025-05-01": 1824.53,
+      "2025-04-01": 1859.85,
+      "2025-03-01": 1918.56,
+      "2025-02-01": 1820.13,
+      "2025-01-01": 1717.36,
+      "2026-05-01": 1779.36
     },
     "MTH": {
-      "2026-04-01": 61.64,
-      "2026-03-01": 73.62,
-      "2026-02-01": 69.56,
-      "2026-01-01": 65.66,
-      "2025-12-01": 72.66,
-      "2025-11-01": 66.87,
-      "2025-10-01": 72.6,
-      "2025-09-01": 76.07,
-      "2025-08-01": 69.04,
-      "2025-07-01": 66.44,
-      "2025-06-01": 63.17,
-      "2025-05-01": 67.98
+      "2026-04-01": 62.11,
+      "2026-03-01": 72.69,
+      "2026-02-01": 70.19,
+      "2026-01-01": 66.23,
+      "2025-12-01": 72.96,
+      "2025-11-01": 65.77,
+      "2025-10-01": 73.52,
+      "2025-09-01": 76.28,
+      "2025-08-01": 71.13,
+      "2025-07-01": 70.97,
+      "2025-06-01": 63.2,
+      "2025-05-01": 66.95,
+      "2025-04-01": 71.08,
+      "2025-03-01": 70.7,
+      "2025-02-01": 76.16,
+      "2025-01-01": 76.005,
+      "2026-05-01": 66.34
     },
     "NOV": {
       "2026-04-01": 18.67,
-      "2026-03-01": 20.66,
-      "2026-02-01": 17.99,
-      "2026-01-01": 15.72,
-      "2025-12-01": 15.34,
-      "2025-11-01": 14.57,
-      "2025-10-01": 13.18,
-      "2025-09-01": 13.16,
-      "2025-08-01": 12.54,
-      "2025-07-01": 12.48,
-      "2025-06-01": 12.06,
-      "2025-05-01": 11.57
+      "2026-03-01": 20.03,
+      "2026-02-01": 18.38,
+      "2026-01-01": 16.41,
+      "2025-12-01": 15.43,
+      "2025-11-01": 15.05,
+      "2025-10-01": 13.54,
+      "2025-09-01": 13.1,
+      "2025-08-01": 12.13,
+      "2025-07-01": 12.92,
+      "2025-06-01": 11.96,
+      "2025-05-01": 11.88,
+      "2025-04-01": 15.41,
+      "2025-03-01": 14.21,
+      "2025-02-01": 14.29,
+      "2025-01-01": 14.7,
+      "2026-05-01": 19.86
     },
     "OSK": {
-      "2026-04-01": 149.49,
-      "2026-03-01": 168.18,
-      "2026-02-01": 143.79,
-      "2026-01-01": 126.25,
-      "2025-12-01": 126.23,
-      "2025-11-01": 122.27,
-      "2025-10-01": 128.27,
-      "2025-09-01": 138,
-      "2025-08-01": 130.21,
-      "2025-07-01": 114.17,
-      "2025-06-01": 99.47,
-      "2025-05-01": 84.76
+      "2026-04-01": 149.05,
+      "2026-03-01": 172.14,
+      "2026-02-01": 149.48,
+      "2026-01-01": 132.22,
+      "2025-12-01": 127.26,
+      "2025-11-01": 121.32,
+      "2025-10-01": 128.78,
+      "2025-09-01": 137.76,
+      "2025-08-01": 130.54,
+      "2025-07-01": 118.16,
+      "2025-06-01": 98.29,
+      "2025-05-01": 86.69,
+      "2025-04-01": 93.93,
+      "2025-03-01": 97.48,
+      "2025-02-01": 112.85,
+      "2025-01-01": 93.57,
+      "2026-05-01": 155.29
     },
     "PHM": {
-      "2026-04-01": 117.58,
-      "2026-03-01": 134.13,
-      "2026-02-01": 124.61,
-      "2026-01-01": 118.45,
-      "2025-12-01": 127.21,
-      "2025-11-01": 119.85,
-      "2025-10-01": 133.17,
-      "2025-09-01": 129.9,
-      "2025-08-01": 115.06,
-      "2025-07-01": 104.87,
-      "2025-06-01": 96.99,
-      "2025-05-01": 102.84
+      "2026-04-01": 117.15,
+      "2026-03-01": 133.72,
+      "2026-02-01": 127.07,
+      "2026-01-01": 119.07,
+      "2025-12-01": 127.18,
+      "2025-11-01": 118.76,
+      "2025-10-01": 134.44,
+      "2025-09-01": 132.09,
+      "2025-08-01": 116.75,
+      "2025-07-01": 109.94,
+      "2025-06-01": 97.55,
+      "2025-05-01": 101.89,
+      "2025-04-01": 103.04,
+      "2025-03-01": 102.03,
+      "2025-02-01": 109.15,
+      "2025-01-01": 107.64,
+      "2026-05-01": 119.21
     },
     "SLB": {
-      "2026-04-01": 50.35,
-      "2026-03-01": 52.45,
-      "2026-02-01": 47.67,
-      "2026-01-01": 38.41,
-      "2025-12-01": 36.25,
-      "2025-11-01": 36.1,
-      "2025-10-01": 34.22,
-      "2025-09-01": 36.68,
-      "2025-08-01": 33.61,
-      "2025-07-01": 33.8,
-      "2025-06-01": 33.74,
-      "2025-05-01": 33.2
+      "2026-04-01": 50.03,
+      "2026-03-01": 51.27,
+      "2026-02-01": 48.05,
+      "2026-01-01": 40.2,
+      "2025-12-01": 36.6,
+      "2025-11-01": 37.02,
+      "2025-10-01": 35.09,
+      "2025-09-01": 35.9,
+      "2025-08-01": 33.05,
+      "2025-07-01": 35.2,
+      "2025-06-01": 33.34,
+      "2025-05-01": 33.74,
+      "2025-04-01": 42.2,
+      "2025-03-01": 39.82,
+      "2025-02-01": 40.16,
+      "2025-01-01": 38.4,
+      "2026-05-01": 56.92
     },
     "TOL": {
-      "2026-04-01": 136,
-      "2026-03-01": 153.45,
-      "2026-02-01": 144.49,
-      "2026-01-01": 135.21,
-      "2025-12-01": 137.46,
-      "2025-11-01": 133.72,
-      "2025-10-01": 138.6,
-      "2025-09-01": 136.17,
-      "2025-08-01": 119.91,
-      "2025-07-01": 113.53,
-      "2025-06-01": 103.1,
-      "2025-05-01": 101.08
+      "2026-04-01": 136.85,
+      "2026-03-01": 154.28,
+      "2026-02-01": 145.48,
+      "2026-01-01": 135.58,
+      "2025-12-01": 139.88,
+      "2025-11-01": 133.31,
+      "2025-10-01": 139.95,
+      "2025-09-01": 138.28,
+      "2025-08-01": 121.91,
+      "2025-07-01": 117.98,
+      "2025-06-01": 103.31,
+      "2025-05-01": 101.18,
+      "2025-04-01": 105.3,
+      "2025-03-01": 108.39,
+      "2025-02-01": 131.47,
+      "2025-01-01": 124.56,
+      "2026-05-01": 139.84
     },
     "TRUP": {
-      "2026-04-01": 25.7,
-      "2026-03-01": 25.87,
-      "2026-02-01": 31.99,
-      "2026-01-01": 37.37,
-      "2025-12-01": 34.86,
-      "2025-11-01": 39.92,
-      "2025-10-01": 43.09,
-      "2025-09-01": 45.67,
-      "2025-08-01": 46.94,
-      "2025-07-01": 54.85,
-      "2025-06-01": 46.71,
-      "2025-05-01": 37.03
+      "2026-04-01": 25.44,
+      "2026-03-01": 26.71,
+      "2026-02-01": 31.79,
+      "2026-01-01": 37.2,
+      "2025-12-01": 34.03,
+      "2025-11-01": 39.65,
+      "2025-10-01": 43.44,
+      "2025-09-01": 45.2,
+      "2025-08-01": 46.21,
+      "2025-07-01": 54.1,
+      "2025-06-01": 46.73,
+      "2025-05-01": 36.44,
+      "2025-04-01": 36.99,
+      "2025-03-01": 32.4,
+      "2025-02-01": 46.95,
+      "2025-01-01": 48.2,
+      "2026-05-01": 24.33
     },
     "TSLA": {
-      "2026-04-01": 378.63,
-      "2026-03-01": 390.6,
-      "2026-02-01": 421.29,
-      "2026-01-01": 457.8,
-      "2025-12-01": 425.32,
-      "2025-11-01": 455.99,
-      "2025-10-01": 443.8,
-      "2025-09-01": 328.23,
-      "2025-08-01": 306.21,
-      "2025-07-01": 298.46,
-      "2025-06-01": 343.5,
-      "2025-05-01": 280.01
+      "2026-04-01": 381.26,
+      "2026-03-01": 403.32,
+      "2026-02-01": 421.81,
+      "2026-01-01": 438.07,
+      "2025-12-01": 430.14,
+      "2025-11-01": 468.37,
+      "2025-10-01": 459.46,
+      "2025-09-01": 329.36,
+      "2025-08-01": 302.63,
+      "2025-07-01": 300.71,
+      "2025-06-01": 342.69,
+      "2025-05-01": 280.52,
+      "2025-04-01": 268.46,
+      "2025-03-01": 284.65,
+      "2025-02-01": 383.68,
+      "2025-01-01": 379.28,
+      "2026-05-01": 390.82
     },
     "VBIL": {
-      "2026-04-01": 91.4,
-      "2026-03-01": 91.39,
-      "2026-02-01": 91.39,
-      "2026-01-01": 91.42,
-      "2025-12-01": 91.46,
-      "2025-11-01": 91.47,
-      "2025-10-01": 91.46,
-      "2025-09-01": 91.47,
-      "2025-08-01": 91.47,
-      "2025-07-01": 91.44,
-      "2025-06-01": 91.45,
-      "2025-05-01": 91.43
+      "2026-04-01": 75.45,
+      "2026-03-01": 75.43,
+      "2026-02-01": 75.43,
+      "2026-01-01": 75.45,
+      "2025-12-01": 75.41,
+      "2025-11-01": 75.42,
+      "2025-10-01": 75.385,
+      "2025-09-01": 75.37,
+      "2025-08-01": 75.37,
+      "2025-07-01": 75.33,
+      "2025-06-01": 75.32,
+      "2025-05-01": 75.265,
+      "2025-04-01": 75.21,
+      "2025-03-01": 75.2,
+      "2025-02-01": 75.015,
+      "2026-05-01": 75.47
     },
     "COF": {
-      "2026-04-01": 185.61,
-      "2026-03-01": 191.56,
-      "2026-02-01": 218.25,
-      "2026-01-01": 244.35,
-      "2025-12-01": 218.15,
-      "2025-11-01": 219.99,
-      "2025-10-01": 213.31,
-      "2025-09-01": 223.4,
-      "2025-08-01": 211.57,
-      "2025-07-01": 212.14,
-      "2025-06-01": 188.6,
-      "2025-05-01": 179.74
+      "2026-04-01": 184.5,
+      "2026-03-01": 194.32,
+      "2026-02-01": 223.68,
+      "2026-01-01": 247.93,
+      "2025-12-01": 220.37,
+      "2025-11-01": 221.7,
+      "2025-10-01": 213.48,
+      "2025-09-01": 223.27,
+      "2025-08-01": 207.47,
+      "2025-07-01": 215.18,
+      "2025-06-01": 191.46,
+      "2025-05-01": 180.22,
+      "2025-04-01": 178.22,
+      "2025-03-01": 196.18,
+      "2025-02-01": 200.91,
+      "2025-01-01": 178.71,
+      "2026-05-01": 191.91
     },
     "CVNA": {
-      "2026-04-01": 316.68,
-      "2026-03-01": 322.48,
-      "2026-02-01": 391.19,
-      "2026-01-01": 421.68,
-      "2025-12-01": 371.52,
-      "2025-11-01": 306.64,
-      "2025-10-01": 388.32,
-      "2025-09-01": 362.04,
-      "2025-08-01": 380.99,
-      "2025-07-01": 335.9,
-      "2025-06-01": 326.24,
-      "2025-05-01": 248
+      "2026-04-01": 62.418,
+      "2026-03-01": 64.622,
+      "2026-02-01": 81.578,
+      "2026-01-01": 80.05,
+      "2025-12-01": 75.052,
+      "2025-11-01": 66.466,
+      "2025-10-01": 79.082,
+      "2025-09-01": 73.278,
+      "2025-08-01": 73.556,
+      "2025-07-01": 67.652,
+      "2025-06-01": 66.288,
+      "2025-05-01": 50.374,
+      "2025-04-01": 42.518,
+      "2025-03-01": 43.89,
+      "2025-02-01": 50.326,
+      "2025-01-01": 39.912,
+      "2026-05-01": 76.52
     },
     "MA": {
-      "2026-04-01": 502.23,
-      "2026-03-01": 509.48,
-      "2026-02-01": 540.99,
-      "2026-01-01": 570.71,
-      "2025-12-01": 547.64,
-      "2025-11-01": 550,
-      "2025-10-01": 565.68,
-      "2025-09-01": 595.62,
-      "2025-08-01": 563.86,
-      "2025-07-01": 559.32,
-      "2025-06-01": 580.5,
-      "2025-05-01": 550
+      "2026-04-01": 491.65,
+      "2026-03-01": 521.0,
+      "2026-02-01": 555.37,
+      "2026-01-01": 563.13,
+      "2025-12-01": 543.97,
+      "2025-11-01": 544.07,
+      "2025-10-01": 573.77,
+      "2025-09-01": 591.87,
+      "2025-08-01": 559.89,
+      "2025-07-01": 564.61,
+      "2025-06-01": 581.22,
+      "2025-05-01": 546.63,
+      "2025-04-01": 548.51,
+      "2025-03-01": 574.92,
+      "2025-02-01": 563.95,
+      "2025-01-01": 522.4,
+      "2026-05-01": 495.46
     },
     "TDG": {
-      "2026-04-01": 1159.6,
-      "2026-03-01": 1310.28,
-      "2026-02-01": 1430.1,
-      "2026-01-01": 1329.03,
-      "2025-12-01": 1351.06,
-      "2025-11-01": 1308.83,
-      "2025-10-01": 1304.76,
-      "2025-09-01": 1304.79,
-      "2025-08-01": 1592.78,
-      "2025-07-01": 1515.1,
-      "2025-06-01": 1462.36,
-      "2025-05-01": 1419.25
+      "2026-04-01": 1173.27,
+      "2026-03-01": 1316.26,
+      "2026-02-01": 1435.52,
+      "2026-01-01": 1358.55,
+      "2025-12-01": 1354.86,
+      "2025-11-01": 1300.0,
+      "2025-10-01": 1300.8,
+      "2025-09-01": 1304.88,
+      "2025-08-01": 1585.0,
+      "2025-07-01": 1512.81,
+      "2025-06-01": 1453.77,
+      "2025-05-01": 1434.19,
+      "2025-04-01": 1397.44,
+      "2025-03-01": 1370.82,
+      "2025-02-01": 1352.78,
+      "2025-01-01": 1254.11,
+      "2026-05-01": 1154.45
     },
     "IBKR": {
-      "2026-04-01": 68.38,
-      "2026-03-01": 69.22,
-      "2026-02-01": 74.69,
-      "2026-01-01": 65.41,
-      "2025-12-01": 64.23,
-      "2025-11-01": 70.89,
-      "2025-10-01": 67.86,
-      "2025-09-01": 61.3,
-      "2025-08-01": 63.71,
-      "2025-07-01": 55.57,
-      "2025-06-01": 52.24,
-      "2025-05-01": 43.19
+      "2026-04-01": 67.91,
+      "2026-03-01": 71.67,
+      "2026-02-01": 75.27,
+      "2026-01-01": 67.23,
+      "2025-12-01": 63.54,
+      "2025-11-01": 73.08,
+      "2025-10-01": 68.78,
+      "2025-09-01": 63.9,
+      "2025-08-01": 63.61,
+      "2025-07-01": 56.32,
+      "2025-06-01": 52.05,
+      "2025-05-01": 43.585,
+      "2025-04-01": 43.27,
+      "2025-03-01": 50.383,
+      "2025-02-01": 55.87,
+      "2025-01-01": 45.625,
+      "2026-05-01": 80.46
     },
     "CACC": {
-      "2026-04-01": 426.39,
-      "2026-03-01": 461.67,
-      "2026-02-01": 490,
-      "2026-01-01": 444.41,
-      "2025-12-01": 453.69,
-      "2025-11-01": 445.33,
-      "2025-10-01": 466.6,
-      "2025-09-01": 509.24,
-      "2025-08-01": 450,
-      "2025-07-01": 505.82,
-      "2025-06-01": 477.85,
-      "2025-05-01": 461
+      "2026-04-01": 419.6,
+      "2026-03-01": 482.15,
+      "2026-02-01": 511.43,
+      "2026-01-01": 453.92,
+      "2025-12-01": 460.18,
+      "2025-11-01": 456.99,
+      "2025-10-01": 479.28,
+      "2025-09-01": 512.12,
+      "2025-08-01": 447.51,
+      "2025-07-01": 529.41,
+      "2025-06-01": 473.39,
+      "2025-05-01": 467.79,
+      "2025-04-01": 523.52,
+      "2025-03-01": 477.33,
+      "2025-02-01": 510.6,
+      "2025-01-01": 465.2,
+      "2026-05-01": 504.84
     },
     "CRM": {
-      "2026-04-01": 186.85,
-      "2026-03-01": 192.5,
-      "2026-02-01": 214.35,
-      "2026-01-01": 265,
-      "2025-12-01": 228.67,
-      "2025-11-01": 260,
-      "2025-10-01": 236.49,
-      "2025-09-01": 254.82,
-      "2025-08-01": 254.99,
-      "2025-07-01": 272.08,
-      "2025-06-01": 263.11,
-      "2025-05-01": 273.4
+      "2026-04-01": 186.24,
+      "2026-03-01": 192.95,
+      "2026-02-01": 210.81,
+      "2026-01-01": 253.62,
+      "2025-12-01": 232.83,
+      "2025-11-01": 261.34,
+      "2025-10-01": 235.69,
+      "2025-09-01": 252.86,
+      "2025-08-01": 250.74,
+      "2025-07-01": 271.91,
+      "2025-06-01": 261.62,
+      "2025-05-01": 269.33,
+      "2025-04-01": 270.2,
+      "2025-03-01": 293.06,
+      "2025-02-01": 339.24,
+      "2025-01-01": 330.66,
+      "2026-05-01": 183.82
     },
     "DE": {
-      "2026-04-01": 565.44,
-      "2026-03-01": 625.76,
-      "2026-02-01": 527.25,
-      "2026-01-01": 466,
-      "2025-12-01": 463.72,
-      "2025-11-01": 459.8,
-      "2025-10-01": 455,
-      "2025-09-01": 472.92,
-      "2025-08-01": 519,
-      "2025-07-01": 504.68,
-      "2025-06-01": 506.16,
-      "2025-05-01": 465
+      "2026-04-01": 570.7,
+      "2026-03-01": 630.88,
+      "2026-02-01": 532.25,
+      "2026-01-01": 466.8,
+      "2025-12-01": 468.11,
+      "2025-11-01": 461.94,
+      "2025-10-01": 451.73,
+      "2025-09-01": 476.78,
+      "2025-08-01": 500.98,
+      "2025-07-01": 508.36,
+      "2025-06-01": 507.84,
+      "2025-05-01": 480.02,
+      "2025-04-01": 478.45,
+      "2025-03-01": 465.83,
+      "2025-02-01": 467.05,
+      "2025-01-01": 418.18,
+      "2026-05-01": 577.26
     },
     "EFX": {
-      "2026-04-01": 179.17,
-      "2026-03-01": 204.29,
-      "2026-02-01": 201.02,
-      "2026-01-01": 216.53,
-      "2025-12-01": 210.29,
-      "2025-11-01": 209.33,
-      "2025-10-01": 255.5,
-      "2025-09-01": 241.73,
-      "2025-08-01": 240.28,
-      "2025-07-01": 257.06,
-      "2025-06-01": 260.98,
-      "2025-05-01": 258.73
+      "2026-04-01": 179.66,
+      "2026-03-01": 208.03,
+      "2026-02-01": 199.17,
+      "2026-01-01": 214.03,
+      "2025-12-01": 208.94,
+      "2025-11-01": 209.84,
+      "2025-10-01": 253.84,
+      "2025-09-01": 234.03,
+      "2025-08-01": 239.99,
+      "2025-07-01": 263.94,
+      "2025-06-01": 261.41,
+      "2025-05-01": 260.61,
+      "2025-04-01": 243.86,
+      "2025-03-01": 244.51,
+      "2025-02-01": 267.52,
+      "2025-01-01": 251.13,
+      "2026-05-01": 173.85
     },
     "HTHT": {
-      "2026-04-01": 50.55,
-      "2026-03-01": 53.51,
-      "2026-02-01": 47.54,
-      "2026-01-01": 47.72,
-      "2025-12-01": 46.1,
-      "2025-11-01": 38.75,
-      "2025-10-01": 39.24,
-      "2025-09-01": 36.67,
-      "2025-08-01": 30.89,
-      "2025-07-01": 33.79,
-      "2025-06-01": 34.78,
-      "2025-05-01": 34.25
+      "2026-04-01": 51.6,
+      "2026-03-01": 54.81,
+      "2026-02-01": 47.1,
+      "2026-01-01": 47.99,
+      "2025-12-01": 46.685,
+      "2025-11-01": 39.6,
+      "2025-10-01": 39.28,
+      "2025-09-01": 36.78,
+      "2025-08-01": 31.23,
+      "2025-07-01": 33.43,
+      "2025-06-01": 35.52,
+      "2025-05-01": 34.43,
+      "2025-04-01": 37.1,
+      "2025-03-01": 36.32,
+      "2025-02-01": 31.84,
+      "2025-01-01": 32.58,
+      "2026-05-01": 50.92
     },
     "MSCI": {
-      "2026-04-01": 531.17,
-      "2026-03-01": 563.05,
-      "2026-02-01": 608.45,
-      "2026-01-01": 571.57,
-      "2025-12-01": 559.81,
-      "2025-11-01": 586.71,
-      "2025-10-01": 567.01,
-      "2025-09-01": 560.66,
-      "2025-08-01": 559.14,
-      "2025-07-01": 574.4,
-      "2025-06-01": 557.65,
-      "2025-05-01": 543
+      "2026-04-01": 536.9,
+      "2026-03-01": 573.88,
+      "2026-02-01": 624.75,
+      "2026-01-01": 565.25,
+      "2025-12-01": 559.66,
+      "2025-11-01": 581.1,
+      "2025-10-01": 552.59,
+      "2025-09-01": 553.91,
+      "2025-08-01": 557.4,
+      "2025-07-01": 581.34,
+      "2025-06-01": 564.2,
+      "2025-05-01": 546.07,
+      "2025-04-01": 567.3,
+      "2025-03-01": 588.76,
+      "2025-02-01": 582.43,
+      "2025-01-01": 597.13,
+      "2026-05-01": 588.85
     },
     "PAYC": {
-      "2026-04-01": 121.51,
-      "2026-03-01": 124.09,
-      "2026-02-01": 136.98,
-      "2026-01-01": 159.43,
-      "2025-12-01": 160,
-      "2025-11-01": 186.86,
-      "2025-10-01": 208.5,
-      "2025-09-01": 224.02,
-      "2025-08-01": 231.12,
-      "2025-07-01": 230.1,
-      "2025-06-01": 259.09,
-      "2025-05-01": 227.72
+      "2026-04-01": 120.8,
+      "2026-03-01": 128.3,
+      "2026-02-01": 133.31,
+      "2026-01-01": 152.4,
+      "2025-12-01": 161.81,
+      "2025-11-01": 184.85,
+      "2025-10-01": 199.23,
+      "2025-09-01": 220.0,
+      "2025-08-01": 226.44,
+      "2025-07-01": 233.8,
+      "2025-06-01": 259.54,
+      "2025-05-01": 227.1,
+      "2025-04-01": 220.9,
+      "2025-03-01": 220.21,
+      "2025-02-01": 205.24,
+      "2025-01-01": 201.4,
+      "2026-05-01": 131.96
     },
     "WIX": {
       "2026-04-01": 90.5,
-      "2026-03-01": 69.72,
-      "2026-02-01": 85.99,
-      "2026-01-01": 104.51,
-      "2025-12-01": 94.29,
-      "2025-11-01": 145,
-      "2025-10-01": 177,
-      "2025-09-01": 138.78,
-      "2025-08-01": 134.58,
-      "2025-07-01": 158.46,
-      "2025-06-01": 148,
-      "2025-05-01": 169.73
+      "2026-03-01": 72.56,
+      "2026-02-01": 83.1,
+      "2026-01-01": 100.97,
+      "2025-12-01": 95.19,
+      "2025-11-01": 143.17,
+      "2025-10-01": 153.79,
+      "2025-09-01": 137.33,
+      "2025-08-01": 128.97,
+      "2025-07-01": 161.03,
+      "2025-06-01": 148.96,
+      "2025-05-01": 167.93,
+      "2025-04-01": 164.0,
+      "2025-03-01": 189.37,
+      "2025-02-01": 230.49,
+      "2025-01-01": 216.53,
+      "2026-05-01": 80.6
     },
     "YUMC": {
-      "2026-04-01": 48.77,
-      "2026-03-01": 53.77,
-      "2026-02-01": 48.96,
-      "2026-01-01": 48.28,
-      "2025-12-01": 48.15,
-      "2025-11-01": 43.31,
-      "2025-10-01": 42.89,
-      "2025-09-01": 44.02,
-      "2025-08-01": 46.54,
-      "2025-07-01": 44.85,
-      "2025-06-01": 43.5,
-      "2025-05-01": 43.37
+      "2026-04-01": 49.09,
+      "2026-03-01": 53.5,
+      "2026-02-01": 50.58,
+      "2026-01-01": 48.17,
+      "2025-12-01": 48.3,
+      "2025-11-01": 43.98,
+      "2025-10-01": 43.12,
+      "2025-09-01": 43.65,
+      "2025-08-01": 46.69,
+      "2025-07-01": 45.68,
+      "2025-06-01": 43.98,
+      "2025-05-01": 43.33,
+      "2025-04-01": 52.95,
+      "2025-03-01": 49.02,
+      "2025-02-01": 44.99,
+      "2025-01-01": 46.59,
+      "2026-05-01": 48.8
     },
     "HLT": {
-      "2026-04-01": 304.35,
-      "2026-03-01": 301.15,
-      "2026-02-01": 299.92,
-      "2026-01-01": 286.87,
-      "2025-12-01": 283.95,
-      "2025-11-01": 255.76,
-      "2025-10-01": 257.81,
-      "2025-09-01": 273.1,
-      "2025-08-01": 264.7,
-      "2025-07-01": 265.42,
-      "2025-06-01": 247.66,
-      "2025-05-01": 226.91
+      "2026-04-01": 308.26,
+      "2026-03-01": 304.8,
+      "2026-02-01": 302.93,
+      "2026-01-01": 292.98,
+      "2025-12-01": 283.04,
+      "2025-11-01": 259.09,
+      "2025-10-01": 256.75,
+      "2025-09-01": 276.01,
+      "2025-08-01": 260.84,
+      "2025-07-01": 268.96,
+      "2025-06-01": 249.13,
+      "2025-05-01": 234.09,
+      "2025-04-01": 227.28,
+      "2025-03-01": 263.58,
+      "2025-02-01": 256.27,
+      "2025-01-01": 245.12,
+      "2026-05-01": 318.61
     },
     "ABG": {
-      "2026-04-01": 193.29,
-      "2026-03-01": 208.87,
-      "2026-02-01": 234.24,
-      "2026-01-01": 232.63,
-      "2025-12-01": 230.77,
-      "2025-11-01": 234.6,
-      "2025-10-01": 243.32,
-      "2025-09-01": 246.25,
-      "2025-08-01": 218.94,
-      "2025-07-01": 236.76,
-      "2025-06-01": 226.2,
-      "2025-05-01": 220.68
+      "2026-04-01": 194.03,
+      "2026-03-01": 210.76,
+      "2026-02-01": 235.77,
+      "2026-01-01": 234.76,
+      "2025-12-01": 232.12,
+      "2025-11-01": 234.98,
+      "2025-10-01": 251.14,
+      "2025-09-01": 253.35,
+      "2025-08-01": 223.02,
+      "2025-07-01": 248.92,
+      "2025-06-01": 229.23,
+      "2025-05-01": 218.35,
+      "2025-04-01": 225.25,
+      "2025-03-01": 259.56,
+      "2025-02-01": 289.37,
+      "2025-01-01": 236.42,
+      "2026-05-01": 203.01
     },
     "CPNG": {
-      "2026-04-01": 18.85,
-      "2026-03-01": 18.53,
-      "2026-02-01": 20.12,
-      "2026-01-01": 23.7,
-      "2025-12-01": 27.3,
-      "2025-11-01": 32.01,
-      "2025-10-01": 32.45,
-      "2025-09-01": 28.27,
-      "2025-08-01": 28.66,
-      "2025-07-01": 30.04,
-      "2025-06-01": 28.05,
-      "2025-05-01": 23.84
+      "2026-04-01": 18.92,
+      "2026-03-01": 19.83,
+      "2026-02-01": 20.04,
+      "2026-01-01": 23.37,
+      "2025-12-01": 26.65,
+      "2025-11-01": 31.98,
+      "2025-10-01": 32.43,
+      "2025-09-01": 28.41,
+      "2025-08-01": 28.74,
+      "2025-07-01": 29.93,
+      "2025-06-01": 28.34,
+      "2025-05-01": 23.47,
+      "2025-04-01": 22.18,
+      "2025-03-01": 23.81,
+      "2025-02-01": 23.58,
+      "2025-01-01": 22.29,
+      "2026-05-01": 20.59
     },
     "ET": {
-      "2026-04-01": 19.05,
+      "2026-04-01": 19.02,
       "2026-03-01": 19.1,
-      "2026-02-01": 18.39,
-      "2026-01-01": 16.45,
-      "2025-12-01": 16.7,
-      "2025-11-01": 16.91,
-      "2025-10-01": 17.1,
-      "2025-09-01": 17.68,
-      "2025-08-01": 17.99,
-      "2025-07-01": 18.15,
-      "2025-06-01": 17.54,
-      "2025-05-01": 16.69
+      "2026-02-01": 18.14,
+      "2026-01-01": 16.59,
+      "2025-12-01": 16.83,
+      "2025-11-01": 16.83,
+      "2025-10-01": 16.99,
+      "2025-09-01": 17.7,
+      "2025-08-01": 17.79,
+      "2025-07-01": 17.81,
+      "2025-06-01": 17.48,
+      "2025-05-01": 16.53,
+      "2025-04-01": 18.73,
+      "2025-03-01": 19.03,
+      "2025-02-01": 20.76,
+      "2025-01-01": 19.71,
+      "2026-05-01": 19.94
     },
     "LAD": {
-      "2026-04-01": 250.19,
-      "2026-03-01": 273.98,
-      "2026-02-01": 321.28,
-      "2026-01-01": 334.08,
-      "2025-12-01": 315.38,
-      "2025-11-01": 311.23,
-      "2025-10-01": 316.27,
-      "2025-09-01": 331.21,
-      "2025-08-01": 286.28,
-      "2025-07-01": 337.13,
-      "2025-06-01": 314.19,
-      "2025-05-01": 296.59
+      "2026-04-01": 250.82,
+      "2026-03-01": 273.35,
+      "2026-02-01": 327.66,
+      "2026-01-01": 332.29,
+      "2025-12-01": 320.7,
+      "2025-11-01": 308.2,
+      "2025-10-01": 323.54,
+      "2025-09-01": 332.67,
+      "2025-08-01": 287.6,
+      "2025-07-01": 343.7,
+      "2025-06-01": 313.75,
+      "2025-05-01": 293.77,
+      "2025-04-01": 296.83,
+      "2025-03-01": 325.3,
+      "2025-02-01": 366.45,
+      "2025-01-01": 348.73,
+      "2026-05-01": 290.9
     },
     "NUVB": {
-      "2026-04-01": 4.38,
-      "2026-03-01": 5.7,
-      "2026-02-01": 5.24,
-      "2026-01-01": 8.97,
-      "2025-12-01": 7.93,
-      "2025-11-01": 5.34,
-      "2025-10-01": 3.74,
+      "2026-04-01": 4.51,
+      "2026-03-01": 5.84,
+      "2026-02-01": 5.63,
+      "2026-01-01": 8.58,
+      "2025-12-01": 7.88,
+      "2025-11-01": 5.17,
+      "2025-10-01": 3.7,
       "2025-09-01": 2.95,
-      "2025-08-01": 2.28,
-      "2025-07-01": 1.95,
-      "2025-06-01": 2.17,
-      "2025-05-01": 2.25
+      "2025-08-01": 2.23,
+      "2025-07-01": 1.94,
+      "2025-06-01": 2.34,
+      "2025-05-01": 2.27,
+      "2025-04-01": 1.75,
+      "2025-03-01": 1.82,
+      "2025-02-01": 2.27,
+      "2025-01-01": 2.59,
+      "2026-05-01": 4.49
     },
     "SGI": {
-      "2026-04-01": 73.78,
-      "2026-03-01": 87.29,
-      "2026-02-01": 87.98,
-      "2026-01-01": 89.32,
-      "2025-12-01": 88.7,
-      "2025-11-01": 79.92,
-      "2025-10-01": 83.9,
-      "2025-09-01": 82.75,
-      "2025-08-01": 71.56,
-      "2025-07-01": 67.67,
-      "2025-06-01": 64.59,
-      "2025-05-01": 60.96
+      "2026-04-01": 73.61,
+      "2026-03-01": 87.42,
+      "2026-02-01": 91.51,
+      "2026-01-01": 88.74,
+      "2025-12-01": 93.19,
+      "2025-11-01": 79.48,
+      "2025-10-01": 83.22,
+      "2025-09-01": 84.18,
+      "2025-08-01": 72.19,
+      "2025-07-01": 69.69,
+      "2025-06-01": 63.98,
+      "2025-05-01": 61.34,
+      "2025-04-01": 62.25,
+      "2025-03-01": 62.51,
+      "2025-02-01": 66.92,
+      "2025-01-01": 55.82,
+      "2026-05-01": 75.58
     },
     "UHAL": {
-      "2026-04-01": 47.79,
-      "2026-03-01": 49.75,
-      "2026-02-01": 56.26,
+      "2026-04-01": 47.12,
+      "2026-03-01": 52.23,
+      "2026-02-01": 57.21,
       "2026-01-01": 50.55,
-      "2025-12-01": 52.18,
-      "2025-11-01": 53.25,
-      "2025-10-01": 57.08,
-      "2025-09-01": 57.18,
-      "2025-08-01": 57.93,
-      "2025-07-01": 60.48,
-      "2025-06-01": 63.85,
-      "2025-05-01": 61.87
+      "2025-12-01": 52.96,
+      "2025-11-01": 53.05,
+      "2025-10-01": 56.98,
+      "2025-09-01": 57.09,
+      "2025-08-01": 57.11,
+      "2025-07-01": 61.29,
+      "2025-06-01": 63.31,
+      "2025-05-01": 62.05,
+      "2025-04-01": 66.55,
+      "2025-03-01": 69.37,
+      "2025-02-01": 71.03,
+      "2025-01-01": 69.01,
+      "2026-05-01": 51.6
     },
     "UHAL.B": {
-      "2026-04-01": 44.72,
-      "2026-03-01": 46.51,
-      "2026-02-01": 51.04,
-      "2026-01-01": 46.9,
-      "2025-12-01": 47.92,
-      "2025-11-01": 48.13,
-      "2025-10-01": 50.58,
-      "2025-09-01": 51.62,
-      "2025-08-01": 51.97,
-      "2025-07-01": 54.16,
-      "2025-06-01": 56.79,
-      "2025-05-01": 54.94
+      "2026-04-01": 44.12,
+      "2026-03-01": 48.31,
+      "2026-02-01": 51.83,
+      "2026-01-01": 46.82,
+      "2025-12-01": 48.28,
+      "2025-11-01": 48.48,
+      "2025-10-01": 51.15,
+      "2025-09-01": 51.8,
+      "2025-08-01": 51.35,
+      "2025-07-01": 55.66,
+      "2025-06-01": 56.81,
+      "2025-05-01": 56.12,
+      "2025-04-01": 60.17,
+      "2025-03-01": 62.13,
+      "2025-02-01": 62.97,
+      "2025-01-01": 63.59,
+      "2026-05-01": 48.11
     },
     "WTW": {
-      "2026-04-01": 288.16,
-      "2026-03-01": 305.1,
-      "2026-02-01": 321.05,
-      "2026-01-01": 327.47,
-      "2025-12-01": 319.53,
-      "2025-11-01": 312.17,
-      "2025-10-01": 345.67,
-      "2025-09-01": 326.2,
-      "2025-08-01": 315.29,
-      "2025-07-01": 306.99,
-      "2025-06-01": 314.48,
-      "2025-05-01": 305.26
+      "2026-04-01": 287.53,
+      "2026-03-01": 304.12,
+      "2026-02-01": 316.61,
+      "2026-01-01": 326.27,
+      "2025-12-01": 320.79,
+      "2025-11-01": 314.0,
+      "2025-10-01": 344.1,
+      "2025-09-01": 325.46,
+      "2025-08-01": 314.77,
+      "2025-07-01": 307.61,
+      "2025-06-01": 317.31,
+      "2025-05-01": 306.36,
+      "2025-04-01": 337.0,
+      "2025-03-01": 340.36,
+      "2025-02-01": 330.67,
+      "2025-01-01": 309.27,
+      "2026-05-01": 256.34
     },
     "LOAR": {
-      "2026-04-01": 58.25,
-      "2026-03-01": 70.06,
-      "2026-02-01": 67.78,
-      "2026-01-01": 68.45,
-      "2025-12-01": 67.36,
-      "2025-11-01": 79.11,
-      "2025-10-01": 79.27,
-      "2025-09-01": 70.52,
-      "2025-08-01": 73,
-      "2025-07-01": 84.83,
-      "2025-06-01": 87.88,
-      "2025-05-01": 96.27
+      "2026-04-01": 58.53,
+      "2026-03-01": 72.3,
+      "2026-02-01": 67.76,
+      "2026-01-01": 70.23,
+      "2025-12-01": 67.19,
+      "2025-11-01": 77.88,
+      "2025-10-01": 79.38,
+      "2025-09-01": 71.48,
+      "2025-08-01": 71.4,
+      "2025-07-01": 82.33,
+      "2025-06-01": 88.08,
+      "2025-05-01": 94.84,
+      "2025-04-01": 71.33,
+      "2025-03-01": 69.72,
+      "2025-02-01": 78.89,
+      "2025-01-01": 73.98,
+      "2026-05-01": 55.37
     },
     "ALLE": {
       "2026-04-01": 145.77,
@@ -3617,7 +4901,8 @@
       "2025-08-01": 165.11,
       "2025-07-01": 143.62,
       "2025-06-01": 141.77,
-      "2025-05-01": 139.37
+      "2025-05-01": 139.37,
+      "2026-05-01": 135.49
     },
     "ALLY": {
       "2026-04-01": 39.75,
@@ -3631,35 +4916,46 @@
       "2025-08-01": 37.01,
       "2025-07-01": 38.91,
       "2025-06-01": 34.9,
-      "2025-05-01": 32.46
+      "2025-05-01": 32.46,
+      "2026-05-01": 43.41
     },
     "AON": {
-      "2026-04-01": 321.88,
-      "2026-03-01": 332.02,
-      "2026-02-01": 353.14,
-      "2026-01-01": 351.12,
-      "2025-12-01": 352.69,
-      "2025-11-01": 339.42,
-      "2025-10-01": 355.15,
-      "2025-09-01": 367.63,
-      "2025-08-01": 356.68,
-      "2025-07-01": 357.13,
-      "2025-06-01": 368.06,
-      "2025-05-01": 351.18
+      "2026-04-01": 321.34,
+      "2026-03-01": 337.8,
+      "2026-02-01": 349.61,
+      "2026-01-01": 344.27,
+      "2025-12-01": 351.17,
+      "2025-11-01": 339.84,
+      "2025-10-01": 360.13,
+      "2025-09-01": 371.96,
+      "2025-08-01": 353.46,
+      "2025-07-01": 356.93,
+      "2025-06-01": 376.16,
+      "2025-05-01": 351.54,
+      "2025-04-01": 398.81,
+      "2025-03-01": 409.32,
+      "2025-02-01": 374.88,
+      "2025-01-01": 354.98,
+      "2026-05-01": 311.51
     },
     "CHTR": {
-      "2026-04-01": 213.17,
-      "2026-03-01": 231.46,
-      "2026-02-01": 208.84,
-      "2026-01-01": 209.45,
-      "2025-12-01": 199.5,
-      "2025-11-01": 231.31,
-      "2025-10-01": 275.32,
-      "2025-09-01": 262.5,
-      "2025-08-01": 270.53,
-      "2025-07-01": 407.82,
-      "2025-06-01": 391.03,
-      "2025-05-01": 388.3
+      "2026-04-01": 216.27,
+      "2026-03-01": 232.8,
+      "2026-02-01": 213.61,
+      "2026-01-01": 209.28,
+      "2025-12-01": 196.94,
+      "2025-11-01": 222.2,
+      "2025-10-01": 275.1,
+      "2025-09-01": 264.42,
+      "2025-08-01": 264.69,
+      "2025-07-01": 418.22,
+      "2025-06-01": 394.78,
+      "2025-05-01": 383.0,
+      "2025-04-01": 370.91,
+      "2025-03-01": 370.66,
+      "2025-02-01": 341.5,
+      "2025-01-01": 349.35,
+      "2026-05-01": 171.74
     },
     "DEO": {
       "2026-04-01": 74.31,
@@ -3673,21 +4969,27 @@
       "2025-08-01": 98.26,
       "2025-07-01": 101.54,
       "2025-06-01": 108.28,
-      "2025-05-01": 111.78
+      "2025-05-01": 111.78,
+      "2026-05-01": 79.7
     },
     "DPZ": {
-      "2026-04-01": 359.04,
-      "2026-03-01": 397.53,
-      "2026-02-01": 411.6,
-      "2026-01-01": 416.7,
-      "2025-12-01": 419.81,
-      "2025-11-01": 398.66,
-      "2025-10-01": 431.95,
-      "2025-09-01": 459.21,
-      "2025-08-01": 464.89,
-      "2025-07-01": 451.19,
-      "2025-06-01": 471.69,
-      "2025-05-01": 488.39
+      "2026-04-01": 361.54,
+      "2026-03-01": 401.37,
+      "2026-02-01": 409.22,
+      "2026-01-01": 425.28,
+      "2025-12-01": 423.85,
+      "2025-11-01": 403.63,
+      "2025-10-01": 428.16,
+      "2025-09-01": 467.3,
+      "2025-08-01": 466.17,
+      "2025-07-01": 457.53,
+      "2025-06-01": 466.0,
+      "2025-05-01": 481.39,
+      "2025-04-01": 465.47,
+      "2025-03-01": 483.82,
+      "2025-02-01": 455.85,
+      "2025-01-01": 434.93,
+      "2026-05-01": 337.77
     },
     "FWONK": {
       "2026-04-01": 87.01,
@@ -3701,7 +5003,8 @@
       "2025-08-01": 99.9,
       "2025-07-01": 104.26,
       "2025-06-01": 96.33,
-      "2025-05-01": 89.47
+      "2025-05-01": 89.47,
+      "2026-05-01": 87.94
     },
     "HEI.A": {
       "2026-04-01": 216.46,
@@ -3715,7 +5018,8 @@
       "2025-08-01": 255.48,
       "2025-07-01": 257.03,
       "2025-06-01": 235.09,
-      "2025-05-01": 202.89
+      "2025-05-01": 202.89,
+      "2026-05-01": 209.28
     },
     "JEF": {
       "2026-04-01": 41.95,
@@ -3729,7 +5033,8 @@
       "2025-08-01": 55.99,
       "2025-07-01": 54.4,
       "2025-06-01": 48.34,
-      "2025-05-01": 47.19
+      "2025-05-01": 47.19,
+      "2026-05-01": 49.29
     },
     "LAMR": {
       "2026-04-01": 126.55,
@@ -3743,21 +5048,27 @@
       "2025-08-01": 122.35,
       "2025-07-01": 121.02,
       "2025-06-01": 119.64,
-      "2025-05-01": 115
+      "2025-05-01": 115,
+      "2026-05-01": 140.35
     },
     "LEN.B": {
-      "2026-04-01": 83.83,
-      "2026-03-01": 103.63,
-      "2026-02-01": 101.26,
-      "2026-01-01": 95.29,
-      "2025-12-01": 122.29,
-      "2025-11-01": 117.92,
-      "2025-10-01": 119.62,
-      "2025-09-01": 125.5,
-      "2025-08-01": 106.97,
-      "2025-07-01": 105.31,
-      "2025-06-01": 100.78,
-      "2025-05-01": 103.48
+      "2026-04-01": 83.27,
+      "2026-03-01": 103.89,
+      "2026-02-01": 101.51,
+      "2026-01-01": 95.59,
+      "2025-12-01": 121.63,
+      "2025-11-01": 114.77,
+      "2025-10-01": 121.97,
+      "2025-09-01": 126.85,
+      "2025-08-01": 111.44,
+      "2025-07-01": 110.3,
+      "2025-06-01": 100.3,
+      "2025-05-01": 102.64,
+      "2025-04-01": 108.37,
+      "2025-03-01": 113.89,
+      "2025-02-01": 122.07,
+      "2025-01-01": 130.48,
+      "2026-05-01": 86.31
     },
     "LILA": {
       "2026-04-01": 8.59,
@@ -3771,7 +5082,8 @@
       "2025-08-01": 6.96,
       "2025-07-01": 6.1,
       "2025-06-01": 4.9,
-      "2025-05-01": 5.45
+      "2025-05-01": 5.45,
+      "2026-05-01": 8.25
     },
     "LLYVA": {
       "2026-04-01": 92.7,
@@ -3785,7 +5097,8 @@
       "2025-08-01": 80.62,
       "2025-07-01": 79.25,
       "2025-06-01": 71.97,
-      "2025-05-01": 70.36
+      "2025-05-01": 70.36,
+      "2026-05-01": 92.5
     },
     "LLYVK": {
       "2026-04-01": 96.16,
@@ -3799,7 +5112,8 @@
       "2025-08-01": 82.85,
       "2025-07-01": 81.24,
       "2025-06-01": 72.95,
-      "2025-05-01": 72.27
+      "2025-05-01": 72.27,
+      "2026-05-01": 94.665
     },
     "LPX": {
       "2026-04-01": 72.61,
@@ -3813,7 +5127,8 @@
       "2025-08-01": 90,
       "2025-07-01": 85.83,
       "2025-06-01": 89.8,
-      "2025-05-01": 86.19
+      "2025-05-01": 86.19,
+      "2026-05-01": 71.26
     },
     "NUE": {
       "2026-04-01": 171.25,
@@ -3827,7 +5142,8 @@
       "2025-08-01": 139.38,
       "2025-07-01": 129.23,
       "2025-06-01": 122.91,
-      "2025-05-01": 120
+      "2025-05-01": 120,
+      "2026-05-01": 226.04
     },
     "NVR": {
       "2026-04-01": 6584.95,
@@ -3841,7 +5157,8 @@
       "2025-08-01": 7619.21,
       "2025-07-01": 7369.91,
       "2025-06-01": 7058.68,
-      "2025-05-01": 7102
+      "2025-05-01": 7102,
+      "2026-05-01": 6154.14
     },
     "NYT": {
       "2026-04-01": 83.55,
@@ -3855,7 +5172,8 @@
       "2025-08-01": 51.88,
       "2025-07-01": 56.16,
       "2025-06-01": 56.88,
-      "2025-05-01": 52.03
+      "2025-05-01": 52.03,
+      "2026-05-01": 78.72
     },
     "POOL": {
       "2026-04-01": 202.48,
@@ -3869,119 +5187,477 @@
       "2025-08-01": 307.36,
       "2025-07-01": 291.29,
       "2025-06-01": 299.28,
-      "2025-05-01": 292.98
+      "2025-05-01": 292.98,
+      "2026-05-01": 208.09
     },
     "SIRI": {
-      "2026-04-01": 23.08,
-      "2026-03-01": 21.59,
-      "2026-02-01": 20.4,
-      "2026-01-01": 20.09,
-      "2025-12-01": 21,
-      "2025-11-01": 21.64,
-      "2025-10-01": 23.22,
-      "2025-09-01": 23.15,
-      "2025-08-01": 20.9,
-      "2025-07-01": 22.85,
-      "2025-06-01": 21.56,
-      "2025-05-01": 21.61
+      "2026-04-01": 23.41,
+      "2026-03-01": 21.94,
+      "2026-02-01": 20.37,
+      "2026-01-01": 20.51,
+      "2025-12-01": 20.81,
+      "2025-11-01": 21.89,
+      "2025-10-01": 22.66,
+      "2025-09-01": 23.11,
+      "2025-08-01": 21.18,
+      "2025-07-01": 23.63,
+      "2025-06-01": 21.26,
+      "2025-05-01": 19.5,
+      "2025-04-01": 21.96,
+      "2025-03-01": 24.04,
+      "2025-02-01": 24.0,
+      "2025-01-01": 22.1,
+      "2026-05-01": 27.22
     },
     "STZ": {
-      "2026-04-01": 152.25,
-      "2026-03-01": 156.43,
-      "2026-02-01": 156.35,
-      "2026-01-01": 138.4,
-      "2025-12-01": 135.84,
-      "2025-11-01": 131,
-      "2025-10-01": 136.27,
-      "2025-09-01": 150.13,
-      "2025-08-01": 168,
-      "2025-07-01": 162.7,
-      "2025-06-01": 177.28,
-      "2025-05-01": 187.56
+      "2026-04-01": 151.09,
+      "2026-03-01": 156.56,
+      "2026-02-01": 155.66,
+      "2026-01-01": 141.17,
+      "2025-12-01": 137.87,
+      "2025-11-01": 130.82,
+      "2025-10-01": 138.95,
+      "2025-09-01": 151.26,
+      "2025-08-01": 166.18,
+      "2025-07-01": 166.42,
+      "2025-06-01": 174.17,
+      "2025-05-01": 185.44,
+      "2025-04-01": 184.81,
+      "2025-03-01": 175.28,
+      "2025-02-01": 174.41,
+      "2025-01-01": 222.57,
+      "2026-05-01": 152.82
     },
     "UNH": {
-      "2026-04-01": 274.21,
-      "2026-03-01": 288.16,
-      "2026-02-01": 286.02,
-      "2026-01-01": 330.9,
-      "2025-12-01": 327.16,
-      "2025-11-01": 339.13,
-      "2025-10-01": 343.9,
-      "2025-09-01": 308.31,
-      "2025-08-01": 250.61,
-      "2025-07-01": 311.97,
-      "2025-06-01": 303.12,
-      "2025-05-01": 411.32
+      "2026-04-01": 273.98,
+      "2026-03-01": 294.93,
+      "2026-02-01": 285.59,
+      "2026-01-01": 336.4,
+      "2025-12-01": 323.21,
+      "2025-11-01": 333.79,
+      "2025-10-01": 348.3,
+      "2025-09-01": 308.8,
+      "2025-08-01": 237.77,
+      "2025-07-01": 326.14,
+      "2025-06-01": 304.72,
+      "2025-05-01": 400.68,
+      "2025-04-01": 523.12,
+      "2025-03-01": 467.05,
+      "2025-02-01": 548.18,
+      "2025-01-01": 504.51,
+      "2026-05-01": 368.78
     },
     "VRSN": {
-      "2026-04-01": 248.19,
-      "2026-03-01": 226.2,
-      "2026-02-01": 244.01,
-      "2026-01-01": 243.08,
-      "2025-12-01": 251.07,
-      "2025-11-01": 240.85,
-      "2025-10-01": 278.43,
-      "2025-09-01": 270.46,
-      "2025-08-01": 268.17,
-      "2025-07-01": 290.17,
-      "2025-06-01": 271,
-      "2025-05-01": 282.72
+      "2026-04-01": 250.77,
+      "2026-03-01": 228.05,
+      "2026-02-01": 251.0,
+      "2026-01-01": 240.53,
+      "2025-12-01": 251.02,
+      "2025-11-01": 244.56,
+      "2025-10-01": 274.92,
+      "2025-09-01": 273.2,
+      "2025-08-01": 265.37,
+      "2025-07-01": 289.08,
+      "2025-06-01": 275.56,
+      "2025-05-01": 279.7,
+      "2025-04-01": 254.98,
+      "2025-03-01": 240.16,
+      "2025-02-01": 216.02,
+      "2025-01-01": 205.1,
+      "2026-05-01": 272.44
     },
     "C": {
-      "2026-04-01": 115.47,
-      "2026-03-01": 106.26,
-      "2026-02-01": 114.96,
-      "2026-01-01": 117.21,
-      "2025-12-01": 103.1,
-      "2025-11-01": 100.72,
-      "2025-10-01": 100.94,
-      "2025-09-01": 95.02,
-      "2025-08-01": 91.85,
-      "2025-07-01": 85,
-      "2025-06-01": 75.16,
-      "2025-05-01": 68.21
+      "2026-04-01": 115.3,
+      "2026-03-01": 111.45,
+      "2026-02-01": 116.23,
+      "2026-01-01": 118.7,
+      "2025-12-01": 102.68,
+      "2025-11-01": 101.61,
+      "2025-10-01": 98.71,
+      "2025-09-01": 94.78,
+      "2025-08-01": 91.83,
+      "2025-07-01": 86.27,
+      "2025-06-01": 75.8,
+      "2025-05-01": 68.14,
+      "2025-04-01": 70.54,
+      "2025-03-01": 77.17,
+      "2025-02-01": 79.61,
+      "2025-01-01": 69.94,
+      "2026-05-01": 127.44
     },
     "MRP": {
-      "2026-04-01": 28.12,
-      "2026-03-01": 31,
-      "2026-02-01": 29.8,
-      "2026-01-01": 29.78,
-      "2025-12-01": 29.79,
-      "2025-11-01": 31.98,
-      "2025-10-01": 33.5,
-      "2025-09-01": 35.09,
-      "2025-08-01": 30.54,
-      "2025-07-01": 28.4,
-      "2025-06-01": 27.73,
-      "2025-05-01": 25.22
+      "2026-04-01": 28.51,
+      "2026-03-01": 31.0,
+      "2026-02-01": 29.61,
+      "2026-01-01": 29.83,
+      "2025-12-01": 30.23,
+      "2025-11-01": 31.54,
+      "2025-10-01": 33.58,
+      "2025-09-01": 34.15,
+      "2025-08-01": 29.94,
+      "2025-07-01": 28.59,
+      "2025-06-01": 27.68,
+      "2025-05-01": 25.39,
+      "2025-04-01": 26.0,
+      "2025-03-01": 22.24,
+      "2025-02-01": 22.99,
+      "2026-05-01": 30.37
     },
     "RHI": {
-      "2026-04-01": 25.77,
-      "2026-03-01": 23.75,
-      "2026-02-01": 34.05,
-      "2026-01-01": 27.19,
-      "2025-12-01": 26.88,
-      "2025-11-01": 26.13,
+      "2026-04-01": 24.67,
+      "2026-03-01": 23.72,
+      "2026-02-01": 34.03,
+      "2026-01-01": 27.34,
+      "2025-12-01": 27.45,
+      "2025-11-01": 25.55,
       "2025-10-01": 33.98,
-      "2025-09-01": 36.89,
-      "2025-08-01": 36.41,
-      "2025-07-01": 40.82,
-      "2025-06-01": 45.66,
-      "2025-05-01": 44.47
+      "2025-09-01": 37.22,
+      "2025-08-01": 35.34,
+      "2025-07-01": 42.85,
+      "2025-06-01": 44.81,
+      "2025-05-01": 44.46,
+      "2025-04-01": 54.0,
+      "2025-03-01": 56.38,
+      "2025-02-01": 63.35,
+      "2025-01-01": 68.51,
+      "2026-05-01": 27.02
     },
     "TFX": {
-      "2026-04-01": 119.38,
-      "2026-03-01": 119.77,
-      "2026-02-01": 103.69,
+      "2026-04-01": 118.42,
+      "2026-03-01": 122.93,
+      "2026-02-01": 103.36,
       "2026-01-01": 122.4,
-      "2025-12-01": 113.97,
-      "2025-11-01": 123.75,
-      "2025-10-01": 122.73,
-      "2025-09-01": 125.44,
-      "2025-08-01": 119.35,
-      "2025-07-01": 118.77,
-      "2025-06-01": 121.71,
-      "2025-05-01": 132.93
+      "2025-12-01": 114.41,
+      "2025-11-01": 122.85,
+      "2025-10-01": 123.92,
+      "2025-09-01": 127.04,
+      "2025-08-01": 115.89,
+      "2025-07-01": 121.83,
+      "2025-06-01": 119.66,
+      "2025-05-01": 125.87,
+      "2025-04-01": 140.3,
+      "2025-03-01": 135.13,
+      "2025-02-01": 175.1,
+      "2025-01-01": 179.05,
+      "2026-05-01": 121.77
+    },
+    "A": {
+      "2026-04-01": 114.54,
+      "2026-03-01": 118.17,
+      "2026-02-01": 135.39,
+      "2026-01-01": 137.95,
+      "2025-12-01": 150.1,
+      "2025-11-01": 144.69,
+      "2025-10-01": 138.58,
+      "2025-09-01": 125.21,
+      "2025-08-01": 113.5,
+      "2025-07-01": 120.45,
+      "2025-06-01": 111.05,
+      "2025-05-01": 106.46,
+      "2025-04-01": 114.05,
+      "2025-03-01": 126.33,
+      "2025-02-01": 148.63,
+      "2025-01-01": 133.43,
+      "2026-05-01": 114.52
+    },
+    "BAM": {
+      "2026-04-01": 44.08,
+      "2026-03-01": 47.14,
+      "2026-02-01": 50.76,
+      "2026-01-01": 53.45,
+      "2025-12-01": 51.89,
+      "2025-11-01": 54.36,
+      "2025-10-01": 55.76,
+      "2025-09-01": 59.13,
+      "2025-08-01": 59.81,
+      "2025-07-01": 54.94,
+      "2025-06-01": 56.09,
+      "2025-05-01": 53.24,
+      "2025-04-01": 49.5,
+      "2025-03-01": 55.46,
+      "2025-02-01": 58.19,
+      "2025-01-01": 54.34,
+      "2026-05-01": 47.98
+    },
+    "CRCL": {
+      "2026-04-01": 90.74,
+      "2026-03-01": 96.14,
+      "2026-02-01": 58.86,
+      "2026-01-01": 83.47,
+      "2025-12-01": 75.94,
+      "2025-11-01": 117.86,
+      "2025-10-01": 129.03,
+      "2025-09-01": 120.14,
+      "2025-08-01": 168.1,
+      "2025-07-01": 192.53,
+      "2025-06-01": 107.7,
+      "2026-05-01": 99.7
+    },
+    "CRH": {
+      "2026-04-01": 106.2,
+      "2026-03-01": 117.72,
+      "2026-02-01": 124.6,
+      "2026-01-01": 126.44,
+      "2025-12-01": 119.68,
+      "2025-11-01": 118.4,
+      "2025-10-01": 119.85,
+      "2025-09-01": 111.28,
+      "2025-08-01": 95.24,
+      "2025-07-01": 93.3,
+      "2025-06-01": 90.99,
+      "2025-05-01": 96.28,
+      "2025-04-01": 88.85,
+      "2025-03-01": 99.97,
+      "2025-02-01": 97.34,
+      "2025-01-01": 92.71,
+      "2026-05-01": 115.45
+    },
+    "CTLP": {
+      "2026-04-01": 10.81,
+      "2026-03-01": 10.49,
+      "2026-02-01": 10.79,
+      "2026-01-01": 10.68,
+      "2025-12-01": 10.61,
+      "2025-11-01": 10.56,
+      "2025-10-01": 10.58,
+      "2025-09-01": 10.87,
+      "2025-08-01": 11.07,
+      "2025-07-01": 11.01,
+      "2025-06-01": 8.76,
+      "2025-05-01": 8.01,
+      "2025-04-01": 7.73,
+      "2025-03-01": 9.66,
+      "2025-02-01": 8.21,
+      "2025-01-01": 9.33,
+      "2026-05-01": 11
+    },
+    "G": {
+      "2026-04-01": 37.23,
+      "2026-03-01": 40.21,
+      "2026-02-01": 44.13,
+      "2026-01-01": 45.91,
+      "2025-12-01": 44.19,
+      "2025-11-01": 38.12,
+      "2025-10-01": 41.84,
+      "2025-09-01": 44.89,
+      "2025-08-01": 42.49,
+      "2025-07-01": 44.97,
+      "2025-06-01": 42.75,
+      "2025-05-01": 49.24,
+      "2025-04-01": 50.56,
+      "2025-03-01": 52.73,
+      "2025-02-01": 48.93,
+      "2025-01-01": 42.99,
+      "2026-05-01": 34.33
+    },
+    "GS": {
+      "2026-04-01": 860.21,
+      "2026-03-01": 861.7,
+      "2026-02-01": 946.33,
+      "2026-01-01": 914.34,
+      "2025-12-01": 810.86,
+      "2025-11-01": 785.52,
+      "2025-10-01": 785.51,
+      "2025-09-01": 730.85,
+      "2025-08-01": 709.57,
+      "2025-07-01": 706.46,
+      "2025-06-01": 598.72,
+      "2025-05-01": 553.83,
+      "2025-04-01": 548.45,
+      "2025-03-01": 605.26,
+      "2025-02-01": 632.37,
+      "2025-01-01": 574.97,
+      "2026-05-01": 923.71
+    },
+    "MS": {
+      "2026-04-01": 166.17,
+      "2026-03-01": 167.0,
+      "2026-02-01": 185.1,
+      "2026-01-01": 181.9,
+      "2025-12-01": 168.47,
+      "2025-11-01": 163.65,
+      "2025-10-01": 156.89,
+      "2025-09-01": 148.85,
+      "2025-08-01": 139.09,
+      "2025-07-01": 141.07,
+      "2025-06-01": 128.4,
+      "2025-05-01": 116.76,
+      "2025-04-01": 115.74,
+      "2025-03-01": 129.13,
+      "2025-02-01": 137.16,
+      "2025-01-01": 124.78,
+      "2026-05-01": 190.17
+    },
+    "SCHW": {
+      "2026-04-01": 92.36,
+      "2026-03-01": 95.49,
+      "2026-02-01": 105.17,
+      "2026-01-01": 101.57,
+      "2025-12-01": 92.69,
+      "2025-11-01": 93.15,
+      "2025-10-01": 92.25,
+      "2025-09-01": 96.12,
+      "2025-08-01": 95.53,
+      "2025-07-01": 91.17,
+      "2025-06-01": 88.11,
+      "2025-05-01": 81.51,
+      "2025-04-01": 77.67,
+      "2025-03-01": 78.12,
+      "2025-02-01": 82.75,
+      "2025-01-01": 73.84,
+      "2026-05-01": 91.54
+    },
+    "TEX": {
+      "2026-04-01": 60.28,
+      "2026-03-01": 69.45,
+      "2026-02-01": 58.99,
+      "2026-01-01": 55.03,
+      "2025-12-01": 45.55,
+      "2025-11-01": 46.07,
+      "2025-10-01": 51.72,
+      "2025-09-01": 49.9,
+      "2025-08-01": 48.96,
+      "2025-07-01": 48.7,
+      "2025-06-01": 44.06,
+      "2025-05-01": 36.4,
+      "2025-04-01": 38.07,
+      "2025-03-01": 38.29,
+      "2025-02-01": 45.99,
+      "2025-01-01": 44.52,
+      "2026-05-01": 61.87
+    },
+    "DAL": {
+      "2026-04-01": 67.6,
+      "2026-03-01": 64.25,
+      "2026-02-01": 69.08,
+      "2026-01-01": 69.06,
+      "2025-12-01": 64.15,
+      "2025-11-01": 58.5,
+      "2025-10-01": 56.11,
+      "2025-09-01": 61.13,
+      "2025-08-01": 51.15,
+      "2025-07-01": 49.0,
+      "2025-06-01": 48.5,
+      "2025-05-01": 41.5,
+      "2025-04-01": 42.42,
+      "2025-03-01": 58.45,
+      "2025-02-01": 66.48,
+      "2025-01-01": 59.07,
+      "2026-05-01": 68.98
+    },
+    "EL": {
+      "2026-04-01": 70.71,
+      "2026-03-01": 100.19,
+      "2026-02-01": 118.76,
+      "2026-01-01": 106.76,
+      "2025-12-01": 94.71,
+      "2025-11-01": 93.25,
+      "2025-10-01": 86.2,
+      "2025-09-01": 90.79,
+      "2025-08-01": 91.04,
+      "2025-07-01": 85.11,
+      "2025-06-01": 66.65,
+      "2025-05-01": 58.89,
+      "2025-04-01": 67.87,
+      "2025-03-01": 70.18,
+      "2025-02-01": 82.77,
+      "2025-01-01": 73.98,
+      "2026-05-01": 79.3
+    },
+    "HRB": {
+      "2026-04-01": 31.79,
+      "2026-03-01": 30.94,
+      "2026-02-01": 38.72,
+      "2026-01-01": 42.61,
+      "2025-12-01": 42.24,
+      "2025-11-01": 49.43,
+      "2025-10-01": 51.12,
+      "2025-09-01": 50.35,
+      "2025-08-01": 54.48,
+      "2025-07-01": 55.78,
+      "2025-06-01": 58.49,
+      "2025-05-01": 62.09,
+      "2025-04-01": 56.33,
+      "2025-03-01": 53.61,
+      "2025-02-01": 55.76,
+      "2025-01-01": 53.09,
+      "2026-05-01": 31.25
+    },
+    "IEP": {
+      "2026-04-01": 7.64,
+      "2026-03-01": 8.11,
+      "2026-02-01": 7.74,
+      "2026-01-01": 7.48,
+      "2025-12-01": 8.08,
+      "2025-11-01": 8.06,
+      "2025-10-01": 8.4,
+      "2025-09-01": 8.44,
+      "2025-08-01": 8.98,
+      "2025-07-01": 8.31,
+      "2025-06-01": 8.45,
+      "2025-05-01": 8.81,
+      "2025-04-01": 9.07,
+      "2025-03-01": 10.0,
+      "2025-02-01": 9.85,
+      "2025-01-01": 8.98,
+      "2026-05-01": 8.35
+    },
+    "JOE": {
+      "2026-04-01": 64.35,
+      "2026-03-01": 72.69,
+      "2026-02-01": 66.16,
+      "2026-01-01": 59.81,
+      "2025-12-01": 61.09,
+      "2025-11-01": 58.73,
+      "2025-10-01": 49.58,
+      "2025-09-01": 49.45,
+      "2025-08-01": 49.86,
+      "2025-07-01": 48.26,
+      "2025-06-01": 44.63,
+      "2025-05-01": 43.04,
+      "2025-04-01": 46.55,
+      "2025-03-01": 47.35,
+      "2025-02-01": 47.65,
+      "2025-01-01": 44.65,
+      "2026-05-01": 61.74
+    },
+    "SGOV": {
+      "2026-04-01": 100.39,
+      "2026-03-01": 100.38,
+      "2026-02-01": 100.37,
+      "2026-01-01": 100.41,
+      "2025-12-01": 100.38,
+      "2025-11-01": 100.4,
+      "2025-10-01": 100.37,
+      "2025-09-01": 100.39,
+      "2025-08-01": 100.39,
+      "2025-07-01": 100.37,
+      "2025-06-01": 100.38,
+      "2025-05-01": 100.37,
+      "2025-04-01": 100.35,
+      "2025-03-01": 100.36,
+      "2025-02-01": 100.34,
+      "2025-01-01": 100.34,
+      "2026-05-01": 100.41
+    },
+    "TME": {
+      "2026-04-01": 9.19,
+      "2026-03-01": 14.43,
+      "2026-02-01": 16.55,
+      "2026-01-01": 17.86,
+      "2025-12-01": 18.44,
+      "2025-11-01": 23.15,
+      "2025-10-01": 23.12,
+      "2025-09-01": 24.55,
+      "2025-08-01": 20.54,
+      "2025-07-01": 19.24,
+      "2025-06-01": 17.36,
+      "2025-05-01": 13.37,
+      "2025-04-01": 14.46,
+      "2025-03-01": 12.34,
+      "2025-02-01": 11.77,
+      "2025-01-01": 11.32,
+      "2026-05-01": 9.1
     }
   }
 }

@@ -275,12 +275,10 @@ means "take the first 20 rows by % of Portfolio."
    Chain-link math uses "closest available price ≤ asOf" and the offset
    stays within 5% precision.
 
-**Why this is better than the old heuristic:** the old `±30 days from deadline`
-rule missed real captures (e.g., for 2018-Q3 the only valid capture was
-2019-02-28, ~108 days after the 2018-11-14 filing deadline — within the
-filing_window but outside the ±30 widen). The new algorithm enumerates the
-truth (what captures actually exist) and assigns them by filing-window
-semantics, not by arbitrary distance.
+The filing-window semantics matter: a capture from before `filing_deadline(Q)`
+shows the previous quarter's data, not Q's. A capture from after
+`filing_deadline(Q+1)` shows Q+1's data. Only the window in between is
+valid for Q.
 
 ### Phase C — Update `meta.json` (REQUIRED, not optional)
 
