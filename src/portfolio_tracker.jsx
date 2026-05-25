@@ -563,7 +563,7 @@ const asOfLabel = (iso) => {
   return `Q${q} '${String(y).slice(2)}`;
 };
 
-const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode, isFromBase = false }) => {
+const PortfolioEditModal = ({ portfolio, onSave, onClose, onRemove, disabledSet, onToggleDisabled, prices, vooPortfolio, mergeMode, setMergeMode, latestQuarter, isFromBase = false }) => {
   const [name, setName] = useState(portfolio?.name || '');
   const [subtitle, setSubtitle] = useState(portfolio?.subtitle || '');
   const [holdings] = useState(
@@ -668,18 +668,66 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
     return [100 - pad, 100 + pad];
   }, [miniChartData]);
 
-  const handleSave = () => {
+  // Auto-save: every editable field commits to the parent state immediately
+  // (color on click, name/subtitle on blur). No manual Save button — nothing
+  // persists to disk until the global Save anyway, so the user can always
+  // close + reset to discard.
+  const commitColor = (c) => {
+    setColor(c);
+    onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color: c });
+  };
+  const commitName = () => {
     onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color });
   };
+  const commitSubtitle = () => {
+    onSave({ ...portfolio, name: name.trim() || 'Untitled', subtitle: subtitle.trim(), color });
+  };
+
+  // "Now" pill label: only honest when the portfolio's implicit current quarter
+  // matches the base's latestQuarter (i.e., investor is up-to-date). For
+  // inactive investors whose last 13F is older, show the actual implicit asOf
+  // (e.g. "Q3 '25") instead of the misleading "Now".
+  const isCurrentUpToDate = !latestQuarter || !currAsOfForDelta || currAsOfForDelta === latestQuarter;
+  const nowPillLabel = isCurrentUpToDate
+    ? 'Now'
+    : (currAsOfForDelta ? asOfLabel(currAsOfForDelta) : 'Now');
+
+  // 1% filter false-NEW guard: if a ticker disappears from the prev snap because
+  // it dipped below the 1% threshold (not actually sold), our diff will mislabel
+  // the next quarter's reappearance as NEW. To suppress: build a set of every
+  // ticker that appeared in ANY earlier history snapshot (not just prev).
+  const tickerExistedBefore = useMemo(() => {
+    const set = new Set();
+    for (const s of (historySnapshots || [])) {
+      for (const h of (s.holdings || [])) {
+        const t = (h.ticker || '').toUpperCase();
+        if (t) set.add(t);
+      }
+    }
+    return set;
+  }, [historySnapshots]);
 
   return (
     // Pin near the top so the modal does not jump vertically when content height changes
     // (e.g. switching quarters with different holdings counts).
     <div className="fixed inset-0 modal-backdrop backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-12 overflow-y-auto">
       <div className="surface-card-elevated border border-subtle rounded-lg max-w-[44rem] w-full max-h-[calc(100vh-4rem)] overflow-hidden flex flex-col shadow-2xl">
-        <div className="px-6 py-4 border-b border-subtle flex items-center justify-between">
-          <h2 className="text-xl tracking-tight font-serif" style={{ color: 'var(--text-primary)' }}>Edit Portfolio</h2>
-          <button onClick={onClose} className="text-tertiary hover-text-primary"><X size={20} /></button>
+        <div className="px-6 py-4 border-b border-subtle flex items-center justify-between gap-3">
+          {/* min-w-0 + flex-1 lets the truncate kick in instead of pushing the
+              close button off-screen. Long names get an ellipsis. */}
+          <div className="flex items-baseline gap-2 min-w-0 flex-1">
+            <h2 className="text-xl tracking-tight font-serif truncate"
+              style={{ color: 'var(--text-primary)' }}
+              title={portfolio?.name || ''}>
+              {portfolio?.name || 'Untitled'}
+            </h2>
+            {isFromBase && (
+              <span className="text-micro tracking-[0.1em] uppercase font-mono text-muted flex-shrink-0">
+                · from base · read-only
+              </span>
+            )}
+          </div>
+          <button onClick={onClose} className="text-tertiary hover-text-primary flex-shrink-0"><X size={20} /></button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -688,7 +736,9 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
               <label className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
                 Name {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
               </label>
-              <input value={name} onChange={(e) => setName(e.target.value)} readOnly={isFromBase}
+              <input value={name} onChange={(e) => setName(e.target.value)}
+                onBlur={isFromBase ? undefined : commitName}
+                readOnly={isFromBase}
                 title={isFromBase ? 'Name comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
                 style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
                 className={`w-full border border-subtle rounded px-3 py-2 text-prom font-serif focus:outline-none ${
@@ -703,14 +753,14 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                   // selected — give it a CSS-only outline visible only in dark mode.
                   const needsDarkRing = c === '#1a1815';
                   return (
-                    <button key={c} onClick={() => setColor(c)}
+                    <button key={c} onClick={() => commitColor(c)}
                       className={`w-6 h-6 rounded-full hover:scale-110 transition-transform ${needsDarkRing ? 'swatch-near-black' : ''}`}
                       style={{ backgroundColor: c, border: color === c ? '2px solid var(--border-selected)' : '2px solid transparent', boxShadow: color === c ? '0 0 0 1px white inset' : 'none' }} />
                   );
                 })}
                 <span className="w-px h-5 bg-border-subtle mx-0.5" />
                 <label className="relative w-6 h-6 cursor-pointer group" title="Pick any color">
-                  <input type="color" value={color} onChange={(e) => setColor(e.target.value)}
+                  <input type="color" value={color} onChange={(e) => commitColor(e.target.value)}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
                   <div className="w-6 h-6 rounded-full border-2 border-dashed border-strong group-hover-border-focus flex items-center justify-center surface-card-elevated transition-colors"
                     style={!PALETTE.includes(color) ? { backgroundColor: color, borderStyle: 'solid', borderColor: 'var(--border-selected)', boxShadow: '0 0 0 1px white inset' } : undefined}>
@@ -724,7 +774,9 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             <label className="text-micro tracking-[0.15em] uppercase text-tertiary font-mono mb-1.5 block">
               Subtitle {isFromBase && <span className="text-muted normal-case tracking-normal">· from base, read-only</span>}
             </label>
-            <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="e.g. Q1 2025 · Top 5"
+            <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)}
+              onBlur={isFromBase ? undefined : commitSubtitle}
+              placeholder="e.g. Q1 2025 · Top 5"
               readOnly={isFromBase}
               title={isFromBase ? 'Subtitle comes from public/data/investors-index.json (maintained by goals). Not editable from UI.' : undefined}
               style={isFromBase ? { background: 'var(--row-stripe)' } : undefined}
@@ -803,8 +855,10 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                             ? 'bg-contrast-pill text-on-contrast-pill border-contrast-pill'
                             : 'bg-transparent text-tertiary hover-text-primary hover-border-strong border-subtle'
                         }`}
-                        title="Current quarter">
-                        Now
+                        title={isCurrentUpToDate
+                          ? 'Current quarter'
+                          : `Implicit current — last 13F was ${historySnapshots[historySnapshots.length-1]?.asOf}, this is one quarter forward (extrapolated). Investor appears inactive.`}>
+                        {nowPillLabel}
                       </button>
                     </div>
                   </div>
@@ -954,6 +1008,20 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
                           );
                           if (delta === null || delta === undefined) return null;
 
+                          // 1% filter false-NEW guard. If our diff says "new position" but the
+                          // ticker existed in any earlier history snapshot (i.e. it dipped below
+                          // the 1% threshold and resurfaced), suppress the misleading marker —
+                          // we can't compute the true delta without sub-1% data anyway.
+                          if (delta === 100 && confidence === 'real') {
+                            const wasBefore = origTickers.some(t => tickerExistedBefore.has(t));
+                            if (wasBefore) return null;
+                          }
+                          // Same guard for false-EXIT (-100): if curr is empty but ticker only
+                          // existed in prev snap (and not earlier), it's a real exit; if it
+                          // existed earlier too, treat as known-good real exit (don't suppress).
+                          // We keep -100 markers — they're rarely false-positive (1% drift down
+                          // is uncommon enough that "Sold" usually means actually sold).
+
                           // Noise thresholds: real has 1% floor (exact data — small signals are real);
                           // rough has 15% floor — picks up mid-range real trades (Reduce ~11-20%)
                           // while still hiding most monthly-price approximation noise. Accepts a few
@@ -987,21 +1055,16 @@ const PortfolioEditModal = ({ portfolio, onSave, onClose, onDelete, disabledSet,
             </div>
           </div>
         </div>
-        <div className="px-6 py-4 border-t border-subtle flex items-center justify-between gap-3 surface-card-elevated">
-          <div>
-            {!portfolio.locked && onDelete && (
-              <button onClick={() => onDelete(portfolio.id)}
-                style={{ color: 'var(--danger)' }}
-                className="flex items-center gap-1.5 px-3 py-2 text-body tracking-[0.15em] uppercase font-mono hover-text-danger-strong hover-danger-tint rounded transition-colors">
-                <Trash2 size={12} /> Delete
-              </button>
-            )}
+        {!portfolio.locked && onRemove && (
+          <div className="px-6 py-4 border-t border-subtle flex items-center justify-start gap-3 surface-card-elevated">
+            <button onClick={() => onRemove(portfolio.id)}
+              style={{ color: 'var(--danger)' }}
+              title="Removes from your view. Investor data stays in the base; reopen via the matrix to re-add."
+              className="flex items-center gap-1.5 px-3 py-2 text-body tracking-[0.15em] uppercase font-mono hover-text-danger-strong hover-danger-tint rounded transition-colors">
+              <Trash2 size={12} /> Remove from portfolio
+            </button>
           </div>
-          <div className="flex items-center gap-3">
-            <button onClick={onClose} className="px-4 py-2 text-body tracking-[0.15em] uppercase text-tertiary hover-text-primary font-mono">Cancel</button>
-            <button onClick={handleSave} className="px-5 py-2 text-body tracking-[0.15em] uppercase font-mono bg-contrast-pill text-on-contrast-pill rounded hover-contrast-pill-soft">Save</button>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -3510,8 +3573,11 @@ export default function PortfolioTracker() {
     setPortfolios(portfolios.map(p => p.id === updated.id ? updated : p));
     setEditing(null);
   };
-  const deletePortfolio = (id) => {
-    if (!confirm('Delete this portfolio?')) return false;
+  // Remove a portfolio from the user's view. Doesn't touch the underlying base
+  // data — investor files in public/data/investors/ stay intact. Nothing is
+  // persisted until the global Save button writes default-data.json, so this
+  // is trivially reversible (close without Save, or Reset).
+  const removePortfolioFromView = (id) => {
     setPortfolios(portfolios.filter(p => p.id !== id));
     return true;
   };
@@ -3949,9 +4015,10 @@ export default function PortfolioTracker() {
       </div>
 
       {editing && <PortfolioEditModal portfolio={editing} onSave={saveEdit} onClose={() => setEditing(null)}
-        onDelete={(id) => { if (deletePortfolio(id)) setEditing(null); }}
+        onRemove={(id) => { if (removePortfolioFromView(id)) setEditing(null); }}
         disabledSet={disabledHoldings[editing.id]} onToggleDisabled={toggleHoldingDisabled}
         prices={prices} vooPortfolio={portfolios.find(p => p.id === 'voo')} mergeMode={mergeMode} setMergeMode={setMergeMode}
+        latestQuarter={latestQuarter}
         isFromBase={investorsIndex.some(i => i.id === editing.id)} />}
       {showBackup && <BackupModal onRestore={handleRestore} onClose={() => setShowBackup(false)} />}
     </div>
