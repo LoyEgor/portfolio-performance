@@ -114,6 +114,12 @@ const FOREIGN_TO_US = {
   // From dataroma-top20 Web Archive captures (2016-2018 era top-20 aggregates):
   'ABI.BR':      'BUD',         // Anheuser-Busch InBev Brussels → NYSE ADR
   'BATS.L':      'BTI',         // British American Tobacco London → NYSE ADR
+
+  // Verified via 13F.info / DataRoma cross-reference:
+  '0A2X.IL':     'JD',          // JD.com — Tiger Global classic long-hold 2016-2025
+  'EURN.BR':     'EURN',        // Euronav (Belgian) — had NYSE listing as EURN until 2023 Frontline merger
+  'SJR-B.TO':    'SJR.B',       // Shaw Communications Class B — had NYSE listing SJR.B before Rogers acquisition (2023)
+  'AMRZ.SW':     'AMRZ',        // Amrize — spun off from Holcim 2024, dual-listed on NYSE as AMRZ
 };
 
 // Tickers that are NOT mapped (foreign-only, unclear, or non-existent on US
